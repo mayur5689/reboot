@@ -2,43 +2,61 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 export default function Navbar() {
   const [isServicesOpen, setIsServicesOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true)
+      } else {
+        setIsScrolled(false)
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   const services = [
-    { title: "Physiotherapy", description: "Restoring movement and strength", icon: <PathologyIcon /> },
-    { title: "Hydrotherapy", description: "Recovery through the power of water", icon: <WaterIcon /> },
-    { title: "Clinical Pilates", description: "Train with control and stability", icon: <PilatesIcon /> },
-    { title: "Contrast Therapy", description: "Alternating hot and cold exposure", icon: <ContrastIcon /> },
-    { title: "Sports Massage", description: "Performance-driven relief", icon: <MassageIcon /> },
-    { title: "Deep Tissue Massage", description: "Release tension, move freely", icon: <DeepMassageIcon /> },
-    { title: "Sports Psychology", description: "Train the mind to win", icon: <BrainIcon /> },
-    { title: "Counselling & Mental Training", description: "Stronger Mind, Better you.", icon: <MentalIcon /> },
+    { title: "Physiotherapy", description: "Restoring movement and strength", icon: <PathologyIcon />, slug: "physiotherapy" },
+    { title: "Hydrotherapy", description: "Recovery through the power of water", icon: <WaterIcon />, slug: "hydrotherapy" },
+    { title: "Clinical Pilates", description: "Train with control and stability", icon: <PilatesIcon />, slug: "clinical-pilates" },
+    { title: "Contrast Therapy", description: "Alternating hot and cold exposure", icon: <ContrastIcon />, slug: "contrast-therapy" },
+    { title: "Sports Massage", description: "Performance-driven relief", icon: <MassageIcon />, slug: "sports-massage" },
+    { title: "Deep Tissue Massage", description: "Release tension, move freely", icon: <DeepMassageIcon />, slug: "deep-tissue-massage" },
+    { title: "Sports Psychology", description: "Train the mind to win", icon: <BrainIcon />, slug: "sports-psychology" },
+    { title: "Counselling & Mental Training", description: "Stronger Mind, Better you.", icon: <MentalIcon />, slug: "counselling-&-mental-training" },
   ]
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-b from-black/60 to-transparent transition-all duration-300">
-      <div className="container mx-auto px-6 lg:px-8 py-5 flex items-center justify-between">
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
+      ? 'bg-white/95 backdrop-blur-md py-2.5 shadow-md'
+      : 'bg-gradient-to-b from-black/60 to-transparent py-4'
+      }`}>
+      <div className="container mx-auto px-6 lg:px-8 transition-all duration-300 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center">
+        <Link href="/" className={`flex items-center transition-all duration-300 ${isScrolled ? 'py-1.5' : 'py-3'}`}>
           <Image
             src="/images/REBOOT FINAL LOGO_1.png"
             alt="R3BOOT Logo"
             width={140}
             height={45}
-            className="h-12 w-auto brightness-0 invert"
+            className={`h-11 w-auto transition-all duration-300 ${isScrolled ? 'brightness-0' : 'brightness-0 invert'}`}
             priority
           />
         </Link>
 
         {/* Navigation Links - Centered */}
-        <div className="hidden lg:flex items-center space-x-10 text-white font-medium text-[15px] tracking-wide">
-          <Link href="/" className="hover:text-gray-300 transition-colors">
+        <div className={`hidden lg:flex items-center space-x-10 font-medium text-[15px] tracking-wide transition-colors duration-300 ${isScrolled ? 'text-gray-800' : 'text-white'
+          }`}>
+          <Link href="/" className="hover:opacity-70 transition-opacity">
             Home
           </Link>
-          <Link href="/about" className="hover:text-gray-300 transition-colors">
+          <Link href="/about" className="hover:opacity-70 transition-opacity">
             About
           </Link>
 
@@ -48,7 +66,7 @@ export default function Navbar() {
             onMouseEnter={() => setIsServicesOpen(true)}
             onMouseLeave={() => setIsServicesOpen(false)}
           >
-            <Link href="/services" className="flex items-center gap-1.5 hover:text-gray-300 transition-colors py-2">
+            <Link href="/services" className="flex items-center gap-1.5 hover:opacity-70 transition-opacity py-2">
               Services <ChevronDownIcon className={`w-4 h-4 transition-transform duration-300 ${isServicesOpen ? 'rotate-180' : ''}`} />
             </Link>
 
@@ -59,7 +77,7 @@ export default function Navbar() {
                   {services.map((service, index) => (
                     <Link
                       key={index}
-                      href={`/services/${service.title.toLowerCase().replace(/ /g, '-')}`}
+                      href={`/services/${service.slug}`}
                       className="flex items-start gap-4 p-4 rounded-2xl hover:bg-gray-50 transition-colors group"
                     >
                       <div className="w-12 h-12 rounded-xl bg-[#513394]/10 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform text-[#513394]">
@@ -88,10 +106,10 @@ export default function Navbar() {
             )}
           </div>
 
-          <Link href="/contact" className="hover:text-gray-300 transition-colors">
+          <Link href="/contact" className="hover:opacity-70 transition-opacity">
             Contact
           </Link>
-          <Link href="/blog" className="hover:text-gray-300 transition-colors">
+          <Link href="/blog" className="hover:opacity-70 transition-opacity">
             Blog
           </Link>
         </div>
@@ -99,7 +117,8 @@ export default function Navbar() {
         {/* Right Actions */}
         <div className="flex items-center gap-5">
           {/* WhatsApp Icon */}
-          <Link href="https://wa.me/yournumber" target="_blank" className="hidden sm:flex text-white hover:text-gray-300 transition-colors">
+          <Link href="https://wa.me/yournumber" target="_blank" className={`hidden sm:flex transition-colors duration-300 ${isScrolled ? 'text-gray-800' : 'text-white'
+            } hover:opacity-70`}>
             <WhatsAppIcon className="w-7 h-7" />
           </Link>
 
@@ -112,7 +131,8 @@ export default function Navbar() {
           </button>
 
           {/* Mobile Menu Button */}
-          <button className="lg:hidden text-white focus:outline-none">
+          <button className={`lg:hidden focus:outline-none transition-colors duration-300 ${isScrolled ? 'text-gray-800' : 'text-white'
+            }`}>
             <MenuIcon className="h-7 w-7" />
           </button>
         </div>
@@ -192,7 +212,6 @@ function MentalIcon() {
   )
 }
 
-// Inline Icons
 function ChevronDownIcon({ className }: { className?: string }) {
   return (
     <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor">
