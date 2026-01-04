@@ -27,11 +27,11 @@ export default function Navbar() {
   return (
     <nav className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 ${isScrolled || isServicesOpen
       ? 'bg-white/95 dark:bg-[#0A0A0A]/95 backdrop-blur-md py-3 shadow-xl'
-      : 'bg-gradient-to-b from-black/80 via-black/40 to-transparent py-5'
+      : 'bg-gradient-to-b from-black/80 via-black/40 to-transparent py-5 dark:bg-[#0A0A0A]/95 dark:bg-none dark:py-3 dark:backdrop-blur-md dark:shadow-xl'
       }`}>
       <div className="container mx-auto px-6 lg:px-8 transition-all duration-300 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className={`flex items-center transition-all duration-300 ${(isScrolled || isServicesOpen) ? 'py-1.5' : 'py-3'}`}>
+        <Link href="/" className={`flex items-center transition-all duration-300 ${(isScrolled || isServicesOpen) ? 'py-1.5' : 'py-3 dark:py-1.5'}`}>
           <Image
             src="/images/REBOOT FINAL LOGO_1.png"
             alt="R3BOOT Logo"

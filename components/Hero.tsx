@@ -1,6 +1,39 @@
+"use client";
+
+import { useState, useEffect } from 'react'
 import Image from 'next/image'
 
+const testimonials = [
+  {
+    quote: "Reboot keeps me motivated every day!",
+    author: "Alex Rodriguez"
+  },
+  {
+    quote: "The best recovery center I've ever been to.",
+    author: "Sarah Jenkins"
+  },
+  {
+    quote: "Professional staff and top-tier facilities.",
+    author: "Michael Chen"
+  },
+  {
+    quote: "Helped me recover from my injury in record time.",
+    author: "David Thompson"
+  }
+]
+
 export default function Hero() {
+  const [currentTestimonial, setCurrentTestimonial] = useState(0)
+
+  const [isVideoOpen, setIsVideoOpen] = useState(false)
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length)
+    }, 4000)
+    return () => clearInterval(timer)
+  }, [])
+
   return (
     <section className="relative w-full h-screen flex flex-col overflow-hidden text-white">
       {/* Background Image */}
@@ -10,7 +43,7 @@ export default function Hero() {
           src="/images/5.jpg"
           alt="Hero Background"
           fill
-          className="object-cover object-center"
+          className="object-cover object-[50%_38%]"
           priority
         />
       </div>
@@ -44,49 +77,68 @@ export default function Hero() {
       {/* Bottom Cards Section - Hidden on Mobile */}
       <div className="relative z-20 container mx-auto px-6 lg:px-8 pb-10 hidden md:grid grid-cols-1 md:grid-cols-3 gap-6 -mt-10 md:-mt-16">
 
-        {/* Card 1: Community (White) */}
+        {/* Card 1: Services & Features (White) */}
         <div className="bg-white dark:bg-[#1A1A1A] text-black dark:text-white p-7 rounded-2xl flex flex-col justify-between shadow-2xl min-h-[210px] border border-transparent dark:border-white/5">
           <p className="text-[17px] font-semibold leading-snug">
-            Join a growing community of over <span className="text-green-600 font-bold">50,000 athletes, fitness enthusiasts, and sports lovers.</span>
+            Experience <span className="text-[#513394] font-bold">world-class recovery protocols</span> tailored for your performance.
           </p>
-          <div className="flex items-center gap-3">
-            <div className="flex -space-x-4">
-              {[1, 2, 3, 4].map((i) => (
-                <div key={i} className="w-10 h-10 rounded-full border-2 border-white dark:border-[#1A1A1A] bg-gray-200 dark:bg-gray-800" />
-              ))}
-              <div className="w-10 h-10 rounded-full border-2 border-white dark:border-[#1A1A1A] bg-[#513394] flex items-center justify-center text-white text-[10px] font-bold">
-                +
+          <div className="flex flex-col gap-2.5 mt-2">
+            <div className="flex items-center gap-3">
+              <div className="w-6 h-6 rounded-full bg-[#513394]/10 flex items-center justify-center">
+                <svg className="w-3.5 h-3.5 text-[#513394]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
               </div>
+              <span className="text-sm font-medium text-gray-700 dark:text-gray-200">Physiotherapy & Rehab</span>
             </div>
-            <div>
-              <p className="text-sm font-bold">2K+</p>
-              <p className="text-[10px] text-gray-500 dark:text-gray-400">Training now</p>
+            <div className="flex items-center gap-3">
+              <div className="w-6 h-6 rounded-full bg-[#513394]/10 flex items-center justify-center">
+                <svg className="w-3.5 h-3.5 text-[#513394]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <span className="text-sm font-medium text-gray-700 dark:text-gray-200">Hydro & Contrast Therapy</span>
+            </div>
+            <div className="flex items-center gap-3">
+              <div className="w-6 h-6 rounded-full bg-[#513394]/10 flex items-center justify-center">
+                <svg className="w-3.5 h-3.5 text-[#513394]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <span className="text-sm font-medium text-gray-700 dark:text-gray-200">Sports Massage</span>
             </div>
           </div>
         </div>
 
-        {/* Card 2: Testimonial (Glassmorphism) */}
-        <div className="bg-white/10 dark:bg-white/5 backdrop-blur-xl border border-white/20 dark:border-white/10 p-7 rounded-2xl flex flex-col justify-center items-center text-center shadow-2xl min-h-[210px] text-white">
-          <p className="text-lg font-medium italic mb-4 leading-relaxed tracking-tight">
-            &ldquo;Reboot keeps me motivated every day!&rdquo;
+        {/* Card 2: Testimonial (Glassmorphism) - Auto Changing */}
+        <div className="bg-white/10 dark:bg-white/5 backdrop-blur-xl border border-white/20 dark:border-white/10 p-7 rounded-2xl flex flex-col justify-center items-center text-center shadow-2xl min-h-[210px] text-white transition-all duration-500">
+          <p key={currentTestimonial} className="text-lg font-medium italic mb-4 leading-relaxed tracking-tight animate-in fade-in slide-in-from-bottom-2 duration-500 min-h-[50px] flex items-center justify-center">
+            &ldquo;{testimonials[currentTestimonial].quote}&rdquo;
           </p>
-          <p className="text-xs uppercase tracking-[0.2em] font-bold opacity-70">Alex Rodriguez</p>
+          <p className="text-xs uppercase tracking-[0.2em] font-bold opacity-70 animate-in fade-in duration-700">
+            {testimonials[currentTestimonial].author}
+          </p>
           <div className="flex gap-1.5 mt-4">
-            <div className="w-4 h-1 rounded-full bg-white"></div>
-            <div className="w-1.5 h-1 rounded-full bg-white/30"></div>
-            <div className="w-1.5 h-1 rounded-full bg-white/30"></div>
-            <div className="w-1.5 h-1 rounded-full bg-white/30"></div>
+            {testimonials.map((_, idx) => (
+              <div
+                key={idx}
+                className={`h-1 rounded-full transition-all duration-300 ${idx === currentTestimonial ? 'w-4 bg-white' : 'w-1.5 bg-white/30'}`}
+              />
+            ))}
           </div>
         </div>
 
         {/* Card 3: Video Introduction (Purple) */}
-        <div className="bg-[#513394] p-7 rounded-2xl flex items-center gap-5 shadow-2xl min-h-[210px] text-white group cursor-pointer transition-transform hover:scale-[1.02]">
+        <div
+          onClick={() => setIsVideoOpen(true)}
+          className="bg-[#513394] p-7 rounded-2xl flex items-center gap-5 shadow-2xl min-h-[210px] text-white group cursor-pointer transition-transform hover:scale-[1.02]"
+        >
           <div className="flex-1">
             <h3 className="text-2xl font-black leading-tight mb-8">
               Watch video <br /> introduction.
             </h3>
             <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center text-[#513394] shadow-xl group-hover:scale-110 transition-transform">
-              <svg className="w-6 h-6 fill-current ml-1" viewBox="0 0 24 24">
+              <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24">
                 <path d="M8 5v14l11-7z" />
               </svg>
             </div>
@@ -101,6 +153,28 @@ export default function Hero() {
           </div>
         </div>
       </div>
+
+      {/* Video Popup Modal */}
+      {isVideoOpen && (
+        <div className="fixed inset-0 z-[150] flex items-center justify-center bg-black/80 backdrop-blur-sm p-4 animate-in fade-in duration-300" onClick={() => setIsVideoOpen(false)}>
+          <div className="relative w-full max-w-5xl aspect-video bg-black rounded-3xl overflow-hidden shadow-2xl animate-in zoom-in-95 duration-300" onClick={(e) => e.stopPropagation()}>
+            <button
+              onClick={() => setIsVideoOpen(false)}
+              className="absolute top-4 right-4 z-50 p-2 bg-black/50 hover:bg-black/70 text-white rounded-full transition-colors"
+            >
+              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+            <video
+              src="https://ik.imagekit.io/5eaaluf7c/YTDown.com_YouTube_Physical-Therapists-Career-Video_Media_FOF71Lb5SkA_002_720p.mp4"
+              className="w-full h-full object-cover"
+              controls
+              autoPlay
+            />
+          </div>
+        </div>
+      )}
     </section>
   )
 }
