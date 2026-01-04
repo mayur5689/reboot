@@ -120,12 +120,14 @@ export default function Navbar() {
           )}
 
           {/* CTA Button */}
-          <button
-            className="hidden sm:block text-white font-semibold px-6 py-2.5 text-sm rounded-full transition-all hover:opacity-90 shadow-lg shadow-[#513394]/20"
-            style={{ backgroundColor: '#513394' }}
-          >
-            Join us today
-          </button>
+          <Link href="/contact">
+            <button
+              className="hidden sm:block text-white font-semibold px-6 py-2.5 text-sm rounded-full transition-all hover:opacity-90 shadow-lg shadow-[#513394]/20"
+              style={{ backgroundColor: '#513394' }}
+            >
+              Join us today
+            </button>
+          </Link>
 
           {/* Mobile Menu Button */}
           <button
@@ -176,12 +178,14 @@ export default function Navbar() {
                 <WhatsAppIcon className="w-6 h-6 text-green-500" />
                 <span className="text-lg font-bold">WhatsApp Us</span>
               </Link>
-              <button
-                className="w-full text-white font-bold py-5 rounded-full shadow-2xl text-lg tracking-wide transform active:scale-95 transition-all"
-                style={{ backgroundColor: '#513394' }}
-              >
-                Join us today
-              </button>
+              <Link href="/contact" className="w-full" onClick={() => setIsMobileMenuOpen(false)}>
+                <button
+                  className="w-full text-white font-bold py-5 rounded-full shadow-2xl text-lg tracking-wide transform active:scale-95 transition-all"
+                  style={{ backgroundColor: '#513394' }}
+                >
+                  Join us today
+                </button>
+              </Link>
             </div>
           </div>
         </div>

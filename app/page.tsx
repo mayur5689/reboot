@@ -5,8 +5,7 @@ import OurServices from '@/components/OurServices'
 import ReviewVideo from '@/components/ReviewVideo'
 import Testimonials from '@/components/Testimonials'
 import CoachesSection from '@/components/CoachesSection'
-import FloatingActionButton from '@/components/FloatingActionButton'
-import Footer from '@/components/Footer'
+import { FAQSection } from '@/components/faq-section'
 
 export default function Home() {
   return (
@@ -18,8 +17,7 @@ export default function Home() {
       <ReviewVideo />
       <Testimonials />
       <CoachesSection />
-      <Footer />
-      <FloatingActionButton />
+      <FAQSection />
     </main>
   )
 }
