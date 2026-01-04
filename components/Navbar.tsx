@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
+import { services } from '@/lib/services'
 
 export default function Navbar() {
   const [isServicesOpen, setIsServicesOpen] = useState(false)
@@ -20,17 +21,6 @@ export default function Navbar() {
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
-
-  const services = [
-    { title: "Physiotherapy", description: "Restoring movement and strength", icon: <PathologyIcon />, slug: "physiotherapy" },
-    { title: "Hydrotherapy", description: "Recovery through the power of water", icon: <WaterIcon />, slug: "hydrotherapy" },
-    { title: "Clinical Pilates", description: "Train with control and stability", icon: <PilatesIcon />, slug: "clinical-pilates" },
-    { title: "Contrast Therapy", description: "Alternating hot and cold exposure", icon: <ContrastIcon />, slug: "contrast-therapy" },
-    { title: "Sports Massage", description: "Performance-driven relief", icon: <MassageIcon />, slug: "sports-massage" },
-    { title: "Deep Tissue Massage", description: "Release tension, move freely", icon: <DeepMassageIcon />, slug: "deep-tissue-massage" },
-    { title: "Sports Psychology", description: "Train the mind to win", icon: <BrainIcon />, slug: "sports-psychology" },
-    { title: "Counselling & Mental Training", description: "Stronger Mind, Better you.", icon: <MentalIcon />, slug: "counselling-&-mental-training" },
-  ]
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
@@ -81,11 +71,11 @@ export default function Navbar() {
                       className="flex items-start gap-4 p-4 rounded-2xl hover:bg-gray-50 transition-colors group"
                     >
                       <div className="w-12 h-12 rounded-xl bg-[#513394]/10 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform text-[#513394]">
-                        {service.icon}
+                        {getServiceIcon(service.title)}
                       </div>
                       <div>
                         <h3 className="text-gray-900 font-bold text-sm mb-1">{service.title}</h3>
-                        <p className="text-gray-500 text-xs leading-relaxed">{service.description}</p>
+                        <p className="text-gray-500 text-[11px] leading-relaxed line-clamp-2">{service.description}</p>
                       </div>
                     </Link>
                   ))}
@@ -124,7 +114,7 @@ export default function Navbar() {
 
           {/* CTA Button */}
           <button
-            className="hidden sm:block text-white font-semibold px-6 py-2.5 text-sm rounded-full transition-all hover:opacity-90"
+            className="hidden sm:block text-white font-semibold px-6 py-2.5 text-sm rounded-full transition-all hover:opacity-90 shadow-lg shadow-[#513394]/20"
             style={{ backgroundColor: '#513394' }}
           >
             Join us today
@@ -139,6 +129,21 @@ export default function Navbar() {
       </div>
     </nav>
   )
+}
+
+// Helper to get icons for the mega menu
+function getServiceIcon(title: string) {
+  switch (title) {
+    case "Physiotherapy": return <PathologyIcon />;
+    case "Hydrotherapy": return <WaterIcon />;
+    case "Clinical Pilates": return <PilatesIcon />;
+    case "Contrast Therapy": return <ContrastIcon />;
+    case "Sports Massage": return <MassageIcon />;
+    case "Deep Tissue Massage": return <DeepMassageIcon />;
+    case "Sports Psychology": return <BrainIcon />;
+    case "Counselling & Mental Training": return <MentalIcon />;
+    default: return <PathologyIcon />;
+  }
 }
 
 // Service Icons

@@ -2,65 +2,7 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-
-const services = [
-    {
-        category: "THERAPY",
-        title: "Physiotherapy",
-        description: "Restoring movement and strength",
-        image: "/images/1.jpg",
-        slug: "physiotherapy"
-    },
-    {
-        category: "THERAPY",
-        title: "Hydrotherapy",
-        description: "Recovery through the power of water",
-        image: "/images/2.jpg",
-        slug: "hydrotherapy"
-    },
-    {
-        category: "FITNESS",
-        title: "Clinical Pilates",
-        description: "Train with control and stability",
-        image: "/images/3.jpg",
-        slug: "clinical-pilates"
-    },
-    {
-        category: "THERAPY",
-        title: "Contrast Therapy",
-        description: "Alternating hot and cold exposure",
-        image: "/images/4.jpg",
-        slug: "contrast-therapy"
-    },
-    {
-        category: "MASSAGE",
-        title: "Sports Massage",
-        description: "Performance-driven relief",
-        image: "/images/5.jpg",
-        slug: "sports-massage"
-    },
-    {
-        category: "MASSAGE",
-        title: "Deep Tissue Massage",
-        description: "Release tension, move freely",
-        image: "/images/6.jpg",
-        slug: "deep-tissue-massage"
-    },
-    {
-        category: "MENTAL",
-        title: "Sports Psychology",
-        description: "Train the mind to win",
-        image: "/images/1.jpg",
-        slug: "sports-psychology"
-    },
-    {
-        category: "MENTAL",
-        title: "Counselling & Mental Training",
-        description: "Stronger Mind, Better you",
-        image: "/images/2.jpg",
-        slug: "counselling-&-mental-training"
-    },
-]
+import { services } from '@/lib/services'
 
 export default function OurServices() {
     return (
@@ -84,11 +26,10 @@ export default function OurServices() {
                     {services.map((service, index) => (
                         <div
                             key={index}
-                            className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
+                            className="group bg-[#F8F9FA] p-4 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col h-full"
                         >
                             {/* Image Container */}
-                            <div className="relative h-52 overflow-hidden">
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent z-10"></div>
+                            <div className="relative h-56 w-full shrink-0 overflow-hidden rounded-[2rem] mb-6">
                                 <Image
                                     src={service.image}
                                     alt={service.title}
@@ -98,37 +39,33 @@ export default function OurServices() {
                             </div>
 
                             {/* Content */}
-                            <div className="p-5">
-                                <span className="text-xs font-semibold tracking-wider text-[#513394]/70 uppercase">
+                            <div className="px-2 pb-2 flex flex-col flex-grow">
+                                <span className="text-[10px] font-bold tracking-[0.2em] text-gray-400 uppercase mb-2 block">
                                     {service.category}
                                 </span>
-                                <h3 className="text-lg font-bold text-gray-900 mt-1 mb-2 group-hover:text-[#513394] transition-colors">
+                                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-[#513394] transition-colors">
                                     {service.title}
                                 </h3>
-                                <p className="text-sm text-gray-500 mb-4 line-clamp-2">
+                                <p className="text-sm text-gray-500 mb-6 line-clamp-2 leading-relaxed">
                                     {service.description}
                                 </p>
 
-                                {/* Read More Button */}
-                                <Link
-                                    href={`/services/${service.slug}`}
-                                    className="inline-flex items-center justify-between w-full"
-                                >
-                                    <span
-                                        className="inline-flex items-center gap-2 text-white text-sm font-semibold px-5 py-2.5 rounded-full transition-all hover:opacity-90"
-                                        style={{ backgroundColor: '#513394' }}
+                                {/* Read More Button - Pushed to bottom */}
+                                <div className="mt-auto">
+                                    <Link
+                                        href={`/services/${service.slug}`}
+                                        className="flex items-center justify-between w-full bg-[#513394] hover:bg-[#412975] text-white rounded-full p-1.5 transition-all group/btn shadow-lg shadow-[#513394]/20"
                                     >
-                                        Read More
-                                    </span>
-                                    <span
-                                        className="w-10 h-10 rounded-full flex items-center justify-center text-white transition-all hover:scale-110"
-                                        style={{ backgroundColor: '#513394' }}
-                                    >
-                                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                                        </svg>
-                                    </span>
-                                </Link>
+                                        <span className="text-sm font-bold pl-6">
+                                            Read More
+                                        </span>
+                                        <span className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center backdrop-blur-sm group-hover/btn:bg-white group-hover/btn:text-[#513394] transition-all">
+                                            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                                            </svg>
+                                        </span>
+                                    </Link>
+                                </div>
                             </div>
                         </div>
                     ))}

@@ -1,184 +1,93 @@
 import Image from 'next/image'
 import Link from 'next/link'
-
-// Service data
-const services = [
-    {
-        title: "Physiotherapy",
-        description: "Restoring movement and strength through personalized rehabilitation programs.",
-        fullDescription: "Our physiotherapy services focus on restoring your body's natural movement patterns and building strength through evidence-based rehabilitation techniques. Our expert physiotherapists work with you to create personalized treatment plans that address your specific needs, whether you're recovering from an injury, managing a chronic condition, or looking to optimize your physical performance.",
-        benefits: [
-            "Personalized treatment plans",
-            "Evidence-based rehabilitation",
-            "Injury prevention strategies",
-            "Movement optimization",
-            "Pain management techniques"
-        ],
-        image: "/images/1.jpg",
-        slug: "physiotherapy"
-    },
-    {
-        title: "Hydrotherapy",
-        description: "Recovery through the therapeutic power of water.",
-        fullDescription: "Hydrotherapy harnesses the healing properties of water to accelerate recovery and improve physical function. Our state-of-the-art hydrotherapy pool provides a low-impact environment perfect for rehabilitation, pain relief, and improving mobility without putting stress on your joints.",
-        benefits: [
-            "Low-impact rehabilitation",
-            "Reduced joint stress",
-            "Improved circulation",
-            "Enhanced muscle relaxation",
-            "Accelerated recovery"
-        ],
-        image: "/images/2.jpg",
-        slug: "hydrotherapy"
-    },
-    {
-        title: "Clinical Pilates",
-        description: "Train with control, precision, and stability.",
-        fullDescription: "Clinical Pilates combines the principles of traditional Pilates with physiotherapy expertise to create targeted exercise programs. Focus on core stability, postural alignment, and controlled movements to rehabilitate injuries, prevent future problems, and enhance overall body awareness.",
-        benefits: [
-            "Core strength development",
-            "Improved posture",
-            "Enhanced flexibility",
-            "Better body control",
-            "Injury prevention"
-        ],
-        image: "/images/3.jpg",
-        slug: "clinical-pilates"
-    },
-    {
-        title: "Contrast Therapy",
-        description: "Alternating hot and cold exposure for optimal recovery.",
-        fullDescription: "Contrast therapy alternates between hot and cold treatments to stimulate blood flow, reduce inflammation, and accelerate muscle recovery. This powerful technique is used by elite athletes worldwide to enhance performance and speed up the healing process.",
-        benefits: [
-            "Enhanced blood circulation",
-            "Reduced muscle soreness",
-            "Faster recovery",
-            "Decreased inflammation",
-            "Improved performance"
-        ],
-        image: "/images/4.jpg",
-        slug: "contrast-therapy"
-    },
-    {
-        title: "Sports Massage",
-        description: "Performance-driven relief for athletes.",
-        fullDescription: "Our sports massage therapy is designed specifically for athletes and active individuals. Using specialized techniques, we help improve flexibility, prevent injuries, and enhance athletic performance while providing relief from muscle tension and fatigue.",
-        benefits: [
-            "Improved flexibility",
-            "Injury prevention",
-            "Enhanced performance",
-            "Muscle tension relief",
-            "Faster recovery between training"
-        ],
-        image: "/images/5.jpg",
-        slug: "sports-massage"
-    },
-    {
-        title: "Deep Tissue Massage",
-        description: "Release deep tension and move freely.",
-        fullDescription: "Deep tissue massage targets the deeper layers of muscle and connective tissue to release chronic tension patterns. This intensive therapy helps break down scar tissue, improve range of motion, and provide lasting relief from persistent muscle pain.",
-        benefits: [
-            "Chronic pain relief",
-            "Scar tissue breakdown",
-            "Improved range of motion",
-            "Stress reduction",
-            "Better posture"
-        ],
-        image: "/images/6.jpg",
-        slug: "deep-tissue-massage"
-    },
-    {
-        title: "Sports Psychology",
-        description: "Train your mind to achieve peak performance.",
-        fullDescription: "Sports psychology focuses on the mental aspects of athletic performance. Our expert psychologists help you develop mental resilience, focus, and confidence to perform at your best when it matters most. Overcome performance anxiety, build winning habits, and unlock your full potential.",
-        benefits: [
-            "Enhanced mental focus",
-            "Performance anxiety management",
-            "Goal setting strategies",
-            "Confidence building",
-            "Mental resilience training"
-        ],
-        image: "/images/1.jpg",
-        slug: "sports-psychology"
-    },
-    {
-        title: "Counselling & Mental Training",
-        description: "Stronger mind, better you.",
-        fullDescription: "Our counselling and mental training services provide comprehensive support for your psychological well-being. Whether you're dealing with stress, anxiety, or simply want to optimize your mental performance, our experienced counsellors offer personalized guidance and evidence-based techniques.",
-        benefits: [
-            "Stress management",
-            "Emotional resilience",
-            "Personal growth",
-            "Work-life balance",
-            "Mental wellness optimization"
-        ],
-        image: "/images/2.jpg",
-        slug: "counselling-&-mental-training"
-    },
-]
+import { services } from '@/lib/services'
 
 export default function ServicesPage() {
     return (
         <main className="min-h-screen bg-white">
-            {/* Hero Section */}
-            <section className="relative py-32 bg-gradient-to-br from-[#513394] to-[#7c4dbd] text-white overflow-hidden">
-                <div className="absolute inset-0 bg-black/20"></div>
-                <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
-                <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+            {/* Hero Section - More Premium */}
+            <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
+                <Image
+                    src="/images/1.jpg"
+                    alt="Services Hero"
+                    fill
+                    className="object-cover"
+                    priority
+                />
+                <div className="absolute inset-0 bg-black/60 backdrop-blur-[2px]"></div>
 
                 <div className="container mx-auto px-6 lg:px-8 relative z-10 text-center">
-                    <span className="inline-flex items-center gap-2 text-sm font-semibold tracking-widest uppercase mb-4 text-white/80">
-                        <span className="w-2 h-2 bg-white rounded-full"></span>
-                        What We Offer
-                        <span className="w-2 h-2 bg-white rounded-full"></span>
+                    <span className="text-[11px] font-black tracking-[0.4em] text-white uppercase mb-4 block animate-in fade-in slide-in-from-bottom-4 duration-700">
+                        OUR OFFERINGS //
                     </span>
-                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                        Our Services
+                    <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-6 tracking-tight animate-in fade-in slide-in-from-bottom-6 duration-1000">
+                        Expert <span className="text-white/60">Services</span>
                     </h1>
-                    <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto">
-                        Comprehensive recovery and performance solutions designed to help you achieve your goals.
+                    <p className="text-lg md:text-xl text-white/70 max-w-2xl mx-auto leading-relaxed animate-in fade-in slide-in-from-bottom-8 duration-1000">
+                        Science-backed recovery and performance solutions tailored to your unique journey.
                     </p>
                 </div>
             </section>
 
             {/* Services Grid */}
-            <section className="py-20">
+            <section className="py-24 lg:py-32 bg-[#FBFBFB]">
                 <div className="container mx-auto px-6 lg:px-8">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div className="max-w-3xl mb-16">
+                        <span className="text-[#513394] font-black tracking-[0.2em] text-[10px] uppercase mb-4 block">
+                            EXPLORE OPTIONS //
+                        </span>
+                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 leading-[1.1] mb-6 tracking-tighter">
+                            Choose the perfect therapy <br />
+                            for your <span className="text-[#513394]">recovery.</span>
+                        </h2>
+                        <p className="text-gray-500 text-lg md:text-xl leading-relaxed max-w-2xl">
+                            Our integrated approach ensures every session moves you closer to your peak performance, combining science with personalized care.
+                        </p>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
                         {services.map((service, index) => (
                             <Link
                                 key={index}
                                 href={`/services/${service.slug}`}
-                                className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100"
+                                className="group bg-white p-5 rounded-[2.5rem] shadow-sm hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 flex flex-col h-full"
                             >
                                 {/* Image */}
-                                <div className="relative h-52 overflow-hidden">
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent z-10"></div>
+                                <div className="relative h-64 w-full shrink-0 overflow-hidden rounded-[2rem] mb-6">
                                     <Image
                                         src={service.image}
                                         alt={service.title}
                                         fill
-                                        className="object-cover group-hover:scale-110 transition-transform duration-500"
+                                        className="object-cover group-hover:scale-110 transition-transform duration-700"
                                     />
+                                    <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full shadow-sm">
+                                        <span className="text-[10px] font-black tracking-wider text-[#513394]">
+                                            {service.category}
+                                        </span>
+                                    </div>
                                 </div>
 
                                 {/* Content */}
-                                <div className="p-6">
-                                    <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-[#513394] transition-colors">
+                                <div className="px-2 pb-4 flex flex-col flex-grow text-left">
+                                    <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-[#513394] transition-colors duration-300">
                                         {service.title}
                                     </h3>
-                                    <p className="text-gray-500 text-sm mb-4 line-clamp-2">
+                                    <p className="text-sm text-gray-500 mb-8 line-clamp-3 leading-relaxed">
                                         {service.description}
                                     </p>
-                                    <span
-                                        className="inline-flex items-center gap-2 text-white text-sm font-semibold px-5 py-2.5 rounded-full"
-                                        style={{ backgroundColor: '#513394' }}
-                                    >
-                                        Learn More
-                                        <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                                        </svg>
-                                    </span>
+
+                                    <div className="mt-auto">
+                                        <div className="flex items-center justify-between w-full bg-[#513394] group-hover:bg-[#412975] text-white rounded-full p-2 transition-all duration-300 group/btn shadow-xl shadow-[#513394]/20">
+                                            <span className="text-sm font-bold pl-6">
+                                                View Details
+                                            </span>
+                                            <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center backdrop-blur-sm group-hover/btn:bg-white group-hover/btn:text-[#513394] transition-all duration-300">
+                                                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </Link>
                         ))}
@@ -186,25 +95,34 @@ export default function ServicesPage() {
                 </div>
             </section>
 
-            {/* CTA Section */}
-            <section className="py-20 bg-gray-50">
-                <div className="container mx-auto px-6 lg:px-8 text-center">
-                    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                        Ready to Start Your Recovery Journey?
-                    </h2>
-                    <p className="text-gray-600 text-lg mb-8 max-w-2xl mx-auto">
-                        Book a consultation with our expert team and discover the perfect treatment plan for your needs.
-                    </p>
-                    <Link
-                        href="/contact"
-                        className="inline-flex items-center gap-3 text-white font-semibold px-8 py-4 rounded-full transition-all hover:opacity-90 hover:scale-105 shadow-lg"
-                        style={{ backgroundColor: '#513394' }}
-                    >
-                        Book a Consultation
-                        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                        </svg>
-                    </Link>
+            {/* CTA Section - More Professional */}
+            <section className="py-24 bg-[#513394] relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-white/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2"></div>
+                <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-white/5 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/2"></div>
+
+                <div className="container mx-auto px-6 lg:px-8 relative z-10">
+                    <div className="max-w-4xl mx-auto text-center">
+                        <h2 className="text-4xl md:text-6xl font-black text-white mb-8 tracking-tight">
+                            Ready to <span className="text-white/50">R3BOOT</span> your body?
+                        </h2>
+                        <p className="text-xl text-white/70 mb-12 leading-relaxed font-medium">
+                            Join over 50,000+ happy clients who have found their way back to peak performance through our specialized services.
+                        </p>
+                        <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+                            <Link
+                                href="/contact"
+                                className="w-full sm:w-auto bg-white text-[#513394] font-black px-10 py-5 rounded-full transition-all hover:scale-105 shadow-2xl text-lg tracking-wide"
+                            >
+                                Book a Consultation
+                            </Link>
+                            <Link
+                                href="https://wa.me/yournumber"
+                                className="w-full sm:w-auto border-2 border-white/30 text-white font-bold px-10 py-5 rounded-full transition-all hover:bg-white/10 text-lg tracking-wide"
+                            >
+                                Contact Support
+                            </Link>
+                        </div>
+                    </div>
                 </div>
             </section>
         </main>
