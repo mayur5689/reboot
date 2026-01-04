@@ -77,7 +77,7 @@ export default function Navbar() {
                         className="flex items-start gap-4 p-4 rounded-2xl hover:bg-gray-50 dark:hover:bg-white/5 transition-all duration-300 group"
                       >
                         <div className="w-11 h-11 rounded-xl bg-[#513394]/10 text-[#513394] dark:text-[#A78BFA] flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-[#513394] group-hover:text-white transition-all duration-300">
-                          {getServiceIcon(service.title, 20)}
+                          {getServiceIcon(service.title)}
                         </div>
                         <div className="pt-1">
                           <h4 className="text-[15px] font-bold text-gray-900 dark:text-white mb-1 group-hover:text-[#513394] dark:group-hover:text-[#A78BFA] transition-colors">{service.title}</h4>

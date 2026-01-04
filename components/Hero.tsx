@@ -68,7 +68,7 @@ export default function Hero() {
         {/* Card 2: Testimonial (Glassmorphism) */}
         <div className="bg-white/10 dark:bg-white/5 backdrop-blur-xl border border-white/20 dark:border-white/10 p-7 rounded-2xl flex flex-col justify-center items-center text-center shadow-2xl min-h-[210px] text-white">
           <p className="text-lg font-medium italic mb-4 leading-relaxed tracking-tight">
-            "Reboot keeps me motivated every day!"
+            &ldquo;Reboot keeps me motivated every day!&rdquo;
           </p>
           <p className="text-xs uppercase tracking-[0.2em] font-bold opacity-70">Alex Rodriguez</p>
           <div className="flex gap-1.5 mt-4">

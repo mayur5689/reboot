@@ -42,7 +42,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
                         <div className="flex items-center gap-3 text-white/70 mb-4">
                             <div className="w-1.5 h-1.5 rounded-full bg-white/50"></div>
                             <span className="text-[11px] font-black tracking-[0.3em] uppercase">
-                                {service.category} // EXCELLENCE
+                                {service.category} {"// EXCELLENCE"}
                             </span>
                             <div className="w-1.5 h-1.5 rounded-full bg-white/50"></div>
                         </div>

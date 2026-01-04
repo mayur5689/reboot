@@ -5,6 +5,7 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import FloatingActionButton from '@/components/FloatingActionButton'
 import { ThemeProvider } from '@/components/ThemeProvider'
+import StudioLayoutWrapper from '@/components/StudioLayoutWrapper'
 
 const branding = localFont({
   src: [
@@ -56,10 +57,13 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Navbar />
-          {children}
-          <Footer />
-          <FloatingActionButton />
+          <StudioLayoutWrapper
+            navbar={<Navbar />}
+            footer={<Footer />}
+            fab={<FloatingActionButton />}
+          >
+            {children}
+          </StudioLayoutWrapper>
         </ThemeProvider>
       </body>
     </html>
