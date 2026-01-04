@@ -41,8 +41,8 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Bottom Cards Section */}
-      <div className="relative z-20 container mx-auto px-6 lg:px-8 pb-10 grid grid-cols-1 md:grid-cols-3 gap-6 -mt-10 md:-mt-16">
+      {/* Bottom Cards Section - Hidden on Mobile */}
+      <div className="relative z-20 container mx-auto px-6 lg:px-8 pb-10 hidden md:grid grid-cols-1 md:grid-cols-3 gap-6 -mt-10 md:-mt-16">
 
         {/* Card 1: Community (White) */}
         <div className="bg-white text-black p-7 rounded-2xl flex flex-col justify-between shadow-2xl min-h-[210px]">

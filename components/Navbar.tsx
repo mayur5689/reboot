@@ -8,6 +8,7 @@ import { services } from '@/lib/services'
 export default function Navbar() {
   const [isServicesOpen, setIsServicesOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -121,12 +122,64 @@ export default function Navbar() {
           </button>
 
           {/* Mobile Menu Button */}
-          <button className={`lg:hidden focus:outline-none transition-colors duration-300 ${isScrolled ? 'text-gray-800' : 'text-white'
-            }`}>
+          <button
+            onClick={() => setIsMobileMenuOpen(true)}
+            className={`lg:hidden focus:outline-none transition-colors duration-300 ${isScrolled ? 'text-gray-800' : 'text-white'
+              }`}>
             <MenuIcon className="h-7 w-7" />
           </button>
         </div>
       </div>
+
+      {/* Full-Screen Mobile Menu Overlay */}
+      {isMobileMenuOpen && (
+        <div className="fixed inset-0 z-[110] bg-white animate-in slide-in-from-top duration-700 ease-in-out lg:hidden flex flex-col">
+          {/* Header in Menu */}
+          <div className="flex items-center justify-between px-6 py-6 border-b border-gray-50">
+            <Link href="/" onClick={() => setIsMobileMenuOpen(false)}>
+              <Image
+                src="/images/REBOOT FINAL LOGO_1.png"
+                alt="R3BOOT Logo"
+                width={120}
+                height={40}
+                className="h-10 w-auto brightness-0"
+              />
+            </Link>
+            <button
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="text-gray-900 p-2 hover:rotate-90 transition-transform duration-300"
+            >
+              <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+
+          {/* Menu Links */}
+          <div className="flex-1 flex flex-col items-center justify-center gap-8 py-12 px-6">
+            <nav className="flex flex-col items-center gap-8 text-2xl font-bold text-[#1A1A1A] tracking-tight uppercase animate-in fade-in zoom-in-95 duration-1000 delay-150 fill-mode-both">
+              <Link href="/" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-[#513394] transition-colors">Home</Link>
+              <Link href="/about" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-[#513394] transition-colors">About</Link>
+              <Link href="/services" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-[#513394] transition-colors">Services</Link>
+              <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-[#513394] transition-colors">Contact</Link>
+              <Link href="/blog" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-[#513394] transition-colors">Blog</Link>
+            </nav>
+
+            <div className="mt-12 w-full max-w-xs flex flex-col gap-6 items-center animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-300 fill-mode-both">
+              <Link href="https://wa.me/yournumber" target="_blank" className="flex items-center gap-3 text-gray-600 hover:text-green-600 transition-colors">
+                <WhatsAppIcon className="w-6 h-6 text-green-500" />
+                <span className="text-lg font-bold">WhatsApp Us</span>
+              </Link>
+              <button
+                className="w-full text-white font-bold py-5 rounded-full shadow-2xl text-lg tracking-wide transform active:scale-95 transition-all"
+                style={{ backgroundColor: '#513394' }}
+              >
+                Join us today
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </nav>
   )
 }

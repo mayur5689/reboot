@@ -15,18 +15,18 @@ export default function OurServices() {
                         <span className="text-[13px] font-black tracking-[0.3em] uppercase">OUR SERVICES</span>
                         <div className="w-1.5 h-1.5 rounded-full bg-[#513394]"></div>
                     </div>
-                    <h2 className="text-4xl md:text-6xl font-black text-[#1A1A1A] leading-[1.1] tracking-tight">
+                    <h2 className="text-3xl md:text-6xl font-black text-[#1A1A1A] tracking-tight leading-[1.1]">
                         The Best Services We Offer <br />
                         <span className="text-[#513394]">For Your Recovery</span>
                     </h2>
                 </div>
 
                 {/* Services Grid - 4 columns */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="flex overflow-x-auto lg:grid lg:grid-cols-4 gap-6 pb-8 snap-x snap-mandatory scrollbar-hide -mx-6 px-6 lg:mx-0 lg:px-0 lg:overflow-visible">
                     {services.map((service, index) => (
                         <div
                             key={index}
-                            className="group bg-[#F8F9FA] p-4 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col h-full"
+                            className="group bg-[#F8F9FA] p-4 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col h-full min-w-[85vw] sm:min-w-[280px] snap-center lg:min-w-0"
                         >
                             {/* Image Container */}
                             <div className="relative h-56 w-full shrink-0 overflow-hidden rounded-[2rem] mb-6">

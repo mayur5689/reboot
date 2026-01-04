@@ -48,14 +48,14 @@ export default function HowItWorks() {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div className="flex overflow-x-auto lg:grid lg:grid-cols-2 gap-6 pb-8 snap-x snap-mandatory scrollbar-hide -mx-6 px-6 lg:mx-0 lg:px-0 lg:overflow-visible">
                     {steps.map((step, index) => (
                         <div
                             key={index}
-                            className="bg-white rounded-[2rem] p-6 flex flex-col sm:flex-row gap-8 items-center shadow-sm hover:shadow-xl transition-all duration-500"
+                            className="bg-white rounded-[2rem] p-6 flex flex-col sm:flex-row gap-6 items-center shadow-sm hover:shadow-xl transition-all duration-500 min-w-[85vw] sm:min-w-0 snap-center"
                         >
                             {/* Image Part */}
-                            <div className="relative w-full sm:w-48 h-48 shrink-0 overflow-hidden rounded-2xl">
+                            <div className="relative w-full sm:w-40 h-40 shrink-0 overflow-hidden rounded-2xl">
                                 <Image
                                     src={step.image}
                                     alt={step.title}
@@ -66,15 +66,15 @@ export default function HowItWorks() {
 
                             {/* Content Part */}
                             <div className="flex-grow">
-                                <div className="flex items-center gap-4 mb-4">
-                                    <span className="text-[11px] font-black tracking-widest text-[#513394] bg-[#513394]/10 px-3 py-1 rounded-full uppercase">
+                                <div className="flex items-center gap-4 mb-3">
+                                    <span className="text-[10px] font-black tracking-widest text-[#513394] bg-[#513394]/10 px-3 py-1 rounded-full uppercase">
                                         Step {step.number}
                                     </span>
                                 </div>
-                                <h3 className="text-2xl font-bold text-gray-900 mb-3 leading-tight">
+                                <h3 className="text-xl font-bold text-gray-900 mb-2 leading-tight">
                                     {step.title}
                                 </h3>
-                                <p className="text-gray-500 text-sm leading-relaxed line-clamp-3 lg:line-clamp-none">
+                                <p className="text-gray-500 text-sm leading-relaxed line-clamp-3">
                                     {step.description}
                                 </p>
                             </div>
