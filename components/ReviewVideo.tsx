@@ -127,7 +127,7 @@ export default function ReviewVideo() {
       }
     `;
     document.head.appendChild(style);
-    
+
     return () => {
       document.head.removeChild(style);
     };
@@ -136,7 +136,7 @@ export default function ReviewVideo() {
   const [isPaused, setIsPaused] = useState(false);
   const [selectedVideo, setSelectedVideo] = useState<VideoCard | null>(null);
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
-  
+
   const containerRef = useRef<HTMLDivElement>(null);
   const modalVideoRef = useRef<HTMLVideoElement>(null);
   const animationRef = useRef<number | null>(null);
@@ -212,18 +212,18 @@ export default function ReviewVideo() {
   const handleWheel = (e: React.WheelEvent) => {
     // Check if it's a horizontal scroll (deltaX) or vertical scroll (deltaY)
     const isHorizontalScroll = Math.abs(e.deltaX) > Math.abs(e.deltaY);
-    
+
     if (isHorizontalScroll) {
       // Only handle horizontal scroll - prevent default and scroll
       e.preventDefault();
       e.stopPropagation();
-      
+
       const scrollAmount = e.deltaX * 0.5; // Adjust sensitivity
       translateX.current -= scrollAmount;
-      
+
       // Infinite scroll - seamless looping in both directions
       wrapTranslateX();
-      
+
       if (containerRef.current) {
         containerRef.current.style.transform = `translateX(${translateX.current}px)`;
       }
@@ -281,19 +281,21 @@ export default function ReviewVideo() {
 
   return (
     <>
-      <section className="w-full bg-white py-8 sm:py-10 md:py-16 lg:py-20 xl:py-10 xl:pt-20 overflow-hidden md:-mt-25 md:-mb-16 -mt-8 -mb-10 relative">
-        
-        
+      <section className="w-full bg-white dark:bg-[#0A0A0A] py-8 sm:py-10 md:py-16 lg:py-20 xl:py-10 xl:pt-20 overflow-hidden relative transition-colors duration-500">
+
         <div className="w-full relative z-10">
           {/* Section Heading */}
-          <div className="text-center mb-8 sm:mb-12 md:mb-16">
-            
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[48px] font-bold text-gray-900 tracking-tight mb-6">
-              Trusted by <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800">India's Leading Companies</span>
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center justify-center gap-3 text-[#513394] dark:text-[#A78BFA] mb-4">
+              <div className="w-1.5 h-1.5 rounded-full bg-[#513394] dark:bg-[#A78BFA]"></div>
+              <span className="text-[13px] font-bold tracking-[0.3em] uppercase">Testimonials</span>
+              <div className="w-1.5 h-1.5 rounded-full bg-[#513394] dark:bg-[#A78BFA]"></div>
+            </div>
+            <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold text-[#1A1A1A] dark:text-white tracking-tight leading-[1.1]">
+              Real Stories, <span className="text-[#513394] dark:text-[#A78BFA]">Real Results</span>
             </h2>
-            <div className="w-32 h-1.5 bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 mx-auto rounded-full mb-6"></div>
-            <p className="text-lg  text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Here's what industry leaders say about working with us.
+            <p className="text-gray-500 dark:text-gray-400 text-sm md:text-lg leading-relaxed max-w-2xl mx-auto mt-4">
+              Experience the transformation through the words of our members.
             </p>
           </div>
           {/* Scrolling Video Container */}
@@ -308,14 +310,14 @@ export default function ReviewVideo() {
             onMouseMove={handlePointerMove}
             onMouseUp={handlePointerUp}
             onWheel={handleWheel}
-        >
-            <div 
+          >
+            <div
               ref={containerRef}
               className="flex w-max will-change-transform cursor-grab active:cursor-grabbing gap-6"
             >
               {duplicatedVideos.map((video, index) => {
                 const videoId = `${index}-${video.id}`;
-                
+
                 return (
                   <VideoCard
                     key={videoId}
@@ -341,7 +343,7 @@ export default function ReviewVideo() {
             >
               <X className="w-5 h-5" />
             </button>
-            
+
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-0">
               {/* Video Content */}
               <div className="lg:col-span-2 relative">
@@ -366,7 +368,7 @@ export default function ReviewVideo() {
                   <source src={selectedVideo.videoUrl} type="video/mp4" />
                 </video>
               </div>
-              
+
               {/* Review Details Sidebar */}
               <div className="lg:col-span-1 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 p-4 overflow-y-auto max-h-[90vh] flex flex-col">
                 <div className="space-y-4 flex-1">
@@ -378,14 +380,14 @@ export default function ReviewVideo() {
                       </svg>
                     ))}
                   </div>
-                  
+
                   {/* Reviewer Info */}
                   <div>
                     <h3 className="text-lg font-bold text-gray-900 mb-1">{selectedVideo.reviewerName}</h3>
-                    <p className="text-base text-blue-600 font-semibold">{selectedVideo.title}</p>
+                    <p className="text-base text-[#513394] font-semibold">{selectedVideo.title}</p>
                     <p className="text-sm text-gray-600">{selectedVideo.subtitle}</p>
                   </div>
-                  
+
                   {/* Full Transcript */}
                   <div>
                     <h4 className="text-base font-semibold text-gray-900 mb-2">What They Said</h4>
@@ -396,10 +398,10 @@ export default function ReviewVideo() {
                     </div>
                   </div>
                 </div>
-                
+
                 {/* Fixed Call to Action Button at Bottom */}
                 <div className="mt-4 pt-4 border-t border-gray-200 flex-shrink-0">
-                  <button 
+                  <button
                     onClick={() => {
                       handleCloseModal();
                       // Navigate to contact page
@@ -407,7 +409,7 @@ export default function ReviewVideo() {
                         window.location.href = '/contact';
                       }, 100);
                     }}
-                    className="w-full bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 hover:from-blue-700 hover:via-blue-800 hover:to-blue-900 text-white py-3 px-6 rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                    className="w-full bg-[#513394] hover:bg-[#412975] text-white py-3 px-6 rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
                   >
                     Book Your Journey
                   </button>
@@ -427,10 +429,10 @@ const VideoCard: React.FC<{
   videoId: string;
   onPlayClick: (video: VideoCard) => void;
 }> = ({ video, onPlayClick }) => {
-  
+
   return (
     <div
-      className="flex-shrink-0 relative rounded-xl sm:rounded-2xl overflow-hidden h-[360px] sm:h-[350px] md:h-[450px] lg:h-[520px] xl:h-[450px] w-[250px] sm:w-[350px] md:w-[320px] lg:w-[380px] xl:w-[330px] group mx-2 hover:translate-y-[-10px] mt-[10px] duration-300 transition-all shadow-lg select-none cursor-pointer"
+      className="flex-shrink-0 relative rounded-xl sm:rounded-2xl overflow-hidden h-[400px] sm:h-[420px] md:h-[500px] lg:h-[600px] xl:h-[520px] w-[250px] sm:w-[350px] md:w-[320px] lg:w-[380px] xl:w-[330px] group mx-2 hover:translate-y-[-10px] mt-[10px] duration-300 transition-all shadow-lg select-none cursor-pointer"
       data-card="true"
       draggable={false}
       onClick={() => onPlayClick(video)}
@@ -446,10 +448,10 @@ const VideoCard: React.FC<{
         draggable={false}
         unoptimized
       />
-      
+
       {/* Overlay */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20" />
-      
+
       {/* Play Button - Clickable */}
       <button
         onClick={(e) => {
@@ -483,13 +485,13 @@ const VideoCard: React.FC<{
           <p className="text-xs sm:text-sm leading-relaxed line-clamp-3 opacity-90 select-none">
             &quot;{video.transcript}&quot;
           </p>
-          
+
           {/* Read More Gradient */}
           <div className="absolute bottom-0 right-0 w-8 h-4 bg-gradient-to-l from-black/80 to-transparent" />
         </div>
 
         {/* Hover State - Brief Preview */}
-        <div className="absolute inset-0 bg-black/90 pt-2 pb-4 px-6 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-start select-none">
+        <div className="absolute inset-0 bg-black/90 pt-8 pb-10 px-6 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-center select-none">
           <div className="text-center select-none">
             <div className="flex items-center justify-center gap-1 mb-2 select-none">
               {[...Array(video.rating)].map((_, i) => (
@@ -509,7 +511,7 @@ const VideoCard: React.FC<{
                   e.stopPropagation();
                   onPlayClick(video);
                 }}
-                className="bg-blue-600 text-white px-6 py-2 rounded-full text-sm font-semibold hover:bg-blue-700 transition-colors duration-200 select-none"
+                className="bg-[#513394] text-white px-8 py-3 rounded-full text-sm font-semibold hover:bg-[#412975] transition-colors duration-200 select-none shadow-lg"
               >
                 Watch Full Video
               </button>

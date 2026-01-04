@@ -100,34 +100,32 @@ function Row({ items, direction }: { items: Testimonial[]; direction: "left" | "
 
   return (
     <div className="relative overflow-hidden">
-      <div 
-        ref={marqueeRef} 
+      <div
+        ref={marqueeRef}
         className={`flex ${direction === "left" ? "animate-marquee-left" : "animate-marquee-right"}`}
         style={{
-          animationDuration: '60s',
-          animationTimingFunction: 'linear',
-          animationIterationCount: 'infinite',
+          '--duration': '60s',
           display: 'flex',
           width: 'fit-content',
-        }}
+        } as React.CSSProperties}
       >
         {duplicatedItems.map((t, i) => (
           <figure
             key={`${t.name}-${i}`}
-            className="w-[360px] sm:w-[420px] max-w-full mr-4 sm:mr-6 flex-shrink-0 rounded-2xl border border-gray-200 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 shadow-sm p-5 sm:p-6 hover:shadow-md transition-shadow duration-300"
+            className="w-[360px] sm:w-[420px] max-w-full mr-4 sm:mr-6 flex-shrink-0 rounded-2xl border border-gray-200 dark:border-white/5 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-[#1A1A1A] dark:via-[#1A1A1A] dark:to-[#1A1A1A] shadow-sm p-5 sm:p-6 hover:shadow-md transition-shadow duration-300"
           >
-            <blockquote className="text-gray-700 text-sm sm:text-base leading-relaxed line-clamp-6">&quot;{t.quote}&quot;</blockquote>
+            <blockquote className="text-gray-700 dark:text-gray-300 text-sm sm:text-base leading-relaxed line-clamp-6">&quot;{t.quote}&quot;</blockquote>
             <figcaption className="mt-4 flex items-center gap-3">
               <Image
                 src={t.avatar}
                 alt={t.name}
                 width={40}
                 height={40}
-                className="h-10 w-10 rounded-full object-cover"
+                className="h-10 w-10 rounded-full object-cover border border-gray-100 dark:border-white/10"
               />
               <div>
-                <div className="text-sm font-semibold text-gray-900">{t.name}</div>
-                <div className="text-xs text-gray-500">{t.role}</div>
+                <div className="text-sm font-semibold text-gray-900 dark:text-white">{t.name}</div>
+                <div className="text-xs text-gray-500 dark:text-gray-400">{t.role}</div>
               </div>
             </figcaption>
           </figure>
@@ -139,15 +137,9 @@ function Row({ items, direction }: { items: Testimonial[]; direction: "left" | "
 
 export default function Testimonials() {
   return (
-    <section aria-label="Testimonials" className="py-16 sm:py-20">
-      <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-         
-       
-         
-        </div>
-
-        <div className="mt-10">
+    <section aria-label="Testimonials" className="pb-20 pt-10 bg-white dark:bg-[#0A0A0A] transition-colors duration-500">
+      <div className="w-full">
+        <div className="mt-0">
           <Row items={BOTTOM_ROW} direction="right" />
         </div>
       </div>

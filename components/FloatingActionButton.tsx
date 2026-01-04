@@ -30,17 +30,17 @@ const FloatingActionButton = () => {
   };
 
   return (
-    <div className="fixed bottom-15 right-3 sm:bottom-18 sm:right-15 z-40">
+    <div className="fixed bottom-6 right-6 sm:bottom-10 sm:right-10 z-50">
       {showFloatingButtons && (
-        <motion.div 
-          initial="hidden" 
-          animate="visible" 
-          exit="exit" 
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          exit="exit"
           className="flex flex-col items-center gap-3 mb-4"
         >
           <motion.a
-            href="https://wa.me/+918976971348"
-            className="w-14 h-14 bg-white text-blue-600 rounded-full flex items-center justify-center shadow-lg border border-blue-600"
+            href="https://wa.me/yournumber"
+            className="w-14 h-14 bg-white text-[#513394] rounded-full flex items-center justify-center shadow-lg border border-[#513394]"
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.1 }}
@@ -50,8 +50,8 @@ const FloatingActionButton = () => {
           </motion.a>
 
           <motion.a
-            href="mailto:business@nisharoadways.com"
-            className="w-14 h-14 bg-white text-blue-600 rounded-full flex items-center justify-center shadow-lg border border-blue-600"
+            href="mailto:contact@r3boot.com"
+            className="w-14 h-14 bg-white text-[#513394] rounded-full flex items-center justify-center shadow-lg border border-[#513394]"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >
@@ -59,8 +59,8 @@ const FloatingActionButton = () => {
           </motion.a>
 
           <motion.a
-            href="tel:+91 8976971348"
-            className="w-14 h-14 bg-white text-blue-600 rounded-full flex items-center justify-center shadow-lg border border-blue-600"
+            href="tel:+910000000000"
+            className="w-14 h-14 bg-white text-[#513394] rounded-full flex items-center justify-center shadow-lg border border-[#513394]"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >
@@ -70,10 +70,10 @@ const FloatingActionButton = () => {
       )}
 
       {open && (
-        <motion.div 
-          initial="hidden" 
-          animate="visible" 
-          exit="exit" 
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          exit="exit"
           className="fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center z-50"
         >
           <motion.div
@@ -82,69 +82,69 @@ const FloatingActionButton = () => {
           >
             <h2 className="text-2xl font-semibold mb-6 text-gray-800">Get in Touch</h2>
             <motion.button
-              className="text-blue-600 absolute top-3 right-3 px-1 py-1 rounded-full focus:outline-none"
+              className="text-[#513394] absolute top-3 right-3 px-1 py-1 rounded-full focus:outline-none"
               onClick={() => setOpen(false)}
               whileHover={{ scale: 1.2 }}
             >
               <IoIosClose className="self-center h-8 w-8" />
             </motion.button>
             <div className="flex flex-col gap-5">
-              <motion.div 
-                className="flex items-center justify-between p-4 border border-blue-600 rounded-xl"
+              <motion.div
+                className="flex items-center justify-between p-4 border border-[#513394] rounded-xl"
                 whileHover={{ scale: 1.05 }}
               >
                 <a
-                  href="https://wa.me/+918976971348"
-                  className="flex items-center text-blue-600 cursor-pointer"
+                  href="https://wa.me/yournumber"
+                  className="flex items-center text-[#513394] cursor-pointer"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <FaWhatsapp size={24} />
-                  <span className="ml-3 text-lg font-medium text-gray-700">WhatsApp: +91 8976971348</span>
+                  <span className="ml-3 text-lg font-medium text-gray-700">WhatsApp: Contact Us</span>
                 </a>
                 <motion.button
-                  onClick={() => handleCopy('+91 8976971348')}
-                  className="text-gray-500 hover:text-blue-600 focus:outline-none"
-                  whileTap={{ scale: 0.9 }}
-                >
-                  <MdContentCopy size={20} />
-                </motion.button>
-              </motion.div>
-              
-              <motion.div 
-                className="flex items-center justify-between p-4 border border-blue-600 rounded-xl"
-                whileHover={{ scale: 1.05 }}
-              >
-                <a
-                  href="mailto:business@nisharoadways.com"
-                  className="flex items-center text-blue-600 cursor-pointer"
-                >
-                  <FaEnvelope size={24} />
-                  <span className="ml-3 text-lg font-medium text-gray-700">Email: business@nisharoadways.com</span>
-                </a>
-                <motion.button
-                  onClick={() => handleCopy('business@nisharoadways.com')}
-                  className="text-gray-500 hover:text-blue-600 focus:outline-none"
+                  onClick={() => handleCopy('+910000000000')}
+                  className="text-gray-500 hover:text-[#513394] focus:outline-none"
                   whileTap={{ scale: 0.9 }}
                 >
                   <MdContentCopy size={20} />
                 </motion.button>
               </motion.div>
 
-              <motion.div 
-                className="flex items-center justify-between p-4 border border-blue-600 rounded-xl"
+              <motion.div
+                className="flex items-center justify-between p-4 border border-[#513394] rounded-xl"
                 whileHover={{ scale: 1.05 }}
               >
                 <a
-                  href="tel:+91 8976971348"
-                  className="flex items-center text-blue-600 cursor-pointer"
+                  href="mailto:contact@r3boot.com"
+                  className="flex items-center text-[#513394] cursor-pointer"
                 >
-                  <FaPhone size={24} />
-                  <span className="ml-3 text-lg font-medium text-gray-700">Call: +91 8976971348</span>
+                  <FaEnvelope size={24} />
+                  <span className="ml-3 text-lg font-medium text-gray-700">Email: contact@r3boot.com</span>
                 </a>
                 <motion.button
-                  onClick={() => handleCopy('+91 8976971348')}
-                  className="text-gray-500 hover:text-blue-600 focus:outline-none"
+                  onClick={() => handleCopy('contact@r3boot.com')}
+                  className="text-gray-500 hover:text-[#513394] focus:outline-none"
+                  whileTap={{ scale: 0.9 }}
+                >
+                  <MdContentCopy size={20} />
+                </motion.button>
+              </motion.div>
+
+              <motion.div
+                className="flex items-center justify-between p-4 border border-[#513394] rounded-xl"
+                whileHover={{ scale: 1.05 }}
+              >
+                <a
+                  href="tel:+910000000000"
+                  className="flex items-center text-[#513394] cursor-pointer"
+                >
+                  <FaPhone size={24} />
+                  <span className="ml-3 text-lg font-medium text-gray-700">Call: Our Team</span>
+                </a>
+                <motion.button
+                  onClick={() => handleCopy('+910000000000')}
+                  className="text-gray-500 hover:text-[#513394] focus:outline-none"
                   whileTap={{ scale: 0.9 }}
                 >
                   <MdContentCopy size={20} />
@@ -156,7 +156,7 @@ const FloatingActionButton = () => {
       )}
 
       <motion.button
-        className="w-14 h-14 bg-blue-600 text-white rounded-full flex items-center justify-center shadow-lg focus:outline-none"
+        className="w-14 h-14 bg-[#513394] text-white rounded-full flex items-center justify-center shadow-lg focus:outline-none"
         onClick={() => {
           if (showFloatingButtons) {
             setShowFloatingButtons(false);
@@ -178,7 +178,7 @@ const FloatingActionButton = () => {
           ) : (
             <IoMdChatboxes className="self-center h-8 w-8" />
           )}
-        </div> 
+        </div>
       </motion.button>
     </div>
   );
