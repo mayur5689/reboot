@@ -83,9 +83,9 @@ const CoachesSection: React.FC = () => {
         </div>
 
         {/* Coaches Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="flex overflow-x-auto snap-x snap-mandatory -mx-6 px-6 pb-8 lg:grid lg:grid-cols-4 lg:gap-8 lg:mx-0 lg:px-0 lg:pb-0 gap-6 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
           {coaches.map((coach) => (
-            <div key={coach.id} className="group relative flex flex-col items-center">
+            <div key={coach.id} className="group relative flex flex-col items-center min-w-[85vw] sm:min-w-[340px] lg:min-w-0 snap-center">
               {/* Image Container */}
               <div className="relative w-full aspect-[4/5] overflow-hidden rounded-[2.5rem] mb-6 shadow-lg bg-gray-100 dark:bg-[#1A1A1A]">
                 <Image
