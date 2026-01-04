@@ -31,19 +31,19 @@ const steps = [
 
 export default function HowItWorks() {
     return (
-        <section className="py-24 bg-[#F5F5F3]">
+        <section className="py-24 bg-[#F5F5F3] dark:bg-[#0A0A0A] transition-colors duration-500">
             <div className="container mx-auto px-6 lg:px-8">
                 <div className="text-center mb-20">
-                    <div className="inline-flex items-center justify-center gap-3 text-[#513394] mb-4">
-                        <div className="w-1.5 h-1.5 rounded-full bg-[#513394]"></div>
-                        <span className="text-[13px] font-black tracking-[0.3em] uppercase">HOW IT WORKS</span>
-                        <div className="w-1.5 h-1.5 rounded-full bg-[#513394]"></div>
+                    <div className="inline-flex items-center justify-center gap-3 text-[#513394] dark:text-[#A78BFA] mb-4">
+                        <div className="w-1.5 h-1.5 rounded-full bg-[#513394] dark:bg-[#A78BFA]"></div>
+                        <span className="text-[13px] font-bold tracking-[0.3em] uppercase">HOW IT WORKS</span>
+                        <div className="w-1.5 h-1.5 rounded-full bg-[#513394] dark:bg-[#A78BFA]"></div>
                     </div>
-                    <h2 className="text-4xl md:text-6xl font-black text-[#1A1A1A] tracking-tight leading-[1.1]">
+                    <h2 className="text-3xl md:text-6xl font-bold text-[#1A1A1A] dark:text-white tracking-tight leading-[1.1]">
                         Your Journey to <br />
-                        <span className="text-[#513394]">Peak Performance</span>
+                        <span className="text-[#513394] dark:text-[#A78BFA]">Peak Performance</span>
                     </h2>
-                    <p className="text-gray-500 text-base md:text-lg leading-relaxed max-w-2xl mx-auto mt-6">
+                    <p className="text-gray-500 dark:text-gray-400 text-sm md:text-lg leading-relaxed max-w-2xl mx-auto mt-4">
                         A structured, science-backed approach to recovery and performance optimization.
                     </p>
                 </div>
@@ -52,7 +52,7 @@ export default function HowItWorks() {
                     {steps.map((step, index) => (
                         <div
                             key={index}
-                            className="bg-white rounded-[2rem] p-6 flex flex-col sm:flex-row gap-6 items-center shadow-sm hover:shadow-xl transition-all duration-500 min-w-[85vw] sm:min-w-0 snap-center"
+                            className="bg-white dark:bg-[#1A1A1A] border border-transparent dark:border-white/5 rounded-[2rem] p-6 flex flex-col sm:flex-row gap-6 items-center shadow-sm hover:shadow-xl transition-all duration-500 min-w-[85vw] sm:min-w-0 snap-center"
                         >
                             {/* Image Part */}
                             <div className="relative w-full sm:w-40 h-40 shrink-0 overflow-hidden rounded-2xl">
@@ -67,14 +67,14 @@ export default function HowItWorks() {
                             {/* Content Part */}
                             <div className="flex-grow">
                                 <div className="flex items-center gap-4 mb-3">
-                                    <span className="text-[10px] font-black tracking-widest text-[#513394] bg-[#513394]/10 px-3 py-1 rounded-full uppercase">
+                                    <span className="text-[10px] font-bold tracking-widest text-[#513394] dark:text-[#A78BFA] bg-[#513394]/10 dark:bg-[#A78BFA]/10 px-3 py-1 rounded-full uppercase">
                                         Step {step.number}
                                     </span>
                                 </div>
-                                <h3 className="text-xl font-bold text-gray-900 mb-2 leading-tight">
+                                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2 leading-tight">
                                     {step.title}
                                 </h3>
-                                <p className="text-gray-500 text-sm leading-relaxed line-clamp-3">
+                                <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed line-clamp-3">
                                     {step.description}
                                 </p>
                             </div>

@@ -45,55 +45,61 @@ export default function Hero() {
       <div className="relative z-20 container mx-auto px-6 lg:px-8 pb-10 hidden md:grid grid-cols-1 md:grid-cols-3 gap-6 -mt-10 md:-mt-16">
 
         {/* Card 1: Community (White) */}
-        <div className="bg-white text-black p-7 rounded-2xl flex flex-col justify-between shadow-2xl min-h-[210px]">
-          <p className="text-base leading-snug">
-            Join a growing community of over <span className="font-bold text-green-600">50,000 athletes, fitness enthusiasts, and sports lovers.</span>
+        <div className="bg-white dark:bg-[#1A1A1A] text-black dark:text-white p-7 rounded-2xl flex flex-col justify-between shadow-2xl min-h-[210px] border border-transparent dark:border-white/5">
+          <p className="text-[17px] font-semibold leading-snug">
+            Join a growing community of over <span className="text-green-600 font-bold">50,000 athletes, fitness enthusiasts, and sports lovers.</span>
           </p>
-          <div className="flex items-center gap-3 mt-4">
-            <div className="flex -space-x-2">
-              <div className="w-9 h-9 rounded-full bg-gray-300 border-2 border-white"></div>
-              <div className="w-9 h-9 rounded-full bg-gray-400 border-2 border-white"></div>
-              <div className="w-9 h-9 rounded-full bg-gray-500 border-2 border-white"></div>
-              <div className="w-9 h-9 rounded-full bg-gray-600 border-2 border-white flex items-center justify-center text-white text-[10px]">+</div>
+          <div className="flex items-center gap-3">
+            <div className="flex -space-x-4">
+              {[1, 2, 3, 4].map((i) => (
+                <div key={i} className="w-10 h-10 rounded-full border-2 border-white dark:border-[#1A1A1A] bg-gray-200 dark:bg-gray-800" />
+              ))}
+              <div className="w-10 h-10 rounded-full border-2 border-white dark:border-[#1A1A1A] bg-[#513394] flex items-center justify-center text-white text-[10px] font-bold">
+                +
+              </div>
             </div>
             <div>
-              <p className="font-bold text-sm">2K+</p>
-              <p className="text-[11px] text-gray-500">Training now</p>
+              <p className="text-sm font-bold">2K+</p>
+              <p className="text-[10px] text-gray-500 dark:text-gray-400">Training now</p>
             </div>
           </div>
         </div>
 
-        {/* Card 2: Quote (Glass) */}
-        <div className="bg-white/10 backdrop-blur-md border border-white/15 p-7 rounded-2xl flex flex-col justify-center items-center text-center shadow-2xl min-h-[210px]">
-          <p className="text-xl font-semibold text-white mb-4">
+        {/* Card 2: Testimonial (Glassmorphism) */}
+        <div className="bg-white/10 dark:bg-white/5 backdrop-blur-xl border border-white/20 dark:border-white/10 p-7 rounded-2xl flex flex-col justify-center items-center text-center shadow-2xl min-h-[210px] text-white">
+          <p className="text-lg font-medium italic mb-4 leading-relaxed tracking-tight">
             "Reboot keeps me motivated every day!"
           </p>
-          <p className="text-sm text-gray-300">Alex Rodriguez</p>
-          <div className="flex gap-2 mt-5">
-            <span className="w-6 h-1 bg-white rounded-full"></span>
-            <span className="w-2 h-1 bg-white/30 rounded-full"></span>
-            <span className="w-2 h-1 bg-white/30 rounded-full"></span>
-            <span className="w-2 h-1 bg-white/30 rounded-full"></span>
+          <p className="text-xs uppercase tracking-[0.2em] font-bold opacity-70">Alex Rodriguez</p>
+          <div className="flex gap-1.5 mt-4">
+            <div className="w-4 h-1 rounded-full bg-white"></div>
+            <div className="w-1.5 h-1 rounded-full bg-white/30"></div>
+            <div className="w-1.5 h-1 rounded-full bg-white/30"></div>
+            <div className="w-1.5 h-1 rounded-full bg-white/30"></div>
           </div>
         </div>
 
-        {/* Card 3: Video (Custom Color) */}
-        <div
-          className="rounded-2xl p-7 flex text-white min-h-[210px] relative overflow-hidden group cursor-pointer shadow-2xl"
-          style={{ backgroundColor: '#513394' }}
-        >
-          <div className="z-10 flex flex-col justify-between flex-1">
-            <h3 className="text-xl font-bold leading-tight">Watch video<br />introduction.</h3>
-            <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-[#513394] group-hover:scale-110 transition-transform shadow-lg">
-              <svg className="w-5 h-5 ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
+        {/* Card 3: Video Introduction (Purple) */}
+        <div className="bg-[#513394] p-7 rounded-2xl flex items-center gap-5 shadow-2xl min-h-[210px] text-white group cursor-pointer transition-transform hover:scale-[1.02]">
+          <div className="flex-1">
+            <h3 className="text-2xl font-black leading-tight mb-8">
+              Watch video <br /> introduction.
+            </h3>
+            <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center text-[#513394] shadow-xl group-hover:scale-110 transition-transform">
+              <svg className="w-6 h-6 fill-current ml-1" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z" />
+              </svg>
             </div>
           </div>
-          {/* Image on right side of card */}
-          <div className="absolute right-4 bottom-4 top-4 w-[45%] overflow-hidden rounded-xl">
-            <Image src="/images/5.jpg" alt="Video Thumb" fill className="object-cover opacity-80" />
+          <div className="w-[140px] h-[160px] rounded-xl overflow-hidden shadow-inner relative">
+            <Image
+              src="/images/5.jpg"
+              alt="Video thumbnail"
+              fill
+              className="object-cover grayscale-[0.2]"
+            />
           </div>
         </div>
-
       </div>
     </section>
   )

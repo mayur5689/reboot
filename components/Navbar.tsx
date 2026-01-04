@@ -1,22 +1,23 @@
 "use client";
 
+import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useState, useEffect } from 'react'
 import { services } from '@/lib/services'
+import { useTheme } from 'next-themes'
+import { Sun, Moon } from 'lucide-react'
 
 export default function Navbar() {
   const [isServicesOpen, setIsServicesOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const { theme, setTheme } = useTheme()
+  const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
+    setMounted(true)
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setIsScrolled(true)
-      } else {
-        setIsScrolled(false)
-      }
+      setIsScrolled(window.scrollY > 50)
     }
 
     window.addEventListener('scroll', handleScroll)
@@ -25,7 +26,7 @@ export default function Navbar() {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 ${isScrolled
-      ? 'bg-white/95 backdrop-blur-md py-3 shadow-xl'
+      ? 'bg-white/95 dark:bg-[#0A0A0A]/95 backdrop-blur-md py-3 shadow-xl'
       : 'bg-gradient-to-b from-black/80 via-black/40 to-transparent py-5'
       }`}>
       <div className="container mx-auto px-6 lg:px-8 transition-all duration-300 flex items-center justify-between">
@@ -36,13 +37,13 @@ export default function Navbar() {
             alt="R3BOOT Logo"
             width={140}
             height={45}
-            className={`h-11 w-auto transition-all duration-300 ${isScrolled ? 'brightness-0' : 'brightness-0 invert'}`}
+            className={`h-11 w-auto transition-all duration-300 ${(isScrolled && theme !== 'dark') ? 'brightness-0' : 'brightness-0 invert'}`}
             priority
           />
         </Link>
 
         {/* Navigation Links - Centered */}
-        <div className={`hidden lg:flex items-center space-x-10 font-medium text-[15px] tracking-wide transition-colors duration-300 ${isScrolled ? 'text-gray-800' : 'text-white'
+        <div className={`hidden lg:flex items-center space-x-10 font-medium text-[15px] tracking-wide transition-colors duration-300 ${isScrolled ? 'text-gray-800 dark:text-white' : 'text-white'
           }`}>
           <Link href="/" className="hover:opacity-70 transition-opacity">
             Home
@@ -64,24 +65,24 @@ export default function Navbar() {
             {/* Mega Menu Dropdown */}
             {isServicesOpen && (
               <div className="absolute top-full left-1/2 -translate-x-1/2 mt-0 pt-4 w-[900px]">
-                <div className="bg-white rounded-3xl shadow-2xl overflow-hidden p-8 grid grid-cols-3 gap-x-8 gap-y-6 animate-in fade-in slide-in-from-top-4 duration-300">
+                <div className="bg-white dark:bg-[#1A1A1A] rounded-3xl shadow-2xl overflow-hidden p-8 grid grid-cols-3 gap-x-8 gap-y-6 animate-in fade-in slide-in-from-top-4 duration-300 border border-black/5 dark:border-white/5">
                   {services.map((service, index) => (
                     <Link
                       key={index}
                       href={`/services/${service.slug}`}
-                      className="flex items-start gap-4 p-4 rounded-2xl hover:bg-gray-50 transition-colors group"
+                      className="flex items-start gap-4 p-4 rounded-2xl hover:bg-gray-50 dark:hover:bg-white/5 transition-colors group"
                     >
-                      <div className="w-12 h-12 rounded-xl bg-[#513394]/10 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform text-[#513394]">
+                      <div className="w-12 h-12 rounded-xl bg-[#513394]/10 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform text-[#513394] dark:text-[#A78BFA]">
                         {getServiceIcon(service.title)}
                       </div>
                       <div>
-                        <h3 className="text-gray-900 font-bold text-sm mb-1">{service.title}</h3>
-                        <p className="text-gray-500 text-[11px] leading-relaxed line-clamp-2">{service.description}</p>
+                        <h3 className="text-gray-900 dark:text-white font-bold text-sm mb-1">{service.title}</h3>
+                        <p className="text-gray-500 dark:text-gray-400 text-[11px] leading-relaxed line-clamp-2">{service.description}</p>
                       </div>
                     </Link>
                   ))}
 
-                  <div className="col-span-3 mt-4 pt-6 border-t border-gray-100 flex justify-center">
+                  <div className="col-span-3 mt-4 pt-6 border-t border-gray-100 dark:border-white/10 flex justify-center">
                     <Link
                       href="/services"
                       className="bg-[#513394] text-white px-8 py-3 rounded-full text-sm font-semibold hover:opacity-90 transition-opacity flex items-center gap-2"
@@ -106,12 +107,17 @@ export default function Navbar() {
         </div>
 
         {/* Right Actions */}
-        <div className="flex items-center gap-5">
-          {/* WhatsApp Icon */}
-          <Link href="https://wa.me/yournumber" target="_blank" className={`hidden sm:flex transition-colors duration-300 ${isScrolled ? 'text-gray-800' : 'text-white'
-            } hover:opacity-70`}>
-            <WhatsAppIcon className="w-7 h-7" />
-          </Link>
+        <div className="flex items-center gap-6">
+          {/* Theme Toggle */}
+          {mounted && (
+            <button
+              onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+              className={`p-3 rounded-full transition-all duration-300 ${isScrolled ? 'text-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-white/10' : 'text-white hover:bg-white/10'}`}
+              aria-label="Toggle Theme"
+            >
+              {theme === 'dark' ? <Sun className="w-6 h-6" /> : <Moon className="w-6 h-6" />}
+            </button>
+          )}
 
           {/* CTA Button */}
           <button
@@ -124,7 +130,7 @@ export default function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(true)}
-            className={`lg:hidden focus:outline-none transition-colors duration-300 ${isScrolled ? 'text-gray-800' : 'text-white'
+            className={`lg:hidden focus:outline-none transition-colors duration-300 ${isScrolled ? 'text-gray-800 dark:text-white' : 'text-white'
               }`}>
             <MenuIcon className="h-7 w-7" />
           </button>
@@ -133,21 +139,21 @@ export default function Navbar() {
 
       {/* Full-Screen Mobile Menu Overlay */}
       {isMobileMenuOpen && (
-        <div className="fixed inset-0 z-[110] bg-white animate-in slide-in-from-top duration-700 ease-in-out lg:hidden flex flex-col">
+        <div className="fixed inset-0 z-[110] bg-white dark:bg-[#0A0A0A] animate-in slide-in-from-top duration-700 ease-in-out lg:hidden flex flex-col">
           {/* Header in Menu */}
-          <div className="flex items-center justify-between px-6 py-6 border-b border-gray-50">
+          <div className="flex items-center justify-between px-6 py-6 border-b border-gray-50 dark:border-white/5">
             <Link href="/" onClick={() => setIsMobileMenuOpen(false)}>
               <Image
                 src="/images/REBOOT FINAL LOGO_1.png"
                 alt="R3BOOT Logo"
                 width={120}
                 height={40}
-                className="h-10 w-auto brightness-0"
+                className={`h-10 w-auto transition-all duration-300 ${theme === 'dark' ? 'brightness-0 invert' : 'brightness-0'}`}
               />
             </Link>
             <button
               onClick={() => setIsMobileMenuOpen(false)}
-              className="text-gray-900 p-2 hover:rotate-90 transition-transform duration-300"
+              className="text-gray-900 dark:text-white p-2 hover:rotate-90 transition-transform duration-300"
             >
               <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -157,16 +163,16 @@ export default function Navbar() {
 
           {/* Menu Links */}
           <div className="flex-1 flex flex-col items-center justify-center gap-8 py-12 px-6">
-            <nav className="flex flex-col items-center gap-8 text-2xl font-bold text-[#1A1A1A] tracking-tight uppercase animate-in fade-in zoom-in-95 duration-1000 delay-150 fill-mode-both">
-              <Link href="/" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-[#513394] transition-colors">Home</Link>
-              <Link href="/about" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-[#513394] transition-colors">About</Link>
-              <Link href="/services" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-[#513394] transition-colors">Services</Link>
-              <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-[#513394] transition-colors">Contact</Link>
-              <Link href="/blog" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-[#513394] transition-colors">Blog</Link>
+            <nav className="flex flex-col items-center gap-8 text-2xl font-bold text-[#1A1A1A] dark:text-white tracking-tight uppercase animate-in fade-in zoom-in-95 duration-1000 delay-150 fill-mode-both">
+              <Link href="/" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-[#513394] dark:hover:text-[#A78BFA] transition-colors">Home</Link>
+              <Link href="/about" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-[#513394] dark:hover:text-[#A78BFA] transition-colors">About</Link>
+              <Link href="/services" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-[#513394] dark:hover:text-[#A78BFA] transition-colors">Services</Link>
+              <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-[#513394] dark:hover:text-[#A78BFA] transition-colors">Contact</Link>
+              <Link href="/blog" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-[#513394] dark:hover:text-[#A78BFA] transition-colors">Blog</Link>
             </nav>
 
             <div className="mt-12 w-full max-w-xs flex flex-col gap-6 items-center animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-300 fill-mode-both">
-              <Link href="https://wa.me/yournumber" target="_blank" className="flex items-center gap-3 text-gray-600 hover:text-green-600 transition-colors">
+              <Link href="https://wa.me/yournumber" target="_blank" className="flex items-center gap-3 text-gray-600 dark:text-gray-400 hover:text-green-600 transition-colors">
                 <WhatsAppIcon className="w-6 h-6 text-green-500" />
                 <span className="text-lg font-bold">WhatsApp Us</span>
               </Link>
