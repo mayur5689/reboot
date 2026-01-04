@@ -25,25 +25,25 @@ export default function Navbar() {
   }, [])
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 ${isScrolled
+    <nav className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 ${isScrolled || isServicesOpen
       ? 'bg-white/95 dark:bg-[#0A0A0A]/95 backdrop-blur-md py-3 shadow-xl'
       : 'bg-gradient-to-b from-black/80 via-black/40 to-transparent py-5'
       }`}>
       <div className="container mx-auto px-6 lg:px-8 transition-all duration-300 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className={`flex items-center transition-all duration-300 ${isScrolled ? 'py-1.5' : 'py-3'}`}>
+        <Link href="/" className={`flex items-center transition-all duration-300 ${(isScrolled || isServicesOpen) ? 'py-1.5' : 'py-3'}`}>
           <Image
             src="/images/REBOOT FINAL LOGO_1.png"
             alt="R3BOOT Logo"
             width={140}
             height={45}
-            className={`h-11 w-auto transition-all duration-300 ${(isScrolled && theme !== 'dark') ? 'brightness-0' : 'brightness-0 invert'}`}
+            className={`h-11 w-auto transition-all duration-300 ${((isScrolled || isServicesOpen) && theme !== 'dark') ? 'brightness-0' : 'brightness-0 invert'}`}
             priority
           />
         </Link>
 
         {/* Navigation Links - Centered */}
-        <div className={`hidden lg:flex items-center space-x-10 font-medium text-[15px] tracking-wide transition-colors duration-300 ${isScrolled ? 'text-gray-800 dark:text-white' : 'text-white'
+        <div className={`hidden lg:flex items-center space-x-10 font-medium text-[15px] tracking-wide transition-colors duration-300 ${(isScrolled || isServicesOpen) ? 'text-gray-800 dark:text-white' : 'text-white'
           }`}>
           <Link href="/" className="hover:opacity-70 transition-opacity">
             Home
@@ -54,7 +54,7 @@ export default function Navbar() {
 
           {/* Services with Mega Menu */}
           <div
-            className="relative"
+            className="static h-full flex items-center"
             onMouseEnter={() => setIsServicesOpen(true)}
             onMouseLeave={() => setIsServicesOpen(false)}
           >
@@ -62,32 +62,42 @@ export default function Navbar() {
               Services <ChevronDownIcon className={`w-4 h-4 transition-transform duration-300 ${isServicesOpen ? 'rotate-180' : ''}`} />
             </Link>
 
-            {/* Mega Menu Dropdown */}
+            {/* Mega Menu Dropdown - Full Width */}
             {isServicesOpen && (
-              <div className="absolute top-full left-1/2 -translate-x-1/2 mt-0 pt-4 w-[900px]">
-                <div className="bg-white dark:bg-[#1A1A1A] rounded-3xl shadow-2xl overflow-hidden p-8 grid grid-cols-3 gap-x-8 gap-y-6 animate-in fade-in slide-in-from-top-4 duration-300 border border-black/5 dark:border-white/5">
-                  {services.map((service, index) => (
-                    <Link
-                      key={index}
-                      href={`/services/${service.slug}`}
-                      className="flex items-start gap-4 p-4 rounded-2xl hover:bg-gray-50 dark:hover:bg-white/5 transition-colors group"
-                    >
-                      <div className="w-12 h-12 rounded-xl bg-[#513394]/10 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform text-[#513394] dark:text-[#A78BFA]">
-                        {getServiceIcon(service.title)}
-                      </div>
-                      <div>
-                        <h3 className="text-gray-900 dark:text-white font-bold text-sm mb-1">{service.title}</h3>
-                        <p className="text-gray-500 dark:text-gray-400 text-[11px] leading-relaxed line-clamp-2">{service.description}</p>
-                      </div>
-                    </Link>
-                  ))}
+              <div className="absolute top-full left-0 w-full bg-white dark:bg-[#1A1A1A] border-t border-gray-100 dark:border-white/5 shadow-2xl animate-in fade-in slide-in-from-top-2 duration-300">
+                {/* Extra large Connection Bridge to prevent losing hover */}
+                <div className="absolute -top-12 left-0 w-full h-12 bg-transparent" />
 
-                  <div className="col-span-3 mt-4 pt-6 border-t border-gray-100 dark:border-white/10 flex justify-center">
+                <div className="container mx-auto px-6 lg:px-8 py-10">
+                  <div className="grid grid-cols-1 md:grid-cols-4 gap-x-8 gap-y-4">
+                    {services.map((service, idx) => (
+                      <Link
+                        key={idx}
+                        href={`/services/${service.slug}`}
+                        className="flex items-start gap-4 p-4 rounded-2xl hover:bg-gray-50 dark:hover:bg-white/5 transition-all duration-300 group"
+                      >
+                        <div className="w-11 h-11 rounded-xl bg-[#513394]/10 text-[#513394] dark:text-[#A78BFA] flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-[#513394] group-hover:text-white transition-all duration-300">
+                          {getServiceIcon(service.title, 20)}
+                        </div>
+                        <div className="pt-1">
+                          <h4 className="text-[15px] font-bold text-gray-900 dark:text-white mb-1 group-hover:text-[#513394] dark:group-hover:text-[#A78BFA] transition-colors">{service.title}</h4>
+                          <p className="text-[11px] text-gray-500 dark:text-gray-400 leading-tight line-clamp-2">{service.description}</p>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+
+                  {/* Footer Action */}
+                  <div className="mt-8 pt-6 border-t border-gray-100 dark:border-white/5 flex items-center justify-between">
+                    <p className="text-sm text-gray-500 dark:text-gray-400 font-medium italic">
+                      Can&apos;t find what you&apos;re looking for? Explore our recovery services.
+                    </p>
                     <Link
                       href="/services"
-                      className="bg-[#513394] text-white px-8 py-3 rounded-full text-sm font-semibold hover:opacity-90 transition-opacity flex items-center gap-2"
+                      onClick={() => setIsServicesOpen(false)}
+                      className="bg-[#513394] text-white px-8 py-2.5 rounded-full text-sm font-bold hover:bg-[#412975] transition-all flex items-center gap-2 shadow-lg shadow-[#513394]/20 hover:scale-105 active:scale-95"
                     >
-                      View All Our Services
+                      Explore All Solutions
                       <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                       </svg>
