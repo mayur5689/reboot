@@ -9,14 +9,14 @@ export default function OurServices() {
         <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
             <div className="container mx-auto px-6 lg:px-8">
                 {/* Section Header */}
-                <div className="text-center mb-14">
-                    <span className="inline-flex items-center gap-2 text-sm font-semibold tracking-widest text-[#513394] uppercase mb-4">
-                        <span className="w-2 h-2 bg-[#513394] rounded-full"></span>
-                        Our Services
-                        <span className="w-2 h-2 bg-[#513394] rounded-full"></span>
-                    </span>
-                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
-                        The Best Services We Offer<br />
+                <div className="text-center mb-20">
+                    <div className="inline-flex items-center justify-center gap-3 text-[#513394] mb-4">
+                        <div className="w-1.5 h-1.5 rounded-full bg-[#513394]"></div>
+                        <span className="text-[13px] font-black tracking-[0.3em] uppercase">OUR SERVICES</span>
+                        <div className="w-1.5 h-1.5 rounded-full bg-[#513394]"></div>
+                    </div>
+                    <h2 className="text-4xl md:text-6xl font-black text-[#1A1A1A] leading-[1.1] tracking-tight">
+                        The Best Services We Offer <br />
                         <span className="text-[#513394]">For Your Recovery</span>
                     </h2>
                 </div>

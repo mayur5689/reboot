@@ -32,15 +32,17 @@ export default function ServicesPage() {
             {/* Services Grid */}
             <section className="py-24 lg:py-32 bg-[#FBFBFB]">
                 <div className="container mx-auto px-6 lg:px-8">
-                    <div className="max-w-3xl mb-16">
-                        <span className="text-[#513394] font-black tracking-[0.2em] text-[10px] uppercase mb-4 block">
-                            EXPLORE OPTIONS //
-                        </span>
-                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 leading-[1.1] mb-6 tracking-tighter">
+                    <div className="text-center max-w-4xl mx-auto mb-20">
+                        <div className="inline-flex items-center justify-center gap-3 text-[#513394] mb-4">
+                            <div className="w-1.5 h-1.5 rounded-full bg-[#513394]"></div>
+                            <span className="text-[13px] font-black tracking-[0.3em] uppercase">EXPLORE OPTIONS</span>
+                            <div className="w-1.5 h-1.5 rounded-full bg-[#513394]"></div>
+                        </div>
+                        <h2 className="text-4xl md:text-6xl font-black text-[#1A1A1A] leading-[1.1] mb-8 tracking-tighter transition-all">
                             Choose the perfect therapy <br />
                             for your <span className="text-[#513394]">recovery.</span>
                         </h2>
-                        <p className="text-gray-500 text-lg md:text-xl leading-relaxed max-w-2xl">
+                        <p className="text-gray-500 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto">
                             Our integrated approach ensures every session moves you closer to your peak performance, combining science with personalized care.
                         </p>
                     </div>

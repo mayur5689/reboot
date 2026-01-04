@@ -39,10 +39,14 @@ export default async function ServicePage({ params }: ServicePageProps) {
                     </Link>
 
                     <div className="max-w-4xl">
-                        <span className="text-white/60 font-black tracking-[0.3em] text-[11px] uppercase mb-4 block">
-                            {service.category} // EXCELLENCE
-                        </span>
-                        <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-6 uppercase tracking-tighter leading-[0.9]">
+                        <div className="flex items-center gap-3 text-white/70 mb-4">
+                            <div className="w-1.5 h-1.5 rounded-full bg-white/50"></div>
+                            <span className="text-[11px] font-black tracking-[0.3em] uppercase">
+                                {service.category} // EXCELLENCE
+                            </span>
+                            <div className="w-1.5 h-1.5 rounded-full bg-white/50"></div>
+                        </div>
+                        <h1 className="text-5xl md:text-7xl lg:text-9xl font-black text-white mb-6 uppercase tracking-tighter leading-[0.85]">
                             {service.title.split(' ')[0]} <br />
                             <span className="text-white/40">{service.title.split(' ').slice(1).join(' ')}</span>
                         </h1>
