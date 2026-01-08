@@ -21,54 +21,51 @@ export default function OurServices() {
                     </h2>
                 </div>
 
-                {/* Services Grid - 4 columns */}
-                <div className="flex overflow-x-auto lg:grid lg:grid-cols-4 gap-6 pb-8 snap-x snap-mandatory scrollbar-hide -mx-6 px-6 lg:mx-0 lg:px-0 lg:overflow-visible">
-                    {services.map((service, index) => (
-                        <div
-                            key={index}
-                            className="group bg-[#F8F9FA] dark:bg-[#1A1A1A] p-4 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col h-full min-w-[85vw] sm:min-w-[280px] snap-center lg:min-w-0 border border-transparent dark:border-white/5"
-                        >
-                            {/* Image Container */}
-                            <div className="relative h-56 w-full shrink-0 overflow-hidden rounded-[2rem] mb-6">
+                {/* Services Grid - Asymmetrical matching the reference image */}
+                <div className="grid grid-cols-1 md:grid-cols-6 gap-8">
+                    {services.map((service, index) => {
+                        // Pattern: First 2 are wide (col-span-3), others are standard (col-span-2)
+                        const isWide = index < 2;
+                        return (
+                            <Link
+                                key={index}
+                                href={`/services/${service.slug}`}
+                                className={`group relative h-[450px] overflow-hidden rounded-[2.5rem] shadow-2xl transition-all duration-700 hover:-translate-y-3 ${isWide ? 'md:col-span-3' : 'md:col-span-3 lg:col-span-2'
+                                    }`}
+                            >
+                                {/* Background Image */}
                                 <Image
                                     src={service.image}
                                     alt={service.title}
                                     fill
-                                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                                    className="object-cover transition-transform duration-1000 group-hover:scale-110"
+                                    priority={index < 3}
                                 />
-                            </div>
 
-                            {/* Content */}
-                            <div className="px-2 pb-2 flex flex-col flex-grow">
-                                <span className="text-[10px] font-bold tracking-[0.2em] text-gray-400 dark:text-gray-500 uppercase mb-2 block">
-                                    {service.category}
-                                </span>
-                                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-[#513394] dark:group-hover:text-[#A78BFA] transition-colors">
-                                    {service.title}
-                                </h3>
-                                <p className="text-sm text-gray-500 dark:text-gray-400 mb-6 line-clamp-2 leading-relaxed">
-                                    {service.description}
-                                </p>
+                                {/* Sophisticated Overlay */}
+                                <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/80 group-hover:from-black/50 group-hover:to-black/90 transition-colors duration-500" />
 
-                                {/* Read More Button - Pushed to bottom */}
-                                <div className="mt-auto">
-                                    <Link
-                                        href={`/services/${service.slug}`}
-                                        className="flex items-center justify-between w-full bg-[#513394] dark:bg-[#513394] hover:bg-[#412975] dark:hover:bg-[#412975] text-white rounded-full p-1.5 transition-all group/btn shadow-lg shadow-[#513394]/20"
-                                    >
-                                        <span className="text-sm font-bold pl-6">
-                                            Read More
-                                        </span>
-                                        <span className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center backdrop-blur-sm group-hover/btn:bg-white group-hover/btn:text-[#513394] transition-all">
-                                            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                                            </svg>
-                                        </span>
-                                    </Link>
+                                {/* Content Wrapper */}
+                                <div className="absolute inset-0 p-10 flex flex-col justify-between z-10">
+                                    {/* Top Content: Service Name */}
+                                    <div className="transform transition-transform duration-500 group-hover:-translate-y-1">
+                                        <h3 className="text-3xl md:text-3xl font-bold text-white tracking-tight leading-tight">
+                                            {service.title}
+                                        </h3>
+                                    </div>
+
+                                    {/* Bottom Content: Know More Button */}
+                                    <div className="transform transition-all duration-500 group-hover:translate-y-[-4px]">
+                                        <div className="inline-flex items-center gap-4">
+                                            <div className="bg-white text-black px-6 py-2 rounded-xl text-[13px] font-bold shadow-xl transition-all duration-300 group-hover:bg-[#513394] group-hover:text-white">
+                                                Know More
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                    ))}
+                            </Link>
+                        );
+                    })}
                 </div>
 
                 {/* View All Button */}

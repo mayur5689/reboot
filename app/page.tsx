@@ -5,6 +5,7 @@ import OurServices from '@/components/OurServices'
 import ReviewVideo from '@/components/ReviewVideo'
 import Testimonials from '@/components/Testimonials'
 import CoachesSection from '@/components/CoachesSection'
+import HomeBlog from '@/components/HomeBlog'
 import { FAQSection } from '@/components/faq-section'
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
       <ReviewVideo />
       <Testimonials />
       <CoachesSection />
+      <HomeBlog />
       <FAQSection />
     </main>
   )
