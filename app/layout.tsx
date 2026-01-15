@@ -41,6 +41,9 @@ const branding = localFont({
 export const metadata: Metadata = {
   title: 'R3BOOT - Recovery & Performance',
   description: 'India\'s First Integrated Recovery Centre',
+  icons: {
+    icon: '/Favicon_R3boot.svg',
+  },
 }
 
 export default function RootLayout({
