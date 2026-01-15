@@ -2,88 +2,45 @@
 
 import Image from "next/image";
 import { useEffect, useRef } from "react";
+import { motion } from "framer-motion";
 
 type Testimonial = {
   name: string;
-  role: string;
   avatar: string;
   quote: string;
 };
 
-const TOP_ROW: Testimonial[] = [
+const ALL_REVIEWS: Testimonial[] = [
   {
-    name: "Aditya Bhardwaj",
-    role: "Ops Lead, Crescent Logistics",
-    avatar: "/images/review/Aditya Bhardwaj.png",
-    quote:
-      "SalesSync provides essential tools for scaling our ops. Processes are streamlined and our team is always aligned. The platform has revolutionized how we manage our logistics operations, providing real-time visibility into every aspect of our supply chain. From inventory management to route optimization, every feature is designed with operational efficiency in mind, making our daily workflows seamless and productive.",
+    name: "Namrata Doshi",
+    avatar: "/images/Customer_Review/Namrata Doshi.png",
+    quote: "I had an excellent experience at this sports recovery centre. The team is highly professional, knowledgeable, and genuinely caring. From the initial assessment to the recovery plan, everything was clearly explained and tailored to my needs. The therapists are supportive and motivating, creating a positive environment that really helps with recovery. The facilities are clean, modern, and well-equipped. A big thank you to their expertise and encouragement. I would highly recommend R3boot to everyone."
   },
   {
-    name: "Ashish Dwivedi",
-    role: "Product Manager, Orbit Systems",
-    avatar: "/images/review/Ashish Dwivedi.png",
-    quote:
-      "The intuitive design integrates easily into our routine. Automated follow‑ups and custom reports are game changers. What impressed me most is how quickly our team adopted the platform without any extensive training. The user interface is so well-designed that even complex features feel simple to use. The automated workflows have saved us countless hours, and the custom reporting capabilities give us insights we never had before, enabling data-driven decisions across all our product initiatives.",
+    name: "Sonal Malik",
+    avatar: "/images/Customer_Review/Sonal Malik.png",
+    quote: "I recently tried Pilates and posture correction at Reboot Recovery Centre, Dadar, and it was genuinely impressive. Since the centre has just opened, everything feels fresh, well-designed, and thoughtfully run. The Pilates sessions were highly personalized, with clear focus on alignment, core strength, and correcting long-standing posture issues. The therapist took time to understand my problem areas rather than rushing through a routine. I’ve already noticed better posture and reduced stiffness. This has definitely built my confidence to try their other therapies like hydro recovery. Highly recommend for anyone serious about long-term physical wellness."
   },
   {
-    name: "Mozammil Khan",
-    role: "Account Exec, GreenPath",
-    avatar: "/images/review/Mozammil Khan.png",
-    quote:
-      "Insights uncover opportunities and help us refine targeting. I rely on it daily for decisions. The analytics dashboard provides a comprehensive view of our sales pipeline, helping me identify trends and patterns that were previously invisible. The predictive analytics feature has been particularly valuable, allowing us to forecast revenue more accurately and adjust our strategies proactively. It's become an indispensable tool for managing client relationships and closing deals more effectively.",
+    name: "Chandrakant Chande",
+    avatar: "/images/Customer_Review/Namrata Doshi.png",
+    quote: "Reboot team was wonderful. Navigated me through the entire contrast therapy experience with great insights. My body also feels lighter and better. Would definately recommend this place for someone looking for a good recovery and rehabilitation place. Team and entire set up is fantastic. Our entire set up is fantastic."
   },
   {
-    name: "Ramachandran R S",
-    role: "Marketing Director, BrightWave",
-    avatar: "/images/review/Ramachandran R S.png",
-    quote:
-      "Every interaction is stored in one place with clear context. Productivity improved noticeably. The centralized communication hub has transformed how our marketing team collaborates with sales and customer success. Having all customer touchpoints documented in one place means we never miss important context when crafting campaigns or following up on leads. The integration capabilities with our existing marketing stack made implementation smooth, and the productivity gains were evident within the first month of usage.",
+    name: "JugalKishore Shah",
+    avatar: "/images/Customer_Review/JugalKishore Shah.png",
+    quote: "Excellent idea brought in reallity. People will love to take benifit of it. Very professonally done. Keep it up and maintain high standard of services."
   },
   {
-    name: "SHUBHAM JAIN",
-    role: "Sales Ops, Apex Solutions",
-    avatar: "/images/review/SHUBHAM JAIN.png",
-    quote:
-      "From tracking to reporting, nothing slips through the cracks anymore. The comprehensive tracking system ensures complete visibility across our entire sales process. Every lead, opportunity, and customer interaction is meticulously recorded and easily accessible. The automated reporting features have eliminated manual data compilation, giving us more time to focus on strategic initiatives. The platform's reliability and accuracy have made it the backbone of our sales operations, ensuring consistent performance and accountability across the team.",
+    name: "Dharmesh Thakkar",
+    avatar: "/images/Customer_Review/Sonal Malik.png",
+    quote: "I had an amazing experience at R3boot. The deep tissue massage, cupping therapy, and ice water treatment helped relieve my body stiffness tremendously, while the red sauna session left me feeling completely rejuvenated. The facility is spotless, well-equipped, and thoughtfully designed for total recovery. The team is professional, courteous, and clearly knows their craft."
   },
   {
-    name: "Siddhant Doshi",
-    role: "Success Lead, CloudSpark",
-    avatar: "/images/review/Siddhant Doshi.png",
-    quote:
-      "Helps the team close deals faster with visibility across the pipeline. The real-time pipeline visibility has been a game-changer for our sales velocity. Team members can instantly see where each deal stands, what actions are needed, and who's responsible for next steps. The collaborative features enable seamless handoffs between team members, and the mobile app ensures we stay connected even when working remotely. Since implementing this solution, our average deal closure time has decreased by 30%, and our team satisfaction has significantly improved.",
-  },
-];
-
-const BOTTOM_ROW: Testimonial[] = [
-  {
-    name: "Sonia Bhatti",
-    role: "Ops Manager, UrbanNest",
-    avatar: "/images/review/Sonia Bhatti.png",
-    quote:
-      "Collaboration improved. Everyone is aligned and we support customers better. The platform has created a unified workspace where all departments can access the same customer information and work together seamlessly. Cross-functional projects that used to take weeks now get completed in days because everyone has the context they need. The customer support quality has improved dramatically since we can see the complete customer journey and provide more personalized, informed assistance. It's truly transformed our organizational efficiency.",
-  },
-  {
-    name: "Vachan Kudmule",
-    role: "Data Analyst, Horizon",
-    avatar: "/images/review/Vachan Kudmule.png",
-    quote:
-      "Powerful reporting with custom KPIs helps us scale consistently. The advanced analytics capabilities have elevated our data analysis to a whole new level. Creating custom dashboards and KPI tracking has never been easier, and the real-time data updates ensure we're always working with the most current information. The ability to drill down into specific metrics and create automated alerts has helped us identify growth opportunities and potential issues before they become problems. It's an analyst's dream tool.",
-  },
-  {
-    name: "macsen jose",
-    role: "Growth, Northwind Retail",
-    avatar: "/images/review/macsen jose.png",
-    quote:
-      "Tracking made easy and our team loves the clean UI. The user experience is exceptional - everything is where you expect it to be, and the learning curve is minimal. Our team was productive from day one, which is rare with new software implementations. The clean, modern interface doesn't overwhelm users with unnecessary complexity, yet all the powerful features are easily accessible when needed. The mobile responsiveness means our field team can update information on the go, keeping everyone synchronized regardless of location.",
-  },
-  {
-    name: "vinit mehta",
-    role: "High School, Intern",
-    avatar: "/images/review/vinit mehta.png",
-    quote:
-      "Simple to use and gets the job done—fast. Even as an intern with limited experience, I was able to navigate the platform effortlessly and contribute meaningfully to projects from my first day. The intuitive design and helpful tooltips made learning the system enjoyable rather than overwhelming. The efficiency gains are remarkable - tasks that seemed complex initially become routine with the platform's smart automation and user-friendly workflows. It's the perfect balance of simplicity and functionality.",
-  },
+    name: "Arjun",
+    avatar: "/images/Customer_Review/Arjun.png",
+    quote: "Wonderful experience. It's one of those places you actually wait to visit again because the first time was so amazing. Highly recommended !!"
+  }
 ];
 
 function Row({ items, direction }: { items: Testimonial[]; direction: "left" | "right" }) {
@@ -96,7 +53,7 @@ function Row({ items, direction }: { items: Testimonial[]; direction: "left" | "
   }, []);
 
   // Create multiple copies for seamless infinite scroll
-  const duplicatedItems = [...items, ...items, ...items];
+  const duplicatedItems = [...items, ...items, ...items, ...items];
 
   return (
     <div className="relative overflow-hidden">
@@ -104,7 +61,7 @@ function Row({ items, direction }: { items: Testimonial[]; direction: "left" | "
         ref={marqueeRef}
         className={`flex ${direction === "left" ? "animate-marquee-left" : "animate-marquee-right"}`}
         style={{
-          '--duration': '60s',
+          '--duration': '80s',
           display: 'flex',
           width: 'fit-content',
         } as React.CSSProperties}
@@ -112,9 +69,9 @@ function Row({ items, direction }: { items: Testimonial[]; direction: "left" | "
         {duplicatedItems.map((t, i) => (
           <figure
             key={`${t.name}-${i}`}
-            className="w-[360px] sm:w-[420px] max-w-full mr-4 sm:mr-6 flex-shrink-0 rounded-2xl border border-gray-200 dark:border-white/5 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-[#1A1A1A] dark:via-[#1A1A1A] dark:to-[#1A1A1A] shadow-sm p-5 sm:p-6 hover:shadow-md transition-shadow duration-300"
+            className="w-[360px] sm:w-[420px] max-w-full mr-4 sm:mr-6 flex-shrink-0 rounded-2xl border border-gray-200 dark:border-white/5 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-[#1A1A1A] dark:via-[#1A1A1A] dark:to-[#1A1A1A] shadow-sm p-4 sm:p-5 hover:shadow-md transition-shadow duration-300"
           >
-            <blockquote className="text-gray-700 dark:text-gray-300 text-sm sm:text-base leading-relaxed line-clamp-6">&quot;{t.quote}&quot;</blockquote>
+            <blockquote className="text-gray-700 dark:text-gray-300 text-[13px] sm:text-[14px] leading-relaxed line-clamp-6 italic">&quot;{t.quote}&quot;</blockquote>
             <figcaption className="mt-4 flex items-center gap-3">
               <Image
                 src={t.avatar}
@@ -125,7 +82,13 @@ function Row({ items, direction }: { items: Testimonial[]; direction: "left" | "
               />
               <div>
                 <div className="text-sm font-semibold text-gray-900 dark:text-white">{t.name}</div>
-                <div className="text-xs text-gray-500 dark:text-gray-400">{t.role}</div>
+                <div className="flex gap-0.5 text-yellow-400 mt-0.5">
+                  {[...Array(5)].map((_, i) => (
+                    <svg key={i} className="w-3 h-3 fill-current" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+                </div>
               </div>
             </figcaption>
           </figure>
@@ -137,11 +100,9 @@ function Row({ items, direction }: { items: Testimonial[]; direction: "left" | "
 
 export default function Testimonials() {
   return (
-    <section aria-label="Testimonials" className="pb-20 pt-10 bg-white dark:bg-[#0A0A0A] transition-colors duration-500">
+    <section aria-label="Customer Reviews" className="pb-24 pt-10 bg-white dark:bg-[#0A0A0A] transition-colors duration-500">
       <div className="w-full">
-        <div className="mt-0">
-          <Row items={BOTTOM_ROW} direction="right" />
-        </div>
+        <Row items={ALL_REVIEWS} direction="right" />
       </div>
     </section>
   );

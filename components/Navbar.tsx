@@ -3,16 +3,21 @@
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { services } from '@/lib/services'
 import { useTheme } from 'next-themes'
 import { Sun, Moon } from 'lucide-react'
 
 export default function Navbar() {
+  const pathname = usePathname()
   const [isServicesOpen, setIsServicesOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const { theme, setTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
+
+  const isHome = pathname === '/'
+  const shouldBeSolid = !isHome || isScrolled || isServicesOpen
 
   useEffect(() => {
     setMounted(true)
@@ -26,30 +31,30 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 ${isScrolled || isServicesOpen
+      <nav className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 ${shouldBeSolid
         ? 'bg-white/95 dark:bg-[#0A0A0A]/95 backdrop-blur-md py-3 shadow-xl'
         : 'bg-gradient-to-b from-black/80 via-black/10 to-transparent py-5'
         }`}>
         <div className="container mx-auto px-6 lg:px-8 transition-all duration-300 flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className={`flex items-center transition-all duration-300 ${(isScrolled || isServicesOpen) ? 'py-1.5' : 'py-3'}`}>
+          <Link href="/" className={`flex items-center transition-all duration-300 ${shouldBeSolid ? 'py-1.5' : 'py-3'}`}>
             <Image
               src="/images/REBOOT FINAL LOGO_1.png"
               alt="R3BOOT Logo"
-              width={140}
-              height={45}
-              className={`h-11 w-auto transition-all duration-300 ${((isScrolled || isServicesOpen) && theme !== 'dark') ? 'brightness-0' : 'brightness-0 invert'}`}
+              width={160}
+              height={50}
+              className={`h-12 w-auto transition-all duration-300 ${shouldBeSolid && theme === 'light' ? 'brightness-0' : ''}`}
               priority
             />
           </Link>
 
           {/* Navigation Links - Centered */}
-          <div className={`hidden lg:flex items-center space-x-12 font-bold text-[17px] tracking-wide transition-colors duration-300 ${(isScrolled || isServicesOpen) ? 'text-gray-800 dark:text-white' : 'text-white'
+          <div className={`hidden lg:flex items-center space-x-12 font-bold text-[17px] tracking-wide transition-colors duration-300 ${shouldBeSolid ? 'text-gray-800 dark:text-white' : 'text-white'
             }`}>
             <Link href="/" className="hover:opacity-70 transition-opacity">
               Home
             </Link>
-            <Link href="/#how-it-works" className="hover:opacity-70 transition-opacity">
+            <Link href="/about" className="hover:opacity-70 transition-opacity">
               About
             </Link>
 
@@ -143,7 +148,7 @@ export default function Navbar() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(true)}
-              className={`lg:hidden focus:outline-none transition-colors duration-300 ${isScrolled ? 'text-gray-800 dark:text-white' : 'text-white'}`}>
+              className={`lg:hidden focus:outline-none transition-colors duration-300 ${shouldBeSolid ? 'text-gray-800 dark:text-white' : 'text-white'}`}>
               <MenuIcon className="h-7 w-7" />
             </button>
           </div>
@@ -185,7 +190,7 @@ export default function Navbar() {
             </nav>
 
             <div className="mt-12 w-full max-w-xs flex flex-col gap-6 items-center animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-300 fill-mode-both">
-              <Link href="https://wa.me/yournumber" target="_blank" className="flex items-center gap-3 text-gray-600 dark:text-gray-400 hover:text-green-600 transition-colors">
+              <Link href="https://wa.me/919702368612" target="_blank" className="flex items-center gap-3 text-gray-600 dark:text-gray-400 hover:text-green-600 transition-colors">
                 <WhatsAppIcon className="w-6 h-6 text-green-500" />
                 <span className="text-lg font-bold">WhatsApp Us</span>
               </Link>
@@ -208,12 +213,10 @@ export default function Navbar() {
 // Helper to get icons for the mega menu
 function getServiceIcon(title: string) {
   switch (title) {
-    case "Physiotherapy": return <PathologyIcon />;
     case "Hydrotherapy": return <WaterIcon />;
     case "Clinical Pilates": return <PilatesIcon />;
     case "Contrast Therapy": return <ContrastIcon />;
     case "Sports Massage": return <MassageIcon />;
-    case "Deep Tissue Massage": return <DeepMassageIcon />;
     case "Sports Psychology": return <BrainIcon />;
     case "Counselling & Mental Training": return <MentalIcon />;
     default: return <PathologyIcon />;

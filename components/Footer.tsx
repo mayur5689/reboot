@@ -2,15 +2,13 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { FaLinkedin, FaInstagram, FaTwitter, FaFacebook, FaYoutube } from 'react-icons/fa';
+import Image from 'next/image';
+import { FaInstagram, FaFacebook } from 'react-icons/fa';
 
 const Footer: React.FC = () => {
   const socialLinks = [
-    { name: 'LinkedIn', icon: FaLinkedin, href: '#' },
-    { name: 'Instagram', icon: FaInstagram, href: '#' },
-    { name: 'Twitter', icon: FaTwitter, href: '#' },
-    { name: 'Facebook', icon: FaFacebook, href: '#' },
-    { name: 'YouTube', icon: FaYoutube, href: '#' },
+    { name: 'Instagram', icon: FaInstagram, href: 'https://www.instagram.com/r3boot.in' },
+    { name: 'Facebook', icon: FaFacebook, href: 'https://www.facebook.com/profile.php?id=61583158809554' },
   ];
 
   return (
@@ -27,18 +25,24 @@ const Footer: React.FC = () => {
           {/* Left Column: Brand & Contact */}
           <div className="lg:w-1/4 space-y-8">
             <Link href="/" className="inline-block group">
-              <span className="text-5xl font-black tracking-tighter text-white group-hover:text-[#A78BFA] transition-colors">R3BOOT</span>
+              <Image
+                src="/images/REBOOT FINAL LOGO_1.png"
+                alt="R3BOOT Logo"
+                width={180}
+                height={60}
+                className="h-14 w-auto"
+              />
             </Link>
 
             <div className="space-y-4 pt-4">
               <h4 className="text-sm font-bold uppercase tracking-widest text-[#A78BFA]">Contact Information</h4>
               <div className="text-white/80 text-base space-y-2 font-medium">
-                <p>909, Mayuresh Cosmos, Plot No. 37, Sector-11</p>
-                <p>Airoli, Navi Mumbai - 400 708</p>
+                <p>Palai Plaza, 203, Swami Gyan Jivandas Marg</p>
+                <p>Dadar East, Mumbai - 400 014</p>
               </div>
               <div className="text-white/80 text-base space-y-2 pt-2 font-medium">
-                <p>Phone: <a href="tel:+912241632222" className="hover:text-white transition-colors underline decoration-[#513394] underline-offset-4">+91-22-41632222</a></p>
-                <p>Email: <a href="mailto:info@r3boot.com" className="hover:text-white transition-colors underline decoration-[#513394] underline-offset-4">info@r3boot.com</a></p>
+                <p>Phone: <a href="tel:+919702368612" className="hover:text-white transition-colors underline decoration-[#513394] underline-offset-4">+91 9702368612</a></p>
+                <p>Email: <a href="mailto:info.r3boot@gmail.com" className="hover:text-white transition-colors underline decoration-[#513394] underline-offset-4">info.r3boot@gmail.com</a></p>
               </div>
             </div>
           </div>
@@ -48,20 +52,23 @@ const Footer: React.FC = () => {
             {/* Column 1: Services 1 */}
             <div className="space-y-4 border-l border-white/20 pl-8 pb-6 lg:pb-0">
               <ul className="space-y-4 text-base font-semibold text-white/90">
-                <li><Link href="/services#ice-bath" className="hover:text-[#A78BFA] transition-colors">Ice Bath Recovery</Link></li>
-                <li><Link href="/services#compression" className="hover:text-[#A78BFA] transition-colors">Compression Therapy</Link></li>
-                <li><Link href="/services#red-light" className="hover:text-[#A78BFA] transition-colors">Red Light Therapy</Link></li>
-                <li><Link href="/services#percussive" className="hover:text-[#A78BFA] transition-colors">Percussive Therapy</Link></li>
+                <li><Link href="/services/hydrotherapy" className="hover:text-[#A78BFA] transition-colors">Ice Bath Recovery</Link></li>
+                <li><Link href="/services/sports-massage" className="hover:text-[#A78BFA] transition-colors">Compression Therapy</Link></li>
+                <li><Link href="/services/contrast-therapy" className="hover:text-[#A78BFA] transition-colors">Red Light Therapy</Link></li>
+                <li><Link href="/services/sports-massage" className="hover:text-[#A78BFA] transition-colors">Percussive Therapy</Link></li>
+                <li><Link href="/services/clinical-pilates" className="hover:text-[#A78BFA] transition-colors">Clinical Pilates</Link></li>
               </ul>
             </div>
 
             {/* Column 2: Services 2 */}
             <div className="space-y-4 border-l border-white/20 pl-8 pb-6 lg:pb-0">
               <ul className="space-y-4 text-base font-semibold text-white/90">
-                <li><Link href="/services#sauna" className="hover:text-[#A78BFA] transition-colors">Infrared Sauna</Link></li>
-                <li><Link href="/services#massage" className="hover:text-[#A78BFA] transition-colors">Sport Massage</Link></li>
-                <li><Link href="/services#physiotherapy" className="hover:text-[#A78BFA] transition-colors">Physiotherapy</Link></li>
-                <li><Link href="/services#cryotherapy" className="hover:text-[#A78BFA] transition-colors">Cryotherapy</Link></li>
+                <li><Link href="/services/contrast-therapy" className="hover:text-[#A78BFA] transition-colors">Infrared Sauna</Link></li>
+                <li><Link href="/services/sports-massage" className="hover:text-[#A78BFA] transition-colors">Sport Massage</Link></li>
+                <li><Link href="/services/hydrotherapy" className="hover:text-[#A78BFA] transition-colors">Physiotherapy</Link></li>
+                <li><Link href="/services/contrast-therapy" className="hover:text-[#A78BFA] transition-colors">Cryotherapy</Link></li>
+                <li><Link href="/services/sports-psychology" className="hover:text-[#A78BFA] transition-colors">Sports Psychology</Link></li>
+                <li><Link href="/services/counselling-mental-training" className="hover:text-[#A78BFA] transition-colors">Counselling & Mental Training</Link></li>
               </ul>
             </div>
 
@@ -80,7 +87,13 @@ const Footer: React.FC = () => {
         {/* Social Icons Section */}
         <div className="flex justify-center gap-10 mb-12">
           {socialLinks.map((social) => (
-            <a key={social.name} href={social.href} className="text-white/60 hover:text-white transition-all duration-300 hover:scale-125 group relative">
+            <a
+              key={social.name}
+              href={social.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white/60 hover:text-white transition-all duration-300 hover:scale-125 group relative"
+            >
               <span className="sr-only">{social.name}</span>
               <div className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center group-hover:border-[#A78BFA] transition-colors">
                 <social.icon size={20} className="group-hover:text-[#A78BFA] transition-colors" />

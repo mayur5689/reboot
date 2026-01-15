@@ -2,23 +2,24 @@
 
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const testimonials = [
   {
-    quote: "Reboot keeps me motivated every day!",
-    author: "Alex Rodriguez"
+    quote: "Excellent experience! The team is professional, knowledgeable, and genuinely caring.",
+    author: "Namrata Doshi"
   },
   {
-    quote: "The best recovery center I've ever been to.",
-    author: "Sarah Jenkins"
+    quote: "Wonderful team. Navigated me through the therapy with great insights. Body feels lighter!",
+    author: "Chandrakant Chande"
   },
   {
-    quote: "Professional staff and top-tier facilities.",
-    author: "Michael Chen"
+    quote: "Amazing experience. The facility is spotless and thoughtfully designed for total recovery.",
+    author: "Dharmesh Thakkar"
   },
   {
-    quote: "Helped me recover from my injury in record time.",
-    author: "David Thompson"
+    quote: "Personalized Pilates and posture correction. Fresh, well-designed, and thoughtfully run.",
+    author: "Sonal Malik"
   }
 ]
 
@@ -62,15 +63,24 @@ export default function Hero() {
 
         {/* CTA Buttons */}
         <div className="flex flex-wrap gap-4">
-          <button
-            className="text-white font-semibold px-7 py-3 rounded-full transition-all hover:opacity-90 text-sm shadow-lg"
-            style={{ backgroundColor: '#513394' }}
+          <Link href="/contact" className="z-30">
+            <button
+              className="text-white font-semibold px-7 py-3 rounded-full transition-all hover:opacity-90 text-sm shadow-lg"
+              style={{ backgroundColor: '#513394' }}
+            >
+              Book a Session
+            </button>
+          </Link>
+          <a
+            href="https://wa.me/919702368612"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="z-30"
           >
-            Book a Session
-          </button>
-          <button className="bg-white/15 backdrop-blur-sm border border-white/40 text-white font-semibold px-7 py-3 rounded-full hover:bg-white/25 transition-colors text-sm">
-            WhatsApp Our Team
-          </button>
+            <button className="bg-white/15 backdrop-blur-sm border border-white/40 text-white font-semibold px-7 py-3 rounded-full hover:bg-white/25 transition-colors text-sm">
+              WhatsApp Our Team
+            </button>
+          </a>
         </div>
       </div>
 

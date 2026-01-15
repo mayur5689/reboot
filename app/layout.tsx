@@ -53,8 +53,8 @@ export default function RootLayout({
       <body className={`${branding.className} antialiased font-sans dark:bg-[#0A0A0A] transition-colors duration-300`}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="light"
-          enableSystem
+          defaultTheme="dark"
+          enableSystem={false}
           disableTransitionOnChange
         >
           <StudioLayoutWrapper

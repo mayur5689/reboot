@@ -21,17 +21,14 @@ export default function OurServices() {
                     </h2>
                 </div>
 
-                {/* Services Grid - Asymmetrical matching the reference image */}
-                <div className="grid grid-cols-1 md:grid-cols-6 gap-8">
+                {/* Services Grid - Symmetric for 6 services */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {services.map((service, index) => {
-                        // Pattern: First 2 are wide (col-span-3), others are standard (col-span-2)
-                        const isWide = index < 2;
                         return (
                             <Link
                                 key={index}
                                 href={`/services/${service.slug}`}
-                                className={`group relative h-[450px] overflow-hidden rounded-[2.5rem] shadow-2xl transition-all duration-700 hover:-translate-y-3 ${isWide ? 'md:col-span-3' : 'md:col-span-3 lg:col-span-2'
-                                    }`}
+                                className="group relative h-[450px] overflow-hidden rounded-[2.5rem] shadow-2xl transition-all duration-700 hover:-translate-y-3"
                             >
                                 {/* Background Image */}
                                 <Image
@@ -75,7 +72,7 @@ export default function OurServices() {
                         className="inline-flex items-center gap-3 text-white font-semibold px-8 py-4 rounded-full transition-all hover:opacity-90 hover:scale-105 shadow-lg shadow-[#513394]/20"
                         style={{ backgroundColor: '#513394' }}
                     >
-                        View All Services
+                        Explore All Solutions
                         <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                         </svg>
