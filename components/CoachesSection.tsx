@@ -73,8 +73,8 @@ const CoachesSection: React.FC = () => {
           </motion.h2>
         </div>
 
-        {/* Coaches Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+        {/* Coaches Grid - Horizontal Scroll on Mobile, Grid on Desktop */}
+        <div className="flex md:grid overflow-x-auto md:overflow-visible md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 mb-16 pb-8 md:pb-0 scrollbar-hide snap-x snap-mandatory px-0">
           {coaches.map((coach, index) => (
             <motion.div
               key={coach.id}
@@ -82,7 +82,7 @@ const CoachesSection: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="group flex flex-col items-center"
+              className="group flex-none w-[280px] md:w-auto flex flex-col items-center snap-center"
             >
               {/* Image Container */}
               <div className="relative w-full aspect-[4/5] overflow-hidden rounded-[2.5rem] mb-8 shadow-lg bg-gray-100 dark:bg-[#1A1A1A]">
