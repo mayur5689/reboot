@@ -57,6 +57,7 @@ const Footer: React.FC = () => {
                 <li><Link href="/services/contrast-therapy" className="hover:text-[#A78BFA] transition-colors">Red Light Therapy</Link></li>
                 <li><Link href="/services/sports-massage" className="hover:text-[#A78BFA] transition-colors">Percussive Therapy</Link></li>
                 <li><Link href="/services/clinical-pilates" className="hover:text-[#A78BFA] transition-colors">Clinical Pilates</Link></li>
+                <li><Link href="/services/hydrotherapy" className="hover:text-[#A78BFA] transition-colors">Hydrotherapy</Link></li>
               </ul>
             </div>
 
@@ -65,7 +66,7 @@ const Footer: React.FC = () => {
               <ul className="space-y-4 text-base font-semibold text-white/90">
                 <li><Link href="/services/contrast-therapy" className="hover:text-[#A78BFA] transition-colors">Infrared Sauna</Link></li>
                 <li><Link href="/services/sports-massage" className="hover:text-[#A78BFA] transition-colors">Sport Massage</Link></li>
-                <li><Link href="/services/hydrotherapy" className="hover:text-[#A78BFA] transition-colors">Physiotherapy</Link></li>
+                <li><Link href="/services/physiotherapy" className="hover:text-[#A78BFA] transition-colors">Physiotherapy</Link></li>
                 <li><Link href="/services/contrast-therapy" className="hover:text-[#A78BFA] transition-colors">Cryotherapy</Link></li>
                 <li><Link href="/services/sports-psychology" className="hover:text-[#A78BFA] transition-colors">Sports Psychology</Link></li>
                 <li><Link href="/services/counselling-mental-training" className="hover:text-[#A78BFA] transition-colors">Counselling & Mental Training</Link></li>

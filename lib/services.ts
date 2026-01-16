@@ -16,6 +16,27 @@ export interface Service {
 
 export const services: Service[] = [
     {
+        title: "Physiotherapy",
+        category: "RECOVERY",
+        description: "Expert care to restore movement and function.",
+        fullDescription: "Our physiotherapy services provide expert assessment and treatment for various physical conditions. We focus on restoring movement, reducing pain, and improving overall function through evidence-based techniques, personalized exercise programs, and manual therapy.",
+        benefits: [
+            "Pain management",
+            "Restoration of movement",
+            "Injury rehabilitation",
+            "Improved function",
+            "Personalized exercise plans"
+        ],
+        process: [
+            { title: "Assessment", description: "Comprehensive evaluation of your condition and goals." },
+            { title: "Diagnosis", description: "Identifying the root cause and explaining the treatment plan." },
+            { title: "Treatment", description: "Applying targeted manual therapy and exercises." },
+            { title: "Management", description: "Ongoing support and strategy for long-term health." }
+        ],
+        image: "/images/Services_image/Physiotherapy.webp",
+        slug: "physiotherapy"
+    },
+    {
         title: "Clinical Pilates",
         category: "FITNESS",
         description: "Train with control, precision, and stability.",

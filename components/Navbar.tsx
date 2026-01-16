@@ -219,6 +219,7 @@ function getServiceIcon(title: string) {
     case "Sports Massage": return <MassageIcon />;
     case "Sports Psychology": return <BrainIcon />;
     case "Counselling & Mental Training": return <MentalIcon />;
+    case "Physiotherapy": return <PathologyIcon />;
     default: return <PathologyIcon />;
   }
 }

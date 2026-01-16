@@ -23,7 +23,7 @@ export default function OurServices() {
 
                 {/* Services Grid - Optimized for Mobile (All 6) and Desktop (Top 5) */}
                 <div className="grid grid-cols-2 md:grid-cols-6 gap-4 md:gap-8">
-                    {services.map((service, index) => {
+                    {services.slice(0, 6).map((service, index) => {
                         const isWide = index < 2;
                         // On mobile, the 5th card spans 2 columns to fill the row
                         const isLastOnMobileOdd = index === 4 && services.length === 5;
