@@ -157,7 +157,7 @@ export default function Navbar() {
 
       {/* Full-Screen Mobile Menu Overlay */}
       {isMobileMenuOpen && (
-        <div className="fixed inset-0 z-[200] bg-white dark:bg-[#0A0A0A] animate-in slide-in-from-top duration-700 ease-in-out lg:hidden flex flex-col">
+        <div className="fixed inset-0 z-[200] bg-white dark:bg-[#0A0A0A] animate-in slide-in-from-top duration-700 ease-in-out lg:hidden flex flex-col overflow-y-auto">
           {/* Header in Menu */}
           <div className="flex items-center justify-between px-6 py-6 border-b border-gray-50 dark:border-white/5">
             <Link href="/" onClick={() => setIsMobileMenuOpen(false)}>
