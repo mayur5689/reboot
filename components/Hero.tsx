@@ -36,7 +36,7 @@ export default function Hero() {
   }, [])
 
   return (
-    <section className="relative w-full h-screen flex flex-col overflow-hidden text-white">
+    <section className="relative w-full min-h-screen flex flex-col text-white overflow-x-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-black/40 z-10"></div>
@@ -50,14 +50,14 @@ export default function Hero() {
       </div>
 
       {/* Main Content Area */}
-      <div className="relative z-20 container mx-auto px-6 lg:px-8 pt-20 lg:pt-24 flex-1 flex flex-col justify-center translate-y-[-20px]">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] mb-3 max-w-2xl">
+      <div className="relative z-20 container mx-auto px-6 lg:px-8 pt-32 pb-20 lg:pt-40 lg:pb-32 flex-1 flex flex-col justify-center">
+        <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold leading-[1.1] mb-4 max-w-3xl">
           India&apos;s First Integrated Recovery Centre
         </h1>
-        <h2 className="text-xl md:text-2xl font-semibold text-white/90 mb-4">
+        <h2 className="text-xl md:text-2xl font-semibold text-white/90 mb-5">
           Your Recovery. Redefined.
         </h2>
-        <p className="text-base md:text-lg text-gray-200/90 mb-6 max-w-xl leading-relaxed">
+        <p className="text-base md:text-lg text-gray-200/90 mb-8 max-w-2xl leading-relaxed">
           Science-driven recovery and performance systems for people who take their body and mind seriously.
         </p>
 
@@ -65,7 +65,7 @@ export default function Hero() {
         <div className="flex flex-wrap gap-4">
           <Link href="/contact" className="z-30">
             <button
-              className="text-white font-semibold px-7 py-3 rounded-full transition-all hover:opacity-90 text-sm shadow-lg"
+              className="text-white font-semibold px-8 py-4 rounded-full transition-all hover:opacity-90 text-sm md:text-base shadow-lg hover:scale-105 active:scale-95"
               style={{ backgroundColor: '#513394' }}
             >
               Book a Session
@@ -77,7 +77,7 @@ export default function Hero() {
             rel="noopener noreferrer"
             className="z-30"
           >
-            <button className="bg-white/15 backdrop-blur-sm border border-white/40 text-white font-semibold px-7 py-3 rounded-full hover:bg-white/25 transition-colors text-sm">
+            <button className="bg-white/15 backdrop-blur-sm border border-white/40 text-white font-semibold px-8 py-4 rounded-full hover:bg-white/25 transition-all text-sm md:text-base hover:scale-105 active:scale-95">
               WhatsApp Our Team
             </button>
           </a>
@@ -85,7 +85,7 @@ export default function Hero() {
       </div>
 
       {/* Bottom Cards Section - Hidden on Mobile */}
-      <div className="relative z-20 container mx-auto px-6 lg:px-8 pb-10 hidden md:grid grid-cols-1 md:grid-cols-3 gap-6 -mt-10 md:-mt-16">
+      <div className="relative z-20 container mx-auto px-6 lg:px-8 pb-16 hidden md:grid grid-cols-1 md:grid-cols-3 gap-8">
 
         {/* Card 1: Services & Features (White) */}
         <div className="bg-white dark:bg-[#1A1A1A] text-black dark:text-white p-7 rounded-2xl flex flex-col justify-between shadow-2xl min-h-[210px] border border-transparent dark:border-white/5">
@@ -167,7 +167,7 @@ export default function Hero() {
       {/* Video Popup Modal */}
       {isVideoOpen && (
         <div className="fixed inset-0 z-[150] flex items-center justify-center bg-black/80 backdrop-blur-sm p-4 animate-in fade-in duration-300" onClick={() => setIsVideoOpen(false)}>
-          <div className="relative w-full max-w-5xl aspect-video bg-black rounded-3xl overflow-hidden shadow-2xl animate-in zoom-in-95 duration-300" onClick={(e) => e.stopPropagation()}>
+          <div className="relative w-full max-w-5xl max-h-[90vh] aspect-video bg-black rounded-3xl overflow-hidden shadow-2xl animate-in zoom-in-95 duration-300" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setIsVideoOpen(false)}
               className="absolute top-4 right-4 z-50 p-2 bg-black/50 hover:bg-black/70 text-white rounded-full transition-colors"

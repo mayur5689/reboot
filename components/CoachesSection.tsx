@@ -24,17 +24,17 @@ const coaches: Coach[] = [
   },
   {
     id: "nirmal",
-    name: "Dr. Nirmal Solanki",
+    name: "Nirmal Solanki",
     role: "Senior Physiotherapist",
     imageSrc: "/images/trainer/R3boot_Website_Images/Dr. Nirmal Solanki.webp",
     description: "20+ years of experience. Internationally trained in manual therapy and osteopathy-based rehabilitation."
   },
   {
-    id: "parinaaz",
-    name: "Parinaaz Irani",
-    role: "Head – Sports Counselling",
-    imageSrc: "/images/trainer/R3boot_Website_Images/Parinaaz Irani.webp",
-    description: "Sport psychologist specializing in athlete mental health, performance psychology, and mindset training."
+    id: "vaishali",
+    name: "Vaishali Vijay Rauniyar",
+    role: "Physiotherapist | Sports & Orthopedic Rehabilitation",
+    imageSrc: "/images/trainer/R3boot_Website_Images/Dr. Vaishali Vijay Rauniyar.webp",
+    description: "Clinical experience in sports, orthopedic, and neurological rehabilitation. Certified in Dry Needling and Aquatic Rehabilitation, she designs personalized plans for efficient recovery."
   },
   {
     id: "diyan",
@@ -92,14 +92,20 @@ const CoachesSection: React.FC = () => {
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out grayscale group-hover:grayscale-0"
                 />
+                {/* Glassmorphism Bio Overlay */}
+                <div className="absolute inset-0 bg-[#513394]/90 opacity-0 group-hover:opacity-100 transition-all duration-500 backdrop-blur-sm p-8 flex flex-col justify-center text-white">
+                  <p className="text-white/90 text-sm leading-relaxed line-clamp-[8]">
+                    {coach.description}
+                  </p>
+                </div>
               </div>
 
               {/* Info Below Image (Always Visible) */}
               <div className="text-center px-4">
-                <p className="text-[#513394] dark:text-[#A78BFA] font-black text-[10px] uppercase tracking-[0.2em] mb-2">
+                <p className="text-gray-900 dark:text-white font-black text-[10px] uppercase tracking-[0.2em] mb-2 opacity-80">
                   {coach.role.split('|')[0]}
                 </p>
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-white group-hover:text-[#513394] dark:group-hover:text-[#A78BFA] transition-colors duration-300">
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white transition-colors duration-300">
                   {coach.name}
                 </h3>
               </div>

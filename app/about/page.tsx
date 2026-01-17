@@ -187,7 +187,7 @@ export default function AboutPage() {
                                 bio: "Alkesh Kubadia holds a Master’s degree in Psychology and brings decades of entrepreneurial experience. At r3boot, he oversees strategy, operations, and client experience, ensuring systems-driven execution and ethical practices."
                             },
                             {
-                                name: "Dr. Nirmal Solanki",
+                                name: "Nirmal Solanki",
                                 role: "Senior Physiotherapist & Manual Therapy Specialist",
                                 image: "/images/trainer/R3boot_Website_Images/Dr. Nirmal Solanki.webp",
                                 bio: "Senior physiotherapist with over 20 years of experience in sports physiotherapy and manual therapy. Internationally trained in advanced osteopathic techniques with a focus on sustainable, long-term outcomes."
@@ -205,13 +205,13 @@ export default function AboutPage() {
                                 bio: "Professional cricketer with over a decade of experience. Diyan leads the athlete and performance vision, ensuring every protocol aligns with real athletic needs for smarter recovery."
                             },
                             {
-                                name: "Dr. Vaishali Vijay Rauniyar",
+                                name: "Vaishali Vijay Rauniyar",
                                 role: "Physiotherapist | Sports & Orthopedic Rehabilitation",
                                 image: "/images/trainer/R3boot_Website_Images/Dr. Vaishali Vijay Rauniyar.webp",
                                 bio: "Clinical experience in sports, orthopedic, and neurological rehabilitation. Certified in Dry Needling and Aquatic Rehabilitation, she designs personalized plans for efficient recovery."
                             },
                             {
-                                name: "Dr. Ganesh S. Gadhave",
+                                name: "Ganesh S. Gadhave",
                                 role: "Pain Management & Sports Rehabilitation Specialist",
                                 image: "/images/trainer/R3boot_Website_Images/Dr. Ganesh S. Gadhave.webp",
                                 bio: "Focuses on injury prevention and athlete recovery. His approach emphasizes long-term physical resilience rather than short-term relief, helping individuals train with confidence."
@@ -246,10 +246,10 @@ export default function AboutPage() {
                                     </div>
                                 </div>
                                 <div className="space-y-1">
-                                    <p className="text-[#513394] dark:text-[#A78BFA] text-[10px] font-bold uppercase tracking-widest">
+                                    <p className="text-gray-900 dark:text-white text-[10px] font-bold uppercase tracking-widest opacity-80">
                                         {member.role.split('|')[0]}
                                     </p>
-                                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white transition-colors group-hover:text-[#513394]">
+                                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white transition-colors">
                                         {member.name}
                                     </h3>
                                 </div>
