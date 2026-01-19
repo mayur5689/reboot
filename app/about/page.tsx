@@ -11,8 +11,8 @@ export default function AboutPage() {
     return (
         <main className="min-h-screen bg-white dark:bg-[#0A0A0A]">
             {/* Section 1: Hero / Introduction */}
-            <section className="min-h-[90vh] flex items-center pt-24 pb-12 lg:pt-32 lg:pb-16 px-6 lg:px-8">
-                <div className="container mx-auto">
+            <section className="min-h-[90vh] flex items-center pt-24 pb-12 lg:pt-32 lg:pb-16">
+                <div className="container mx-auto px-6 lg:px-8">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
                         {/* Left Content */}
                         <motion.div
@@ -184,15 +184,15 @@ export default function AboutPage() {
             </section>
 
             {/* Section 3: Advanced Modalities Detail */}
-            <section id="modalities" className="py-24 lg:py-32 px-6 lg:px-8 dark:bg-[#0A0A0A]">
-                <div className="container mx-auto">
+            <section id="modalities" className="py-24 lg:py-32 dark:bg-[#0A0A0A]">
+                <div className="container mx-auto px-6 lg:px-8">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                         <motion.div
                             initial={{ opacity: 0, scale: 0.95 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             className="relative order-2 lg:order-1"
                         >
-                            <div className="relative aspect-[4/5] max-w-md mx-auto rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white dark:border-white/5">
+                            <div className="relative aspect-[4/5] w-full rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white dark:border-white/5">
                                 <Image
                                     src="/images/trainer/R3boot_Website_Images/Dr. Nirmal Solanki.webp"
                                     alt="Professional Care"
@@ -201,7 +201,7 @@ export default function AboutPage() {
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-[#513394]/40 to-transparent" />
                             </div>
-                            <div className="absolute -bottom-8 -right-8 w-48 h-48 bg-[#513394] rounded-[2.5rem] flex flex-col items-center justify-center p-6 text-white shadow-2xl transform rotate-6 animate-pulse">
+                            <div className="absolute bottom-8 left-8 w-40 h-40 bg-[#513394] rounded-[2.5rem] flex flex-col items-center justify-center p-6 text-white shadow-2xl transform -rotate-6 animate-pulse z-20">
                                 <Activity className="w-10 h-10 mb-2" />
                                 <span className="text-xs font-bold uppercase tracking-widest text-center">Clinical Precision</span>
                             </div>
@@ -299,8 +299,8 @@ export default function AboutPage() {
             </section>
 
             {/* Section 3: Professional Team / Doctors */}
-            <section id="team-section" className="py-24 lg:py-32 px-6 lg:px-8 bg-white dark:bg-[#0A0A0A]">
-                <div className="container mx-auto">
+            <section id="team-section" className="py-24 lg:py-32 bg-white dark:bg-[#0A0A0A]">
+                <div className="container mx-auto px-6 lg:px-8">
                     <div className="text-center mb-20 max-w-2xl mx-auto">
                         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#513394]/10 text-[#513394] font-semibold text-xs tracking-widest uppercase mb-6">
                             Professional Team
