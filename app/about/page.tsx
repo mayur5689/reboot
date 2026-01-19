@@ -192,7 +192,7 @@ export default function AboutPage() {
                             whileInView={{ opacity: 1, scale: 1 }}
                             className="relative order-2 lg:order-1"
                         >
-                            <div className="relative aspect-[4/5] w-full rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white dark:border-white/5">
+                            <div className="relative aspect-[4/5] max-w-lg rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white dark:border-white/5">
                                 <Image
                                     src="/images/trainer/R3boot_Website_Images/Dr. Nirmal Solanki.webp"
                                     alt="Professional Care"
@@ -200,10 +200,6 @@ export default function AboutPage() {
                                     className="object-cover"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-[#513394]/40 to-transparent" />
-                            </div>
-                            <div className="absolute bottom-8 left-8 w-40 h-40 bg-[#513394] rounded-[2.5rem] flex flex-col items-center justify-center p-6 text-white shadow-2xl transform -rotate-6 animate-pulse z-20">
-                                <Activity className="w-10 h-10 mb-2" />
-                                <span className="text-xs font-bold uppercase tracking-widest text-center">Clinical Precision</span>
                             </div>
                         </motion.div>
 
