@@ -67,7 +67,7 @@ export default function HowItWorks() {
                         {/* Large High-End Image */}
                         <div className="relative h-[380px] w-full rounded-[2.5rem] overflow-hidden shadow-2xl">
                             <Image
-                                src="/images/3.jpg"
+                                src="/images/Services_image/Hydrotherapy.webp"
                                 alt="Athlete Recovery"
                                 fill
                                 className="object-cover"

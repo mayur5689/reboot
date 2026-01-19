@@ -121,7 +121,7 @@ export default function AboutPage() {
                                 label: "RECOVERY & REHAB",
                                 year: "Step 1",
                                 title: "Clinical Excellence",
-                                image: "/images/2.jpg",
+                                image: "/images/Services_image/Physiotherapy.webp",
                                 description: "Expert physiotherapy and manual therapy focused on long-term outcomes and pain management.",
                                 icon: <BriefcaseMedical className="w-8 h-8 text-[#513394]/40" />
                             },
@@ -129,7 +129,7 @@ export default function AboutPage() {
                                 label: "MODALITIES",
                                 year: "Step 2",
                                 title: "High-Performance",
-                                image: "/images/3.jpg",
+                                image: "/images/Services_image/Contrast Therapy.webp",
                                 description: "State-of-the-art modalities including Ice Baths and infrared saunas to accelerate recovery cycles.",
                                 icon: <Activity className="w-8 h-8 text-[#513394]/40" />
                             },
@@ -137,7 +137,7 @@ export default function AboutPage() {
                                 label: "MINDSET",
                                 year: "Step 3",
                                 title: "Mental Resilience",
-                                image: "/images/4.jpg",
+                                image: "/images/Services_image/Sports Psychology.webp",
                                 description: "Dedicated sports mindset training to help athletes develop focus and emotional regulation.",
                                 icon: <Beaker className="w-8 h-8 text-[#513394]/40" />
                             }
