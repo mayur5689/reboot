@@ -94,7 +94,7 @@ export default function AboutPage() {
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A]/60 via-transparent to-transparent" />
                                 <div className="absolute bottom-8 left-8 right-8 p-6 glass-morphism rounded-2xl border border-white/10">
-                                    <p className="text-white text-lg font-medium">"Our integrated approach ensures you don't just recover, you evolve."</p>
+                                    <p className="text-white text-lg font-medium">&ldquo;Our integrated approach ensures you don&rsquo;t just recover, you evolve.&rdquo;</p>
                                 </div>
                             </div>
                         </motion.div>
@@ -210,7 +210,7 @@ export default function AboutPage() {
                         >
                             <div className="space-y-6">
                                 <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white leading-tight italic">
-                                    "Recovery is not an option. It's a <span className="text-[#513394]">discipline.</span>"
+                                    &ldquo;Recovery is not an option. It&rsquo;s a <span className="text-[#513394]">discipline.</span>&rdquo;
                                 </h2>
                                 <p className="text-xl text-gray-600 dark:text-gray-400 leading-relaxed">
                                     We provide an integrated suite of modalities designed to optimize your central nervous system, reduce inflammation, and restore structural integrity.
