@@ -167,7 +167,7 @@ export default function Hero() {
       {/* Video Popup Modal */}
       {isVideoOpen && (
         <div className="fixed inset-0 z-[150] flex items-center justify-center bg-black/80 backdrop-blur-sm p-4 animate-in fade-in duration-300" onClick={() => setIsVideoOpen(false)}>
-          <div className="relative w-full max-w-5xl max-h-[90vh] aspect-video bg-black rounded-3xl overflow-hidden shadow-2xl animate-in zoom-in-95 duration-300" onClick={(e) => e.stopPropagation()}>
+          <div className="relative w-full max-w-md max-h-[90vh] aspect-[9/16] bg-black rounded-3xl overflow-hidden shadow-2xl animate-in zoom-in-95 duration-300" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setIsVideoOpen(false)}
               className="absolute top-4 right-4 z-50 p-2 bg-black/50 hover:bg-black/70 text-white rounded-full transition-colors"
@@ -177,7 +177,7 @@ export default function Hero() {
               </svg>
             </button>
             <video
-              src="https://ik.imagekit.io/5eaaluf7c/YTDown.com_YouTube_Physical-Therapists-Career-Video_Media_FOF71Lb5SkA_002_720p.mp4"
+              src="/video/20260102_193930.mp4"
               className="w-full h-full object-cover"
               controls
               autoPlay

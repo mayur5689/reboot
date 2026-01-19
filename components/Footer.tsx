@@ -48,10 +48,10 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Right Section: Multi-column links with vertical dividers */}
-          <div className="lg:w-3/4 grid grid-cols-1 md:grid-cols-3 gap-0">
+          <div className="lg:w-3/4 grid grid-cols-2 md:grid-cols-3 gap-y-10 gap-x-4 md:gap-0">
             {/* Column 1: Services 1 */}
-            <div className="space-y-4 border-l border-white/20 pl-8 pb-6 lg:pb-0">
-              <ul className="space-y-4 text-base font-semibold text-white/90">
+            <div className="space-y-4 md:border-l border-white/20 md:pl-8">
+              <ul className="space-y-3 text-[13px] md:text-base font-semibold text-white/90">
                 <li><Link href="/services/hydrotherapy" className="hover:text-[#A78BFA] transition-colors">Ice Bath Recovery</Link></li>
                 <li><Link href="/services/sports-massage" className="hover:text-[#A78BFA] transition-colors">Compression Therapy</Link></li>
                 <li><Link href="/services/contrast-therapy" className="hover:text-[#A78BFA] transition-colors">Red Light Therapy</Link></li>
@@ -62,8 +62,8 @@ const Footer: React.FC = () => {
             </div>
 
             {/* Column 2: Services 2 */}
-            <div className="space-y-4 border-l border-white/20 pl-8 pb-6 lg:pb-0">
-              <ul className="space-y-4 text-base font-semibold text-white/90">
+            <div className="space-y-4 md:border-l border-white/20 md:pl-8">
+              <ul className="space-y-3 text-[13px] md:text-base font-semibold text-white/90">
                 <li><Link href="/services/contrast-therapy" className="hover:text-[#A78BFA] transition-colors">Infrared Sauna</Link></li>
                 <li><Link href="/services/sports-massage" className="hover:text-[#A78BFA] transition-colors">Sport Massage</Link></li>
                 <li><Link href="/services/physiotherapy" className="hover:text-[#A78BFA] transition-colors">Physiotherapy</Link></li>
@@ -74,8 +74,8 @@ const Footer: React.FC = () => {
             </div>
 
             {/* Column 3: Navigation */}
-            <div className="space-y-4 border-l border-white/20 lg:border-r border-white/20 pl-8 pb-6 lg:pb-0">
-              <ul className="space-y-4 text-base font-semibold text-white/90">
+            <div className="col-span-2 md:col-span-1 space-y-4 md:border-l border-white/20 lg:border-r border-white/20 md:pl-8 pt-6 md:pt-0">
+              <ul className="grid grid-cols-2 md:block gap-4 md:space-y-4 text-[13px] md:text-base font-semibold text-white/90">
                 <li><Link href="/" className="hover:text-[#A78BFA] transition-colors">Home</Link></li>
                 <li><Link href="/about" className="hover:text-[#A78BFA] transition-colors">About</Link></li>
                 <li><Link href="/contact" className="hover:text-[#A78BFA] transition-colors">Contact</Link></li>

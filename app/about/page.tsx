@@ -306,7 +306,7 @@ export default function AboutPage() {
                         </h2>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-16">
+                    <div className="flex overflow-x-auto pb-12 md:pb-0 md:grid md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-x-8 md:gap-y-16 scrollbar-hide snap-x snap-mandatory -mx-6 px-6 md:mx-0 md:px-0">
                         {[
                             {
                                 name: "Alkesh Kubadia",
@@ -357,7 +357,7 @@ export default function AboutPage() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: index * 0.1 }}
-                                className="group relative"
+                                className="group relative min-w-[85vw] md:min-w-0 snap-center"
                             >
                                 <div className="relative aspect-[4/5] rounded-[2rem] overflow-hidden mb-6 bg-gray-100 dark:bg-gray-800 shadow-xl group-hover:shadow-2xl transition-all duration-500">
                                     <Image

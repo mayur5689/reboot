@@ -20,86 +20,74 @@ interface VideoCard {
 const videos: VideoCard[] = [
   {
     id: 1,
-    title: "INSPIRING TRANSFORMATION",
-    subtitle: "CLIENT TESTIMONIAL",
-    description: "A powerful testimonial showcasing the incredible journey of transformation through dedication, discipline, and the right guidance. This member's story proves that with determination, anything is possible.",
-    videoUrl: "/images/review-video/video/WhatsApp%20Video%202025-07-09%20at%203.57.12%20PM.mp4",
-    thumbnailUrl: "/images/review-video/thumbnail/1.png",
-    timestamp: "0:15",
-    transcript: "This experience has been absolutely incredible! The transformation I've seen in myself and others is remarkable. The guidance, support, and community here is unlike anything I've experienced before. I highly recommend this to anyone looking to push their limits and discover their true potential.",
-    reviewerName: "Kanika",
+    title: "REJUVENATING EXPERIENCE",
+    subtitle: "R3boot Client, Mumbai",
+    description: "Experience the incredible benefits of sauna and ice bath contrast therapy.",
+    videoUrl: "/video/client/Testimonial_1.mp4",
+    thumbnailUrl: "",
+    timestamp: "0:30",
+    transcript: "I had an amazing experience at R3boot. The sauna followed by the ice bath was incredibly rejuvenating. Even at 11°C, it felt manageable and energizing. I felt more focused, refreshed, and ready for my workouts and work week. There are very few places in Mumbai offering this kind of ice bath experience, and R3boot is doing a fantastic job. Highly recommend trying it.",
+    reviewerName: "R3boot Client",
     rating: 5
   },
   {
     id: 2,
-    title: "LIFE-CHANGING JOURNEY",
-    subtitle: "CLIENT SPOTLIGHT",
-    description: "An amazing story of personal growth and achievement. This member's journey demonstrates how the right environment and support can unlock hidden potential and create lasting positive change.",
-    videoUrl: "/images/review-video/video/WhatsApp%20Video%202025-07-09%20at%203.57.37%20PM.mp4",
-    thumbnailUrl: "/images/review-video/thumbnail/2.png",
-    timestamp: "0:18",
-    transcript: "This has been a life-changing experience for me. The level of support, the quality of training, and the amazing community here has transformed not just my body, but my entire mindset. I've learned so much about myself and what I'm truly capable of achieving.",
-    reviewerName: "Archana",
+    title: "PROFESSIONAL & REJUVENATING",
+    subtitle: "Sports Enthusiast",
+    description: "First visit experience featuring deep tissue massage, cupping, and contrast therapy.",
+    videoUrl: "/video/client/Testimonal_2.mp4",
+    thumbnailUrl: "",
+    timestamp: "0:30",
+    transcript: "This was my first visit to R3boot and I absolutely loved the experience. From the sports massage with deep muscle work and cupping to the sauna and ice bath, everything felt professional and rejuvenating. It’s a beautiful, well-designed facility, and a real blessing for sports enthusiasts. I’m already looking forward to my next visit.",
+    reviewerName: "Aditya",
     rating: 5
   },
   {
     id: 3,
-    title: "UNSTOPPABLE DETERMINATION",
-    subtitle: "CLIENT TESTIMONIAL",
-    description: "A story of resilience and determination that will inspire anyone. This member's journey shows that with the right mindset and support, no challenge is too great to overcome.",
-    videoUrl: "/images/review-video/video/WhatsApp%20Video%202025-07-09%20at%203.58.00%20PM.mp4",
-    thumbnailUrl: "/images/review-video/thumbnail/3.png",
-    timestamp: "0:20",
-    transcript: "I came here with doubts about my abilities, but I'm leaving with complete confidence. The training, the nutrition guidance, and the incredible support system here has shown me that I can achieve things I never thought possible. This experience has been truly transformative.",
-    reviewerName: "Girish",
+    title: "FULLY RECHARGED",
+    subtitle: "R3boot Client, Mumbai",
+    description: "The rarest combination of therapeutic massage and contrast therapy in India.",
+    videoUrl: "/video/client/Testimonial_3.mp4",
+    thumbnailUrl: "",
+    timestamp: "0:30",
+    transcript: "This was a fantastic experience. I honestly didn’t expect I’d be able to stay in the ice bath for long, but I surprised myself and completed it comfortably. The contrast therapy was excellent and left me feeling fully recharged. The massage was outstanding, not the kind where you’re just lying down and relaxing, but a proper therapeutic massage that works on all the right pressure points. Experiences like this are rare in India.",
+    reviewerName: "R3boot Client",
     rating: 5
   },
   {
     id: 4,
-    title: "EXCEPTIONAL EXPERIENCE",
-    subtitle: "CLIENT TESTIMONIAL",
-    description: "An outstanding testimonial highlighting the exceptional quality of the program. This member's experience showcases the comprehensive approach to fitness, nutrition, and personal development.",
-    videoUrl: "/images/review-video/video/WhatsApp%20Video%202025-07-09%20at%204.02.02%20PM.mp4",
-    thumbnailUrl: "/images/review-video/thumbnail/4.png",
-    timestamp: "0:16",
-    transcript: "The quality of this program is exceptional. Every aspect, from the training to the nutrition to the community support, is designed to help you succeed. I've seen incredible results and I know this is just the beginning of my journey.",
-    reviewerName: "Ravi",
+    title: "AMAZING CONTRAST THERAPY",
+    subtitle: "Mumbai Member",
+    description: "Overcoming the challenge of the ice bath followed by deep relaxation.",
+    videoUrl: "/video/client/Testimonial_4.mp4",
+    thumbnailUrl: "",
+    timestamp: "0:30",
+    transcript: "I tried contrast therapy at R3boot and it was an amazing experience. The ice bath was challenging, but the sauna afterward was deeply relaxing. I’d definitely recommend everyone to come and try it.",
+    reviewerName: "Aditya",
     rating: 5
   },
   {
     id: 5,
-    title: "ATUL'S JOURNEY",
-    subtitle: "CLIENT SPOTLIGHT",
-    description: "Atul shares his incredible transformation story, highlighting the physical and mental changes he experienced. His journey is a testament to the power of commitment and the right guidance.",
-    videoUrl: "/images/review-video/video/WhatsApp%20Video%202025-07-09%20at%204.03.54%20PM.mp4",
-    thumbnailUrl: "/images/review-video/thumbnail/5.png",
-    timestamp: "0:25",
-    transcript: "My journey here has been absolutely incredible. I've not only transformed physically but mentally as well. The discipline, the training, and the amazing community here has changed my life. I'm stronger, more confident, and ready to take on any challenge. This experience has been worth every moment.",
-    reviewerName: "Atul",
+    title: "LOVED THE EXPERIENCE",
+    subtitle: "Mumbai Member",
+    description: "Trying out Red Light Therapy combined with cold exposure.",
+    videoUrl: "/video/client/Testimonial_5.mp4",
+    thumbnailUrl: "",
+    timestamp: "0:30",
+    transcript: "I had a great experience at R3boot. I tried the contrast therapy with red light and the ice bath, and absolutely loved it. I’d definitely recommend giving it a try.",
+    reviewerName: "Anuj",
     rating: 5
   },
   {
     id: 6,
-    title: "GAURAV'S TRANSFORMATION",
-    subtitle: "CLIENT TESTIMONIAL",
-    description: "Gaurav's powerful testimonial showcases his remarkable transformation journey. His story demonstrates the comprehensive impact of the program on both physical fitness and personal growth.",
-    videoUrl: "/images/review-video/video/WhatsApp%20Video%202025-07-09%20at%204.04.36%20PM.mp4",
-    thumbnailUrl: "/images/review-video/thumbnail/6.png",
+    title: "REWARDING EXPERIENCE",
+    subtitle: "Early Member, Mumbai",
+    description: "A thorough and structured approach to total wellness and recovery.",
+    videoUrl: "/video/client/Testimonial_6.mp4",
+    thumbnailUrl: "",
     timestamp: "0:30",
-    transcript: "This program has completely transformed my life. The level of training, the nutritional guidance, and the incredible support system here is unmatched. I've achieved things I never thought possible and I'm excited to continue this journey. The community here is like family and the results speak for themselves.",
-    reviewerName: "Gaurav",
-    rating: 5
-  },
-  {
-    id: 7,
-    title: "PRAJAKTA'S SUCCESS",
-    subtitle: "CLIENT SPOTLIGHT",
-    description: "Prajakta shares her inspiring success story, highlighting the transformative power of dedication and the right support system. Her journey is a perfect example of what's possible with commitment.",
-    videoUrl: "/images/review-video/video/WhatsApp%20Video%202025-07-09%20at%204.04.46%20PM.mp4",
-    thumbnailUrl: "/images/review-video/thumbnail/7.png",
-    timestamp: "0:22",
-    transcript: "This experience has been absolutely life-changing. The training, the nutrition guidance, and the incredible community here has helped me achieve goals I never thought possible. I've grown stronger, more confident, and I've learned so much about myself. This is truly a transformative journey that I would recommend to anyone.",
-    reviewerName: "Prajakta",
+    transcript: "This was my first experience at R3boot, and it was excellent from start to finish. I received a warm welcome and a clear explanation of how the therapy works and how it helps. The massage, sauna, infrared session, and ice bath were all very well structured and professionally executed. Overall, it was a thorough and genuinely rewarding experience. I’m happy to be an early member and I wish the team great success as they expand.",
+    reviewerName: "R3boot Client",
     rating: 5
   }
 ];
@@ -438,15 +426,14 @@ const VideoCard: React.FC<{
       onClick={() => onPlayClick(video)}
       style={{ userSelect: 'none', WebkitUserSelect: 'none', MozUserSelect: 'none', msUserSelect: 'none' }}
     >
-      {/* Thumbnail Background - No autoplay, no preload */}
-      <Image
-        src={video.thumbnailUrl}
-        alt={`${video.reviewerName} testimonial thumbnail`}
-        fill
-        sizes="(max-width: 1024px) 50vw, 33vw"
-        className="object-cover object-top transition-transform duration-300 group-hover:scale-105"
+      {/* Video Thumbnail - Shows first frame */}
+      <video
+        src={video.videoUrl}
+        className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-105"
+        muted
+        playsInline
+        preload="metadata"
         draggable={false}
-        unoptimized
       />
 
       {/* Overlay */}
