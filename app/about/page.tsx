@@ -322,7 +322,7 @@ export default function AboutPage() {
                             },
                             {
                                 name: "Parinaaz Irani",
-                                role: "Head – Sports Counselling & Mental Performance",
+                                role: "Sports Counselling & Mental Performance",
                                 image: "/images/trainer/R3boot_Website_Images/Parinaaz Irani.webp",
                                 bio: "Sport and performance psychologist specializing in athlete mental health and mindset training. Her work helps athletes develop mental resilience, emotional regulation, and focus under pressure."
                             },

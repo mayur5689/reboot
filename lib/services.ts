@@ -1,5 +1,11 @@
 import React from 'react';
 
+export interface SubService {
+    title: string;
+    description: string;
+    slug: string;
+}
+
 export interface Service {
     title: string;
     category: string;
@@ -12,6 +18,7 @@ export interface Service {
         title: string;
         description: string;
     }[];
+    subServices?: SubService[];
 }
 
 export const services: Service[] = [
@@ -34,7 +41,44 @@ export const services: Service[] = [
             { title: "Management", description: "Ongoing support and strategy for long-term health." }
         ],
         image: "/images/Services_image/Physiotherapy.webp",
-        slug: "physiotherapy"
+        slug: "physiotherapy",
+        subServices: [
+            {
+                title: "Musculoskeletal (Orthopaedic)",
+                description: "Treatment for bones, joints, muscles, and soft tissue injuries.",
+                slug: "musculoskeletal-orthopaedic"
+            },
+            {
+                title: "Sports Physiotherapy",
+                description: "Specialized care for athletic injuries and performance optimization.",
+                slug: "sports-physiotherapy"
+            },
+            {
+                title: "Chronic Pain Management",
+                description: "Long-term strategies to manage and reduce persistent pain.",
+                slug: "chronic-pain-management"
+            },
+            {
+                title: "Pre & Post-Surgery Rehabilitation",
+                description: "Recovery programs before and after surgical procedures.",
+                slug: "pre-post-surgery-rehabilitation"
+            },
+            {
+                title: "Biomechanical Assessment",
+                description: "Analysis of movement patterns to prevent injuries.",
+                slug: "biomechanical-assessment"
+            },
+            {
+                title: "Women's Health",
+                description: "Pelvic floor therapy, prenatal and postnatal care.",
+                slug: "womens-health"
+            },
+            {
+                title: "Ergonomic Advice & Management",
+                description: "Workplace posture and injury prevention guidance.",
+                slug: "ergonomic-advice-management"
+            }
+        ]
     },
     {
         title: "Clinical Pilates",

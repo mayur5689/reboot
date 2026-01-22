@@ -124,6 +124,61 @@ export default async function ServicePage({ params }: ServicePageProps) {
                 </div>
             </section>
 
+            {/* Sub-Services Section - Only shows for services with subServices */}
+            {service.subServices && service.subServices.length > 0 && (
+                <section className="py-24 lg:py-32 bg-white">
+                    <div className="container mx-auto px-6 lg:px-8">
+                        <div className="text-center mb-16">
+                            <span className="text-[11px] font-black tracking-[0.3em] text-[#513394] uppercase mb-4 block">
+                                SPECIALIZATIONS //
+                            </span>
+                            <h2 className="text-4xl md:text-6xl font-black text-gray-900 tracking-tight">
+                                Our <span className="text-[#513394]">{service.title}</span> Services
+                            </h2>
+                            <p className="text-gray-500 text-lg mt-4 max-w-2xl mx-auto">
+                                Explore our specialized treatments tailored to your specific needs.
+                            </p>
+                        </div>
+
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                            {service.subServices.map((sub, index) => (
+                                <div
+                                    key={index}
+                                    id={sub.slug}
+                                    className="group bg-gray-50 hover:bg-[#513394] p-8 rounded-[2rem] transition-all duration-500 hover:shadow-2xl hover:-translate-y-2"
+                                >
+                                    <div className="w-14 h-14 rounded-2xl bg-[#513394]/10 group-hover:bg-white/20 flex items-center justify-center mb-6 transition-colors duration-500">
+                                        <svg className="w-7 h-7 text-[#513394] group-hover:text-white transition-colors duration-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                        </svg>
+                                    </div>
+                                    <h3 className="text-xl font-bold text-gray-900 group-hover:text-white mb-3 transition-colors duration-500">
+                                        {sub.title}
+                                    </h3>
+                                    <p className="text-gray-500 group-hover:text-white/80 text-sm leading-relaxed transition-colors duration-500">
+                                        {sub.description}
+                                    </p>
+                                </div>
+                            ))}
+                        </div>
+
+                        <div className="text-center mt-12">
+                            <a
+                                href="https://www.practo.com/mumbai/clinic/r3-boot-spoorts-therapy-dadar-east/doctors"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-3 bg-[#513394] text-white font-bold px-10 py-4 rounded-full hover:bg-[#412975] transition-all shadow-xl shadow-[#513394]/20 hover:scale-105"
+                            >
+                                Book a Consultation
+                                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+            )}
+
             {/* Explore Other Services - Using the same premium cards */}
             <section className="py-24 lg:py-32 bg-[#F8F9FA]">
                 <div className="container mx-auto px-6 lg:px-8">

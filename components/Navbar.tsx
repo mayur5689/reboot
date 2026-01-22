@@ -77,19 +77,44 @@ export default function Navbar() {
                   <div className="container mx-auto px-6 lg:px-8 py-10">
                     <div className="grid grid-cols-1 md:grid-cols-4 gap-x-8 gap-y-4">
                       {services.map((service, idx) => (
-                        <Link
-                          key={idx}
-                          href={`/services/${service.slug}`}
-                          className="flex items-start gap-4 p-4 rounded-2xl hover:bg-gray-50 dark:hover:bg-white/5 transition-all duration-300 group"
-                        >
-                          <div className="w-11 h-11 rounded-xl bg-[#513394]/10 text-[#513394] dark:text-[#A78BFA] flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-[#513394] group-hover:text-white transition-all duration-300">
-                            {getServiceIcon(service.title)}
-                          </div>
-                          <div className="pt-1">
-                            <h4 className="text-[15px] font-bold text-gray-900 dark:text-white mb-1 group-hover:text-[#513394] dark:group-hover:text-[#A78BFA] transition-colors">{service.title}</h4>
-                            <p className="text-[11px] text-gray-500 dark:text-gray-400 leading-tight line-clamp-2">{service.description}</p>
-                          </div>
-                        </Link>
+                        <div key={idx} className="relative group/service">
+                          <Link
+                            href={`/services/${service.slug}`}
+                            className="flex items-start gap-4 p-4 rounded-2xl hover:bg-gray-50 dark:hover:bg-white/5 transition-all duration-300 group"
+                          >
+                            <div className="w-11 h-11 rounded-xl bg-[#513394]/10 text-[#513394] dark:text-[#A78BFA] flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-[#513394] group-hover:text-white transition-all duration-300">
+                              {getServiceIcon(service.title)}
+                            </div>
+                            <div className="pt-1 flex-1">
+                              <div className="flex items-center gap-2">
+                                <h4 className="text-[15px] font-bold text-gray-900 dark:text-white mb-1 group-hover:text-[#513394] dark:group-hover:text-[#A78BFA] transition-colors">{service.title}</h4>
+                                {service.subServices && service.subServices.length > 0 && (
+                                  <ChevronDownIcon className="w-3 h-3 text-gray-400 -rotate-90 group-hover/service:rotate-0 transition-transform duration-300" />
+                                )}
+                              </div>
+                              <p className="text-[11px] text-gray-500 dark:text-gray-400 leading-tight line-clamp-2">{service.description}</p>
+                            </div>
+                          </Link>
+
+                          {/* Sub-services dropdown for Physiotherapy */}
+                          {service.subServices && service.subServices.length > 0 && (
+                            <div className="hidden group-hover/service:block absolute left-full top-0 ml-2 w-72 bg-white dark:bg-[#1A1A1A] rounded-2xl shadow-2xl border border-gray-100 dark:border-white/10 p-3 z-50 animate-in fade-in slide-in-from-left-2 duration-200">
+                              <div className="text-[10px] font-bold text-[#513394] dark:text-[#A78BFA] uppercase tracking-widest mb-2 px-3">Specializations</div>
+                              <div className="space-y-1 max-h-[320px] overflow-y-auto">
+                                {service.subServices.map((sub, subIdx) => (
+                                  <Link
+                                    key={subIdx}
+                                    href={`/services/${service.slug}#${sub.slug}`}
+                                    className="block px-3 py-2 rounded-xl hover:bg-[#513394]/10 dark:hover:bg-white/5 transition-all group/sub"
+                                  >
+                                    <h5 className="text-[13px] font-semibold text-gray-800 dark:text-white group-hover/sub:text-[#513394] dark:group-hover/sub:text-[#A78BFA] transition-colors">{sub.title}</h5>
+                                    <p className="text-[10px] text-gray-500 dark:text-gray-400 leading-snug mt-0.5">{sub.description}</p>
+                                  </Link>
+                                ))}
+                              </div>
+                            </div>
+                          )}
+                        </div>
                       ))}
                     </div>
 
