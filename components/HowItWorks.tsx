@@ -51,8 +51,10 @@ export default function HowItWorks() {
                                 Every transformation starts with structure. Here&apos;s how we turn recovery goals into real progress — one step at a time.
                             </p>
 
-                            <Link
-                                href="/contact"
+                            <a
+                                href="https://www.practo.com/mumbai/clinic/r3-boot-spoorts-therapy-dadar-east/doctors"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="inline-flex items-center gap-4 bg-[#513394] text-white px-8 py-3.5 rounded-xl font-bold group hover:bg-[#412975] transition-all shadow-lg shadow-[#513394]/20"
                             >
                                 Book Your Free Call
@@ -61,7 +63,7 @@ export default function HowItWorks() {
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7-7 7" />
                                     </svg>
                                 </div>
-                            </Link>
+                            </a>
                         </div>
 
                         {/* Large High-End Image */}

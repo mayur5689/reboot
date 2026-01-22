@@ -111,12 +111,14 @@ export default function ServicesPage() {
                             Join over 50,000+ happy clients who have found their way back to peak performance through our specialized services.
                         </p>
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-                            <Link
-                                href="/contact"
+                            <a
+                                href="https://www.practo.com/mumbai/clinic/r3-boot-spoorts-therapy-dadar-east/doctors"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="w-full sm:w-auto bg-white text-[#513394] font-black px-10 py-5 rounded-full transition-all hover:scale-105 shadow-2xl text-lg tracking-wide"
                             >
                                 Book a Consultation
-                            </Link>
+                            </a>
                             <Link
                                 href="https://wa.me/yournumber"
                                 className="w-full sm:w-auto border-2 border-white/30 text-white font-bold px-10 py-5 rounded-full transition-all hover:bg-white/10 text-lg tracking-wide"

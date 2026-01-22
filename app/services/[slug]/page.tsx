@@ -107,12 +107,14 @@ export default async function ServicePage({ params }: ServicePageProps) {
                                     ))}
                                 </ul>
 
-                                <Link
-                                    href="/contact"
+                                <a
+                                    href="https://www.practo.com/mumbai/clinic/r3-boot-spoorts-therapy-dadar-east/doctors"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     className="block text-center bg-[#513394] text-white font-black px-8 py-5 rounded-2xl transition-all hover:scale-[1.02] shadow-xl text-lg group-hover:bg-[#603eb0]"
                                 >
                                     Book This Service
-                                </Link>
+                                </a>
                                 <p className="text-center text-white/30 text-xs mt-6 font-bold tracking-widest">
                                     AVAILABLE 7 DAYS A WEEK
                                 </p>

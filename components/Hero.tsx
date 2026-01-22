@@ -63,14 +63,14 @@ export default function Hero() {
 
         {/* CTA Buttons */}
         <div className="flex flex-wrap gap-4">
-          <Link href="/contact" className="z-30">
+          <a href="https://www.practo.com/mumbai/clinic/r3-boot-spoorts-therapy-dadar-east/doctors" target="_blank" rel="noopener noreferrer" className="z-30">
             <button
               className="text-white font-semibold px-8 py-4 rounded-full transition-all hover:opacity-90 text-sm md:text-base shadow-lg hover:scale-105 active:scale-95"
               style={{ backgroundColor: '#513394' }}
             >
               Book a Session
             </button>
-          </Link>
+          </a>
           <a
             href="https://wa.me/919702368612"
             target="_blank"

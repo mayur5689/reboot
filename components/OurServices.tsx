@@ -1,10 +1,30 @@
 "use client";
 
+import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { services } from '@/lib/services'
 
 export default function OurServices() {
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const checkMobile = () => {
+            setIsMobile(window.innerWidth < 768);
+        };
+
+        // Check on mount
+        checkMobile();
+
+        // Add resize listener
+        window.addEventListener('resize', checkMobile);
+
+        return () => window.removeEventListener('resize', checkMobile);
+    }, []);
+
+    // Limit to 4 cards on mobile, show all on desktop
+    const displayedServices = isMobile ? services.slice(0, 4) : services;
+
     return (
         <section className="py-20 bg-gradient-to-b from-gray-50 to-white dark:from-[#0A0A0A] dark:to-[#0A0A0A] transition-colors duration-500">
             <div className="container mx-auto px-6 lg:px-8">
@@ -21,9 +41,9 @@ export default function OurServices() {
                     </h2>
                 </div>
 
-                {/* Services Grid - Optimized for Mobile (All 6) and Desktop (Top 5) */}
+                {/* Services Grid - Shows 4 cards on Mobile, all on Desktop */}
                 <div className="grid grid-cols-2 md:grid-cols-6 gap-4 md:gap-8">
-                    {services.map((service, index) => {
+                    {displayedServices.map((service, index) => {
                         const isWide = index < 2;
                         // For a clean grid with 7 items:
                         // Row 1: 0, 1 (3+3 = 6)

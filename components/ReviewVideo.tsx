@@ -402,18 +402,15 @@ export default function ReviewVideo() {
 
                 {/* Fixed Call to Action Button at Bottom */}
                 <div className="mt-4 pt-4 border-t border-gray-200 flex-shrink-0">
-                  <button
-                    onClick={() => {
-                      handleCloseModal();
-                      // Navigate to contact page
-                      setTimeout(() => {
-                        window.location.href = '/contact';
-                      }, 100);
-                    }}
-                    className="w-full bg-[#513394] hover:bg-[#412975] text-white py-3 px-6 rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                  <a
+                    href="https://www.practo.com/mumbai/clinic/r3-boot-spoorts-therapy-dadar-east/doctors"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => handleCloseModal()}
+                    className="block w-full bg-[#513394] hover:bg-[#412975] text-white py-3 px-6 rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 text-center"
                   >
                     Book Your Journey
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
