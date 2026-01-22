@@ -23,7 +23,7 @@ const videos: VideoCard[] = [
     title: "REJUVENATING EXPERIENCE",
     subtitle: "R3boot Client, Mumbai",
     description: "Experience the incredible benefits of sauna and ice bath contrast therapy.",
-    videoUrl: "/video/client/Testimonial_1.mp4",
+    videoUrl: "https://res.cloudinary.com/dj7bot2uc/video/upload/v1769068730/Testimonial_1_1_w7kd2v.mp4",
     thumbnailUrl: "",
     timestamp: "0:30",
     transcript: "I had an amazing experience at R3boot. The sauna followed by the ice bath was incredibly rejuvenating. Even at 11°C, it felt manageable and energizing. I felt more focused, refreshed, and ready for my workouts and work week. There are very few places in Mumbai offering this kind of ice bath experience, and R3boot is doing a fantastic job. Highly recommend trying it.",
@@ -35,7 +35,7 @@ const videos: VideoCard[] = [
     title: "PROFESSIONAL & REJUVENATING",
     subtitle: "Sports Enthusiast",
     description: "First visit experience featuring deep tissue massage, cupping, and contrast therapy.",
-    videoUrl: "/video/client/Testimonal_2.mp4",
+    videoUrl: "https://res.cloudinary.com/dj7bot2uc/video/upload/v1769068671/Testimonal_2_1_h4ni4r.mp4",
     thumbnailUrl: "",
     timestamp: "0:30",
     transcript: "This was my first visit to R3boot and I absolutely loved the experience. From the sports massage with deep muscle work and cupping to the sauna and ice bath, everything felt professional and rejuvenating. It’s a beautiful, well-designed facility, and a real blessing for sports enthusiasts. I’m already looking forward to my next visit.",
@@ -47,7 +47,7 @@ const videos: VideoCard[] = [
     title: "FULLY RECHARGED",
     subtitle: "R3boot Client, Mumbai",
     description: "The rarest combination of therapeutic massage and contrast therapy in India.",
-    videoUrl: "/video/client/Testimonial_3.mp4",
+    videoUrl: "https://res.cloudinary.com/dj7bot2uc/video/upload/v1769068761/Testimonial_3_1_fc1zyc.mp4",
     thumbnailUrl: "",
     timestamp: "0:30",
     transcript: "This was a fantastic experience. I honestly didn’t expect I’d be able to stay in the ice bath for long, but I surprised myself and completed it comfortably. The contrast therapy was excellent and left me feeling fully recharged. The massage was outstanding, not the kind where you’re just lying down and relaxing, but a proper therapeutic massage that works on all the right pressure points. Experiences like this are rare in India.",
@@ -59,7 +59,7 @@ const videos: VideoCard[] = [
     title: "AMAZING CONTRAST THERAPY",
     subtitle: "Mumbai Member",
     description: "Overcoming the challenge of the ice bath followed by deep relaxation.",
-    videoUrl: "/video/client/Testimonial_4.mp4",
+    videoUrl: "https://res.cloudinary.com/dj7bot2uc/video/upload/v1769067488/Testimonial_4_wjnw0l.mp4",
     thumbnailUrl: "",
     timestamp: "0:30",
     transcript: "I tried contrast therapy at R3boot and it was an amazing experience. The ice bath was challenging, but the sauna afterward was deeply relaxing. I’d definitely recommend everyone to come and try it.",
@@ -71,7 +71,7 @@ const videos: VideoCard[] = [
     title: "LOVED THE EXPERIENCE",
     subtitle: "Mumbai Member",
     description: "Trying out Red Light Therapy combined with cold exposure.",
-    videoUrl: "/video/client/Testimonial_5.mp4",
+    videoUrl: "https://res.cloudinary.com/dj7bot2uc/video/upload/v1769067529/Testimonial_5_mhymut.mp4",
     thumbnailUrl: "",
     timestamp: "0:30",
     transcript: "I had a great experience at R3boot. I tried the contrast therapy with red light and the ice bath, and absolutely loved it. I’d definitely recommend giving it a try.",
@@ -83,7 +83,7 @@ const videos: VideoCard[] = [
     title: "REWARDING EXPERIENCE",
     subtitle: "Early Member, Mumbai",
     description: "A thorough and structured approach to total wellness and recovery.",
-    videoUrl: "/video/client/Testimonial_6.mp4",
+    videoUrl: "https://res.cloudinary.com/dj7bot2uc/video/upload/v1769068539/Testimonial_6_1_oxfs01.mp4",
     thumbnailUrl: "",
     timestamp: "0:30",
     transcript: "This was my first experience at R3boot, and it was excellent from start to finish. I received a warm welcome and a clear explanation of how the therapy works and how it helps. The massage, sauna, infrared session, and ice bath were all very well structured and professionally executed. Overall, it was a thorough and genuinely rewarding experience. I’m happy to be an early member and I wish the team great success as they expand.",
@@ -130,6 +130,7 @@ export default function ReviewVideo() {
   const animationRef = useRef<number | null>(null);
   const translateX = useRef(0);
   const isDragging = useRef(false);
+  const hasDragged = useRef(false); // Track if user actually moved during drag
   const startX = useRef(0);
   const scrollLeft = useRef(0);
   const totalWidth = useRef(0);
@@ -174,6 +175,7 @@ export default function ReviewVideo() {
   // Handle Pointer Events (Mouse & Touch)
   const handlePointerDown = (e: React.MouseEvent | React.TouchEvent) => {
     isDragging.current = true;
+    hasDragged.current = false; // Reset drag flag
     setIsPaused(true);
     const clientX = 'clientX' in e ? e.clientX : e.touches[0].clientX;
     startX.current = clientX;
@@ -184,6 +186,12 @@ export default function ReviewVideo() {
     if (!isDragging.current) return;
     const clientX = 'clientX' in e ? e.clientX : e.touches[0].clientX;
     const walk = (clientX - startX.current) * 2; // Adjust sensitivity
+
+    // Mark as dragged if moved more than 5 pixels
+    if (Math.abs(clientX - startX.current) > 5) {
+      hasDragged.current = true;
+    }
+
     translateX.current = scrollLeft.current + walk;
     wrapTranslateX();
     if (containerRef.current) {
@@ -193,7 +201,7 @@ export default function ReviewVideo() {
 
   const handlePointerUp = () => {
     isDragging.current = false;
-
+    // Keep hasDragged.current as is - will be checked when click fires
   };
 
   // Handle wheel events for trackpad/trackball horizontal scrolling
@@ -222,6 +230,11 @@ export default function ReviewVideo() {
 
   // Handle play button click
   const handlePlayClick = (video: VideoCard) => {
+    // Don't open modal if user was dragging/swiping
+    if (hasDragged.current) {
+      hasDragged.current = false; // Reset for next interaction
+      return;
+    }
     setSelectedVideo(video);
     setIsModalOpen(true);
   };
@@ -322,22 +335,22 @@ export default function ReviewVideo() {
 
       {/* Modal */}
       {isModalOpen && selectedVideo && (
-        <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-[9999] p-4">
-          <div className="relative max-w-5xl w-full max-h-[90vh] bg-white rounded-2xl overflow-hidden shadow-2xl">
+        <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-[9999] p-2 sm:p-4">
+          <div className="relative max-w-5xl w-full max-h-[95vh] bg-white rounded-2xl overflow-y-auto shadow-2xl">
             {/* Close Button */}
             <button
               onClick={handleCloseModal}
-              className="absolute top-4 right-4 w-10 h-10 bg-black/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-black/40 transition-all z-10"
+              className="absolute top-2 right-2 sm:top-4 sm:right-4 w-8 h-8 sm:w-10 sm:h-10 bg-black/50 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-all z-20"
             >
-              <X className="w-5 h-5" />
+              <X className="w-4 h-4 sm:w-5 sm:h-5" />
             </button>
 
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-0">
+            <div className="flex flex-col lg:grid lg:grid-cols-3 gap-0">
               {/* Video Content */}
-              <div className="lg:col-span-2 relative">
+              <div className="lg:col-span-2 relative flex-shrink-0">
                 <video
                   ref={modalVideoRef}
-                  className="w-full h-auto max-h-[90vh] object-contain"
+                  className="w-full h-auto max-h-[50vh] lg:max-h-[90vh] object-contain bg-black"
                   controls
                   autoPlay
                   playsInline
@@ -358,7 +371,7 @@ export default function ReviewVideo() {
               </div>
 
               {/* Review Details Sidebar */}
-              <div className="lg:col-span-1 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 p-4 overflow-y-auto max-h-[90vh] flex flex-col">
+              <div className="lg:col-span-1 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 p-4 flex flex-col">
                 <div className="space-y-4 flex-1">
                   {/* Rating */}
                   <div className="flex items-center gap-2">
