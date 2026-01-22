@@ -9,14 +9,15 @@ import {
   Globe,
   Package,
   Zap,
-  ChevronDown
+  ChevronDown,
+  LucideIcon
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 interface FAQItem {
   question: string;
   answer: string;
-  icon: React.ElementType;
+  icon: LucideIcon;
 }
 
 const faqs: FAQItem[] = [

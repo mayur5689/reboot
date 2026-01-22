@@ -94,7 +94,7 @@ export default function AboutPage() {
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A]/60 via-transparent to-transparent" />
                                 <div className="absolute bottom-8 left-8 right-8 p-6 glass-morphism rounded-2xl border border-white/10">
-                                    <p className="text-white text-lg font-medium">"Our integrated approach ensures you don't just recover, you evolve."</p>
+                                    <p className="text-white text-lg font-medium">&ldquo;Our integrated approach ensures you don&rsquo;t just recover, you evolve.&rdquo;</p>
                                 </div>
                             </div>
                         </motion.div>
@@ -121,7 +121,7 @@ export default function AboutPage() {
                                 label: "RECOVERY & REHAB",
                                 year: "Step 1",
                                 title: "Clinical Excellence",
-                                image: "/images/2.jpg",
+                                image: "/images/Services_image/Physiotherapy.webp",
                                 description: "Expert physiotherapy and manual therapy focused on long-term outcomes and pain management.",
                                 icon: <BriefcaseMedical className="w-8 h-8 text-[#513394]/40" />
                             },
@@ -129,7 +129,7 @@ export default function AboutPage() {
                                 label: "MODALITIES",
                                 year: "Step 2",
                                 title: "High-Performance",
-                                image: "/images/3.jpg",
+                                image: "/images/Services_image/Contrast Therapy.webp",
                                 description: "State-of-the-art modalities including Ice Baths and infrared saunas to accelerate recovery cycles.",
                                 icon: <Activity className="w-8 h-8 text-[#513394]/40" />
                             },
@@ -137,7 +137,7 @@ export default function AboutPage() {
                                 label: "MINDSET",
                                 year: "Step 3",
                                 title: "Mental Resilience",
-                                image: "/images/4.jpg",
+                                image: "/images/Services_image/Sports Psychology.webp",
                                 description: "Dedicated sports mindset training to help athletes develop focus and emotional regulation.",
                                 icon: <Beaker className="w-8 h-8 text-[#513394]/40" />
                             }
@@ -210,7 +210,7 @@ export default function AboutPage() {
                         >
                             <div className="space-y-6">
                                 <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white leading-tight italic">
-                                    "Recovery is not an option. It's a <span className="text-[#513394]">discipline.</span>"
+                                    &ldquo;Recovery is not an option. It&rsquo;s a <span className="text-[#513394]">discipline.</span>&rdquo;
                                 </h2>
                                 <p className="text-xl text-gray-600 dark:text-gray-400 leading-relaxed">
                                     We provide an integrated suite of modalities designed to optimize your central nervous system, reduce inflammation, and restore structural integrity.

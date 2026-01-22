@@ -23,21 +23,20 @@ export default function OurServices() {
 
                 {/* Services Grid - Optimized for Mobile (All 6) and Desktop (Top 5) */}
                 <div className="grid grid-cols-2 md:grid-cols-6 gap-4 md:gap-8">
-                    {services.slice(0, 6).map((service, index) => {
+                    {services.map((service, index) => {
                         const isWide = index < 2;
-                        // On mobile, the 5th card spans 2 columns to fill the row
-                        const isLastOnMobileOdd = index === 4 && services.length === 5;
-                        // But since we want 6 on mobile, they will just fit 2x3 nicely.
-                        // We need to hide the 6th card on desktop.
-                        const isExtraForMobile = index === 5;
+                        // For a clean grid with 7 items:
+                        // Row 1: 0, 1 (3+3 = 6)
+                        // Row 2: 2, 3, 4 (2+2+2 = 6)
+                        // Row 3: 5, 6 (3+3 = 6)
+                        const isLastHalf = index >= 5;
 
                         return (
                             <Link
                                 key={index}
                                 href={`/services/${service.slug}`}
                                 className={`group relative h-[250px] md:h-[450px] overflow-hidden rounded-[1.5rem] md:rounded-[2.5rem] shadow-xl md:shadow-2xl transition-all duration-700 hover:-translate-y-2 md:hover:-translate-y-3 
-                                    ${isWide ? 'col-span-1 md:col-span-3' : 'col-span-1 md:col-span-3 lg:col-span-2'} 
-                                    ${isExtraForMobile ? 'flex md:hidden' : ''}`}
+                                    ${(isWide || isLastHalf) ? 'col-span-1 md:col-span-3' : 'col-span-1 md:col-span-3 lg:col-span-2'}`}
                             >
                                 {/* Background Image */}
                                 <Image
