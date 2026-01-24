@@ -41,7 +41,7 @@ export default function Hero() {
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-black/40 z-10"></div>
         <Image
-          src="/images/5.jpg"
+          src="/images/service/Services_image/Hydrotherapy_!.webp"
           alt="Hero Background"
           fill
           className="object-cover object-[50%_38%]"
@@ -155,7 +155,7 @@ export default function Hero() {
           </div>
           <div className="w-[140px] h-[160px] rounded-xl overflow-hidden shadow-inner relative">
             <Image
-              src="/images/5.jpg"
+              src="/images/service/Services_image/Hydrotherapy_!.webp"
               alt="Video thumbnail"
               fill
               className="object-cover grayscale-[0.2]"

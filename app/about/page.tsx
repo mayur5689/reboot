@@ -87,7 +87,7 @@ export default function AboutPage() {
                         >
                             <div className="relative aspect-square lg:aspect-[4/5] max-w-lg ml-auto rounded-[3rem] overflow-hidden shadow-2xl group">
                                 <Image
-                                    src="/images/trainer/R3boot_Website_Images/Alkesh Kubadia (Behavioral Therapist).webp"
+                                    src="/images/trainer2/Trainers/Alkesh Kubadia (Behavioral Therapist).webp"
                                     alt="R3BOOT Professional Support"
                                     fill
                                     className="object-cover group-hover:scale-105 transition-transform duration-1000"
@@ -121,7 +121,7 @@ export default function AboutPage() {
                                 label: "RECOVERY & REHAB",
                                 year: "Step 1",
                                 title: "Clinical Excellence",
-                                image: "/images/Services_image/Physiotherapy.webp",
+                                image: "/images/service/Services_image/Physiotherapy_1.webp",
                                 description: "Expert physiotherapy and manual therapy focused on long-term outcomes and pain management.",
                                 icon: <BriefcaseMedical className="w-8 h-8 text-[#513394]/40" />
                             },
@@ -129,7 +129,7 @@ export default function AboutPage() {
                                 label: "MODALITIES",
                                 year: "Step 2",
                                 title: "High-Performance",
-                                image: "/images/Services_image/Contrast Therapy.webp",
+                                image: "/images/service/Services_image/Contrast_Therepy.webp",
                                 description: "State-of-the-art modalities including Ice Baths and infrared saunas to accelerate recovery cycles.",
                                 icon: <Activity className="w-8 h-8 text-[#513394]/40" />
                             },
@@ -137,7 +137,7 @@ export default function AboutPage() {
                                 label: "MINDSET",
                                 year: "Step 3",
                                 title: "Mental Resilience",
-                                image: "/images/Services_image/Sports Psychology.webp",
+                                image: "/images/service/Services_image/Sports_Pyscology.webp",
                                 description: "Dedicated sports mindset training to help athletes develop focus and emotional regulation.",
                                 icon: <Beaker className="w-8 h-8 text-[#513394]/40" />
                             }
@@ -194,7 +194,7 @@ export default function AboutPage() {
                         >
                             <div className="relative aspect-[4/5] max-w-lg rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white dark:border-white/5">
                                 <Image
-                                    src="/images/trainer/R3boot_Website_Images/Dr. Nirmal Solanki.webp"
+                                    src="/images/trainer2/Trainers/Dr. Nirmal Solanki.webp"
                                     alt="Professional Care"
                                     fill
                                     className="object-cover"
@@ -311,43 +311,43 @@ export default function AboutPage() {
                             {
                                 name: "Alkesh Kubadia",
                                 role: "Co-Founder | Strategy, Psychology & Business Lead",
-                                image: "/images/trainer/R3boot_Website_Images/Alkesh Kubadia (Behavioral Therapist).webp",
+                                image: "/images/trainer2/Trainers/Alkesh Kubadia (Behavioral Therapist) of Alkesh Kubadia (Behavioral Therapist).webp",
                                 bio: "Alkesh Kubadia holds a Master’s degree in Psychology and brings decades of entrepreneurial experience. At r3boot, he oversees strategy, operations, and client experience, ensuring systems-driven execution and ethical practices."
                             },
                             {
                                 name: "Nirmal Solanki",
                                 role: "Senior Physiotherapist & Manual Therapy Specialist",
-                                image: "/images/trainer/R3boot_Website_Images/Dr. Nirmal Solanki.webp",
+                                image: "/images/trainer2/Trainers/Dr. Nirmal Solanki.webp",
                                 bio: "Senior physiotherapist with over 20 years of experience in sports physiotherapy and manual therapy. Internationally trained in advanced osteopathic techniques with a focus on sustainable, long-term outcomes."
                             },
                             {
                                 name: "Parinaaz Irani",
                                 role: "Sports Counselling & Mental Performance",
-                                image: "/images/trainer/R3boot_Website_Images/Parinaaz Irani.webp",
+                                image: "/images/trainer2/Trainers/Parinaaz Irani.webp",
                                 bio: "Sport and performance psychologist specializing in athlete mental health and mindset training. Her work helps athletes develop mental resilience, emotional regulation, and focus under pressure."
                             },
                             {
                                 name: "Diyan Kubadia",
                                 role: "Co-Founder | Athlete | Performance Vision Lead",
-                                image: "/images/trainer/R3boot_Website_Images/Diyan Kubadia.webp",
+                                image: "/images/trainer2/Trainers/Diyan Kubadia.webp",
                                 bio: "Professional cricketer with over a decade of experience. Diyan leads the athlete and performance vision, ensuring every protocol aligns with real athletic needs for smarter recovery."
                             },
                             {
                                 name: "Vaishali Vijay Rauniyar",
                                 role: "Physiotherapist | Sports & Orthopedic Rehabilitation",
-                                image: "/images/trainer/R3boot_Website_Images/Dr. Vaishali Vijay Rauniyar.webp",
+                                image: "/images/trainer2/Trainers/Dr. Vaishali Vijay Rauniyar.webp",
                                 bio: "Clinical experience in sports, orthopedic, and neurological rehabilitation. Certified in Dry Needling and Aquatic Rehabilitation, she designs personalized plans for efficient recovery."
                             },
                             {
                                 name: "Ganesh S. Gadhave",
                                 role: "Pain Management & Sports Rehabilitation Specialist",
-                                image: "/images/trainer/R3boot_Website_Images/Dr. Ganesh S. Gadhave.webp",
+                                image: "/images/trainer2/Trainers/Dr. Ganesh S. Gadhave.webp",
                                 bio: "Focuses on injury prevention and athlete recovery. His approach emphasizes long-term physical resilience rather than short-term relief, helping individuals train with confidence."
                             },
                             {
                                 name: "Akshay Anil Nalawde",
                                 role: "Sports Massage Therapist",
-                                image: "/images/trainer/R3boot_Website_Images/Akshay Anil Nalawde.webp",
+                                image: "/images/trainer2/Trainers/Akshay Anil Nalawde.webp",
                                 bio: "Certified in Cupping Therapy and muscle recovery. He has worked with over 1,000 athletes to reduce muscle stiffness and support faster recovery from training loads."
                             }
                         ].map((member, index) => (

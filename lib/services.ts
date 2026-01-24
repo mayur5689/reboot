@@ -40,7 +40,7 @@ export const services: Service[] = [
             { title: "Treatment", description: "Applying targeted manual therapy and exercises." },
             { title: "Management", description: "Ongoing support and strategy for long-term health." }
         ],
-        image: "/images/Services_image/Physiotherapy.webp",
+        image: "/images/service/Services_image/Physiotherapy_1.webp",
         slug: "physiotherapy",
         subServices: [
             {
@@ -98,7 +98,7 @@ export const services: Service[] = [
             { title: "Mobility", description: "Integrating strength with functional movement patterns." },
             { title: "Integration", description: "Applying Pilates principles to daily activities." }
         ],
-        image: "/images/Services_image/Clinical Pilates.webp",
+        image: "/images/service/Services_image/Clinical Pilates-2.webp",
         slug: "clinical-pilates"
     },
     {
@@ -119,7 +119,7 @@ export const services: Service[] = [
             { title: "Cold Phase", description: "Vasoconstriction phase to reduce inflammation and flush toxins." },
             { title: "Recovery", description: "Allowing the body to return to homeostatic balance." }
         ],
-        image: "/images/Services_image/Contrast Therapy.webp",
+        image: "/images/service/Services_image/Contrast_Therepy.webp",
         slug: "contrast-therapy"
     },
     {
@@ -140,7 +140,7 @@ export const services: Service[] = [
             { title: "Action Plan", description: "Creating practical steps for positive change." },
             { title: "Sustainable Growth", description: "Ensuring long-term mental health and resilience." }
         ],
-        image: "/images/Services_image/Counselling & Mental Training.webp",
+        image: "/images/service/Services_image/Counselling & Mental Training-1.webp",
         slug: "counselling-mental-training"
     },
     {
@@ -161,7 +161,7 @@ export const services: Service[] = [
             { title: "Active Recovery", description: "Guided movements and exercises performed in the water." },
             { title: "Cool Down", description: "Gentle stretches and relaxation to finish the session." }
         ],
-        image: "/images/Services_image/Hydrotherapy.webp",
+        image: "/images/service/Services_image/Hydrotherapy_!.webp",
         slug: "hydrotherapy"
     },
     {
@@ -182,7 +182,7 @@ export const services: Service[] = [
             { title: "Release", description: "Techniques to break down adhesions and improve muscle fiber alignment." },
             { title: "Flush", description: "Effleurage to finish and promote lymphatic drainage." }
         ],
-        image: "/images/Services_image/Sports Massage.webp",
+        image: "/images/service/Services_image/Sports Massage_1.webp",
         slug: "sports-massage"
     },
     {
@@ -203,7 +203,7 @@ export const services: Service[] = [
             { title: "Practice", description: "Applying mental strategies during training sessions." },
             { title: "Competition", description: "Executing mental skills under high-pressure scenarios." }
         ],
-        image: "/images/Services_image/Sports Psychology.webp",
+        image: "/images/service/Services_image/Sports_Pyscology.webp",
         slug: "sports-psychology"
     },
 ];

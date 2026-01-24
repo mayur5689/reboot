@@ -19,28 +19,28 @@ const coaches: Coach[] = [
     id: "alkesh",
     name: "Alkesh Kubadia",
     role: "Co-Founder | Strategy & Psychology",
-    imageSrc: "/images/trainer/R3boot_Website_Images/Alkesh Kubadia (Behavioral Therapist).webp",
+    imageSrc: "/images/trainer2/Trainers/Alkesh Kubadia (Behavioral Therapist).webp",
     description: "Master’s in Psychology with decades of entrepreneurial experience. Oversees strategy and client experience."
   },
   {
     id: "nirmal",
     name: "Nirmal Solanki",
     role: "Senior Physiotherapist",
-    imageSrc: "/images/trainer/R3boot_Website_Images/Dr. Nirmal Solanki.webp",
+    imageSrc: "/images/trainer2/Trainers/Dr. Nirmal Solanki.webp",
     description: "20+ years of experience. Internationally trained in manual therapy and osteopathy-based rehabilitation."
   },
   {
     id: "vaishali",
     name: "Vaishali Vijay Rauniyar",
     role: "Physiotherapist | Sports & Orthopedic Rehabilitation",
-    imageSrc: "/images/trainer/R3boot_Website_Images/Dr. Vaishali Vijay Rauniyar.webp",
+    imageSrc: "/images/trainer2/Trainers/Dr. Vaishali Vijay Rauniyar.webp",
     description: "Clinical experience in sports, orthopedic, and neurological rehabilitation. Certified in Dry Needling and Aquatic Rehabilitation, she designs personalized plans for efficient recovery."
   },
   {
     id: "diyan",
     name: "Diyan Kubadia",
     role: "Co-Founder | Performance Lead",
-    imageSrc: "/images/trainer/R3boot_Website_Images/Diyan Kubadia.webp",
+    imageSrc: "/images/trainer2/Trainers/Diyan Kubadia.webp",
     description: "Professional cricketer blending athlete insight with business thinking to lead r3boot's performance vision."
   }
 ]
