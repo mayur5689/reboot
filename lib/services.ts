@@ -48,7 +48,7 @@ export const services: Service[] = [
                 title: "Musculoskeletal (Orthopaedic)",
                 description: "Expert treatment for bones, joints, muscles, and soft tissue injuries to restore full movement.",
                 slug: "musculoskeletal-orthopaedic",
-                image: "https://images.unsplash.com/photo-1576091160399-112f62779836?auto=format&fit=crop&q=80&w=800"
+                image: "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&q=80&w=800"
             },
             {
                 title: "Sports Physiotherapy",
@@ -60,7 +60,7 @@ export const services: Service[] = [
                 title: "Chronic Pain Management",
                 description: "Scientific and holistic approaches to manage long-term pain and improve quality of life.",
                 slug: "chronic-pain-management",
-                image: "https://images.unsplash.com/photo-1512678080530-7760d81faba6?auto=format&fit=crop&q=80&w=800"
+                image: "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&q=80&w=800"
             },
             {
                 title: "Pre & Post-Surgery Rehabilitation",
@@ -72,19 +72,19 @@ export const services: Service[] = [
                 title: "Biomechanical Assessment",
                 description: "Detailed analysis of your movement patterns to identify imbalances and prevent future injuries.",
                 slug: "biomechanical-assessment",
-                image: "https://images.unsplash.com/photo-1536939459926-301728717817?auto=format&fit=crop&q=80&w=800"
+                image: "https://images.unsplash.com/photo-1536922246289-88c42f957773?auto=format&fit=crop&q=80&w=800"
             },
             {
                 title: "Women's Health",
                 description: "Dedicated care for pelvic floor health, prenatal support, and postnatal recovery.",
                 slug: "womens-health",
-                image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=800"
+                image: "https://images.unsplash.com/photo-1559757175-5700dde675bc?auto=format&fit=crop&q=80&w=800"
             },
             {
                 title: "Ergonomic Advice & Management",
                 description: "Workplace workstation optimization and posture guidance to eliminate occupational strain.",
                 slug: "ergonomic-advice-management",
-                image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800"
+                image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=800"
             }
         ]
     },
