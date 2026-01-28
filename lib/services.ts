@@ -4,6 +4,7 @@ export interface SubService {
     title: string;
     description: string;
     slug: string;
+    image?: string;
 }
 
 export interface Service {
@@ -45,38 +46,45 @@ export const services: Service[] = [
         subServices: [
             {
                 title: "Musculoskeletal (Orthopaedic)",
-                description: "Treatment for bones, joints, muscles, and soft tissue injuries.",
-                slug: "musculoskeletal-orthopaedic"
+                description: "Expert treatment for bones, joints, muscles, and soft tissue injuries to restore full movement.",
+                slug: "musculoskeletal-orthopaedic",
+                image: "https://images.unsplash.com/photo-1576091160399-112f62779836?auto=format&fit=crop&q=80&w=800"
             },
             {
                 title: "Sports Physiotherapy",
-                description: "Specialized care for athletic injuries and performance optimization.",
-                slug: "sports-physiotherapy"
+                description: "Specialized care for athletes of all levels, focusing on rapid recovery and performance gain.",
+                slug: "sports-physiotherapy",
+                image: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&q=80&w=800"
             },
             {
                 title: "Chronic Pain Management",
-                description: "Long-term strategies to manage and reduce persistent pain.",
-                slug: "chronic-pain-management"
+                description: "Scientific and holistic approaches to manage long-term pain and improve quality of life.",
+                slug: "chronic-pain-management",
+                image: "https://images.unsplash.com/photo-1512678080530-7760d81faba6?auto=format&fit=crop&q=80&w=800"
             },
             {
                 title: "Pre & Post-Surgery Rehabilitation",
-                description: "Recovery programs before and after surgical procedures.",
-                slug: "pre-post-surgery-rehabilitation"
+                description: "Comprehensive recovery programs to prepare your body and ensure optimal surgical outcomes.",
+                slug: "pre-post-surgery-rehabilitation",
+                image: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=800"
             },
             {
                 title: "Biomechanical Assessment",
-                description: "Analysis of movement patterns to prevent injuries.",
-                slug: "biomechanical-assessment"
+                description: "Detailed analysis of your movement patterns to identify imbalances and prevent future injuries.",
+                slug: "biomechanical-assessment",
+                image: "https://images.unsplash.com/photo-1536939459926-301728717817?auto=format&fit=crop&q=80&w=800"
             },
             {
                 title: "Women's Health",
-                description: "Pelvic floor therapy, prenatal and postnatal care.",
-                slug: "womens-health"
+                description: "Dedicated care for pelvic floor health, prenatal support, and postnatal recovery.",
+                slug: "womens-health",
+                image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=800"
             },
             {
                 title: "Ergonomic Advice & Management",
-                description: "Workplace posture and injury prevention guidance.",
-                slug: "ergonomic-advice-management"
+                description: "Workplace workstation optimization and posture guidance to eliminate occupational strain.",
+                slug: "ergonomic-advice-management",
+                image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800"
             }
         ]
     },
