@@ -16,7 +16,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
     }
 
     return (
-        <main className="min-h-screen bg-white">
+        <main className="min-h-screen bg-white dark:bg-[#0A0A0A]">
             {/* Immersive Hero Section */}
             <section className="relative h-[70vh] flex items-end overflow-hidden">
                 <Image
@@ -67,34 +67,34 @@ export default async function ServicePage({ params }: ServicePageProps) {
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-start">
                         {/* Sticky Left Column: About */}
                         <div className="lg:col-span-7">
-                            <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-8 tracking-tight">
+                            <h2 className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white mb-8 tracking-tight">
                                 Complete Recovery <br />
-                                <span className="text-[#513394]">Built Around You.</span>
+                                <span className="text-[#513394] dark:text-[#8B5CF6]">Built Around You.</span>
                             </h2>
-                            <div className="prose prose-xl text-gray-600 max-w-none leading-relaxed space-y-6">
+                            <div className="prose prose-xl text-gray-600 dark:text-gray-400 dark:prose-invert max-w-none leading-relaxed space-y-6">
                                 <p>{service.fullDescription}</p>
                             </div>
 
                             {/* Process Steps */}
                             <div className="mt-20">
-                                <h3 className="text-2xl font-black text-gray-900 mb-10 flex items-center gap-4">
-                                    <span className="w-12 h-[2px] bg-[#513394]"></span>
+                                <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-10 flex items-center gap-4">
+                                    <span className="w-12 h-[2px] bg-[#513394] dark:bg-[#8B5CF6]"></span>
                                     THE PROCESS
                                 </h3>
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                                     {service.process.map((step, idx) => (
-                                        <div key={idx} className="bg-white p-8 rounded-[2.5rem] border border-gray-100 shadow-sm hover:shadow-xl group transition-all duration-500 relative overflow-hidden">
-                                            <div className="absolute -top-4 -right-4 text-8xl font-black text-gray-50 group-hover:text-[#513394]/5 transition-colors">
+                                        <div key={idx} className="bg-white dark:bg-white/5 p-8 rounded-[2.5rem] border border-gray-100 dark:border-white/5 shadow-sm hover:shadow-xl group transition-all duration-500 relative overflow-hidden">
+                                            <div className="absolute -top-4 -right-4 text-8xl font-black text-gray-50 dark:text-white/5 group-hover:text-[#513394]/5 dark:group-hover:text-[#8B5CF6]/5 transition-colors">
                                                 {idx + 1}
                                             </div>
                                             <div className="relative z-10">
-                                                <div className="w-12 h-12 rounded-2xl bg-[#513394]/10 flex items-center justify-center text-[#513394] font-black mb-6 group-hover:bg-[#513394] group-hover:text-white transition-all">
+                                                <div className="w-12 h-12 rounded-2xl bg-[#513394]/10 dark:bg-[#8B5CF6]/20 flex items-center justify-center text-[#513394] dark:text-[#A78BFA] font-black mb-6 group-hover:bg-[#513394] dark:group-hover:bg-[#8B5CF6] group-hover:text-white transition-all">
                                                     0{idx + 1}
                                                 </div>
-                                                <h4 className="text-xl font-bold text-gray-900 mb-3">
+                                                <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
                                                     {step.title}
                                                 </h4>
-                                                <p className="text-gray-500 text-sm leading-relaxed">
+                                                <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
                                                     {step.description}
                                                 </p>
                                             </div>
@@ -151,16 +151,16 @@ export default async function ServicePage({ params }: ServicePageProps) {
 
             {/* Sub-Services Section - Only shows for services with subServices */}
             {service.subServices && service.subServices.length > 0 && (
-                <section className="py-24 lg:py-32 bg-white">
+                <section className="py-24 lg:py-32 bg-white dark:bg-[#0A0A0A]">
                     <div className="container mx-auto px-6 lg:px-8">
                         <div className="text-center mb-16">
-                            <span className="text-[11px] font-black tracking-[0.3em] text-[#513394] uppercase mb-4 block">
+                            <span className="text-[11px] font-black tracking-[0.3em] text-[#513394] dark:text-[#A78BFA] uppercase mb-4 block">
                                 SPECIALIZATIONS //
                             </span>
-                            <h2 className="text-4xl md:text-6xl font-black text-gray-900 tracking-tight">
-                                Our <span className="text-[#513394]">{service.title}</span> Services
+                            <h2 className="text-4xl md:text-6xl font-black text-gray-900 dark:text-white tracking-tight">
+                                Our <span className="text-[#513394] dark:text-[#8B5CF6]">{service.title}</span> Services
                             </h2>
-                            <p className="text-gray-500 text-lg mt-4 max-w-2xl mx-auto">
+                            <p className="text-gray-500 dark:text-gray-400 text-lg mt-4 max-w-2xl mx-auto">
                                 Explore our specialized treatments tailored to your specific needs.
                             </p>
                         </div>
@@ -170,7 +170,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
                                 <div
                                     key={index}
                                     id={sub.slug}
-                                    className="group bg-white rounded-[2.5rem] overflow-hidden border border-gray-100 shadow-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full"
+                                    className="group bg-white dark:bg-white/5 rounded-[2.5rem] overflow-hidden border border-gray-100 dark:border-white/5 shadow-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full"
                                 >
                                     <div className="relative h-48 w-full shrink-0 overflow-hidden bg-gray-100">
                                         {sub.image ? (
@@ -196,21 +196,21 @@ export default async function ServicePage({ params }: ServicePageProps) {
                                     </div>
 
                                     <div className="p-7 flex flex-col flex-grow">
-                                        <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-[#513394] transition-colors duration-300 leading-tight">
+                                        <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-[#513394] dark:group-hover:text-[#A78BFA] transition-colors duration-300 leading-tight">
                                             {sub.title}
                                         </h3>
-                                        <p className="text-gray-500 text-sm leading-relaxed mb-6 flex-grow">
+                                        <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed mb-6 flex-grow">
                                             {sub.description}
                                         </p>
 
-                                        <div className="pt-5 border-t border-gray-50 flex items-center justify-between">
-                                            <div className="inline-flex items-center gap-2 text-[#513394] font-black text-[11px] tracking-widest uppercase">
+                                        <div className="pt-5 border-t border-gray-50 dark:border-white/5 flex items-center justify-between">
+                                            <div className="inline-flex items-center gap-2 text-[#513394] dark:text-[#A78BFA] font-black text-[11px] tracking-widest uppercase">
                                                 <span>READ MORE</span>
                                                 <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
                                                     <path d="M9 18l6-6-6-6" />
                                                 </svg>
                                             </div>
-                                            <div className="w-8 h-8 rounded-full bg-[#513394]/10 flex items-center justify-center group-hover:bg-[#513394] group-hover:text-white transition-all duration-300">
+                                            <div className="w-8 h-8 rounded-full bg-[#513394]/10 dark:bg-white/10 flex items-center justify-center group-hover:bg-[#513394] dark:group-hover:bg-[#8B5CF6] group-hover:text-white transition-all duration-300">
                                                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                                                     <path strokeLinecap="round" strokeLinejoin="round" d="M12 4v16m8-8H4" />
                                                 </svg>
@@ -239,14 +239,14 @@ export default async function ServicePage({ params }: ServicePageProps) {
             )}
 
             {/* Explore Other Services - Using the same premium cards */}
-            <section className="py-24 lg:py-32 bg-[#F8F9FA]">
+            <section className="py-24 lg:py-32 bg-[#F8F9FA] dark:bg-[#0D0D0D]">
                 <div className="container mx-auto px-6 lg:px-8">
                     <div className="text-center mb-16">
-                        <span className="text-[11px] font-black tracking-[0.3em] text-[#513394] uppercase mb-4 block">
+                        <span className="text-[11px] font-black tracking-[0.3em] text-[#513394] dark:text-[#A78BFA] uppercase mb-4 block">
                             KEEP EXPLORING //
                         </span>
-                        <h2 className="text-4xl md:text-6xl font-black text-gray-900 tracking-tight">
-                            Other Ways to <span className="text-[#513394]">Recover</span>
+                        <h2 className="text-4xl md:text-6xl font-black text-gray-900 dark:text-white tracking-tight">
+                            Other Ways to <span className="text-[#513394] dark:text-[#8B5CF6]">Recover</span>
                         </h2>
                     </div>
 
@@ -255,7 +255,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
                             <Link
                                 key={index}
                                 href={`/services/${otherService.slug}`}
-                                className="group bg-white p-4 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col h-full"
+                                className="group bg-white dark:bg-white/5 p-4 rounded-[2.5rem] shadow-sm hover:shadow-xl border border-transparent dark:border-white/5 transition-all duration-300 transform hover:-translate-y-2 flex flex-col h-full"
                             >
                                 <div className="relative h-48 w-full shrink-0 overflow-hidden rounded-[2rem] mb-6 shadow-sm">
                                     <Image
@@ -267,10 +267,10 @@ export default async function ServicePage({ params }: ServicePageProps) {
                                     <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
                                 </div>
                                 <div className="px-2 pb-2 flex flex-col flex-grow">
-                                    <h3 className="text-xl font-bold text-gray-900 group-hover:text-[#513394] transition-colors mb-3">
+                                    <h3 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-[#513394] dark:group-hover:text-[#A78BFA] transition-colors mb-3">
                                         {otherService.title}
                                     </h3>
-                                    <p className="text-sm text-gray-500 line-clamp-2 leading-relaxed mb-6">
+                                    <p className="text-sm text-gray-500 dark:text-gray-400 line-clamp-2 leading-relaxed mb-6">
                                         {otherService.description}
                                     </p>
 
