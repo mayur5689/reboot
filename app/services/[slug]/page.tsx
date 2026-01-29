@@ -46,9 +46,14 @@ export default async function ServicePage({ params }: ServicePageProps) {
                             </span>
                             <div className="w-1.5 h-1.5 rounded-full bg-white/50"></div>
                         </div>
-                        <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-white mb-6 uppercase tracking-tighter leading-tight">
+                        <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-2 uppercase tracking-tighter leading-[0.9]">
                             {service.title}
                         </h1>
+                        {service.tagline && (
+                            <p className="text-2xl md:text-4xl font-black text-[#8B5CF6] mb-8 italic tracking-tight">
+                                {service.tagline}
+                            </p>
+                        )}
                         <p className="text-xl md:text-2xl text-white/80 max-w-2xl leading-relaxed font-medium">
                             {service.description}
                         </p>
@@ -71,20 +76,31 @@ export default async function ServicePage({ params }: ServicePageProps) {
                             </div>
 
                             {/* Process Steps */}
-                            <div className="mt-20 grid grid-cols-1 sm:grid-cols-2 gap-8">
-                                {service.process.map((step, idx) => (
-                                    <div key={idx} className="bg-gray-50 p-8 rounded-[2rem] border border-gray-100 group hover:bg-[#513394] transition-all duration-500">
-                                        <div className="text-4xl font-black text-gray-200 group-hover:text-white/20 mb-4 transition-colors">
-                                            0{idx + 1}
+                            <div className="mt-20">
+                                <h3 className="text-2xl font-black text-gray-900 mb-10 flex items-center gap-4">
+                                    <span className="w-12 h-[2px] bg-[#513394]"></span>
+                                    THE PROCESS
+                                </h3>
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                    {service.process.map((step, idx) => (
+                                        <div key={idx} className="bg-white p-8 rounded-[2.5rem] border border-gray-100 shadow-sm hover:shadow-xl group transition-all duration-500 relative overflow-hidden">
+                                            <div className="absolute -top-4 -right-4 text-8xl font-black text-gray-50 group-hover:text-[#513394]/5 transition-colors">
+                                                {idx + 1}
+                                            </div>
+                                            <div className="relative z-10">
+                                                <div className="w-12 h-12 rounded-2xl bg-[#513394]/10 flex items-center justify-center text-[#513394] font-black mb-6 group-hover:bg-[#513394] group-hover:text-white transition-all">
+                                                    0{idx + 1}
+                                                </div>
+                                                <h4 className="text-xl font-bold text-gray-900 mb-3">
+                                                    {step.title}
+                                                </h4>
+                                                <p className="text-gray-500 text-sm leading-relaxed">
+                                                    {step.description}
+                                                </p>
+                                            </div>
                                         </div>
-                                        <h4 className="text-xl font-bold text-gray-900 group-hover:text-white mb-2 transition-colors">
-                                            {step.title}
-                                        </h4>
-                                        <p className="text-gray-500 group-hover:text-white/70 text-sm leading-relaxed transition-colors">
-                                            {step.description}
-                                        </p>
-                                    </div>
-                                ))}
+                                    ))}
+                                </div>
                             </div>
                         </div>
 
@@ -93,16 +109,25 @@ export default async function ServicePage({ params }: ServicePageProps) {
                             <div className="bg-[#1A1A1A] p-10 rounded-[3rem] text-white shadow-2xl relative overflow-hidden group">
                                 <div className="absolute top-0 right-0 w-32 h-32 bg-[#513394]/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
 
-                                <h3 className="text-2xl font-black mb-8 tracking-wide">KEY BENEFITS //</h3>
+                                {service.slug === 'contrast-therapy' && (
+                                    <div className="absolute top-6 right-6 bg-[#8B5CF6] text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest animate-pulse">
+                                        Advanced Tech
+                                    </div>
+                                )}
+
+                                <h3 className="text-2xl font-black mb-8 tracking-wide flex items-center gap-3">
+                                    <div className="w-2 h-8 bg-[#513394]"></div>
+                                    KEY BENEFITS //
+                                </h3>
                                 <ul className="space-y-6 mb-12">
                                     {service.benefits.map((benefit, index) => (
-                                        <li key={index} className="flex items-start gap-4">
-                                            <div className="w-6 h-6 rounded-full bg-[#513394] flex items-center justify-center shrink-0 mt-1">
+                                        <li key={index} className="flex items-start gap-4 group/item">
+                                            <div className="w-6 h-6 rounded-full bg-[#513394] flex items-center justify-center shrink-0 mt-1 group-hover/item:scale-110 transition-transform">
                                                 <svg className="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
                                                     <path d="M5 13l4 4L19 7" />
                                                 </svg>
                                             </div>
-                                            <span className="text-white/80 font-medium leading-snug">{benefit}</span>
+                                            <span className="text-white/80 font-medium leading-snug group-hover/item:text-white transition-colors">{benefit}</span>
                                         </li>
                                     ))}
                                 </ul>

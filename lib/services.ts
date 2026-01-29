@@ -9,6 +9,7 @@ export interface SubService {
 
 export interface Service {
     title: string;
+    tagline?: string;
     category: string;
     description: string;
     fullDescription: string;
@@ -90,21 +91,23 @@ export const services: Service[] = [
     },
     {
         title: "Clinical Pilates",
+        tagline: "From Pain to Performance",
         category: "FITNESS",
-        description: "Train with control, precision, and stability.",
-        fullDescription: "Clinical Pilates combines the principles of traditional Pilates with physiotherapy expertise to create targeted exercise programs. Focus on core stability, postural alignment, and controlled movements to rehabilitate injuries, prevent future problems, and enhance overall body awareness.",
+        description: "Clinical Pilates is a scientifically guided movement approach designed to support complete and long-term recovery, not just temporary pain relief.",
+        fullDescription: "Unlike general fitness Pilates, Clinical Pilates combines the principles of traditional Pilates with physiotherapy expertise after a detailed assessment to create targeted exercise programs.",
         benefits: [
-            "Core strength development",
-            "Improved posture",
-            "Enhanced flexibility",
-            "Better body control",
+            "Strengthens the core",
+            "Improves stability and posture",
+            "Enhances flexibility and mobility",
+            "Improves mind-body co-ordination",
             "Injury prevention"
         ],
         process: [
-            { title: "Foundation", description: "Learning the core principles of control and breathing." },
-            { title: "Stability", description: "Building strength in the deep stabilizing muscles." },
-            { title: "Mobility", description: "Integrating strength with functional movement patterns." },
-            { title: "Integration", description: "Applying Pilates principles to daily activities." }
+            { title: "Assessment & Goal setting", description: "Comprehensive evaluation of your current physical state and objectives." },
+            { title: "Education and Awareness", description: "Learning the fundamentals of movement and core engagement." },
+            { title: "Integration phase on mat or reformer", description: "Applying principles through controlled exercises on specialized equipment." },
+            { title: "Functional sport-specific training", description: "Tailoring movements to your specific athletic or daily needs." },
+            { title: "Re-assessment and modification", description: "Continuously refining the program based on your progress." }
         ],
         image: "/images/service/Services_image/Clinical Pilates-2.webp",
         slug: "clinical-pilates"
@@ -112,14 +115,15 @@ export const services: Service[] = [
     {
         title: "Contrast Therapy",
         category: "THERAPY",
-        description: "Alternating hot and cold exposure for optimal recovery.",
-        fullDescription: "Contrast therapy alternates between hot and cold treatments to stimulate blood flow, reduce inflammation, and accelerate muscle recovery. This powerful technique is used by elite athletes worldwide to enhance performance and speed up the healing process.",
+        description: "Alternating hot and cold exposure for optimal recovery, featuring our advanced Redlight Sauna.",
+        fullDescription: "Our Contrast Therapy combines the power of thermal stress with red light technology to accelerate healing at a cellular level. This powerful technique is used by elite athletes worldwide to enhance performance and speed up the healing process.",
         benefits: [
-            "Enhanced blood circulation",
-            "Reduced muscle soreness",
-            "Faster recovery",
-            "Decreased inflammation",
-            "Improved performance"
+            "Boosted Immunity system",
+            "Improved cardiovascular health (Increases HR)",
+            "Promotes relaxation by releasing endorphins",
+            "Causes Vasodilation – increases blood flow",
+            "Detoxification through sweating",
+            "Anti-aging (reduced wrinkles)"
         ],
         process: [
             { title: "Preparation", description: "Preparing the body for rapid temperature changes." },
@@ -132,21 +136,23 @@ export const services: Service[] = [
     },
     {
         title: "Counselling & Mental Training",
+        tagline: "Stronger Mind, Better You",
         category: "MENTAL",
-        description: "Stronger mind, better you.",
-        fullDescription: "Our counselling and mental training services provide comprehensive support for your psychological well-being. Whether you're dealing with stress, anxiety, or simply want to optimize your mental performance, our experienced counsellors offer personalized guidance and evidence-based techniques.",
+        description: "Sports performance is not driven by physical strength alone. Our Sports Counselling and Mental Training program is designed to help athletes manage pressure and perform at their best.",
+        fullDescription: "Our integrated approach ensures close coordination between sports physiotherapy, rehabilitation, and mental training. This holistic model supports faster recovery, improved adherence to rehab programs, and a smoother transition from injury to full performance. Athletes learn not only how to heal their bodies, but also how to trust them again.",
         benefits: [
-            "Stress management",
-            "Emotional resilience",
-            "Personal growth",
-            "Work-life balance",
-            "Mental wellness optimization"
+            "Performance enhancement",
+            "Injury and rehabilitation support",
+            "Behaviour and habit building",
+            "Mind body connection",
+            "Emotional resilience"
         ],
         process: [
-            { title: "Discovery", description: "Exploring the root causes of stress or mental fatigue." },
-            { title: "Insight", description: "Gaining a deeper understanding of patterns and behaviors." },
-            { title: "Action Plan", description: "Creating practical steps for positive change." },
-            { title: "Sustainable Growth", description: "Ensuring long-term mental health and resilience." }
+            { title: "Goal setting and mindset alignment", description: "Defining objectives and aligning your mental state with recovery." },
+            { title: "Stimulation and practice", description: "Applying mental techniques in various scenarios." },
+            { title: "Performance Evaluation", description: "Assessing the effectiveness of mental strategies." },
+            { title: "Integration with physical rehabilitation", description: "Coordinating mental work with physical recovery protocols." },
+            { title: "Progress review and ongoing support", description: "Continuous monitoring and adjustment of the program." }
         ],
         image: "/images/service/Services_image/Counselling & Mental Training-1.webp",
         slug: "counselling-mental-training"
