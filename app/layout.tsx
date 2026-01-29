@@ -65,6 +65,7 @@ export default function RootLayout({
             footer={<Footer />}
             fab={<FloatingActionButton />}
           >
+            {/* hello  */}
             {children}
           </StudioLayoutWrapper>
         </ThemeProvider>
