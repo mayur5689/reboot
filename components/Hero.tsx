@@ -40,13 +40,26 @@ export default function Hero() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-black/40 z-10"></div>
-        <Image
-          src="/images/service/Services_image/Hydrotherapy_!.webp"
-          alt="Hero Background"
-          fill
-          className="object-cover object-[50%_38%]"
-          priority
-        />
+        {/* Desktop Image */}
+        <div className="hidden md:block absolute inset-0">
+          <Image
+            src="/images/hero/Hero_Section Image.webp"
+            alt="Hero Background Desktop"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
+        {/* Mobile Image */}
+        <div className="block md:hidden absolute inset-0">
+          <Image
+            src="/images/hero/Mobile_Hero_Section.webp"
+            alt="Hero Background Mobile"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
       </div>
 
       {/* Main Content Area */}
@@ -155,7 +168,7 @@ export default function Hero() {
           </div>
           <div className="w-[140px] h-[160px] rounded-xl overflow-hidden shadow-inner relative">
             <Image
-              src="/images/service/Services_image/Hydrotherapy_!.webp"
+              src="/images/hero/Hero_Section Image.webp"
               alt="Video thumbnail"
               fill
               className="object-cover grayscale-[0.2]"

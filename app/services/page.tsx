@@ -4,7 +4,7 @@ import { services } from '@/lib/services'
 
 export default function ServicesPage() {
     return (
-        <main className="min-h-screen bg-white">
+        <main className="min-h-screen bg-white dark:bg-[#0A0A0A]">
             {/* Hero Section - More Premium */}
             <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
                 <Image
@@ -30,7 +30,7 @@ export default function ServicesPage() {
             </section>
 
             {/* Services Grid */}
-            <section className="py-24 lg:py-32 bg-[#FBFBFB]">
+            <section className="py-24 lg:py-32 bg-[#FBFBFB] dark:bg-[#0D0D0D]">
                 <div className="container mx-auto px-6 lg:px-8">
                     <div className="text-center max-w-4xl mx-auto mb-20">
                         <div className="inline-flex items-center justify-center gap-3 text-[#513394] mb-4">
@@ -38,11 +38,11 @@ export default function ServicesPage() {
                             <span className="text-[13px] font-black tracking-[0.3em] uppercase">EXPLORE OPTIONS</span>
                             <div className="w-1.5 h-1.5 rounded-full bg-[#513394]"></div>
                         </div>
-                        <h2 className="text-4xl md:text-6xl font-black text-[#1A1A1A] leading-[1.1] mb-8 tracking-tighter transition-all">
+                        <h2 className="text-4xl md:text-6xl font-black text-[#1A1A1A] dark:text-white leading-[1.1] mb-8 tracking-tighter transition-all">
                             Choose the perfect therapy <br />
-                            for your <span className="text-[#513394]">recovery.</span>
+                            for your <span className="text-[#513394] dark:text-[#8B5CF6]">recovery.</span>
                         </h2>
-                        <p className="text-gray-500 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto">
+                        <p className="text-gray-500 dark:text-gray-400 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto">
                             Our integrated approach ensures every session moves you closer to your peak performance, combining science with personalized care.
                         </p>
                     </div>
@@ -52,7 +52,7 @@ export default function ServicesPage() {
                             <Link
                                 key={index}
                                 href={`/services/${service.slug}`}
-                                className="group bg-white p-5 rounded-[2.5rem] shadow-sm hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 flex flex-col h-full"
+                                className="group bg-white dark:bg-[#1A1A1A] p-5 rounded-[2.5rem] shadow-sm hover:shadow-2xl border border-transparent dark:border-white/5 transition-all duration-500 transform hover:-translate-y-3 flex flex-col h-full"
                             >
                                 {/* Image */}
                                 <div className="relative h-64 w-full shrink-0 overflow-hidden rounded-[2rem] mb-6">
@@ -71,10 +71,10 @@ export default function ServicesPage() {
 
                                 {/* Content */}
                                 <div className="px-2 pb-4 flex flex-col flex-grow text-left">
-                                    <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-[#513394] transition-colors duration-300">
+                                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-[#513394] dark:group-hover:text-[#8B5CF6] transition-colors duration-300">
                                         {service.title}
                                     </h3>
-                                    <p className="text-sm text-gray-500 mb-8 line-clamp-3 leading-relaxed">
+                                    <p className="text-sm text-gray-500 dark:text-gray-400 mb-8 line-clamp-3 leading-relaxed">
                                         {service.description}
                                     </p>
 
