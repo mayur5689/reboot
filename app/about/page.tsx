@@ -87,7 +87,7 @@ export default function AboutPage() {
                         >
                             <div className="relative aspect-square lg:aspect-[4/5] max-w-lg ml-auto rounded-[3rem] overflow-hidden shadow-2xl group">
                                 <Image
-                                    src="/images/trainer2/Trainers/Alkesh Kubadia (Behavioral Therapist).webp"
+                                    src="/images/trainer2/Trainers/Alkesh Kubadia (Behavioral Therapist) of Alkesh Kubadia (Behavioral Therapist).webp"
                                     alt="R3BOOT Professional Support"
                                     fill
                                     className="object-cover group-hover:scale-105 transition-transform duration-1000"
@@ -311,14 +311,14 @@ export default function AboutPage() {
                             {
                                 name: "Alkesh Kubadia",
                                 role: "Co-Founder | Strategy, Psychology & Business Lead",
-                                image: "/images/trainer2/Trainers/Alkesh Kubadia (Behavioral Therapist) of Alkesh Kubadia (Behavioral Therapist).webp",
+                                image: "/images/trainer2/Trainers/Alkesh Kubadia (Behavioral Therapist).webp",
                                 bio: "Alkesh Kubadia holds a Master’s degree in Psychology and brings decades of entrepreneurial experience. At r3boot, he oversees strategy, operations, and client experience, ensuring systems-driven execution and ethical practices."
                             },
                             {
                                 name: "Nirmal Solanki",
-                                role: "Senior Physiotherapist & Manual Therapy Specialist",
+                                role: "Physiotherapist & Manual Therapy Specialist",
                                 image: "/images/trainer2/Trainers/Dr. Nirmal Solanki.webp",
-                                bio: "Senior physiotherapist with over 20 years of experience in sports physiotherapy and manual therapy. Internationally trained in advanced osteopathic techniques with a focus on sustainable, long-term outcomes."
+                                bio: "Physiotherapist with over 20 years of experience in sports physiotherapy and manual therapy. Internationally trained in advanced osteopathic techniques with a focus on sustainable, long-term outcomes."
                             },
                             {
                                 name: "Parinaaz Irani",
