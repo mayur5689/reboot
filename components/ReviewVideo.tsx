@@ -92,6 +92,61 @@ const videos: VideoCard[] = [
   }
 ];
 
+// Helper function to generate Cloudinary thumbnail URL from video URL
+// Converts video URL to image thumbnail by adding transformations
+const getCloudinaryThumbnail = (videoUrl: string): string => {
+  // Example: https://res.cloudinary.com/dj7bot2uc/video/upload/v1769068730/Testimonial_1_1_w7kd2v.mp4
+  // Becomes: https://res.cloudinary.com/dj7bot2uc/video/upload/so_0,w_600,h_900,c_fill,q_auto,f_jpg/v1769068730/Testimonial_1_1_w7kd2v.jpg
+  try {
+    const url = new URL(videoUrl);
+    const pathParts = url.pathname.split('/');
+
+    // Find the 'upload' index and insert transformations after it
+    const uploadIndex = pathParts.findIndex(part => part === 'upload');
+    if (uploadIndex !== -1) {
+      // Insert transformation after 'upload'
+      pathParts.splice(uploadIndex + 1, 0, 'so_0,w_600,h_900,c_fill,q_auto,f_jpg');
+    }
+
+    // Change file extension from .mp4 to .jpg
+    const lastPart = pathParts[pathParts.length - 1];
+    pathParts[pathParts.length - 1] = lastPart.replace(/\.mp4$/i, '.jpg');
+
+    url.pathname = pathParts.join('/');
+    return url.toString();
+  } catch {
+    // Fallback: return original URL if parsing fails
+    return videoUrl;
+  }
+};
+
+// Helper function to optimize video URL for Safari streaming
+// Adds H.264 codec and streaming profile for proper byte-range support
+const getOptimizedVideoUrl = (videoUrl: string): string => {
+  // Safari requires proper byte-range streaming support for larger videos
+  // Cloudinary transformations: vc_h264 (H.264 codec), q_auto (auto quality), f_mp4 (MP4 format)
+  try {
+    const url = new URL(videoUrl);
+    const pathParts = url.pathname.split('/');
+
+    // Find the 'upload' index and insert optimizations after it
+    const uploadIndex = pathParts.findIndex(part => part === 'upload');
+    if (uploadIndex !== -1) {
+      // Insert streaming-optimized transformation
+      // vc_h264 = H.264 codec (Safari preferred)
+      // q_auto = automatic quality
+      // f_mp4 = MP4 format
+      pathParts.splice(uploadIndex + 1, 0, 'vc_h264,q_auto,f_mp4');
+    }
+
+    url.pathname = pathParts.join('/');
+    return url.toString();
+  } catch {
+    // Fallback: return original URL if parsing fails
+    return videoUrl;
+  }
+};
+
 // Duplicate data for seamless looping (multi-copy for bi-directional loop)
 const COPIES = 4;
 const duplicatedVideos = Array.from({ length: COPIES }).flatMap(() => videos);
@@ -124,6 +179,8 @@ export default function ReviewVideo() {
   const [isPaused, setIsPaused] = useState(false);
   const [selectedVideo, setSelectedVideo] = useState<VideoCard | null>(null);
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+  const [isVideoLoading, setIsVideoLoading] = useState<boolean>(true);
+  const [videoKey, setVideoKey] = useState<number>(0); // Key to force video element recreation
 
   const containerRef = useRef<HTMLDivElement>(null);
   const modalVideoRef = useRef<HTMLVideoElement>(null);
@@ -239,13 +296,19 @@ export default function ReviewVideo() {
     setIsModalOpen(true);
   };
 
-  // Handle modal close
+  // Handle modal close - properly cleanup video for Safari
   const handleCloseModal = () => {
-    setIsModalOpen(false);
-    setSelectedVideo(null);
+    // First, stop and cleanup the video element
     if (modalVideoRef.current) {
       modalVideoRef.current.pause();
+      modalVideoRef.current.removeAttribute('src');
+      modalVideoRef.current.load(); // Reset the video element
     }
+    setIsModalOpen(false);
+    setSelectedVideo(null);
+    setIsVideoLoading(true);
+    // Increment key to force new video element on next open
+    setVideoKey(prev => prev + 1);
   };
 
 
@@ -348,25 +411,53 @@ export default function ReviewVideo() {
             <div className="flex flex-col lg:grid lg:grid-cols-3 gap-0">
               {/* Video Content */}
               <div className="lg:col-span-2 relative flex-shrink-0">
+                {/* Loading Spinner */}
+                {isVideoLoading && (
+                  <div className="absolute inset-0 flex items-center justify-center bg-black z-10">
+                    <div className="w-12 h-12 border-4 border-white/30 border-t-white rounded-full animate-spin"></div>
+                  </div>
+                )}
+                {/* Video with unique key to force recreation for Safari */}
                 <video
+                  key={`modal-video-${videoKey}-${selectedVideo.id}`}
                   ref={modalVideoRef}
                   className="w-full h-auto max-h-[50vh] lg:max-h-[90vh] object-contain bg-black"
                   controls
                   autoPlay
+                  muted
                   playsInline
-                  preload="metadata"
+                  // @ts-ignore - webkit-playsinline for iOS Safari
+                  webkit-playsinline="true"
+                  preload="none"
+                  onLoadStart={() => setIsVideoLoading(true)}
                   onLoadedData={() => {
-                    // Unmute and play when video loads
+                    setIsVideoLoading(false);
+                    // Unmute after a short delay for Safari autoplay policy compliance
                     if (modalVideoRef.current) {
-                      modalVideoRef.current.muted = false;
+                      // Small delay to ensure autoplay starts
+                      setTimeout(() => {
+                        if (modalVideoRef.current) {
+                          modalVideoRef.current.muted = false;
+                        }
+                      }, 100);
+                    }
+                  }}
+                  onCanPlay={() => {
+                    setIsVideoLoading(false);
+                    // Ensure video plays when ready
+                    if (modalVideoRef.current) {
                       modalVideoRef.current.play().catch(() => {
-                        // If autoplay fails, user will need to click play manually
                         console.log('Autoplay prevented by browser');
                       });
                     }
                   }}
+                  onError={() => setIsVideoLoading(false)}
                 >
+                  {/* Safari-optimized video source with H.264 codec */}
+                  <source src={getOptimizedVideoUrl(selectedVideo.videoUrl)} type="video/mp4" />
+                  {/* Fallback to original URL */}
                   <source src={selectedVideo.videoUrl} type="video/mp4" />
+                  Your browser does not support the video tag.
                 </video>
               </div>
 
@@ -421,12 +512,15 @@ export default function ReviewVideo() {
   );
 }
 
-// VideoCard component - Now using thumbnails instead of autoplay videos
+// VideoCard component - Using Cloudinary image thumbnails instead of video elements
+// This fixes Safari's limitation of only loading 4-6 videos simultaneously
 const VideoCard: React.FC<{
   video: VideoCard;
   videoId: string;
   onPlayClick: (video: VideoCard) => void;
 }> = ({ video, onPlayClick }) => {
+  // Generate thumbnail URL from Cloudinary video URL
+  const thumbnailUrl = video.thumbnailUrl || getCloudinaryThumbnail(video.videoUrl);
 
   return (
     <div
@@ -436,14 +530,17 @@ const VideoCard: React.FC<{
       onClick={() => onPlayClick(video)}
       style={{ userSelect: 'none', WebkitUserSelect: 'none', MozUserSelect: 'none', msUserSelect: 'none' }}
     >
-      {/* Video Thumbnail - Shows first frame */}
-      <video
-        src={video.videoUrl}
-        className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-105"
-        muted
-        playsInline
-        preload="metadata"
+      {/* Image Thumbnail - Using Cloudinary auto-generated thumbnail from video */}
+      {/* This is more reliable than video elements, especially for Safari */}
+      <Image
+        src={thumbnailUrl}
+        alt={`${video.reviewerName} - ${video.title}`}
+        fill
+        className="object-cover object-top transition-transform duration-300 group-hover:scale-105"
+        sizes="(max-width: 640px) 250px, (max-width: 768px) 350px, (max-width: 1024px) 320px, (max-width: 1280px) 380px, 330px"
         draggable={false}
+        priority={false}
+        unoptimized
       />
 
       {/* Overlay */}
