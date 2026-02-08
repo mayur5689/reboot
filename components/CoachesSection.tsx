@@ -25,7 +25,7 @@ const coaches: Coach[] = [
   {
     id: "nirmal",
     name: "Nirmal Solanki",
-    role: "Senior Physiotherapist",
+    role: "Physiotherapist",
     imageSrc: "/images/trainer2/Trainers/Dr. Nirmal Solanki.webp",
     description: "20+ years of experience. Internationally trained in manual therapy and osteopathy-based rehabilitation."
   },
