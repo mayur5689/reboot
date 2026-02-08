@@ -32,6 +32,13 @@ export async function getAllPosts() {
   `)
 }
 
+// Lightweight fetch for sitemap: only post slugs
+export async function getPostSlugs(): Promise<{ slug: string }[]> {
+    return client.fetch(`
+    *[_type == "post" && defined(slug.current)] { "slug": slug.current }
+  `)
+}
+
 // Helper function to fetch a single post by slug
 export async function getPostBySlug(slug: string) {
     return client.fetch(`
