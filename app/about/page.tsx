@@ -340,7 +340,7 @@ export default function AboutPage() {
                             },
                             {
                                 name: "Ganesh S. Gadhave",
-                                role: "Pain Management & Sports Rehabilitation Specialist",
+                                role: "Pain Management & Sports Massage Therapist",
                                 image: "/images/trainer2/Trainers/Dr. Ganesh S. Gadhave.webp",
                                 bio: "Focuses on injury prevention and athlete recovery. His approach emphasizes long-term physical resilience rather than short-term relief, helping individuals train with confidence."
                             },
