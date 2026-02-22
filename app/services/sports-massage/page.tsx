@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { Metadata } from 'next'
 import { services } from '@/lib/services'
 import SportsMassageTeam from '@/components/SportsMassageTeam'
+import { FAQSection } from '@/components/faq-section'
 
 export const metadata: Metadata = {
     title: 'Sports Massage in Mumbai | R3BOOT Dadar',
@@ -428,36 +429,7 @@ export default function SportsMassagePage() {
             <SportsMassageTeam />
 
             {/* ─── FAQ ─── */}
-            <section className="py-24 lg:py-32 bg-[#F8F9FA] dark:bg-[#0D0D0D]">
-                <div className="container mx-auto px-6 lg:px-8">
-                    <div className="max-w-4xl mx-auto">
-                        <div className="text-center mb-16">
-                            <span className="text-[11px] font-black tracking-[0.3em] text-[#513394] dark:text-[#A78BFA] uppercase mb-4 block">
-                                COMMON QUESTIONS //
-                            </span>
-                            <h2 className="text-4xl md:text-6xl font-black text-gray-900 dark:text-white tracking-tight">
-                                Frequently Asked <span className="text-[#513394] dark:text-[#8B5CF6]">Questions</span>
-                            </h2>
-                        </div>
-
-                        <div className="space-y-5">
-                            {[
-                                { q: "Where is R3BOOT located?", a: "We are based in Dadar, central Mumbai — well-connected from Andheri, Thane, Bandra, and Navi Mumbai by train and road." },
-                                { q: "How is this different from a regular spa massage?", a: "Sessions at R3BOOT are performed by a certified sports massage specialist. Every session starts with a movement assessment, adjusts to your training phase, and ends with activation work and recovery advice. The clinical setup and integrated recovery tools are not available at a spa." },
-                                { q: "Do I need to be an athlete to book?", a: "No. Corporate professionals, gym-goers, and anyone with a physically demanding lifestyle benefit equally. If your body is under repetitive load, sports massage applies to you." },
-                                { q: "Can I train the same day?", a: "Light activity is fine. Avoid intense training or heavy lifting for 12–24 hours after a deep tissue session." },
-                                { q: "How often should I book?", a: "Training 4–5x/week: once a week. Moderate load: every 10–14 days. Intense tournament or heavy cycle: twice a week during that block." },
-                                { q: "Is sports massage covered by insurance?", a: "This varies by policy. Contact your insurer with service details. We can provide session documentation on request." },
-                            ].map((faq, idx) => (
-                                <div key={idx} className="bg-white dark:bg-white/5 p-8 rounded-3xl border border-gray-100 dark:border-white/5 shadow-sm">
-                                    <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-3">{faq.q}</h3>
-                                    <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">{faq.a}</p>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <FAQSection />
 
             {/* ─── FINAL CTA ─── */}
             <section className="py-24 lg:py-32 bg-[#513394] relative overflow-hidden">
