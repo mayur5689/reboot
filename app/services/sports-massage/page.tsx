@@ -90,7 +90,8 @@ export default function SportsMassagePage() {
                                     {[
                                         { title: "Pre-Session Assessment", description: "Therapist reviews training load, pain location, sleep, and hydration. A movement screen sets the session goal before any bodywork begins." },
                                         { title: "Warm-Up Phase", description: "Light effleurage and rhythmic strokes increase tissue temperature and prepare the nervous system for targeted work." },
-                                        { title: "Targeted Treatment", description: "Deep tissue, trigger point therapy, myofascial release, and cupping based on your assessment — not a generic routine." },
+                                        { title: "Targeted Treatment", description: "Deep tissue, trigger point therapy, and myofascial release based on your assessment — not a generic routine." },
+                                        { title: "Sports Massage Cupping", description: "Cupping is applied where indicated to improve blood flow, reduce tension, and support recovery — integrated into your session when assessment calls for it." },
                                         { title: "Activation & Advice", description: "Assisted stretching, PNF, and muscle activation finish each session. Recovery protocol and home drills are given before you leave." },
                                     ].map((step, idx) => (
                                         <div key={idx} className="bg-white dark:bg-white/5 p-8 rounded-[2.5rem] border border-gray-100 dark:border-white/5 shadow-sm hover:shadow-xl group transition-all duration-500 relative overflow-hidden">
