@@ -43,7 +43,7 @@ export default function Hero() {
         {/* Desktop Image */}
         <div className="hidden md:block absolute inset-0">
           <Image
-            src="https://res.cloudinary.com/dj7bot2uc/image/upload/v1771748783/Hero_Section_image_kabrvh.jpg"
+            src="https://res.cloudinary.com/dj7bot2uc/image/upload/v1773076903/Hero_Section_1_ervwf2.avif"
             alt="Hero Background Desktop"
             fill
             className="object-cover"
@@ -53,7 +53,7 @@ export default function Hero() {
         {/* Mobile Image */}
         <div className="block md:hidden absolute inset-0">
           <Image
-            src="https://res.cloudinary.com/dj7bot2uc/image/upload/v1771748783/Hero_Section_image_kabrvh.jpg"
+            src="https://res.cloudinary.com/dj7bot2uc/image/upload/v1773076903/Hero_Section_1_ervwf2.avif"
             alt="Hero Background Mobile"
             fill
             className="object-cover"
@@ -168,7 +168,7 @@ export default function Hero() {
           </div>
           <div className="w-[140px] h-[160px] rounded-xl overflow-hidden shadow-inner relative">
             <Image
-              src="https://res.cloudinary.com/dj7bot2uc/image/upload/v1771748783/Hero_Section_image_kabrvh.jpg"
+              src="https://res.cloudinary.com/dj7bot2uc/image/upload/v1773076903/Hero_Section_1_ervwf2.avif"
               alt="Video thumbnail"
               fill
               className="object-cover grayscale-[0.2]"
