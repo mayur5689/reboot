@@ -42,7 +42,8 @@ export const metadata: Metadata = {
   title: 'R3BOOT - Recovery & Performance',
   description: 'India\'s First Integrated Recovery Centre',
   icons: {
-    icon: '/favicon.webp',
+    icon: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1773062628/R3boot_Logo_za7ymb.png',
+    apple: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1773062628/R3boot_Logo_za7ymb.png',
   },
 }
 

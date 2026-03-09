@@ -115,8 +115,8 @@ export const services: Service[] = [
     {
         title: "Contrast Therapy",
         category: "THERAPY",
-        description: "Alternating hot and cold exposure for optimal recovery, featuring our advanced Redlight Sauna.",
-        fullDescription: "Our Contrast Therapy combines the power of thermal stress with red light technology to accelerate healing at a cellular level. This powerful technique is used by elite athletes worldwide to enhance performance and speed up the healing process.",
+        description: "Alternating hot and cold exposure for optimal recovery: Red Light Sauna (hot phase) and Ice Bath (cold phase).",
+        fullDescription: "Our Contrast Therapy combines Red Light Sauna (hot phase) and Ice Bath (cold phase) to accelerate healing at a cellular level. Alternating between heat and cold is used by elite athletes worldwide to enhance performance and speed up the healing process.",
         benefits: [
             "Boosted Immunity system",
             "Improved cardiovascular health (Increases HR)",
@@ -127,8 +127,8 @@ export const services: Service[] = [
         ],
         process: [
             { title: "Preparation", description: "Preparing the body for rapid temperature changes." },
-            { title: "Hot Phase", description: "Vasodilation phase to increase circulation and relax muscles." },
-            { title: "Cold Phase", description: "Vasoconstriction phase to reduce inflammation and flush toxins." },
+            { title: "Hot Phase — Red Light Sauna", description: "Red light sauna: vasodilation phase to increase circulation and relax muscles." },
+            { title: "Cold Phase — Ice Bath", description: "Ice bath: vasoconstriction phase to reduce inflammation and flush toxins." },
             { title: "Recovery", description: "Allowing the body to return to homeostatic balance." }
         ],
         image: "/images/service/Services_image/Contrast_Therepy.webp",
