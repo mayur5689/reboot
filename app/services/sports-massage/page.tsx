@@ -4,6 +4,9 @@ import { Metadata } from 'next'
 import { services } from '@/lib/services'
 import SportsMassageTeam from '@/components/SportsMassageTeam'
 import { FAQSection } from '@/components/faq-section'
+import ServiceSchema from '@/components/schema/ServiceSchema'
+import FAQSchema from '@/components/schema/FAQSchema'
+import { sportsMassageFaqs } from '@/lib/faqs/sports-massage'
 
 export const metadata: Metadata = {
     title: 'Sports Massage in Mumbai | R3BOOT Dadar',
@@ -430,7 +433,7 @@ export default function SportsMassagePage() {
             <SportsMassageTeam />
 
             {/* ─── FAQ ─── */}
-            <FAQSection />
+            <FAQSection faqs={sportsMassageFaqs} />
 
             {/* ─── FINAL CTA ─── */}
             <section className="py-24 lg:py-32 bg-[#513394] relative overflow-hidden">
@@ -521,35 +524,12 @@ export default function SportsMassagePage() {
                 </div>
             </section>
 
-            {/* Schema Markup */}
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                    __html: JSON.stringify({
-                        "@context": "https://schema.org",
-                        "@type": "MedicalBusiness",
-                        "name": "R3BOOT Recovery Center",
-                        "description": "Clinical sports massage and integrated performance recovery center in Dadar, Mumbai.",
-                        "url": "https://www.r3boot.in/services/sports-massage",
-                        "address": { "@type": "PostalAddress", "addressLocality": "Dadar", "addressRegion": "Mumbai", "addressCountry": "IN" },
-                        "priceRange": "₹₹",
-                        "hasOfferCatalog": {
-                            "@type": "OfferCatalog",
-                            "name": "Sports Massage Services",
-                            "itemListElement": [{
-                                "@type": "Offer",
-                                "itemOffered": {
-                                    "@type": "Service",
-                                    "name": "Sports Massage – 60 Minutes",
-                                    "provider": { "@type": "Person", "name": "Akshay Anil Nalawde", "jobTitle": "Sports Massage Therapist" }
-                                },
-                                "price": "2000",
-                                "priceCurrency": "INR"
-                            }]
-                        }
-                    })
-                }}
+            <ServiceSchema
+                serviceName="Sports Massage in Mumbai"
+                description="Clinical sports massage in Mumbai by certified specialists. Serving athletes in Dadar, Andheri, Thane & Bandra. Book at R3BOOT Recovery Center."
+                serviceUrl="https://r3boot.in/services/sports-massage"
             />
+            <FAQSchema faqs={sportsMassageFaqs} />
         </main>
     )
 }

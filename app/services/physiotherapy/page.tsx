@@ -4,6 +4,9 @@ import { Metadata } from 'next'
 import { services } from '@/lib/services'
 import PhysiotherapyTeam from '@/components/PhysiotherapyTeam'
 import PhysiotherapyFAQ from '@/components/PhysiotherapyFAQ'
+import ServiceSchema from '@/components/schema/ServiceSchema'
+import FAQSchema from '@/components/schema/FAQSchema'
+import { physiotherapyFaqs } from '@/lib/faqs/physiotherapy'
 
 export const metadata: Metadata = {
     title: 'Physiotherapy in Mumbai | R3BOOT Dadar – Clinical Care',
@@ -559,51 +562,12 @@ export default function PhysiotherapyPage() {
                 </div>
             </section>
 
-            {/* Schema Markup */}
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                    __html: JSON.stringify({
-                        "@context": "https://schema.org",
-                        "@type": "MedicalBusiness",
-                        "name": "R3BOOT Recovery Center",
-                        "description": "Clinical physiotherapy and integrated performance recovery center in Dadar, Mumbai. Sports injuries, back pain, knee pain, post-surgery rehabilitation, neurological rehab.",
-                        "url": "https://www.r3boot.in/services/physiotherapy/",
-                        "telephone": "+919702368612",
-                        "email": "info.r3boot@gmail.com",
-                        "address": {
-                            "@type": "PostalAddress",
-                            "streetAddress": "Palai Plaza, 203, Swami Gyan Jivandas Marg",
-                            "addressLocality": "Dadar East",
-                            "addressRegion": "Mumbai",
-                            "postalCode": "400014",
-                            "addressCountry": "IN"
-                        },
-                        "geo": {
-                            "@type": "GeoCoordinates",
-                            "latitude": "19.0176",
-                            "longitude": "72.8441"
-                        },
-                        "priceRange": "₹₹",
-                        "hasOfferCatalog": {
-                            "@type": "OfferCatalog",
-                            "name": "Physiotherapy Services",
-                            "itemListElement": [{
-                                "@type": "Offer",
-                                "itemOffered": {
-                                    "@type": "Service",
-                                    "name": "Clinical Physiotherapy",
-                                    "description": "Evidence-based physiotherapy for sports injuries, back pain, knee pain, post-surgery rehabilitation, neurological rehab, and postural correction.",
-                                    "provider": [
-                                        { "@type": "Person", "name": "Nirmal Solanki", "jobTitle": "Physiotherapist & Manual Therapy Specialist" },
-                                        { "@type": "Person", "name": "Vaishali Vijay Rauniyar", "jobTitle": "Physiotherapist" }
-                                    ]
-                                }
-                            }]
-                        }
-                    })
-                }}
+            <ServiceSchema
+                serviceName="Physiotherapy in Mumbai"
+                description="Clinical physiotherapy in Mumbai by certified specialists. Back pain, knee pain, sports injuries, post-surgery rehab. Dadar location, accessible from Andheri, Thane & Bandra."
+                serviceUrl="https://r3boot.in/services/physiotherapy"
             />
+            <FAQSchema faqs={physiotherapyFaqs} />
         </main>
     )
 }

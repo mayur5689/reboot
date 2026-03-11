@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { services } from '@/lib/services'
+import ServiceSchema from '@/components/schema/ServiceSchema'
 
 interface ServicePageProps {
     params: Promise<{ slug: string }>
@@ -292,6 +293,12 @@ export default async function ServicePage({ params }: ServicePageProps) {
                     </div>
                 </div>
             </section>
+
+            <ServiceSchema
+                serviceName={service.title}
+                description={service.description}
+                serviceUrl={`https://r3boot.in/services/${slug}`}
+            />
         </main>
     )
 }
