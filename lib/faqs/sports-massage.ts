@@ -17,7 +17,7 @@ export const sportsMassageFaqs = [
   {
     question: 'Do I need to book in advance?',
     answer:
-      'While we do accept walk-ins based on availability, we strongly recommend booking via our website or WhatsApp to ensure your spot.',
+      'Yes, we accept walk-ins subject to availability. For a guaranteed spot we recommend booking via our website or WhatsApp.',
   },
   {
     question: 'Can recovery therapy help with chronic pain?',

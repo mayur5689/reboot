@@ -8,7 +8,7 @@ import HomeBlog from "@/components/HomeBlog";
 import Link from "next/link";
 
 export default function AboutPage() {
-    return (
+    const content = (
         <main className="min-h-screen bg-white dark:bg-[#0A0A0A]">
             {/* Section 1: Hero / Introduction */}
             <section className="min-h-[90vh] flex items-center pt-24 pb-12 lg:pt-32 lg:pb-16">
@@ -98,6 +98,104 @@ export default function AboutPage() {
                                 </div>
                             </div>
                         </motion.div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Professional Team - before Ecosystem */}
+            <section id="team-section" className="py-24 lg:py-32 bg-white dark:bg-[#0A0A0A]">
+                <div className="container mx-auto px-6 lg:px-8">
+                    <div className="text-center mb-20 max-w-2xl mx-auto">
+                        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#513394]/10 text-[#513394] font-semibold text-xs tracking-widest uppercase mb-6">
+                            Professional Team
+                        </div>
+                        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white leading-tight">
+                            Meet the experts driving your <span className="text-[#513394] dark:text-[#A78BFA]">performance.</span>
+                        </h2>
+                    </div>
+
+                    <div className="flex overflow-x-auto pb-12 md:pb-0 md:grid md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-x-8 md:gap-y-16 scrollbar-hide snap-x snap-mandatory -mx-6 px-6 md:mx-0 md:px-0">
+                        {[
+                            {
+                                name: "Alkesh Kubadia",
+                                role: "Co-Founder | Strategy, Psychology & Business Lead",
+                                image: "/images/trainer2/Trainers/Alkesh Kubadia (Behavioral Therapist).webp",
+                                bio: "Alkesh Kubadia holds a Master's degree in Psychology and brings decades of entrepreneurial experience. At r3boot, he oversees strategy, operations, and client experience, ensuring systems-driven execution and ethical practices."
+                            },
+                            {
+                                name: "Nirmal Solanki",
+                                role: "Physiotherapist & Manual Therapy Specialist",
+                                image: "/images/trainer2/Trainers/Dr. Nirmal Solanki.webp",
+                                bio: "Physiotherapist with over 20 years of experience in sports physiotherapy and manual therapy. Internationally trained in advanced osteopathic techniques with a focus on sustainable, long-term outcomes."
+                            },
+                            {
+                                name: "Parinaaz Irani",
+                                role: "Sports Counselling & Mental Performance",
+                                image: "/images/trainer2/Trainers/Parinaaz Irani.webp",
+                                bio: "Sport and performance psychologist specializing in athlete mental health and mindset training. Her work helps athletes develop mental resilience, emotional regulation, and focus under pressure."
+                            },
+                            {
+                                name: "Diyan Kubadia",
+                                role: "Co-Founder | Athlete | Performance Vision Lead",
+                                image: "/images/trainer2/Trainers/Diyan Kubadia.webp",
+                                bio: "Professional cricketer with over a decade of experience. Diyan leads the athlete and performance vision, ensuring every protocol aligns with real athletic needs for smarter recovery."
+                            },
+                            {
+                                name: "Vaishali Vijay Rauniyar",
+                                role: "Physiotherapist | Sports & Orthopedic Rehabilitation",
+                                image: "/images/trainer2/Trainers/Dr. Vaishali Vijay Rauniyar.webp",
+                                bio: "Clinical experience in sports, orthopedic, and neurological rehabilitation. Certified in Dry Needling and Aquatic Rehabilitation, she designs personalized plans for efficient recovery."
+                            },
+                            {
+                                name: "Ganesh S. Gadhave",
+                                role: "Pain Management & Sports Massage Therapist",
+                                image: "/images/trainer2/Trainers/Dr. Ganesh S. Gadhave.webp",
+                                bio: "Focuses on injury prevention and athlete recovery. His approach emphasizes long-term physical resilience rather than short-term relief, helping individuals train with confidence."
+                            },
+                            {
+                                name: "Akshay Anil Nalawde",
+                                role: "Sports Massage Therapist",
+                                image: "/images/trainer2/Trainers/Akshay Anil Nalawde.webp",
+                                bio: "Certified in Cupping Therapy and muscle recovery. He has worked with over 1,000 athletes to reduce muscle stiffness and support faster recovery from training loads."
+                            },
+                            {
+                                name: "Vaishali Sonar",
+                                role: "Sports Massage Therapist",
+                                image: "https://res.cloudinary.com/dj7bot2uc/image/upload/v1771404920/aanya-rao-womens-sports-massage-specialist-mumbai_agreyq.avif",
+                                bio: "Certified in Cupping Therapy (Level 1 & 2). Specialises in sports massage for female athletes and the general population. Her sessions are built around injury-free performance, combining clinical technique with an understanding of female physiology and training load."
+                            }
+                        ].map((member, index) => (
+                            <motion.div
+                                key={index}
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: index * 0.1 }}
+                                className="group relative min-w-[85vw] md:min-w-0 snap-center"
+                            >
+                                <div className="relative aspect-[4/5] rounded-[2rem] overflow-hidden mb-6 bg-gray-100 dark:bg-gray-800 shadow-xl group-hover:shadow-2xl transition-all duration-500">
+                                    <Image
+                                        src={member.image}
+                                        alt={member.name}
+                                        fill
+                                        className="object-cover transition-transform duration-700 group-hover:scale-110"
+                                    />
+                                    <div className="absolute inset-0 bg-[#513394]/90 opacity-0 group-hover:opacity-100 transition-all duration-500 backdrop-blur-sm p-8 flex flex-col justify-center text-white">
+                                        <p className="text-white/90 text-sm leading-relaxed line-clamp-[8]">
+                                            {member.bio}
+                                        </p>
+                                    </div>
+                                </div>
+                                <div className="space-y-1">
+                                    <p className="text-gray-900 dark:text-white text-[10px] font-bold uppercase tracking-widest opacity-80">
+                                        {member.role.split('|')[0]}
+                                    </p>
+                                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white transition-colors">
+                                        {member.name}
+                                    </h3>
+                                </div>
+                            </motion.div>
+                        ))}
                     </div>
                 </div>
             </section>
@@ -210,7 +308,7 @@ export default function AboutPage() {
                         >
                             <div className="space-y-6">
                                 <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white leading-tight italic">
-                                    &ldquo;Recovery is not an option. It&rsquo;s a <span className="text-[#513394]">discipline.</span>&rdquo;
+                                    &ldquo;Active recovery is not an option. It&rsquo;s a <span className="text-[#513394]">discipline.</span>&rdquo;
                                 </h2>
                                 <p className="text-xl text-gray-600 dark:text-gray-400 leading-relaxed">
                                     We provide an integrated suite of modalities designed to optimize your central nervous system, reduce inflammation, and restore structural integrity.
@@ -221,7 +319,8 @@ export default function AboutPage() {
                                 {[
                                     { title: "Hydrotherapy & Contrast Bathing", desc: "Regulate blood flow and reduce muscle soreness." },
                                     { title: "Infrared Sauna & Heat Exposure", desc: "Cellular repair and detoxification for deeper recovery." },
-                                    { title: "Pneumatic Compression", desc: "Dynamic compression to flush out metabolic waste." }
+                                    { title: "Pneumatic Compression", desc: "Dynamic compression to flush out metabolic waste." },
+                                    { title: "Sports Massage", desc: "Targeted soft-tissue work to support recovery and reduce muscle tension between training." }
                                 ].map((feature, i) => (
                                     <motion.div
                                         key={i}
@@ -294,98 +393,6 @@ export default function AboutPage() {
                 </div>
             </section>
 
-            {/* Section 3: Professional Team / Doctors */}
-            <section id="team-section" className="py-24 lg:py-32 bg-white dark:bg-[#0A0A0A]">
-                <div className="container mx-auto px-6 lg:px-8">
-                    <div className="text-center mb-20 max-w-2xl mx-auto">
-                        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#513394]/10 text-[#513394] font-semibold text-xs tracking-widest uppercase mb-6">
-                            Professional Team
-                        </div>
-                        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white leading-tight">
-                            Meet the experts driving your <span className="text-[#513394] dark:text-[#A78BFA]">performance.</span>
-                        </h2>
-                    </div>
-
-                    <div className="flex overflow-x-auto pb-12 md:pb-0 md:grid md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-x-8 md:gap-y-16 scrollbar-hide snap-x snap-mandatory -mx-6 px-6 md:mx-0 md:px-0">
-                        {[
-                            {
-                                name: "Alkesh Kubadia",
-                                role: "Co-Founder | Strategy, Psychology & Business Lead",
-                                image: "/images/trainer2/Trainers/Alkesh Kubadia (Behavioral Therapist).webp",
-                                bio: "Alkesh Kubadia holds a Master’s degree in Psychology and brings decades of entrepreneurial experience. At r3boot, he oversees strategy, operations, and client experience, ensuring systems-driven execution and ethical practices."
-                            },
-                            {
-                                name: "Nirmal Solanki",
-                                role: "Physiotherapist & Manual Therapy Specialist",
-                                image: "/images/trainer2/Trainers/Dr. Nirmal Solanki.webp",
-                                bio: "Physiotherapist with over 20 years of experience in sports physiotherapy and manual therapy. Internationally trained in advanced osteopathic techniques with a focus on sustainable, long-term outcomes."
-                            },
-                            {
-                                name: "Parinaaz Irani",
-                                role: "Sports Counselling & Mental Performance",
-                                image: "/images/trainer2/Trainers/Parinaaz Irani.webp",
-                                bio: "Sport and performance psychologist specializing in athlete mental health and mindset training. Her work helps athletes develop mental resilience, emotional regulation, and focus under pressure."
-                            },
-                            {
-                                name: "Diyan Kubadia",
-                                role: "Co-Founder | Athlete | Performance Vision Lead",
-                                image: "/images/trainer2/Trainers/Diyan Kubadia.webp",
-                                bio: "Professional cricketer with over a decade of experience. Diyan leads the athlete and performance vision, ensuring every protocol aligns with real athletic needs for smarter recovery."
-                            },
-                            {
-                                name: "Vaishali Vijay Rauniyar",
-                                role: "Physiotherapist | Sports & Orthopedic Rehabilitation",
-                                image: "/images/trainer2/Trainers/Dr. Vaishali Vijay Rauniyar.webp",
-                                bio: "Clinical experience in sports, orthopedic, and neurological rehabilitation. Certified in Dry Needling and Aquatic Rehabilitation, she designs personalized plans for efficient recovery."
-                            },
-                            {
-                                name: "Ganesh S. Gadhave",
-                                role: "Pain Management & Sports Massage Therapist",
-                                image: "/images/trainer2/Trainers/Dr. Ganesh S. Gadhave.webp",
-                                bio: "Focuses on injury prevention and athlete recovery. His approach emphasizes long-term physical resilience rather than short-term relief, helping individuals train with confidence."
-                            },
-                            {
-                                name: "Akshay Anil Nalawde",
-                                role: "Sports Massage Therapist",
-                                image: "/images/trainer2/Trainers/Akshay Anil Nalawde.webp",
-                                bio: "Certified in Cupping Therapy and muscle recovery. He has worked with over 1,000 athletes to reduce muscle stiffness and support faster recovery from training loads."
-                            }
-                        ].map((member, index) => (
-                            <motion.div
-                                key={index}
-                                initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: index * 0.1 }}
-                                className="group relative min-w-[85vw] md:min-w-0 snap-center"
-                            >
-                                <div className="relative aspect-[4/5] rounded-[2rem] overflow-hidden mb-6 bg-gray-100 dark:bg-gray-800 shadow-xl group-hover:shadow-2xl transition-all duration-500">
-                                    <Image
-                                        src={member.image}
-                                        alt={member.name}
-                                        fill
-                                        className="object-cover transition-transform duration-700 group-hover:scale-110"
-                                    />
-                                    {/* Glassmorphism Bio Overlay */}
-                                    <div className="absolute inset-0 bg-[#513394]/90 opacity-0 group-hover:opacity-100 transition-all duration-500 backdrop-blur-sm p-8 flex flex-col justify-center text-white">
-                                        <p className="text-white/90 text-sm leading-relaxed line-clamp-[8]">
-                                            {member.bio}
-                                        </p>
-                                    </div>
-                                </div>
-                                <div className="space-y-1">
-                                    <p className="text-gray-900 dark:text-white text-[10px] font-bold uppercase tracking-widest opacity-80">
-                                        {member.role.split('|')[0]}
-                                    </p>
-                                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white transition-colors">
-                                        {member.name}
-                                    </h3>
-                                </div>
-                            </motion.div>
-                        ))}
-                    </div>
-                </div>
-            </section>
             {/* Medical Disclaimer Footer */}
             <section className="py-12 bg-gray-50 dark:bg-white/5 border-t border-gray-100 dark:border-white/10">
                 <div className="container mx-auto px-6 lg:px-8">
@@ -402,4 +409,5 @@ export default function AboutPage() {
             <HomeBlog />
         </main>
     );
+    return content;
 }

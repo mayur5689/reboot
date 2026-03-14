@@ -6,7 +6,7 @@ import {
   FileText,
   ShieldCheck,
   BookOpen,
-  Globe,
+  Phone,
   Package,
   Zap,
   ChevronDown,
@@ -14,7 +14,7 @@ import {
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const DEFAULT_ICONS = [FileText, ShieldCheck, BookOpen, Globe, Package, Zap] as const;
+const DEFAULT_ICONS = [FileText, ShieldCheck, BookOpen, Phone, Package, Zap] as const;
 
 export type FAQSectionItem = {
   question: string;
@@ -47,7 +47,7 @@ export function FAQSection({ faqs: faqsProp }: FAQSectionProps = {}) {
     {
       question: 'Do I need to book in advance?',
       answer:
-        'While we do accept walk-ins based on availability, we strongly recommend booking via our website or WhatsApp to ensure your spot.',
+        'Yes, we accept walk-ins subject to availability. For a guaranteed spot we recommend booking via our website or WhatsApp.',
     },
     {
       question: 'Can recovery therapy help with chronic pain?',

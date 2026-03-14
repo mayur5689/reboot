@@ -258,11 +258,11 @@ export default function ContactPage() {
                                     <div className="text-gray-500 dark:text-gray-400 space-y-1 text-sm">
                                         <p>Mon &nbsp; 8:00 am – 9:00 pm</p>
                                         <p>Tue &nbsp; 8:00 am – 9:00 pm</p>
-                                        <p>Wed &nbsp; 8:00 am – 2:00 pm</p>
+                                        <p>Wed &nbsp; 8:00 am – 4:00 pm</p>
                                         <p>Thu &nbsp; 8:00 am – 9:00 pm</p>
                                         <p>Fri &nbsp; 8:00 am – 9:00 pm</p>
                                         <p>Sat &nbsp; 8:00 am – 9:00 pm</p>
-                                        <p>Sun &nbsp; Closed</p>
+                                        <p>Sun &nbsp; 2:00 pm – 9:00 pm</p>
                                     </div>
                                 </div>
                             </div>

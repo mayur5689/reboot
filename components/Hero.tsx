@@ -190,7 +190,7 @@ export default function Hero() {
               </svg>
             </button>
             <video
-              src="/video/20260102_193930.mp4"
+              src="https://res.cloudinary.com/dj7bot2uc/video/upload/v1773482348/IMG_1067_ajdirm.mov"
               className="w-full h-full object-cover"
               controls
               autoPlay

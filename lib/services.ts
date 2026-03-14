@@ -103,7 +103,7 @@ export const services: Service[] = [
             "Injury prevention"
         ],
         process: [
-            { title: "Assessment & Goal setting", description: "Comprehensive evaluation of your current physical state and objectives." },
+            { title: "Assessment & Goal setting", description: "Our physiotherapists assess your body type, deficiencies, and your profession or sport (e.g. if you're a batsman) to build a personalised plan that supports optimal growth and performance." },
             { title: "Education and Awareness", description: "Learning the fundamentals of movement and core engagement." },
             { title: "Integration phase on mat or reformer", description: "Applying principles through controlled exercises on specialized equipment." },
             { title: "Functional sport-specific training", description: "Tailoring movements to your specific athletic or daily needs." },
@@ -202,7 +202,7 @@ export const services: Service[] = [
     {
         title: "Sports Psychology",
         category: "MENTAL",
-        description: "Train your mind to achieve peak performance.",
+        description: "Sports performance is not driven by physical strength alone. Our Sports Psychology program is designed to help athletes manage pressure and perform at their best.",
         fullDescription: "Sports psychology focuses on the mental aspects of athletic performance. Our expert psychologists help you develop mental resilience, focus, and confidence to perform at your best when it matters most. Overcome performance anxiety, build winning habits, and unlock your full potential.",
         benefits: [
             "Enhanced mental focus",
