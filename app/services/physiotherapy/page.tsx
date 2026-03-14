@@ -89,10 +89,11 @@ export default function PhysiotherapyPage() {
                                 </h3>
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                                     {[
-                                        { title: "Initial Assessment", description: "30–45 minutes. Comprehensive review of your history, movement patterns, strength, flexibility, and the specific mechanisms contributing to your symptoms. No treatment is applied until the assessment is complete." },
+                                        { title: "Initial Assessment", description: "Comprehensive review of your history, movement patterns, strength, flexibility, and the specific mechanisms contributing to your symptoms. No treatment is applied until the assessment is complete." },
                                         { title: "Treatment Plan", description: "Based on the assessment, a structured plan is built with clear goals, expected timelines, and session frequency. You leave the first session knowing exactly what the problem is and what the path forward looks like." },
-                                        { title: "Treatment Sessions", description: "Each session combines hands-on treatment with progressive exercise work. Techniques are selected and adjusted based on how you are responding — sessions evolve as your condition improves." },
+                                        { title: "Treatment Sessions", description: "Each session combines hands-on treatment with progressive exercise work. Our treatment methods are selected and adjusted based on how you are responding — sessions evolve as your condition improves.", link: "#treatment-methods", linkText: "treatment methods" },
                                         { title: "Integration with Recovery", description: "For athletes and high-load patients, physiotherapy sessions can be combined with sports massage, ice bath, and red light therapy within the same visit — not available at a standalone clinic." },
+                                        { title: "Clinical Pilates for Strengthening", description: "Where appropriate, clinical Pilates is integrated to build core stability, improve control, and support long-term strength. Mat and equipment-based options are used based on your assessment and goals." },
                                         { title: "Discharge & Maintenance", description: "When clinical goals are met, you leave with a clear maintenance program and an understanding of what patterns to monitor. The goal is independence from treatment, not ongoing dependency on sessions." },
                                     ].map((step, idx) => (
                                         <div key={idx} className="bg-white dark:bg-white/5 p-8 rounded-[2.5rem] border border-gray-100 dark:border-white/5 shadow-sm hover:shadow-xl group transition-all duration-500 relative overflow-hidden">
@@ -104,7 +105,19 @@ export default function PhysiotherapyPage() {
                                                     0{idx + 1}
                                                 </div>
                                                 <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-3">{step.title}</h4>
-                                                <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">{step.description}</p>
+                                                <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
+                                                    {step.link ? (
+                                                        <>
+                                                            {step.description.split(step.linkText)[0]}
+                                                            <Link href={step.link} className="text-[#513394] dark:text-[#8B5CF6] font-semibold underline underline-offset-2 hover:no-underline">
+                                                                {step.linkText}
+                                                            </Link>
+                                                            {step.description.split(step.linkText)[1]}
+                                                        </>
+                                                    ) : (
+                                                        step.description
+                                                    )}
+                                                </p>
                                             </div>
                                         </div>
                                     ))}
@@ -154,7 +167,7 @@ export default function PhysiotherapyPage() {
             </section>
 
             {/* ─── TECHNIQUES SECTION ─── */}
-            <section className="py-24 lg:py-32 bg-[#F8F9FA] dark:bg-[#0D0D0D]">
+            <section id="treatment-methods" className="py-24 lg:py-32 bg-[#F8F9FA] dark:bg-[#0D0D0D]">
                 <div className="container mx-auto px-6 lg:px-8">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center max-w-7xl mx-auto">
 
