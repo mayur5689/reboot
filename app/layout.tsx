@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
+import Script from 'next/script'
 import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
@@ -7,6 +8,8 @@ import FloatingActionButton from '@/components/FloatingActionButton'
 import { ThemeProvider } from '@/components/ThemeProvider'
 import StudioLayoutWrapper from '@/components/StudioLayoutWrapper'
 import BusinessSchema from '@/components/schema/BusinessSchema'
+
+const gaId = process.env.NEXT_PUBLIC_GA_ID
 
 const branding = localFont({
   src: [
@@ -55,6 +58,24 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning className={branding.variable}>
+      <head>
+        {gaId ? (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
+              strategy="afterInteractive"
+            />
+            <Script id="google-analytics" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${gaId}');
+              `}
+            </Script>
+          </>
+        ) : null}
+      </head>
       <body className={`${branding.className} antialiased font-sans dark:bg-[#0A0A0A] transition-colors duration-300`}>
         <BusinessSchema />
         <ThemeProvider
