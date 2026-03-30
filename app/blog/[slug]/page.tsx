@@ -147,7 +147,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
                             <div className="w-12 h-12 rounded-full border-2 border-[#A78BFA] p-0.5">
                                 {post.authorImage ? (
                                     <div className="relative w-full h-full rounded-full overflow-hidden">
-                                        <Image src={urlFor(post.authorImage).url()} alt={post.author} fill className="object-cover" />
+                                        <Image src={urlFor(post.authorImage).url()} alt={post.author ?? 'Author'} fill className="object-cover" />
                                     </div>
                                 ) : (
                                     <div className="w-full h-full rounded-full bg-[#A78BFA] flex items-center justify-center text-[#0A0A0A] font-black uppercase">
@@ -172,7 +172,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
                     {/* Main Content */}
                     <div className="lg:col-span-8">
                         <div className="prose prose-lg dark:prose-invert max-w-none">
-                            <PortableText value={post.body} components={components} />
+                            <PortableText value={(post.body ?? []) as Parameters<typeof PortableText>[0]['value']} components={components} />
                         </div>
 
                         {/* FAQs Section */}

@@ -304,7 +304,11 @@ export default async function ServicePage({ params }: ServicePageProps) {
 }
 
 export async function generateStaticParams() {
-    return services.map((service) => ({
-        slug: service.slug,
-    }))
+    // Exclude slugs that have dedicated page files to prevent build conflicts
+    const dedicatedSlugs = ['physiotherapy', 'contrast-therapy', 'sports-massage']
+    return services
+        .filter((service) => !dedicatedSlugs.includes(service.slug))
+        .map((service) => ({
+            slug: service.slug,
+        }))
 }
