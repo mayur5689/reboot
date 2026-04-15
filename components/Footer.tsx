@@ -111,7 +111,7 @@ const Footer: React.FC = () => {
             <Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
           </div>
           <p className="flex items-center gap-2">
-            Designed & Managed by Roger
+            Designed & Managed by valmiki media
           </p>
         </div>
       </div>
