@@ -147,6 +147,12 @@ export default function AboutPage() {
                                 bio: "Clinical experience in sports, orthopedic, and neurological rehabilitation. Certified in Dry Needling and Aquatic Rehabilitation, she designs personalized plans for efficient recovery."
                             },
                             {
+                                name: "Dr. Hiral Parikh",
+                                role: "Lead Physiotherapist",
+                                image: "/images/trainer2/Trainers/HIRAL.webp",
+                                bio: "Bachelor of Physiotherapy graduate from Pad. Dr. D.Y. Patil College of Physiotherapy, Navi Mumbai, with over 15 years of clinical experience. At R3BOOT, she leads physiotherapy services with focused expertise in sports rehabilitation and post-surgical recovery, helping athletes return to performance and patients rebuild function with structured, evidence-based protocols. Her approach is precise, patient-centred, and built on the belief that recovery done right the first time saves years of recurring injury."
+                            },
+                            {
                                 name: "Ganesh S. Gadhave",
                                 role: "Pain Management & Sports Massage Therapist",
                                 image: "/images/trainer2/Trainers/Dr. Ganesh S. Gadhave.webp",
