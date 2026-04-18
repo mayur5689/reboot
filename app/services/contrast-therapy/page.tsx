@@ -241,29 +241,29 @@ export default function ContrastTherapyPage() {
                                 HEAT THERAPY //
                             </span>
                             <h2 className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white tracking-tight mb-4 leading-tight">
-                                Benefits of <span className="text-[#513394] dark:text-[#8B5CF6]">Infrared Sauna</span>
+                                Benefits of <span className="text-[#513394] dark:text-[#8B5CF6]">Red Light Sauna</span>
                             </h2>
                             <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed mb-10">
-                                Beyond the immediate sense of relaxation, saunas offer a wide range of benefits for physical and mental health. From detoxification to improved cardiovascular health, sauna is an essential component of contrast therapy when paired with cold plunges.
+                                Our red light sauna pairs gentle infrared warmth with red and near-infrared light—so you get more than generic “hot room” heat. The light reaches tissue in ways heat alone does not, while warmth still drives circulation, relaxation, and sweat. Together with cold plunges, it completes the contrast therapy loop.
                             </p>
 
                             <div className="space-y-6">
                                 {[
                                     {
-                                        title: "Detoxification Through Sweating",
-                                        body: "Sweating is your body's natural way of expelling toxins. The intense heat of a sauna ramps up this process."
+                                        title: "Red & Near-Infrared Beyond Surface Heat",
+                                        body: "Red light saunas add targeted wavelengths on top of infrared warmth. That light is chosen to reach skin and soft tissue—not just warm the air—so each session combines photonic exposure with the sauna heat you already expect from contrast therapy."
+                                    },
+                                    {
+                                        title: "Dual Stimulus for Contrast Protocols",
+                                        body: "In one visit you stack manageable heat stress with red and near-infrared light. Many people use that combination around training or cold plunges: warmth for vessels and muscle ease, plus light for tissue that rarely gets consistent daily exposure."
                                     },
                                     {
                                         title: "Muscle Relaxation and Pain Relief",
-                                        body: "Heat penetrates deep into muscles and joints, helping to relax tight muscles and soothe aches and pains, alleviating stiffness and soreness."
+                                        body: "Heat still penetrates deep into muscles and joints, helping to relax tight muscles and soothe aches and pains, alleviating stiffness and soreness."
                                     },
                                     {
                                         title: "Improved Cardiovascular Health",
                                         body: "In the sauna, heart rate increases and blood vessels dilate, mimicking some effects of moderate exercise. This mild cardiovascular workout can improve heart health over time."
-                                    },
-                                    {
-                                        title: "Boosted Immune System",
-                                        body: "Elevated heat exposure raises core temperature, mimicking a mild fever. This helps stimulate white blood cell production, strengthening your immune response and ability to fight off illness and infection."
                                     },
                                 ].map((tech, idx) => (
                                     <div key={idx} className="flex gap-5 group">
