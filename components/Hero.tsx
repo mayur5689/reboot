@@ -87,7 +87,7 @@ export default function Hero() {
           <a
             href="https://wa.me/919702368612"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="nofollow noopener noreferrer"
             className="z-30"
           >
             <button className="bg-white/15 backdrop-blur-sm border border-white/40 text-white font-semibold px-8 py-4 rounded-full hover:bg-white/25 transition-all text-sm md:text-base hover:scale-105 active:scale-95">

@@ -459,7 +459,7 @@ export default function SportsMassagePage() {
                             <a
                                 href="https://wa.me/919702368612"
                                 target="_blank"
-                                rel="noopener noreferrer"
+                                rel="nofollow noopener noreferrer"
                                 className="w-full sm:w-auto border-2 border-white/30 text-white font-bold px-10 py-5 rounded-full transition-all hover:bg-white/10 text-lg tracking-wide"
                             >
                                 WhatsApp Us
@@ -521,6 +521,18 @@ export default function SportsMassagePage() {
                             </Link>
                         ))}
                     </div>
+                </div>
+            </section>
+
+            {/* From Our Blog */}
+            <section className="py-16 bg-white dark:bg-[#0A0A0A]">
+                <div className="container mx-auto px-6 lg:px-8 max-w-4xl">
+                    <h2 className="text-2xl font-black text-gray-900 dark:text-white mb-8">From Our Blog</h2>
+                    <Link href="/blog/sports-massage-before-after-marathon" className="group p-6 bg-gray-50 dark:bg-white/5 rounded-[2rem] border border-gray-100 dark:border-white/10 hover:border-[#513394]/40 transition-all inline-block max-w-md">
+                        <p className="text-xs font-black tracking-widest text-[#513394] uppercase mb-2">Sports Massage</p>
+                        <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-[#513394] transition-colors">Sports Massage Before & After a Marathon</h3>
+                        <span className="text-sm text-gray-500 dark:text-gray-400 mt-2 inline-block">Read article →</span>
+                    </Link>
                 </div>
             </section>
 

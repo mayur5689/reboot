@@ -42,7 +42,7 @@ const FloatingActionButton = () => {
             href="https://wa.me/919702368612"
             className="w-14 h-14 bg-white text-[#513394] rounded-full flex items-center justify-center shadow-lg border border-[#513394]"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="nofollow noopener noreferrer"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >
@@ -97,7 +97,7 @@ const FloatingActionButton = () => {
                   href="https://wa.me/919702368612"
                   className="flex items-center text-[#513394] cursor-pointer"
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="nofollow noopener noreferrer"
                 >
                   <FaWhatsapp size={24} />
                   <span className="ml-3 text-lg font-medium text-gray-700">WhatsApp: Contact Us</span>

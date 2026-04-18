@@ -1,6 +1,13 @@
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { services } from '@/lib/services'
+
+export const metadata: Metadata = {
+  title: 'All Services | R3BOOT Recovery & Performance Dadar Mumbai',
+  description: 'Explore all recovery and performance services at R3BOOT Dadar: physiotherapy, contrast therapy, hydrotherapy, sports massage, sports psychology and counselling.',
+  keywords: ['recovery services dadar', 'sports clinic mumbai', 'physiotherapy mumbai', 'hydrotherapy mumbai', 'contrast therapy dadar'],
+}
 
 export default function ServicesPage() {
     return (
@@ -114,12 +121,14 @@ export default function ServicesPage() {
                             >
                                 Book a Consultation
                             </a>
-                            <Link
-                                href="https://wa.me/yournumber"
+                            <a
+                                href="https://wa.me/919702368612"
+                                target="_blank"
+                                rel="nofollow noopener noreferrer"
                                 className="w-full sm:w-auto border-2 border-white/30 text-white font-bold px-10 py-5 rounded-full transition-all hover:bg-white/10 text-lg tracking-wide"
                             >
                                 Contact Support
-                            </Link>
+                            </a>
                         </div>
                     </div>
                 </div>

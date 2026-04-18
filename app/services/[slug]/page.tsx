@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
@@ -6,6 +7,16 @@ import ServiceSchema from '@/components/schema/ServiceSchema'
 
 interface ServicePageProps {
     params: Promise<{ slug: string }>
+}
+
+export async function generateMetadata({ params }: ServicePageProps): Promise<Metadata> {
+    const { slug } = await params
+    const service = services.find(s => s.slug === slug)
+    if (!service) return {}
+    return {
+        title: `${service.title} in Mumbai | R3BOOT Dadar`,
+        description: `${service.description} Expert ${service.title.toLowerCase()} at R3BOOT Recovery & Performance Clinic, Dadar, Mumbai.`,
+    }
 }
 
 export default async function ServicePage({ params }: ServicePageProps) {

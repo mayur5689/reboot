@@ -433,7 +433,7 @@ export default function SportsMassageMumbaiPage() {
               <a
                 href="https://wa.me/919702368612"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="nofollow noopener noreferrer"
                 className="w-full sm:w-auto border-2 border-white/30 text-white font-bold px-10 py-5 rounded-full transition-all hover:bg-white/10 text-lg tracking-wide"
               >
                 WhatsApp Us

@@ -215,10 +215,10 @@ export default function Navbar() {
             </nav>
 
             <div className="mt-12 w-full max-w-xs flex flex-col gap-6 items-center animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-300 fill-mode-both">
-              <Link href="https://wa.me/919702368612" target="_blank" className="flex items-center gap-3 text-gray-600 dark:text-gray-400 hover:text-green-600 transition-colors">
+              <a href="https://wa.me/919702368612" target="_blank" rel="nofollow noopener noreferrer" className="flex items-center gap-3 text-gray-600 dark:text-gray-400 hover:text-green-600 transition-colors">
                 <WhatsAppIcon className="w-6 h-6 text-green-500" />
                 <span className="text-lg font-bold">WhatsApp Us</span>
-              </Link>
+              </a>
               <Link href="/contact" className="w-full" onClick={() => setIsMobileMenuOpen(false)}>
                 <button
                   className="w-full text-white font-bold py-5 rounded-full shadow-2xl text-lg tracking-wide transform active:scale-95 transition-all"

@@ -272,6 +272,7 @@ export default function ContactPage() {
                         <a
                             href="https://wa.me/919702368612"
                             target="_blank"
+                            rel="nofollow noopener noreferrer"
                             className="flex items-center justify-center gap-3 bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold py-4 rounded-[2rem] shadow-lg transition-all hover:scale-[1.02]"
                         >
                             <FaWhatsapp size={24} />

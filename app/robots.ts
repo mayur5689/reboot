@@ -6,7 +6,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/_next/', '/api/', '/studio/'],
+        disallow: ['/api/', '/studio/'],
       },
     ],
     sitemap: 'https://www.r3boot.in/sitemap.xml',
