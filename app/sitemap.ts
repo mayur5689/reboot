@@ -10,7 +10,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     blogPages = postSlugs.map(({ slug }) => ({
       url: `${BASE_URL}/blog/${slug}`,
       lastModified: new Date(),
-      changefreq: 'monthly' as const,
+      changeFrequency: 'monthly',
       priority: 0.6,
     }))
   } catch {
@@ -22,7 +22,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     {
       url: BASE_URL,
       lastModified: new Date(),
-      changefreq: 'weekly',
+      changeFrequency: 'weekly',
       priority: 1.0,
     },
 
@@ -30,37 +30,37 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     {
       url: `${BASE_URL}/about`,
       lastModified: new Date(),
-      changefreq: 'yearly',
+      changeFrequency: 'yearly',
       priority: 0.7,
     },
     {
       url: `${BASE_URL}/services`,
       lastModified: new Date(),
-      changefreq: 'monthly',
+      changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
       url: `${BASE_URL}/contact`,
       lastModified: new Date(),
-      changefreq: 'yearly',
+      changeFrequency: 'yearly',
       priority: 0.6,
     },
     {
       url: `${BASE_URL}/blog`,
       lastModified: new Date(),
-      changefreq: 'weekly',
+      changeFrequency: 'weekly',
       priority: 0.6,
     },
     {
       url: `${BASE_URL}/privacy`,
       lastModified: new Date(),
-      changefreq: 'yearly',
+      changeFrequency: 'yearly',
       priority: 0.1,
     },
     {
       url: `${BASE_URL}/terms`,
       lastModified: new Date(),
-      changefreq: 'yearly',
+      changeFrequency: 'yearly',
       priority: 0.1,
     },
 
@@ -68,43 +68,43 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     {
       url: `${BASE_URL}/services/physiotherapy`,
       lastModified: new Date(),
-      changefreq: 'monthly',
+      changeFrequency: 'monthly',
       priority: 0.9,
     },
     {
       url: `${BASE_URL}/services/hydrotherapy`,
       lastModified: new Date(),
-      changefreq: 'monthly',
+      changeFrequency: 'monthly',
       priority: 0.9,
     },
     {
       url: `${BASE_URL}/services/contrast-therapy`,
       lastModified: new Date(),
-      changefreq: 'monthly',
+      changeFrequency: 'monthly',
       priority: 0.9,
     },
     {
       url: `${BASE_URL}/services/sports-massage`,
       lastModified: new Date(),
-      changefreq: 'monthly',
+      changeFrequency: 'monthly',
       priority: 0.9,
     },
     {
       url: `${BASE_URL}/services/sports-psychology`,
       lastModified: new Date(),
-      changefreq: 'monthly',
+      changeFrequency: 'monthly',
       priority: 0.9,
     },
     {
       url: `${BASE_URL}/services/clinical-pilates`,
       lastModified: new Date(),
-      changefreq: 'monthly',
+      changeFrequency: 'monthly',
       priority: 0.9,
     },
     {
       url: `${BASE_URL}/services/counselling-mental-training`,
       lastModified: new Date(),
-      changefreq: 'monthly',
+      changeFrequency: 'monthly',
       priority: 0.85,
     },
 
@@ -112,7 +112,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     {
       url: `${BASE_URL}/sports-massage-mumbai`,
       lastModified: new Date(),
-      changefreq: 'monthly',
+      changeFrequency: 'monthly',
       priority: 0.9,
     },
     // Add future landing pages here as you build them:
