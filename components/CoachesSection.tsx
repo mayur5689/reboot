@@ -47,10 +47,10 @@ const coaches: Coach[] = [
 
 const CoachesSection: React.FC = () => {
   return (
-    <section className="py-24 bg-white dark:bg-[#0A0A0A] transition-colors duration-500 overflow-hidden">
-      <div className="container mx-auto px-6 lg:px-8">
+    <section className="py-10 sm:py-14 lg:py-24 bg-white dark:bg-[#0A0A0A] transition-colors duration-500 overflow-hidden">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-20">
+        <div className="text-center mb-10 sm:mb-14 lg:mb-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -66,7 +66,7 @@ const CoachesSection: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-4xl md:text-6xl font-black text-[#1A1A1A] dark:text-white tracking-tight leading-[1.1]"
+            className="text-3xl sm:text-4xl md:text-6xl font-black text-[#1A1A1A] dark:text-white tracking-tight leading-[1.1]"
           >
             Meet Our <br />
             <span className="text-[#513394] dark:text-[#A78BFA]">Expert Team</span>
@@ -74,7 +74,7 @@ const CoachesSection: React.FC = () => {
         </div>
 
         {/* Coaches Grid - Horizontal Scroll on Mobile, Grid on Desktop */}
-        <div className="flex md:grid overflow-x-auto md:overflow-visible md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 mb-16 pb-8 md:pb-0 scrollbar-hide snap-x snap-mandatory px-0">
+        <div className="flex md:grid overflow-x-auto md:overflow-visible md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-12 mb-8 sm:mb-12 lg:mb-16 pb-8 md:pb-0 scrollbar-hide snap-x snap-mandatory px-0">
           {coaches.map((coach, index) => (
             <motion.div
               key={coach.id}
@@ -85,7 +85,7 @@ const CoachesSection: React.FC = () => {
               className="group flex-none w-[280px] md:w-auto flex flex-col items-center snap-center"
             >
               {/* Image Container */}
-              <div className="relative w-full aspect-[4/5] overflow-hidden rounded-[2.5rem] mb-8 shadow-lg bg-gray-100 dark:bg-[#1A1A1A]">
+              <div className="relative w-full aspect-[4/5] overflow-hidden rounded-2xl sm:rounded-[2.5rem] mb-5 sm:mb-8 shadow-lg bg-gray-100 dark:bg-[#1A1A1A]">
                 <Image
                   src={coach.imageSrc}
                   alt={coach.name}
@@ -93,7 +93,7 @@ const CoachesSection: React.FC = () => {
                   className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out grayscale group-hover:grayscale-0"
                 />
                 {/* Glassmorphism Bio Overlay */}
-                <div className="absolute inset-0 bg-[#513394]/90 opacity-0 group-hover:opacity-100 transition-all duration-500 backdrop-blur-sm p-8 flex flex-col justify-center text-white">
+                <div className="absolute inset-0 bg-[#513394]/90 opacity-0 group-hover:opacity-100 transition-all duration-500 backdrop-blur-sm p-5 sm:p-6 md:p-8 flex flex-col justify-center text-white">
                   <p className="text-white/90 text-sm leading-relaxed line-clamp-[8]">
                     {coach.description}
                   </p>
