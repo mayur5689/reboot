@@ -63,11 +63,11 @@ export default function Hero() {
       </div>
 
       {/* Main Content Area */}
-      <div className="relative z-20 container mx-auto px-6 lg:px-8 pt-32 pb-20 lg:pt-40 lg:pb-32 flex-1 flex flex-col justify-center">
-        <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold leading-[1.1] mb-4 max-w-3xl">
+      <div className="relative z-20 container mx-auto px-4 sm:px-6 lg:px-8 pt-24 sm:pt-32 pb-16 sm:pb-20 lg:pt-40 lg:pb-32 flex-1 flex flex-col justify-center">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold leading-[1.1] mb-4 max-w-3xl">
           India&apos;s First Integrated Recovery Centre
         </h1>
-        <h2 className="text-xl md:text-2xl font-semibold text-white/90 mb-5">
+        <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-white/90 mb-5">
           Your Recovery. Redefined.
         </h2>
         <p className="text-base md:text-lg text-gray-200/90 mb-8 max-w-2xl leading-relaxed">
@@ -97,11 +97,11 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Bottom Cards Section - Hidden on Mobile */}
-      <div className="relative z-20 container mx-auto px-6 lg:px-8 pb-16 hidden md:grid grid-cols-1 md:grid-cols-3 gap-8">
+      {/* Bottom Cards Section */}
+      <div className="relative z-20 container mx-auto px-4 sm:px-6 lg:px-8 pb-10 sm:pb-16 grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
 
         {/* Card 1: Services & Features (White) */}
-        <div className="bg-white dark:bg-[#1A1A1A] text-black dark:text-white p-7 rounded-2xl flex flex-col justify-between shadow-2xl min-h-[210px] border border-transparent dark:border-white/5">
+        <div className="bg-white dark:bg-[#1A1A1A] text-black dark:text-white p-5 sm:p-7 rounded-2xl flex flex-col justify-between shadow-2xl min-h-[180px] sm:min-h-[210px] border border-transparent dark:border-white/5">
           <p className="text-[17px] font-semibold leading-snug">
             Experience <span className="text-[#513394] font-bold">world-class recovery protocols</span> tailored for your performance.
           </p>
@@ -134,7 +134,7 @@ export default function Hero() {
         </div>
 
         {/* Card 2: Testimonial (Glassmorphism) - Auto Changing */}
-        <div className="bg-white/10 dark:bg-white/5 backdrop-blur-xl border border-white/20 dark:border-white/10 p-7 rounded-2xl flex flex-col justify-center items-center text-center shadow-2xl min-h-[210px] text-white transition-all duration-500">
+        <div className="bg-white/10 dark:bg-white/5 backdrop-blur-xl border border-white/20 dark:border-white/10 p-5 sm:p-7 rounded-2xl flex flex-col justify-center items-center text-center shadow-2xl min-h-[180px] sm:min-h-[210px] text-white transition-all duration-500">
           <p key={currentTestimonial} className="text-lg font-medium italic mb-4 leading-relaxed tracking-tight animate-in fade-in slide-in-from-bottom-2 duration-500 min-h-[50px] flex items-center justify-center">
             &ldquo;{testimonials[currentTestimonial].quote}&rdquo;
           </p>
@@ -154,7 +154,7 @@ export default function Hero() {
         {/* Card 3: Video Introduction (Purple) */}
         <div
           onClick={() => setIsVideoOpen(true)}
-          className="bg-[#513394] p-7 rounded-2xl flex items-center gap-5 shadow-2xl min-h-[210px] text-white group cursor-pointer transition-transform hover:scale-[1.02]"
+          className="bg-[#513394] p-5 sm:p-7 rounded-2xl flex items-center gap-5 shadow-2xl min-h-[180px] sm:min-h-[210px] text-white group cursor-pointer transition-transform hover:scale-[1.02]"
         >
           <div className="flex-1">
             <h3 className="text-2xl font-black leading-tight mb-8">

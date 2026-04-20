@@ -69,7 +69,7 @@ function Row({ items, direction }: { items: Testimonial[]; direction: "left" | "
         {duplicatedItems.map((t, i) => (
           <figure
             key={`${t.name}-${i}`}
-            className="w-[360px] sm:w-[420px] max-w-full mr-4 sm:mr-6 flex-shrink-0 rounded-2xl border border-gray-200 dark:border-white/5 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-[#1A1A1A] dark:via-[#1A1A1A] dark:to-[#1A1A1A] shadow-sm p-4 sm:p-5 hover:shadow-md transition-shadow duration-300"
+            className="w-[300px] sm:w-[360px] md:w-[420px] max-w-full mr-3 sm:mr-4 md:mr-6 flex-shrink-0 rounded-2xl border border-gray-200 dark:border-white/5 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-[#1A1A1A] dark:via-[#1A1A1A] dark:to-[#1A1A1A] shadow-sm p-4 sm:p-5 hover:shadow-md transition-shadow duration-300"
           >
             <blockquote className="text-gray-700 dark:text-gray-300 text-[13px] sm:text-[14px] leading-relaxed line-clamp-6 italic">&quot;{t.quote}&quot;</blockquote>
             <figcaption className="mt-4 flex items-center gap-3">

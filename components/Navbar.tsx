@@ -163,7 +163,7 @@ export default function Navbar() {
             {/* CTA Button */}
             <Link href="/contact">
               <button
-                className="hidden sm:block text-white font-semibold px-6 py-2.5 text-sm rounded-full transition-all hover:opacity-90 shadow-lg shadow-[#513394]/20"
+                className="hidden sm:block text-white font-semibold px-5 py-3 text-sm rounded-full transition-all hover:opacity-90 shadow-lg shadow-[#513394]/20"
                 style={{ backgroundColor: '#513394' }}
               >
                 Join us today
@@ -196,7 +196,7 @@ export default function Navbar() {
             </Link>
             <button
               onClick={() => setIsMobileMenuOpen(false)}
-              className="text-gray-900 dark:text-white p-2 hover:rotate-90 transition-transform duration-300"
+              className="text-gray-900 dark:text-white p-3 hover:rotate-90 transition-transform duration-300"
             >
               <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -206,7 +206,7 @@ export default function Navbar() {
 
           {/* Menu Links */}
           <div className="flex-1 flex flex-col items-center justify-center gap-8 py-12 px-6">
-            <nav className="flex flex-col items-center gap-8 text-2xl font-bold text-[#1A1A1A] dark:text-white tracking-tight uppercase animate-in fade-in zoom-in-95 duration-1000 delay-150 fill-mode-both">
+            <nav className="flex flex-col items-center gap-5 sm:gap-8 text-xl sm:text-2xl font-bold text-[#1A1A1A] dark:text-white tracking-tight uppercase animate-in fade-in zoom-in-95 duration-1000 delay-150 fill-mode-both">
               <Link href="/" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-[#513394] dark:hover:text-[#A78BFA] transition-colors">Home</Link>
               <Link href="/about" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-[#513394] dark:hover:text-[#A78BFA] transition-colors">About</Link>
               <Link href="/services" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-[#513394] dark:hover:text-[#A78BFA] transition-colors">Services</Link>

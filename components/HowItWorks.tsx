@@ -33,8 +33,8 @@ const steps = [
 
 export default function HowItWorks() {
     return (
-        <section id="how-it-works" className="py-16 bg-white dark:bg-[#0A0A0A] transition-colors duration-500">
-            <div className="container mx-auto px-6 lg:px-12">
+        <section id="how-it-works" className="py-10 sm:py-12 lg:py-16 bg-white dark:bg-[#0A0A0A] transition-colors duration-500">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-12">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
 
                     {/* Left Column: Heading & Large Image */}
@@ -43,7 +43,7 @@ export default function HowItWorks() {
                             <span className="text-[#513394] dark:text-[#A78BFA] text-xs font-bold tracking-[0.2em] uppercase mb-3 block">
                                 How it works
                             </span>
-                            <h2 className="text-4xl md:text-6xl font-black text-[#1A1A1A] dark:text-white tracking-tight leading-[1] mb-6">
+                            <h2 className="text-3xl sm:text-4xl md:text-6xl font-black text-[#1A1A1A] dark:text-white tracking-tight leading-[1] mb-6">
                                 Your path to <br />
                                 <span className="text-[#513394] dark:text-[#A78BFA]">lasting results</span>
                             </h2>

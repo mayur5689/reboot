@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
 
 
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
-        <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 mb-20">
+        <div className="flex flex-col lg:flex-row gap-8 sm:gap-12 lg:gap-20 mb-12 sm:mb-16 lg:mb-20">
           {/* Left Column: Brand & Contact */}
           <div className="lg:w-1/4 space-y-8">
             <Link href="/" className="inline-block group">

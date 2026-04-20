@@ -26,16 +26,16 @@ export default function OurServices() {
     const displayedServices = isMobile ? services.slice(0, 4) : services;
 
     return (
-        <section className="py-20 bg-gradient-to-b from-gray-50 to-white dark:from-[#0A0A0A] dark:to-[#0A0A0A] transition-colors duration-500">
-            <div className="container mx-auto px-6 lg:px-8">
+        <section className="py-10 sm:py-14 lg:py-20 bg-gradient-to-b from-gray-50 to-white dark:from-[#0A0A0A] dark:to-[#0A0A0A] transition-colors duration-500">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Section Header */}
-                <div className="text-center mb-20">
+                <div className="text-center mb-10 sm:mb-14 lg:mb-20">
                     <div className="inline-flex items-center justify-center gap-3 text-[#513394] dark:text-[#A78BFA] mb-4">
                         <div className="w-1.5 h-1.5 rounded-full bg-[#513394] dark:bg-[#A78BFA]"></div>
                         <span className="text-[13px] font-bold tracking-[0.3em] uppercase">OUR SERVICES</span>
                         <div className="w-1.5 h-1.5 rounded-full bg-[#513394] dark:bg-[#A78BFA]"></div>
                     </div>
-                    <h2 className="text-3xl md:text-6xl font-bold text-[#1A1A1A] dark:text-white tracking-tight leading-[1.1]">
+                    <h2 className="text-2xl sm:text-3xl md:text-6xl font-bold text-[#1A1A1A] dark:text-white tracking-tight leading-[1.1]">
                         The Best Services We Offer <br />
                         <span className="text-[#513394] dark:text-[#A78BFA]">For Your Recovery</span>
                     </h2>

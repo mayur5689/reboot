@@ -102,10 +102,10 @@ export default function ContrastTherapyMumbaiPage() {
               <span className="text-[11px] font-black tracking-[0.3em] uppercase">RECOVERY // MUMBAI</span>
               <div className="w-1.5 h-1.5 rounded-full bg-white/50" />
             </div>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-white mb-2 tracking-tighter leading-[1.05]">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black text-white mb-2 tracking-tighter leading-[1.05]">
               Contrast Therapy in Mumbai | R3BOOT Ice Bath & Infrared Sauna
             </h1>
-            <p className="text-xl md:text-2xl text-white/80 max-w-3xl leading-relaxed font-medium mt-4">
+            <p className="text-lg sm:text-xl md:text-2xl text-white/80 max-w-3xl leading-relaxed font-medium mt-4">
               Clinically structured hot-cold recovery protocol for athletes and active adults. Supervised by physiotherapists.
             </p>
           </div>
@@ -113,16 +113,16 @@ export default function ContrastTherapyMumbaiPage() {
       </section>
 
       {/* ─── OPENING SECTION (12-col grid) ─── */}
-      <section className="py-24 lg:py-32">
-        <div className="container mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-start">
+      <section className="py-12 sm:py-16 lg:py-24 xl:py-32">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 md:gap-12 lg:gap-24 items-start">
 
             <div className="lg:col-span-7">
-              <h2 className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white mb-8 tracking-tight">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 dark:text-white mb-6 sm:mb-8 tracking-tight">
                 Your Muscles Don&apos;t Recover During Rest.{' '}
                 <span className="text-[#513394] dark:text-[#8B5CF6]">They Recover During Circulation.</span>
               </h2>
-              <div className="prose prose-xl text-gray-600 dark:text-gray-400 dark:prose-invert max-w-none leading-relaxed space-y-6">
+              <div className="prose prose-base sm:prose-lg md:prose-xl text-gray-600 dark:text-gray-400 dark:prose-invert max-w-none leading-relaxed space-y-6">
                 <p>
                   Research published in the International Journal of Sports Physiology and Performance found that contrast
                   therapy — alternating heat and cold in a structured sequence — reduces perceived muscle soreness and
@@ -137,16 +137,16 @@ export default function ContrastTherapyMumbaiPage() {
                 </p>
               </div>
 
-              <div className="mt-20">
-                <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-10 flex items-center gap-4">
+              <div className="mt-10 sm:mt-14 md:mt-20">
+                <h3 className="text-xl sm:text-2xl font-black text-gray-900 dark:text-white mb-6 sm:mb-8 md:mb-10 flex items-center gap-4">
                   <span className="w-12 h-[2px] bg-[#513394] dark:bg-[#8B5CF6]" />
                   WHAT IT HELPS WITH
                 </h3>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                   {whatItHelps.map((item, idx) => (
                     <div
                       key={idx}
-                      className="bg-white dark:bg-white/5 p-8 rounded-[2.5rem] border border-gray-100 dark:border-white/5 shadow-sm hover:shadow-xl group transition-all duration-500 relative overflow-hidden"
+                      className="bg-white dark:bg-white/5 p-5 sm:p-6 md:p-8 rounded-2xl sm:rounded-[2.5rem] border border-gray-100 dark:border-white/5 shadow-sm hover:shadow-xl group transition-all duration-500 relative overflow-hidden"
                     >
                       <div className="absolute -top-4 -right-4 text-8xl font-black text-gray-50 dark:text-white/5 group-hover:text-[#513394]/5 dark:group-hover:text-[#8B5CF6]/5 transition-colors">
                         {idx + 1}
@@ -166,7 +166,7 @@ export default function ContrastTherapyMumbaiPage() {
 
             {/* Right sticky card */}
             <div className="lg:col-span-4 lg:sticky lg:top-32">
-              <div className="bg-[#1A1A1A] p-10 rounded-[3rem] text-white shadow-2xl relative overflow-hidden group">
+              <div className="bg-[#1A1A1A] p-6 sm:p-8 md:p-10 rounded-2xl sm:rounded-[2.5rem] md:rounded-[3rem] text-white shadow-2xl relative overflow-hidden group">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-[#513394]/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
                 <h3 className="text-2xl font-black mb-8 tracking-wide flex items-center gap-3">
                   <div className="w-2 h-8 bg-[#513394]" />
