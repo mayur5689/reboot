@@ -200,12 +200,12 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
                                 <h3 className="text-2xl font-black mb-6 relative z-10 leading-tight">Ready to start your recovery?</h3>
                                 <p className="text-white/80 font-medium mb-8 relative z-10">Expertly guided sessions designed for your peak performance.</p>
                                 <a
-                                    href="https://www.practo.com/mumbai/clinic/r3-boot-spoorts-therapy-dadar-east/doctors"
+                                    href="tel:+919702368612"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="inline-block bg-white text-[#513394] px-8 py-4 rounded-full font-black uppercase tracking-widest text-xs hover:bg-gray-100 transition-all relative z-10 shadow-lg"
                                 >
-                                    Book A Session
+                                    Call to Book
                                 </a>
                             </div>
 

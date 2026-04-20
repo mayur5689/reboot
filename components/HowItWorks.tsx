@@ -52,12 +52,12 @@ export default function HowItWorks() {
                             </p>
 
                             <a
-                                href="https://www.practo.com/mumbai/clinic/r3-boot-spoorts-therapy-dadar-east/doctors"
+                                href="tel:+919702368612"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center gap-4 bg-[#513394] text-white px-8 py-3.5 rounded-xl font-bold group hover:bg-[#412975] transition-all shadow-lg shadow-[#513394]/20"
                             >
-                                Book Your Free Call
+                                Call to Book
                                 <div className="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors">
                                     <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7-7 7" />

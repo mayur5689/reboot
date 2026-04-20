@@ -494,7 +494,7 @@ export default function ReviewVideo() {
                 {/* Fixed Call to Action Button at Bottom */}
                 <div className="mt-4 pt-4 border-t border-gray-200 flex-shrink-0">
                   <a
-                    href="https://www.practo.com/mumbai/clinic/r3-boot-spoorts-therapy-dadar-east/doctors"
+                    href="tel:+919702368612"
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={() => handleCloseModal()}
