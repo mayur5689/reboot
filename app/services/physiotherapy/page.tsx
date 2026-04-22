@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     title: 'Physiotherapy in Mumbai | R3BOOT Dadar – Clinical Care',
     description: 'Clinical physiotherapy in Mumbai by certified specialists. Back pain, knee pain, sports injuries, post-surgery rehab. Dadar location, accessible from Andheri, Thane & Bandra.',
     keywords: ['physiotherapy clinic in mumbai', 'physiotherapy dadar', 'sports physiotherapy mumbai', 'physiotherapy for back pain mumbai', 'physiotherapy for knee pain mumbai', 'physiotherapy near me mumbai'],
+    alternates: { canonical: '/services/physiotherapy' },
 }
 
 const otherServices = services.filter(s => s.slug !== 'physiotherapy').slice(0, 4)

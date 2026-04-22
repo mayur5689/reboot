@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     title: 'Sports Massage in Mumbai | R3BOOT Dadar',
     description: 'Clinical sports massage in Mumbai by certified specialists. Serving athletes in Dadar, Andheri, Thane & Bandra. Book at R3BOOT Recovery Center.',
     keywords: ['sports massage mumbai', 'sports massage dadar', 'deep tissue sports massage mumbai', 'sports massage therapist mumbai', 'sports recovery massage', 'sports massage near me mumbai'],
+    alternates: { canonical: '/services/sports-massage' },
 }
 
 const otherServices = services.filter(s => s.slug !== 'sports-massage').slice(0, 4)

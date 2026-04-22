@@ -16,6 +16,7 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
     return {
         title: `${service.title} in Mumbai | R3BOOT Dadar`,
         description: `${service.description} Expert ${service.title.toLowerCase()} at R3BOOT Recovery & Performance Clinic, Dadar, Mumbai.`,
+        alternates: { canonical: `/services/${slug}` },
     }
 }
 

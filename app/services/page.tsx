@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: 'All Services | R3BOOT Recovery & Performance Dadar Mumbai',
   description: 'Explore all recovery and performance services at R3BOOT Dadar: physiotherapy, contrast therapy, hydrotherapy, sports massage, sports psychology and counselling.',
   keywords: ['recovery services dadar', 'sports clinic mumbai', 'physiotherapy mumbai', 'hydrotherapy mumbai', 'contrast therapy dadar'],
+  alternates: { canonical: '/services' },
 }
 
 export default function ServicesPage() {

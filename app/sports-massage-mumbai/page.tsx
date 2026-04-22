@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   title: 'Sports Massage in Mumbai for Muscle Recovery & Injury Relief | R3boot',
   description:
     'Sports massage in Mumbai at R3boot helps reduce muscle tension, improve recovery, and prevent sports injuries. Located in Dadar, we combine sports massage with cupping therapy and mobility work for faster recovery.',
+  alternates: { canonical: '/sports-massage-mumbai' },
   keywords: [
     'sports massage mumbai',
     'gym recovery massage mumbai',

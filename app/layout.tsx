@@ -44,6 +44,7 @@ const branding = localFont({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.r3boot.in'),
   title: 'R3BOOT - Recovery & Performance',
   description: 'India\'s First Integrated Recovery Centre',
   icons: {

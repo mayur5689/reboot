@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   title: 'Sports Massage for Runners in Mumbai | R3BOOT',
   description:
     'Sports massage for runners in Mumbai at R3BOOT. Treating calf tightness, IT band, hamstring strain and runner\'s knee. Certified therapists. Book today.',
+  alternates: { canonical: '/sports-massage-runners-mumbai' },
   keywords: [
     'sports massage for runners Mumbai',
     'sports massage for calf tightness Mumbai',

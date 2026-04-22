@@ -29,6 +29,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     return {
         title: `${post.title} | R3BOOT`,
         description: post.metaDescription || post.excerpt || "Read this article on our blog.",
+        alternates: { canonical: `/blog/${slug}` },
         openGraph: {
             title: post.title,
             description: post.metaDescription || post.excerpt,

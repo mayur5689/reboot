@@ -12,6 +12,7 @@ export const metadata: Metadata = {
   title: 'Contrast Therapy in Mumbai | Ice Bath & Sauna at R3BOOT',
   description:
     'Contrast therapy in Mumbai at R3BOOT. Clinically structured ice bath and infrared sauna protocol for athletes. Supervised by physiotherapists. Book today.',
+  alternates: { canonical: '/contrast-therapy-mumbai' },
   keywords: [
     'contrast therapy Mumbai',
     'contrast bath therapy Mumbai',
