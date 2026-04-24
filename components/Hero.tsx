@@ -39,11 +39,11 @@ export default function Hero() {
     <section className="relative w-full min-h-screen flex flex-col text-white overflow-x-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-black/40 z-10"></div>
+        <div className="absolute inset-0 bg-black/70 z-10"></div>
         {/* Desktop Image */}
         <div className="hidden md:block absolute inset-0">
           <Image
-            src="https://res.cloudinary.com/dj7bot2uc/image/upload/v1773076903/Hero_Section_1_ervwf2.avif"
+            src="/images/New_Hero_image.webp"
             alt="Hero Background Desktop"
             fill
             className="object-cover"
