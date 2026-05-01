@@ -26,8 +26,11 @@ export async function generateMetadata({ params }: { params: { slug: string } })
         return { title: "Blog | R3BOOT", description: "This blog post does not exist." };
     }
 
+    const titleTag = post.title.length > 50
+        ? `${post.title.slice(0, 47)}... | R3BOOT`
+        : `${post.title} | R3BOOT`
     return {
-        title: `${post.title} | R3BOOT`,
+        title: titleTag,
         description: post.metaDescription || post.excerpt || "Read this article on our blog.",
         alternates: { canonical: `/blog/${slug}` },
         openGraph: {

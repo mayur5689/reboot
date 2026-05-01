@@ -3,6 +3,9 @@ import Link from 'next/link'
 import { Metadata } from 'next'
 import { services } from '@/lib/services'
 import ServiceSchema from '@/components/schema/ServiceSchema'
+import FAQSchema from '@/components/schema/FAQSchema'
+import { FAQSection } from '@/components/faq-section'
+import { contrastTherapyMumbaiFaqs } from '@/lib/faqs/contrast-therapy-mumbai'
 
 export const metadata: Metadata = {
     title: 'Contrast Therapy in Mumbai | R3BOOT Dadar – Sauna & Ice Bath',
@@ -412,6 +415,8 @@ export default function ContrastTherapyPage() {
                 </div>
             </section>
 
+            <FAQSection faqs={contrastTherapyMumbaiFaqs} />
+            <FAQSchema faqs={contrastTherapyMumbaiFaqs} />
             <ServiceSchema
                 serviceName="Contrast Therapy"
                 description="Alternating Red Light Sauna and Ice Bath for optimal recovery, circulation, and stress resilience at R3BOOT Dadar, Mumbai."

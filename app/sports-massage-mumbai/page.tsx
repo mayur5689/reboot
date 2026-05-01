@@ -380,7 +380,7 @@ export default function SportsMassageMumbaiPage() {
                 MUMBAI //
               </span>
               <h2 className="text-4xl md:text-6xl font-black text-gray-900 dark:text-white tracking-tight">
-                Sports Recovery Therapy in <span className="text-[#513394] dark:text-[#8B5CF6]">Mumbai</span>
+                Sports Massage Therapy Near You in <span className="text-[#513394] dark:text-[#8B5CF6]">Mumbai</span>
               </h2>
             </div>
             <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed text-center mb-8">

@@ -14,10 +14,10 @@ export default function BusinessSchema() {
     email: 'info.r3boot@gmail.com',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'Palai Plaza, 203, Swami Gyan Jivandas Marg',
+      streetAddress: '203, Palai Plaza, Swami Gyan Jivandas Road, Opp Pritam Hotel',
       addressLocality: 'Dadar East',
       addressRegion: 'Mumbai',
-      postalCode: '400014',
+      postalCode: '400013',
       addressCountry: 'IN',
     },
     geo: {
