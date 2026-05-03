@@ -145,6 +145,9 @@ export default function Navbar() {
             <Link href="/blog" className="hover:opacity-70 transition-opacity">
               Blog
             </Link>
+            <Link href="/reviews" className="hover:opacity-70 transition-opacity">
+              Reviews
+            </Link>
           </div>
 
           {/* Right Actions */}

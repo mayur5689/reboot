@@ -132,6 +132,9 @@ export default function OurServices() {
                     <Link href="/contrast-therapy-mumbai" className="text-xs font-bold text-[#513394] dark:text-[#A78BFA] border border-[#513394]/30 dark:border-[#A78BFA]/30 px-4 py-2 rounded-full hover:bg-[#513394]/10 transition-colors">
                         Contrast Therapy Mumbai
                     </Link>
+                    <Link href="/reviews" className="text-xs font-bold text-[#513394] dark:text-[#A78BFA] border border-[#513394]/30 dark:border-[#A78BFA]/30 px-4 py-2 rounded-full hover:bg-[#513394]/10 transition-colors">
+                        R3BOOT Reviews
+                    </Link>
                 </div>
             </div>
         </section>
