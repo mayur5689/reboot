@@ -23,11 +23,11 @@ const coaches: Coach[] = [
     description: "Master’s in Psychology with decades of entrepreneurial experience. Oversees strategy and client experience."
   },
   {
-    id: "nirmal",
-    name: "Nirmal Solanki",
-    role: "Physiotherapist",
-    imageSrc: "/images/trainer2/Trainers/Dr. Nirmal Solanki.webp",
-    description: "20+ years of experience. Internationally trained in manual therapy and osteopathy-based rehabilitation."
+    id: "hiral",
+    name: "Dr. Hiral Parikh",
+    role: "Lead Physiotherapist",
+    imageSrc: "/images/trainer2/Trainers/HIRAL.webp",
+    description: "BPT from D.Y. Patil College with 15+ years of clinical experience. Leads physiotherapy at R3BOOT with expertise in sports rehabilitation and post-surgical recovery."
   },
   {
     id: "vaishali",

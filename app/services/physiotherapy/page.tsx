@@ -186,7 +186,7 @@ export default function PhysiotherapyPage() {
                                     MANUAL THERAPY //
                                 </span>
                                 <p className="text-white text-xl font-black tracking-tight leading-tight">
-                                    Dr. Nirmal Solanki — 20+ Years Clinical Experience
+                                    Dr. Hiral Parikh — Lead Physiotherapist | 15+ Years Clinical Experience
                                 </p>
                             </div>
                         </div>
@@ -207,7 +207,7 @@ export default function PhysiotherapyPage() {
                                 {[
                                     {
                                         title: "Manual Therapy",
-                                        body: "Joint mobilisation, manipulation, and soft tissue work. Nirmal's advanced osteopathic training allows application at a clinical level beyond standard physiotherapy practice — effective for back pain, neck stiffness, joint restrictions, and post-surgical recovery."
+                                        body: "Joint mobilisation, manipulation, and soft tissue work. As Lead Physiotherapist, Dr. Parikh applies advanced manual techniques within structured, evidence-based protocols — effective for back pain, neck stiffness, joint restrictions, and post-surgical recovery."
                                     },
                                     {
                                         title: "Dry Needling",

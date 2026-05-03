@@ -5,10 +5,10 @@ import { motion } from "framer-motion";
 
 const teamMembers = [
     {
-        name: "Dr. Nirmal Solanki",
-        role: "Physiotherapist & Manual Therapy Specialist",
-        image: "/images/trainer2/Trainers/Dr. Nirmal Solanki.webp",
-        bio: "Over two decades of clinical experience in sports physiotherapy and manual therapy. Internationally trained in advanced osteopathic techniques, his approach prioritises sustainable, long-term outcomes over short-term symptom suppression. His manual therapy expertise addresses complex musculoskeletal presentations that respond poorly to exercise-only approaches."
+        name: "Dr. Hiral Parikh",
+        role: "Lead Physiotherapist",
+        image: "/images/trainer2/Trainers/HIRAL.webp",
+        bio: "Bachelor of Physiotherapy graduate from Pad. Dr. D.Y. Patil College of Physiotherapy, Navi Mumbai, with over 15 years of clinical experience. At R3BOOT, she leads physiotherapy services with focused expertise in sports rehabilitation and post-surgical recovery, helping athletes return to performance and patients rebuild function with structured, evidence-based protocols. Her approach is precise, patient-centred, and built on the belief that recovery done right the first time saves years of recurring injury."
     },
     {
         name: "Dr. Vaishali Vijay Rauniyar",

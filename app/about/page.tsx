@@ -123,12 +123,6 @@ export default function AboutPage() {
                                 bio: "Alkesh Kubadia holds a Master's degree in Psychology and brings decades of entrepreneurial experience. At r3boot, he oversees strategy, operations, and client experience, ensuring systems-driven execution and ethical practices."
                             },
                             {
-                                name: "Nirmal Solanki",
-                                role: "Physiotherapist & Manual Therapy Specialist",
-                                image: "/images/trainer2/Trainers/Dr. Nirmal Solanki.webp",
-                                bio: "Physiotherapist with over 20 years of experience in sports physiotherapy and manual therapy. Internationally trained in advanced osteopathic techniques with a focus on sustainable, long-term outcomes."
-                            },
-                            {
                                 name: "Parinaaz Irani",
                                 role: "Sports Counselling & Mental Performance",
                                 image: "/images/trainer2/Trainers/Parinaaz Irani.webp",
@@ -298,8 +292,8 @@ export default function AboutPage() {
                         >
                             <div className="relative aspect-[4/5] max-w-lg rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white dark:border-white/5">
                                 <Image
-                                    src="/images/trainer2/Trainers/Dr. Nirmal Solanki.webp"
-                                    alt="Professional Care"
+                                    src="/images/trainer2/Trainers/HIRAL.webp"
+                                    alt="Dr. Hiral Parikh, Lead Physiotherapist"
                                     fill
                                     className="object-cover"
                                 />
