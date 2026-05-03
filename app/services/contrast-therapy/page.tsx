@@ -415,6 +415,22 @@ export default function ContrastTherapyPage() {
                 </div>
             </section>
 
+            {/* Related Guide — internal link to contrast therapy SEO landing page */}
+            <section className="py-12 bg-white dark:bg-[#0A0A0A]">
+                <div className="container mx-auto px-6 lg:px-8 max-w-4xl">
+                    <Link href="/contrast-therapy-mumbai" className="group flex items-center justify-between p-6 bg-gray-50 dark:bg-white/5 rounded-[2rem] border border-gray-100 dark:border-white/10 hover:border-[#513394]/40 transition-all">
+                        <div>
+                            <p className="text-xs font-black tracking-widest text-[#513394] uppercase mb-1">Local Guide</p>
+                            <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-[#513394] transition-colors">Contrast Therapy in Mumbai — Complete Guide</h3>
+                            <span className="text-sm text-gray-500 dark:text-gray-400 mt-1 inline-block">Pricing, benefits, and what to expect →</span>
+                        </div>
+                        <svg className="w-6 h-6 text-[#513394] opacity-0 group-hover:opacity-100 transition-opacity shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                            <path d="M9 18l6-6-6-6" />
+                        </svg>
+                    </Link>
+                </div>
+            </section>
+
             <FAQSection faqs={contrastTherapyMumbaiFaqs} />
             <FAQSchema faqs={contrastTherapyMumbaiFaqs} />
             <ServiceSchema

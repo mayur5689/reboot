@@ -122,6 +122,17 @@ export default function OurServices() {
                         </svg>
                     </Link>
                 </div>
+
+                {/* Popular in Mumbai — internal links for SEO landing pages */}
+                <div className="flex flex-wrap justify-center gap-3 mt-8">
+                    <span className="text-xs font-bold tracking-widest text-gray-400 dark:text-gray-600 uppercase self-center">Popular in Mumbai:</span>
+                    <Link href="/sports-massage-mumbai" className="text-xs font-bold text-[#513394] dark:text-[#A78BFA] border border-[#513394]/30 dark:border-[#A78BFA]/30 px-4 py-2 rounded-full hover:bg-[#513394]/10 transition-colors">
+                        Sports Massage Mumbai
+                    </Link>
+                    <Link href="/contrast-therapy-mumbai" className="text-xs font-bold text-[#513394] dark:text-[#A78BFA] border border-[#513394]/30 dark:border-[#A78BFA]/30 px-4 py-2 rounded-full hover:bg-[#513394]/10 transition-colors">
+                        Contrast Therapy Mumbai
+                    </Link>
+                </div>
             </div>
         </section>
     )

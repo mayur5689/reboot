@@ -525,15 +525,22 @@ export default function SportsMassagePage() {
                 </div>
             </section>
 
-            {/* From Our Blog */}
+            {/* From Our Blog + Related Guides */}
             <section className="py-16 bg-white dark:bg-[#0A0A0A]">
                 <div className="container mx-auto px-6 lg:px-8 max-w-4xl">
                     <h2 className="text-2xl font-black text-gray-900 dark:text-white mb-8">From Our Blog</h2>
-                    <Link href="/blog/sports-massage-before-after-marathon" className="group p-6 bg-gray-50 dark:bg-white/5 rounded-[2rem] border border-gray-100 dark:border-white/10 hover:border-[#513394]/40 transition-all inline-block max-w-md">
-                        <p className="text-xs font-black tracking-widest text-[#513394] uppercase mb-2">Sports Massage</p>
-                        <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-[#513394] transition-colors">Sports Massage Before & After a Marathon</h3>
-                        <span className="text-sm text-gray-500 dark:text-gray-400 mt-2 inline-block">Read article →</span>
-                    </Link>
+                    <div className="flex flex-wrap gap-6">
+                        <Link href="/blog/sports-massage-before-after-marathon" className="group p-6 bg-gray-50 dark:bg-white/5 rounded-[2rem] border border-gray-100 dark:border-white/10 hover:border-[#513394]/40 transition-all flex-1 min-w-[240px] max-w-md">
+                            <p className="text-xs font-black tracking-widest text-[#513394] uppercase mb-2">Sports Massage</p>
+                            <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-[#513394] transition-colors">Sports Massage Before & After a Marathon</h3>
+                            <span className="text-sm text-gray-500 dark:text-gray-400 mt-2 inline-block">Read article →</span>
+                        </Link>
+                        <Link href="/sports-massage-runners-mumbai" className="group p-6 bg-gray-50 dark:bg-white/5 rounded-[2rem] border border-gray-100 dark:border-white/10 hover:border-[#513394]/40 transition-all flex-1 min-w-[240px] max-w-md">
+                            <p className="text-xs font-black tracking-widest text-[#513394] uppercase mb-2">Runner's Guide</p>
+                            <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-[#513394] transition-colors">Sports Massage for Runners in Mumbai</h3>
+                            <span className="text-sm text-gray-500 dark:text-gray-400 mt-2 inline-block">See specialist page →</span>
+                        </Link>
+                    </div>
                 </div>
             </section>
 
