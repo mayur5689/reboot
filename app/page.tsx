@@ -2,9 +2,9 @@ import type { Metadata } from 'next'
 import Hero from '@/components/Hero'
 
 export const metadata: Metadata = {
-  title: 'R3BOOT | Recovery & Performance Clinic Dadar Mumbai',
-  description: "Mumbai's integrated recovery and performance clinic in Dadar. Physiotherapy, contrast therapy, hydrotherapy, sports massage, sports psychology & counselling. Book today.",
-  keywords: ['recovery clinic mumbai', 'performance clinic dadar', 'physiotherapy dadar', 'sports recovery mumbai', 'R3BOOT'],
+  title: 'Therapy Clinic in Dadar, Mumbai | R3BOOT Recovery Centre',
+  description: 'Expert therapy clinic in Dadar, Mumbai. Physiotherapy, contrast therapy, hydrotherapy & sports massage. Certified specialists, 7-day availability. Book today.',
+  keywords: ['therapy dadar', 'therapy clinic dadar', 'recovery clinic mumbai', 'physiotherapy dadar', 'sports recovery mumbai', 'R3BOOT'],
   alternates: { canonical: '/' },
 }
 
