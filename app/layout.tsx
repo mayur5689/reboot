@@ -59,7 +59,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" suppressHydrationWarning className={branding.variable}>
+    <html lang="en-IN" suppressHydrationWarning className={branding.variable}>
       <head>
         {gtmId ? (
           <Script id="google-tag-manager" strategy="afterInteractive">
