@@ -35,3 +35,13 @@ yarn-error.log*
 next-env.d.ts
 
 
+.mcp.json
+
+# internal tooling — never commit
+.agents/
+.claude/
+.kiro/
+SEO-REPO/
+CREATIVE-AUDIT-REPORT.md
+components/Untitled
+skills-lock.json

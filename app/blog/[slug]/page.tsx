@@ -8,7 +8,8 @@ import { motion } from "framer-motion";
 export const revalidate = 60;
 
 // Generate Dynamic Metadata
-export async function generateMetadata({ params }: { params: { slug: string } }) {
+export async function generateMetadata(props: { params: Promise<{ slug: string }> }) {
+    const params = await props.params;
     const { slug } = params;
 
     const query = `*[_type == "post" && slug.current == $slug][0]{
@@ -90,7 +91,8 @@ const components = {
     },
 };
 
-export default async function BlogPostPage({ params }: { params: { slug: string } }) {
+export default async function BlogPostPage(props: { params: Promise<{ slug: string }> }) {
+    const params = await props.params;
     const post = await getPostBySlug(params.slug);
 
     if (!post) {

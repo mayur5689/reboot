@@ -1,19 +1,7 @@
-import type { StructureResolver } from 'sanity/desk'
+import type {StructureResolver} from 'sanity/structure'
 
+// https://www.sanity.io/docs/structure-builder-cheat-sheet
 export const structure: StructureResolver = (S) =>
-    S.list()
-        .title('Content')
-        .items([
-            S.listItem()
-                .title('Posts')
-                .schemaType('post')
-                .child(S.documentTypeList('post').title('Posts')),
-            S.listItem()
-                .title('Authors')
-                .schemaType('author')
-                .child(S.documentTypeList('author').title('Authors')),
-            S.listItem()
-                .title('Categories')
-                .schemaType('category')
-                .child(S.documentTypeList('category').title('Categories')),
-        ])
+  S.list()
+    .title('Content')
+    .items(S.documentTypeListItems())
