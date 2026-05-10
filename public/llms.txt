@@ -1,32 +1,29 @@
-# R3BOOT
+# R3BOOT | Integrated Recovery Center
 
-> Integrated recovery and performance clinic in Dadar, Mumbai.
+> Dadar's integrated recovery and performance clinic. Clinical physiotherapy,
+> contrast therapy (infrared sauna + ice bath), sports massage, clinical Pilates,
+> cupping therapy, and hydrotherapy in Dadar East, Mumbai, Maharashtra 400014.
 
-R3BOOT is Mumbai's first integrated recovery and performance clinic, located in Dadar. We serve athletes, active adults, and people managing pain, injury, or stress through evidence-based recovery therapies and performance services.
+## Core Services
 
-## Services
+- `Contrast Therapy -> https://www.r3boot.in/contrast-therapy-mumbai`: Clinically structured infrared sauna and ice bath protocol supervised by physiotherapists. 3:1 hot-to-cold ratio. Dadar, Mumbai.
+- `Ice Bath Mumbai -> https://www.r3boot.in/ice-bath-mumbai`: Supervised cold immersion for muscle recovery. Physiotherapy-guided protocol.
+- `Physiotherapy Dadar -> https://www.r3boot.in/physiotherapy-dadar`: Clinical physiotherapy by Dr. Hiral Parikh (15+ years) and Dr. Vaishali Rauniyar. Back pain, knee pain, sports injuries, post-surgery rehab.
+- `Sports Massage Mumbai -> https://www.r3boot.in/sports-massage-mumbai`: Performance-driven sports massage for athletes by certified therapists.
+- `Cupping Therapy Mumbai -> https://www.r3boot.in/cupping-therapy-mumbai`: Certified cupping therapy for muscle recovery and pain relief.
+- `Clinical Pilates Mumbai -> https://www.r3boot.in/clinical-pilates-mumbai`: Physiotherapy-led Pilates for rehabilitation and core strengthening.
 
-- Physiotherapy — clinical assessment, manual therapy, sports rehab, post-surgery recovery
-- Contrast Therapy — alternating Red Light Sauna and Ice Bath for recovery and resilience
-- Hydrotherapy — aquatic rehabilitation in a low-impact therapeutic pool
-- Sports Massage — performance-driven massage for athletes and active individuals
-- Sports Psychology — mental performance coaching for athletes under pressure
-- Counselling & Mental Training — integrated mental health and rehabilitation support
+## Practitioners
 
-## Who We Help
-
-- Athletes recovering from sports injuries
-- Active adults managing chronic pain or post-surgical recovery
-- People seeking faster recovery between training sessions
-- Individuals managing stress, anxiety, or mental performance issues
+- Dr. Hiral Parikh — Lead Physiotherapist, BPT D.Y. Patil College, 15+ years clinical experience, sports and post-surgical rehabilitation specialist.
+- Dr. Vaishali Vijay Rauniyar — Physiotherapist, certified in Dry Needling and Aquatic Rehabilitation, sports and neurological rehab.
+- Parinaaz Irani — Sport and performance psychologist, athlete mental health and mindset training.
+- Akshay Anil Nalawde — Sports massage therapist, certified cupping therapy, 1,000+ athletes treated.
+- Diyan Kubadia — Co-founder, professional cricketer, performance recovery specialist.
 
 ## Location
 
-Dadar, Mumbai, Maharashtra, India
-Accessible from Andheri, Thane, Bandra, and central Mumbai
-
-## Contact
-
-Website: https://www.r3boot.in
+203, Palai Plaza, Swami Gyan Jivandas Marg, Dadar East, Mumbai, Maharashtra 400014
 Phone: +91 97023 68612
-Book: Call +91 97023 68612
+Maps: https://maps.google.com/?cid=3927524433644528268
+Hours: Mon-Tue-Thu-Fri-Sat 08:00-21:00 | Wed 08:00-16:00 | Sun 14:00-21:00
