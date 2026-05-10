@@ -60,7 +60,7 @@ const BlogPage = () => {
                                 transition={{ duration: 0.5, delay: index * 0.1 }}
                             >
                                 <Link
-                                    href={`/blog/${blog.slug.current}`}
+                                    href={`/blog/${blog.slug}`}
                                     className="group block bg-white dark:bg-white/5 border border-gray-100 dark:border-white/10 rounded-3xl shadow-xl hover:shadow-[#513394]/10 transition-all duration-500 overflow-hidden h-full"
                                 >
                                     {/* Blog Image */}
