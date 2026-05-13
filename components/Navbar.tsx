@@ -50,6 +50,7 @@ export default function Navbar() {
   const dismissBanner = () => {
     setShowBanner(false)
     localStorage.setItem(BANNER_KEY, '1')
+    window.dispatchEvent(new Event('banner-dismissed'))
   }
 
   return (
@@ -79,7 +80,7 @@ export default function Navbar() {
               {/* Mobile: condensed */}
               <span className="sm:hidden">
                 <span className="font-black">50% OFF</span>
-                {' '}· CONTRAST THERAPY ·{' '}
+                {' '}1ST CONTRAST SESSION ·{' '}
                 <span className="text-amber-200 font-black">ENDS MAY 31</span>
               </span>
               {/* Desktop: full */}
@@ -238,7 +239,7 @@ export default function Navbar() {
             {mounted && (
               <button
                 onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-                className={`p-3 rounded-full transition-all duration-300 ${shouldBeSolid ? 'text-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-white/10' : 'text-white hover:bg-white/10'}`}
+                className={`hidden lg:flex p-3 rounded-full transition-all duration-300 ${shouldBeSolid ? 'text-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-white/10' : 'text-white hover:bg-white/10'}`}
                 aria-label="Toggle Theme"
               >
                 {theme === 'dark' ? <Sun className="w-6 h-6" /> : <Moon className="w-6 h-6" />}

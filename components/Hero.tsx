@@ -25,8 +25,17 @@ const testimonials = [
 
 export default function Hero() {
   const [currentTestimonial, setCurrentTestimonial] = useState(0)
-
   const [isVideoOpen, setIsVideoOpen] = useState(false)
+  const [bannerVisible, setBannerVisible] = useState(true)
+
+  useEffect(() => {
+    const dismissed = localStorage.getItem('r3boot-banner-may-2026')
+    if (dismissed) setBannerVisible(false)
+
+    const handleDismiss = () => setBannerVisible(false)
+    window.addEventListener('banner-dismissed', handleDismiss)
+    return () => window.removeEventListener('banner-dismissed', handleDismiss)
+  }, [])
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -39,7 +48,7 @@ export default function Hero() {
     <section className="relative w-full min-h-screen flex flex-col text-white overflow-x-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-black/70 z-10"></div>
+        <div className="absolute inset-0 bg-black/85 z-10"></div>
         {/* Desktop Image */}
         <div className="hidden md:block absolute inset-0">
           <Image
@@ -63,19 +72,15 @@ export default function Hero() {
       </div>
 
       {/* Main Content Area */}
-      <div className="relative z-20 container mx-auto px-4 sm:px-6 lg:px-8 pt-24 sm:pt-32 pb-16 sm:pb-20 lg:pt-40 lg:pb-32 flex-1 flex flex-col justify-center">
+      <div className={`relative z-20 container mx-auto px-4 sm:px-6 lg:px-8 ${bannerVisible ? 'pt-36' : 'pt-24'} sm:pt-32 pb-16 sm:pb-20 lg:pt-40 lg:pb-32 flex-1 flex flex-col justify-center`}>
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold leading-[1.1] mb-4 max-w-3xl">
           India&apos;s First Integrated Recovery Centre
         </h1>
         <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-white/90 mb-5">
           Your Recovery. Redefined.
         </h2>
-        <p className="text-base md:text-lg text-gray-200/90 mb-8 max-w-2xl leading-relaxed">
-          Science-driven recovery and performance systems for people who take their body and mind seriously.
-        </p>
-
         {/* CTA Buttons */}
-        <div className="flex flex-wrap gap-4">
+        <div className="flex flex-wrap gap-4 mb-8">
           <a href="tel:+919702368612" className="z-30">
             <button
               className="text-white font-semibold px-8 py-4 rounded-full transition-all hover:opacity-90 text-sm md:text-base shadow-lg hover:scale-105 active:scale-95"
@@ -91,9 +96,23 @@ export default function Hero() {
             className="z-30"
           >
             <button className="bg-white/15 backdrop-blur-sm border border-white/40 text-white font-semibold px-8 py-4 rounded-full hover:bg-white/25 transition-all text-sm md:text-base hover:scale-105 active:scale-95">
-              WhatsApp Our Team
+              WhatsApp Us
             </button>
           </a>
+        </div>
+
+        {/* Scroll hint — mobile only */}
+        <div className="md:hidden mt-6 flex justify-start">
+          <svg
+            className="w-6 h-6 text-white/40 animate-bounce"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth={1.5}
+            aria-hidden="true"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
         </div>
       </div>
 
@@ -133,8 +152,8 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Card 2: Testimonial (Glassmorphism) - Auto Changing */}
-        <div className="bg-white/10 dark:bg-white/5 backdrop-blur-xl border border-white/20 dark:border-white/10 p-5 sm:p-7 rounded-2xl flex flex-col justify-center items-center text-center shadow-2xl min-h-[180px] sm:min-h-[210px] text-white transition-all duration-500">
+        {/* Card 2: Testimonial (Glassmorphism) - Auto Changing — desktop only */}
+        <div className="hidden md:flex bg-white/10 dark:bg-white/5 backdrop-blur-xl border border-white/20 dark:border-white/10 p-5 sm:p-7 rounded-2xl flex-col justify-center items-center text-center shadow-2xl min-h-[180px] sm:min-h-[210px] text-white transition-all duration-500">
           <p key={currentTestimonial} className="text-lg font-medium italic mb-4 leading-relaxed tracking-tight animate-in fade-in slide-in-from-bottom-2 duration-500 min-h-[50px] flex items-center justify-center">
             &ldquo;{testimonials[currentTestimonial].quote}&rdquo;
           </p>
