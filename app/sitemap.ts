@@ -114,8 +114,19 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: 'monthly',
       priority: 0.9,
     },
+    {
+      url: `${BASE_URL}/ice-bath-mumbai`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
+      url: `${BASE_URL}/physiotherapy-dadar-mumbai`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
     // Add future landing pages here as you build them:
-    // physiotherapy-dadar-mumbai
     // hydrotherapy-sports-injury-mumbai
     // sports-psychology-mumbai
 
