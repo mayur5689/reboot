@@ -93,12 +93,12 @@ export default function Navbar() {
               </span>
             </p>
 
-            <Link
-              href="/services/contrast-therapy"
+            <a
+              href="tel:+919702368612"
               className="shrink-0 flex items-center h-7 px-3 sm:px-5 rounded-full bg-white text-[#3D1282] font-black text-[10px] sm:text-[12px] tracking-[0.1em] uppercase whitespace-nowrap hover:bg-white/90 active:scale-95 transition-all duration-150 shadow-[0_2px_12px_rgba(0,0,0,0.25)]"
             >
               BOOK NOW
-            </Link>
+            </a>
           </div>
 
           {/* Dismiss — right-anchored, matches spacer width */}
