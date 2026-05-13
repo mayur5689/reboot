@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     title: 'Contrast Therapy in Mumbai | R3BOOT Dadar – Sauna & Ice Bath',
     description: 'Contrast therapy at R3BOOT: alternating Red Light Sauna and Ice Bath for recovery, circulation, and stress resilience. Dadar, Mumbai.',
     keywords: ['contrast therapy mumbai', 'ice bath mumbai', 'sauna mumbai', 'cold plunge mumbai', 'recovery therapy dadar', 'contrast therapy near me'],
-    alternates: { canonical: '/services/contrast-therapy' },
+    alternates: { canonical: '/contrast-therapy-mumbai' },
 }
 
 const otherServices = services.filter(s => s.slug !== 'contrast-therapy').slice(0, 4)
