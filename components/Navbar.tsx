@@ -266,55 +266,88 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {/* Full-Screen Mobile Menu Overlay */}
+      {/* Full-Screen Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="fixed inset-0 z-[200] bg-white dark:bg-[#0A0A0A] animate-in slide-in-from-top duration-700 ease-in-out lg:hidden flex flex-col overflow-y-auto">
-          {/* Header in Menu */}
-          <div className="flex items-center justify-between px-6 py-6 border-b border-gray-50 dark:border-white/5">
+        <div className="fixed inset-0 z-[200] bg-[#0A0A0A] lg:hidden flex flex-col animate-in slide-in-from-right duration-300">
+
+          {/* Header */}
+          <div className="flex items-center justify-between px-6 py-5">
             <Link href="/" onClick={() => setIsMobileMenuOpen(false)}>
               <Image
                 src="/images/REBOOT FINAL LOGO_1.png"
                 alt="R3BOOT Logo"
-                width={120}
-                height={40}
-                className={`h-10 w-auto transition-all duration-300 ${theme === 'dark' ? 'brightness-0 invert' : 'brightness-0'}`}
+                width={110}
+                height={36}
+                className="h-9 w-auto brightness-0 invert"
               />
             </Link>
             <button
               onClick={() => setIsMobileMenuOpen(false)}
-              className="text-gray-900 dark:text-white p-3 hover:rotate-90 transition-transform duration-300"
+              aria-label="Close menu"
+              className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white active:scale-90 transition-transform"
             >
-              <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
           </div>
 
-          {/* Menu Links */}
-          <div className="flex-1 flex flex-col items-center justify-center gap-8 py-12 px-6">
-            <nav className="flex flex-col items-center gap-5 sm:gap-8 text-xl sm:text-2xl font-bold text-[#1A1A1A] dark:text-white tracking-tight uppercase animate-in fade-in zoom-in-95 duration-1000 delay-150 fill-mode-both">
-              <Link href="/" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-[#513394] dark:hover:text-[#A78BFA] transition-colors">Home</Link>
-              <Link href="/about" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-[#513394] dark:hover:text-[#A78BFA] transition-colors">About</Link>
-              <Link href="/services" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-[#513394] dark:hover:text-[#A78BFA] transition-colors">Services</Link>
-              <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-[#513394] dark:hover:text-[#A78BFA] transition-colors">Contact</Link>
-              <Link href="/blog" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-[#513394] dark:hover:text-[#A78BFA] transition-colors">Blog</Link>
-            </nav>
+          <div className="mx-6 h-px bg-white/[0.07]" />
 
-            <div className="mt-12 w-full max-w-xs flex flex-col gap-6 items-center animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-300 fill-mode-both">
-              <a href="https://wa.me/919702368612" target="_blank" rel="nofollow noopener noreferrer" className="flex items-center gap-3 text-gray-600 dark:text-gray-400 hover:text-green-600 transition-colors">
-                <WhatsAppIcon className="w-6 h-6 text-green-500" />
-                <span className="text-lg font-bold">WhatsApp Us</span>
-              </a>
-              <Link href="/contact" className="w-full" onClick={() => setIsMobileMenuOpen(false)}>
-                <button
-                  className="w-full text-white font-bold py-5 rounded-full shadow-2xl text-lg tracking-wide transform active:scale-95 transition-all"
-                  style={{ backgroundColor: '#513394' }}
+          {/* Nav Links */}
+          <nav className="flex-1 flex flex-col justify-center px-6">
+            {[
+              { href: '/', label: 'Home' },
+              { href: '/about', label: 'About' },
+              { href: '/services', label: 'Services' },
+              { href: '/contact', label: 'Contact' },
+              { href: '/blog', label: 'Blog' },
+            ].map((item, i) => (
+              <Link
+                key={i}
+                href={item.href}
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="group flex items-center gap-4 py-[18px] border-b border-white/[0.06] last:border-0 animate-in fade-in slide-in-from-left-4 fill-mode-both"
+                style={{ animationDelay: `${i * 55}ms`, animationDuration: '350ms' }}
+              >
+                <span className="text-[#513394] text-[10px] font-black tracking-widest w-5 shrink-0">0{i + 1}</span>
+                <span className="text-white text-[1.75rem] font-black tracking-tight leading-none group-active:text-[#A78BFA] transition-colors duration-150">
+                  {item.label}
+                </span>
+                <svg
+                  className="w-4 h-4 text-white/15 ml-auto shrink-0"
+                  fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}
                 >
-                  Join us today
-                </button>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
               </Link>
-            </div>
+            ))}
+          </nav>
+
+          {/* Bottom CTAs */}
+          <div className="px-6 pb-10 pt-4 space-y-3 animate-in fade-in slide-in-from-bottom-4 fill-mode-both" style={{ animationDelay: '320ms', animationDuration: '350ms' }}>
+            <div className="h-px bg-white/[0.07] mb-5" />
+            <a
+              href="tel:+919702368612"
+              className="flex items-center justify-center gap-2.5 w-full py-4 rounded-2xl text-white font-bold text-[17px] active:scale-95 transition-transform"
+              style={{ backgroundColor: '#513394' }}
+            >
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              Call to Book
+            </a>
+            <a
+              href="https://wa.me/919702368612"
+              target="_blank"
+              rel="nofollow noopener noreferrer"
+              className="flex items-center justify-center gap-2.5 w-full py-4 rounded-2xl bg-white/[0.07] border border-white/10 text-white font-bold text-[15px] active:scale-95 transition-transform"
+            >
+              <WhatsAppIcon className="w-5 h-5 text-green-400" />
+              WhatsApp Us
+            </a>
           </div>
+
         </div>
       )}
     </>

@@ -84,7 +84,7 @@ export default function HowItWorks() {
                         {steps.map((step, index) => (
                             <div
                                 key={index}
-                                className="group flex flex-col gap-1 border-l-2 border-gray-100 dark:border-white/5 pl-6 hover:border-[#513394] dark:hover:border-[#A78BFA] transition-colors duration-500"
+                                className={`group flex flex-col gap-1 border-l-2 border-gray-100 dark:border-white/5 pl-6 hover:border-[#513394] dark:hover:border-[#A78BFA] transition-colors duration-500${index >= 3 ? ' hidden lg:flex' : ''}`}
                             >
                                 <span className="text-gray-400 dark:text-gray-600 text-base font-bold">
                                     {step.number}

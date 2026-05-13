@@ -177,7 +177,7 @@ export default function Hero() {
         >
           <div className="flex-1">
             <h3 className="text-2xl font-black leading-tight mb-8">
-              Watch video <br /> introduction.
+              How we treat <br /> every patient.
             </h3>
             <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center text-[#513394] shadow-xl group-hover:scale-110 transition-transform">
               <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24">
@@ -187,8 +187,8 @@ export default function Hero() {
           </div>
           <div className="w-[140px] h-[160px] rounded-xl overflow-hidden shadow-inner relative">
             <Image
-              src="https://res.cloudinary.com/dj7bot2uc/image/upload/v1773076903/Hero_Section_1_ervwf2.avif"
-              alt="Video thumbnail"
+              src="/images/New_Hero_image.webp"
+              alt="R3BOOT facility"
               fill
               className="object-cover grayscale-[0.2]"
             />
