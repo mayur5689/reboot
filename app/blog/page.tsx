@@ -65,7 +65,7 @@ const BlogPage = () => {
                                 >
                                     {/* Blog Image */}
                                     <div className="relative h-64 overflow-hidden">
-                                        {blog.mainImage ? (
+                                        {blog.mainImage?.asset ? (
                                             <Image
                                                 src={urlFor(blog.mainImage).url()}
                                                 alt={blog.title}
