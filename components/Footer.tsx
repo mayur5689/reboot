@@ -52,12 +52,12 @@ const Footer: React.FC = () => {
             {/* Column 1: Services 1 */}
             <div className="space-y-4 md:border-l border-white/20 md:pl-8">
               <ul className="space-y-3 text-[13px] md:text-base font-semibold text-white/90">
-                <li><Link href="/services/hydrotherapy" className="hover:text-[#A78BFA] transition-colors">Ice Bath Recovery</Link></li>
-                <li><Link href="/services/sports-massage" className="hover:text-[#A78BFA] transition-colors">Compression Therapy</Link></li>
+                <li><Link href="/ice-bath-mumbai" className="hover:text-[#A78BFA] transition-colors">Ice Bath Mumbai</Link></li>
+                <li><Link href="/services/hydrotherapy" className="hover:text-[#A78BFA] transition-colors">Hydrotherapy</Link></li>
                 <li><Link href="/services/contrast-therapy" className="hover:text-[#A78BFA] transition-colors">Red Light Therapy</Link></li>
                 <li><Link href="/services/sports-massage" className="hover:text-[#A78BFA] transition-colors">Percussive Therapy</Link></li>
                 <li><Link href="/services/clinical-pilates" className="hover:text-[#A78BFA] transition-colors">Clinical Pilates</Link></li>
-                <li><Link href="/services/hydrotherapy" className="hover:text-[#A78BFA] transition-colors">Hydrotherapy</Link></li>
+                <li><Link href="/physiotherapy-dadar-mumbai" className="hover:text-[#A78BFA] transition-colors">Physiotherapy Dadar</Link></li>
               </ul>
             </div>
 
@@ -65,8 +65,8 @@ const Footer: React.FC = () => {
             <div className="space-y-4 md:border-l border-white/20 md:pl-8">
               <ul className="space-y-3 text-[13px] md:text-base font-semibold text-white/90">
                 <li><Link href="/services/contrast-therapy" className="hover:text-[#A78BFA] transition-colors">Infrared Sauna</Link></li>
-                <li><Link href="/services/sports-massage" className="hover:text-[#A78BFA] transition-colors">Sport Massage</Link></li>
-                <li><Link href="/services/physiotherapy" className="hover:text-[#A78BFA] transition-colors">Physiotherapy</Link></li>
+                <li><Link href="/sports-massage-mumbai" className="hover:text-[#A78BFA] transition-colors">Sports Massage Mumbai</Link></li>
+                <li><Link href="/physiotherapy-dadar-mumbai" className="hover:text-[#A78BFA] transition-colors">Physiotherapy Dadar Mumbai</Link></li>
                 <li><Link href="/services/contrast-therapy" className="hover:text-[#A78BFA] transition-colors">Cryotherapy</Link></li>
                 <li><Link href="/services/sports-psychology" className="hover:text-[#A78BFA] transition-colors">Sports Psychology</Link></li>
                 <li><Link href="/services/counselling-mental-training" className="hover:text-[#A78BFA] transition-colors">Counselling & Mental Training</Link></li>
