@@ -126,9 +126,44 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: 'monthly',
       priority: 0.9,
     },
-    // Add future landing pages here as you build them:
-    // hydrotherapy-sports-injury-mumbai
-    // sports-psychology-mumbai
+    // Pain + sports massage landing pages
+    {
+      url: `${BASE_URL}/back-pain-sports-massage-mumbai`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    },
+    {
+      url: `${BASE_URL}/knee-pain-sports-massage-mumbai`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    },
+    {
+      url: `${BASE_URL}/neck-shoulder-pain-sports-massage-mumbai`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    },
+    // Location + sports massage landing pages
+    {
+      url: `${BASE_URL}/sports-massage-dadar`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    },
+    {
+      url: `${BASE_URL}/sports-massage-bandra`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    },
+    {
+      url: `${BASE_URL}/sports-massage-lower-parel`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    },
 
     // Blog posts (dynamic from Sanity)
     ...blogPages,
