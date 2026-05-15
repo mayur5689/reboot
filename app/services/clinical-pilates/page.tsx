@@ -20,7 +20,7 @@ export const metadata: Metadata = {
         'pilates for back pain mumbai',
         'clinical pilates rehabilitation',
     ],
-    alternates: { canonical: '/services/clinical-pilates' },
+    alternates: { canonical: '/clinical-pilates-mumbai' },
 }
 
 const otherServices = services.filter(s => s.slug !== 'clinical-pilates').slice(0, 4)

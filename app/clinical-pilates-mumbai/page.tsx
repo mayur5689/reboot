@@ -112,7 +112,7 @@ export default function ClinicalPilatesMumbaiPage() {
           <div className="max-w-4xl">
             <div className="flex items-center gap-3 text-white/70 mb-4">
               <div className="w-1.5 h-1.5 rounded-full bg-white/50" />
-              <span className="text-[11px] font-black tracking-[0.3em] uppercase">FITNESS // MUMBAI</span>
+              <span className="text-[11px] font-black tracking-[0.3em] uppercase">REHABILITATION // MUMBAI</span>
               <div className="w-1.5 h-1.5 rounded-full bg-white/50" />
             </div>
             <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black text-white mb-2 tracking-tighter leading-[1.05]">
@@ -137,13 +137,20 @@ export default function ClinicalPilatesMumbaiPage() {
               </h2>
               <div className="prose prose-base sm:prose-lg md:prose-xl text-gray-600 dark:text-gray-400 dark:prose-invert max-w-none leading-relaxed space-y-6">
                 <p>
-                  Clinical Pilates is a physiotherapy-led movement program developed from your individual assessment, not adapted from a group class. Every exercise is prescribed to address specific deficits identified during your physiotherapy evaluation — whether that is segmental spinal control, hip stability, pelvic floor function, or post-surgical movement retraining.
+                  Mumbai has dozens of Pilates studios. YKBI, Namrata Purohit's studio, Moushu's, Activ8, Healthspace.
+                  They are run by Pilates instructors, some excellent. But if you have a disc injury at L4-L5, are recovering
+                  from ACL surgery, managing scoliosis, or have chronic lower back pain that hasn't responded to stretching —
+                  a fitness class is not what you need. Clinical Pilates is physiotherapy applied through movement: every
+                  exercise prescribed from your specific diagnosis, assessed and supervised by a physiotherapist, progressed
+                  based on your clinical response.
                 </p>
                 <p>
-                  At R3BOOT in Dadar, Mumbai, clinical Pilates is delivered by qualified physiotherapists who integrate it with manual therapy, dry needling, and sports rehabilitation where clinically appropriate. The result is a program that addresses the root cause of your pain or movement limitation — not just the symptoms.
-                </p>
-                <p>
-                  Mumbai clients from Dadar, Bandra, Andheri, Thane, and Powai attend R3BOOT specifically for physiotherapist-led Pilates because of the clinical rigour that separates our approach from general fitness studios.
+                  At R3BOOT in Dadar East, Dr. Hiral Parikh (BPT, 15+ years) and Dr. Vaishali Vijay Rauniyar
+                  (certified Dry Needling, Aquatic Rehabilitation) lead clinical Pilates programs that are built
+                  from physiotherapy assessments — not adapted from class routines. Reformer and mat-based
+                  sessions. Programs for back pain, scoliosis, post-surgical rehabilitation, posture, prenatal,
+                  and sports performance. Sessions are 45–60 minutes at Palai Plaza, Swami Gyan Jivandas Marg,
+                  Dadar East, Mumbai — 5 minutes from Dadar Central Line station.
                 </p>
               </div>
 
@@ -204,11 +211,17 @@ export default function ClinicalPilatesMumbaiPage() {
                 </ul>
                 <a
                   href="tel:+919702368612"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block text-center bg-[#513394] text-white font-black px-8 py-5 rounded-2xl transition-all hover:scale-[1.02] shadow-xl text-lg group-hover:bg-[#603eb0]"
+                  className="block text-center bg-[#513394] text-white font-black px-8 py-5 rounded-2xl transition-all hover:scale-[1.02] shadow-xl text-lg group-hover:bg-[#603eb0] mb-3"
                 >
                   Call to Book
+                </a>
+                <a
+                  href="https://wa.me/919702368612"
+                  target="_blank"
+                  rel="nofollow noopener noreferrer"
+                  className="block text-center bg-[#25D366] text-white font-black px-8 py-4 rounded-2xl transition-all hover:scale-[1.02] shadow-xl text-base"
+                >
+                  WhatsApp Us
                 </a>
               </div>
             </div>
@@ -530,8 +543,8 @@ export default function ClinicalPilatesMumbaiPage() {
                   sports massage
                 </Link>
                 , and{' '}
-                <Link href="/services/sports-psychology" className="text-[#513394] dark:text-[#A78BFA] font-bold hover:underline underline-offset-4">
-                  sports psychology
+                <Link href="/physiotherapy-dadar-mumbai" className="text-[#513394] dark:text-[#A78BFA] font-bold hover:underline underline-offset-4">
+                  physiotherapy
                 </Link>{' '}
                 services. Where your recovery requires more than one modality, you do not need to go to multiple clinics.
               </p>
@@ -639,7 +652,7 @@ export default function ClinicalPilatesMumbaiPage() {
                 WhatsApp Us
               </a>
             </div>
-            <p className="text-white/40 mt-8 font-bold tracking-widest text-sm">DADAR EAST, MUMBAI — 400013</p>
+            <p className="text-white/40 mt-8 font-bold tracking-widest text-sm">DADAR EAST, MUMBAI — 400 014</p>
           </div>
         </div>
       </section>
