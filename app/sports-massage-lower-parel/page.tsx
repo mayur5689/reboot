@@ -84,18 +84,24 @@ export default function SportsMassageLowerParelPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-start">
             <div className="lg:col-span-7">
               <h2 className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white mb-8 tracking-tight">
-                Lower Parel Trains Hard. <span className="text-[#513394] dark:text-[#8B5CF6]">R3BOOT Recovers It.</span>
+                Lower Parel Trains Hard. <span className="text-[#513394] dark:text-[#8B5CF6]">The Spas Nearby Don't Recover It.</span>
               </h2>
               <div className="prose prose-xl text-gray-600 dark:text-gray-400 dark:prose-invert max-w-none leading-relaxed space-y-6">
                 <p>
-                  Lower Parel has become one of Mumbai's most active fitness corridors — high-density gym population,
-                  BKC professionals who train before or after work, and a running community along the Worli sea face.
-                  But the area lacks dedicated clinical sports recovery.
+                  Lower Parel's sports massage options sit inside the Raghuvanshi Mills and Todi Mills compounds —
+                  Oceanic Spa, Nature Wellness, Madisyn. Good for relaxation after a stressful week. Not what
+                  you need if you train at the Phoenix Mills gym, run the Worli sea face, or carry chronic IT band
+                  tightness from your heavy squat programming at a Kamala Mills CrossFit box. A spa session gives
+                  you 60 minutes of Swedish strokes. It doesn't assess why your hamstring keeps straining at the
+                  same spot on your runs, or why your lower back tightens up two days after every deadlift session.
                 </p>
                 <p>
-                  R3BOOT is in Dadar East, 10–15 minutes from Lower Parel and Worli by road. We offer clinical sports
-                  massage — assessment-based, specific to your training load and injury history, combined with
-                  integrated recovery tools that a spa or physio clinic cannot replicate.
+                  R3BOOT is 3 minutes by train from Lower Parel station to Dadar — or 10–12 minutes by road.
+                  Therapist Akshay Nalawde runs an assessment-first session: your training load, the specific
+                  restriction, the muscle group driving the problem. Treatment uses deep tissue, myofascial
+                  release, trigger point therapy, and cupping where needed. After the session, you know what
+                  was found, what changed, and what to do between visits. That is the difference between
+                  sports massage and a relaxation massage.
                 </p>
               </div>
 

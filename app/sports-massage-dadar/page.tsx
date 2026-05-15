@@ -74,19 +74,23 @@ export default function SportsMassageDadarPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-start">
             <div className="lg:col-span-7">
               <h2 className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white mb-8 tracking-tight">
-                Dadar's Only Dedicated <span className="text-[#513394] dark:text-[#8B5CF6]">Sports Recovery Clinic</span>
+                Dadar Has Spas. <span className="text-[#513394] dark:text-[#8B5CF6]">R3BOOT is Different.</span>
               </h2>
               <div className="prose prose-xl text-gray-600 dark:text-gray-400 dark:prose-invert max-w-none leading-relaxed space-y-6">
                 <p>
-                  R3BOOT is located in Dadar East, at Palai Plaza, 203, Swami Gyan Jivandas Marg — a five-minute walk
-                  from Dadar railway station on the Central Line. We serve Dadar's active community: runners doing
-                  morning loops at Shivaji Park, gym-goers from Dadar East and West, CrossFit athletes, and working
-                  professionals carrying desk tension.
+                  Dadar has no shortage of massage options — but almost all of them are relaxation spas. If you
+                  train seriously, run at Shivaji Park, squat heavy, or carry chronic desk tension from a Nariman
+                  Point or BKC office, a relaxation massage does not fix the problem. It masks it for 48 hours.
+                  R3BOOT is the only clinical sports recovery centre in Dadar East. Located at Palai Plaza,
+                  Swami Gyan Jivandas Marg — five minutes from Dadar Central Line station — every session
+                  starts with a therapist who assesses your body before touching it.
                 </p>
                 <p>
-                  Sports massage at R3BOOT is clinical — not a spa. Your therapist assesses your specific presentation
-                  before treating. Sessions are structured around outcomes: reduced tension, improved range of motion,
-                  faster recovery, and fewer overuse injuries.
+                  Therapist Akshay Nalawde is trained in sports soft tissue therapy: deep tissue release,
+                  myofascial work, trigger point deactivation, and cupping. He knows the difference between
+                  a Shivaji Park runner's IT band presentation and a gym-goer's thoracolumbar restriction —
+                  and treats each differently. The result is not just less tension. It is better movement,
+                  fewer recurring injuries, and a body that recovers between sessions instead of just getting through them.
                 </p>
               </div>
 

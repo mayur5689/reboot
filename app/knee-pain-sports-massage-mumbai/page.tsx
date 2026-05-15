@@ -101,17 +101,22 @@ export default function KneePainSportsMassageMumbaiPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-start">
             <div className="lg:col-span-7">
               <h2 className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white mb-8 tracking-tight">
-                Knee Pain is Usually a <span className="text-[#513394] dark:text-[#8B5CF6]">Muscle Problem</span>
+                Will Sports Massage Help <span className="text-[#513394] dark:text-[#8B5CF6]">Knee Pain?</span>
               </h2>
               <div className="prose prose-xl text-gray-600 dark:text-gray-400 dark:prose-invert max-w-none leading-relaxed space-y-6">
                 <p>
-                  Most knee pain in active people — runners, gym-goers, CrossFit athletes, cyclists — is driven by
-                  muscle tightness and soft tissue restriction above and below the joint. The quad, IT band, hamstring,
-                  and calf all attach around the knee, and tension in any of them changes how the knee loads during movement.
+                  Yes — for most knee pain that active people in Mumbai experience, sports massage is effective and
+                  often faster-acting than rest alone. IT band syndrome, runner's knee (PFPS), post-squat aching,
+                  and calf-driven posterior knee stiffness all respond well to targeted soft tissue work. The reason:
+                  most active-person knee pain is driven by muscle tension above and below the joint — not the joint itself.
+                  The quad, IT band, hamstring, and calf all attach around the knee, and tightness in any of them
+                  changes how the patella tracks and how load is distributed under movement.
                 </p>
                 <p>
-                  Sports massage at R3BOOT targets these structures directly. Your therapist assesses the full lower
-                  limb chain to find the actual restriction — not just where the pain is. Treatment is precise, not generic.
+                  Runners logging kilometres at Shivaji Park, cyclists on Marine Drive, and gym-goers coming off
+                  heavy squat weeks in Dadar or Lower Parel are the most common presentations at R3BOOT. Therapist
+                  Akshay Nalawde assesses the full lower limb kinetic chain — not just the knee — before treating.
+                  Treatment goes to the actual restriction. Not a generic leg massage.
                 </p>
               </div>
 
@@ -188,7 +193,10 @@ export default function KneePainSportsMassageMumbaiPage() {
                 Sports Massage for Knee Pain — <span className="text-[#513394] dark:text-[#8B5CF6]">Dadar East</span>
               </h2>
               <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed max-w-3xl mx-auto">
-                R3BOOT is 5 minutes from Dadar railway station (Central Line). Runners from Shivaji Park, cyclists, and gym-goers from across Mumbai come to our Dadar East clinic.
+                R3BOOT is at Palai Plaza, Dadar East — 5 minutes from Dadar station on the Central Line. Most Shivaji Park
+                runners with IT band or knee trouble arrive within 10 minutes. Cyclists from Worli sea face, gym-goers
+                from Parel and Lower Parel, and corporate athletes from BKC all make this their sports recovery clinic.
+                Knee pain treated here is clinical — assessment-led, technique-specific, outcome-measured. Not a spa session.
               </p>
             </div>
             <div className="bg-[#1A1A1A] rounded-[2rem] p-8 lg:p-10 text-white">

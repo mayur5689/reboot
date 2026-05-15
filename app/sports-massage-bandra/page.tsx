@@ -65,23 +65,22 @@ export default function SportsMassageBandraPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-start">
             <div className="lg:col-span-7">
               <h2 className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white mb-8 tracking-tight">
-                Why Bandra Athletes Come to <span className="text-[#513394] dark:text-[#8B5CF6]">Dadar</span> for Sports Massage
+                Bandra Has Spas. <span className="text-[#513394] dark:text-[#8B5CF6]">R3BOOT is a Sports Clinic.</span>
               </h2>
               <div className="prose prose-xl text-gray-600 dark:text-gray-400 dark:prose-invert max-w-none leading-relaxed space-y-6">
                 <p>
-                  Bandra has a large fitness community — runners from the Bandra Fort trail and Carter Road, gym
-                  members from Khar and Santa Cruz, and BKC professionals who train early and work late. But Bandra
-                  has limited options for clinical sports massage that goes beyond relaxation.
+                  If you search for sports massage in Bandra, you'll find Supen Spa on Linking Road and Kingston
+                  Spa near Gazebo. Both are good. Neither is clinical sports massage. They don't assess your
+                  training load. They don't identify your IT band restriction or address the pec minor tightness
+                  from your bench press. They give you 60 minutes of relaxation that feels good and then you
+                  wake up the next day with the same problem.
                 </p>
                 <p>
-                  R3BOOT in Dadar East is 15–20 minutes from Bandra by road and accessible by train on both the
-                  Western Line (Dadar) and the Central Line. Our sports massage is clinical and specific — therapists
-                  trained in soft tissue work for active bodies, not generic spa techniques.
-                </p>
-                <p>
-                  Most Bandra clients come for recurring running injuries (IT band, calf tightness), desk-driven
-                  neck and shoulder tension, gym recovery after heavy training weeks, and pre-event preparation
-                  before races and competitions.
+                  R3BOOT is 15 minutes from Bandra by road — or 8 minutes by train from Bandra station to Dadar.
+                  Therapist Akshay Nalawde assesses your body before treating: your training history, your active
+                  restrictions, what's causing the problem and what needs to change. Bandra runners from Carter
+                  Road and the Bandra Fort trail, gym members from Khar and Santacruz, and BKC office workers
+                  commute to Dadar East specifically because no equivalent clinical sports massage exists in Bandra.
                 </p>
               </div>
 

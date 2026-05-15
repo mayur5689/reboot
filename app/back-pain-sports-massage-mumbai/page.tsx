@@ -99,15 +99,19 @@ export default function BackPainSportsMassageMumbaiPage() {
               </h2>
               <div className="prose prose-xl text-gray-600 dark:text-gray-400 dark:prose-invert max-w-none leading-relaxed space-y-6">
                 <p>
-                  Lower back pain is the most common musculoskeletal complaint in Mumbai — affecting desk workers,
-                  gym-goers, runners, and people who sit for eight hours and then train hard. In most cases,
-                  the pain site is not the primary source. Tight hip flexors, restricted thoracolumbar fascia,
-                  glute inhibition, and lateral chain tightness create load patterns that strain the lumbar spine.
+                  Lower back pain is Mumbai's most common musculoskeletal complaint — and it almost never starts
+                  in the back. A professional commuting to Nariman Point sits for nine hours, then deadlifts
+                  heavy at his Dadar gym. A runner logging 50km a week at Shivaji Park develops hip flexors so
+                  short they pull the lumbar spine into constant compression. A CrossFit athlete in Parel trains
+                  hard six days a week but never addresses the thoracolumbar fascia holding everything rigid.
+                  In each case, the location of pain and the source of pain are different things.
                 </p>
                 <p>
-                  Sports massage targets the muscle groups actually driving the pain. At R3BOOT in Dadar, your
-                  therapist assesses the full kinetic chain — hips, glutes, lateral line, thoracic spine — and
-                  treats what is causing the problem, not just where it hurts.
+                  Sports massage at R3BOOT addresses the structures actually driving the problem. Therapist Akshay
+                  Nalawde — certified in sports soft tissue therapy — assesses the full lower kinetic chain before
+                  touching the lumbar spine: hip flexor length, glute activation, lateral hip chain, thoracic
+                  rotation. Treatment goes to the root. You leave with both relief and a clear understanding of
+                  what caused it.
                 </p>
               </div>
 
@@ -227,10 +231,13 @@ export default function BackPainSportsMassageMumbaiPage() {
                 DADAR, MUMBAI //
               </span>
               <h2 className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white tracking-tight mb-6">
-                Sports Massage for Back Pain — <span className="text-[#513394] dark:text-[#8B5CF6]">Central Mumbai</span>
+                Not a Spa. A <span className="text-[#513394] dark:text-[#8B5CF6]">Clinical Sports Clinic</span> in Dadar East.
               </h2>
               <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed max-w-3xl mx-auto">
-                R3BOOT is in Dadar East, 5 minutes from Dadar railway station. Reachable from Parel, Matunga, Sion, Worli, Lower Parel, and Bandra in under 20 minutes.
+                R3BOOT is at Palai Plaza, Swami Gyan Jivandas Marg, Dadar East — 5 minutes from Dadar Central Line station.
+                Unlike relaxation spas in Mumbai, every session begins with assessment: what muscle group is tight, what movement
+                pattern is loading the spine wrong, what needs to change. Clients come from Parel, Matunga, Lower Parel, Worli,
+                Sion, and Bandra for clinical sports massage done right.
               </p>
             </div>
             <div className="bg-[#1A1A1A] rounded-[2rem] p-8 lg:p-10 text-white">

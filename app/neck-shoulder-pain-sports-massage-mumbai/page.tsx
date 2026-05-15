@@ -98,20 +98,22 @@ export default function NeckShoulderPainSportsMassageMumbaiPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-start">
             <div className="lg:col-span-7">
               <h2 className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white mb-8 tracking-tight">
-                Mumbai's Most Common <span className="text-[#513394] dark:text-[#8B5CF6]">Muscle Pattern</span>
+                Will Sports Massage Help <span className="text-[#513394] dark:text-[#8B5CF6]">Neck Pain?</span>
               </h2>
               <div className="prose prose-xl text-gray-600 dark:text-gray-400 dark:prose-invert max-w-none leading-relaxed space-y-6">
                 <p>
-                  Neck and shoulder tension is endemic in Mumbai — particularly among professionals who sit for
-                  extended periods in BKC, Lower Parel, and Dadar offices, and then train hard in the evening.
-                  The combination of sustained forward head posture during the day and overhead loading at the gym
-                  creates a predictable pattern of upper trapezius hypertonicity, cervical restriction, and anterior
-                  shoulder tightness.
+                  Yes — and it is often faster than stretching or rest for the type of neck pain most active
+                  Mumbai professionals carry. The pattern is consistent: nine hours at a desk in BKC or Lower Parel,
+                  followed by an overhead pressing session at the gym, followed by another morning with a stiff
+                  neck. The upper trapezius, levator scapulae, and scalenes accumulate tension faster than passive
+                  recovery can clear it. Sports massage directly deactivates these muscles. One well-targeted session
+                  restores more cervical rotation than weeks of stretching.
                 </p>
                 <p>
-                  Sports massage at R3BOOT addresses the specific muscles involved — not a generic neck-and-shoulder
-                  massage that provides temporary relief without finding the source. Your therapist assesses
-                  cervical range of motion, scapular position, and shoulder mechanics before treating.
+                  At R3BOOT in Dadar East, therapist Akshay Nalawde identifies the exact muscles holding the
+                  pattern — trapezius, suboccipitals, scalenes, pec minor — and treats them in sequence.
+                  Sessions begin with assessment of cervical range of motion and scapular position.
+                  Treatment is anatomy-specific, not a generic neck-and-shoulder rub.
                 </p>
               </div>
 
