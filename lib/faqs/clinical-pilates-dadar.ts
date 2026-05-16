@@ -20,8 +20,8 @@ export const clinicalPilatesDadarFaqs = [
       'Yes — and this is one of R3BOOT\'s core advantages. Clinical Pilates, physiotherapy, sports massage, and other recovery services are all available in one location. Many clients combine services in a single visit, which reduces appointment load without reducing clinical depth.',
   },
   {
-    question: 'How much does clinical Pilates cost in Dadar at R3BOOT?',
+    question: 'How do I find out the session fee for clinical Pilates in Dadar at R3BOOT?',
     answer:
-      '₹2,000 per session. 5-session pack: ₹9,000 (₹1,800/session). 10-session pack: ₹17,000 (₹1,700/session). 6-month/1-year packages at 20% off on request. All sessions are physiotherapist-led.',
+      'Call +91 97023 68612 or WhatsApp R3BOOT for current session fees and package options. Sessions are available Monday–Saturday, 7:00 AM–8:00 PM, and by appointment on Sundays. All sessions are physiotherapist-led.',
   },
 ]

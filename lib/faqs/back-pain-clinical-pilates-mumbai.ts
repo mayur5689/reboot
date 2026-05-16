@@ -20,8 +20,8 @@ export const backPainClinicalPilatesFaqs = [
       'A regular Pilates class uses a standardised routine for the whole class, which may include movements that aggravate your specific back condition. Clinical Pilates starts with a physiotherapy assessment, excludes exercises that load your pain pattern, and progressively reintroduces movement as your spine stabilises. The difference is not subtle — it is the difference between a class and a treatment.',
   },
   {
-    question: 'Where is R3BOOT located and what is the cost?',
+    question: 'Where is R3BOOT located and how do I book?',
     answer:
-      'R3BOOT is at Palai Plaza, 203, Swami Gyan Jivandas Marg, Dadar East, Mumbai — 400 014. Five minutes from Dadar station (Central Line). Clinical Pilates is ₹2,000 per session. Package rates available. Call +91 97023 68612 or WhatsApp to book.',
+      'R3BOOT is at Palai Plaza, 203, Swami Gyan Jivandas Marg, Dadar East, Mumbai — 400 014. Five minutes from Dadar station (Central Line). Call +91 97023 68612 or WhatsApp to book. Bring any spine imaging (MRI, X-ray) to your first session.',
   },
 ]

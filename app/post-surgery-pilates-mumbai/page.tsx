@@ -143,15 +143,44 @@ export default function PostSurgeryPilatesMumbaiPage() {
                     </li>
                   ))}
                 </ul>
-                <div className="border-t border-white/10 pt-6 mb-6">
-                  <p className="text-xs font-black tracking-[0.25em] text-white/40 uppercase mb-2">PRICING</p>
-                  <p className="text-white font-bold text-sm">₹2,000 / session</p>
-                  <p className="text-white/50 text-xs mt-1">10-session pack: ₹17,000 (15% off)</p>
-                </div>
                 <a href="tel:+919702368612" className="block text-center bg-[#513394] text-white font-black px-8 py-5 rounded-2xl transition-all hover:scale-[1.02] shadow-xl text-lg mb-3">Call to Book</a>
                 <a href="https://wa.me/919702368612" target="_blank" rel="nofollow noopener noreferrer" className="block text-center bg-[#25D366] text-white font-black px-8 py-4 rounded-2xl transition-all hover:scale-[1.02] shadow-xl text-base">WhatsApp Us</a>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── WHY THE REFORMER CHANGES POST-SURGICAL REHAB ─── */}
+      <section className="py-20 bg-white dark:bg-[#0A0A0A]">
+        <div className="container mx-auto px-6 lg:px-8 max-w-5xl">
+          <div className="prose prose-lg text-gray-600 dark:text-gray-400 dark:prose-invert max-w-none leading-relaxed space-y-5">
+            <h2 className="text-3xl md:text-4xl font-black text-gray-900 dark:text-white tracking-tight not-prose mb-6">
+              Why the Reformer Changes <span className="text-[#513394] dark:text-[#8B5CF6]">Post-Surgical Rehabilitation</span>
+            </h2>
+            <p>
+              The Pilates reformer is uniquely suited to post-surgical rehabilitation because spring resistance
+              allows load to be calibrated below bodyweight. After ACL reconstruction, a standard leg press at
+              the gym starts at bodyweight — which may exceed the graft's load tolerance in weeks 6–12 of the
+              ligamentisation phase. The reformer can load the leg at 20–30% of bodyweight and progress in
+              precise increments as graft healing advances. This level of control is not available in conventional
+              physiotherapy exercises.
+            </p>
+            <p>
+              After spinal surgery, the same principle applies. Early post-discectomy rehabilitation requires
+              core activation without spinal loading — a specific and challenging combination. The reformer
+              allows supine leg work, hip bridging with spring support, and prone hip extension while the spine
+              remains unloaded. These are not exercises physiotherapy clinics without a reformer can replicate.
+            </p>
+            <p>
+              At R3BOOT in Dadar East, Mumbai, Dr. Hiral Parikh and Dr. Vaishali Vijay Rauniyar coordinate
+              post-surgical Pilates programs with your surgical team's discharge protocol. Clients from Hinduja
+              Hospital, Breach Candy Hospital, Nanavati, and Kokilaben who are discharged into physiotherapy
+              rehabilitation continue at R3BOOT when they require reformer-based Pilates as part of their
+              recovery. The clinic is at Palai Plaza, Swami Gyan Jivandas Marg, Dadar East — five minutes from
+              Dadar station — making it accessible from most South and Central Mumbai hospital locations.
+              Sessions are one-to-one, 45–60 minutes, with full documentation for your surgical team if required.
+            </p>
           </div>
         </div>
       </section>

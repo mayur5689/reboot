@@ -340,99 +340,6 @@ export default function ClinicalPilatesMumbaiPage() {
         </div>
       </section>
 
-      {/* ─── PRICING (alt bg) ─── */}
-      <section className="py-24 lg:py-32 bg-[#F8F9FA] dark:bg-[#0D0D0D]">
-        <div className="container mx-auto px-6 lg:px-8">
-          <div className="max-w-5xl mx-auto">
-            <div className="mb-14 text-center">
-              <span className="text-[11px] font-black tracking-[0.3em] text-[#513394] dark:text-[#A78BFA] uppercase mb-4 block">
-                PRICING //
-              </span>
-              <h2 className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white tracking-tight mb-4 leading-tight">
-                Clinical Pilates Fees{' '}
-                <span className="text-[#513394] dark:text-[#8B5CF6]">in Mumbai</span>
-              </h2>
-              <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed max-w-2xl mx-auto">
-                Transparent pricing. No hidden costs. All sessions conducted by a qualified physiotherapist.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {[
-                {
-                  label: 'Single Session',
-                  price: '₹2,000',
-                  per: 'per session',
-                  savings: null,
-                  highlight: false,
-                  note: 'Includes assessment on first visit',
-                },
-                {
-                  label: '5 Session Pack',
-                  price: '₹9,000',
-                  per: '₹1,800 per session',
-                  savings: 'Save ₹1,000',
-                  highlight: false,
-                  note: '10% off — ideal for acute conditions',
-                },
-                {
-                  label: '10 Session Pack',
-                  price: '₹17,000',
-                  per: '₹1,700 per session',
-                  savings: 'Save ₹3,000',
-                  highlight: true,
-                  note: '15% off — most popular for rehab',
-                },
-                {
-                  label: '6-Month / 1-Year',
-                  price: '20% off',
-                  per: 'Custom quote',
-                  savings: 'Maximum savings',
-                  highlight: false,
-                  note: 'Best for chronic conditions & ongoing performance',
-                },
-              ].map((plan, idx) => (
-                <div
-                  key={idx}
-                  className={`relative p-8 rounded-[2.5rem] border transition-all duration-300 ${
-                    plan.highlight
-                      ? 'bg-[#513394] border-[#513394] shadow-2xl shadow-[#513394]/30 scale-[1.02]'
-                      : 'bg-white dark:bg-white/5 border-gray-100 dark:border-white/10 shadow-sm hover:shadow-xl'
-                  }`}
-                >
-                  {plan.highlight && (
-                    <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-white text-[#513394] text-[10px] font-black tracking-widest uppercase px-4 py-1.5 rounded-full shadow-lg">
-                      Most Popular
-                    </div>
-                  )}
-                  {plan.savings && (
-                    <div className={`text-[11px] font-black tracking-wider uppercase mb-3 ${plan.highlight ? 'text-white/70' : 'text-[#513394] dark:text-[#A78BFA]'}`}>
-                      {plan.savings}
-                    </div>
-                  )}
-                  <div className={`text-3xl font-black mb-1 ${plan.highlight ? 'text-white' : 'text-gray-900 dark:text-white'}`}>
-                    {plan.price}
-                  </div>
-                  <div className={`text-xs font-bold mb-4 ${plan.highlight ? 'text-white/60' : 'text-gray-400 dark:text-gray-500'}`}>
-                    {plan.per}
-                  </div>
-                  <div className={`text-xl font-black mb-4 ${plan.highlight ? 'text-white' : 'text-gray-900 dark:text-white'}`}>
-                    {plan.label}
-                  </div>
-                  <p className={`text-sm leading-relaxed ${plan.highlight ? 'text-white/70' : 'text-gray-500 dark:text-gray-400'}`}>
-                    {plan.note}
-                  </p>
-                </div>
-              ))}
-            </div>
-
-            <p className="text-gray-400 dark:text-gray-500 text-sm mt-10 text-center">
-              All pricing includes physiotherapist-led sessions. Contact us for corporate packages or insurance billing queries.
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* ─── REFORMER + MAT (two-col, image left) ─── */}
       <section className="py-24 lg:py-32">
         <div className="container mx-auto px-6 lg:px-8">
@@ -492,6 +399,44 @@ export default function ClinicalPilatesMumbaiPage() {
                   </div>
                 ))}
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── HOW CLINICAL PILATES WORKS ─── */}
+      <section className="py-24 lg:py-32 bg-[#F8F9FA] dark:bg-[#0D0D0D]">
+        <div className="container mx-auto px-6 lg:px-8">
+          <div className="max-w-5xl mx-auto">
+            <div className="mb-14">
+              <span className="text-[11px] font-black tracking-[0.3em] text-[#513394] dark:text-[#A78BFA] uppercase mb-4 block">THE CLINICAL PROCESS //</span>
+              <h2 className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white tracking-tight mb-6 leading-tight">
+                How Clinical Pilates at R3BOOT <span className="text-[#513394] dark:text-[#8B5CF6]">Actually Works</span>
+              </h2>
+            </div>
+            <div className="prose prose-lg text-gray-600 dark:text-gray-400 dark:prose-invert max-w-none leading-relaxed space-y-6">
+              <p>
+                Clinical Pilates at R3BOOT in Dadar East, Mumbai is not a class you join. It is a physiotherapy service
+                structured around your individual diagnosis. The physiotherapy assessment at your first session identifies
+                which muscle groups are inhibited or overloaded, what movement patterns are driving your pain, and which
+                exercises will address the root cause rather than the symptom. This assessment takes 30–45 minutes and
+                forms the clinical basis for every session that follows.
+              </p>
+              <p>
+                The exercises prescribed vary significantly by condition. Lumbar multifidus activation for L4-L5 disc
+                instability requires different sequencing than the asymmetric loading correction used in scoliosis programs.
+                Post-ACL rehabilitation Pilates uses the reformer's spring resistance to allow graduated knee loading that
+                bodyweight-only exercises cannot calibrate. Prenatal Pilates prioritises pelvic floor coordination and
+                safe loading parameters specific to each trimester. No two programs at R3BOOT are the same.
+              </p>
+              <p>
+                Sessions progress based on your clinical response — not a calendar. When your lumbar multifidus
+                demonstrates adequate activation under load, the program advances. When a movement provokes symptoms,
+                the therapist modifies within the session. This is the core difference between clinical Pilates and
+                a fitness class: the physiotherapist responds to what your body does on the day, not what the class
+                plan says. Dr. Hiral Parikh and Dr. Vaishali Vijay Rauniyar have managed this spectrum of presentations
+                in Mumbai for over 15 years combined. Sessions are 45–60 minutes, one-to-one, at Palai Plaza, Dadar East.
+              </p>
             </div>
           </div>
         </div>

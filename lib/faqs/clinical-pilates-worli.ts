@@ -20,8 +20,8 @@ export const clinicalPilatesWorliFaqs = [
       'Yes — and this is common. Many clients use clinical Pilates as part of their ongoing physiotherapy program. Some sessions combine hands-on physiotherapy treatment with Pilates exercise in the same 60-minute slot. R3BOOT is one of very few centres in central Mumbai offering this integrated model.',
   },
   {
-    question: 'What does clinical Pilates cost and how do I book?',
+    question: 'How do I book and what should I bring?',
     answer:
-      '₹2,000 per session, with 5- and 10-session packages at 10–15% off. Address: Palai Plaza, 203, Swami Gyan Jivandas Marg, Dadar East, Mumbai – 400 014. Call +91 97023 68612 or WhatsApp. First session includes a full physiotherapy assessment.',
+      'Call +91 97023 68612 or WhatsApp R3BOOT to book. Address: Palai Plaza, 203, Swami Gyan Jivandas Marg, Dadar East, Mumbai – 400 014. First session includes a full physiotherapy assessment — bring imaging reports, surgical discharge summaries, or physiotherapy notes if you have them.',
   },
 ]

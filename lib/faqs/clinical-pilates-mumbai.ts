@@ -7,7 +7,7 @@ export const clinicalPilatesMumbaiFaqs = [
   {
     question: 'What is the cost of clinical Pilates in Mumbai?',
     answer:
-      'At R3BOOT, clinical Pilates is ₹2,000 per session. Session packages reduce the per-session cost: 5 sessions cost ₹9,000 (10% off), 10 sessions cost ₹17,000 (15% off). A 6-month or 1-year package is available at 20% off — contact us for a custom quote. All sessions are conducted by a qualified physiotherapist.',
+      'Call +91 97023 68612 or WhatsApp R3BOOT for current session fees and package options. All sessions are conducted by a qualified physiotherapist at Palai Plaza, Dadar East, Mumbai.',
   },
   {
     question: 'Is clinical Pilates worth it for lower back pain?',

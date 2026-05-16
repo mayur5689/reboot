@@ -149,15 +149,44 @@ export default function ScoliosisPilatesMumbaiPage() {
                     </li>
                   ))}
                 </ul>
-                <div className="border-t border-white/10 pt-6 mb-6">
-                  <p className="text-xs font-black tracking-[0.25em] text-white/40 uppercase mb-2">PRICING</p>
-                  <p className="text-white font-bold text-sm">₹2,000 / session</p>
-                  <p className="text-white/50 text-xs mt-1">10-session pack: ₹17,000</p>
-                </div>
                 <a href="tel:+919702368612" className="block text-center bg-[#513394] text-white font-black px-8 py-5 rounded-2xl transition-all hover:scale-[1.02] shadow-xl text-lg mb-3">Call to Book</a>
                 <a href="https://wa.me/919702368612" target="_blank" rel="nofollow noopener noreferrer" className="block text-center bg-[#25D366] text-white font-black px-8 py-4 rounded-2xl transition-all hover:scale-[1.02] shadow-xl text-base">WhatsApp Us</a>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── ROTATIONAL BREATHING EXPLAINED ─── */}
+      <section className="py-20 bg-[#F8F9FA] dark:bg-[#0D0D0D]">
+        <div className="container mx-auto px-6 lg:px-8 max-w-5xl">
+          <div className="prose prose-lg text-gray-600 dark:text-gray-400 dark:prose-invert max-w-none leading-relaxed space-y-5">
+            <h2 className="text-3xl md:text-4xl font-black text-gray-900 dark:text-white tracking-tight not-prose mb-6">
+              What Scoliosis-Specific Pilates <span className="text-[#513394] dark:text-[#8B5CF6]">Looks Like in Practice</span>
+            </h2>
+            <p>
+              Scoliosis creates a predictable pattern of muscle asymmetry: on the convex side of the curve, muscles
+              are chronically stretched and underactive. On the concave side, they are shortened and overloaded.
+              A general Pilates class, which is built around symmetrical movement, does nothing to correct this
+              asymmetry — and some exercises actively reinforce it by loading the already-dominant side.
+            </p>
+            <p>
+              The most important scoliosis-specific technique is rotational breathing — expanding the compressed
+              side of the thoracic cage on inhalation while allowing the overexpanded side to soften. For a
+              right thoracic curve, this means consciously directing breath into the left side of the ribcage.
+              This technique, drawn from the Schroth Method and SEAS framework, directly addresses the thoracic
+              rib rotation that creates the visible hump in structural scoliosis. It is not taught in standard
+              Pilates instructor training.
+            </p>
+            <p>
+              At R3BOOT in Dadar East, Dr. Hiral Parikh (BPT, 15+ years) assesses each client's specific curve
+              pattern before designing the exercise program. For a right thoracic curve — the most common pattern
+              in adolescent idiopathic scoliosis — the program activates the left thoracic extensors, lengthens
+              the right lateral trunk, and uses mirror feedback to train postural self-correction. For a lumbar
+              curve or double curve, the approach differs. Clients bring their most recent X-ray with Cobb angle
+              measurement to the first session. The program is updated as the clinical picture evolves, and
+              physiotherapy manual therapy is combined where muscle pain accompanies the postural pattern.
+            </p>
           </div>
         </div>
       </section>

@@ -130,15 +130,43 @@ export default function ClinicalPilatesBandraPage() {
                   <p className="text-xs font-black tracking-[0.25em] text-white/40 uppercase mb-2">ADDRESS</p>
                   <p className="text-white/80 font-medium text-sm leading-relaxed">Palai Plaza, 203<br />Swami Gyan Jivandas Marg<br />Dadar East – 400 014</p>
                 </div>
-                <div className="border-t border-white/10 pt-6 mb-8">
-                  <p className="text-xs font-black tracking-[0.25em] text-white/40 uppercase mb-2">PRICING</p>
-                  <p className="text-white font-bold text-sm">₹2,000 / session</p>
-                  <p className="text-white/50 text-xs mt-1">5 sessions: ₹9,000 | 10 sessions: ₹17,000</p>
-                </div>
                 <a href="tel:+919702368612" className="block text-center bg-[#513394] text-white font-black px-8 py-5 rounded-2xl transition-all hover:scale-[1.02] shadow-xl text-lg mb-3">Call to Book</a>
                 <a href="https://wa.me/919702368612" target="_blank" rel="nofollow noopener noreferrer" className="block text-center bg-[#25D366] text-white font-black px-8 py-4 rounded-2xl transition-all hover:scale-[1.02] shadow-xl text-base">WhatsApp Us</a>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── WHO BANDRA CLIENTS ARE ─── */}
+      <section className="py-20 bg-[#F8F9FA] dark:bg-[#0D0D0D]">
+        <div className="container mx-auto px-6 lg:px-8 max-w-5xl">
+          <div className="prose prose-lg text-gray-600 dark:text-gray-400 dark:prose-invert max-w-none leading-relaxed space-y-5">
+            <h2 className="text-3xl md:text-4xl font-black text-gray-900 dark:text-white tracking-tight not-prose mb-6">
+              Bandra's Active Community and What Clinical Pilates <span className="text-[#513394] dark:text-[#8B5CF6]">Does for Them</span>
+            </h2>
+            <p>
+              Bandra has a concentrated fitness community. Carter Road and the Bandra Fort sea face are used
+              daily by runners. The Khar and Santacruz corridor has a high density of gyms and CrossFit boxes.
+              BKC — directly adjacent — generates a corporate professional cohort who sit for eight hours and
+              then train hard, accumulating the predictable pattern of hip flexor tightness, upper trapezius
+              overload, and lumbar instability that desk-plus-gym lifestyles produce.
+            </p>
+            <p>
+              The clinical Pilates question for this population is typically one of three: an overuse running
+              injury (IT band, plantar fasciitis, posterior knee) that has not resolved despite rest; a disc
+              or lumbar issue that a sports medicine doctor has told them to "strengthen their core" for;
+              or a post-surgical situation (ACL reconstruction, shoulder Bankart repair) where they need
+              graduated loading that neither their physiotherapist nor a Pilates studio has been able to provide.
+            </p>
+            <p>
+              R3BOOT in Dadar East is eight minutes by train from Bandra station — Bandra to Dadar on the
+              Western or Central Line is a short commute. The facility at Palai Plaza, Swami Gyan Jivandas
+              Marg, Dadar East offers the combination of physiotherapist-led clinical Pilates (Dr. Hiral Parikh,
+              Dr. Vaishali Vijay Rauniyar), reformer and mat sessions, and an integrated recovery stack —
+              sports massage, ice bath, contrast therapy — unavailable in a single Bandra location.
+              Sessions are one-to-one, 45–60 minutes, assessment-led.
+            </p>
           </div>
         </div>
       </section>

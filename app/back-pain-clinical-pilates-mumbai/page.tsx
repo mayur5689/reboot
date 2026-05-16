@@ -165,11 +165,6 @@ export default function BackPainClinicalPilatesMumbaiPage() {
                     </li>
                   ))}
                 </ul>
-                <div className="border-t border-white/10 pt-6 mb-6">
-                  <p className="text-xs font-black tracking-[0.25em] text-white/40 uppercase mb-2">PRICING</p>
-                  <p className="text-white font-bold text-sm">₹2,000 / session</p>
-                  <p className="text-white/50 text-xs mt-1">10-session pack: ₹17,000 (15% off)</p>
-                </div>
                 <a href="tel:+919702368612" className="block text-center bg-[#513394] text-white font-black px-8 py-5 rounded-2xl transition-all hover:scale-[1.02] shadow-xl text-lg mb-3">
                   Call to Book
                 </a>
@@ -178,6 +173,40 @@ export default function BackPainClinicalPilatesMumbaiPage() {
                 </a>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── WHY GENERIC PILATES FAILS BACK PAIN ─── */}
+      <section className="py-20 bg-[#F8F9FA] dark:bg-[#0D0D0D]">
+        <div className="container mx-auto px-6 lg:px-8 max-w-5xl">
+          <div className="prose prose-lg text-gray-600 dark:text-gray-400 dark:prose-invert max-w-none leading-relaxed space-y-5">
+            <h2 className="text-3xl md:text-4xl font-black text-gray-900 dark:text-white tracking-tight not-prose mb-6">
+              Why Group Pilates Classes Often Make <span className="text-[#513394] dark:text-[#8B5CF6]">Back Pain Worse</span>
+            </h2>
+            <p>
+              Standard Pilates classes in Mumbai — whether instructor-led group sessions or general reformer classes
+              at fitness studios — are built on the assumption that all participants have healthy spines. The roll-up,
+              the hundred, double leg stretch, and similar exercises are fundamental to most Pilates class structures.
+              For someone with an active L4-L5 disc herniation, these movements increase intradiscal pressure and
+              can provoke or worsen nerve symptoms. A group instructor, regardless of their certification level,
+              is not equipped to screen for this.
+            </p>
+            <p>
+              The deeper issue is that lower back pain driven by disc pathology, facet joint irritation, or
+              sacroiliac dysfunction each has a different pain mechanism and a different exercise tolerance.
+              Flexion-based movements aggravate disc herniations. Extension-based movements aggravate facet pain.
+              Rotational loading without stability aggravates SIJ dysfunction. A class that mixes these presentations —
+              which every general Pilates class does — cannot account for all of them simultaneously.
+            </p>
+            <p>
+              At R3BOOT in Dadar East, Mumbai, Dr. Hiral Parikh screens every client for their specific pain
+              mechanism at the first session. Exercises that load the pain generator are excluded. The program
+              starts in the pain-free range and expands as stability improves. Most clients with acute or
+              sub-acute back pain notice meaningful reduction in symptoms within 4–6 sessions. Chronic presentations
+              require more time, but the trajectory is consistently positive when the program is built from
+              accurate physiotherapy assessment rather than a generic back pain template.
+            </p>
           </div>
         </div>
       </section>

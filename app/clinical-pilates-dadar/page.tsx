@@ -119,15 +119,45 @@ export default function ClinicalPilatesDadarPage() {
                   <p className="text-white/50 text-sm mt-3">Mon–Sat: 7:00 AM – 8:00 PM</p>
                   <p className="text-white/50 text-sm">Sunday: by appointment</p>
                 </div>
-                <div className="border-t border-white/10 pt-6 mb-8">
-                  <p className="text-xs font-black tracking-[0.25em] text-white/40 uppercase mb-2">PRICING</p>
-                  <p className="text-white font-bold text-sm">₹2,000 / session</p>
-                  <p className="text-white/50 text-xs mt-1">5 sessions: ₹9,000 | 10 sessions: ₹17,000</p>
-                </div>
                 <a href="tel:+919702368612" className="block text-center bg-[#513394] text-white font-black px-8 py-5 rounded-2xl transition-all hover:scale-[1.02] shadow-xl text-lg mb-3">Call to Book</a>
                 <a href="https://wa.me/919702368612" target="_blank" rel="nofollow noopener noreferrer" className="block text-center bg-[#25D366] text-white font-black px-8 py-4 rounded-2xl transition-all hover:scale-[1.02] shadow-xl text-base">WhatsApp Us</a>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── DADAR CONTEXT ─── */}
+      <section className="py-20 bg-[#F8F9FA] dark:bg-[#0D0D0D]">
+        <div className="container mx-auto px-6 lg:px-8 max-w-5xl">
+          <div className="prose prose-lg text-gray-600 dark:text-gray-400 dark:prose-invert max-w-none leading-relaxed space-y-5">
+            <h2 className="text-3xl md:text-4xl font-black text-gray-900 dark:text-white tracking-tight not-prose mb-6">
+              Dadar's Clinical Pilates Landscape — <span className="text-[#513394] dark:text-[#8B5CF6]">And Where R3BOOT Sits</span>
+            </h2>
+            <p>
+              Dadar is one of Mumbai's most accessible central hubs — directly on the Central and Western
+              railway lines, connecting Thane, Andheri, Churchgate, and CST. This makes Dadar East a practical
+              location for clinical pilates clients coming from Matunga, Sion, Parel, Worli, Bandra, and further.
+              Shivaji Park, a five-minute walk from R3BOOT, is one of Mumbai's primary running grounds — the
+              morning running community there generates a steady stream of hip, IT band, knee, and lower back
+              presentations that benefit from the combination of clinical Pilates and sports massage available
+              at the same facility.
+            </p>
+            <p>
+              Moushu's Pilates has a Dadar studio near Five Gardens, Dadar East — approximately one kilometre
+              from R3BOOT. Radhika's Balanced Body opened a Pilates studio in Dadar West in April 2026. Both
+              are instructor-led fitness Pilates studios without physiotherapy capability. The clinical gap
+              they leave is exactly what R3BOOT was built to fill: physiotherapy-led movement rehabilitation
+              for people with diagnosed conditions, injuries, or post-surgical recovery needs.
+            </p>
+            <p>
+              R3BOOT's integrated model means clinical Pilates clients can also access ice bath, contrast
+              therapy, red light therapy, and sports massage in the same visit. For a Shivaji Park runner
+              recovering from IT band syndrome while rebuilding hip stability through clinical Pilates, this
+              matters. No other facility in Dadar offers this combination. Physiotherapy, sports massage,
+              and clinical Pilates are all under one roof at Palai Plaza, 203, Swami Gyan Jivandas Marg,
+              Dadar East, Mumbai — five minutes from Dadar Central Line station.
+            </p>
           </div>
         </div>
       </section>

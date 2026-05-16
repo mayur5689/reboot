@@ -22,6 +22,6 @@ export const scoliosisPilatesFaqs = [
   {
     question: 'Where is R3BOOT and how do I book?',
     answer:
-      'Palai Plaza, 203, Swami Gyan Jivandas Marg, Dadar East, Mumbai – 400 014. Five minutes from Dadar station. Call +91 97023 68612 or WhatsApp us. Clinical Pilates is ₹2,000/session with package options.',
+      'Palai Plaza, 203, Swami Gyan Jivandas Marg, Dadar East, Mumbai – 400 014. Five minutes from Dadar station on the Central Line. Call +91 97023 68612 or WhatsApp. Bring your X-ray report with Cobb angle measurement to your first session.',
   },
 ]

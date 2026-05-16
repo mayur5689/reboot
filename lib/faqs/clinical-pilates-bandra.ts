@@ -20,8 +20,8 @@ export const clinicalPilatesBandraFaqs = [
       'Common presentations from Bandra include lower back pain and disc issues, post-surgical rehabilitation (knee, hip, spine), scoliosis management, desk posture and neck-shoulder pain, prenatal and postnatal core recovery, and sports performance (particularly runners, cyclists, and CrossFit athletes from the Khar-Bandra-BKC area).',
   },
   {
-    question: 'How do I book?',
+    question: 'How do I book and what should I bring?',
     answer:
-      'Call +91 97023 68612 or WhatsApp us. First session includes a physiotherapy assessment. Bring any relevant medical reports or imaging to your first visit.',
+      'Call +91 97023 68612 or WhatsApp R3BOOT. First session includes a full physiotherapy assessment — bring any medical reports, imaging, surgical discharge summaries, or physiotherapy notes relevant to your condition.',
   },
 ]
