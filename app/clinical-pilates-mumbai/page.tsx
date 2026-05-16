@@ -6,12 +6,13 @@ import { FAQSection } from '@/components/faq-section'
 import PhysiotherapyTeam from '@/components/PhysiotherapyTeam'
 import ServiceSchema from '@/components/schema/ServiceSchema'
 import FAQSchema from '@/components/schema/FAQSchema'
+import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema'
 import { clinicalPilatesMumbaiFaqs } from '@/lib/faqs/clinical-pilates-mumbai'
 
 export const metadata: Metadata = {
-  title: 'Clinical Pilates in Mumbai | Physiotherapist-Led at R3BOOT Dadar',
+  title: 'Clinical Pilates Mumbai | Physiotherapist-Led — R3BOOT Dadar',
   description:
-    'Clinical Pilates in Mumbai at R3BOOT Dadar. Physiotherapist-led programs for back pain, scoliosis, post-surgery rehab, and sports performance. ₹2,000/session. Book today.',
+    'Physiotherapist-led Clinical Pilates in Mumbai. Back pain, scoliosis, post-surgery rehab — assessment-first at R3BOOT Dadar. 5.0 ★ Google. Book via WhatsApp today.',
   alternates: { canonical: '/clinical-pilates-mumbai' },
   keywords: [
     'clinical pilates mumbai',
@@ -660,6 +661,10 @@ export default function ClinicalPilatesMumbaiPage() {
         serviceUrl="https://www.r3boot.in/clinical-pilates-mumbai"
       />
       <FAQSchema faqs={clinicalPilatesMumbaiFaqs} />
+      <BreadcrumbSchema items={[
+        { name: 'Home', url: '/' },
+        { name: 'Clinical Pilates Mumbai', url: '/clinical-pilates-mumbai' },
+      ]} />
     </main>
   )
 }

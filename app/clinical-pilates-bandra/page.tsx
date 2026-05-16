@@ -4,12 +4,13 @@ import { Metadata } from 'next'
 import { FAQSection } from '@/components/faq-section'
 import ServiceSchema from '@/components/schema/ServiceSchema'
 import FAQSchema from '@/components/schema/FAQSchema'
+import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema'
 import { clinicalPilatesBandraFaqs } from '@/lib/faqs/clinical-pilates-bandra'
 
 export const metadata: Metadata = {
-  title: 'Clinical Pilates Near Bandra Mumbai | R3BOOT — Physiotherapist-Led',
+  title: 'Clinical Pilates Near Bandra | Physio-Led Rehab — R3BOOT Dadar',
   description:
-    'Clinical Pilates near Bandra, Mumbai at R3BOOT in Dadar East. 8 min by train from Bandra station. Physiotherapist-led programs for back pain, scoliosis, and post-surgery rehab.',
+    'Clinical Pilates near Bandra at R3BOOT Dadar — 8 min by train. Physio-led programs for back pain, scoliosis & post-surgery. 5.0 ★ Google. Book via WhatsApp today.',
   alternates: { canonical: '/clinical-pilates-bandra' },
   keywords: [
     'clinical pilates bandra',
@@ -198,6 +199,11 @@ export default function ClinicalPilatesBandraPage() {
         serviceUrl="https://www.r3boot.in/clinical-pilates-bandra"
       />
       <FAQSchema faqs={clinicalPilatesBandraFaqs} />
+      <BreadcrumbSchema items={[
+        { name: 'Home', url: '/' },
+        { name: 'Clinical Pilates Mumbai', url: '/clinical-pilates-mumbai' },
+        { name: 'Bandra', url: '/clinical-pilates-bandra' },
+      ]} />
     </main>
   )
 }

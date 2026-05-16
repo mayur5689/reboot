@@ -4,12 +4,13 @@ import { Metadata } from 'next'
 import { FAQSection } from '@/components/faq-section'
 import ServiceSchema from '@/components/schema/ServiceSchema'
 import FAQSchema from '@/components/schema/FAQSchema'
+import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema'
 import { neckShoulderPainSportsMassageFaqs } from '@/lib/faqs/neck-shoulder-pain-sports-massage-mumbai'
 
 export const metadata: Metadata = {
-  title: 'Sports Massage for Neck & Shoulder Pain in Mumbai | R3BOOT',
+  title: 'Sports Massage Neck & Shoulder Pain Mumbai | R3BOOT Dadar',
   description:
-    'Sports massage for neck and shoulder pain in Mumbai at R3BOOT, Dadar East. Trapezius, levator scapulae, scalenes — targeted relief for desk workers and athletes. Book now.',
+    'Sports massage for neck & shoulder pain at R3BOOT Mumbai. Trapezius, levator scapulae & scalenes — targeted relief for desk workers and athletes. 5.0 ★ Google. Book via WhatsApp.',
   alternates: { canonical: '/neck-shoulder-pain-sports-massage-mumbai' },
   keywords: [
     'sports massage for neck pain mumbai',
@@ -245,6 +246,11 @@ export default function NeckShoulderPainSportsMassageMumbaiPage() {
         serviceUrl="https://www.r3boot.in/neck-shoulder-pain-sports-massage-mumbai"
       />
       <FAQSchema faqs={neckShoulderPainSportsMassageFaqs} />
+      <BreadcrumbSchema items={[
+        { name: 'Home', url: '/' },
+        { name: 'Sports Massage Mumbai', url: '/sports-massage-mumbai' },
+        { name: 'Neck & Shoulder Pain', url: '/neck-shoulder-pain-sports-massage-mumbai' },
+      ]} />
     </main>
   )
 }

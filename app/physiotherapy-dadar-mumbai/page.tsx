@@ -6,12 +6,13 @@ import PhysiotherapyTeam from '@/components/PhysiotherapyTeam'
 import PhysiotherapyFAQ from '@/components/PhysiotherapyFAQ'
 import ServiceSchema from '@/components/schema/ServiceSchema'
 import FAQSchema from '@/components/schema/FAQSchema'
+import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema'
 import { physiotherapyFaqs } from '@/lib/faqs/physiotherapy'
 
 export const metadata: Metadata = {
-  title: 'Physiotherapy in Dadar, Mumbai | R3BOOT — Dr. Hiral Parikh',
+  title: 'Physiotherapy Dadar Mumbai | Dr. Hiral Parikh — R3BOOT',
   description:
-    'Clinical physiotherapy in Dadar, Mumbai by Dr. Hiral Parikh (15+ yrs) & Dr. Vaishali Rauniyar. Back pain, knee pain, sports injuries, post-surgery rehab. No referral needed. Book by call or WhatsApp.',
+    'Clinical physiotherapy in Dadar by Dr. Hiral Parikh (15+ yrs). Back pain, knee pain, sports injuries & post-surgery rehab. No referral needed. 5.0 ★ Google. Call or WhatsApp.',
   alternates: { canonical: '/physiotherapy-dadar-mumbai' },
   keywords: [
     'physiotherapy dadar',
@@ -618,6 +619,10 @@ export default function PhysioDadarLanding() {
         serviceUrl="https://www.r3boot.in/physiotherapy-dadar-mumbai"
       />
       <FAQSchema faqs={physiotherapyFaqs} />
+      <BreadcrumbSchema items={[
+        { name: 'Home', url: '/' },
+        { name: 'Physiotherapy Dadar', url: '/physiotherapy-dadar-mumbai' },
+      ]} />
     </main>
   )
 }

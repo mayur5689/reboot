@@ -54,6 +54,13 @@ export default function BusinessSchema() {
       { '@type': 'Place', name: 'Mahim' },
       { '@type': 'Place', name: 'Shivaji Park' },
     ],
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '5.0',
+      reviewCount: '80',
+      bestRating: '5',
+      worstRating: '1',
+    },
     contactPoint: {
       '@type': 'ContactPoint',
       telephone: '+919702368612',

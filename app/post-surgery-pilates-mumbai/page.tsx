@@ -4,12 +4,13 @@ import { Metadata } from 'next'
 import { FAQSection } from '@/components/faq-section'
 import ServiceSchema from '@/components/schema/ServiceSchema'
 import FAQSchema from '@/components/schema/FAQSchema'
+import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema'
 import { postSurgeryPilatesFaqs } from '@/lib/faqs/post-surgery-pilates-mumbai'
 
 export const metadata: Metadata = {
-  title: 'Clinical Pilates After Surgery in Mumbai | R3BOOT Dadar',
+  title: 'Post-Surgery Pilates Mumbai | ACL, Spinal Rehab — R3BOOT Dadar',
   description:
-    'Clinical Pilates for post-surgical rehabilitation in Mumbai at R3BOOT, Dadar East. ACL, spinal surgery, hip and knee replacement — physiotherapist-led Pilates rehab programs.',
+    'Post-surgery Pilates in Mumbai at R3BOOT Dadar. Physio-led rehab for ACL, spinal surgery, hip & knee replacement — assessment-first. 5.0 ★ Google. Book via WhatsApp.',
   alternates: { canonical: '/post-surgery-pilates-mumbai' },
   keywords: [
     'pilates after surgery mumbai',
@@ -235,6 +236,11 @@ export default function PostSurgeryPilatesMumbaiPage() {
         serviceUrl="https://www.r3boot.in/post-surgery-pilates-mumbai"
       />
       <FAQSchema faqs={postSurgeryPilatesFaqs} />
+      <BreadcrumbSchema items={[
+        { name: 'Home', url: '/' },
+        { name: 'Clinical Pilates Mumbai', url: '/clinical-pilates-mumbai' },
+        { name: 'Post-Surgery', url: '/post-surgery-pilates-mumbai' },
+      ]} />
     </main>
   )
 }

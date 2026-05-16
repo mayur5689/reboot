@@ -4,12 +4,13 @@ import { Metadata } from 'next'
 import { FAQSection } from '@/components/faq-section'
 import ServiceSchema from '@/components/schema/ServiceSchema'
 import FAQSchema from '@/components/schema/FAQSchema'
+import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema'
 import { kneePainSportsMassageFaqs } from '@/lib/faqs/knee-pain-sports-massage-mumbai'
 
 export const metadata: Metadata = {
-  title: 'Sports Massage for Knee Pain in Mumbai | R3BOOT Dadar',
+  title: 'Sports Massage Knee Pain Mumbai | IT Band & Runner\'s Knee | R3BOOT',
   description:
-    'Sports massage for knee pain in Mumbai at R3BOOT, Dadar East. IT band, runner\'s knee, quad tightness, and overuse. Soft tissue treatment by trained sports massage therapists.',
+    'Sports massage for knee pain in Mumbai at R3BOOT Dadar. IT band, runner\'s knee, quad tightness & overuse — physio-trained therapists. 5.0 ★ Google. Book today.',
   alternates: { canonical: '/knee-pain-sports-massage-mumbai' },
   keywords: [
     'sports massage for knee pain mumbai',
@@ -284,6 +285,11 @@ export default function KneePainSportsMassageMumbaiPage() {
         serviceUrl="https://www.r3boot.in/knee-pain-sports-massage-mumbai"
       />
       <FAQSchema faqs={kneePainSportsMassageFaqs} />
+      <BreadcrumbSchema items={[
+        { name: 'Home', url: '/' },
+        { name: 'Sports Massage Mumbai', url: '/sports-massage-mumbai' },
+        { name: 'Knee Pain', url: '/knee-pain-sports-massage-mumbai' },
+      ]} />
     </main>
   )
 }

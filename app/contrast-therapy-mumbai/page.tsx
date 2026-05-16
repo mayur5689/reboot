@@ -6,12 +6,13 @@ import { FAQSection } from '@/components/faq-section'
 import PhysiotherapyTeam from '@/components/PhysiotherapyTeam'
 import ServiceSchema from '@/components/schema/ServiceSchema'
 import FAQSchema from '@/components/schema/FAQSchema'
+import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema'
 import { contrastTherapyMumbaiFaqs } from '@/lib/faqs/contrast-therapy-mumbai'
 
 export const metadata: Metadata = {
-  title: 'Contrast Therapy in Mumbai | Ice Bath & Sauna at R3BOOT',
+  title: 'Contrast Therapy Mumbai — Ice Bath & Infrared Sauna | R3BOOT',
   description:
-    'Contrast therapy in Mumbai at R3BOOT. Clinically structured ice bath and infrared sauna protocol for athletes. Supervised by physiotherapists. Book today.',
+    'Contrast therapy Mumbai at R3BOOT — ice bath + infrared sauna, physio-supervised. Structured recovery protocol for athletes in Dadar. 5.0 ★ Google. Book via WhatsApp.',
   alternates: { canonical: '/contrast-therapy-mumbai' },
   keywords: [
     'contrast therapy Mumbai',
@@ -723,6 +724,10 @@ export default function ContrastTherapyMumbaiPage() {
         serviceUrl="https://www.r3boot.in/contrast-therapy-mumbai"
       />
       <FAQSchema faqs={contrastTherapyMumbaiFaqs} />
+      <BreadcrumbSchema items={[
+        { name: 'Home', url: '/' },
+        { name: 'Contrast Therapy Mumbai', url: '/contrast-therapy-mumbai' },
+      ]} />
     </main>
   )
 }

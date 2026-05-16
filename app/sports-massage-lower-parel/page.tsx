@@ -4,12 +4,13 @@ import { Metadata } from 'next'
 import { FAQSection } from '@/components/faq-section'
 import ServiceSchema from '@/components/schema/ServiceSchema'
 import FAQSchema from '@/components/schema/FAQSchema'
+import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema'
 import { sportsMassageLowerParelFaqs } from '@/lib/faqs/sports-massage-lower-parel'
 
 export const metadata: Metadata = {
-  title: 'Sports Massage Near Lower Parel, Mumbai | R3BOOT Dadar',
+  title: 'Sports Massage Near Lower Parel & Worli | R3BOOT Dadar',
   description:
-    'Sports massage near Lower Parel, Mumbai at R3BOOT in Dadar East. 10–15 min from Lower Parel and Worli. Clinical sports massage for gym-goers, athletes, and BKC professionals.',
+    'Sports massage near Lower Parel & Worli at R3BOOT Dadar. 10 min away. Clinical soft tissue work for athletes & BKC professionals — not a spa. 5.0 ★ Google. Book via WhatsApp.',
   alternates: { canonical: '/sports-massage-lower-parel' },
   keywords: [
     'sports massage lower parel',
@@ -220,6 +221,11 @@ export default function SportsMassageLowerParelPage() {
         serviceUrl="https://www.r3boot.in/sports-massage-lower-parel"
       />
       <FAQSchema faqs={sportsMassageLowerParelFaqs} />
+      <BreadcrumbSchema items={[
+        { name: 'Home', url: '/' },
+        { name: 'Sports Massage Mumbai', url: '/sports-massage-mumbai' },
+        { name: 'Lower Parel', url: '/sports-massage-lower-parel' },
+      ]} />
     </main>
   )
 }

@@ -4,12 +4,13 @@ import { Metadata } from 'next'
 import { FAQSection } from '@/components/faq-section'
 import ServiceSchema from '@/components/schema/ServiceSchema'
 import FAQSchema from '@/components/schema/FAQSchema'
+import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema'
 import { sportsMassageDadarFaqs } from '@/lib/faqs/sports-massage-dadar'
 
 export const metadata: Metadata = {
-  title: 'Sports Massage in Dadar | R3BOOT Recovery Clinic',
+  title: 'Sports Massage Dadar | 5 Min from Station — R3BOOT Mumbai',
   description:
-    'Sports massage in Dadar, Mumbai at R3BOOT. 5 minutes from Dadar railway station. Clinical sports massage for runners, gym-goers, and athletes. Dadar East, Mumbai – 400 014.',
+    'Sports massage in Dadar, 5 min from Dadar station. Clinical soft tissue work for athletes & gym-goers at R3BOOT — not a spa. 5.0 ★ Google. Call or WhatsApp to book.',
   alternates: { canonical: '/sports-massage-dadar' },
   keywords: [
     'sports massage dadar',
@@ -216,6 +217,11 @@ export default function SportsMassageDadarPage() {
         serviceUrl="https://www.r3boot.in/sports-massage-dadar"
       />
       <FAQSchema faqs={sportsMassageDadarFaqs} />
+      <BreadcrumbSchema items={[
+        { name: 'Home', url: '/' },
+        { name: 'Sports Massage Mumbai', url: '/sports-massage-mumbai' },
+        { name: 'Dadar', url: '/sports-massage-dadar' },
+      ]} />
     </main>
   )
 }

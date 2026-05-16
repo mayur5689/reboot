@@ -4,12 +4,13 @@ import { Metadata } from 'next'
 import { FAQSection } from '@/components/faq-section'
 import ServiceSchema from '@/components/schema/ServiceSchema'
 import FAQSchema from '@/components/schema/FAQSchema'
+import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema'
 import { backPainSportsMassageFaqs } from '@/lib/faqs/back-pain-sports-massage-mumbai'
 
 export const metadata: Metadata = {
-  title: 'Sports Massage for Back Pain in Mumbai | R3BOOT Dadar',
+  title: 'Sports Massage for Back Pain Mumbai | Physio-Led — R3BOOT',
   description:
-    'Sports massage for back pain in Mumbai at R3BOOT, Dadar East. Therapists trained in soft tissue release for lower back, thoracic, and lumbar pain. Clinical approach — not a spa.',
+    'Sports massage for back pain at R3BOOT Mumbai. Soft tissue release for lower back, thoracic & lumbar pain. Physio-trained — not a spa. 5.0 ★ Google. Book via WhatsApp.',
   alternates: { canonical: '/back-pain-sports-massage-mumbai' },
   keywords: [
     'sports massage for back pain mumbai',
@@ -330,6 +331,11 @@ export default function BackPainSportsMassageMumbaiPage() {
         serviceUrl="https://www.r3boot.in/back-pain-sports-massage-mumbai"
       />
       <FAQSchema faqs={backPainSportsMassageFaqs} />
+      <BreadcrumbSchema items={[
+        { name: 'Home', url: '/' },
+        { name: 'Sports Massage Mumbai', url: '/sports-massage-mumbai' },
+        { name: 'Back Pain', url: '/back-pain-sports-massage-mumbai' },
+      ]} />
     </main>
   )
 }

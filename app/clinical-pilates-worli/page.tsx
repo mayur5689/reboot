@@ -4,12 +4,13 @@ import { Metadata } from 'next'
 import { FAQSection } from '@/components/faq-section'
 import ServiceSchema from '@/components/schema/ServiceSchema'
 import FAQSchema from '@/components/schema/FAQSchema'
+import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema'
 import { clinicalPilatesWorliFaqs } from '@/lib/faqs/clinical-pilates-worli'
 
 export const metadata: Metadata = {
-  title: 'Clinical Pilates Near Worli & Lower Parel Mumbai | R3BOOT',
+  title: 'Clinical Pilates Near Worli & Lower Parel | R3BOOT Dadar',
   description:
-    'Clinical Pilates near Worli and Lower Parel, Mumbai at R3BOOT in Dadar East. 10 min from Worli, 3 min train from Lower Parel. Physiotherapist-led programs for back pain and rehab.',
+    'Clinical Pilates near Worli & Lower Parel at R3BOOT Dadar. Physio-led programs for back pain & post-surgery rehab. 5.0 ★ Google. Book via WhatsApp today.',
   alternates: { canonical: '/clinical-pilates-worli' },
   keywords: [
     'clinical pilates worli',
@@ -191,6 +192,11 @@ export default function ClinicalPilatesWorliPage() {
         serviceUrl="https://www.r3boot.in/clinical-pilates-worli"
       />
       <FAQSchema faqs={clinicalPilatesWorliFaqs} />
+      <BreadcrumbSchema items={[
+        { name: 'Home', url: '/' },
+        { name: 'Clinical Pilates Mumbai', url: '/clinical-pilates-mumbai' },
+        { name: 'Worli & Lower Parel', url: '/clinical-pilates-worli' },
+      ]} />
     </main>
   )
 }

@@ -4,12 +4,13 @@ import { Metadata } from 'next'
 import { FAQSection } from '@/components/faq-section'
 import ServiceSchema from '@/components/schema/ServiceSchema'
 import FAQSchema from '@/components/schema/FAQSchema'
+import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema'
 import { backPainClinicalPilatesFaqs } from '@/lib/faqs/back-pain-clinical-pilates-mumbai'
 
 export const metadata: Metadata = {
-  title: 'Clinical Pilates for Back Pain in Mumbai | R3BOOT Dadar',
+  title: 'Clinical Pilates for Back Pain Mumbai | Physio-Led — R3BOOT',
   description:
-    'Clinical Pilates for back pain in Mumbai at R3BOOT, Dadar East. Physiotherapist-led programs for L4-L5 disc, lumbar instability, and chronic lower back pain. Assessment-first approach.',
+    'Clinical Pilates for back pain at R3BOOT Mumbai. Physio-led programs for L4-L5 disc & lumbar instability — assessment-first, not a class. 5.0 ★ Google. Book via WhatsApp.',
   alternates: { canonical: '/back-pain-clinical-pilates-mumbai' },
   keywords: [
     'clinical pilates for back pain mumbai',
@@ -324,6 +325,11 @@ export default function BackPainClinicalPilatesMumbaiPage() {
         serviceUrl="https://www.r3boot.in/back-pain-clinical-pilates-mumbai"
       />
       <FAQSchema faqs={backPainClinicalPilatesFaqs} />
+      <BreadcrumbSchema items={[
+        { name: 'Home', url: '/' },
+        { name: 'Clinical Pilates Mumbai', url: '/clinical-pilates-mumbai' },
+        { name: 'Back Pain', url: '/back-pain-clinical-pilates-mumbai' },
+      ]} />
     </main>
   )
 }

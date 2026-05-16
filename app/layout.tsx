@@ -45,8 +45,8 @@ const branding = localFont({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.r3boot.in'),
-  title: 'R3BOOT - Recovery & Performance',
-  description: 'India\'s First Integrated Recovery Centre',
+  title: 'R3BOOT Dadar | Physiotherapy, Clinical Pilates & Recovery Mumbai',
+  description: 'Physiotherapy, clinical Pilates, sports massage & contrast therapy in Dadar, Mumbai. Expert physio team at R3BOOT — 5.0 stars. Open 7 days. Book via WhatsApp.',
   icons: {
     icon: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1773062628/R3boot_Logo_za7ymb.png',
     apple: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1773062628/R3boot_Logo_za7ymb.png',

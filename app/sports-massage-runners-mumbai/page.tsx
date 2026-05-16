@@ -5,12 +5,13 @@ import { services } from '@/lib/services'
 import { FAQSection } from '@/components/faq-section'
 import ServiceSchema from '@/components/schema/ServiceSchema'
 import FAQSchema from '@/components/schema/FAQSchema'
+import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema'
 import { sportsMassageRunnersMumbaiFaqs } from '@/lib/faqs/sports-massage-runners-mumbai'
 
 export const metadata: Metadata = {
-  title: 'Sports Massage for Runners in Mumbai | R3BOOT',
+  title: 'Sports Massage for Runners Mumbai | IT Band, Calf & Knee Pain',
   description:
-    'Sports massage for runners in Mumbai at R3BOOT. Treating calf tightness, IT band, hamstring strain and runner\'s knee. Certified therapists. Book today.',
+    'Sports massage for runners in Mumbai at R3BOOT Dadar. IT band, calf, hamstring & runner\'s knee — physio-trained therapists. 5.0 ★ Google. Open 7 days. Book via WhatsApp.',
   alternates: { canonical: '/sports-massage-runners-mumbai' },
   keywords: [
     'sports massage for runners Mumbai',
@@ -741,6 +742,11 @@ export default function SportsMassageRunnersMumbaiPage() {
         serviceUrl="https://www.r3boot.in/sports-massage-runners-mumbai"
       />
       <FAQSchema faqs={sportsMassageRunnersMumbaiFaqs} />
+      <BreadcrumbSchema items={[
+        { name: 'Home', url: '/' },
+        { name: 'Sports Massage Mumbai', url: '/sports-massage-mumbai' },
+        { name: 'Runners Mumbai', url: '/sports-massage-runners-mumbai' },
+      ]} />
     </main>
   )
 }

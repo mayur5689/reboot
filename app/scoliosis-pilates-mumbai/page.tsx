@@ -4,12 +4,13 @@ import { Metadata } from 'next'
 import { FAQSection } from '@/components/faq-section'
 import ServiceSchema from '@/components/schema/ServiceSchema'
 import FAQSchema from '@/components/schema/FAQSchema'
+import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema'
 import { scoliosisPilatesFaqs } from '@/lib/faqs/scoliosis-pilates-mumbai'
 
 export const metadata: Metadata = {
-  title: 'Clinical Pilates for Scoliosis in Mumbai | R3BOOT Dadar',
+  title: 'Clinical Pilates Scoliosis Mumbai | Curve-Specific — R3BOOT Dadar',
   description:
-    'Clinical Pilates for scoliosis in Mumbai at R3BOOT, Dadar East. Physiotherapist-designed programs for adolescent and adult scoliosis — curve-specific exercises, rotational breathing, postural retraining.',
+    'Clinical Pilates for scoliosis in Mumbai at R3BOOT Dadar. Curve-specific exercises, rotational breathing & postural retraining — physio-led. 5.0 ★ Google. Book via WhatsApp.',
   alternates: { canonical: '/scoliosis-pilates-mumbai' },
   keywords: [
     'pilates for scoliosis mumbai',
@@ -241,6 +242,11 @@ export default function ScoliosisPilatesMumbaiPage() {
         serviceUrl="https://www.r3boot.in/scoliosis-pilates-mumbai"
       />
       <FAQSchema faqs={scoliosisPilatesFaqs} />
+      <BreadcrumbSchema items={[
+        { name: 'Home', url: '/' },
+        { name: 'Clinical Pilates Mumbai', url: '/clinical-pilates-mumbai' },
+        { name: 'Scoliosis', url: '/scoliosis-pilates-mumbai' },
+      ]} />
     </main>
   )
 }

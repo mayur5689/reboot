@@ -5,12 +5,13 @@ import { services } from '@/lib/services'
 import { FAQSection } from '@/components/faq-section'
 import ServiceSchema from '@/components/schema/ServiceSchema'
 import FAQSchema from '@/components/schema/FAQSchema'
+import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema'
 import { sportsMassageMumbaiFaqs } from '@/lib/faqs/sports-massage-mumbai'
 
 export const metadata: Metadata = {
-  title: 'Sports Massage in Mumbai for Muscle Recovery & Injury Relief | R3boot',
+  title: 'Sports Massage Mumbai | Physio-Led Recovery — R3BOOT Dadar',
   description:
-    'Sports massage in Mumbai at R3boot helps reduce muscle tension, improve recovery, and prevent sports injuries. Located in Dadar, we combine sports massage with cupping therapy and mobility work for faster recovery.',
+    'Sports massage Mumbai at R3BOOT Dadar — physio-led, not a spa. Cupping, mobility work & soft tissue release for athletes & gym-goers. 5.0 ★ on Google. Book via WhatsApp.',
   alternates: { canonical: '/sports-massage-mumbai' },
   keywords: [
     'sports massage mumbai',
@@ -647,6 +648,10 @@ export default function SportsMassageMumbaiPage() {
         serviceUrl="https://www.r3boot.in/sports-massage-mumbai"
       />
       <FAQSchema faqs={sportsMassageMumbaiFaqs} />
+      <BreadcrumbSchema items={[
+        { name: 'Home', url: '/' },
+        { name: 'Sports Massage Mumbai', url: '/sports-massage-mumbai' },
+      ]} />
     </main>
   )
 }

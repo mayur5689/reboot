@@ -6,12 +6,13 @@ import { FAQSection } from '@/components/faq-section'
 import PhysiotherapyTeam from '@/components/PhysiotherapyTeam'
 import ServiceSchema from '@/components/schema/ServiceSchema'
 import FAQSchema from '@/components/schema/FAQSchema'
+import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema'
 import { iceBathMumbaiFaqs } from '@/lib/faqs/ice-bath-mumbai'
 
 export const metadata: Metadata = {
-  title: 'Ice Bath in Mumbai | Supervised Cold Therapy at R3BOOT Dadar',
+  title: 'Ice Bath Mumbai | Physio-Supervised Cold Therapy — R3BOOT Dadar',
   description:
-    'Looking for an ice bath in Mumbai? R3BOOT in Dadar offers supervised cold immersion as part of a clinical contrast therapy protocol. Physiotherapist-guided. Book today.',
+    'Ice bath Mumbai at R3BOOT Dadar — physio-supervised cold immersion with health intake & breathing guidance. Not a plunge tank. 5.0 ★ Google. Book via WhatsApp.',
   alternates: { canonical: '/ice-bath-mumbai' },
   keywords: [
     'ice bath mumbai',
@@ -612,6 +613,10 @@ export default function IceBathMumbaiPage() {
         serviceUrl="https://www.r3boot.in/ice-bath-mumbai"
       />
       <FAQSchema faqs={iceBathMumbaiFaqs} />
+      <BreadcrumbSchema items={[
+        { name: 'Home', url: '/' },
+        { name: 'Ice Bath Mumbai', url: '/ice-bath-mumbai' },
+      ]} />
     </main>
   )
 }
