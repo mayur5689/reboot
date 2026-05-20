@@ -72,6 +72,7 @@ export default function HowItWorks() {
                                 src="/images/5.jpg"
                                 alt="Athlete Recovery"
                                 fill
+                                sizes="(max-width: 1024px) 100vw, 50vw"
                                 className="object-cover"
                             />
                             {/* Subtle overlay */}

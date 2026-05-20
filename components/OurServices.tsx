@@ -63,6 +63,7 @@ export default function OurServices() {
                                     src={service.image}
                                     alt={service.title}
                                     fill
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 700px"
                                     className="object-cover transition-transform duration-1000 group-hover:scale-110"
                                     priority={index < 3}
                                 />
