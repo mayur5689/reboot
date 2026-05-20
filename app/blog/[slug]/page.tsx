@@ -3,7 +3,8 @@ import { PortableText } from '@portabletext/react';
 import Image from "next/image";
 import Link from "next/link";
 import { getPostBySlug, client, urlFor } from "@/sanity/lib/client";
-import { motion } from "framer-motion";
+import BlogPostingSchema from "@/components/schema/BlogPostingSchema";
+import FAQSchema from "@/components/schema/FAQSchema";
 
 export const revalidate = 60;
 
@@ -110,8 +111,19 @@ export default async function BlogPostPage(props: { params: Promise<{ slug: stri
         );
     }
 
+    const thumbnailUrl = post.mainImage ? urlFor(post.mainImage).url() : undefined;
+
     return (
         <article className="min-h-screen dark:bg-[#0A0A0A] overflow-hidden pb-20 lg:pb-0">
+            <BlogPostingSchema
+                title={post.title}
+                description={post.metaDescription || post.excerpt || post.title}
+                slug={params.slug}
+                publishedAt={post.publishedAt}
+                authorName={post.author}
+                imageUrl={thumbnailUrl}
+            />
+            {post.faqs?.length > 0 && <FAQSchema faqs={post.faqs} />}
             {/* Hero Header */}
             <div className="relative h-[60vh] sm:h-[70vh] w-full">
                 {post.mainImage && (

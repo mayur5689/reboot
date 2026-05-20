@@ -436,7 +436,15 @@ export default function IceBathMumbaiPage() {
               <Link href="/contrast-therapy-mumbai" className="text-[#513394] dark:text-[#A78BFA] font-bold hover:underline underline-offset-4">
                 contrast therapy protocol
               </Link>
-              {' '}— never a standalone cold plunge without the warm phase.
+              {' '}— never a standalone cold plunge without the warm phase. Also see{' '}
+              <Link href="/cold-plunge-mumbai" className="text-[#513394] dark:text-[#A78BFA] font-bold hover:underline underline-offset-4">
+                cold plunge Mumbai
+              </Link>
+              {' '}and{' '}
+              <Link href="/infrared-sauna-mumbai" className="text-[#513394] dark:text-[#A78BFA] font-bold hover:underline underline-offset-4">
+                infrared sauna Mumbai
+              </Link>
+              .
             </p>
           </div>
         </div>

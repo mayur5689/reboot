@@ -1,6 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     transpilePackages: ['sanity', 'next-sanity', '@sanity/vision', '@sanity/icons', '@portabletext/editor'],
+    async redirects() {
+        return [
+            {
+                source: '/services/contrast-therapy',
+                destination: '/contrast-therapy-mumbai',
+                permanent: true,
+            },
+        ]
+    },
     images: {
         remotePatterns: [
             {

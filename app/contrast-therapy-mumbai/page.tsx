@@ -666,6 +666,40 @@ export default function ContrastTherapyMumbaiPage() {
         </div>
       </section>
 
+      {/* ─── CONTRAST THERAPY CLUSTER ─── */}
+      <section className="py-24 lg:py-32 border-t border-gray-100 dark:border-white/5">
+        <div className="container mx-auto px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <span className="text-[11px] font-black tracking-[0.3em] text-[#513394] dark:text-[#A78BFA] uppercase mb-4 block">
+              RECOVERY SERVICES //
+            </span>
+            <h2 className="text-3xl md:text-5xl font-black text-gray-900 dark:text-white tracking-tight">
+              Ice Bath, Sauna &amp; <span className="text-[#513394] dark:text-[#8B5CF6]">Locations</span>
+            </h2>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
+            {[
+              { label: 'Ice Bath Mumbai', href: '/ice-bath-mumbai' },
+              { label: 'Cold Plunge Mumbai', href: '/cold-plunge-mumbai' },
+              { label: 'Infrared Sauna', href: '/infrared-sauna-mumbai' },
+              { label: 'Near Bandra', href: '/contrast-therapy-bandra' },
+              { label: 'Dadar', href: '/contrast-therapy-dadar' },
+              { label: 'Lower Parel', href: '/contrast-therapy-lower-parel' },
+              { label: 'Andheri', href: '/contrast-therapy-andheri' },
+              { label: 'Worli', href: '/contrast-therapy-worli' },
+            ].map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="text-center px-4 py-4 rounded-2xl border border-gray-100 dark:border-white/10 bg-white dark:bg-white/5 text-sm font-bold text-gray-900 dark:text-white hover:border-[#513394]/40 hover:text-[#513394] dark:hover:text-[#A78BFA] transition-all"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ─── OTHER SERVICES ─── */}
       <section className="py-24 lg:py-32 bg-[#F8F9FA] dark:bg-[#0D0D0D]">
         <div className="container mx-auto px-6 lg:px-8">

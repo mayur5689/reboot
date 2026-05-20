@@ -52,9 +52,10 @@ const Footer: React.FC = () => {
             {/* Column 1: Services 1 */}
             <div className="space-y-4 md:border-l border-white/20 md:pl-8">
               <ul className="space-y-3 text-[13px] md:text-base font-semibold text-white/90">
+                <li><Link href="/contrast-therapy-mumbai" className="hover:text-[#A78BFA] transition-colors">Contrast Therapy Mumbai</Link></li>
                 <li><Link href="/ice-bath-mumbai" className="hover:text-[#A78BFA] transition-colors">Ice Bath Mumbai</Link></li>
+                <li><Link href="/cold-plunge-mumbai" className="hover:text-[#A78BFA] transition-colors">Cold Plunge Mumbai</Link></li>
                 <li><Link href="/services/hydrotherapy" className="hover:text-[#A78BFA] transition-colors">Hydrotherapy</Link></li>
-                <li><Link href="/services/contrast-therapy" className="hover:text-[#A78BFA] transition-colors">Red Light Therapy</Link></li>
                 <li><Link href="/services/sports-massage" className="hover:text-[#A78BFA] transition-colors">Percussive Therapy</Link></li>
                 <li><Link href="/services/clinical-pilates" className="hover:text-[#A78BFA] transition-colors">Clinical Pilates</Link></li>
                 <li><Link href="/physiotherapy-dadar-mumbai" className="hover:text-[#A78BFA] transition-colors">Physiotherapy Dadar</Link></li>
@@ -64,10 +65,14 @@ const Footer: React.FC = () => {
             {/* Column 2: Services 2 */}
             <div className="space-y-4 md:border-l border-white/20 md:pl-8">
               <ul className="space-y-3 text-[13px] md:text-base font-semibold text-white/90">
-                <li><Link href="/services/contrast-therapy" className="hover:text-[#A78BFA] transition-colors">Infrared Sauna</Link></li>
+                <li><Link href="/infrared-sauna-mumbai" className="hover:text-[#A78BFA] transition-colors">Infrared Sauna Mumbai</Link></li>
                 <li><Link href="/sports-massage-mumbai" className="hover:text-[#A78BFA] transition-colors">Sports Massage Mumbai</Link></li>
                 <li><Link href="/physiotherapy-dadar-mumbai" className="hover:text-[#A78BFA] transition-colors">Physiotherapy Dadar Mumbai</Link></li>
-                <li><Link href="/services/contrast-therapy" className="hover:text-[#A78BFA] transition-colors">Cryotherapy</Link></li>
+                <li><Link href="/contrast-therapy-dadar" className="hover:text-[#A78BFA] transition-colors">Contrast Therapy Dadar</Link></li>
+                <li><Link href="/contrast-therapy-bandra" className="hover:text-[#A78BFA] transition-colors">Contrast Therapy Bandra</Link></li>
+                <li><Link href="/contrast-therapy-lower-parel" className="hover:text-[#A78BFA] transition-colors">Contrast Therapy Lower Parel</Link></li>
+                <li><Link href="/contrast-therapy-andheri" className="hover:text-[#A78BFA] transition-colors">Contrast Therapy Andheri</Link></li>
+                <li><Link href="/contrast-therapy-worli" className="hover:text-[#A78BFA] transition-colors">Contrast Therapy Worli</Link></li>
                 <li><Link href="/services/sports-psychology" className="hover:text-[#A78BFA] transition-colors">Sports Psychology</Link></li>
                 <li><Link href="/services/counselling-mental-training" className="hover:text-[#A78BFA] transition-colors">Counselling & Mental Training</Link></li>
               </ul>
