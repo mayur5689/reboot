@@ -247,7 +247,7 @@ export default function Navbar() {
             )}
 
             {/* CTA Button */}
-            <Link href="/contact">
+            <Link href="/contact" aria-label="Join us today">
               <button
                 className="hidden sm:block text-white font-semibold px-5 py-3 text-sm rounded-full transition-all hover:opacity-90 shadow-lg shadow-[#513394]/20"
                 style={{ backgroundColor: '#513394' }}
@@ -259,6 +259,7 @@ export default function Navbar() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(true)}
+              aria-label="Open menu"
               className={`lg:hidden focus:outline-none transition-colors duration-300 ${shouldBeSolid ? 'text-gray-800 dark:text-white' : 'text-white'}`}>
               <MenuIcon className="h-7 w-7" />
             </button>

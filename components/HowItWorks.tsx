@@ -86,7 +86,7 @@ export default function HowItWorks() {
                                 key={index}
                                 className={`group flex flex-col gap-1 border-l-2 border-gray-100 dark:border-white/5 pl-6 hover:border-[#513394] dark:hover:border-[#A78BFA] transition-colors duration-500${index >= 3 ? ' hidden lg:flex' : ''}`}
                             >
-                                <span className="text-gray-400 dark:text-gray-600 text-base font-bold">
+                                <span aria-hidden="true" className="text-gray-400 dark:text-gray-600 text-base font-bold">
                                     {step.number}
                                 </span>
                                 <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white group-hover:text-[#513394] dark:group-hover:text-[#A78BFA] transition-colors duration-300">

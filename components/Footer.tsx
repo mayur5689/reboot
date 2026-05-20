@@ -35,7 +35,7 @@ const Footer: React.FC = () => {
             </Link>
 
             <div className="space-y-4 pt-4">
-              <h4 className="text-sm font-bold uppercase tracking-widest text-[#A78BFA]">Contact Information</h4>
+              <h3 className="text-sm font-bold uppercase tracking-widest text-[#A78BFA]">Contact Information</h3>
               <div className="text-white/80 text-base space-y-2 font-medium">
                 <p>Palai Plaza, 203, Swami Gyan Jivandas Marg</p>
                 <p>Dadar East, Mumbai - 400 014</p>
@@ -109,7 +109,7 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6 text-[12px] text-white/40 uppercase tracking-[0.25em] font-bold">
+        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6 text-[12px] text-white/60 uppercase tracking-[0.25em] font-bold">
           <p>© 2025 R3BOOT. All rights reserved.</p>
           <div className="flex gap-12">
             <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
