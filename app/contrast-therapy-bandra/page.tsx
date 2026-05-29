@@ -84,7 +84,7 @@ export default function ContrastTherapyBandraPage() {
                 {[
                   { title: 'Clinical assessment first', body: 'Health intake confirms contrast therapy is safe for you.' },
                   { title: 'Breathing coaching', body: 'Controlled technique taught before cold immersion.' },
-                  { title: 'Full contrast protocol', body: 'Infrared sauna + ice bath in structured 3:1 sequence.' },
+                  { title: 'Full contrast protocol', body: 'Red light sauna (68°C) + ice bath (6–10°C). Day or Night Cycle based on your schedule.' },
                   { title: 'Integrated recovery', body: 'Massage, physio, pilates available same visit.' },
                 ].map((item, idx) => (
                   <div key={idx} className="bg-white dark:bg-white/5 p-8 rounded-[2.5rem] border border-gray-100 dark:border-white/5 shadow-sm">

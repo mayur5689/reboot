@@ -71,8 +71,8 @@ export default function ContrastTherapyWorliPage() {
                   tanks at those gyms rarely come with health screening or someone watching your response in the water.
                 </p>
                 <p>
-                  R3BOOT is 15–20 minutes away in Dadar East. Contrast therapy here means infrared sauna paired with physio-supervised
-                  ice bath — a 3:1 hot-to-cold protocol, not a solo dip after leg day. Also see{' '}
+                  R3BOOT is 15–20 minutes away in Dadar East. Contrast therapy here means red light sauna (68°C) paired with physio-supervised
+                  ice bath (6–10°C) — a structured Day or Night Cycle protocol, not a solo dip after leg day. Also see{' '}
                   <Link href="/contrast-therapy-lower-parel" className="text-[#513394] dark:text-[#A78BFA] font-bold hover:underline">
                     contrast therapy near Lower Parel
                   </Link>{' '}

@@ -10,9 +10,9 @@ import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema'
 import { contrastTherapyMumbaiFaqs } from '@/lib/faqs/contrast-therapy-mumbai'
 
 export const metadata: Metadata = {
-  title: 'Contrast Therapy Mumbai — Ice Bath & Infrared Sauna | R3BOOT',
+  title: 'Contrast Therapy Mumbai — Ice Bath & Red Light Sauna | R3BOOT',
   description:
-    'Contrast therapy Mumbai at R3BOOT — ice bath + infrared sauna, physio-supervised. Structured recovery protocol for athletes in Dadar. 5.0 ★ Google. Book via WhatsApp.',
+    'Contrast therapy Mumbai at R3BOOT — ice bath + red light sauna, physio-supervised. Day & Night Cycle protocols for athletes in Dadar. 5.0 ★ Google. Book via WhatsApp.',
   alternates: { canonical: '/contrast-therapy-mumbai' },
   keywords: [
     'contrast therapy Mumbai',
@@ -62,7 +62,7 @@ const whatToExpect = [
   },
   {
     title: 'Supervised protocol',
-    body: 'You move between infrared sauna and ice bath under team guidance. Most first-time clients find the cold phase challenging for the first 60 seconds, then manageable.',
+    body: 'You move between red light sauna (68°C) and ice bath (6–10°C) under team guidance. Most first-time clients find the cold phase challenging for the first 60 seconds, then manageable.',
   },
   {
     title: 'Post-session check-in',
@@ -105,7 +105,7 @@ export default function ContrastTherapyMumbaiPage() {
               <div className="w-1.5 h-1.5 rounded-full bg-white/50" />
             </div>
             <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black text-white mb-2 tracking-tighter leading-[1.05]">
-              Contrast Therapy in Mumbai | R3BOOT Ice Bath & Infrared Sauna
+              Contrast Therapy in Mumbai | R3BOOT Ice Bath & Red Light Sauna
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl text-white/80 max-w-3xl leading-relaxed font-medium mt-4">
               Clinically structured hot-cold recovery protocol for athletes and active adults. Supervised by physiotherapists.
@@ -133,9 +133,9 @@ export default function ContrastTherapyMumbaiPage() {
                   clears inflammatory waste from muscle tissue.
                 </p>
                 <p>
-                  At R3BOOT, our contrast therapy protocol combines an infrared sauna and ice bath in a clinically
-                  structured hot-cold sequence. Sessions are supervised by our physiotherapy team. The protocol,
-                  temperatures, and timing are set to evidence-based standards.
+                  At R3BOOT, our contrast therapy protocol combines a red light sauna (68°C) and ice bath (6–10°C) in a clinically
+                  structured hot-cold sequence. Sessions are supervised by our physiotherapy team. We run Day Cycles — ending cold to
+                  energise — and Night Cycles — ending hot for deep recovery and sleep.
                 </p>
               </div>
 
@@ -243,10 +243,10 @@ export default function ContrastTherapyMumbaiPage() {
               </p>
               <div className="space-y-6">
                 {[
-                  { title: 'During the heat phase', body: 'Blood vessels dilate. Blood flow to muscles increases. Oxygen and nutrients reach damaged tissue. Muscle tension decreases.' },
-                  { title: 'During the cold phase', body: 'Blood vessels constrict rapidly. Blood and metabolic waste (lactic acid, inflammatory cytokines) are forced away from muscles. Swelling reduces.' },
+                  { title: 'During the heat phase (Red Light Sauna, 68°C)', body: 'Blood vessels dilate. Blood flow to muscles increases. Oxygen and nutrients reach damaged tissue. Muscle tension decreases.' },
+                  { title: 'During the cold phase (Ice Bath, 6–10°C)', body: 'Blood vessels constrict rapidly. Blood and metabolic waste (lactic acid, inflammatory cytokines) are forced away from muscles. Swelling reduces.' },
                   { title: 'The alternation effect', body: 'Repeating the cycle creates a vascular pumping action. Research shows contrast therapy significantly reduces perceived muscle soreness compared to cold-water immersion alone.' },
-                  { title: 'Always end on cold', body: 'Finishing on cold locks in the anti-inflammatory effect and leaves your nervous system in a calm, recovered state.' },
+                  { title: 'Day Cycle vs Night Cycle', body: 'Day Cycle ends cold — stimulates the nervous system, improves alertness, no post-session fatigue. Night Cycle ends hot — promotes parasympathetic activation, supports deep recovery and sleep.' },
                 ].map((item, idx) => (
                   <div key={idx} className="flex gap-5 group">
                     <div className="w-10 h-10 rounded-2xl bg-[#513394]/10 dark:bg-[#8B5CF6]/20 flex items-center justify-center text-[#513394] dark:text-[#A78BFA] font-black shrink-0 text-sm group-hover:bg-[#513394] group-hover:text-white transition-all duration-300">
@@ -276,15 +276,15 @@ export default function ContrastTherapyMumbaiPage() {
               <span className="text-[#513394] dark:text-[#8B5CF6]">Protocol</span>
             </h2>
             <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed max-w-2xl mx-auto">
-              Built on established temperature ratios and timing guidelines used in professional sports recovery.
-              Hot-to-cold time ratio of 3:1. Adjusted by your physiotherapist based on training load and recovery goals.
+              Built on structured Day and Night Cycle protocols. Half Cycle (30 min) or Full Cycle (60 min — same protocol twice).
+              Red Light Sauna at 68°C. Ice Bath at 6–10°C. Adjusted by your physiotherapist based on training load and recovery goals.
             </p>
           </div>
 
           <div className="relative rounded-[2.5rem] overflow-hidden w-full shadow-2xl max-w-6xl mx-auto aspect-[16/9]">
             <Image
               src="/images/contrast-therapy-mumbai_service_page/contrast-therapy-mumbai_R3BOOT_PROTOCOL.webp"
-              alt="R3BOOT contrast therapy protocol — ice bath and infrared sauna Mumbai"
+              alt="R3BOOT contrast therapy protocol — ice bath and red light sauna Mumbai"
               fill
               className="object-cover"
             />
@@ -295,7 +295,7 @@ export default function ContrastTherapyMumbaiPage() {
                   R3BOOT PROTOCOL //
                 </span>
                 <p className="text-white text-2xl font-black tracking-tight leading-tight">
-                  Hot-to-cold ratio 3:1 — always end on cold
+                  Day Cycle ends cold. Night Cycle ends hot. Your physio decides.
                 </p>
               </div>
               <span className="hidden sm:block text-white/40 font-black tracking-widest text-xs uppercase">
@@ -305,7 +305,7 @@ export default function ContrastTherapyMumbaiPage() {
           </div>
 
           <p className="text-gray-400 dark:text-gray-500 text-sm mt-6 italic text-center">
-            The final cold phase locks in the anti-inflammatory effect and leaves your nervous system in a calm, recovered state.
+            Day Cycle ends cold to lock in the anti-inflammatory effect and keep you energised. Night Cycle ends hot to down-regulate the nervous system and support recovery and sleep.
           </p>
         </div>
       </section>
@@ -409,7 +409,7 @@ export default function ContrastTherapyMumbaiPage() {
             <div className="relative rounded-[2.5rem] overflow-hidden aspect-[4/5] w-full shadow-2xl">
               <Image
                 src="/images/contrast-therapy-mumbai_service_page/contrast-therapy-mumbai_sauna.webp"
-                alt="Infrared sauna contrast therapy session R3BOOT Mumbai"
+                alt="Red light sauna contrast therapy session R3BOOT Mumbai"
                 fill
                 className="object-cover"
               />
@@ -540,13 +540,13 @@ export default function ContrastTherapyMumbaiPage() {
                 <div className="relative rounded-[2rem] overflow-hidden shadow-xl">
                   <Image
                     src="/images/contrast-therapy-mumbai_service_page/contrast-therapy-mumbai_sauna.webp"
-                    alt="Infrared sauna for Mumbai athletes at R3BOOT"
+                    alt="Red light sauna for Mumbai athletes at R3BOOT"
                     fill
                     className="object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
                   <div className="absolute bottom-3 left-3 right-3">
-                    <p className="text-white text-xs font-black tracking-tight leading-tight">Infrared Sauna</p>
+                    <p className="text-white text-xs font-black tracking-tight leading-tight">Red Light Sauna</p>
                   </div>
                 </div>
                 <div className="relative rounded-[2rem] overflow-hidden shadow-xl">
@@ -754,7 +754,7 @@ export default function ContrastTherapyMumbaiPage() {
 
       <ServiceSchema
         serviceName="Contrast Therapy in Mumbai"
-        description="Clinically structured hot-cold recovery protocol using infrared sauna and ice bath. Supervised by physiotherapists at R3BOOT, Mumbai."
+        description="Clinically structured hot-cold recovery protocol using red light sauna (68°C) and ice bath (6–10°C). Day &amp; Night Cycle protocols supervised by physiotherapists at R3BOOT, Mumbai."
         serviceUrl="https://www.r3boot.in/contrast-therapy-mumbai"
       />
       <FAQSchema faqs={contrastTherapyMumbaiFaqs} />

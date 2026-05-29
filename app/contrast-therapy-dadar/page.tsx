@@ -10,7 +10,7 @@ import { contrastTherapyDadarFaqs } from '@/lib/faqs/contrast-therapy-dadar'
 export const metadata: Metadata = {
   title: 'Contrast Therapy Dadar | Ice Bath & Sauna — R3BOOT',
   description:
-    'Contrast therapy in Dadar East at R3BOOT — physio-supervised infrared sauna and ice bath. Walk-in from Dadar station. Half Cycle ₹2,500. 5.0 ★ Google. Book today.',
+    'Contrast therapy in Dadar East at R3BOOT — physio-supervised red light sauna and ice bath. Walk-in from Dadar station. Half Cycle ₹2,500. 5.0 ★ Google. Book today.',
   alternates: { canonical: '/contrast-therapy-dadar' },
   keywords: [
     'contrast therapy dadar',
@@ -52,7 +52,7 @@ export default function ContrastTherapyDadarPage() {
               Contrast Therapy in Dadar, Mumbai
             </h1>
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl leading-relaxed font-medium mt-4">
-              R3BOOT is in Dadar East — infrared sauna and supervised ice bath, physio-led recovery on your doorstep.
+              R3BOOT is in Dadar East — red light sauna (68°C) and supervised ice bath (6–10°C), physio-led recovery on your doorstep.
             </p>
           </div>
         </div>
@@ -71,7 +71,7 @@ export default function ContrastTherapyDadarPage() {
                   If you live or train in Dadar, Shivaji Park, Matunga, or Parel, contrast therapy is not a cross-city trip. It is local.
                 </p>
                 <p>
-                  Sessions alternate infrared sauna and supervised ice bath in a 3:1 hot-to-cold protocol. Physiotherapists conduct health
+                  Sessions alternate red light sauna and supervised ice bath. Your physiotherapist selects a Day Cycle (ends cold — energises) or Night Cycle (ends hot — deep recovery and sleep) based on your schedule. They conduct health
                   intake, teach breathing before cold immersion, and stay present through the full session. Stack with{' '}
                   <Link href="/sports-massage-dadar" className="text-[#513394] dark:text-[#A78BFA] font-bold hover:underline">
                     sports massage in Dadar
@@ -85,8 +85,8 @@ export default function ContrastTherapyDadarPage() {
               </div>
               <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-6">
                 {[
-                  { title: 'Half Cycle — ₹2,500', body: '30 minutes. Two rounds of sauna + ice bath.' },
-                  { title: 'Full Cycle — ₹3,500', body: '60 minutes. Three to four rounds for deeper recovery.' },
+                  { title: 'Half Cycle — ₹2,500', body: '30 minutes. One complete contrast sequence.' },
+                  { title: 'Full Cycle — ₹3,500', body: '60 minutes. Same Half Cycle protocol repeated twice.' },
                   { title: 'Physio-supervised', body: 'Health intake and breathing guidance every session.' },
                   { title: 'Integrated recovery', body: 'Massage, physio, pilates under one roof.' },
                 ].map((item, idx) => (
@@ -123,7 +123,7 @@ export default function ContrastTherapyDadarPage() {
 
       <ServiceSchema
         serviceName="Contrast Therapy Dadar Mumbai"
-        description="Physio-supervised contrast therapy in Dadar East — infrared sauna and ice bath at R3BOOT, Palai Plaza."
+        description="Physio-supervised contrast therapy in Dadar East — red light sauna (68°C) and ice bath (6–10°C) at R3BOOT, Palai Plaza."
         serviceUrl="https://www.r3boot.in/contrast-therapy-dadar"
       />
       <FAQSchema faqs={contrastTherapyDadarFaqs} />

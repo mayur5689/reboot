@@ -7,7 +7,7 @@ export const contrastTherapyMumbaiFaqs = [
   {
     question: 'How cold is the ice bath at R3BOOT?',
     answer:
-      'Our ice bath is maintained between 10 and 15 degrees Celsius. This is within the evidence-based range for therapeutic cold immersion. The temperature is cold enough to produce the vasoconstriction effect without being extreme. Our team guides your breathing through the cold phase, which makes the experience manageable for most first-time clients.',
+      'Our ice bath is maintained between 6 and 10 degrees Celsius — the evidence-based range for therapeutic cold immersion. Our team guides your breathing through the cold phase, which makes the experience manageable for most first-time clients.',
   },
   {
     question: 'How soon will I feel a difference after contrast therapy?',
@@ -27,11 +27,11 @@ export const contrastTherapyMumbaiFaqs = [
   {
     question: 'How much does contrast therapy cost at R3BOOT Mumbai?',
     answer:
-      'Contrast therapy at R3BOOT costs ₹2,500 for a Half Cycle (30 minutes) or ₹3,500 for a Full Cycle (60 minutes). The Half Cycle covers two rounds of alternating Red Light Sauna and Ice Bath. The Full Cycle includes three to four rounds for deeper recovery. Both sessions are supervised by our physiotherapy team at Dadar, Mumbai.',
+      'Contrast therapy at R3BOOT costs ₹2,500 for a Half Cycle (30 minutes) or ₹3,500 for a Full Cycle (60 minutes). The Full Cycle repeats the same Half Cycle protocol twice — same sequence, same temperatures, no mixing. Both sessions are supervised by our physiotherapy team at Dadar, Mumbai.',
   },
   {
     question: 'What is the difference between the Half Cycle and Full Cycle?',
     answer:
-      'The Half Cycle (30 min, ₹2,500) suits regular maintenance recovery or first-time clients new to cold exposure. The Full Cycle (60 min, ₹3,500) delivers deeper recovery with more alternating rounds and is recommended after competition, heavy training weeks, or for athletes seeking maximum benefit from each session.',
+      'The Half Cycle (30 min, ₹2,500) is one complete contrast sequence — suitable for regular maintenance recovery or first-time clients. The Full Cycle (60 min, ₹3,500) repeats the same Half Cycle protocol a second time with no changes to the sequence, temperatures, or intent. Recommended after competition, heavy training weeks, or for athletes who want maximum benefit per session.',
   },
 ]
