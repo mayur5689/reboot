@@ -8,6 +8,11 @@ const nextConfig = {
                 destination: '/contrast-therapy-mumbai',
                 permanent: true,
             },
+            {
+                source: '/services/hydrotherapy',
+                destination: '/services/aqua-therapy',
+                permanent: true,
+            },
         ]
     },
     images: {

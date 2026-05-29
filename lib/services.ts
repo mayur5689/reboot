@@ -158,10 +158,10 @@ export const services: Service[] = [
         slug: "counselling-mental-training"
     },
     {
-        title: "Hydrotherapy",
+        title: "Aqua Therapy",
         category: "THERAPY",
         description: "Recovery through the therapeutic power of water.",
-        fullDescription: "Hydrotherapy harnesses the healing properties of water to accelerate recovery and improve physical function. Our state-of-the-art hydrotherapy pool provides a low-impact environment perfect for rehabilitation, pain relief, and improving mobility without putting stress on your joints.",
+        fullDescription: "Aqua Therapy harnesses the healing properties of water to accelerate recovery and improve physical function. Our state-of-the-art aqua therapy pool provides a low-impact environment perfect for rehabilitation, pain relief, and improving mobility without putting stress on your joints.",
         benefits: [
             "Low-impact rehabilitation",
             "Reduced joint stress",
@@ -176,7 +176,7 @@ export const services: Service[] = [
             { title: "Cool Down", description: "Gentle stretches and relaxation to finish the session." }
         ],
         image: "/images/service/Services_image/Hydrotherapy_!.webp",
-        slug: "hydrotherapy"
+        slug: "aqua-therapy"
     },
     {
         title: "Sports Massage",

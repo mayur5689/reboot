@@ -37,7 +37,7 @@ export default function AboutPage() {
 
                             <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 {[
-                                    "Clinical Physiotherapy & Hydrotherapy",
+                                    "Clinical Physiotherapy & Aqua Therapy",
                                     "Advanced Recovery Modalities",
                                     "Personalized Performance Programs",
                                     "Mental Training & Counselling"
@@ -317,7 +317,7 @@ export default function AboutPage() {
 
                             <div className="space-y-4">
                                 {[
-                                    { title: "Hydrotherapy & Contrast Bathing", desc: "Regulate blood flow and reduce muscle soreness." },
+                                    { title: "Aqua Therapy & Contrast Bathing", desc: "Regulate blood flow and reduce muscle soreness." },
                                     { title: "Infrared Sauna & Heat Exposure", desc: "Cellular repair and detoxification for deeper recovery." },
                                     { title: "Pneumatic Compression", desc: "Dynamic compression to flush out metabolic waste." },
                                     { title: "Sports Massage", desc: "Targeted soft-tissue work to support recovery and reduce muscle tension between training." }

@@ -152,8 +152,8 @@ const pairedServices = [
     desc: 'Alternating infrared sauna and ice bath to accelerate vascular clearance post-run. Many runners use contrast therapy the day after a long run and sports massage mid-week.',
   },
   {
-    title: 'Hydrotherapy',
-    href: '/services/hydrotherapy',
+    title: 'Aqua Therapy',
+    href: '/services/aqua-therapy',
     desc: 'Aquatic therapy for runners returning from injury who need low-impact loading before returning to road running.',
   },
   {

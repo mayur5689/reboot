@@ -52,7 +52,7 @@ export default function TermsOfService() {
                             <span className="text-[#513394] dark:text-[#A78BFA]">01.</span> About R3BOOT
                         </h2>
                         <p>
-                            R3BOOT is a recovery, rehabilitation, physiotherapy, and performance wellness brand offering services including but not limited to physiotherapy, hydrotherapy, Pilates, counselling, mental training, massage therapy, and recovery modalities such as ice baths, sauna, compression therapy, and contrast therapy.
+                            R3BOOT is a recovery, rehabilitation, physiotherapy, and performance wellness brand offering services including but not limited to physiotherapy, aqua therapy, Pilates, counselling, mental training, massage therapy, and recovery modalities such as ice baths, sauna, compression therapy, and contrast therapy.
                         </p>
                         <p>
                             R3BOOT operates as a wellness and rehabilitation service provider. We do not provide emergency medical care.

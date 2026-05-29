@@ -3,7 +3,7 @@ import Hero from '@/components/Hero'
 
 export const metadata: Metadata = {
   title: 'Therapy Clinic in Dadar, Mumbai | R3BOOT Recovery Centre',
-  description: 'Expert therapy clinic in Dadar, Mumbai. Physiotherapy, contrast therapy, hydrotherapy & sports massage. Certified specialists, 7-day availability. Book today.',
+  description: 'Expert therapy clinic in Dadar, Mumbai. Physiotherapy, contrast therapy, aqua therapy & sports massage. Certified specialists, 7-day availability. Book today.',
   keywords: ['therapy dadar', 'therapy clinic dadar', 'recovery clinic mumbai', 'physiotherapy dadar', 'sports recovery mumbai', 'R3BOOT'],
   alternates: { canonical: '/' },
 }

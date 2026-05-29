@@ -365,8 +365,8 @@ export default function ContrastTherapyMumbaiPage() {
 
             <p className="text-gray-500 dark:text-gray-400 text-sm mt-8 leading-relaxed text-center">
               Our physiotherapists will tell you which is right for your situation. We also offer{' '}
-              <Link href="/services/hydrotherapy" className="text-[#513394] dark:text-[#A78BFA] font-bold hover:underline underline-offset-4">
-                hydrotherapy
+              <Link href="/services/aqua-therapy" className="text-[#513394] dark:text-[#A78BFA] font-bold hover:underline underline-offset-4">
+                aqua therapy
               </Link>{' '}
               and can combine treatment approaches based on your recovery stage.
             </p>

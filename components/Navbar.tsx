@@ -358,7 +358,7 @@ export default function Navbar() {
 // Helper to get icons for the mega menu
 function getServiceIcon(title: string) {
   switch (title) {
-    case "Hydrotherapy": return <WaterIcon />;
+    case "Aqua Therapy": return <WaterIcon />;
     case "Clinical Pilates": return <PilatesIcon />;
     case "Contrast Therapy": return <ContrastIcon />;
     case "Sports Massage": return <MassageIcon />;

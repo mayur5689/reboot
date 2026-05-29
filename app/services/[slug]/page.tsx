@@ -10,7 +10,7 @@ interface ServicePageProps {
 }
 
 const metadataOverrides: Record<string, { title: string; description: string }> = {
-    'hydrotherapy': {
+    'aqua-therapy': {
         title: 'Aqua Therapy for Sports Recovery in Mumbai | R3BOOT Dadar',
         description: 'Pool-based aqua therapy at R3BOOT Dadar, Mumbai. Supervised by physiotherapists for sports injury rehab, joint recovery, and post-surgery treatment. Book a session.',
     },

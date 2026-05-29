@@ -5,7 +5,7 @@ import { services } from '@/lib/services'
 
 export const metadata: Metadata = {
   title: 'Therapy & Recovery Services in Dadar Mumbai | R3BOOT',
-  description: 'Physiotherapy, contrast therapy, hydrotherapy, sports massage & sports psychology in Dadar, Mumbai. Book your session at R3BOOT — open 7 days.',
+  description: 'Physiotherapy, contrast therapy, aqua therapy, sports massage & sports psychology in Dadar, Mumbai. Book your session at R3BOOT — open 7 days.',
   keywords: ['therapy dadar', 'therapy services dadar', 'recovery services dadar', 'physiotherapy mumbai', 'contrast therapy dadar', 'sports clinic mumbai'],
   alternates: { canonical: '/services' },
 }
