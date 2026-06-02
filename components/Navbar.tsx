@@ -8,19 +8,6 @@ import { services } from '@/lib/services'
 import { useTheme } from 'next-themes'
 import { Sun, Moon } from 'lucide-react'
 
-const BANNER_KEY = 'r3boot-banner-may-2026'
-
-// Half-circle banner icon: cold (filled) left / warm (dots) right
-function BannerThermalIcon() {
-  return (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true" className="shrink-0">
-      <circle cx="12" cy="12" r="8.5" stroke="rgba(255,255,255,0.45)" strokeWidth="1.5" />
-      <path d="M12 3.5C7.306 3.5 3.5 7.306 3.5 12C3.5 16.694 7.306 20.5 12 20.5V3.5Z" fill="white" fillOpacity="0.88" />
-      <circle cx="16.8" cy="9.2" r="1.25" fill="white" fillOpacity="0.48" />
-      <circle cx="17.2" cy="14.8" r="1.25" fill="white" fillOpacity="0.48" />
-    </svg>
-  )
-}
 
 export default function Navbar() {
   const pathname = usePathname()
@@ -29,16 +16,11 @@ export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const { theme, setTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
-  const [showBanner, setShowBanner] = useState(false)
-
   const isHome = pathname === '/'
   const shouldBeSolid = !isHome || isScrolled || isServicesOpen
-  const bannerH = showBanner ? 'top-12' : 'top-0'
 
   useEffect(() => {
     setMounted(true)
-    const dismissed = localStorage.getItem(BANNER_KEY)
-    if (!dismissed) setShowBanner(true)
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50)
     }
@@ -47,77 +29,9 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const dismissBanner = () => {
-    setShowBanner(false)
-    localStorage.setItem(BANNER_KEY, '1')
-    window.dispatchEvent(new Event('banner-dismissed'))
-  }
-
   return (
     <>
-      {/* ── Announcement Banner — Thermal Surge ── */}
-      {showBanner && (
-        <div
-          className="fixed top-0 left-0 right-0 z-[150] h-12 flex items-center overflow-hidden"
-          style={{ background: 'linear-gradient(135deg, #1D4ED8 0%, #4C1D95 35%, #513394 58%, #B45309 100%)' }}
-        >
-          {/* Ambient light glint */}
-          <div
-            className="absolute top-0 bottom-0 animate-banner-sweep pointer-events-none"
-            style={{
-              width: '90px',
-              background: 'linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.10) 50%, transparent 100%)',
-            }}
-          />
-          <div className="absolute bottom-0 left-0 right-0 h-px bg-white/15 pointer-events-none" />
-
-          {/* Left spacer — mirrors dismiss width for true centering */}
-          <div className="w-9 shrink-0" />
-
-          {/* Centered group */}
-          <div className="flex-1 flex items-center justify-center gap-2 sm:gap-4 min-w-0 px-1">
-            <p className="text-white uppercase font-bold text-[10px] sm:text-[13px] tracking-[0.07em] leading-none whitespace-nowrap">
-              {/* Mobile: condensed */}
-              <span className="sm:hidden">
-                <span className="font-black">50% OFF</span>
-                {' '}1ST CONTRAST SESSION ·{' '}
-                <span className="text-amber-200 font-black">ENDS MAY 31</span>
-              </span>
-              {/* Desktop: full */}
-              <span className="hidden sm:inline">
-                <span className="font-black">50% OFF</span>
-                {' '}YOUR FIRST CONTRAST THERAPY SESSION{' '}
-                <span className="text-white/40">·</span>
-                {' '}<span className="text-amber-200 font-black">ENDS MAY 31</span>
-                {' '}<span className="text-white/40">·</span>
-                {' '}<span className="text-white/70">LIMITED SLOTS</span>
-              </span>
-            </p>
-
-            <a
-              href="tel:+919702368612"
-              className="shrink-0 flex items-center h-7 px-3 sm:px-5 rounded-full bg-white text-[#3D1282] font-black text-[10px] sm:text-[12px] tracking-[0.1em] uppercase whitespace-nowrap hover:bg-white/90 active:scale-95 transition-all duration-150 shadow-[0_2px_12px_rgba(0,0,0,0.25)]"
-            >
-              BOOK NOW
-            </a>
-          </div>
-
-          {/* Dismiss — right-anchored, matches spacer width */}
-          <div className="w-9 shrink-0 flex items-center justify-center">
-            <button
-              onClick={dismissBanner}
-              aria-label="Dismiss announcement"
-              className="w-7 h-7 flex items-center justify-center rounded-full text-white/55 hover:text-white hover:bg-white/15 transition-all duration-200"
-            >
-              <svg className="w-2.5 h-2.5" viewBox="0 0 10 10" fill="none" aria-hidden="true">
-                <path d="M1 1l8 8M9 1L1 9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-              </svg>
-            </button>
-          </div>
-        </div>
-      )}
-
-      <nav className={`fixed ${bannerH} left-0 right-0 z-[100] transition-all duration-500 ${shouldBeSolid
+      <nav className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 ${shouldBeSolid
         ? 'bg-white/95 dark:bg-[#0A0A0A]/95 backdrop-blur-md py-3 shadow-xl'
         : 'bg-gradient-to-b from-black/80 via-black/10 to-transparent py-5'
         }`}>
