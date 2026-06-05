@@ -138,7 +138,7 @@ export default function AboutPage() {
                                 name: "Vaishali Vijay Rauniyar",
                                 role: "Physiotherapist | Sports & Orthopedic Rehabilitation",
                                 image: "/images/trainer2/Trainers/Dr. Vaishali Vijay Rauniyar.webp",
-                                bio: "Clinical experience in sports, orthopedic, and neurological rehabilitation. Certified in Dry Needling and Aquatic Rehabilitation, she designs personalized plans for efficient recovery."
+                                bio: "Clinical experience in sports and orthopedic rehabilitation. Certified in Dry Needling and Aquatic Rehabilitation, she designs personalized plans for efficient recovery."
                             },
                             {
                                 name: "Dr. Hiral Parikh",

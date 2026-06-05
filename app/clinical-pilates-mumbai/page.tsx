@@ -558,7 +558,7 @@ export default function ClinicalPilatesMumbaiPage() {
               BPT graduate from Pad. Dr. D.Y. Patil College of Physiotherapy, Navi Mumbai, with over 15 years of clinical experience. At R3BOOT, Dr. Hiral leads physiotherapy services with focused expertise in sports rehabilitation and post-surgical recovery — helping athletes return to performance and patients rebuild function. Her clinical Pilates programs are designed around each patient&apos;s assessment findings, not adapted from a class structure.
             </p>
             <p className="text-gray-600 dark:text-gray-400 text-base leading-relaxed">
-              Clinical Pilates programs at R3BOOT are also designed by <strong className="text-gray-900 dark:text-white">Dr. Vaishali Vijay Rauniyar</strong>, certified in Dry Needling and Aquatic Rehabilitation with deep experience in sports, orthopedic, and neurological rehabilitation.
+              Clinical Pilates programs at R3BOOT are also designed by <strong className="text-gray-900 dark:text-white">Dr. Vaishali Vijay Rauniyar</strong>, certified in Dry Needling and Aquatic Rehabilitation with deep experience in sports and orthopedic rehabilitation.
             </p>
           </div>
         </div>

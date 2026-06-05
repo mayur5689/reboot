@@ -648,7 +648,7 @@ export default function PhysiotherapyMumbaiPage() {
 
       <ServiceSchema
         serviceName="Physiotherapy in Mumbai"
-        description="Clinical physiotherapy in Mumbai at R3BOOT, Dadar East. Back pain, knee pain, neck pain, sports injuries, post-surgery rehabilitation and neurological rehab. Dr. Hiral Parikh (BPT, 15+ years) and Dr. Vaishali Vijay Rauniyar. Dry needling and aquatic rehabilitation available."
+        description="Clinical physiotherapy in Mumbai at R3BOOT, Dadar East. Back pain, knee pain, neck pain, sports injuries, and post-surgery rehabilitation. Dr. Hiral Parikh (BPT, 15+ years) and Dr. Vaishali Vijay Rauniyar. Dry needling and aquatic rehabilitation available."
         serviceUrl="https://www.r3boot.in/physiotherapy-mumbai"
       />
       <FAQSchema faqs={physiotherapyMumbaiFaqs} />

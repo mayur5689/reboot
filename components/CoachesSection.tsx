@@ -34,7 +34,7 @@ const coaches: Coach[] = [
     name: "Vaishali Vijay Rauniyar",
     role: "Physiotherapist | Sports & Orthopedic Rehabilitation",
     imageSrc: "/images/trainer2/Trainers/Dr. Vaishali Vijay Rauniyar.webp",
-    description: "Clinical experience in sports, orthopedic, and neurological rehabilitation. Certified in Dry Needling and Aquatic Rehabilitation, she designs personalized plans for efficient recovery."
+    description: "Clinical experience in sports and orthopedic rehabilitation. Certified in Dry Needling and Aquatic Rehabilitation, she designs personalized plans for efficient recovery."
   },
   {
     id: "diyan",
