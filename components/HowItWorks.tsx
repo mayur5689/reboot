@@ -12,7 +12,7 @@ const steps = [
     {
         number: "02",
         title: "Personalized Plan",
-        description: "Rehab and performance programs tailored to your body — realistic, flexible, and sustainable."
+        description: "Rehab and performance programs tailored to your body | realistic, flexible, and sustainable."
     },
     {
         number: "03",
@@ -27,7 +27,7 @@ const steps = [
     {
         number: "05",
         title: "Long-Term Balance",
-        description: "Progress doesn't end here — we'll refine, celebrate, and keep building your peak performance together."
+        description: "Progress doesn't end here | we'll refine, celebrate, and keep building your peak performance together."
     }
 ]
 
@@ -48,7 +48,7 @@ export default function HowItWorks() {
                                 <span className="text-[#513394] dark:text-[#A78BFA]">lasting results</span>
                             </h2>
                             <p className="text-gray-500 dark:text-gray-400 text-base md:text-lg leading-relaxed max-w-lg mb-8">
-                                Every transformation starts with structure. Here&apos;s how we turn recovery goals into real progress — one step at a time.
+                                Every transformation starts with structure. Here&apos;s how we turn recovery goals into real progress, one step at a time.
                             </p>
 
                             <a

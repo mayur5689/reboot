@@ -8,9 +8,9 @@ import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema'
 import { contrastTherapyWorliFaqs } from '@/lib/faqs/contrast-therapy-worli'
 
 export const metadata: Metadata = {
-  title: 'Contrast Therapy Near Worli | Ice Bath & Sauna — R3BOOT Dadar',
+  title: 'Contrast Therapy Near Worli | Ice Bath & Sauna | R3BOOT Dadar',
   description:
-    'Contrast therapy near Worli at R3BOOT Dadar — 15 min away. Physio-supervised sauna & ice bath for sea face runners & LP professionals. 5.0 ★ Google.',
+    'Contrast therapy near Worli at R3BOOT Dadar | 15 min away. Physio-supervised sauna & ice bath for sea face runners & LP professionals. 5.0 ★ Google.',
   alternates: { canonical: '/contrast-therapy-worli' },
   keywords: [
     'contrast therapy worli',
@@ -28,7 +28,7 @@ export default function ContrastTherapyWorliPage() {
       <section className="relative h-[70vh] flex items-end overflow-hidden">
         <Image
           src="/images/contrast-therapy-mumbai_service_page/contrast-therapy-mumbai_ice_bath_lady.webp"
-          alt="Contrast therapy near Worli Mumbai — R3BOOT Dadar"
+          alt="Contrast therapy near Worli Mumbai, R3BOOT Dadar"
           fill
           className="object-cover"
           priority
@@ -52,7 +52,7 @@ export default function ContrastTherapyWorliPage() {
               Contrast Therapy Near Worli, Mumbai
             </h1>
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl leading-relaxed font-medium mt-4">
-              R3BOOT in Dadar East — 15–20 min from Worli. Supervised sauna and ice bath for runners, cyclists, and gym-goers.
+              R3BOOT in Dadar East, 15–20 min from Worli. Supervised sauna and ice bath for runners, cyclists, and gym-goers.
             </p>
           </div>
         </div>
@@ -72,7 +72,7 @@ export default function ContrastTherapyWorliPage() {
                 </p>
                 <p>
                   R3BOOT is 15–20 minutes away in Dadar East. Contrast therapy here means red light sauna (68°C) paired with physio-supervised
-                  ice bath (6–10°C) — a structured Day or Night Cycle protocol, not a solo dip after leg day. Also see{' '}
+                  ice bath (6–10°C), a structured Day or Night Cycle protocol, not a solo dip after leg day. Also see{' '}
                   <Link href="/contrast-therapy-lower-parel" className="text-[#513394] dark:text-[#A78BFA] font-bold hover:underline">
                     contrast therapy near Lower Parel
                   </Link>{' '}

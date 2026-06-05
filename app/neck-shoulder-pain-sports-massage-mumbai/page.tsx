@@ -10,7 +10,7 @@ import { neckShoulderPainSportsMassageFaqs } from '@/lib/faqs/neck-shoulder-pain
 export const metadata: Metadata = {
   title: 'Sports Massage Neck & Shoulder Pain Mumbai | R3BOOT Dadar',
   description:
-    'Sports massage for neck & shoulder pain at R3BOOT Mumbai. Trapezius, levator scapulae & scalenes — targeted relief for desk workers and athletes. 5.0 ★ Google. Book via WhatsApp.',
+    'Sports massage for neck & shoulder pain at R3BOOT Mumbai. Trapezius, levator scapulae & scalenes | targeted relief for desk workers and athletes. 5.0 ★ Google. Book via WhatsApp.',
   alternates: { canonical: '/neck-shoulder-pain-sports-massage-mumbai' },
   keywords: [
     'sports massage for neck pain mumbai',
@@ -87,7 +87,7 @@ export default function NeckShoulderPainSportsMassageMumbaiPage() {
               Sports Massage for Neck & Shoulder Pain in Mumbai
             </h1>
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl leading-relaxed font-medium mt-4">
-              Trapezius, levator scapulae, scalenes — targeted release for desk workers, athletes, and gym-goers.
+              Trapezius, levator scapulae, scalenes, targeted release for desk workers, athletes, and gym-goers.
             </p>
           </div>
         </div>
@@ -103,7 +103,7 @@ export default function NeckShoulderPainSportsMassageMumbaiPage() {
               </h2>
               <div className="prose prose-xl text-gray-600 dark:text-gray-400 dark:prose-invert max-w-none leading-relaxed space-y-6">
                 <p>
-                  Yes — and it is often faster than stretching or rest for the type of neck pain most active
+                  Yes, and it is often faster than stretching or rest for the type of neck pain most active
                   Mumbai professionals carry. The pattern is consistent: nine hours at a desk in BKC or Lower Parel,
                   followed by an overhead pressing session at the gym, followed by another morning with a stiff
                   neck. The upper trapezius, levator scapulae, and scalenes accumulate tension faster than passive
@@ -112,7 +112,7 @@ export default function NeckShoulderPainSportsMassageMumbaiPage() {
                 </p>
                 <p>
                   At R3BOOT in Dadar East, therapist Akshay Nalawde identifies the exact muscles holding the
-                  pattern — trapezius, suboccipitals, scalenes, pec minor — and treats them in sequence.
+                  pattern, trapezius, suboccipitals, scalenes, pec minor, and treats them in sequence.
                   Sessions begin with assessment of cervical range of motion and scapular position.
                   Treatment is anatomy-specific, not a generic neck-and-shoulder rub.
                 </p>
@@ -189,7 +189,7 @@ export default function NeckShoulderPainSportsMassageMumbaiPage() {
                 Central Mumbai's <span className="text-[#513394] dark:text-[#8B5CF6]">Recovery Clinic</span>
               </h2>
               <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed max-w-3xl mx-auto">
-                R3BOOT is at Dadar East — 5 minutes from Dadar station on the Central Line. Professionals from BKC, Lower Parel, Worli, Parel, and Bandra use us as their midpoint recovery stop.
+                R3BOOT is at Dadar East, 5 minutes from Dadar station on the Central Line. Professionals from BKC, Lower Parel, Worli, Parel, and Bandra use us as their midpoint recovery stop.
               </p>
             </div>
             <div className="bg-[#1A1A1A] rounded-[2rem] p-8 lg:p-10 text-white">
@@ -225,7 +225,7 @@ export default function NeckShoulderPainSportsMassageMumbaiPage() {
               Neck and Shoulder Pain That <span className="text-white/50">Keeps Coming Back?</span>
             </h2>
             <p className="text-xl text-white/70 mb-12 leading-relaxed font-medium max-w-3xl mx-auto">
-              Sports massage for neck and shoulder pain at R3BOOT, Dadar East. Treat the muscle causing it — not just the symptom.
+              Sports massage for neck and shoulder pain at R3BOOT, Dadar East. Treat the muscle causing it, not just the symptom.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
               <a href="tel:+919702368612" className="w-full sm:w-auto bg-white text-[#513394] font-black px-10 py-5 rounded-full transition-all hover:scale-105 shadow-2xl text-lg tracking-wide">

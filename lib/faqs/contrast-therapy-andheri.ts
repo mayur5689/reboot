@@ -2,7 +2,7 @@ export const contrastTherapyAndheriFaqs = [
   {
     question: 'Is contrast therapy near Andheri available at R3BOOT?',
     answer:
-      'Yes. R3BOOT in Dadar East is approximately 30–40 minutes from Andheri by road, or reachable via train through Dadar station. We offer physio-supervised contrast therapy — red light sauna and ice bath — for Andheri gym-goers, runners, and athletes.',
+      'Yes. R3BOOT in Dadar East is approximately 30–40 minutes from Andheri by road, or reachable via train through Dadar station. We offer physio-supervised contrast therapy, red light sauna and ice bath, for Andheri gym-goers, runners, and athletes.',
   },
   {
     question: 'Why would someone from Andheri come to R3BOOT instead of a local ice bath studio?',

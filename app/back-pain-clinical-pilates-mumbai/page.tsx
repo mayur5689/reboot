@@ -8,9 +8,9 @@ import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema'
 import { backPainClinicalPilatesFaqs } from '@/lib/faqs/back-pain-clinical-pilates-mumbai'
 
 export const metadata: Metadata = {
-  title: 'Clinical Pilates for Back Pain Mumbai | Physio-Led — R3BOOT',
+  title: 'Clinical Pilates for Back Pain Mumbai | Physio-Led | R3BOOT',
   description:
-    'Clinical Pilates for back pain at R3BOOT Mumbai. Physio-led programs for L4-L5 disc & lumbar instability — assessment-first, not a class. 5.0 ★ Google. Book via WhatsApp.',
+    'Clinical Pilates for back pain at R3BOOT Mumbai. Physio-led programs for L4-L5 disc & lumbar instability, assessment-first, not a class. 5.0 ★ Google. Book via WhatsApp.',
   alternates: { canonical: '/back-pain-clinical-pilates-mumbai' },
   keywords: [
     'clinical pilates for back pain mumbai',
@@ -30,7 +30,7 @@ const spineConditions = [
   },
   {
     condition: 'L5-S1 Disc Degeneration',
-    what: 'Loss of disc height and instability at the lumbosacral junction — common in desk workers and heavy lifters',
+    what: 'Loss of disc height and instability at the lumbosacral junction, common in desk workers and heavy lifters',
     pilatesRole: 'Deep core recruitment, segmental control, hip mobility work to reduce lumbosacral compression',
   },
   {
@@ -45,7 +45,7 @@ const spineConditions = [
   },
   {
     condition: 'Post-Discectomy / Post-Fusion Rehab',
-    what: 'Muscle inhibition and movement fear after spinal surgery — common barrier to full recovery',
+    what: 'Muscle inhibition and movement fear after spinal surgery, common barrier to full recovery',
     pilatesRole: 'Graded movement exposure, scar tissue mobilisation support, progressive spinal loading',
   },
   {
@@ -87,7 +87,7 @@ export default function BackPainClinicalPilatesMumbaiPage() {
               Clinical Pilates for Back Pain in Mumbai
             </h1>
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl leading-relaxed font-medium mt-4">
-              L4-L5 disc, lumbar instability, chronic back pain — physiotherapist-led programs at R3BOOT, Dadar East.
+              L4-L5 disc, lumbar instability, chronic back pain, physiotherapist-led programs at R3BOOT, Dadar East.
             </p>
           </div>
         </div>
@@ -103,17 +103,16 @@ export default function BackPainClinicalPilatesMumbaiPage() {
               </h2>
               <div className="prose prose-xl text-gray-600 dark:text-gray-400 dark:prose-invert max-w-none leading-relaxed space-y-6">
                 <p>
-                  Yes — and it is one of the most evidence-supported interventions for chronic lower back pain available.
+                  Yes, and it is one of the most evidence-supported interventions for chronic lower back pain available.
                   Research shows clinical Pilates outperforms standard physiotherapy for back pain outcomes when continued
-                  beyond the acute phase. The reason: most lower back pain is a motor control problem. The deep stabilisers —
-                  lumbar multifidus, transversus abdominis, pelvic floor — stop functioning correctly after injury or
+                  beyond the acute phase. The reason: most lower back pain is a motor control problem. The deep stabilisers, lumbar multifidus, transversus abdominis, pelvic floor, stop functioning correctly after injury or
                   chronic pain, and no amount of stretching or passive treatment rebuilds them. Clinical Pilates does.
                 </p>
                 <p>
                   At R3BOOT in Dadar East, Dr. Hiral Parikh (BPT, 15+ years) and Dr. Vaishali Vijay Rauniyar (certified
                   Dry Needling, Aquatic Rehabilitation) design your program from a physiotherapy assessment of your
                   specific spine pathology. L4-L5 disc, L5-S1 instability, facet joint pain, muscular back pain,
-                  post-fusion — each requires a different exercise selection. Generic Pilates classes use the same routine
+                  post-fusion, each requires a different exercise selection. Generic Pilates classes use the same routine
                   for all backs. Clinical Pilates is different for every spine.
                 </p>
               </div>
@@ -186,8 +185,8 @@ export default function BackPainClinicalPilatesMumbaiPage() {
               Why Group Pilates Classes Often Make <span className="text-[#513394] dark:text-[#8B5CF6]">Back Pain Worse</span>
             </h2>
             <p>
-              Standard Pilates classes in Mumbai — whether instructor-led group sessions or general reformer classes
-              at fitness studios — are built on the assumption that all participants have healthy spines. The roll-up,
+              Standard Pilates classes in Mumbai, whether instructor-led group sessions or general reformer classes
+              at fitness studios, are built on the assumption that all participants have healthy spines. The roll-up,
               the hundred, double leg stretch, and similar exercises are fundamental to most Pilates class structures.
               For someone with an active L4-L5 disc herniation, these movements increase intradiscal pressure and
               can provoke or worsen nerve symptoms. A group instructor, regardless of their certification level,
@@ -197,8 +196,7 @@ export default function BackPainClinicalPilatesMumbaiPage() {
               The deeper issue is that lower back pain driven by disc pathology, facet joint irritation, or
               sacroiliac dysfunction each has a different pain mechanism and a different exercise tolerance.
               Flexion-based movements aggravate disc herniations. Extension-based movements aggravate facet pain.
-              Rotational loading without stability aggravates SIJ dysfunction. A class that mixes these presentations —
-              which every general Pilates class does — cannot account for all of them simultaneously.
+              Rotational loading without stability aggravates SIJ dysfunction. A class that mixes these presentations, which every general Pilates class does, cannot account for all of them simultaneously.
             </p>
             <p>
               At R3BOOT in Dadar East, Mumbai, Dr. Hiral Parikh screens every client for their specific pain
@@ -225,8 +223,8 @@ export default function BackPainClinicalPilatesMumbaiPage() {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
               {[
                 { step: '01', label: 'Physiotherapy Assessment', body: 'Your physiotherapist identifies your specific spine pathology, pain pattern, and motor control deficits. Imaging reports (MRI, X-ray) reviewed. Exercise contraindications established. This is what separates clinical Pilates from a class.' },
-                { step: '02', label: 'Prescribed Program', body: 'Exercises selected for your specific diagnosis — not a back pain template. L4-L5 disc herniation requires different exercise selection than facet joint pain or SIJ dysfunction. Every movement has a clinical reason for your particular spine.' },
-                { step: '03', label: 'Progressive Loading', body: 'Program advances based on your clinical response — not a weekly class schedule. Home exercise program taught in parallel. Physiotherapy manual therapy or dry needling added in the same session where appropriate.' },
+                { step: '02', label: 'Prescribed Program', body: 'Exercises selected for your specific diagnosis, not a back pain template. L4-L5 disc herniation requires different exercise selection than facet joint pain or SIJ dysfunction. Every movement has a clinical reason for your particular spine.' },
+                { step: '03', label: 'Progressive Loading', body: 'Program advances based on your clinical response, not a weekly class schedule. Home exercise program taught in parallel. Physiotherapy manual therapy or dry needling added in the same session where appropriate.' },
               ].map((item) => (
                 <div key={item.step} className="bg-white dark:bg-white/5 p-8 rounded-[2.5rem] border border-gray-100 dark:border-white/5 shadow-sm hover:shadow-xl group transition-all duration-500 relative overflow-hidden">
                   <div className="absolute -top-4 -right-4 text-8xl font-black text-gray-50 dark:text-white/5 group-hover:text-[#513394]/5 transition-colors">{item.step}</div>
@@ -249,10 +247,10 @@ export default function BackPainClinicalPilatesMumbaiPage() {
             <div className="text-center mb-12">
               <span className="text-[11px] font-black tracking-[0.3em] text-[#513394] dark:text-[#A78BFA] uppercase mb-4 block">DADAR, MUMBAI //</span>
               <h2 className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white tracking-tight mb-6">
-                Clinical Pilates for Back Pain — <span className="text-[#513394] dark:text-[#8B5CF6]">Dadar East Clinic</span>
+                Clinical Pilates for Back Pain, <span className="text-[#513394] dark:text-[#8B5CF6]">Dadar East Clinic</span>
               </h2>
               <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed max-w-3xl mx-auto">
-                R3BOOT is at Palai Plaza, Swami Gyan Jivandas Marg, Dadar East — 5 minutes from Dadar Central Line station.
+                R3BOOT is at Palai Plaza, Swami Gyan Jivandas Marg, Dadar East, 5 minutes from Dadar Central Line station.
                 Mumbai's only integrated recovery centre combining physiotherapist-led clinical Pilates with sports massage,
                 ice bath, contrast therapy, and physiotherapy in one location. Clients come from Parel, Matunga, Sion,
                 Worli, Lower Parel, and Bandra for the clinical standard unavailable in general fitness studios.

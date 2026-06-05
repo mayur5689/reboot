@@ -8,9 +8,9 @@ import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema'
 import { sportsMassageDadarFaqs } from '@/lib/faqs/sports-massage-dadar'
 
 export const metadata: Metadata = {
-  title: 'Sports Massage Dadar | 5 Min from Station — R3BOOT Mumbai',
+  title: 'Sports Massage Dadar | 5 Min from Station | R3BOOT Mumbai',
   description:
-    'Sports massage in Dadar, 5 min from Dadar station. Clinical soft tissue work for athletes & gym-goers at R3BOOT — not a spa. 5.0 ★ Google. Call or WhatsApp to book.',
+    'Sports massage in Dadar, 5 min from Dadar station. Clinical soft tissue work for athletes & gym-goers at R3BOOT, not a spa. 5.0 ★ Google. Call or WhatsApp to book.',
   alternates: { canonical: '/sports-massage-dadar' },
   keywords: [
     'sports massage dadar',
@@ -25,10 +25,10 @@ export const metadata: Metadata = {
 const services = [
   { title: 'Pre-Event Massage', desc: '15–45 min before training. Activates muscles, improves circulation, reduces pre-session tightness.' },
   { title: 'Post-Event Recovery', desc: 'Within 48 hrs of training. Clears metabolic waste, reduces DOMS, supports muscle repair.' },
-  { title: 'Maintenance Massage', desc: 'Weekly or fortnightly. Addresses restrictions before they become injuries — best for regular trainers.' },
+  { title: 'Maintenance Massage', desc: 'Weekly or fortnightly. Addresses restrictions before they become injuries, best for regular trainers.' },
   { title: 'Cupping Therapy', desc: 'Combined with sports massage for deeper fascia release. Often used for stubborn chronic restrictions.' },
   { title: 'Myofascial Release', desc: 'Sustained pressure on fascial restrictions. Effective for thoracolumbar fascia, IT band, and plantar fascia.' },
-  { title: 'Trigger Point Therapy', desc: 'Targeted work on adhesion sites — the actual knots causing referred pain and reduced range of motion.' },
+  { title: 'Trigger Point Therapy', desc: 'Targeted work on adhesion sites, the actual knots causing referred pain and reduced range of motion.' },
 ]
 
 export default function SportsMassageDadarPage() {
@@ -63,7 +63,7 @@ export default function SportsMassageDadarPage() {
               Sports Massage in Dadar, Mumbai
             </h1>
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl leading-relaxed font-medium mt-4">
-              R3BOOT — Dadar East's dedicated sports recovery clinic. 5 minutes from Dadar station.
+              R3BOOT, Dadar East's dedicated sports recovery clinic. 5 minutes from Dadar station.
             </p>
           </div>
         </div>
@@ -79,18 +79,17 @@ export default function SportsMassageDadarPage() {
               </h2>
               <div className="prose prose-xl text-gray-600 dark:text-gray-400 dark:prose-invert max-w-none leading-relaxed space-y-6">
                 <p>
-                  Dadar has no shortage of massage options — but almost all of them are relaxation spas. If you
+                  Dadar has no shortage of massage options, but almost all of them are relaxation spas. If you
                   train seriously, run at Shivaji Park, squat heavy, or carry chronic desk tension from a Nariman
                   Point or BKC office, a relaxation massage does not fix the problem. It masks it for 48 hours.
                   R3BOOT is the only clinical sports recovery centre in Dadar East. Located at Palai Plaza,
-                  Swami Gyan Jivandas Marg — five minutes from Dadar Central Line station — every session
+                  Swami Gyan Jivandas Marg, five minutes from Dadar Central Line station, every session
                   starts with a therapist who assesses your body before touching it.
                 </p>
                 <p>
                   Therapist Akshay Nalawde is trained in sports soft tissue therapy: deep tissue release,
                   myofascial work, trigger point deactivation, and cupping. He knows the difference between
-                  a Shivaji Park runner's IT band presentation and a gym-goer's thoracolumbar restriction —
-                  and treats each differently. The result is not just less tension. It is better movement,
+                  a Shivaji Park runner's IT band presentation and a gym-goer's thoracolumbar restriction, and treats each differently. The result is not just less tension. It is better movement,
                   fewer recurring injuries, and a body that recovers between sessions instead of just getting through them.
                 </p>
               </div>
@@ -213,7 +212,7 @@ export default function SportsMassageDadarPage() {
 
       <ServiceSchema
         serviceName="Sports Massage in Dadar Mumbai"
-        description="Sports massage clinic in Dadar, Mumbai. R3BOOT is at Palai Plaza, Dadar East — 5 minutes from Dadar railway station. Clinical sports massage for runners, gym-goers, and athletes."
+        description="Sports massage clinic in Dadar, Mumbai. R3BOOT is at Palai Plaza, Dadar East, 5 minutes from Dadar railway station. Clinical sports massage for runners, gym-goers, and athletes."
         serviceUrl="https://www.r3boot.in/sports-massage-dadar"
       />
       <FAQSchema faqs={sportsMassageDadarFaqs} />

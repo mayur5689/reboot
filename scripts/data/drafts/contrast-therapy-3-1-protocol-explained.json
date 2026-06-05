@@ -6,8 +6,8 @@
     "_type": "slug",
     "current": "contrast-therapy-3-1-protocol-explained"
   },
-  "metaDescription": "What contrast therapy 3:1 means — 3 minutes infrared heat, 1 minute cold, always end on cold. How many rounds, who it suits, and how it differs from ice alone. R3BOOT Mumbai.",
-  "excerpt": "3:1 means three minutes of heat for every one minute of cold — and you always finish cold. Here is why that ratio works, how a full session is structured, and who should modify it.",
+  "metaDescription": "What contrast therapy 3:1 means, 3 minutes infrared heat, 1 minute cold, always end on cold. How many rounds, who it suits, and how it differs from ice alone. R3BOOT Mumbai.",
+  "excerpt": "3:1 means three minutes of heat for every one minute of cold, and you always finish cold. Here is why that ratio works, how a full session is structured, and who should modify it.",
   "author": {
     "_type": "reference",
     "_ref": "8a6bf0f1-64c7-4ce6-b5da-bef89b57d983"
@@ -28,7 +28,7 @@
         {
           "_type": "span",
           "_key": "dv96210gdi",
-          "text": "Contrast therapy is alternating heat and cold to flush fatigued muscle. At R3BOOT we run a specific 3:1 protocol — three minutes of infrared heat for every one minute of supervised cold immersion. This post explains the ratio, the round structure, and who should tweak it. For ice bath vs contrast debates, see our separate comparison article.",
+          "text": "Contrast therapy is alternating heat and cold to flush fatigued muscle. At R3BOOT we run a specific 3:1 protocol, three minutes of infrared heat for every one minute of supervised cold immersion. This post explains the ratio, the round structure, and who should tweak it. For ice bath vs contrast debates, see our separate comparison article.",
           "marks": []
         }
       ],
@@ -88,7 +88,7 @@
         {
           "_type": "span",
           "_key": "v3indpnx8tm",
-          "text": "Muscle tissue warms — makes the upcoming cold phase tolerable",
+          "text": "Muscle tissue warms, makes the upcoming cold phase tolerable",
           "marks": []
         }
       ],
@@ -166,7 +166,7 @@
         {
           "_type": "span",
           "_key": "ggqhjmfr4kq",
-          "text": "Nerve conduction slows — soreness perception drops within hours",
+          "text": "Nerve conduction slows, soreness perception drops within hours",
           "marks": []
         }
       ],
@@ -240,7 +240,7 @@
         {
           "_type": "span",
           "_key": "8k4wq39pxe",
-          "text": "Your physiotherapist may adjust toward 2:1 if you are new to cold or toward 4:1 during deload weeks — but the default at R3BOOT is 3:1, always ending on cold.",
+          "text": "Your physiotherapist may adjust toward 2:1 if you are new to cold or toward 4:1 during deload weeks, but the default at R3BOOT is 3:1, always ending on cold.",
           "marks": []
         }
       ],
@@ -270,7 +270,7 @@
         {
           "_type": "span",
           "_key": "mlhtzjv4qos",
-          "text": "Intake + health screen — 5 min",
+          "text": "Intake + health screen, 5 min",
           "marks": []
         }
       ],
@@ -286,7 +286,7 @@
         {
           "_type": "span",
           "_key": "jrcb5fw2sjm",
-          "text": "Breathing briefing before first cold — 3 min",
+          "text": "Breathing briefing before first cold, 3 min",
           "marks": []
         }
       ],
@@ -350,7 +350,7 @@
         {
           "_type": "span",
           "_key": "lnvrqin9vo",
-          "text": "Optional Round 4 for heavy training load — 3 min heat → 1 min cold",
+          "text": "Optional Round 4 for heavy training load, 3 min heat → 1 min cold",
           "marks": []
         }
       ],
@@ -366,7 +366,7 @@
         {
           "_type": "span",
           "_key": "mjjc1b9hfr",
-          "text": "Rewarm, hydrate, post-session check-in — 5 min",
+          "text": "Rewarm, hydrate, post-session check-in, 5 min",
           "marks": []
         }
       ],
@@ -428,7 +428,7 @@
         {
           "_type": "span",
           "_key": "r421rr1pfr",
-          "text": "Acute injury (first 72 hr): rest and ice only — not full contrast",
+          "text": "Acute injury (first 72 hr): rest and ice only, not full contrast",
           "marks": []
         }
       ],
@@ -472,7 +472,7 @@
         {
           "_type": "span",
           "_key": "p18js3wptcl",
-          "text": "Our Mumbai service pages cover booking, pricing, and location. This article is the protocol logic — so you know what you are walking into before you book.",
+          "text": "Our Mumbai service pages cover booking, pricing, and location. This article is the protocol logic, so you know what you are walking into before you book.",
           "marks": []
         }
       ],
@@ -549,7 +549,7 @@
     {
       "_key": "8h5ez05u5e",
       "question": "Why always end on cold?",
-      "answer": "Finishing cold leaves vessels constricted and inflammation suppressed — the state you want walking out of a recovery session. Ending on heat re-opens vessels and can bring swelling back."
+      "answer": "Finishing cold leaves vessels constricted and inflammation suppressed, the state you want walking out of a recovery session. Ending on heat re-opens vessels and can bring swelling back."
     },
     {
       "_key": "mzhhngkisra",
@@ -559,12 +559,12 @@
     {
       "_key": "i0lywzo287t",
       "question": "Is 3:1 the same as a Finnish sauna protocol?",
-      "answer": "No. Traditional sauna protocols often use longer heat blocks and shorter cold dips with different ratios. Our 3:1 uses infrared heat at lower air temperature with physiotherapist supervision — built for athletes, not spa relaxation."
+      "answer": "No. Traditional sauna protocols often use longer heat blocks and shorter cold dips with different ratios. Our 3:1 uses infrared heat at lower air temperature with physiotherapist supervision, built for athletes, not spa relaxation."
     },
     {
       "_key": "jjgslxwv2n8",
       "question": "Can I do 3:1 contrast therapy at home?",
-      "answer": "You can approximate with hot shower / cold shower alternation, but temperature control and breathing supervision matter for the ice phase. First cold exposure should be guided — that is why we run intake before any immersion at R3BOOT."
+      "answer": "You can approximate with hot shower / cold shower alternation, but temperature control and breathing supervision matter for the ice phase. First cold exposure should be guided, that is why we run intake before any immersion at R3BOOT."
     }
   ]
 }

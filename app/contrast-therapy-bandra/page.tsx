@@ -8,9 +8,9 @@ import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema'
 import { contrastTherapyBandraFaqs } from '@/lib/faqs/contrast-therapy-bandra'
 
 export const metadata: Metadata = {
-  title: 'Contrast Therapy Near Bandra | Ice Bath & Sauna — R3BOOT Dadar',
+  title: 'Contrast Therapy Near Bandra | Ice Bath & Sauna | R3BOOT Dadar',
   description:
-    'Contrast therapy near Bandra at R3BOOT Dadar — 15 min away. Physio-supervised sauna & ice bath. Not a Khar wellness studio. 5.0 ★ Google. Book via WhatsApp.',
+    'Contrast therapy near Bandra at R3BOOT Dadar | 15 min away. Physio-supervised sauna & ice bath. Not a Khar wellness studio. 5.0 ★ Google. Book via WhatsApp.',
   alternates: { canonical: '/contrast-therapy-bandra' },
   keywords: [
     'contrast therapy bandra',
@@ -28,7 +28,7 @@ export default function ContrastTherapyBandraPage() {
       <section className="relative h-[70vh] flex items-end overflow-hidden">
         <Image
           src="/images/contrast-therapy-mumbai_service_page/contrast-therapy-mumbai_ice_bath.webp"
-          alt="Contrast therapy near Bandra Mumbai — R3BOOT Dadar"
+          alt="Contrast therapy near Bandra Mumbai, R3BOOT Dadar"
           fill
           className="object-cover"
           priority
@@ -52,7 +52,7 @@ export default function ContrastTherapyBandraPage() {
               Contrast Therapy Near Bandra, Mumbai
             </h1>
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl leading-relaxed font-medium mt-4">
-              R3BOOT in Dadar East — 15–20 min from Bandra. Physio-supervised sauna and ice bath for Bandra athletes and runners.
+              R3BOOT in Dadar East, 15–20 min from Bandra. Physio-supervised sauna and ice bath for Bandra athletes and runners.
             </p>
           </div>
         </div>
@@ -67,7 +67,7 @@ export default function ContrastTherapyBandraPage() {
               </h2>
               <div className="prose prose-xl text-gray-600 dark:text-gray-400 dark:prose-invert max-w-none leading-relaxed space-y-6">
                 <p>
-                  Contrast therapy options near Bandra and Khar often focus on the experience — social recovery, influencer-friendly setups,
+                  Contrast therapy options near Bandra and Khar often focus on the experience, social recovery, influencer-friendly setups,
                   standalone cold plunge without clinical oversight. R3BOOT in Dadar East is 15 minutes by road or 8 minutes by train from
                   Bandra station. Every session is physio-supervised with health intake before you enter the water.
                 </p>

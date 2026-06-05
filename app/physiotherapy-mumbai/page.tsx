@@ -8,9 +8,9 @@ import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema'
 import { physiotherapyMumbaiFaqs } from '@/lib/faqs/physiotherapy-mumbai'
 
 export const metadata: Metadata = {
-  title: 'Physiotherapy Mumbai | Clinical Physiotherapist — R3BOOT Dadar',
+  title: 'Physiotherapy Mumbai | Clinical Physiotherapist | R3BOOT Dadar',
   description:
-    'Clinical physiotherapy in Mumbai at R3BOOT Dadar East. Back pain, knee pain, neck pain, sports injuries & post-surgery rehab. Dr. Hiral Parikh — 15+ yrs. 5.0 ★ Google. WhatsApp to book.',
+    'Clinical physiotherapy in Mumbai at R3BOOT Dadar East. Back pain, knee pain, neck pain, sports injuries & post-surgery rehab. Dr. Hiral Parikh, 15+ yrs. 5.0 ★ Google. WhatsApp to book.',
   alternates: { canonical: '/physiotherapy-mumbai' },
   keywords: [
     'physiotherapy mumbai',
@@ -67,20 +67,20 @@ const conditionPages = [
 
 const differentiators = [
   {
-    title: 'Full clinical assessment — every session',
+    title: 'Full clinical assessment | every session',
     body: 'Not a generic protocol applied to everyone with the same diagnosis. Every case begins with movement testing, load assessment, and a clinical history that informs exactly what is treated and how.',
   },
   {
     title: 'Dry needling available',
-    body: 'Dr. Vaishali Vijay Rauniyar is certified in dry needling — effective for trigger points in the neck, back, hamstrings, glutes, and rotator cuff. Available on-site at R3BOOT, not offered at most Mumbai clinics.',
+    body: 'Dr. Vaishali Vijay Rauniyar is certified in dry needling | effective for trigger points in the neck, back, hamstrings, glutes, and rotator cuff. Available on-site at R3BOOT, not offered at most Mumbai clinics.',
   },
   {
     title: 'Aquatic rehabilitation on-site',
-    body: 'Available at R3BOOT — rare outside hospital settings in Mumbai. Essential for post-surgical patients who need early movement before full weight-bearing is safe. Water reduces joint compression by up to 75%.',
+    body: 'Available at R3BOOT | rare outside hospital settings in Mumbai. Essential for post-surgical patients who need early movement before full weight-bearing is safe. Water reduces joint compression by up to 75%.',
   },
   {
     title: 'Integrated recovery environment',
-    body: 'Contrast therapy, sports massage, and clinical Pilates available on the same visit. Your physiotherapist coordinates the session — one roof, one visit, faster recovery.',
+    body: 'Contrast therapy, sports massage, and clinical Pilates available on the same visit. Your physiotherapist coordinates the session, one roof, one visit, faster recovery.',
   },
 ]
 
@@ -101,7 +101,7 @@ export default function PhysiotherapyMumbaiPage() {
       <section className="relative h-[80vh] flex items-end overflow-hidden">
         <Image
           src="/images/service/Services_image/Physiotherapy_1.webp"
-          alt="Physiotherapy Mumbai — clinical physiotherapy at R3BOOT Dadar East"
+          alt="Physiotherapy Mumbai, clinical physiotherapy at R3BOOT Dadar East"
           fill
           className="object-cover"
           priority
@@ -131,7 +131,7 @@ export default function PhysiotherapyMumbaiPage() {
               Physiotherapy in Mumbai
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl text-white/80 max-w-3xl leading-relaxed font-medium">
-              Clinical physiotherapy by Dr. Hiral Parikh and Dr. Vaishali Rauniyar — Dadar East. Back pain, knee pain, neck pain, sports injuries, and post-surgery rehab.
+              Clinical physiotherapy by Dr. Hiral Parikh and Dr. Vaishali Rauniyar, Dadar East. Back pain, knee pain, neck pain, sports injuries, and post-surgery rehab.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mt-8">
               <a
@@ -185,7 +185,7 @@ export default function PhysiotherapyMumbaiPage() {
               </h2>
               <div className="prose prose-base sm:prose-lg md:prose-xl text-gray-600 dark:text-gray-400 dark:prose-invert max-w-none leading-relaxed space-y-6">
                 <p>
-                  Most physiotherapy in Mumbai is reactive — a patient presents with a complaint, receives a
+                  Most physiotherapy in Mumbai is reactive, a patient presents with a complaint, receives a
                   standard protocol, and returns when the pain comes back. That cycle repeats because the
                   underlying cause was never actually assessed. A tight hamstring is not just a tight hamstring.
                   It is a tight hamstring compensating for a hip that stopped extending, a lower back that
@@ -193,10 +193,9 @@ export default function PhysiotherapyMumbaiPage() {
                   The tightness returns in six weeks.
                 </p>
                 <p>
-                  At R3BOOT in Dadar East, clinical physiotherapy begins with a full structural assessment —
-                  movement quality, load tolerance, strength deficits, joint mobility, neurological screening,
+                  At R3BOOT in Dadar East, clinical physiotherapy begins with a full structural assessment, movement quality, load tolerance, strength deficits, joint mobility, neurological screening,
                   and a detailed history. We identify what is actually failing and why. Then we treat it
-                  directly — with manual therapy, dry needling, joint mobilisation, nerve mobilisation, and a
+                  directly, with manual therapy, dry needling, joint mobilisation, nerve mobilisation, and a
                   specific progressive exercise plan built around your life and goals.
                 </p>
                 <p>
@@ -276,7 +275,7 @@ export default function PhysiotherapyMumbaiPage() {
         </div>
       </section>
 
-      {/* ─── CONDITIONS HUB — internal link cluster ─── */}
+      {/* ─── CONDITIONS HUB: internal link cluster ─── */}
       <section className="py-16 sm:py-24 lg:py-32 bg-[#F8F9FA] dark:bg-[#0D0D0D]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
@@ -289,7 +288,7 @@ export default function PhysiotherapyMumbaiPage() {
                 <span className="text-[#513394] dark:text-[#8B5CF6]">R3BOOT Physiotherapy Mumbai</span>
               </h2>
               <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed max-w-3xl">
-                Each condition has its own dedicated clinical programme — not a generic physiotherapy protocol.
+                Each condition has its own dedicated clinical programme, not a generic physiotherapy protocol.
                 Select your condition for specific treatment information, recovery timelines, and session structure.
               </p>
             </div>
@@ -340,7 +339,7 @@ export default function PhysiotherapyMumbaiPage() {
               </h2>
               <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed max-w-3xl">
                 Price varies from ₹400 at hospital OPDs to ₹3,000+ at specialist clinics. What you pay
-                for is session time and hands-on clinical attention — the factors that determine outcome.
+                for is session time and hands-on clinical attention, the factors that determine outcome.
               </p>
             </div>
 
@@ -401,13 +400,13 @@ export default function PhysiotherapyMumbaiPage() {
               {[
                 {
                   name: 'Dr. Hiral Parikh',
-                  credentials: 'BPT — D.Y. Patil College of Physiotherapy',
+                  credentials: 'BPT, D.Y. Patil College of Physiotherapy',
                   experience: '15+ years clinical experience',
                   specialties: ['Musculoskeletal physiotherapy', 'Chronic pain rehabilitation', 'Neurological rehab', 'Post-surgical recovery'],
                 },
                 {
                   name: 'Dr. Vaishali Vijay Rauniyar',
-                  credentials: 'BPT — Certified in Dry Needling & Aquatic Rehabilitation',
+                  credentials: 'BPT, Certified in Dry Needling & Aquatic Rehabilitation',
                   experience: 'Sports physiotherapy specialist',
                   specialties: ['Dry needling', 'Aquatic rehabilitation', 'Sports injury rehab', 'Women\'s health physiotherapy'],
                 },
@@ -447,7 +446,7 @@ export default function PhysiotherapyMumbaiPage() {
                 <span className="text-[#513394] dark:text-[#8B5CF6]">Full Recovery</span>
               </h2>
               <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed max-w-3xl">
-                R3BOOT is an integrated recovery centre — not a standalone physio clinic. Physiotherapy,
+                R3BOOT is an integrated recovery centre, not a standalone physio clinic. Physiotherapy,
                 sports massage, contrast therapy, and clinical Pilates are available on the same visit,
                 coordinated by your clinical team.
               </p>
@@ -457,22 +456,22 @@ export default function PhysiotherapyMumbaiPage() {
               {[
                 {
                   title: 'Sports Massage',
-                  desc: 'Deep tissue, trigger point, cupping, and myofascial release — often combined with physio on the same visit.',
+                  desc: 'Deep tissue, trigger point, cupping, and myofascial release | often combined with physio on the same visit.',
                   href: '/sports-massage-mumbai',
                 },
                 {
                   title: 'Contrast Therapy',
-                  desc: 'Ice bath and infrared sauna in a structured recovery protocol — reduces inflammation and accelerates tissue repair.',
+                  desc: 'Ice bath and infrared sauna in a structured recovery protocol | reduces inflammation and accelerates tissue repair.',
                   href: '/contrast-therapy-mumbai',
                 },
                 {
                   title: 'Clinical Pilates',
-                  desc: 'Supervised reformer Pilates built around your specific injury or condition — not a generic fitness class.',
+                  desc: 'Supervised reformer Pilates built around your specific injury or condition, not a generic fitness class.',
                   href: '/clinical-pilates-mumbai',
                 },
                 {
                   title: 'Physiotherapy Dadar',
-                  desc: 'Full condition-specific physiotherapy at R3BOOT Dadar East — the most central physiotherapy location in Mumbai.',
+                  desc: 'Full condition-specific physiotherapy at R3BOOT Dadar East | the most central physiotherapy location in Mumbai.',
                   href: '/physiotherapy-dadar-mumbai',
                 },
               ].map((item, idx) => (
@@ -509,7 +508,7 @@ export default function PhysiotherapyMumbaiPage() {
                 <span className="text-[#513394] dark:text-[#8B5CF6]">Integrated Physiotherapy Clinic</span>
               </h2>
               <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed mb-6">
-                Dadar East is the geographic centre of Mumbai — on the Central Line and Western Line
+                Dadar East is the geographic centre of Mumbai, on the Central Line and Western Line
                 interchange, equidistant from Bandra, Lower Parel, BKC, Sion, and Worli. Five minutes
                 from Dadar station on foot. Shivaji Park is 10 minutes. Most of central Mumbai is within
                 15–20 minutes.
@@ -558,7 +557,7 @@ export default function PhysiotherapyMumbaiPage() {
             <div className="relative rounded-[2.5rem] overflow-hidden aspect-[4/5] w-full shadow-2xl">
               <Image
                 src="/images/service/Services_image/Physiotherapy_1.webp"
-                alt="R3BOOT physiotherapy clinic Dadar East Mumbai — central Mumbai location"
+                alt="R3BOOT physiotherapy clinic Dadar East Mumbai, central Mumbai location"
                 fill
                 className="object-cover"
               />
@@ -624,7 +623,7 @@ export default function PhysiotherapyMumbaiPage() {
               Assessment, treatment, and a plan that actually fixes the problem.
             </p>
             <p className="text-white/40 mb-8 sm:mb-12 text-sm font-bold tracking-widest">
-              203, Palai Plaza, Dadar East, Mumbai 400014 — 5 min from Dadar station
+              203, Palai Plaza, Dadar East, Mumbai 400014, 5 min from Dadar station
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
               <a

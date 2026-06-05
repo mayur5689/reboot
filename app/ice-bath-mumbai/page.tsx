@@ -10,9 +10,9 @@ import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema'
 import { iceBathMumbaiFaqs } from '@/lib/faqs/ice-bath-mumbai'
 
 export const metadata: Metadata = {
-  title: 'Ice Bath Mumbai | Physio-Supervised Cold Therapy — R3BOOT Dadar',
+  title: 'Ice Bath Mumbai | Physio-Supervised Cold Therapy | R3BOOT Dadar',
   description:
-    'Ice bath Mumbai at R3BOOT Dadar — physio-supervised cold immersion with health intake & breathing guidance. Not a plunge tank. 5.0 ★ Google. Book via WhatsApp.',
+    'Ice bath Mumbai at R3BOOT Dadar | physio-supervised cold immersion with health intake & breathing guidance. Not a plunge tank. 5.0 ★ Google. Book via WhatsApp.',
   alternates: { canonical: '/ice-bath-mumbai' },
   keywords: [
     'ice bath mumbai',
@@ -42,7 +42,7 @@ const whyColdWorks = [
   {
     title: 'Nervous system reset',
     description:
-      'Cold immersion activates the vagus nerve, shifting your body toward a parasympathetic state — reduced cortisol, improved mood, calmer recovery.',
+      'Cold immersion activates the vagus nerve, shifting your body toward a parasympathetic state | reduced cortisol, improved mood, calmer recovery.',
   },
   {
     title: 'Temperature-gated inflammation',
@@ -78,7 +78,7 @@ export default function IceBathMumbaiPage() {
       <section className="relative h-[70vh] flex items-end overflow-hidden">
         <Image
           src="/images/contrast-therapy-mumbai_service_page/contrast-therapy-mumbai_ice_bath.webp"
-          alt="Ice Bath Mumbai — Supervised Cold Immersion at R3BOOT Dadar"
+          alt="Ice Bath Mumbai, Supervised Cold Immersion at R3BOOT Dadar"
           fill
           className="object-cover"
           priority
@@ -108,13 +108,13 @@ export default function IceBathMumbaiPage() {
               Ice Bath in Mumbai | Supervised Cold Therapy at R3BOOT, Dadar
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl text-white/80 max-w-3xl leading-relaxed font-medium mt-4">
-              Physiotherapist-supervised cold immersion. Part of a clinical contrast therapy protocol — not a gym cold plunge.
+              Physiotherapist-supervised cold immersion. Part of a clinical contrast therapy protocol, not a gym cold plunge.
             </p>
           </div>
         </div>
       </section>
 
-      {/* ─── OPENING — honest positioning ─── */}
+      {/* ─── OPENING: honest positioning ─── */}
       <section className="py-12 sm:py-16 lg:py-24 xl:py-32">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 md:gap-12 lg:gap-24 items-start">
@@ -127,7 +127,7 @@ export default function IceBathMumbaiPage() {
               </h2>
               <div className="prose prose-base sm:prose-lg md:prose-xl text-gray-600 dark:text-gray-400 dark:prose-invert max-w-none leading-relaxed space-y-6">
                 <p>
-                  Most ice baths in Mumbai are cold plunge tanks at gyms — no supervision, no health screening,
+                  Most ice baths in Mumbai are cold plunge tanks at gyms, no supervision, no health screening,
                   no protocol. You get in cold, stay as long as you can, and get out. That is cold exposure,
                   not cold therapy.
                 </p>
@@ -135,7 +135,7 @@ export default function IceBathMumbaiPage() {
                   At R3BOOT in Dadar, cold immersion is a clinical intervention. Every session begins with a
                   health intake review. Our physiotherapy team teaches you controlled breathing before the cold
                   phase, supervises your immersion, and monitors your response. The cold is paired with an
-                  infrared sauna in a structured 3:1 hot-to-cold protocol — producing a vascular pumping action
+                  infrared sauna in a structured 3:1 hot-to-cold protocol, producing a vascular pumping action
                   that research shows clears metabolic waste faster than cold alone.
                 </p>
                 <p>
@@ -218,7 +218,7 @@ export default function IceBathMumbaiPage() {
         </div>
       </section>
 
-      {/* ─── THE SCIENCE — citeable GEO block ─── */}
+      {/* ─── THE SCIENCE: citeable GEO block ─── */}
       <section className="py-24 lg:py-32 bg-[#F8F9FA] dark:bg-[#0D0D0D]">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center max-w-7xl mx-auto">
@@ -249,13 +249,13 @@ export default function IceBathMumbaiPage() {
                 <span className="text-[#513394] dark:text-[#8B5CF6]">Actually Does</span>
               </h2>
               <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed mb-8">
-                Cold water immersion at 10–15°C triggers immediate vasoconstriction — blood vessels narrow,
+                Cold water immersion at 10–15°C triggers immediate vasoconstriction, blood vessels narrow,
                 blood pressure in peripheral tissue drops, and inflammatory mediators are displaced from
                 fatigued muscle. Research in the European Journal of Applied Physiology confirms that
                 cold water immersion reduces perceived muscle soreness and restores muscle force production
                 faster than passive recovery. The effect is dose-dependent: water temperature, immersion
                 duration, and the athlete&apos;s training load all determine outcome. This is why
-                protocol matters — and why supervision by a physiotherapy team is not optional.
+                protocol matters, and why supervision by a physiotherapy team is not optional.
               </p>
               <div className="space-y-4">
                 {[
@@ -364,7 +364,7 @@ export default function IceBathMumbaiPage() {
             <div className="relative rounded-[2.5rem] overflow-hidden aspect-[4/5] w-full shadow-2xl">
               <Image
                 src="/images/contrast-therapy-mumbai_service_page/contrast-therapy-mumbai_sauna.webp"
-                alt="Infrared sauna before ice bath — contrast therapy protocol at R3BOOT Mumbai"
+                alt="Infrared sauna before ice bath, contrast therapy protocol at R3BOOT Mumbai"
                 fill
                 className="object-cover"
               />
@@ -412,9 +412,9 @@ export default function IceBathMumbaiPage() {
                 <tbody>
                   {[
                     ['Mechanism', 'Cold vasoconstriction only', 'Vascular pumping (dilate + constrict cycle)'],
-                    ['Waste removal', 'Moderate', 'Higher — cycling clears more metabolic waste'],
+                    ['Waste removal', 'Moderate', 'Higher, cycling clears more metabolic waste'],
                     ['Muscle soreness', 'Good reduction', 'Greater reduction, especially for DOMS'],
-                    ['Session experience', 'Intense, no warm phase', 'More manageable — sauna eases cold entry'],
+                    ['Session experience', 'Intense, no warm phase', 'More manageable, sauna eases cold entry'],
                     ['Nervous system', 'High adrenaline spike', 'Balanced: stimulating then calming'],
                     ['Best for', 'Acute inflammation, comp day', 'Sub-acute recovery, high training loads'],
                   ].map(([factor, cold, contrast], idx) => (
@@ -436,7 +436,7 @@ export default function IceBathMumbaiPage() {
               <Link href="/contrast-therapy-mumbai" className="text-[#513394] dark:text-[#A78BFA] font-bold hover:underline underline-offset-4">
                 contrast therapy protocol
               </Link>
-              {' '}— never a standalone cold plunge without the warm phase. Also see{' '}
+              {' '},  never a standalone cold plunge without the warm phase. Also see{' '}
               <Link href="/cold-plunge-mumbai" className="text-[#513394] dark:text-[#A78BFA] font-bold hover:underline underline-offset-4">
                 cold plunge Mumbai
               </Link>
@@ -480,7 +480,7 @@ export default function IceBathMumbaiPage() {
                 <span className="text-[#513394] dark:text-[#8B5CF6]">Dadar, Mumbai</span>
               </h2>
               <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed mb-8">
-                R3BOOT is located in Dadar East — accessible from Bandra, Andheri, Thane, and central Mumbai.
+                R3BOOT is located in Dadar East, accessible from Bandra, Andheri, Thane, and central Mumbai.
                 We are 5 minutes from Dadar railway station. Cold therapy sessions are available by appointment,
                 Monday to Sunday.
               </p>
@@ -513,7 +513,7 @@ export default function IceBathMumbaiPage() {
                 </div>
                 <div className="flex items-start gap-3">
                   <span className="text-[#513394] dark:text-[#A78BFA] font-black shrink-0 mt-0.5">↗</span>
-                  <span>Sessions by appointment — call or WhatsApp +91 97023 68612</span>
+                  <span>Sessions by appointment, call or WhatsApp +91 97023 68612</span>
                 </div>
               </div>
             </div>
@@ -616,7 +616,7 @@ export default function IceBathMumbaiPage() {
       </section>
 
       <ServiceSchema
-        serviceName="Ice Bath in Mumbai — Supervised Cold Therapy"
+        serviceName="Ice Bath in Mumbai, Supervised Cold Therapy"
         description="Physiotherapist-supervised cold immersion as part of a clinical contrast therapy protocol at R3BOOT, Dadar East, Mumbai. Infrared sauna and ice bath in a structured 3:1 hot-to-cold sequence."
         serviceUrl="https://www.r3boot.in/ice-bath-mumbai"
       />

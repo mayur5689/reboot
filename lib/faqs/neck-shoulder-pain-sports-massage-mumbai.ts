@@ -2,7 +2,7 @@ export const neckShoulderPainSportsMassageFaqs = [
   {
     question: 'Can sports massage help with neck and shoulder pain?',
     answer:
-      'Yes. Neck and shoulder pain from desk work, overhead training, and poor posture is one of the most common presentations at R3BOOT. Sports massage releases the trapezius, levator scapulae, scalenes, and suboccipitals — the key muscles driving most neck and shoulder complaints in active Mumbai professionals.',
+      'Yes. Neck and shoulder pain from desk work, overhead training, and poor posture is one of the most common presentations at R3BOOT. Sports massage releases the trapezius, levator scapulae, scalenes, and suboccipitals, the key muscles driving most neck and shoulder complaints in active Mumbai professionals.',
   },
   {
     question: 'I have neck pain from sitting at a desk all day. Is this for me?',

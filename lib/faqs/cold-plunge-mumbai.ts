@@ -12,17 +12,17 @@ export const coldPlungeMumbaiFaqs = [
   {
     question: 'What is the difference between cold plunge and ice bath?',
     answer:
-      'Cold plunge and ice bath refer to the same recovery method — full or partial immersion in cold water (typically 10–15°C). "Cold plunge" is the wellness industry term; "ice bath" is the sports medicine term. At R3BOOT, both describe our supervised cold immersion tank used in contrast therapy.',
+      'Cold plunge and ice bath refer to the same recovery method, full or partial immersion in cold water (typically 10–15°C). "Cold plunge" is the wellness industry term; "ice bath" is the sports medicine term. At R3BOOT, both describe our supervised cold immersion tank used in contrast therapy.',
   },
   {
     question: 'How is R3BOOT different from gym cold plunge tanks in Mumbai?',
     answer:
-      'Gym cold plunges are typically unsupervised — no health screening, no breathing coaching, no one monitoring your response. At R3BOOT, a physiotherapist conducts your health intake, teaches controlled breathing before immersion, and stays present through the full protocol. Cold plunge is paired with infrared sauna in a structured sequence, not used in isolation.',
+      'Gym cold plunges are typically unsupervised, no health screening, no breathing coaching, no one monitoring your response. At R3BOOT, a physiotherapist conducts your health intake, teaches controlled breathing before immersion, and stays present through the full protocol. Cold plunge is paired with infrared sauna in a structured sequence, not used in isolation.',
   },
   {
     question: 'How cold is the cold plunge at R3BOOT?',
     answer:
-      'Our cold plunge is maintained between 10 and 15 degrees Celsius — within the evidence-based range for therapeutic cold water immersion. Temperature and duration are adjusted based on your experience level and session response.',
+      'Our cold plunge is maintained between 10 and 15 degrees Celsius, within the evidence-based range for therapeutic cold water immersion. Temperature and duration are adjusted based on your experience level and session response.',
   },
   {
     question: 'How much does a cold plunge session cost in Mumbai?',

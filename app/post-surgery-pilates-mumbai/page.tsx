@@ -8,9 +8,9 @@ import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema'
 import { postSurgeryPilatesFaqs } from '@/lib/faqs/post-surgery-pilates-mumbai'
 
 export const metadata: Metadata = {
-  title: 'Post-Surgery Pilates Mumbai | ACL, Spinal Rehab — R3BOOT Dadar',
+  title: 'Post-Surgery Pilates Mumbai | ACL, Spinal Rehab | R3BOOT Dadar',
   description:
-    'Post-surgery Pilates in Mumbai at R3BOOT Dadar. Physio-led rehab for ACL, spinal surgery, hip & knee replacement — assessment-first. 5.0 ★ Google. Book via WhatsApp.',
+    'Post-surgery Pilates in Mumbai at R3BOOT Dadar. Physio-led rehab for ACL, spinal surgery, hip & knee replacement, assessment-first. 5.0 ★ Google. Book via WhatsApp.',
   alternates: { canonical: '/post-surgery-pilates-mumbai' },
   keywords: [
     'pilates after surgery mumbai',
@@ -23,11 +23,11 @@ export const metadata: Metadata = {
 }
 
 const surgeries = [
-  { type: 'ACL Reconstruction', timing: 'From week 6–8 post-op (surgeon-cleared)', approach: 'Reformer-based closed-chain work, quad and glute recruitment, neuromuscular control — without exceeding graft load tolerance' },
+  { type: 'ACL Reconstruction', timing: 'From week 6–8 post-op (surgeon-cleared)', approach: 'Reformer-based closed-chain work, quad and glute recruitment, neuromuscular control, without exceeding graft load tolerance' },
   { type: 'Spinal Surgery (Discectomy / Fusion)', timing: 'From week 6–12 post-op', approach: 'Diaphragmatic breathing, gentle spinal stabilisation, progressive lumbar loading starting below bodyweight on the reformer' },
   { type: 'Hip Replacement', timing: 'From week 6–8 post-op, within hip precautions', approach: 'Glute medius and hip abductor activation within precaution limits, gait retraining, reformer footwork for lower limb strength' },
   { type: 'Knee Replacement', timing: 'From week 6–8 post-op', approach: 'Quad and VMO activation, reformer footwork progression, knee extension loading sequence specific to implant type' },
-  { type: 'Abdominal Surgery / C-Section', timing: 'From 6–12 weeks post-op', approach: 'Pelvic floor reconnection, transverse abdominis activation, progressive abdominal loading — essential before returning to exercise' },
+  { type: 'Abdominal Surgery / C-Section', timing: 'From 6–12 weeks post-op', approach: 'Pelvic floor reconnection, transverse abdominis activation, progressive abdominal loading, essential before returning to exercise' },
   { type: 'Shoulder Surgery (Bankart / Rotator Cuff)', timing: 'Physiotherapy-guided, typically from week 8–12', approach: 'Scapular stabilisation, rotator cuff recruitment under low load, progressive shoulder complex reloading on the reformer' },
 ]
 
@@ -63,7 +63,7 @@ export default function PostSurgeryPilatesMumbaiPage() {
               Clinical Pilates After Surgery in Mumbai
             </h1>
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl leading-relaxed font-medium mt-4">
-              ACL, spine, hip, knee, abdominal — physiotherapist-led Pilates rehab from week 6 at R3BOOT, Dadar East.
+              ACL, spine, hip, knee, abdominal, physiotherapist-led Pilates rehab from week 6 at R3BOOT, Dadar East.
             </p>
           </div>
         </div>
@@ -82,7 +82,7 @@ export default function PostSurgeryPilatesMumbaiPage() {
                   Standard physiotherapy after surgery focuses on pain management, swelling control, and basic range
                   of motion. It stops short of addressing the motor control deficits that cause re-injury and poor
                   long-term outcomes. After an ACL reconstruction, the quad inhibition and altered neuromuscular
-                  patterns remain long after the graft heals — and they are the reason so many people re-injure.
+                  patterns remain long after the graft heals, and they are the reason so many people re-injure.
                   After spinal surgery, fear of movement and core inhibition persist. After hip replacement, the
                   glute medius weakness doesn't fix itself with walking alone.
                 </p>
@@ -90,7 +90,7 @@ export default function PostSurgeryPilatesMumbaiPage() {
                   Clinical Pilates addresses the layer that standard physiotherapy leaves. At R3BOOT in Dadar East,
                   Dr. Hiral Parikh (BPT, 15+ years sports and post-surgical rehabilitation) and Dr. Vaishali Vijay
                   Rauniyar design your post-surgical Pilates program from your surgical procedure, post-op protocol,
-                  and current functional assessment. The reformer allows graduated loading below bodyweight — critical
+                  and current functional assessment. The reformer allows graduated loading below bodyweight, critical
                   in early post-surgical phases where full load is not yet appropriate.
                 </p>
               </div>
@@ -162,14 +162,14 @@ export default function PostSurgeryPilatesMumbaiPage() {
             <p>
               The Pilates reformer is uniquely suited to post-surgical rehabilitation because spring resistance
               allows load to be calibrated below bodyweight. After ACL reconstruction, a standard leg press at
-              the gym starts at bodyweight — which may exceed the graft's load tolerance in weeks 6–12 of the
+              the gym starts at bodyweight, which may exceed the graft's load tolerance in weeks 6–12 of the
               ligamentisation phase. The reformer can load the leg at 20–30% of bodyweight and progress in
               precise increments as graft healing advances. This level of control is not available in conventional
               physiotherapy exercises.
             </p>
             <p>
               After spinal surgery, the same principle applies. Early post-discectomy rehabilitation requires
-              core activation without spinal loading — a specific and challenging combination. The reformer
+              core activation without spinal loading, a specific and challenging combination. The reformer
               allows supine leg work, hip bridging with spring support, and prone hip extension while the spine
               remains unloaded. These are not exercises physiotherapy clinics without a reformer can replicate.
             </p>
@@ -178,8 +178,8 @@ export default function PostSurgeryPilatesMumbaiPage() {
               post-surgical Pilates programs with your surgical team's discharge protocol. Clients from Hinduja
               Hospital, Breach Candy Hospital, Nanavati, and Kokilaben who are discharged into physiotherapy
               rehabilitation continue at R3BOOT when they require reformer-based Pilates as part of their
-              recovery. The clinic is at Palai Plaza, Swami Gyan Jivandas Marg, Dadar East — five minutes from
-              Dadar station — making it accessible from most South and Central Mumbai hospital locations.
+              recovery. The clinic is at Palai Plaza, Swami Gyan Jivandas Marg, Dadar East, five minutes from
+              Dadar station, making it accessible from most South and Central Mumbai hospital locations.
               Sessions are one-to-one, 45–60 minutes, with full documentation for your surgical team if required.
             </p>
           </div>
@@ -232,7 +232,7 @@ export default function PostSurgeryPilatesMumbaiPage() {
 
       <ServiceSchema
         serviceName="Clinical Pilates After Surgery in Mumbai"
-        description="Clinical Pilates for post-surgical rehabilitation in Mumbai at R3BOOT, Dadar East. ACL, spinal surgery, hip and knee replacement — physiotherapist-led Pilates rehab on reformer and mat."
+        description="Clinical Pilates for post-surgical rehabilitation in Mumbai at R3BOOT, Dadar East. ACL, spinal surgery, hip and knee replacement, physiotherapist-led Pilates rehab on reformer and mat."
         serviceUrl="https://www.r3boot.in/post-surgery-pilates-mumbai"
       />
       <FAQSchema faqs={postSurgeryPilatesFaqs} />

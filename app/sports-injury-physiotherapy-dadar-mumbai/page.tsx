@@ -8,7 +8,7 @@ import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema'
 import { sportsInjuryPhysiotherapyFaqs } from '@/lib/faqs/sports-injury-physiotherapy-dadar-mumbai'
 
 export const metadata: Metadata = {
-  title: 'Sports Injury Physiotherapy Dadar Mumbai | Athlete Rehab — R3BOOT',
+  title: 'Sports Injury Physiotherapy Dadar Mumbai | Athlete Rehab | R3BOOT',
   description:
     'Sports injury physiotherapy in Dadar, Mumbai at R3BOOT. ACL rehab, hamstring tears, rotator cuff, ankle sprains & return-to-sport programmes. Near Shivaji Park. 5.0 ★ Google. WhatsApp to book.',
   alternates: { canonical: '/sports-injury-physiotherapy-dadar-mumbai' },
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
 const sportsInjuries = [
   {
     title: 'ACL reconstruction rehab',
-    body: 'Post-surgical ACL rehabilitation is a 9–12 month return-to-sport process. Progressive loading, neuromuscular retraining, single-leg strength, and reactive agility work — phased correctly from week 1 to full clearance.',
+    body: 'Post-surgical ACL rehabilitation is a 9–12 month return-to-sport process. Progressive loading, neuromuscular retraining, single-leg strength, and reactive agility work | phased correctly from week 1 to full clearance.',
   },
   {
     title: 'Hamstring tears & strains',
@@ -37,11 +37,11 @@ const sportsInjuries = [
   },
   {
     title: 'Rotator cuff injuries',
-    body: 'Shoulder impingement, partial and full-thickness rotator cuff tears. Manual therapy, dry needling, and progressive strengthening — with return-to-throwing or overhead sport programmes for cricketers and swimmers.',
+    body: 'Shoulder impingement, partial and full-thickness rotator cuff tears. Manual therapy, dry needling, and progressive strengthening | with return-to-throwing or overhead sport programmes for cricketers and swimmers.',
   },
   {
     title: 'Ankle sprains & instability',
-    body: 'Graded loading to restore full strength and proprioception — not rest until it stops hurting. Chronic ankle instability from repeated sprains requires a neuromuscular retraining programme to prevent recurrence.',
+    body: 'Graded loading to restore full strength and proprioception | not rest until it stops hurting. Chronic ankle instability from repeated sprains requires a neuromuscular retraining programme to prevent recurrence.',
   },
   {
     title: 'ITB syndrome & shin splints',
@@ -57,7 +57,7 @@ const sessionSteps = [
   {
     step: '01',
     label: 'Sports-specific assessment',
-    body: 'Your physiotherapist takes a full injury history — mechanism, timeline, sport demands, and your return-to-sport goal. Movement testing, load tolerance, and sport-specific screening identify what structures are involved and what stage of healing you are in.',
+    body: 'Your physiotherapist takes a full injury history, mechanism, timeline, sport demands, and your return-to-sport goal. Movement testing, load tolerance, and sport-specific screening identify what structures are involved and what stage of healing you are in.',
   },
   {
     step: '02',
@@ -67,7 +67,7 @@ const sessionSteps = [
   {
     step: '03',
     label: 'Return-to-sport roadmap',
-    body: 'You leave with a structured rehabilitation programme and specific milestones for returning to training and competition. Not a vague "rest and see" — a real timeline based on your tissue, your sport, and your goals.',
+    body: 'You leave with a structured rehabilitation programme and specific milestones for returning to training and competition. Not a vague "rest and see", a real timeline based on your tissue, your sport, and your goals.',
   },
 ]
 
@@ -88,7 +88,7 @@ export default function SportsInjuryPhysiotherapyDadarPage() {
       <section className="relative h-[70vh] flex items-end overflow-hidden">
         <Image
           src="/images/service/Services_image/Physiotherapy_1.webp"
-          alt="Sports injury physiotherapy Dadar Mumbai — athlete rehabilitation at R3BOOT"
+          alt="Sports injury physiotherapy Dadar Mumbai, athlete rehabilitation at R3BOOT"
           fill
           className="object-cover"
           priority
@@ -118,7 +118,7 @@ export default function SportsInjuryPhysiotherapyDadarPage() {
               Sports Injury Physiotherapy in Dadar, Mumbai
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl text-white/80 max-w-3xl leading-relaxed font-medium mt-4">
-              Injury assessment, load management, and return-to-sport rehabilitation — at R3BOOT, 5 minutes from Shivaji Park.
+              Injury assessment, load management, and return-to-sport rehabilitation, at R3BOOT, 5 minutes from Shivaji Park.
             </p>
           </div>
         </div>
@@ -137,15 +137,15 @@ export default function SportsInjuryPhysiotherapyDadarPage() {
               <div className="prose prose-base sm:prose-lg md:prose-xl text-gray-600 dark:text-gray-400 dark:prose-invert max-w-none leading-relaxed space-y-6">
                 <p>
                   Sports injury physiotherapy is not the same as general physiotherapy. Athletes need to understand
-                  load management — what they can train through, what requires modification, and what must stop
+                  load management, what they can train through, what requires modification, and what must stop
                   temporarily. Complete rest is rarely the right answer. The goal is to keep you as active as
-                  possible while the injured tissue heals, so you return to sport stronger — not deconditioned.
+                  possible while the injured tissue heals, so you return to sport stronger, not deconditioned.
                 </p>
                 <p>
                   At R3BOOT in Dadar East, our physiotherapy team understands sport-specific demands. Dr. Hiral
                   Parikh (BPT, 15+ years) and Dr. Vaishali Vijay Rauniyar (certified in Dry Needling and Aquatic
                   Rehabilitation) have worked with runners, gym athletes, cricketers, and weekend warriors across
-                  all injury types. Every case gets a clear return-to-sport timeline after the first session — not
+                  all injury types. Every case gets a clear return-to-sport timeline after the first session, not
                   a generic estimate.
                 </p>
                 <p>
@@ -292,28 +292,27 @@ export default function SportsInjuryPhysiotherapyDadarPage() {
               </span>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 dark:text-white tracking-tight mb-6 leading-tight">
                 Why sports injuries need{' '}
-                <span className="text-[#513394] dark:text-[#8B5CF6]">progressive loading — not just rest</span>
+                <span className="text-[#513394] dark:text-[#8B5CF6]">progressive loading, not just rest</span>
               </h2>
               <div className="prose prose-base sm:prose-lg text-gray-600 dark:text-gray-400 dark:prose-invert max-w-none leading-relaxed space-y-4 mb-8">
                 <p>
-                  Complete rest causes muscle atrophy, joint stiffness, and neuromuscular deconditioning —
-                  all of which make re-injury more likely when you return to sport. Tendons and ligaments
+                  Complete rest causes muscle atrophy, joint stiffness, and neuromuscular deconditioning, all of which make re-injury more likely when you return to sport. Tendons and ligaments
                   repair stronger when loaded progressively through the healing phase. This is well-established
                   sports science, not a preference.
                 </p>
                 <p>
                   Sports physiotherapy at R3BOOT starts with understanding your training load, your sport, and
-                  your goals. We prescribe what you can do — and what to avoid — from day one. The result is
+                  your goals. We prescribe what you can do, and what to avoid, from day one. The result is
                   a faster, more complete recovery and a return to sport with better movement quality than before
                   the injury.
                 </p>
               </div>
               <div className="space-y-4">
                 {[
-                  { label: 'Load management from day 1', detail: 'Clear guidance on what to train, modify, and avoid — immediately after your first assessment' },
-                  { label: 'Dry needling', detail: 'Available at R3BOOT — effective for muscular trigger points in hamstrings, glutes, and rotator cuff' },
-                  { label: 'Sport-specific exercise progressions', detail: 'Not generic physio exercises — movements relevant to your sport and the demands of return to play' },
-                  { label: 'Return-to-sport milestone testing', detail: 'Objective strength and movement benchmarks at each phase — so clearance is based on data, not guesswork' },
+                  { label: 'Load management from day 1', detail: 'Clear guidance on what to train, modify, and avoid, immediately after your first assessment' },
+                  { label: 'Dry needling', detail: 'Available at R3BOOT, effective for muscular trigger points in hamstrings, glutes, and rotator cuff' },
+                  { label: 'Sport-specific exercise progressions', detail: 'Not generic physio exercises, movements relevant to your sport and the demands of return to play' },
+                  { label: 'Return-to-sport milestone testing', detail: 'Objective strength and movement benchmarks at each phase, so clearance is based on data, not guesswork' },
                 ].map((item, idx) => (
                   <div key={idx} className="flex items-start gap-4 group">
                     <div className="w-8 h-8 rounded-xl bg-[#513394]/10 dark:bg-[#8B5CF6]/20 flex items-center justify-center text-[#513394] dark:text-[#A78BFA] font-black shrink-0 text-xs group-hover:bg-[#513394] group-hover:text-white transition-all duration-300">
@@ -403,14 +402,14 @@ export default function SportsInjuryPhysiotherapyDadarPage() {
                 <span className="text-[#513394] dark:text-[#8B5CF6]">Near Shivaji Park</span>
               </h2>
               <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed mb-6">
-                R3BOOT is in Dadar East — walking distance from Shivaji Park. Mumbai&apos;s highest concentration
+                R3BOOT is in Dadar East, walking distance from Shivaji Park. Mumbai&apos;s highest concentration
                 of distance runners, cricketers, and active athletes trains at and around Shivaji Park.
                 If you train there and you&apos;re injured, you are 10 minutes from clinical sports physiotherapy.
               </p>
               <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed mb-8">
                 Athletes from Worli, Lower Parel, Bandra, Sion, and Matunga reach us within 15–20 minutes
                 by train (Dadar station, East exit, 5 minutes walk) or road. We are not a high-volume
-                hospital OPD — your session is your session.
+                hospital OPD, your session is your session.
               </p>
 
               <div className="flex flex-wrap gap-3 mb-8">
@@ -492,7 +491,7 @@ export default function SportsInjuryPhysiotherapyDadarPage() {
               {[
                 {
                   title: 'Sports Massage for Runners',
-                  desc: 'Myofascial release, trigger point therapy, and cupping to address the soft tissue overload that causes overuse injuries — ITB syndrome, plantar fasciitis, calf tightness. Often combined with physiotherapy on the same visit.',
+                  desc: 'Myofascial release, trigger point therapy, and cupping to address the soft tissue overload that causes overuse injuries, ITB syndrome, plantar fasciitis, calf tightness. Often combined with physiotherapy on the same visit.',
                   href: '/sports-massage-runners-mumbai',
                 },
                 {
@@ -502,7 +501,7 @@ export default function SportsInjuryPhysiotherapyDadarPage() {
                 },
                 {
                   title: 'Physiotherapy Dadar Hub',
-                  desc: 'Full clinical physiotherapy for back pain, knee pain, neck pain, post-surgery, and neurological conditions — all at R3BOOT Dadar East.',
+                  desc: 'Full clinical physiotherapy for back pain, knee pain, neck pain, post-surgery, and neurological conditions, all at R3BOOT Dadar East.',
                   href: '/physiotherapy-dadar-mumbai',
                 },
               ].map((item, idx) => (
@@ -573,10 +572,10 @@ export default function SportsInjuryPhysiotherapyDadarPage() {
             </h2>
             <p className="text-lg sm:text-xl text-white/70 mb-4 leading-relaxed font-medium max-w-3xl mx-auto">
               Sports injury physiotherapy at R3BOOT, Dadar East. Near Shivaji Park. No referral needed.
-              Dr. Hiral Parikh and Dr. Vaishali Rauniyar — sport-specific rehab from day one.
+              Dr. Hiral Parikh and Dr. Vaishali Rauniyar, sport-specific rehab from day one.
             </p>
             <p className="text-white/40 mb-8 sm:mb-12 text-sm font-bold tracking-widest">
-              203, Palai Plaza, Dadar East, Mumbai 400014 — 5 min from Dadar station
+              203, Palai Plaza, Dadar East, Mumbai 400014, 5 min from Dadar station
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
               <a

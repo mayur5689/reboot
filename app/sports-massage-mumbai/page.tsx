@@ -9,9 +9,9 @@ import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema'
 import { sportsMassageMumbaiFaqs } from '@/lib/faqs/sports-massage-mumbai'
 
 export const metadata: Metadata = {
-  title: 'Sports Massage Mumbai | Physio-Led Recovery — R3BOOT Dadar',
+  title: 'Sports Massage Mumbai | Physio-Led Recovery | R3BOOT Dadar',
   description:
-    'Sports massage Mumbai at R3BOOT Dadar — physio-led, not a spa. Cupping, mobility work & soft tissue release for athletes & gym-goers. 5.0 ★ on Google. Book via WhatsApp.',
+    'Sports massage Mumbai at R3BOOT Dadar | physio-led, not a spa. Cupping, mobility work & soft tissue release for athletes & gym-goers. 5.0 ★ on Google. Book via WhatsApp.',
   alternates: { canonical: '/sports-massage-mumbai' },
   keywords: [
     'sports massage mumbai',
@@ -89,7 +89,7 @@ export default function SportsMassageMumbaiPage() {
                 </p>
               </div>
 
-              {/* What sports massage helps with — step cards like service pages */}
+              {/* What sports massage helps with, step cards like service pages */}
               <div className="mt-20">
                 <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-10 flex items-center gap-4">
                   <span className="w-12 h-[2px] bg-[#513394] dark:bg-[#8B5CF6]" />
@@ -390,7 +390,7 @@ export default function SportsMassageMumbaiPage() {
                 Sports Massage vs Deep Tissue vs <span className="text-[#513394] dark:text-[#8B5CF6]">Regular Massage</span>
               </h2>
               <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed max-w-3xl mx-auto">
-                Not all massage is the same. Here is how sports massage differs from other types — and why that matters if you train.
+                Not all massage is the same. Here is how sports massage differs from other types, and why that matters if you train.
               </p>
             </div>
             <div className="overflow-x-auto rounded-[2rem] border border-gray-200 dark:border-white/10 shadow-sm">
@@ -415,7 +415,7 @@ export default function SportsMassageMumbaiPage() {
                     ['Techniques used', 'Soft tissue release, MFR, cupping, compressions', 'Slow deep strokes, cross-fiber friction', 'Swedish strokes, effleurage, petrissage'],
                     ['Best timing', 'Pre-event, post-event, maintenance, recovery', 'Chronic injury & desk posture correction', 'Stress, general relaxation'],
                     ['Who it\'s for', 'Athletes, gym-goers, active professionals', 'Chronic pain, postural issues', 'Anyone seeking relaxation'],
-                    ['At R3BOOT', 'Yes — primary offering', 'Available as needed', 'Not the focus here'],
+                    ['At R3BOOT', 'Yes, primary offering', 'Available as needed', 'Not the focus here'],
                   ].map(([feature, sports, deep, regular], idx) => (
                     <tr key={idx} className={`${idx % 2 === 0 ? 'bg-white dark:bg-white/3' : 'bg-gray-50 dark:bg-white/[0.02]'} hover:bg-[#513394]/5 dark:hover:bg-[#513394]/10 transition-colors`}>
                       <td className="px-6 py-5 font-bold text-gray-900 dark:text-white text-sm">{feature}</td>
@@ -451,7 +451,7 @@ export default function SportsMassageMumbaiPage() {
                 {
                   type: 'Pre-Event',
                   timing: '15–45 min before training or competition',
-                  goal: 'Activate muscles, increase circulation, reduce pre-event tightness. Shorter, lighter strokes that prepare the body — not deep tissue work that creates soreness.',
+                  goal: 'Activate muscles, increase circulation, reduce pre-event tightness. Shorter, lighter strokes that prepare the body, not deep tissue work that creates soreness.',
                   color: '#513394',
                 },
                 {
@@ -463,7 +463,7 @@ export default function SportsMassageMumbaiPage() {
                 {
                   type: 'Maintenance',
                   timing: 'Weekly or fortnightly during active training',
-                  goal: 'Address small restrictions before they become injuries. Improves tissue quality and flexibility over time — the most impactful use for regular gym-goers.',
+                  goal: 'Address small restrictions before they become injuries. Improves tissue quality and flexibility over time, the most impactful use for regular gym-goers.',
                   color: '#513394',
                 },
                 {
@@ -505,7 +505,7 @@ export default function SportsMassageMumbaiPage() {
               </h2>
             </div>
             <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed text-center mb-8">
-              R3BOOT is located in Dadar East — central Mumbai, 5 minutes from Dadar railway station and close to Shivaji Park. Runners doing morning loops at Shivaji Park, gym-goers from Dadar, Matunga, Parel, and Worli, and athletes training at Oval Maidan or BKC all reach us in under 20 minutes.
+              R3BOOT is located in Dadar East, central Mumbai, 5 minutes from Dadar railway station and close to Shivaji Park. Runners doing morning loops at Shivaji Park, gym-goers from Dadar, Matunga, Parel, and Worli, and athletes training at Oval Maidan or BKC all reach us in under 20 minutes.
             </p>
             <div className="flex flex-wrap justify-center gap-3 mb-12">
               {['Dadar East', 'Dadar West', 'Matunga', 'Sion', 'Parel', 'Lower Parel', 'Worli', 'Shivaji Park', 'Bandra', 'Wadala'].map(
@@ -565,7 +565,7 @@ export default function SportsMassageMumbaiPage() {
               Recovery for Everyone Who <span className="text-white/50">Trains</span>
             </h2>
             <p className="text-xl text-white/70 mb-12 leading-relaxed font-medium max-w-3xl mx-auto">
-              Book sports massage at R3boot in Dadar — combined with cupping and mobility work for faster recovery.
+              Book sports massage at R3boot in Dadar, combined with cupping and mobility work for faster recovery.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
               <a

@@ -2,7 +2,7 @@ export const infraredSaunaMumbaiFaqs = [
   {
     question: 'Where can I find an infrared sauna in Mumbai?',
     answer:
-      'R3BOOT in Dadar East offers infrared sauna as part of a physiotherapy-supervised contrast therapy protocol — not a standalone spa sauna. Sessions pair infrared heat with supervised ice bath in a structured 3:1 hot-to-cold sequence. Address: 203, Palai Plaza, Swami Gyan Jivandas Marg, Dadar East, Mumbai 400014.',
+      'R3BOOT in Dadar East offers infrared sauna as part of a physiotherapy-supervised contrast therapy protocol, not a standalone spa sauna. Sessions pair infrared heat with supervised ice bath in a structured 3:1 hot-to-cold sequence. Address: 203, Palai Plaza, Swami Gyan Jivandas Marg, Dadar East, Mumbai 400014.',
   },
   {
     question: 'Is there a sauna near me in Dadar or central Mumbai?',
@@ -12,7 +12,7 @@ export const infraredSaunaMumbaiFaqs = [
   {
     question: 'What is the difference between infrared sauna and a regular sauna?',
     answer:
-      'Infrared saunas heat your body directly with infrared light rather than heating the air around you. This allows deeper tissue warming at lower ambient temperatures — typically 45–60°C versus 80–100°C in traditional Finnish saunas. At R3BOOT, infrared heat is used as the hot phase in contrast therapy to dilate blood vessels before the cold immersion phase.',
+      'Infrared saunas heat your body directly with infrared light rather than heating the air around you. This allows deeper tissue warming at lower ambient temperatures, typically 45–60°C versus 80–100°C in traditional Finnish saunas. At R3BOOT, infrared heat is used as the hot phase in contrast therapy to dilate blood vessels before the cold immersion phase.',
   },
   {
     question: 'How long do you stay in the infrared sauna at R3BOOT?',
@@ -22,7 +22,7 @@ export const infraredSaunaMumbaiFaqs = [
   {
     question: 'Can I book infrared sauna without the ice bath?',
     answer:
-      'Our protocol is designed as contrast therapy — alternating heat and cold produces greater recovery benefit than heat alone. We do not offer standalone sauna sessions because the cold phase is what completes the vascular pumping effect. If you want cold-only recovery, see our ice bath page.',
+      'Our protocol is designed as contrast therapy, alternating heat and cold produces greater recovery benefit than heat alone. We do not offer standalone sauna sessions because the cold phase is what completes the vascular pumping effect. If you want cold-only recovery, see our ice bath page.',
   },
   {
     question: 'How much does infrared sauna cost at R3BOOT Mumbai?',

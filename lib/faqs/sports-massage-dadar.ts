@@ -7,17 +7,17 @@ export const sportsMassageDadarFaqs = [
   {
     question: 'Who comes for sports massage at R3BOOT in Dadar?',
     answer:
-      'Our clients include runners who train at Shivaji Park, gym-goers from Dadar East and West, CrossFit athletes, weekend cyclists, and office professionals with desk-driven muscle tension. We see active people from across Mumbai who want proper recovery — not just a relaxation massage.',
+      'Our clients include runners who train at Shivaji Park, gym-goers from Dadar East and West, CrossFit athletes, weekend cyclists, and office professionals with desk-driven muscle tension. We see active people from across Mumbai who want proper recovery, not just a relaxation massage.',
   },
   {
     question: 'What types of sports massage does R3BOOT in Dadar offer?',
     answer:
-      'Pre-event, post-event, maintenance, and rehabilitation sports massage. Sessions may include cupping therapy, myofascial release, trigger point therapy, and mobility work — depending on what your body needs at that point in your training.',
+      'Pre-event, post-event, maintenance, and rehabilitation sports massage. Sessions may include cupping therapy, myofascial release, trigger point therapy, and mobility work, depending on what your body needs at that point in your training.',
   },
   {
     question: 'Do I need to be an athlete to come for sports massage in Dadar?',
     answer:
-      'No. Sports massage is for anyone who trains regularly — gym members, recreational runners, cyclists, yoga practitioners, and even desk workers who hold chronic muscle tension. The name is about the methodology, not the clientele.',
+      'No. Sports massage is for anyone who trains regularly, gym members, recreational runners, cyclists, yoga practitioners, and even desk workers who hold chronic muscle tension. The name is about the methodology, not the clientele.',
   },
   {
     question: 'What are R3BOOT\'s hours in Dadar?',

@@ -8,7 +8,7 @@ import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema'
 import { backPainPhysiotherapyFaqs } from '@/lib/faqs/physiotherapy-back-pain-mumbai'
 
 export const metadata: Metadata = {
-  title: 'Physiotherapy for Back Pain Mumbai | Clinical Treatment — R3BOOT',
+  title: 'Physiotherapy for Back Pain Mumbai | Clinical Treatment | R3BOOT',
   description:
     'Clinical physiotherapy for back pain in Mumbai at R3BOOT Dadar. Assessment, manual therapy & dry needling for disc pain, sciatica & postural pain. 5.0 ★ Google. Book via WhatsApp.',
   alternates: { canonical: '/physiotherapy-for-back-pain-mumbai' },
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
 const backPainCauses = [
   {
     title: 'Lumbar disc herniation',
-    body: 'A bulging or herniated disc presses on nearby nerve roots — causing local lower back pain, referred leg pain, or sciatica. Specific loading strategies and nerve mobilisation techniques address this directly without surgery in most cases.',
+    body: 'A bulging or herniated disc presses on nearby nerve roots | causing local lower back pain, referred leg pain, or sciatica. Specific loading strategies and nerve mobilisation techniques address this directly without surgery in most cases.',
   },
   {
     title: 'Sciatica (nerve pain)',
@@ -36,19 +36,19 @@ const backPainCauses = [
   },
   {
     title: 'Facet joint pain',
-    body: 'Stiffness and localised pain from the small joints in the lumbar spine — worsened by prolonged sitting, rotation, or extension. Joint mobilisation and targeted exercise restore normal movement and offload the irritated segments.',
+    body: 'Stiffness and localised pain from the small joints in the lumbar spine | worsened by prolonged sitting, rotation, or extension. Joint mobilisation and targeted exercise restore normal movement and offload the irritated segments.',
   },
   {
     title: 'Postural and desk-related pain',
-    body: 'Nine-hour screen days, commuting, and poor workstation setup flatten the lumbar curve and overload the erector spinae. The pain feels chronic because the posture driving it never changes — physiotherapy breaks the pattern.',
+    body: 'Nine-hour screen days, commuting, and poor workstation setup flatten the lumbar curve and overload the erector spinae. The pain feels chronic because the posture driving it never changes | physiotherapy breaks the pattern.',
   },
   {
     title: 'Muscle strain and spasm',
-    body: 'Acute lower back spasm from lifting, twisting, or sudden movement. Extremely painful but responds well to manual therapy, soft tissue work, and early graded movement. Avoiding movement makes this worse — not better.',
+    body: 'Acute lower back spasm from lifting, twisting, or sudden movement. Extremely painful but responds well to manual therapy, soft tissue work, and early graded movement. Avoiding movement makes this worse, not better.',
   },
   {
     title: 'Spondylosis and degeneration',
-    body: 'Age-related changes in the lumbar spine — disc narrowing, osteophyte formation, and reduced mobility. Physiotherapy does not reverse degeneration but significantly reduces pain and improves function through targeted strengthening and movement rehabilitation.',
+    body: 'Age-related changes in the lumbar spine | disc narrowing, osteophyte formation, and reduced mobility. Physiotherapy does not reverse degeneration but significantly reduces pain and improves function through targeted strengthening and movement rehabilitation.',
   },
 ]
 
@@ -56,12 +56,12 @@ const sessionSteps = [
   {
     step: '01',
     label: 'Full clinical assessment',
-    body: 'Your physiotherapist takes a complete history — how it started, what aggravates it, what helps, and your specific goals. Movement testing, neurological screening, and load assessment identify the structure driving the pain.',
+    body: 'Your physiotherapist takes a complete history, how it started, what aggravates it, what helps, and your specific goals. Movement testing, neurological screening, and load assessment identify the structure driving the pain.',
   },
   {
     step: '02',
     label: 'Hands-on treatment',
-    body: 'Manual therapy, joint mobilisation, soft tissue release, and dry needling — applied to the exact structure identified in the assessment. Not a generic lower back protocol applied to everyone.',
+    body: 'Manual therapy, joint mobilisation, soft tissue release, and dry needling, applied to the exact structure identified in the assessment. Not a generic lower back protocol applied to everyone.',
   },
   {
     step: '03',
@@ -87,7 +87,7 @@ export default function PhysiotherapyBackPainMumbaiPage() {
       <section className="relative h-[70vh] flex items-end overflow-hidden">
         <Image
           src="/images/service/Services_image/Physiotherapy_1.webp"
-          alt="Physiotherapy for back pain Mumbai — clinical treatment at R3BOOT Dadar"
+          alt="Physiotherapy for back pain Mumbai, clinical treatment at R3BOOT Dadar"
           fill
           className="object-cover"
           priority
@@ -117,7 +117,7 @@ export default function PhysiotherapyBackPainMumbaiPage() {
               Physiotherapy for Back Pain in Mumbai
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl text-white/80 max-w-3xl leading-relaxed font-medium mt-4">
-              Clinical assessment, manual therapy, dry needling, and progressive rehabilitation — at R3BOOT, Dadar East.
+              Clinical assessment, manual therapy, dry needling, and progressive rehabilitation, at R3BOOT, Dadar East.
             </p>
           </div>
         </div>
@@ -135,14 +135,14 @@ export default function PhysiotherapyBackPainMumbaiPage() {
               </h2>
               <div className="prose prose-base sm:prose-lg md:prose-xl text-gray-600 dark:text-gray-400 dark:prose-invert max-w-none leading-relaxed space-y-6">
                 <p>
-                  Back pain is Mumbai&apos;s most common musculoskeletal complaint — and it is chronically undertreated.
+                  Back pain is Mumbai&apos;s most common musculoskeletal complaint, and it is chronically undertreated.
                   A course of painkillers, two weeks of rest, and a TENS machine is not rehabilitation. It is symptom
                   management that leaves the underlying cause untouched and guarantees recurrence.
                 </p>
                 <p>
                   At R3BOOT in Dadar East, clinical physiotherapy for back pain begins with a full structural assessment:
                   movement testing, neurological screening, load tolerance evaluation, and a detailed history. We identify
-                  the structure driving your pain — whether that is a disc, facet joint, nerve, or a movement pattern
+                  the structure driving your pain, whether that is a disc, facet joint, nerve, or a movement pattern
                   putting excessive load on the lumbar spine. Then we treat it directly, with manual therapy, dry needling,
                   and a specific progressive exercise plan built around your daily life and goals.
                 </p>
@@ -269,7 +269,7 @@ export default function PhysiotherapyBackPainMumbaiPage() {
             <div className="relative rounded-[2.5rem] overflow-hidden aspect-[4/5] w-full shadow-2xl">
               <Image
                 src="/images/Services_image/Physiotherapy.webp"
-                alt="Clinical physiotherapy for back pain at R3BOOT Dadar Mumbai — manual therapy and assessment"
+                alt="Clinical physiotherapy for back pain at R3BOOT Dadar Mumbai, manual therapy and assessment"
                 fill
                 className="object-cover"
               />
@@ -297,19 +297,19 @@ export default function PhysiotherapyBackPainMumbaiPage() {
                   Pain medication reduces what you feel. It does not change what is happening in your spine, your
                   movement patterns, or the tissue that is under excessive load. Rest reduces inflammation
                   temporarily. But the disc, the facet joint, or the muscle imbalance that caused the flare-up is
-                  unchanged when you return to activity. The pain comes back — often worse.
+                  unchanged when you return to activity. The pain comes back, often worse.
                 </p>
                 <p>
                   Clinical physiotherapy addresses the cause: a disc that is being compressed by poor load distribution,
                   a lumbar segment that has lost mobility and is forcing the levels above and below to overwork, or a
                   glute that has stopped activating and is letting the erector spinae carry the full load of every
-                  step you take. Fix the cause, and the pain resolves — and stays resolved.
+                  step you take. Fix the cause, and the pain resolves, and stays resolved.
                 </p>
               </div>
               <div className="space-y-4">
                 {[
                   { label: 'Manual therapy', detail: 'Joint mobilisation, soft tissue release, trigger point work' },
-                  { label: 'Dry needling', detail: 'Available at R3BOOT — effective for deep muscular pain and trigger points' },
+                  { label: 'Dry needling', detail: 'Available at R3BOOT, effective for deep muscular pain and trigger points' },
                   { label: 'Progressive loading', detail: 'Graded exercise to restore strength and movement confidence' },
                   { label: 'Nerve mobilisation', detail: 'For sciatica and referred leg pain from lumbar disc compression' },
                 ].map((item, idx) => (
@@ -343,7 +343,7 @@ export default function PhysiotherapyBackPainMumbaiPage() {
                 <span className="text-[#513394] dark:text-[#8B5CF6]">back pain cost in Mumbai?</span>
               </h2>
               <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed max-w-3xl">
-                Physiotherapy costs in Mumbai range widely — from ₹400 for high-volume hospital outpatient appointments
+                Physiotherapy costs in Mumbai range widely, from ₹400 for high-volume hospital outpatient appointments
                 to ₹3,000+ for specialist clinic sessions. What you pay is directly correlated with how much time and
                 attention your case actually gets.
               </p>
@@ -401,13 +401,13 @@ export default function PhysiotherapyBackPainMumbaiPage() {
                 <span className="text-[#513394] dark:text-[#8B5CF6]">in Central Mumbai</span>
               </h2>
               <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed mb-6">
-                R3BOOT is in Dadar East — the geographic centre of Mumbai. Patients with back pain come from
+                R3BOOT is in Dadar East, the geographic centre of Mumbai. Patients with back pain come from
                 Worli, Lower Parel, Matunga, Sion, Parel, Bandra, and BKC. Most reach us within 20 minutes
                 by train (Dadar Central Line, 5 minutes East exit) or road.
               </p>
               <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed mb-8">
                 Unlike high-volume hospital OPDs in central Mumbai, R3BOOT sees a limited number of patients
-                per day. Your session is your session — not a 15-minute window between twenty others. We have
+                per day. Your session is your session, not a 15-minute window between twenty others. We have
                 time to actually find what is wrong and treat it properly.
               </p>
 
@@ -449,7 +449,7 @@ export default function PhysiotherapyBackPainMumbaiPage() {
             <div className="relative rounded-[2.5rem] overflow-hidden aspect-[4/5] w-full shadow-2xl">
               <Image
                 src="/images/service/Services_image/Physiotherapy_1.webp"
-                alt="R3BOOT physiotherapy clinic Dadar East Mumbai — back pain treatment"
+                alt="R3BOOT physiotherapy clinic Dadar East Mumbai, back pain treatment"
                 fill
                 className="object-cover"
               />
@@ -482,7 +482,7 @@ export default function PhysiotherapyBackPainMumbaiPage() {
               </h2>
               <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed max-w-3xl">
                 Back pain recovery accelerates when multiple modalities work together. At R3BOOT, your
-                physiotherapist can coordinate a combined session — same visit, same roof.
+                physiotherapist can coordinate a combined session, same visit, same roof.
               </p>
             </div>
 
@@ -500,7 +500,7 @@ export default function PhysiotherapyBackPainMumbaiPage() {
                 },
                 {
                   title: 'Clinical Pilates',
-                  desc: 'Supervised Pilates built around your specific lumbar presentation — not a generic class. Core stability, hip strengthening, and spinal movement retraining to prevent recurrence.',
+                  desc: 'Supervised Pilates built around your specific lumbar presentation | not a generic class. Core stability, hip strengthening, and spinal movement retraining to prevent recurrence.',
                   href: '/back-pain-clinical-pilates-mumbai',
                 },
               ].map((item, idx) => (
@@ -570,10 +570,10 @@ export default function PhysiotherapyBackPainMumbaiPage() {
             </h2>
             <p className="text-lg sm:text-xl text-white/70 mb-4 leading-relaxed font-medium max-w-3xl mx-auto">
               Clinical physiotherapy for back pain at R3BOOT in Dadar, Mumbai. No referral needed.
-              Dr. Hiral Parikh and Dr. Vaishali Rauniyar — 15+ years combined clinical experience.
+              Dr. Hiral Parikh and Dr. Vaishali Rauniyar, 15+ years combined clinical experience.
             </p>
             <p className="text-white/40 mb-8 sm:mb-12 text-sm font-bold tracking-widest">
-              203, Palai Plaza, Dadar East, Mumbai 400014 — 5 min from Dadar station
+              203, Palai Plaza, Dadar East, Mumbai 400014, 5 min from Dadar station
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
               <a

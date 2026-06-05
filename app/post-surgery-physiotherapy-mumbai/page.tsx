@@ -8,7 +8,7 @@ import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema'
 import { postSurgeryPhysiotherapyFaqs } from '@/lib/faqs/post-surgery-physiotherapy-mumbai'
 
 export const metadata: Metadata = {
-  title: 'Post-Surgery Physiotherapy Mumbai | Surgical Rehab — R3BOOT Dadar',
+  title: 'Post-Surgery Physiotherapy Mumbai | Surgical Rehab | R3BOOT Dadar',
   description:
     'Post-surgery physiotherapy in Mumbai at R3BOOT Dadar. ACL reconstruction, knee & hip replacement, spinal surgery & shoulder rehab. Aquatic rehab available. 5.0 ★ Google. WhatsApp to book.',
   alternates: { canonical: '/post-surgery-physiotherapy-mumbai' },
@@ -37,7 +37,7 @@ const surgeryTypes = [
   },
   {
     title: 'Hip replacement (THR)',
-    body: 'Early mobilisation is critical. Gait retraining, hip strengthening, and progressive weight-bearing — with careful attention to post-operative precautions specific to the surgical approach. Aquatic rehab used for patients with high pain or weight-bearing restrictions.',
+    body: 'Early mobilisation is critical. Gait retraining, hip strengthening, and progressive weight-bearing, with careful attention to post-operative precautions specific to the surgical approach. Aquatic rehab used for patients with high pain or weight-bearing restrictions.',
   },
   {
     title: 'Spinal surgery (discectomy, fusion, decompression)',
@@ -49,28 +49,28 @@ const surgeryTypes = [
   },
   {
     title: 'Abdominal & thoracic surgery',
-    body: 'Breathing physiotherapy, early mobilisation, scar tissue management, and core reactivation. Commonly needed after Caesarean delivery, open abdominal procedures, and thoracic surgery — an often-overlooked part of full post-surgical recovery.',
+    body: 'Breathing physiotherapy, early mobilisation, scar tissue management, and core reactivation. Commonly needed after Caesarean delivery, open abdominal procedures, and thoracic surgery, an often-overlooked part of full post-surgical recovery.',
   },
 ]
 
 const rehabPhases = [
   {
     phase: '01',
-    label: 'Phase 1 — Protection and healing',
+    label: 'Phase 1, Protection and healing',
     weeks: 'Weeks 1–6',
     body: 'Swelling management, range-of-motion restoration, scar tissue mobilisation, and early muscle activation within post-operative restrictions. Aquatic rehabilitation used where appropriate for low-load early movement.',
   },
   {
     phase: '02',
-    label: 'Phase 2 — Strength and function',
+    label: 'Phase 2, Strength and function',
     weeks: 'Weeks 6–12',
-    body: 'Progressive strengthening, proprioception training, and functional movement retraining. Load is increased systematically — not randomly. Objective strength testing guides phase progression.',
+    body: 'Progressive strengthening, proprioception training, and functional movement retraining. Load is increased systematically, not randomly. Objective strength testing guides phase progression.',
   },
   {
     phase: '03',
-    label: 'Phase 3 — Return to full activity',
+    label: 'Phase 3, Return to full activity',
     weeks: '3–12 months',
-    body: 'Sport-specific or activity-specific conditioning. Return-to-sport milestone testing for athletes. Return-to-work and daily function benchmarks for others. Clearance is data-driven — not time-based alone.',
+    body: 'Sport-specific or activity-specific conditioning. Return-to-sport milestone testing for athletes. Return-to-work and daily function benchmarks for others. Clearance is data-driven, not time-based alone.',
   },
 ]
 
@@ -91,7 +91,7 @@ export default function PostSurgeryPhysiotherapyMumbaiPage() {
       <section className="relative h-[70vh] flex items-end overflow-hidden">
         <Image
           src="/images/service/Services_image/Physiotherapy_1.webp"
-          alt="Post-surgery physiotherapy Mumbai — surgical rehabilitation at R3BOOT Dadar"
+          alt="Post-surgery physiotherapy Mumbai, surgical rehabilitation at R3BOOT Dadar"
           fill
           className="object-cover"
           priority
@@ -121,7 +121,7 @@ export default function PostSurgeryPhysiotherapyMumbaiPage() {
               Post-Surgery Physiotherapy in Mumbai
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl text-white/80 max-w-3xl leading-relaxed font-medium mt-4">
-              Phased surgical rehabilitation — ACL, knee replacement, hip replacement, spine, and shoulder surgery — at R3BOOT, Dadar East.
+              Phased surgical rehabilitation, ACL, knee replacement, hip replacement, spine, and shoulder surgery, at R3BOOT, Dadar East.
             </p>
           </div>
         </div>
@@ -140,8 +140,8 @@ export default function PostSurgeryPhysiotherapyMumbaiPage() {
               <div className="prose prose-base sm:prose-lg md:prose-xl text-gray-600 dark:text-gray-400 dark:prose-invert max-w-none leading-relaxed space-y-6">
                 <p>
                   Most patients leave surgery with a discharge summary and a list of exercises printed on a
-                  sheet. A few weeks of hospital OPD physiotherapy — 15 minutes each session, mostly machine
-                  therapy — and they are expected to be recovered. Many are not. Persistent stiffness, weakness,
+                  sheet. A few weeks of hospital OPD physiotherapy, 15 minutes each session, mostly machine
+                  therapy, and they are expected to be recovered. Many are not. Persistent stiffness, weakness,
                   pain with activity, and poor movement quality years after surgery are all signs that
                   rehabilitation was incomplete.
                 </p>
@@ -149,12 +149,12 @@ export default function PostSurgeryPhysiotherapyMumbaiPage() {
                   At R3BOOT in Dadar East, post-surgical physiotherapy is phased, progressive, and built around
                   your specific procedure, surgeon&apos;s protocol, and goals. We work with the operative notes
                   and imaging you bring, assess where you are in the healing timeline, and build a programme
-                  from that exact point — whether you are one week post-surgery or one year.
+                  from that exact point, whether you are one week post-surgery or one year.
                 </p>
                 <p>
                   Dr. Hiral Parikh (BPT, 15+ years) and Dr. Vaishali Vijay Rauniyar (certified in Dry Needling
-                  and Aquatic Rehabilitation) lead the physiotherapy team. Aquatic rehabilitation — available
-                  on-site at R3BOOT — is particularly effective for post-surgical patients who need low-load
+                  and Aquatic Rehabilitation) lead the physiotherapy team. Aquatic rehabilitation, available
+                  on-site at R3BOOT, is particularly effective for post-surgical patients who need low-load
                   early movement before full weight-bearing is safe. No referral needed. First session 60 minutes.
                 </p>
               </div>
@@ -241,7 +241,7 @@ export default function PostSurgeryPhysiotherapyMumbaiPage() {
                 <span className="text-[#513394] dark:text-[#8B5CF6]">in Three Phases</span>
               </h2>
               <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed max-w-3xl">
-                Surgical recovery follows a biological timeline — tissue heals in phases, and rehabilitation
+                Surgical recovery follows a biological timeline, tissue heals in phases, and rehabilitation
                 must match that timeline. Doing too much too early risks re-injury. Doing too little leaves
                 permanent deficits. The phasing below applies to most orthopaedic procedures with variation
                 based on specific surgical protocols.
@@ -279,7 +279,7 @@ export default function PostSurgeryPhysiotherapyMumbaiPage() {
             <div className="relative rounded-[2.5rem] overflow-hidden aspect-[4/5] w-full shadow-2xl">
               <Image
                 src="/images/Services_image/Physiotherapy.webp"
-                alt="Post-surgery physiotherapy assessment at R3BOOT Dadar Mumbai — aquatic rehabilitation available"
+                alt="Post-surgery physiotherapy assessment at R3BOOT Dadar Mumbai, aquatic rehabilitation available"
                 fill
                 className="object-cover"
               />
@@ -306,13 +306,13 @@ export default function PostSurgeryPhysiotherapyMumbaiPage() {
                 <p>
                   Hospital OPD physiotherapy after surgery is typically 15–20 minutes per session, two to three
                   times per week, for six weeks. That window is sufficient for basic wound healing and early range
-                  of motion — it is not sufficient for full strength, movement quality, or sport or activity
+                  of motion, it is not sufficient for full strength, movement quality, or sport or activity
                   readiness. Patients are discharged &quot;recovered&quot; with 60–70% of their pre-surgery function
                   and told to continue on their own.
                 </p>
                 <p>
                   At R3BOOT, post-surgical rehabilitation is 45–60 minutes per session, phased correctly, and
-                  progressed based on objective testing — not a calendar. Aquatic rehabilitation is available
+                  progressed based on objective testing, not a calendar. Aquatic rehabilitation is available
                   on-site for patients who need to move and load early but cannot tolerate full weight-bearing.
                   Water reduces joint compression by up to 75%, allowing full-range movement and early strength
                   work weeks before land-based loading is appropriate.
@@ -320,9 +320,9 @@ export default function PostSurgeryPhysiotherapyMumbaiPage() {
               </div>
               <div className="space-y-4">
                 {[
-                  { label: 'Aquatic rehabilitation on-site', detail: 'Early-phase post-surgical loading in water — available at R3BOOT Dadar, rare in Mumbai' },
-                  { label: 'Dry needling for scar tissue', detail: 'Available at R3BOOT — effective for post-surgical scar adhesions and myofascial tightness around surgical sites' },
-                  { label: 'Objective phase-progression testing', detail: 'Strength and movement benchmarks at each phase — clearance based on data, not weeks elapsed' },
+                  { label: 'Aquatic rehabilitation on-site', detail: 'Early-phase post-surgical loading in water, available at R3BOOT Dadar, rare in Mumbai' },
+                  { label: 'Dry needling for scar tissue', detail: 'Available at R3BOOT, effective for post-surgical scar adhesions and myofascial tightness around surgical sites' },
+                  { label: 'Objective phase-progression testing', detail: 'Strength and movement benchmarks at each phase, clearance based on data, not weeks elapsed' },
                   { label: 'Coordination with surgical team', detail: 'We work within your surgeon\'s protocol and communicate with your specialist if clinical concerns arise' },
                 ].map((item, idx) => (
                   <div key={idx} className="flex items-start gap-4 group">
@@ -413,13 +413,13 @@ export default function PostSurgeryPhysiotherapyMumbaiPage() {
                 <span className="text-[#513394] dark:text-[#8B5CF6]">in Central Mumbai</span>
               </h2>
               <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed mb-6">
-                R3BOOT is in Dadar East — accessible from all of central and south Mumbai by train or road.
+                R3BOOT is in Dadar East, accessible from all of central and south Mumbai by train or road.
                 Patients recovering from surgery travel from Lower Parel, Worli, Bandra, Sion, Matunga, and
-                BKC. Most reach us within 15–20 minutes. We see a limited number of patients per day — your
+                BKC. Most reach us within 15–20 minutes. We see a limited number of patients per day, your
                 60-minute session is never rushed.
               </p>
               <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed mb-8">
-                Aquatic rehabilitation is available at R3BOOT — rare in Mumbai outside hospital settings. For
+                Aquatic rehabilitation is available at R3BOOT, rare in Mumbai outside hospital settings. For
                 post-surgical patients who need low-load early movement, this can significantly accelerate the
                 Phase 1 timeline without risking the surgical site.
               </p>
@@ -508,12 +508,12 @@ export default function PostSurgeryPhysiotherapyMumbaiPage() {
                 },
                 {
                   title: 'Clinical Pilates',
-                  desc: 'Supervised reformer Pilates designed specifically for post-surgical patients — not a generic class. Core stability, proprioception, and movement retraining. Appropriate from Phase 2 for spinal, hip, and knee surgery.',
+                  desc: 'Supervised reformer Pilates designed specifically for post-surgical patients, not a generic class. Core stability, proprioception, and movement retraining. Appropriate from Phase 2 for spinal, hip, and knee surgery.',
                   href: '/post-surgery-pilates-mumbai',
                 },
                 {
                   title: 'Sports Injury Physiotherapy',
-                  desc: 'ACL reconstruction and shoulder surgery rehabilitation that includes full return-to-sport programming — milestone testing, sport-specific loading, and clearance criteria for athletes.',
+                  desc: 'ACL reconstruction and shoulder surgery rehabilitation that includes full return-to-sport programming, milestone testing, sport-specific loading, and clearance criteria for athletes.',
                   href: '/sports-injury-physiotherapy-dadar-mumbai',
                 },
               ].map((item, idx) => (
@@ -587,7 +587,7 @@ export default function PostSurgeryPhysiotherapyMumbaiPage() {
               and dry needling. Dr. Hiral Parikh and Dr. Vaishali Rauniyar. No referral needed.
             </p>
             <p className="text-white/40 mb-8 sm:mb-12 text-sm font-bold tracking-widest">
-              203, Palai Plaza, Dadar East, Mumbai 400014 — 5 min from Dadar station
+              203, Palai Plaza, Dadar East, Mumbai 400014, 5 min from Dadar station
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
               <a

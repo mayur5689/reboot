@@ -8,9 +8,9 @@ import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema'
 import { clinicalPilatesBandraFaqs } from '@/lib/faqs/clinical-pilates-bandra'
 
 export const metadata: Metadata = {
-  title: 'Clinical Pilates Near Bandra | Physio-Led Rehab — R3BOOT Dadar',
+  title: 'Clinical Pilates Near Bandra | Physio-Led Rehab | R3BOOT Dadar',
   description:
-    'Clinical Pilates near Bandra at R3BOOT Dadar — 8 min by train. Physio-led programs for back pain, scoliosis & post-surgery. 5.0 ★ Google. Book via WhatsApp today.',
+    'Clinical Pilates near Bandra at R3BOOT Dadar | 8 min by train. Physio-led programs for back pain, scoliosis & post-surgery. 5.0 ★ Google. Book via WhatsApp today.',
   alternates: { canonical: '/clinical-pilates-bandra' },
   keywords: [
     'clinical pilates bandra',
@@ -54,7 +54,7 @@ export default function ClinicalPilatesBandraPage() {
               Clinical Pilates Near Bandra, Mumbai
             </h1>
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl leading-relaxed font-medium mt-4">
-              R3BOOT in Dadar East — 8 minutes from Bandra by train. Physiotherapist-led clinical Pilates for Bandra's active community.
+              R3BOOT in Dadar East, 8 minutes from Bandra by train. Physiotherapist-led clinical Pilates for Bandra's active community.
             </p>
           </div>
         </div>
@@ -73,7 +73,7 @@ export default function ClinicalPilatesBandraPage() {
                   My Pain Clinic Global in Bandra West offers clinical Pilates and is a well-regarded option.
                   R3BOOT in Dadar East adds an integrated recovery environment that has no parallel in Bandra:
                   clinical Pilates combined with sports massage, ice bath, contrast therapy, red light therapy,
-                  and physiotherapy — all in one visit, all under one roof. For Bandra clients managing complex
+                  and physiotherapy, all in one visit, all under one roof. For Bandra clients managing complex
                   presentations (post-surgical rehab combined with sports massage, or scoliosis with concurrent
                   physiotherapy), R3BOOT offers a breadth of clinical tools unavailable in a standalone Pilates clinic.
                 </p>
@@ -96,7 +96,7 @@ export default function ClinicalPilatesBandraPage() {
                   {[
                     { title: 'Physiotherapist-led (not instructor)', desc: 'Dr. Hiral Parikh and Dr. Vaishali Vijay Rauniyar lead every clinical Pilates program. Not a certified Pilates instructor.' },
                     { title: 'Integrated recovery stack', desc: 'Clinical Pilates + sports massage + ice bath + contrast therapy in one visit. No comparable option in Bandra.' },
-                    { title: '8 minutes from Bandra by train', desc: 'Bandra station to Dadar station (Western Line or Central Line interchange) — 8 minutes. Clinic is 5 min from Dadar station.' },
+                    { title: '8 minutes from Bandra by train', desc: 'Bandra station to Dadar station (Western Line or Central Line interchange) | 8 minutes. Clinic is 5 min from Dadar station.' },
                     { title: 'Reformer + mat + physiotherapy in same session', desc: 'Manual therapy, dry needling, and clinical Pilates combined in one session where clinically appropriate.' },
                   ].map((item, idx) => (
                     <div key={idx} className="bg-white dark:bg-white/5 p-8 rounded-[2.5rem] border border-gray-100 dark:border-white/5 shadow-sm hover:shadow-xl group transition-all duration-500 relative overflow-hidden">
@@ -149,7 +149,7 @@ export default function ClinicalPilatesBandraPage() {
             <p>
               Bandra has a concentrated fitness community. Carter Road and the Bandra Fort sea face are used
               daily by runners. The Khar and Santacruz corridor has a high density of gyms and CrossFit boxes.
-              BKC — directly adjacent — generates a corporate professional cohort who sit for eight hours and
+              BKC, directly adjacent, generates a corporate professional cohort who sit for eight hours and
               then train hard, accumulating the predictable pattern of hip flexor tightness, upper trapezius
               overload, and lumbar instability that desk-plus-gym lifestyles produce.
             </p>
@@ -161,11 +161,10 @@ export default function ClinicalPilatesBandraPage() {
               graduated loading that neither their physiotherapist nor a Pilates studio has been able to provide.
             </p>
             <p>
-              R3BOOT in Dadar East is eight minutes by train from Bandra station — Bandra to Dadar on the
+              R3BOOT in Dadar East is eight minutes by train from Bandra station, Bandra to Dadar on the
               Western or Central Line is a short commute. The facility at Palai Plaza, Swami Gyan Jivandas
               Marg, Dadar East offers the combination of physiotherapist-led clinical Pilates (Dr. Hiral Parikh,
-              Dr. Vaishali Vijay Rauniyar), reformer and mat sessions, and an integrated recovery stack —
-              sports massage, ice bath, contrast therapy — unavailable in a single Bandra location.
+              Dr. Vaishali Vijay Rauniyar), reformer and mat sessions, and an integrated recovery stack, sports massage, ice bath, contrast therapy, unavailable in a single Bandra location.
               Sessions are one-to-one, 45–60 minutes, assessment-led.
             </p>
           </div>

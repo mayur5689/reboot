@@ -65,7 +65,7 @@ async function main() {
     console.log(`    studio: Content → Posts → filter "Drafts"\n`)
   }
 
-  console.log('Done. Posts are DRAFTS only — not live on r3boot.in yet.')
+  console.log('Done. Posts are DRAFTS only, not live on r3boot.in yet.')
   console.log('Next steps in Sanity Studio:')
   console.log('  1. Add hero images (mainImage)')
   console.log('  2. Proofread body + FAQs')

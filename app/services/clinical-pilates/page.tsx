@@ -82,7 +82,7 @@ export default function ClinicalPilatesPage() {
                             </h2>
                             <div className="prose prose-xl text-gray-600 dark:text-gray-400 dark:prose-invert max-w-none leading-relaxed space-y-6">
                                 <p>
-                                    Most Pilates in Mumbai is taught in group classes by instructors trained in fitness methodology. Clinical Pilates at R3BOOT is delivered exclusively by qualified physiotherapists, starting with a formal assessment and building a program around your individual diagnosis — not a class schedule.
+                                    Most Pilates in Mumbai is taught in group classes by instructors trained in fitness methodology. Clinical Pilates at R3BOOT is delivered exclusively by qualified physiotherapists, starting with a formal assessment and building a program around your individual diagnosis, not a class schedule.
                                 </p>
                                 <p>
                                     The distinction matters most when you are managing a condition: lower back pain that has not responded to general classes, post-surgical rehabilitation that requires graduated loading, scoliosis that needs asymmetry-specific exercise prescription, or athletic performance that demands movement quality above and beyond general fitness.
@@ -103,7 +103,7 @@ export default function ClinicalPilatesPage() {
                                         },
                                         {
                                             title: 'Program Prescription',
-                                            description: 'Exercises are prescribed — not adapted from a class. Every movement targets a specific clinical deficit identified in your assessment: a weak deep stabiliser, a restricted segment, a loaded compensation pattern.',
+                                            description: 'Exercises are prescribed | not adapted from a class. Every movement targets a specific clinical deficit identified in your assessment: a weak deep stabiliser, a restricted segment, a loaded compensation pattern.',
                                         },
                                         {
                                             title: 'Reformer or Mat Selection',
@@ -111,11 +111,11 @@ export default function ClinicalPilatesPage() {
                                         },
                                         {
                                             title: 'Integration with Physiotherapy',
-                                            description: 'Where needed, clinical Pilates is combined with manual therapy, dry needling, or sports massage in the same session — addressing the root cause structurally and the movement pattern clinically at the same time.',
+                                            description: 'Where needed, clinical Pilates is combined with manual therapy, dry needling, or sports massage in the same session, addressing the root cause structurally and the movement pattern clinically at the same time.',
                                         },
                                         {
                                             title: 'Re-Assessment and Progression',
-                                            description: 'Your program advances based on objective clinical markers — not how you feel on the day. Regular re-assessment ensures exercises match your current capacity and continue driving progress.',
+                                            description: 'Your program advances based on objective clinical markers | not how you feel on the day. Regular re-assessment ensures exercises match your current capacity and continue driving progress.',
                                         },
                                     ].map((step, idx) => (
                                         <div key={idx} className="bg-white dark:bg-white/5 p-8 rounded-[2.5rem] border border-gray-100 dark:border-white/5 shadow-sm hover:shadow-xl group transition-all duration-500 relative overflow-hidden">
@@ -194,7 +194,7 @@ export default function ClinicalPilatesPage() {
                                     REFORMER + MAT //
                                 </span>
                                 <p className="text-white text-xl font-black tracking-tight leading-tight">
-                                    Dr. Vaishali Vijay Rauniyar — Dry Needling & Aquatic Rehab Certified
+                                    Dr. Vaishali Vijay Rauniyar, Dry Needling & Aquatic Rehab Certified
                                 </p>
                             </div>
                         </div>
@@ -207,7 +207,7 @@ export default function ClinicalPilatesPage() {
                                 How We Deliver <span className="text-[#513394] dark:text-[#8B5CF6]">Clinical Pilates at R3BOOT</span>
                             </h2>
                             <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed mb-10">
-                                Clinical Pilates methodology at R3BOOT is built on physiotherapy principles, not fitness instruction. Equipment and exercise selection are clinical decisions made per individual — not class preferences.
+                                Clinical Pilates methodology at R3BOOT is built on physiotherapy principles, not fitness instruction. Equipment and exercise selection are clinical decisions made per individual, not class preferences.
                             </p>
                             <div className="space-y-6">
                                 {[
@@ -225,7 +225,7 @@ export default function ClinicalPilatesPage() {
                                     },
                                     {
                                         title: 'Sport-Specific Movement Retraining',
-                                        body: 'For athletes, clinical Pilates goes beyond core stability — it trains the movement patterns specific to your sport. Batsmen with lower back asymmetry, runners with hip drop, swimmers with shoulder instability. The program is built around your movement demands.',
+                                        body: 'For athletes, clinical Pilates goes beyond core stability, it trains the movement patterns specific to your sport. Batsmen with lower back asymmetry, runners with hip drop, swimmers with shoulder instability. The program is built around your movement demands.',
                                     },
                                 ].map((tech, idx) => (
                                     <div key={idx} className="flex gap-5 group">
@@ -261,7 +261,7 @@ export default function ClinicalPilatesPage() {
                             {
                                 label: 'Back Pain & Spinal Conditions',
                                 tag: 'SPINE //',
-                                description: 'Chronic lower back pain, disc problems, facet joint irritation, and scoliosis. Clinical Pilates is the most evidence-supported conservative intervention for spinal pain — when it is correctly prescribed by a physiotherapist.',
+                                description: 'Chronic lower back pain, disc problems, facet joint irritation, and scoliosis. Clinical Pilates is the most evidence-supported conservative intervention for spinal pain, when it is correctly prescribed by a physiotherapist.',
                                 image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1777793697/Clinical_Pillates_Image_3_pil8g7.jpg',
                                 points: ['Lower back pain', 'Scoliosis management', 'Disc rehabilitation'],
                             },
@@ -339,7 +339,7 @@ export default function ClinicalPilatesPage() {
                             Move Better. <span className="text-white/50">Pain Less.</span>
                         </h2>
                         <p className="text-xl text-white/70 mb-12 leading-relaxed font-medium max-w-3xl mx-auto">
-                            Clinical Pilates at R3BOOT starts with an assessment — not a class signup. Your first session tells us what you need. Everything after is built around that.
+                            Clinical Pilates at R3BOOT starts with an assessment, not a class signup. Your first session tells us what you need. Everything after is built around that.
                         </p>
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
                             <a
@@ -421,7 +421,7 @@ export default function ClinicalPilatesPage() {
                     <Link href="/clinical-pilates-mumbai" className="group flex items-center justify-between p-6 bg-gray-50 dark:bg-white/5 rounded-[2rem] border border-gray-100 dark:border-white/10 hover:border-[#513394]/40 transition-all">
                         <div>
                             <p className="text-xs font-black tracking-widest text-[#513394] uppercase mb-1">Mumbai Guide</p>
-                            <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-[#513394] transition-colors">Clinical Pilates in Mumbai — Pricing, Reformer & What to Expect</h3>
+                            <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-[#513394] transition-colors">Clinical Pilates in Mumbai, Pricing, Reformer & What to Expect</h3>
                             <span className="text-sm text-gray-500 dark:text-gray-400 mt-1 inline-block">Full local guide with session fees →</span>
                         </div>
                         <svg className="w-6 h-6 text-[#513394] opacity-0 group-hover:opacity-100 transition-opacity shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>

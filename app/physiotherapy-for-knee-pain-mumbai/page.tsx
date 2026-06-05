@@ -8,7 +8,7 @@ import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema'
 import { kneePainPhysiotherapyFaqs } from '@/lib/faqs/physiotherapy-knee-pain-mumbai'
 
 export const metadata: Metadata = {
-  title: 'Physiotherapy for Knee Pain Mumbai | Clinical Knee Rehab — R3BOOT',
+  title: 'Physiotherapy for Knee Pain Mumbai | Clinical Knee Rehab | R3BOOT',
   description:
     'Clinical physiotherapy for knee pain in Mumbai at R3BOOT Dadar. Runner\'s knee, osteoarthritis, meniscus, ACL rehab & post-surgery recovery. 5.0 ★ Google. WhatsApp to book.',
   alternates: { canonical: '/physiotherapy-for-knee-pain-mumbai' },
@@ -29,11 +29,11 @@ export const metadata: Metadata = {
 const kneePainCauses = [
   {
     title: 'Patellofemoral syndrome (runner\'s knee)',
-    body: 'Pain behind or around the kneecap — common in runners, cyclists, and gym athletes. Caused by patellar tracking issues, weak VMO, or tight ITB. Responds well to physiotherapy without surgery in the majority of cases.',
+    body: 'Pain behind or around the kneecap | common in runners, cyclists, and gym athletes. Caused by patellar tracking issues, weak VMO, or tight ITB. Responds well to physiotherapy without surgery in the majority of cases.',
   },
   {
     title: 'Meniscus tears',
-    body: 'Acute tears from rotational injuries and degenerative tears in adults over 35. Clinical physiotherapy produces equivalent outcomes to surgery for many meniscus presentations — particularly in older, less active patients.',
+    body: 'Acute tears from rotational injuries and degenerative tears in adults over 35. Clinical physiotherapy produces equivalent outcomes to surgery for many meniscus presentations | particularly in older, less active patients.',
   },
   {
     title: 'Knee osteoarthritis',
@@ -45,11 +45,11 @@ const kneePainCauses = [
   },
   {
     title: 'Patellar tendinopathy',
-    body: 'Pain at the patellar tendon below the kneecap — common in jumpers, basketball players, and high-load gym athletes. Heavy slow resistance loading protocols are the most effective evidence-based treatment.',
+    body: 'Pain at the patellar tendon below the kneecap | common in jumpers, basketball players, and high-load gym athletes. Heavy slow resistance loading protocols are the most effective evidence-based treatment.',
   },
   {
     title: 'Post-surgery knee rehab',
-    body: 'ACL reconstruction, knee replacement, meniscectomy, or MPFL repair. Progressive phased rehabilitation from week 1 — strength, range of motion, proprioception, and sport-specific return-to-activity milestones.',
+    body: 'ACL reconstruction, knee replacement, meniscectomy, or MPFL repair. Progressive phased rehabilitation from week 1, strength, range of motion, proprioception, and sport-specific return-to-activity milestones.',
   },
 ]
 
@@ -62,12 +62,12 @@ const sessionSteps = [
   {
     step: '02',
     label: 'Targeted hands-on treatment',
-    body: 'Manual therapy, joint mobilisation, soft tissue release, and dry needling — applied to the specific structure identified. Not a standard knee protocol applied to everyone with the same diagnosis.',
+    body: 'Manual therapy, joint mobilisation, soft tissue release, and dry needling, applied to the specific structure identified. Not a standard knee protocol applied to everyone with the same diagnosis.',
   },
   {
     step: '03',
     label: 'Your rehabilitation plan',
-    body: 'You leave with a progressive exercise programme, clear load guidelines, and specific milestones. Your physiotherapist will tell you what your realistic recovery timeline looks like — not a vague estimate.',
+    body: 'You leave with a progressive exercise programme, clear load guidelines, and specific milestones. Your physiotherapist will tell you what your realistic recovery timeline looks like, not a vague estimate.',
   },
 ]
 
@@ -88,7 +88,7 @@ export default function PhysiotherapyKneePainMumbaiPage() {
       <section className="relative h-[70vh] flex items-end overflow-hidden">
         <Image
           src="/images/service/Services_image/Physiotherapy_1.webp"
-          alt="Physiotherapy for knee pain Mumbai — clinical knee rehabilitation at R3BOOT Dadar"
+          alt="Physiotherapy for knee pain Mumbai, clinical knee rehabilitation at R3BOOT Dadar"
           fill
           className="object-cover"
           priority
@@ -118,7 +118,7 @@ export default function PhysiotherapyKneePainMumbaiPage() {
               Physiotherapy for Knee Pain in Mumbai
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl text-white/80 max-w-3xl leading-relaxed font-medium mt-4">
-              Clinical assessment, manual therapy, and progressive rehabilitation for knee pain — at R3BOOT, Dadar East.
+              Clinical assessment, manual therapy, and progressive rehabilitation for knee pain, at R3BOOT, Dadar East.
             </p>
           </div>
         </div>
@@ -136,14 +136,14 @@ export default function PhysiotherapyKneePainMumbaiPage() {
               </h2>
               <div className="prose prose-base sm:prose-lg md:prose-xl text-gray-600 dark:text-gray-400 dark:prose-invert max-w-none leading-relaxed space-y-6">
                 <p>
-                  The knee is one of the most commonly injured joints in Mumbai — among runners at Shivaji
+                  The knee is one of the most commonly injured joints in Mumbai, among runners at Shivaji
                   Park, gym athletes in Lower Parel, and desk workers whose hips have stopped working and whose
                   knees are carrying the load. Most people who come to us have already tried rest, a brace, or
                   a cortisone injection. The pain came back because the cause was never addressed.
                 </p>
                 <p>
                   At R3BOOT in Dadar East, clinical physiotherapy for knee pain starts with a full structural
-                  assessment — joint range of motion, patella tracking, ligament stability testing, muscle
+                  assessment, joint range of motion, patella tracking, ligament stability testing, muscle
                   strength, and movement quality under load. We identify whether the pain is coming from the
                   joint, the tendon, the meniscus, or a movement pattern overloading the knee from above or
                   below. Then we treat it directly.
@@ -237,8 +237,7 @@ export default function PhysiotherapyKneePainMumbaiPage() {
                 <span className="text-[#513394] dark:text-[#8B5CF6]">First Appointment</span>
               </h2>
               <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed max-w-3xl">
-                First session is 60 minutes. Wear or bring clothing that allows knee movement assessment —
-                shorts work best. Bring any imaging (X-ray, MRI) or specialist reports if you have them.
+                First session is 60 minutes. Wear or bring clothing that allows knee movement assessment, shorts work best. Bring any imaging (X-ray, MRI) or specialist reports if you have them.
                 No referral required.
               </p>
             </div>
@@ -298,7 +297,7 @@ export default function PhysiotherapyKneePainMumbaiPage() {
               </h2>
               <div className="prose prose-base sm:prose-lg text-gray-600 dark:text-gray-400 dark:prose-invert max-w-none leading-relaxed space-y-4 mb-8">
                 <p>
-                  Cortisone injections reduce inflammation — they do not change the movement pattern loading the
+                  Cortisone injections reduce inflammation, they do not change the movement pattern loading the
                   knee, strengthen the muscles stabilising it, or address the patellar tracking issue causing
                   pain under the kneecap. Six weeks later, the same forces are acting on the same structure, and
                   the pain returns. A knee brace does not fix a weak VMO. It compensates for it.
@@ -313,9 +312,9 @@ export default function PhysiotherapyKneePainMumbaiPage() {
               <div className="space-y-4">
                 {[
                   { label: 'Manual therapy & mobilisation', detail: 'Patellofemoral mobilisation, tibiofemoral joint work, and soft tissue release for restricted knee movement' },
-                  { label: 'Dry needling', detail: 'Available at R3BOOT — effective for quadriceps, hamstring, and IT band trigger points contributing to knee pain' },
-                  { label: 'Heavy slow resistance loading', detail: 'Evidence-based loading protocols for patellar and quadriceps tendinopathy — the most effective non-surgical treatment' },
-                  { label: 'Aquatic rehabilitation', detail: 'Low-load movement training in water for post-surgical knees and osteoarthritis — available on-site at R3BOOT' },
+                  { label: 'Dry needling', detail: 'Available at R3BOOT, effective for quadriceps, hamstring, and IT band trigger points contributing to knee pain' },
+                  { label: 'Heavy slow resistance loading', detail: 'Evidence-based loading protocols for patellar and quadriceps tendinopathy, the most effective non-surgical treatment' },
+                  { label: 'Aquatic rehabilitation', detail: 'Low-load movement training in water for post-surgical knees and osteoarthritis, available on-site at R3BOOT' },
                 ].map((item, idx) => (
                   <div key={idx} className="flex items-start gap-4 group">
                     <div className="w-8 h-8 rounded-xl bg-[#513394]/10 dark:bg-[#8B5CF6]/20 flex items-center justify-center text-[#513394] dark:text-[#A78BFA] font-black shrink-0 text-xs group-hover:bg-[#513394] group-hover:text-white transition-all duration-300">
@@ -348,7 +347,7 @@ export default function PhysiotherapyKneePainMumbaiPage() {
               </h2>
               <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed max-w-3xl">
                 Knee physiotherapy in Mumbai ranges from ₹400 at hospital OPDs to ₹3,000+ at specialist
-                clinics. Session length and hands-on clinical time are what determine outcomes — not the
+                clinics. Session length and hands-on clinical time are what determine outcomes, not the
                 number of sessions booked.
               </p>
             </div>
@@ -366,7 +365,7 @@ export default function PhysiotherapyKneePainMumbaiPage() {
                   {[
                     ['Hospital OPD', '15–20 min', 'Ultrasound/TENS machine, minimal hands-on, no load assessment'],
                     ['Home physiotherapy', '30–45 min', 'Convenient but limited assessment and equipment'],
-                    ['Generic physio clinic', '30–45 min', 'Standard protocol — rarely condition- or sport-specific'],
+                    ['Generic physio clinic', '30–45 min', 'Standard protocol, rarely condition- or sport-specific'],
                     ['R3BOOT Dadar', '45–60 min', 'Full assessment + manual therapy + dry needling + progressive rehab plan'],
                   ].map(([setting, time, whatYouGet], idx) => (
                     <tr
@@ -405,12 +404,12 @@ export default function PhysiotherapyKneePainMumbaiPage() {
                 <span className="text-[#513394] dark:text-[#8B5CF6]">in Central Mumbai</span>
               </h2>
               <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed mb-6">
-                R3BOOT is in Dadar East — accessible from all of central and south Mumbai. Runners from Shivaji
+                R3BOOT is in Dadar East, accessible from all of central and south Mumbai. Runners from Shivaji
                 Park are 10 minutes on foot. Patients with knee pain travel from Lower Parel, Worli, Bandra,
-                Sion, and Matunga — most reaching us in 15–20 minutes by train or road.
+                Sion, and Matunga, most reaching us in 15–20 minutes by train or road.
               </p>
               <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed mb-8">
-                We see a limited number of patients per day. Your 60-minute session is your session — a full
+                We see a limited number of patients per day. Your 60-minute session is your session, a full
                 clinical assessment and treatment, not a 15-minute machine appointment at a high-volume OPD.
               </p>
 
@@ -485,7 +484,7 @@ export default function PhysiotherapyKneePainMumbaiPage() {
               </h2>
               <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed max-w-3xl">
                 Knee recovery accelerates when multiple modalities are coordinated. At R3BOOT, your
-                physiotherapist can combine your session with other treatments — same visit, same building.
+                physiotherapist can combine your session with other treatments, same visit, same building.
               </p>
             </div>
 
@@ -493,7 +492,7 @@ export default function PhysiotherapyKneePainMumbaiPage() {
               {[
                 {
                   title: 'Sports Massage',
-                  desc: 'Deep tissue work on the quadriceps, ITB, hamstrings, and calves — the muscle chains directly contributing to knee load. Particularly effective for runner\'s knee and ITB syndrome alongside physiotherapy.',
+                  desc: 'Deep tissue work on the quadriceps, ITB, hamstrings, and calves | the muscle chains directly contributing to knee load. Particularly effective for runner\'s knee and ITB syndrome alongside physiotherapy.',
                   href: '/knee-pain-sports-massage-mumbai',
                 },
                 {
@@ -503,7 +502,7 @@ export default function PhysiotherapyKneePainMumbaiPage() {
                 },
                 {
                   title: 'Sports Injury Physiotherapy',
-                  desc: 'ACL reconstruction, meniscus tears, and ligament injuries require sport-specific return-to-play rehabilitation — not just pain management. See our dedicated sports injury programme.',
+                  desc: 'ACL reconstruction, meniscus tears, and ligament injuries require sport-specific return-to-play rehabilitation, not just pain management. See our dedicated sports injury programme.',
                   href: '/sports-injury-physiotherapy-dadar-mumbai',
                 },
               ].map((item, idx) => (
@@ -574,10 +573,10 @@ export default function PhysiotherapyKneePainMumbaiPage() {
             </h2>
             <p className="text-lg sm:text-xl text-white/70 mb-4 leading-relaxed font-medium max-w-3xl mx-auto">
               Clinical physiotherapy for knee pain at R3BOOT, Dadar East. No referral needed.
-              Dr. Hiral Parikh and Dr. Vaishali Rauniyar — clinical expertise from day one.
+              Dr. Hiral Parikh and Dr. Vaishali Rauniyar, clinical expertise from day one.
             </p>
             <p className="text-white/40 mb-8 sm:mb-12 text-sm font-bold tracking-widest">
-              203, Palai Plaza, Dadar East, Mumbai 400014 — 5 min from Dadar station
+              203, Palai Plaza, Dadar East, Mumbai 400014, 5 min from Dadar station
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
               <a

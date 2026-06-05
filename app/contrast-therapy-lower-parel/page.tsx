@@ -8,9 +8,9 @@ import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema'
 import { contrastTherapyLowerParelFaqs } from '@/lib/faqs/contrast-therapy-lower-parel'
 
 export const metadata: Metadata = {
-  title: 'Contrast Therapy Near Lower Parel | Ice Bath & Sauna — R3BOOT',
+  title: 'Contrast Therapy Near Lower Parel | Ice Bath & Sauna | R3BOOT',
   description:
-    'Contrast therapy near Lower Parel & Worli at R3BOOT Dadar — 10 min away. Physio-supervised sauna & ice bath for gym-goers & BKC pros. 5.0 ★ Google.',
+    'Contrast therapy near Lower Parel & Worli at R3BOOT Dadar | 10 min away. Physio-supervised sauna & ice bath for gym-goers & BKC pros. 5.0 ★ Google.',
   alternates: { canonical: '/contrast-therapy-lower-parel' },
   keywords: [
     'contrast therapy lower parel',
@@ -28,7 +28,7 @@ export default function ContrastTherapyLowerParelPage() {
       <section className="relative h-[70vh] flex items-end overflow-hidden">
         <Image
           src="/images/contrast-therapy-mumbai_service_page/contrast-therapy-mumbai_R3BOOT_PROTOCOL.webp"
-          alt="Contrast therapy near Lower Parel Mumbai — R3BOOT"
+          alt="Contrast therapy near Lower Parel Mumbai, R3BOOT"
           fill
           className="object-cover"
           priority
@@ -52,7 +52,7 @@ export default function ContrastTherapyLowerParelPage() {
               Contrast Therapy Near Lower Parel, Mumbai
             </h1>
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl leading-relaxed font-medium mt-4">
-              R3BOOT in Dadar East — 10–15 min from Lower Parel. Supervised sauna and ice bath for Kamala Mills gym-goers and BKC professionals.
+              R3BOOT in Dadar East, 10–15 min from Lower Parel. Supervised sauna and ice bath for Kamala Mills gym-goers and BKC professionals.
             </p>
           </div>
         </div>
@@ -69,7 +69,7 @@ export default function ContrastTherapyLowerParelPage() {
                 <p>
                   Premium gyms in the Kamala Mills and Phoenix Mills corridor often add cold plunge tanks with no health screening and no
                   supervision. R3BOOT is 10–15 minutes away in Dadar East. Contrast therapy here means red light sauna (68°C) paired with
-                  physio-supervised ice bath (6–10°C) — not a solo dip after leg day.
+                  physio-supervised ice bath (6–10°C), not a solo dip after leg day.
                 </p>
                 <p>
                   BKC desk workers, Worli runners, and Parel weekend athletes use R3BOOT to recover faster. Combine with{' '}
@@ -84,7 +84,7 @@ export default function ContrastTherapyLowerParelPage() {
                   { title: 'Gym-goers from Lower Parel', body: 'Structured recovery after heavy training blocks at premium gyms.' },
                   { title: 'BKC professionals', body: 'Contrast therapy for desk-related tension and training stress.' },
                   { title: 'Worli runners', body: 'Post-run recovery with supervised cold immersion.' },
-                  { title: 'Half / Full Cycle pricing', body: '₹2,500 Half · ₹3,500 Full — sauna + ice bath included.' },
+                  { title: 'Half / Full Cycle pricing', body: '₹2,500 Half · ₹3,500 Full, sauna + ice bath included.' },
                 ].map((item, idx) => (
                   <div key={idx} className="bg-white dark:bg-white/5 p-6 rounded-[2rem] border border-gray-100 dark:border-white/5">
                     <h4 className="font-bold text-gray-900 dark:text-white mb-2">{item.title}</h4>

@@ -8,9 +8,9 @@ import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema'
 import { backPainSportsMassageFaqs } from '@/lib/faqs/back-pain-sports-massage-mumbai'
 
 export const metadata: Metadata = {
-  title: 'Sports Massage for Back Pain Mumbai | Physio-Led — R3BOOT',
+  title: 'Sports Massage for Back Pain Mumbai | Physio-Led | R3BOOT',
   description:
-    'Sports massage for back pain at R3BOOT Mumbai. Soft tissue release for lower back, thoracic & lumbar pain. Physio-trained — not a spa. 5.0 ★ Google. Book via WhatsApp.',
+    'Sports massage for back pain at R3BOOT Mumbai. Soft tissue release for lower back, thoracic & lumbar pain. Physio-trained, not a spa. 5.0 ★ Google. Book via WhatsApp.',
   alternates: { canonical: '/back-pain-sports-massage-mumbai' },
   keywords: [
     'sports massage for back pain mumbai',
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 const causes = [
   {
     title: 'Tight hip flexors',
-    body: 'Sitting compresses hip flexors. Shortened psoas pulls the lumbar spine into anterior tilt — a primary driver of chronic lower back pain in Mumbai desk workers who also train.',
+    body: 'Sitting compresses hip flexors. Shortened psoas pulls the lumbar spine into anterior tilt | a primary driver of chronic lower back pain in Mumbai desk workers who also train.',
   },
   {
     title: 'Overactive erectors',
@@ -84,7 +84,7 @@ export default function BackPainSportsMassageMumbaiPage() {
               Sports Massage for Back Pain in Mumbai
             </h1>
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl leading-relaxed font-medium mt-4">
-              Clinical soft tissue therapy for lower back, thoracic, and lumbar pain — at R3BOOT, Dadar East.
+              Clinical soft tissue therapy for lower back, thoracic, and lumbar pain, at R3BOOT, Dadar East.
             </p>
           </div>
         </div>
@@ -100,7 +100,7 @@ export default function BackPainSportsMassageMumbaiPage() {
               </h2>
               <div className="prose prose-xl text-gray-600 dark:text-gray-400 dark:prose-invert max-w-none leading-relaxed space-y-6">
                 <p>
-                  Lower back pain is Mumbai's most common musculoskeletal complaint — and it almost never starts
+                  Lower back pain is Mumbai's most common musculoskeletal complaint, and it almost never starts
                   in the back. A professional commuting to Nariman Point sits for nine hours, then deadlifts
                   heavy at his Dadar gym. A runner logging 50km a week at Shivaji Park develops hip flexors so
                   short they pull the lumbar spine into constant compression. A CrossFit athlete in Parel trains
@@ -109,7 +109,7 @@ export default function BackPainSportsMassageMumbaiPage() {
                 </p>
                 <p>
                   Sports massage at R3BOOT addresses the structures actually driving the problem. Therapist Akshay
-                  Nalawde — certified in sports soft tissue therapy — assesses the full lower kinetic chain before
+                  Nalawde, certified in sports soft tissue therapy, assesses the full lower kinetic chain before
                   touching the lumbar spine: hip flexor length, glute activation, lateral hip chain, thoracic
                   rotation. Treatment goes to the root. You leave with both relief and a clear understanding of
                   what caused it.
@@ -235,7 +235,7 @@ export default function BackPainSportsMassageMumbaiPage() {
                 Not a Spa. A <span className="text-[#513394] dark:text-[#8B5CF6]">Clinical Sports Clinic</span> in Dadar East.
               </h2>
               <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed max-w-3xl mx-auto">
-                R3BOOT is at Palai Plaza, Swami Gyan Jivandas Marg, Dadar East — 5 minutes from Dadar Central Line station.
+                R3BOOT is at Palai Plaza, Swami Gyan Jivandas Marg, Dadar East, 5 minutes from Dadar Central Line station.
                 Unlike relaxation spas in Mumbai, every session begins with assessment: what muscle group is tight, what movement
                 pattern is loading the spine wrong, what needs to change. Clients come from Parel, Matunga, Lower Parel, Worli,
                 Sion, and Bandra for clinical sports massage done right.

@@ -8,9 +8,9 @@ import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema'
 import { scoliosisPilatesFaqs } from '@/lib/faqs/scoliosis-pilates-mumbai'
 
 export const metadata: Metadata = {
-  title: 'Clinical Pilates Scoliosis Mumbai | Curve-Specific — R3BOOT Dadar',
+  title: 'Clinical Pilates Scoliosis Mumbai | Curve-Specific | R3BOOT Dadar',
   description:
-    'Clinical Pilates for scoliosis in Mumbai at R3BOOT Dadar. Curve-specific exercises, rotational breathing & postural retraining — physio-led. 5.0 ★ Google. Book via WhatsApp.',
+    'Clinical Pilates for scoliosis in Mumbai at R3BOOT Dadar. Curve-specific exercises, rotational breathing & postural retraining, physio-led. 5.0 ★ Google. Book via WhatsApp.',
   alternates: { canonical: '/scoliosis-pilates-mumbai' },
   keywords: [
     'pilates for scoliosis mumbai',
@@ -33,14 +33,14 @@ const facts = [
   },
   {
     title: 'Rotational breathing is specific to scoliosis',
-    body: 'Breathing mechanics change with spinal curvature. Rotational breathing — expanding the compressed side of the thorax on inhalation — is a technique specific to scoliosis Pilates. It is not taught in general Pilates classes.',
+    body: 'Breathing mechanics change with spinal curvature. Rotational breathing, expanding the compressed side of the thorax on inhalation | is a technique specific to scoliosis Pilates. It is not taught in general Pilates classes.',
   },
   {
     title: 'Adolescent scoliosis needs monitoring during growth',
-    body: 'Curves in adolescents are dynamic — growth spurts can cause rapid progression. Clinical Pilates during adolescence is a supported intervention while curves are being monitored, often alongside orthopaedic review.',
+    body: 'Curves in adolescents are dynamic | growth spurts can cause rapid progression. Clinical Pilates during adolescence is a supported intervention while curves are being monitored, often alongside orthopaedic review.',
   },
   {
-    title: 'Adult scoliosis is about pain and function — not curve reduction',
+    title: 'Adult scoliosis is about pain and function | not curve reduction',
     body: 'In adults, the structural curve is fixed. The goal is reducing the muscular asymmetry and pain that comes from years of uneven loading. Most adults see significant pain reduction and improved postural control within 8–12 sessions.',
   },
 ]
@@ -77,7 +77,7 @@ export default function ScoliosisPilatesMumbaiPage() {
               Clinical Pilates for Scoliosis in Mumbai
             </h1>
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl leading-relaxed font-medium mt-4">
-              Curve-specific programs for adolescent and adult scoliosis — physiotherapist-led at R3BOOT, Dadar East.
+              Curve-specific programs for adolescent and adult scoliosis, physiotherapist-led at R3BOOT, Dadar East.
             </p>
           </div>
         </div>
@@ -93,14 +93,14 @@ export default function ScoliosisPilatesMumbaiPage() {
               </h2>
               <div className="prose prose-xl text-gray-600 dark:text-gray-400 dark:prose-invert max-w-none leading-relaxed space-y-6">
                 <p>
-                  Scoliosis is a lateral curvature of the spine — most commonly identified in adolescence, though adult
+                  Scoliosis is a lateral curvature of the spine, most commonly identified in adolescence, though adult
                   scoliosis is increasingly recognised as a source of back pain and postural dysfunction. Clinical Pilates
                   is a first-line physiotherapy approach for scoliosis management, recommended by physiotherapists,
                   orthopaedic surgeons, and the Scientific Exercise Approach to Scoliosis (SEAS) framework used globally.
                 </p>
                 <p>
                   At R3BOOT in Dadar East, Mumbai, Dr. Hiral Parikh and Dr. Vaishali Vijay Rauniyar design scoliosis
-                  programs from a clinical assessment of your specific curve — not a generic back exercise routine.
+                  programs from a clinical assessment of your specific curve, not a generic back exercise routine.
                   The program uses curve-specific exercises, rotational breathing techniques, and progressive postural
                   awareness training that general Pilates classes do not offer. No group classes. One-to-one, assessment-led.
                 </p>
@@ -169,10 +169,10 @@ export default function ScoliosisPilatesMumbaiPage() {
               Scoliosis creates a predictable pattern of muscle asymmetry: on the convex side of the curve, muscles
               are chronically stretched and underactive. On the concave side, they are shortened and overloaded.
               A general Pilates class, which is built around symmetrical movement, does nothing to correct this
-              asymmetry — and some exercises actively reinforce it by loading the already-dominant side.
+              asymmetry, and some exercises actively reinforce it by loading the already-dominant side.
             </p>
             <p>
-              The most important scoliosis-specific technique is rotational breathing — expanding the compressed
+              The most important scoliosis-specific technique is rotational breathing, expanding the compressed
               side of the thoracic cage on inhalation while allowing the overexpanded side to soften. For a
               right thoracic curve, this means consciously directing breath into the left side of the ribcage.
               This technique, drawn from the Schroth Method and SEAS framework, directly addresses the thoracic
@@ -181,8 +181,8 @@ export default function ScoliosisPilatesMumbaiPage() {
             </p>
             <p>
               At R3BOOT in Dadar East, Dr. Hiral Parikh (BPT, 15+ years) assesses each client's specific curve
-              pattern before designing the exercise program. For a right thoracic curve — the most common pattern
-              in adolescent idiopathic scoliosis — the program activates the left thoracic extensors, lengthens
+              pattern before designing the exercise program. For a right thoracic curve, the most common pattern
+              in adolescent idiopathic scoliosis, the program activates the left thoracic extensors, lengthens
               the right lateral trunk, and uses mirror feedback to train postural self-correction. For a lumbar
               curve or double curve, the approach differs. Clients bring their most recent X-ray with Cobb angle
               measurement to the first session. The program is updated as the clinical picture evolves, and

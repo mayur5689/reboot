@@ -12,7 +12,7 @@ export const iceBathMumbaiFaqs = [
   {
     question: 'How cold is the ice bath at R3BOOT?',
     answer:
-      'Our ice bath is maintained between 10 and 15 degrees Celsius — within the evidence-based range for therapeutic cold immersion. Cold enough to produce the vascular constriction effect, managed enough to complete the full protocol with proper breathing guidance. Our physiotherapy team teaches you a controlled breathing technique before your first cold immersion.',
+      'Our ice bath is maintained between 10 and 15 degrees Celsius, within the evidence-based range for therapeutic cold immersion. Cold enough to produce the vascular constriction effect, managed enough to complete the full protocol with proper breathing guidance. Our physiotherapy team teaches you a controlled breathing technique before your first cold immersion.',
   },
   {
     question: 'Is ice bath safe without supervision?',
@@ -22,7 +22,7 @@ export const iceBathMumbaiFaqs = [
   {
     question: 'What is the difference between an ice bath and contrast therapy?',
     answer:
-      'An ice bath (cold water immersion alone) uses vasoconstriction to reduce inflammation and soreness. Contrast therapy adds an infrared sauna phase before the cold — the alternation between heat and cold creates a vascular pumping action that research shows produces greater metabolic waste clearance and faster recovery of muscle function compared to cold immersion alone. At R3BOOT, we offer ice bath as part of our contrast therapy protocol.',
+      'An ice bath (cold water immersion alone) uses vasoconstriction to reduce inflammation and soreness. Contrast therapy adds an infrared sauna phase before the cold, the alternation between heat and cold creates a vascular pumping action that research shows produces greater metabolic waste clearance and faster recovery of muscle function compared to cold immersion alone. At R3BOOT, we offer ice bath as part of our contrast therapy protocol.',
   },
   {
     question: 'How much does an ice bath session cost at R3BOOT?',

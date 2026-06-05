@@ -127,8 +127,8 @@ export const services: Service[] = [
         ],
         process: [
             { title: "Preparation", description: "Preparing the body for rapid temperature changes." },
-            { title: "Hot Phase — Red Light Sauna", description: "Red light sauna: vasodilation phase to increase circulation and relax muscles." },
-            { title: "Cold Phase — Ice Bath", description: "Ice bath: vasoconstriction phase to reduce inflammation and flush toxins." },
+            { title: "Hot Phase, Red Light Sauna", description: "Red light sauna: vasodilation phase to increase circulation and relax muscles." },
+            { title: "Cold Phase, Ice Bath", description: "Ice bath: vasoconstriction phase to reduce inflammation and flush toxins." },
             { title: "Recovery", description: "Allowing the body to return to homeostatic balance." }
         ],
         image: "/images/service/Services_image/Contrast_Therepy.webp",

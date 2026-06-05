@@ -8,9 +8,9 @@ import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema'
 import { coldPlungeMumbaiFaqs } from '@/lib/faqs/cold-plunge-mumbai'
 
 export const metadata: Metadata = {
-  title: 'Cold Plunge Mumbai — Supervised Ice Bath | R3BOOT Dadar',
+  title: 'Cold Plunge Mumbai | Supervised Ice Bath | R3BOOT Dadar',
   description:
-    'Cold plunge Mumbai at R3BOOT Dadar — physio-supervised, not gym tank. Cold plunge near me for Dadar, Bandra & Lower Parel. Paired with infrared sauna. 5.0 ★ Google.',
+    'Cold plunge Mumbai at R3BOOT Dadar | physio-supervised, not gym tank. Cold plunge near me for Dadar, Bandra & Lower Parel. Paired with infrared sauna. 5.0 ★ Google.',
   alternates: { canonical: '/cold-plunge-mumbai' },
   keywords: [
     'cold plunge mumbai',
@@ -37,7 +37,7 @@ export default function ColdPlungeMumbaiPage() {
       <section className="relative h-[70vh] flex items-end overflow-hidden">
         <Image
           src="/images/contrast-therapy-mumbai_service_page/contrast-therapy-mumbai_ice_bath_lady.webp"
-          alt="Cold plunge Mumbai — supervised at R3BOOT Dadar"
+          alt="Cold plunge Mumbai, supervised at R3BOOT Dadar"
           fill
           className="object-cover"
           priority
@@ -62,7 +62,7 @@ export default function ColdPlungeMumbaiPage() {
               Cold Plunge in Mumbai | Supervised Recovery at R3BOOT, Dadar
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl text-white/80 max-w-3xl leading-relaxed font-medium mt-4">
-              Physio-supervised cold plunge — part of clinical contrast therapy. Not an unsupervised gym tank.
+              Physio-supervised cold plunge, part of clinical contrast therapy. Not an unsupervised gym tank.
             </p>
           </div>
         </div>
@@ -71,12 +71,12 @@ export default function ColdPlungeMumbaiPage() {
       <section className="py-12 sm:py-16 lg:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
           <h2 className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white mb-8 tracking-tight">
-            Cold Plunge Near Me — <span className="text-[#513394] dark:text-[#8B5CF6]">With Supervision.</span>
+            Cold Plunge Near Me, <span className="text-[#513394] dark:text-[#8B5CF6]">With Supervision.</span>
           </h2>
           <div className="prose prose-xl text-gray-600 dark:text-gray-400 dark:prose-invert max-w-none leading-relaxed space-y-6 mb-16">
             <p>
               &quot;Cold plunge near me&quot; in Mumbai often means a gym add-on with no intake, no breathing coaching, and no one watching
-              your response. At R3BOOT, cold plunge is the cold phase of contrast therapy — water maintained at 10–15°C, supervised by
+              your response. At R3BOOT, cold plunge is the cold phase of contrast therapy, water maintained at 10–15°C, supervised by
               physiotherapists from health review through immersion.
             </p>
             <p>
@@ -143,7 +143,7 @@ export default function ColdPlungeMumbaiPage() {
       <FAQSection faqs={coldPlungeMumbaiFaqs} />
 
       <ServiceSchema
-        serviceName="Cold Plunge Mumbai — Supervised Cold Water Immersion"
+        serviceName="Cold Plunge Mumbai | Supervised Cold Water Immersion"
         description="Physiotherapist-supervised cold plunge in Dadar East, Mumbai. Part of clinical contrast therapy with infrared sauna at R3BOOT."
         serviceUrl="https://www.r3boot.in/cold-plunge-mumbai"
       />

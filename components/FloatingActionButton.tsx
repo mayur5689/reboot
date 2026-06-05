@@ -64,7 +64,7 @@ const FloatingActionButton = () => {
         })}
       </AnimatePresence>
 
-      {/* Trigger — always visible */}
+      {/* Trigger: always visible */}
       <motion.button
         onClick={() => setOpen(prev => !prev)}
         whileHover={{ scale: 1.07 }}
@@ -74,7 +74,7 @@ const FloatingActionButton = () => {
                    shadow-[0_4px_20px_rgba(81,51,148,0.38)]"
         style={{ backgroundColor: BRAND }}
       >
-        {/* pulse ring — collapsed only */}
+        {/* pulse ring: collapsed only */}
         {!open && (
           <span
             className="absolute inset-0 rounded-full animate-ping opacity-25"

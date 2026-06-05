@@ -2,7 +2,7 @@ export const backPainSportsMassageFaqs = [
   {
     question: 'Can sports massage help with lower back pain?',
     answer:
-      'Yes. Sports massage addresses the muscle groups that typically drive lower back pain — tight hip flexors, overactive erectors, restricted thoracolumbar fascia, and weak glute support. At R3BOOT in Dadar, your therapist assesses the full kinetic chain before treating, not just the site of pain.',
+      'Yes. Sports massage addresses the muscle groups that typically drive lower back pain, tight hip flexors, overactive erectors, restricted thoracolumbar fascia, and weak glute support. At R3BOOT in Dadar, your therapist assesses the full kinetic chain before treating, not just the site of pain.',
   },
   {
     question: 'Is sports massage safe for back pain or can it make things worse?',

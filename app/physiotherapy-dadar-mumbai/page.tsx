@@ -10,7 +10,7 @@ import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema'
 import { physiotherapyFaqs } from '@/lib/faqs/physiotherapy'
 
 export const metadata: Metadata = {
-  title: 'Physiotherapy Dadar Mumbai | Dr. Hiral Parikh — R3BOOT',
+  title: 'Physiotherapy Dadar Mumbai | Dr. Hiral Parikh | R3BOOT',
   description:
     'Clinical physiotherapy in Dadar by Dr. Hiral Parikh (15+ yrs). Back pain, knee pain, sports injuries & post-surgery rehab. No referral needed. 5.0 ★ Google. Call or WhatsApp.',
   alternates: { canonical: '/physiotherapy-dadar-mumbai' },
@@ -32,17 +32,17 @@ const whyItWorks = [
   {
     title: 'Assessment before treatment',
     description:
-      'Every case starts with a full clinical assessment — movement, strength, load tolerance, and history. We do not skip to treatment before understanding what is actually failing and why.',
+      'Every case starts with a full clinical assessment | movement, strength, load tolerance, and history. We do not skip to treatment before understanding what is actually failing and why.',
   },
   {
     title: 'Manual therapy + hands-on techniques',
     description:
-      'Joint mobilisation, soft tissue techniques, dry needling, and trigger point release — applied to the structure that is limiting your function, not just the area that hurts.',
+      'Joint mobilisation, soft tissue techniques, dry needling, and trigger point release | applied to the structure that is limiting your function, not just the area that hurts.',
   },
   {
     title: 'Progressive exercise prescription',
     description:
-      'Home exercises and progressive loading plans, built to your schedule and goals. Recovery does not happen only in the clinic — 80% of progress happens between sessions.',
+      'Home exercises and progressive loading plans, built to your schedule and goals. Recovery does not happen only in the clinic | 80% of progress happens between sessions.',
   },
   {
     title: 'Integrated recovery environment',
@@ -54,7 +54,7 @@ const whyItWorks = [
 const sessionSteps = [
   {
     title: 'Detailed intake assessment',
-    body: 'Your physiotherapist takes a full history — onset, mechanism, aggravating factors, and your specific goals. We review any imaging or surgical notes you bring.',
+    body: 'Your physiotherapist takes a full history | onset, mechanism, aggravating factors, and your specific goals. We review any imaging or surgical notes you bring.',
   },
   {
     title: 'Movement and load testing',
@@ -62,7 +62,7 @@ const sessionSteps = [
   },
   {
     title: 'Hands-on treatment',
-    body: 'Manual therapy, soft tissue work, dry needling, or joint mobilisation — applied to the structures identified in the assessment, not a generic protocol.',
+    body: 'Manual therapy, soft tissue work, dry needling, or joint mobilisation | applied to the structures identified in the assessment, not a generic protocol.',
   },
   {
     title: 'Your take-home plan',
@@ -78,7 +78,7 @@ export default function PhysioDadarLanding() {
       <section className="relative h-[70vh] flex items-end overflow-hidden">
         <Image
           src="/images/service/Services_image/Physiotherapy_1.webp"
-          alt="Physiotherapy Dadar Mumbai — Clinical Physiotherapy at R3BOOT"
+          alt="Physiotherapy Dadar Mumbai, Clinical Physiotherapy at R3BOOT"
           fill
           className="object-cover"
           priority
@@ -108,13 +108,13 @@ export default function PhysioDadarLanding() {
               Physiotherapy in Dadar, Mumbai
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl text-white/80 max-w-3xl leading-relaxed font-medium mt-4">
-              Clinical physiotherapy by Dr. Hiral Parikh &amp; Dr. Vaishali Rauniyar. Focused on fixing the cause — not just managing the pain.
+              Clinical physiotherapy by Dr. Hiral Parikh &amp; Dr. Vaishali Rauniyar. Focused on fixing the cause, not just managing the pain.
             </p>
           </div>
         </div>
       </section>
 
-      {/* ─── OPENING — 12-col grid with sticky sidebar ─── */}
+      {/* ─── OPENING: 12-col grid with sticky sidebar ─── */}
       <section className="py-12 sm:py-16 lg:py-24 xl:py-32">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 md:gap-12 lg:gap-24 items-start">
@@ -126,7 +126,7 @@ export default function PhysioDadarLanding() {
               </h2>
               <div className="prose prose-base sm:prose-lg md:prose-xl text-gray-600 dark:text-gray-400 dark:prose-invert max-w-none leading-relaxed space-y-6">
                 <p>
-                  R3BOOT is located in Dadar East, Mumbai — 5 minutes from Dadar railway station. Our physiotherapy
+                  R3BOOT is located in Dadar East, Mumbai, 5 minutes from Dadar railway station. Our physiotherapy
                   team is led by Dr. Hiral Parikh (BPT, D.Y. Patil College, 15+ years clinical experience) and
                   Dr. Vaishali Vijay Rauniyar (certified in Dry Needling and Aquatic Rehabilitation). Every session
                   begins with a full clinical assessment. We find the structure that is failing and build a progressive
@@ -134,7 +134,7 @@ export default function PhysioDadarLanding() {
                 </p>
                 <p>
                   Unlike high-volume hospital outpatient departments, at R3BOOT your session is structured around
-                  your specific presentation — with the time and attention the case actually requires. No assembly line.
+                  your specific presentation, with the time and attention the case actually requires. No assembly line.
                   No generic protocol applied to everyone with the same diagnosis.
                 </p>
               </div>
@@ -228,7 +228,7 @@ export default function PhysioDadarLanding() {
               </h2>
               <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed max-w-3xl">
                 Our team treats both acute injuries and long-standing chronic conditions. If you are unsure whether
-                physiotherapy is right for your situation, call us — we will tell you honestly.
+                physiotherapy is right for your situation, call us, we will tell you honestly.
               </p>
             </div>
 
@@ -312,7 +312,7 @@ export default function PhysioDadarLanding() {
             <div className="relative rounded-[2.5rem] overflow-hidden aspect-[4/5] w-full shadow-2xl">
               <Image
                 src="/images/Services_image/Physiotherapy.webp"
-                alt="Physiotherapy session at R3BOOT Dadar Mumbai — clinical assessment and hands-on treatment"
+                alt="Physiotherapy session at R3BOOT Dadar Mumbai, clinical assessment and hands-on treatment"
                 fill
                 className="object-cover"
               />
@@ -322,7 +322,7 @@ export default function PhysioDadarLanding() {
                   CLINICAL ASSESSMENT //
                 </span>
                 <p className="text-white text-xl font-black tracking-tight leading-tight">
-                  We find what is failing — not just where it hurts.
+                  We find what is failing, not just where it hurts.
                 </p>
               </div>
             </div>
@@ -364,10 +364,10 @@ export default function PhysioDadarLanding() {
                     ['Assessment depth', 'Diagnosis-driven, limited testing', 'Full movement, strength & load assessment'],
                     ['Treatment approach', 'High-volume, standardised protocol', 'Case-specific, built around your presentation'],
                     ['Hands-on time', 'Often machine-dependent (TENS, ultrasound)', 'Manual therapy, dry needling, mobilisation'],
-                    ['Dry needling', 'Rarely available', 'Available — Dr. Vaishali certified'],
+                    ['Dry needling', 'Rarely available', 'Available, Dr. Vaishali certified'],
                     ['Aquatic rehab', 'Rarely available in Mumbai', 'Available on-site'],
                     ['Recovery integration', 'Physio only', 'Contrast therapy, massage & Pilates same visit'],
-                    ['Referral needed', 'Usually yes', 'No — book directly by call or WhatsApp'],
+                    ['Referral needed', 'Usually yes', 'No, book directly by call or WhatsApp'],
                   ].map(([factor, hospital, r3boot], idx) => (
                     <tr
                       key={idx}
@@ -393,7 +393,7 @@ export default function PhysioDadarLanding() {
             <div className="relative rounded-[2.5rem] overflow-hidden aspect-[4/5] w-full shadow-2xl">
               <Image
                 src="/images/service/Services_image/Physiotherapy_1.webp"
-                alt="R3BOOT physiotherapy clinic — Dadar East Mumbai near Shivaji Park"
+                alt="R3BOOT physiotherapy clinic, Dadar East Mumbai near Shivaji Park"
                 fill
                 className="object-cover"
               />
@@ -471,7 +471,7 @@ export default function PhysioDadarLanding() {
               </h2>
               <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed max-w-3xl">
                 The fastest recoveries combine multiple modalities in a coordinated plan. At R3BOOT, your
-                physiotherapist can combine your treatment session with other recovery tools — on the same visit.
+                physiotherapist can combine your treatment session with other recovery tools, on the same visit.
               </p>
             </div>
 
@@ -479,7 +479,7 @@ export default function PhysioDadarLanding() {
               {[
                 {
                   title: 'Contrast Therapy',
-                  desc: 'Ice bath and infrared sauna in a clinically structured 3:1 protocol — reduces inflammation and accelerates muscle recovery after your physio session.',
+                  desc: 'Ice bath and infrared sauna in a clinically structured 3:1 protocol | reduces inflammation and accelerates muscle recovery after your physio session.',
                   href: '/contrast-therapy-mumbai',
                 },
                 {
@@ -489,7 +489,7 @@ export default function PhysioDadarLanding() {
                 },
                 {
                   title: 'Clinical Pilates',
-                  desc: 'Supervised Pilates designed around your injury and movement deficits — not a generic class. Ideal for spinal conditions, post-surgery, and chronic pain.',
+                  desc: 'Supervised Pilates designed around your injury and movement deficits, not a generic class. Ideal for spinal conditions, post-surgery, and chronic pain.',
                   href: '/services/clinical-pilates',
                 },
               ].map((item, idx) => (
@@ -539,7 +539,7 @@ export default function PhysioDadarLanding() {
               or Dr. Vaishali Rauniyar. We will tell you honestly what your recovery looks like.
             </p>
             <p className="text-white/40 mb-12 text-sm font-bold tracking-widest">
-              203, Palai Plaza, Dadar East, Mumbai 400014 — 5 min from Dadar station
+              203, Palai Plaza, Dadar East, Mumbai 400014, 5 min from Dadar station
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
               <a

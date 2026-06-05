@@ -76,7 +76,7 @@ export default function SportsMassagePage() {
                                 <p>
                                     Most sports massage in Mumbai is performed by spa therapists trained in general relaxation techniques.
                                     At R3BOOT, it is performed by a certified sports massage specialist with hands-on experience across 1,000+ athletes and active individuals.
-                                    The difference is not subtle — it is the difference between feeling temporarily relaxed and actually recovering.
+                                    The difference is not subtle, it is the difference between feeling temporarily relaxed and actually recovering.
                                 </p>
                                 <p>
                                     Located in Dadar, central Mumbai, accessible from Andheri, Thane, Bandra, and Navi Mumbai, R3BOOT is an integrated performance recovery center.
@@ -94,8 +94,8 @@ export default function SportsMassagePage() {
                                     {[
                                         { title: "Pre-Session Assessment", description: "Therapist reviews training load, pain location, sleep, and hydration. A movement screen sets the session goal before any bodywork begins." },
                                         { title: "Warm-Up Phase", description: "Light effleurage and rhythmic strokes increase tissue temperature and prepare the nervous system for targeted work." },
-                                        { title: "Targeted Treatment", description: "Deep tissue, trigger point therapy, and myofascial release based on your assessment — not a generic routine." },
-                                        { title: "Sports Massage Cupping", description: "Cupping is applied where indicated to improve blood flow, reduce tension, and support recovery — integrated into your session when assessment calls for it." },
+                                        { title: "Targeted Treatment", description: "Deep tissue, trigger point therapy, and myofascial release based on your assessment | not a generic routine." },
+                                        { title: "Sports Massage Cupping", description: "Cupping is applied where indicated to improve blood flow, reduce tension, and support recovery | integrated into your session when assessment calls for it." },
                                         { title: "Activation & Advice", description: "Assisted stretching, PNF, and muscle activation finish each session. Recovery protocol and home drills are given before you leave." },
                                     ].map((step, idx) => (
                                         <div key={idx} className="bg-white dark:bg-white/5 p-8 rounded-[2.5rem] border border-gray-100 dark:border-white/5 shadow-sm hover:shadow-xl group transition-all duration-500 relative overflow-hidden">
@@ -174,7 +174,7 @@ export default function SportsMassagePage() {
                                     CUPPING THERAPY //
                                 </span>
                                 <p className="text-white text-xl font-black tracking-tight leading-tight">
-                                    Certified Level 1 & 2 — Akshay Anil Nalawde
+                                    Certified Level 1 & 2, Akshay Anil Nalawde
                                 </p>
                             </div>
                         </div>
@@ -199,11 +199,11 @@ export default function SportsMassagePage() {
                                     },
                                     {
                                         title: "Trigger Point Therapy",
-                                        body: "Addresses localised knots and referred pain patterns. A common example: calf trigger points that present as heel pain. Releasing the source — not just treating the symptom — is what produces lasting results."
+                                        body: "Addresses localised knots and referred pain patterns. A common example: calf trigger points that present as heel pain. Releasing the source, not just treating the symptom, is what produces lasting results."
                                     },
                                     {
                                         title: "Myofascial Release",
-                                        body: "Targets the fascial system surrounding muscles. Restrictions here cause postural issues and limit range of motion in ways deep tissue work alone cannot resolve — especially relevant for desk workers and athletes with repetitive movement demands."
+                                        body: "Targets the fascial system surrounding muscles. Restrictions here cause postural issues and limit range of motion in ways deep tissue work alone cannot resolve, especially relevant for desk workers and athletes with repetitive movement demands."
                                     },
                                     {
                                         title: "Cupping Therapy (Level 1 & 2 Certified)",
@@ -285,7 +285,7 @@ export default function SportsMassagePage() {
                                 Sports Massage for Women – <span className="text-[#513394] dark:text-[#8B5CF6]">With Vaishali Sonar</span>
                             </h2>
                             <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed mb-4">
-                                Most sports massage in Mumbai is not adapted for female physiology. Pressure, technique selection, and recovery protocols built around male athletes do not automatically translate to women — especially those managing training load, hormonal cycles, or sport-specific injury patterns.
+                                Most sports massage in Mumbai is not adapted for female physiology. Pressure, technique selection, and recovery protocols built around male athletes do not automatically translate to women, especially those managing training load, hormonal cycles, or sport-specific injury patterns.
                             </p>
                             <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed mb-10">
                                 At R3BOOT, female clients are treated by Vaishali Sonar, a certified sports massage therapist with cupping therapy certification at Level 1 and 2, and hands-on experience working with both competitive players and the general population.
@@ -333,7 +333,7 @@ export default function SportsMassagePage() {
                                     WOMEN&apos;S SPORTS MASSAGE //
                                 </span>
                                 <p className="text-white text-xl font-black tracking-tight leading-tight">
-                                    Vaishali Sonar — Cupping Certified Level 1 & 2
+                                    Vaishali Sonar, Cupping Certified Level 1 & 2
                                 </p>
                             </div>
                         </div>
@@ -354,13 +354,13 @@ export default function SportsMassagePage() {
                         </h2>
                     </div>
 
-                    {/* 2x2 grid on desktop — image-background cards */}
+                    {/* 2x2 grid on desktop: image-background cards */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                         {[
                             {
                                 sport: "Runners",
                                 tag: "RUNNING //",
-                                description: "Calf tightness, plantar fascia pain, hamstring overload, and hip flexor stiffness — especially common in Mumbai runners who sit at a desk all day before evening runs.",
+                                description: "Calf tightness, plantar fascia pain, hamstring overload, and hip flexor stiffness | especially common in Mumbai runners who sit at a desk all day before evening runs.",
                                 image: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=800&q=80",
                                 points: ["Calf & plantar fascia", "Hamstring overload", "Hip flexor release"],
                             },
@@ -398,7 +398,7 @@ export default function SportsMassagePage() {
                                     className="object-cover transition-transform duration-700 group-hover:scale-105"
                                 />
 
-                                {/* Base gradient — always visible */}
+                                {/* Base gradient: always visible */}
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/10" />
 
                                 {/* Hover tint */}

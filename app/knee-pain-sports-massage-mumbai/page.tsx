@@ -10,7 +10,7 @@ import { kneePainSportsMassageFaqs } from '@/lib/faqs/knee-pain-sports-massage-m
 export const metadata: Metadata = {
   title: 'Sports Massage Knee Pain Mumbai | IT Band & Runner\'s Knee | R3BOOT',
   description:
-    'Sports massage for knee pain in Mumbai at R3BOOT Dadar. IT band, runner\'s knee, quad tightness & overuse — physio-trained therapists. 5.0 ★ Google. Book today.',
+    'Sports massage for knee pain in Mumbai at R3BOOT Dadar. IT band, runner\'s knee, quad tightness & overuse, physio-trained therapists. 5.0 ★ Google. Book today.',
   alternates: { canonical: '/knee-pain-sports-massage-mumbai' },
   keywords: [
     'sports massage for knee pain mumbai',
@@ -90,7 +90,7 @@ export default function KneePainSportsMassageMumbaiPage() {
               Sports Massage for Knee Pain in Mumbai
             </h1>
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl leading-relaxed font-medium mt-4">
-              IT band, runner's knee, quad tightness, overuse — treated at R3BOOT, Dadar East.
+              IT band, runner's knee, quad tightness, overuse, treated at R3BOOT, Dadar East.
             </p>
           </div>
         </div>
@@ -106,17 +106,17 @@ export default function KneePainSportsMassageMumbaiPage() {
               </h2>
               <div className="prose prose-xl text-gray-600 dark:text-gray-400 dark:prose-invert max-w-none leading-relaxed space-y-6">
                 <p>
-                  Yes — for most knee pain that active people in Mumbai experience, sports massage is effective and
+                  Yes, for most knee pain that active people in Mumbai experience, sports massage is effective and
                   often faster-acting than rest alone. IT band syndrome, runner's knee (PFPS), post-squat aching,
                   and calf-driven posterior knee stiffness all respond well to targeted soft tissue work. The reason:
-                  most active-person knee pain is driven by muscle tension above and below the joint — not the joint itself.
+                  most active-person knee pain is driven by muscle tension above and below the joint, not the joint itself.
                   The quad, IT band, hamstring, and calf all attach around the knee, and tightness in any of them
                   changes how the patella tracks and how load is distributed under movement.
                 </p>
                 <p>
                   Runners logging kilometres at Shivaji Park, cyclists on Marine Drive, and gym-goers coming off
                   heavy squat weeks in Dadar or Lower Parel are the most common presentations at R3BOOT. Therapist
-                  Akshay Nalawde assesses the full lower limb kinetic chain — not just the knee — before treating.
+                  Akshay Nalawde assesses the full lower limb kinetic chain, not just the knee, before treating.
                   Treatment goes to the actual restriction. Not a generic leg massage.
                 </p>
               </div>
@@ -191,13 +191,13 @@ export default function KneePainSportsMassageMumbaiPage() {
                 DADAR, MUMBAI //
               </span>
               <h2 className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white tracking-tight mb-6">
-                Sports Massage for Knee Pain — <span className="text-[#513394] dark:text-[#8B5CF6]">Dadar East</span>
+                Sports Massage for Knee Pain, <span className="text-[#513394] dark:text-[#8B5CF6]">Dadar East</span>
               </h2>
               <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed max-w-3xl mx-auto">
-                R3BOOT is at Palai Plaza, Dadar East — 5 minutes from Dadar station on the Central Line. Most Shivaji Park
+                R3BOOT is at Palai Plaza, Dadar East, 5 minutes from Dadar station on the Central Line. Most Shivaji Park
                 runners with IT band or knee trouble arrive within 10 minutes. Cyclists from Worli sea face, gym-goers
                 from Parel and Lower Parel, and corporate athletes from BKC all make this their sports recovery clinic.
-                Knee pain treated here is clinical — assessment-led, technique-specific, outcome-measured. Not a spa session.
+                Knee pain treated here is clinical, assessment-led, technique-specific, outcome-measured. Not a spa session.
               </p>
             </div>
             <div className="bg-[#1A1A1A] rounded-[2rem] p-8 lg:p-10 text-white">
@@ -264,7 +264,7 @@ export default function KneePainSportsMassageMumbaiPage() {
               Knee Pain Holding You Back From <span className="text-white/50">Training?</span>
             </h2>
             <p className="text-xl text-white/70 mb-12 leading-relaxed font-medium max-w-3xl mx-auto">
-              Sports massage for knee pain at R3BOOT, Dadar East. Targeted treatment — not a generic sports massage.
+              Sports massage for knee pain at R3BOOT, Dadar East. Targeted treatment, not a generic sports massage.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
               <a href="tel:+919702368612" className="w-full sm:w-auto bg-white text-[#513394] font-black px-10 py-5 rounded-full transition-all hover:scale-105 shadow-2xl text-lg tracking-wide">

@@ -8,9 +8,9 @@ import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema'
 import { sportsMassageBandraFaqs } from '@/lib/faqs/sports-massage-bandra'
 
 export const metadata: Metadata = {
-  title: 'Sports Massage Near Bandra | Clinical, Not Spa — R3BOOT Dadar',
+  title: 'Sports Massage Near Bandra | Clinical, Not Spa | R3BOOT Dadar',
   description:
-    'Clinical sports massage near Bandra at R3BOOT, Dadar East — 15 min by road. Physio-led, not a spa. For Bandra athletes, runners & gym-goers. 5.0 ★ Google. Book today.',
+    'Clinical sports massage near Bandra at R3BOOT, Dadar East | 15 min by road. Physio-led, not a spa. For Bandra athletes, runners & gym-goers. 5.0 ★ Google. Book today.',
   alternates: { canonical: '/sports-massage-bandra' },
   keywords: [
     'sports massage bandra',
@@ -54,7 +54,7 @@ export default function SportsMassageBandraPage() {
               Sports Massage Near Bandra, Mumbai
             </h1>
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl leading-relaxed font-medium mt-4">
-              R3BOOT in Dadar East — 15–20 min from Bandra. Clinical sports massage for Bandra athletes, runners, and gym-goers.
+              R3BOOT in Dadar East, 15–20 min from Bandra. Clinical sports massage for Bandra athletes, runners, and gym-goers.
             </p>
           </div>
         </div>
@@ -77,7 +77,7 @@ export default function SportsMassageBandraPage() {
                   wake up the next day with the same problem.
                 </p>
                 <p>
-                  R3BOOT is 15 minutes from Bandra by road — or 8 minutes by train from Bandra station to Dadar.
+                  R3BOOT is 15 minutes from Bandra by road, or 8 minutes by train from Bandra station to Dadar.
                   Therapist Akshay Nalawde assesses your body before treating: your training history, your active
                   restrictions, what's causing the problem and what needs to change. Bandra runners from Carter
                   Road and the Bandra Fort trail, gym members from Khar and Santacruz, and BKC office workers
@@ -94,7 +94,7 @@ export default function SportsMassageBandraPage() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   {[
                     { title: 'Clinical assessment first', body: 'Not a template massage. Your therapist assesses your specific restrictions before every session.' },
-                    { title: 'Integrated recovery under one roof', body: 'Sports massage, ice bath, contrast therapy, and physiotherapy — all available in one visit.' },
+                    { title: 'Integrated recovery under one roof', body: 'Sports massage, ice bath, contrast therapy, and physiotherapy | all available in one visit.' },
                     { title: 'Trained sports massage therapists', body: 'Not spa relaxation. Therapists trained in soft tissue work, trigger point therapy, and cupping.' },
                     { title: 'Outcome-focused sessions', body: 'You leave knowing what was found, what changed, and what to do next. Not just how relaxed you feel.' },
                   ].map((item, idx) => (

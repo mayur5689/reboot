@@ -8,9 +8,9 @@ import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema'
 import { infraredSaunaMumbaiFaqs } from '@/lib/faqs/infrared-sauna-mumbai'
 
 export const metadata: Metadata = {
-  title: 'Infrared Sauna Mumbai — Physio-Supervised Heat Therapy | R3BOOT Dadar',
+  title: 'Infrared Sauna Mumbai | Physio-Supervised Heat Therapy | R3BOOT Dadar',
   description:
-    'Infrared sauna Mumbai at R3BOOT Dadar — clinical contrast therapy, not spa sauna. Paired with supervised ice bath. Sauna near me for Dadar, Bandra & Lower Parel. 5.0 ★ Google.',
+    'Infrared sauna Mumbai at R3BOOT Dadar | clinical contrast therapy, not spa sauna. Paired with supervised ice bath. Sauna near me for Dadar, Bandra & Lower Parel. 5.0 ★ Google.',
   alternates: { canonical: '/infrared-sauna-mumbai' },
   keywords: [
     'infrared sauna mumbai',
@@ -27,7 +27,7 @@ const whyInfrared = [
   {
     title: 'Deep tissue warming',
     description:
-      'Infrared light penetrates tissue directly, warming muscles without extreme ambient heat — effective vasodilation for the contrast protocol hot phase.',
+      'Infrared light penetrates tissue directly, warming muscles without extreme ambient heat | effective vasodilation for the contrast protocol hot phase.',
   },
   {
     title: 'Vascular priming',
@@ -37,7 +37,7 @@ const whyInfrared = [
   {
     title: 'Lower ambient temperature',
     description:
-      'Infrared saunas operate at 45–60°C versus 80–100°C in traditional saunas — easier to tolerate for longer protocol rounds.',
+      'Infrared saunas operate at 45–60°C versus 80–100°C in traditional saunas | easier to tolerate for longer protocol rounds.',
   },
   {
     title: 'Supervised protocol',
@@ -52,7 +52,7 @@ export default function InfraredSaunaMumbaiPage() {
       <section className="relative h-[70vh] flex items-end overflow-hidden">
         <Image
           src="/images/contrast-therapy-mumbai_service_page/contrast-therapy-mumbai_sauna.webp"
-          alt="Infrared sauna Mumbai — R3BOOT Dadar contrast therapy"
+          alt="Infrared sauna Mumbai, R3BOOT Dadar contrast therapy"
           fill
           className="object-cover"
           priority
@@ -77,7 +77,7 @@ export default function InfraredSaunaMumbaiPage() {
               Infrared Sauna in Mumbai | Clinical Heat Therapy at R3BOOT, Dadar
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl text-white/80 max-w-3xl leading-relaxed font-medium mt-4">
-              Physio-supervised infrared sauna as the hot phase of contrast therapy — paired with ice bath, not a standalone spa session.
+              Physio-supervised infrared sauna as the hot phase of contrast therapy, paired with ice bath, not a standalone spa session.
             </p>
           </div>
         </div>
@@ -93,7 +93,7 @@ export default function InfraredSaunaMumbaiPage() {
               <div className="prose prose-xl text-gray-600 dark:text-gray-400 dark:prose-invert max-w-none leading-relaxed space-y-6">
                 <p>
                   Searching &quot;sauna near me&quot; in Mumbai usually surfaces spa wellness centres or gym add-ons with no medical oversight.
-                  At R3BOOT in Dadar East, infrared sauna is one phase of a structured contrast therapy protocol — alternating heat and cold
+                  At R3BOOT in Dadar East, infrared sauna is one phase of a structured contrast therapy protocol, alternating heat and cold
                   under physiotherapist supervision.
                 </p>
                 <p>
@@ -186,7 +186,7 @@ export default function InfraredSaunaMumbaiPage() {
       <FAQSection faqs={infraredSaunaMumbaiFaqs} />
 
       <ServiceSchema
-        serviceName="Infrared Sauna Mumbai — Contrast Therapy Heat Phase"
+        serviceName="Infrared Sauna Mumbai, Contrast Therapy Heat Phase"
         description="Physiotherapy-supervised infrared sauna in Dadar East, Mumbai. Hot phase of clinical contrast therapy paired with ice bath at R3BOOT."
         serviceUrl="https://www.r3boot.in/infrared-sauna-mumbai"
       />

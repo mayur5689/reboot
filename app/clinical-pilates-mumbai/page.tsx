@@ -10,9 +10,9 @@ import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema'
 import { clinicalPilatesMumbaiFaqs } from '@/lib/faqs/clinical-pilates-mumbai'
 
 export const metadata: Metadata = {
-  title: 'Clinical Pilates Mumbai | Physiotherapist-Led — R3BOOT Dadar',
+  title: 'Clinical Pilates Mumbai | Physiotherapist-Led | R3BOOT Dadar',
   description:
-    'Physiotherapist-led Clinical Pilates in Mumbai. Back pain, scoliosis, post-surgery rehab — assessment-first at R3BOOT Dadar. 5.0 ★ Google. Book via WhatsApp today.',
+    'Physiotherapist-led Clinical Pilates in Mumbai. Back pain, scoliosis, post-surgery rehab | assessment-first at R3BOOT Dadar. 5.0 ★ Google. Book via WhatsApp today.',
   alternates: { canonical: '/clinical-pilates-mumbai' },
   keywords: [
     'clinical pilates mumbai',
@@ -34,7 +34,7 @@ const conditions = [
   {
     title: 'Lower Back Pain',
     description:
-      'The most common reason clients come to R3BOOT for clinical Pilates. Core stabilisation and segmental spinal control work targets the muscular deficits that drive recurring back pain — providing lasting relief rather than temporary symptom management.',
+      'The most common reason clients come to R3BOOT for clinical Pilates. Core stabilisation and segmental spinal control work targets the muscular deficits that drive recurring back pain | providing lasting relief rather than temporary symptom management.',
   },
   {
     title: 'Scoliosis Management',
@@ -49,7 +49,7 @@ const conditions = [
   {
     title: 'Posture Correction',
     description:
-      'For desk workers, athletes, and individuals with postural pain, clinical Pilates addresses the specific muscle imbalances causing your posture problem — not just the symptoms.',
+      'For desk workers, athletes, and individuals with postural pain, clinical Pilates addresses the specific muscle imbalances causing your posture problem | not just the symptoms.',
   },
   {
     title: 'Prenatal & Postnatal Recovery',
@@ -66,19 +66,19 @@ const conditions = [
 const whatToExpect = [
   {
     title: 'Initial physiotherapy assessment',
-    body: 'Your first appointment is an assessment — not a class. Your physiotherapist evaluates your posture, movement patterns, strength deficits, and pain triggers. This takes 30–45 minutes and forms the clinical basis for your program.',
+    body: 'Your first appointment is an assessment | not a class. Your physiotherapist evaluates your posture, movement patterns, strength deficits, and pain triggers. This takes 30–45 minutes and forms the clinical basis for your program.',
   },
   {
     title: 'Prescribed exercise program',
-    body: 'Based on your assessment, your physiotherapist prescribes a set of specific exercises — mat-based, reformer-based, or both. These are not generic class exercises. Every movement has a clinical reason.',
+    body: 'Based on your assessment, your physiotherapist prescribes a set of specific exercises, mat-based, reformer-based, or both. These are not generic class exercises. Every movement has a clinical reason.',
   },
   {
     title: 'Progressive loading',
-    body: 'Your program advances as your strength, control, and function improve. Exercises become more demanding over time, matching your clinical progress — not a fixed weekly schedule.',
+    body: 'Your program advances as your strength, control, and function improve. Exercises become more demanding over time, matching your clinical progress | not a fixed weekly schedule.',
   },
   {
     title: 'Integration with other treatment',
-    body: 'Where appropriate, clinical Pilates is combined with physiotherapy manual therapy, dry needling, or sports massage within the same R3BOOT session — reducing your appointment load while addressing multiple clinical goals.',
+    body: 'Where appropriate, clinical Pilates is combined with physiotherapy manual therapy, dry needling, or sports massage within the same R3BOOT session, reducing your appointment load while addressing multiple clinical goals.',
   },
 ]
 
@@ -90,7 +90,7 @@ export default function ClinicalPilatesMumbaiPage() {
       <section className="relative h-[70vh] flex items-end overflow-hidden">
         <Image
           src="https://res.cloudinary.com/dj7bot2uc/image/upload/v1777793706/Clinical_Pillates_Image_2_jc05pa.png"
-          alt="Clinical Pilates Mumbai — Physiotherapist-Led at R3BOOT Dadar"
+          alt="Clinical Pilates Mumbai, Physiotherapist-Led at R3BOOT Dadar"
           fill
           className="object-cover"
           priority
@@ -120,7 +120,7 @@ export default function ClinicalPilatesMumbaiPage() {
               Clinical Pilates in Mumbai | Physiotherapist-Led at R3BOOT
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl text-white/80 max-w-3xl leading-relaxed font-medium mt-4">
-              Prescribed movement programs for back pain, scoliosis, post-surgery rehab, and sports performance. Not a fitness class — a clinical intervention.
+              Prescribed movement programs for back pain, scoliosis, post-surgery rehab, and sports performance. Not a fitness class, a clinical intervention.
             </p>
           </div>
         </div>
@@ -140,18 +140,17 @@ export default function ClinicalPilatesMumbaiPage() {
                 <p>
                   Mumbai has dozens of Pilates studios. YKBI, Namrata Purohit's studio, Moushu's, Activ8, Healthspace.
                   They are run by Pilates instructors, some excellent. But if you have a disc injury at L4-L5, are recovering
-                  from ACL surgery, managing scoliosis, or have chronic lower back pain that hasn't responded to stretching —
-                  a fitness class is not what you need. Clinical Pilates is physiotherapy applied through movement: every
+                  from ACL surgery, managing scoliosis, or have chronic lower back pain that hasn't responded to stretching, a fitness class is not what you need. Clinical Pilates is physiotherapy applied through movement: every
                   exercise prescribed from your specific diagnosis, assessed and supervised by a physiotherapist, progressed
                   based on your clinical response.
                 </p>
                 <p>
                   At R3BOOT in Dadar East, Dr. Hiral Parikh (BPT, 15+ years) and Dr. Vaishali Vijay Rauniyar
                   (certified Dry Needling, Aquatic Rehabilitation) lead clinical Pilates programs that are built
-                  from physiotherapy assessments — not adapted from class routines. Reformer and mat-based
+                  from physiotherapy assessments, not adapted from class routines. Reformer and mat-based
                   sessions. Programs for back pain, scoliosis, post-surgical rehabilitation, posture, prenatal,
                   and sports performance. Sessions are 45–60 minutes at Palai Plaza, Swami Gyan Jivandas Marg,
-                  Dadar East, Mumbai — 5 minutes from Dadar Central Line station.
+                  Dadar East, Mumbai, 5 minutes from Dadar Central Line station.
                 </p>
               </div>
 
@@ -243,7 +242,7 @@ export default function ClinicalPilatesMumbaiPage() {
                 <span className="text-[#513394] dark:text-[#8B5CF6]">Regular Pilates</span>
               </h2>
               <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed max-w-3xl">
-                Many Mumbai clients have tried regular Pilates studios before coming to R3BOOT. Here is why the clinical approach produces different results — and why it matters for injury, pain, and rehabilitation.
+                Many Mumbai clients have tried regular Pilates studios before coming to R3BOOT. Here is why the clinical approach produces different results, and why it matters for injury, pain, and rehabilitation.
               </p>
             </div>
 
@@ -284,7 +283,7 @@ export default function ClinicalPilatesMumbaiPage() {
             </div>
 
             <p className="text-gray-500 dark:text-gray-400 text-sm mt-8 leading-relaxed text-center">
-              If you are managing a specific condition, recovering from surgery, or have been told by a physiotherapist to do Pilates — clinical Pilates is what they mean.
+              If you are managing a specific condition, recovering from surgery, or have been told by a physiotherapist to do Pilates, clinical Pilates is what they mean.
             </p>
           </div>
         </div>
@@ -323,7 +322,7 @@ export default function ClinicalPilatesMumbaiPage() {
             <div className="relative rounded-[2.5rem] overflow-hidden aspect-[4/5] w-full shadow-2xl">
               <Image
                 src="https://res.cloudinary.com/dj7bot2uc/image/upload/v1777793697/Clinical_Pillates_Image_3_pil8g7.jpg"
-                alt="Clinical Pilates session at R3BOOT Mumbai — physiotherapist-led"
+                alt="Clinical Pilates session at R3BOOT Mumbai, physiotherapist-led"
                 fill
                 className="object-cover"
               />
@@ -348,7 +347,7 @@ export default function ClinicalPilatesMumbaiPage() {
             <div className="relative rounded-[2.5rem] overflow-hidden aspect-[4/5] w-full shadow-2xl">
               <Image
                 src="https://res.cloudinary.com/dj7bot2uc/image/upload/v1777793759/Clinical_Pillates_Image_4_rluyr1.png"
-                alt="Reformer Pilates Mumbai at R3BOOT — clinical physiotherapy-led reformer sessions"
+                alt="Reformer Pilates Mumbai at R3BOOT, clinical physiotherapy-led reformer sessions"
                 fill
                 className="object-cover"
               />
@@ -358,7 +357,7 @@ export default function ClinicalPilatesMumbaiPage() {
                   REFORMER + MAT //
                 </span>
                 <p className="text-white text-xl font-black tracking-tight leading-tight">
-                  Equipment selected for your clinical needs — not your fitness level
+                  Equipment selected for your clinical needs, not your fitness level
                 </p>
               </div>
             </div>
@@ -378,11 +377,11 @@ export default function ClinicalPilatesMumbaiPage() {
                 {[
                   {
                     title: 'Reformer Pilates',
-                    body: 'Spring resistance allows graduated loading — particularly useful in early post-surgical rehabilitation when bodyweight-only exercises are too demanding. Also used for sports performance and advanced movement retraining. R3BOOT is one of the few physiotherapy clinics in Mumbai offering reformer Pilates in a clinical setting.',
+                    body: 'Spring resistance allows graduated loading | particularly useful in early post-surgical rehabilitation when bodyweight-only exercises are too demanding. Also used for sports performance and advanced movement retraining. R3BOOT is one of the few physiotherapy clinics in Mumbai offering reformer Pilates in a clinical setting.',
                   },
                   {
                     title: 'Mat-Based Clinical Pilates',
-                    body: 'Bodyweight exercises prescribed for core stabilisation, spinal control, and functional movement retraining. Suitable for most conditions from the outset. Exercises can also be taught for home practice — extending clinical benefit between sessions.',
+                    body: 'Bodyweight exercises prescribed for core stabilisation, spinal control, and functional movement retraining. Suitable for most conditions from the outset. Exercises can also be taught for home practice | extending clinical benefit between sessions.',
                   },
                   {
                     title: 'Combined Approach',
@@ -431,7 +430,7 @@ export default function ClinicalPilatesMumbaiPage() {
                 safe loading parameters specific to each trimester. No two programs at R3BOOT are the same.
               </p>
               <p>
-                Sessions progress based on your clinical response — not a calendar. When your lumbar multifidus
+                Sessions progress based on your clinical response, not a calendar. When your lumbar multifidus
                 demonstrates adequate activation under load, the program advances. When a movement provokes symptoms,
                 the therapist modifies within the session. This is the core difference between clinical Pilates and
                 a fitness class: the physiotherapist responds to what your body does on the day, not what the class
@@ -457,7 +456,7 @@ export default function ClinicalPilatesMumbaiPage() {
                 <span className="text-[#513394] dark:text-[#8B5CF6]">R3BOOT for Clinical Pilates</span>
               </h2>
               <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed mb-8">
-                Mumbai has many Pilates studios. R3BOOT in Dadar is one of the few centres in the city where clinical Pilates is delivered exclusively by physiotherapists — not Pilates instructors who have completed a Pilates certification. Clients travel from Bandra, Andheri, Thane, Powai, and Navi Mumbai for this clinical distinction.
+                Mumbai has many Pilates studios. R3BOOT in Dadar is one of the few centres in the city where clinical Pilates is delivered exclusively by physiotherapists, not Pilates instructors who have completed a Pilates certification. Clients travel from Bandra, Andheri, Thane, Powai, and Navi Mumbai for this clinical distinction.
               </p>
               <div className="flex flex-wrap gap-3 mb-10">
                 {[
@@ -501,7 +500,7 @@ export default function ClinicalPilatesMumbaiPage() {
               <div className="relative rounded-[2rem] overflow-hidden aspect-[3/4] shadow-xl">
                 <Image
                   src="/images/service/Services_image/Clinical Pilates-2.webp"
-                  alt="Clinical Pilates at R3BOOT Dadar Mumbai — physiotherapist led"
+                  alt="Clinical Pilates at R3BOOT Dadar Mumbai, physiotherapist led"
                   fill
                   className="object-cover"
                 />
@@ -552,10 +551,10 @@ export default function ClinicalPilatesMumbaiPage() {
               CLINICAL LEAD //
             </span>
             <h3 className="text-2xl md:text-3xl font-black text-gray-900 dark:text-white mb-4 tracking-tight">
-              Dr. Hiral Parikh — Lead Physiotherapist
+              Dr. Hiral Parikh, Lead Physiotherapist
             </h3>
             <p className="text-gray-600 dark:text-gray-400 text-base leading-relaxed mb-6">
-              BPT graduate from Pad. Dr. D.Y. Patil College of Physiotherapy, Navi Mumbai, with over 15 years of clinical experience. At R3BOOT, Dr. Hiral leads physiotherapy services with focused expertise in sports rehabilitation and post-surgical recovery — helping athletes return to performance and patients rebuild function. Her clinical Pilates programs are designed around each patient&apos;s assessment findings, not adapted from a class structure.
+              BPT graduate from Pad. Dr. D.Y. Patil College of Physiotherapy, Navi Mumbai, with over 15 years of clinical experience. At R3BOOT, Dr. Hiral leads physiotherapy services with focused expertise in sports rehabilitation and post-surgical recovery, helping athletes return to performance and patients rebuild function. Her clinical Pilates programs are designed around each patient&apos;s assessment findings, not adapted from a class structure.
             </p>
             <p className="text-gray-600 dark:text-gray-400 text-base leading-relaxed">
               Clinical Pilates programs at R3BOOT are also designed by <strong className="text-gray-900 dark:text-white">Dr. Vaishali Vijay Rauniyar</strong>, certified in Dry Needling and Aquatic Rehabilitation with deep experience in sports and orthopedic rehabilitation.
@@ -598,7 +597,7 @@ export default function ClinicalPilatesMumbaiPage() {
                 WhatsApp Us
               </a>
             </div>
-            <p className="text-white/40 mt-8 font-bold tracking-widest text-sm">DADAR EAST, MUMBAI — 400 014</p>
+            <p className="text-white/40 mt-8 font-bold tracking-widest text-sm">DADAR EAST, MUMBAI, 400 014</p>
           </div>
         </div>
       </section>

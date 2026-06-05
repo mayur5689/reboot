@@ -2,12 +2,12 @@ export const contrastTherapyLowerParelFaqs = [
   {
     question: 'Is contrast therapy near Lower Parel available?',
     answer:
-      'Yes. R3BOOT in Dadar East is 10–15 minutes from Lower Parel and Worli by road. We offer physio-supervised contrast therapy — alternating red light sauna and ice bath — for gym-goers from Kamala Mills, Phoenix Mills, and BKC professionals.',
+      'Yes. R3BOOT in Dadar East is 10–15 minutes from Lower Parel and Worli by road. We offer physio-supervised contrast therapy, alternating red light sauna and ice bath, for gym-goers from Kamala Mills, Phoenix Mills, and BKC professionals.',
   },
   {
     question: 'Why do Lower Parel gym members come to R3BOOT for contrast therapy?',
     answer:
-      'Premium gyms in Lower Parel often have unsupervised cold plunge tanks with no health screening. R3BOOT offers clinical contrast therapy with physiotherapist supervision, health intake, and breathing guidance — plus sports massage and physiotherapy under one roof.',
+      'Premium gyms in Lower Parel often have unsupervised cold plunge tanks with no health screening. R3BOOT offers clinical contrast therapy with physiotherapist supervision, health intake, and breathing guidance, plus sports massage and physiotherapy under one roof.',
   },
   {
     question: 'How far is R3BOOT from Lower Parel and BKC?',

@@ -78,7 +78,7 @@ export default function ContrastTherapyPage() {
                                     Contrast therapy works on neurotransmitters by creating a controlled stress response, triggering the release of feel-good chemicals like endorphins, and boosting alertness and focus-related ones like norepinephrine (up to 500% increase!) and dopamine (up to 250% increase), leading to improved mood, reduced anxiety, enhanced focus, and greater resilience through a &ldquo;stress inoculation&rdquo; effect on the nervous system.
                                 </p>
                                 <p>
-                                    The rapid shifts between heat (vasodilation/relaxation) and cold (vasoconstriction/activation) train your autonomic nervous system to manage stress better. Heat causes vasodilation — widening of blood vessels — which increases blood flow in the limbs. Cold causes vasoconstriction — contraction of blood vessels — which helps numb pain and redirect blood to the core.
+                                    The rapid shifts between heat (vasodilation/relaxation) and cold (vasoconstriction/activation) train your autonomic nervous system to manage stress better. Heat causes vasodilation, widening of blood vessels, which increases blood flow in the limbs. Cold causes vasoconstriction, contraction of blood vessels, which helps numb pain and redirect blood to the core.
                                 </p>
                                 <p>
                                     <span className="text-[11px] font-black tracking-[0.3em] text-[#513394] dark:text-[#A78BFA] uppercase block mb-2">SAFETY FIRST //</span>
@@ -95,8 +95,8 @@ export default function ContrastTherapyPage() {
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                                     {[
                                         { title: "Preparation", description: "Preparing the body for rapid temperature changes." },
-                                        { title: "Hot Phase — Red Light Sauna", description: "Vasodilation phase to increase circulation and relax muscles." },
-                                        { title: "Cold Phase — Ice Bath", description: "Vasoconstriction phase to reduce inflammation and flush toxins." },
+                                        { title: "Hot Phase, Red Light Sauna", description: "Vasodilation phase to increase circulation and relax muscles." },
+                                        { title: "Cold Phase, Ice Bath", description: "Vasoconstriction phase to reduce inflammation and flush toxins." },
                                         { title: "Recovery", description: "Allowing the body to return to homeostatic balance." },
                                         { title: "Alternation", description: "The cycle trains your nervous system to switch between activation and recovery, building stress resilience." },
                                     ].map((step, idx) => (
@@ -210,7 +210,7 @@ export default function ContrastTherapyPage() {
                                     },
                                     {
                                         title: "Reduced Inflammation and Pain Relief",
-                                        body: "Cold water lowers tissue temperature, slowing the inflammatory response and reducing swelling. Cold plunges are especially helpful for sore muscles, sprains, and chronic conditions like arthritis — similar to ice packs but more comprehensive."
+                                        body: "Cold water lowers tissue temperature, slowing the inflammatory response and reducing swelling. Cold plunges are especially helpful for sore muscles, sprains, and chronic conditions like arthritis, similar to ice packs but more comprehensive."
                                     },
                                     {
                                         title: "Increased Metabolism",
@@ -248,14 +248,14 @@ export default function ContrastTherapyPage() {
                                 Benefits of <span className="text-[#513394] dark:text-[#8B5CF6]">Red Light Sauna</span>
                             </h2>
                             <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed mb-10">
-                                Our red light sauna pairs gentle infrared warmth with red and near-infrared light—so you get more than generic “hot room” heat. The light reaches tissue in ways heat alone does not, while warmth still drives circulation, relaxation, and sweat. Together with cold plunges, it completes the contrast therapy loop.
+                                Our red light sauna pairs gentle infrared warmth with red and near-infrared light, so you get more than generic “hot room” heat. The light reaches tissue in ways heat alone does not, while warmth still drives circulation, relaxation, and sweat. Together with cold plunges, it completes the contrast therapy loop.
                             </p>
 
                             <div className="space-y-6">
                                 {[
                                     {
                                         title: "Red & Near-Infrared Beyond Surface Heat",
-                                        body: "Red light saunas add targeted wavelengths on top of infrared warmth. That light is chosen to reach skin and soft tissue—not just warm the air—so each session combines photonic exposure with the sauna heat you already expect from contrast therapy."
+                                        body: "Red light saunas add targeted wavelengths on top of infrared warmth. That light is chosen to reach skin and soft tissue, not just warm the air, so each session combines photonic exposure with the sauna heat you already expect from contrast therapy."
                                     },
                                     {
                                         title: "Dual Stimulus for Contrast Protocols",
@@ -331,7 +331,7 @@ export default function ContrastTherapyPage() {
                                 },
                                 {
                                     title: "Reduced Muscle Soreness",
-                                    body: "Alternating between heat and cold minimizes delayed onset muscle soreness (DOMS). Cold reduces swelling and microtears; heat encourages blood flow to those areas, speeding healing. This cycle reduces the stiffness and soreness that follow a tough workout — especially useful for athletes and active individuals."
+                                    body: "Alternating between heat and cold minimizes delayed onset muscle soreness (DOMS). Cold reduces swelling and microtears; heat encourages blood flow to those areas, speeding healing. This cycle reduces the stiffness and soreness that follow a tough workout, especially useful for athletes and active individuals."
                                 },
                                 {
                                     title: "Vascular Workout for Better Circulation",
@@ -415,13 +415,13 @@ export default function ContrastTherapyPage() {
                 </div>
             </section>
 
-            {/* Related Guide — internal link to contrast therapy SEO landing page */}
+            {/* Related Guide: internal link to contrast therapy SEO landing page */}
             <section className="py-12 bg-white dark:bg-[#0A0A0A]">
                 <div className="container mx-auto px-6 lg:px-8 max-w-4xl">
                     <Link href="/contrast-therapy-mumbai" className="group flex items-center justify-between p-6 bg-gray-50 dark:bg-white/5 rounded-[2rem] border border-gray-100 dark:border-white/10 hover:border-[#513394]/40 transition-all">
                         <div>
                             <p className="text-xs font-black tracking-widest text-[#513394] uppercase mb-1">Local Guide</p>
-                            <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-[#513394] transition-colors">Contrast Therapy in Mumbai — Complete Guide</h3>
+                            <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-[#513394] transition-colors">Contrast Therapy in Mumbai, Complete Guide</h3>
                             <span className="text-sm text-gray-500 dark:text-gray-400 mt-1 inline-block">Pricing, benefits, and what to expect →</span>
                         </div>
                         <svg className="w-6 h-6 text-[#513394] opacity-0 group-hover:opacity-100 transition-opacity shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>

@@ -2,7 +2,7 @@ export const contrastTherapyWorliFaqs = [
   {
     question: 'Is contrast therapy near Worli available?',
     answer:
-      'Yes. R3BOOT in Dadar East is 15–20 minutes from Worli by road. We offer physio-supervised contrast therapy — red light sauna and ice bath — for Worli sea face runners, cyclists, and professionals from the Lower Parel corridor.',
+      'Yes. R3BOOT in Dadar East is 15–20 minutes from Worli by road. We offer physio-supervised contrast therapy, red light sauna and ice bath, for Worli sea face runners, cyclists, and professionals from the Lower Parel corridor.',
   },
   {
     question: 'How is R3BOOT different from gym cold plunges near Worli?',

@@ -2,7 +2,7 @@ export const clinicalPilatesMumbaiFaqs = [
   {
     question: 'What is the difference between Pilates and Clinical Pilates?',
     answer:
-      'Regular Pilates is a group fitness class taught by a Pilates instructor. Clinical Pilates is a physiotherapy-led program designed around your specific diagnosis, injury history, and movement deficits. At R3BOOT, every clinical pilates program starts with a physiotherapy assessment. Your exercises are prescribed — not generic — and progress based on your clinical response rather than a fixed class structure.',
+      'Regular Pilates is a group fitness class taught by a Pilates instructor. Clinical Pilates is a physiotherapy-led program designed around your specific diagnosis, injury history, and movement deficits. At R3BOOT, every clinical pilates program starts with a physiotherapy assessment. Your exercises are prescribed, not generic, and progress based on your clinical response rather than a fixed class structure.',
   },
   {
     question: 'What is the cost of clinical Pilates in Mumbai?',
@@ -22,7 +22,7 @@ export const clinicalPilatesMumbaiFaqs = [
   {
     question: 'Do I need a physiotherapy assessment before starting clinical Pilates at R3BOOT?',
     answer:
-      'Yes. Every client starts with a physiotherapy assessment before their first clinical Pilates session. This is what makes clinical Pilates different from a fitness class. The assessment identifies your movement deficits, pain patterns, and goals. Your program is designed from those findings — not adapted from a standard class.',
+      'Yes. Every client starts with a physiotherapy assessment before their first clinical Pilates session. This is what makes clinical Pilates different from a fitness class. The assessment identifies your movement deficits, pain patterns, and goals. Your program is designed from those findings, not adapted from a standard class.',
   },
   {
     question: 'Can clinical Pilates help after surgery?',

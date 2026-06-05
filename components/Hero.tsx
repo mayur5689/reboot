@@ -101,7 +101,7 @@ export default function Hero() {
           </a>
         </div>
 
-        {/* Scroll hint — mobile only */}
+        {/* Scroll hint: mobile only */}
         <div className="md:hidden mt-6 flex justify-start">
           <svg
             className="w-6 h-6 text-white/40 animate-bounce"
@@ -152,7 +152,7 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Card 2: Testimonial (Glassmorphism) - Auto Changing — desktop only */}
+        {/* Card 2: Testimonial (Glassmorphism) - Auto Changing, desktop only */}
         <div className="hidden md:flex bg-white/10 dark:bg-white/5 backdrop-blur-xl border border-white/20 dark:border-white/10 p-5 sm:p-7 rounded-2xl flex-col justify-center items-center text-center shadow-2xl min-h-[180px] sm:min-h-[210px] text-white transition-all duration-500">
           <p key={currentTestimonial} className="text-lg font-medium italic mb-4 leading-relaxed tracking-tight animate-in fade-in slide-in-from-bottom-2 duration-500 min-h-[50px] flex items-center justify-center">
             &ldquo;{testimonials[currentTestimonial].quote}&rdquo;

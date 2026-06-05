@@ -54,7 +54,7 @@ export default function ClinicalPilatesWorliPage() {
               Clinical Pilates Near Worli & Lower Parel, Mumbai
             </h1>
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl leading-relaxed font-medium mt-4">
-              R3BOOT in Dadar East — 10 min from Worli, 3 min train from Lower Parel. Physiotherapist-led clinical Pilates.
+              R3BOOT in Dadar East, 10 min from Worli, 3 min train from Lower Parel. Physiotherapist-led clinical Pilates.
             </p>
           </div>
         </div>
@@ -71,12 +71,12 @@ export default function ClinicalPilatesWorliPage() {
               <div className="prose prose-xl text-gray-600 dark:text-gray-400 dark:prose-invert max-w-none leading-relaxed space-y-6">
                 <p>
                   Sheetal's Core Pilates on Dr Annie Besant Road in Worli is a well-run instructor-led Pilates studio.
-                  If you want fitness Pilates — core strength, flexibility, general conditioning — it is a reasonable
+                  If you want fitness Pilates, core strength, flexibility, general conditioning, it is a reasonable
                   option. If you have a diagnosed condition (disc herniation, scoliosis, post-ACL surgery, chronic back
                   pain), you need a physiotherapist designing your program, not a Pilates instructor.
                 </p>
                 <p>
-                  R3BOOT is at Palai Plaza, Dadar East — 10 minutes from Worli sea face by road, 3 minutes by train
+                  R3BOOT is at Palai Plaza, Dadar East, 10 minutes from Worli sea face by road, 3 minutes by train
                   from Lower Parel station to Dadar. The clinical Pilates here is led by Dr. Hiral Parikh (BPT, 15+
                   years sports and post-surgical rehab) and Dr. Vaishali Vijay Rauniyar (certified Dry Needling and
                   Aquatic Rehabilitation). Programs start with a physiotherapy assessment. Reformer and mat available.
@@ -94,7 +94,7 @@ export default function ClinicalPilatesWorliPage() {
                   {[
                     { area: 'Worli Sea Face Runners', issue: 'Calf, IT band, plantar fasciitis from high-volume running. Clinical Pilates for hip stability and lower limb load management.' },
                     { area: 'Phoenix Mills / Kamala Mills Gym Community', issue: 'Post-heavy-training back pain, disc issues, and movement quality for lifters and CrossFit athletes.' },
-                    { area: 'BKC Corporate Athletes', issue: 'Desk posture, neck and shoulder dysfunction, lumbar instability — clinical Pilates combined with physiotherapy.' },
+                    { area: 'BKC Corporate Athletes', issue: 'Desk posture, neck and shoulder dysfunction, lumbar instability, clinical Pilates combined with physiotherapy.' },
                     { area: 'Post-Surgical from Hinduja / Breach Candy', issue: 'Continuing rehabilitation after hospital discharge. ACL, spinal, and joint replacement programs.' },
                   ].map((item, idx) => (
                     <div key={idx} className="bg-[#F8F9FA] dark:bg-white/5 p-6 rounded-[2rem] border border-gray-100 dark:border-white/5">
@@ -140,25 +140,24 @@ export default function ClinicalPilatesWorliPage() {
             <p>
               Worli, Parel, and Lower Parel form one of Mumbai's most active fitness corridors. The Worli sea
               face is a running route for thousands of morning runners. Phoenix Mills and Kamala Mills house
-              premium gyms with significant membership. BKC — twelve minutes from Lower Parel — adds a large
+              premium gyms with significant membership. BKC, twelve minutes from Lower Parel, adds a large
               professional population that trains early or late around work. Hinduja Hospital in Mahim and
               Breach Candy Hospital in Breach Candy are both nearby, generating post-surgical patients who
               need continuing rehabilitation after discharge.
             </p>
             <p>
-              The Pilates options in this belt — Sheetal's Core Pilates on Dr Annie Besant Road in Worli,
-              Activ8 in Mulund — are instructor-led fitness studios. They serve the general fitness market
+              The Pilates options in this belt, Sheetal's Core Pilates on Dr Annie Besant Road in Worli,
+              Activ8 in Mulund, are instructor-led fitness studios. They serve the general fitness market
               effectively. They are not equipped for physiotherapy-level rehabilitation: post-ACL reconstruction,
               disc herniation-specific spinal stabilisation, scoliosis management, or prenatal programs where
               clinical oversight is not optional.
             </p>
             <p>
-              R3BOOT at Palai Plaza, Dadar East is three minutes by train from Lower Parel station —
-              and ten to twelve minutes from the Worli sea face by road. Dr. Hiral Parikh and Dr. Vaishali
+              R3BOOT at Palai Plaza, Dadar East is three minutes by train from Lower Parel station, and ten to twelve minutes from the Worli sea face by road. Dr. Hiral Parikh and Dr. Vaishali
               Vijay Rauniyar manage the full spectrum of clinical presentations that fitness Pilates studios
               cannot: disc pathology, post-surgical loading protocols, scoliosis exercise, and sport-specific
               neuromuscular rehabilitation. Clinical Pilates sessions are one-to-one, 45–60 minutes, physiotherapy-led.
-              The reformer is used clinically — not for classes. The facility also offers sports massage, ice bath,
+              The reformer is used clinically, not for classes. The facility also offers sports massage, ice bath,
               and contrast therapy for clients who want comprehensive recovery in one visit.
             </p>
           </div>

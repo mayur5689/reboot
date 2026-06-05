@@ -11,7 +11,7 @@ import { sportsMassageRunnersMumbaiFaqs } from '@/lib/faqs/sports-massage-runner
 export const metadata: Metadata = {
   title: 'Sports Massage for Runners Mumbai | IT Band, Calf & Knee Pain',
   description:
-    'Sports massage for runners in Mumbai at R3BOOT Dadar. IT band, calf, hamstring & runner\'s knee — physio-trained therapists. 5.0 ★ Google. Open 7 days. Book via WhatsApp.',
+    'Sports massage for runners in Mumbai at R3BOOT Dadar. IT band, calf, hamstring & runner\'s knee | physio-trained therapists. 5.0 ★ Google. Open 7 days. Book via WhatsApp.',
   alternates: { canonical: '/sports-massage-runners-mumbai' },
   keywords: [
     'sports massage for runners Mumbai',
@@ -176,7 +176,7 @@ export default function SportsMassageRunnersMumbaiPage() {
       <section className="relative h-[70vh] flex items-end overflow-hidden">
         <Image
           src="/images/service/Services_image/Sports Massage_1.webp"
-          alt="Sports massage for runners Mumbai — R3BOOT"
+          alt="Sports massage for runners Mumbai, R3BOOT"
           fill
           className="object-cover"
           priority
@@ -206,7 +206,7 @@ export default function SportsMassageRunnersMumbaiPage() {
               Sports Massage for Runners in Mumbai | R3BOOT
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl text-white/80 max-w-3xl leading-relaxed font-medium mt-4">
-              Runner-specific soft tissue therapy for calves, hamstrings, IT band, and plantar fascia. Not a relaxation massage — a clinical recovery tool.
+              Runner-specific soft tissue therapy for calves, hamstrings, IT band, and plantar fascia. Not a relaxation massage, a clinical recovery tool.
             </p>
           </div>
         </div>
@@ -245,7 +245,7 @@ export default function SportsMassageRunnersMumbaiPage() {
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                   {[
-                    { title: 'Cumulative fascial tightening', description: 'The same muscle groups — calves, hamstrings, IT band, hip flexors — loaded in the same pattern every session. Tissue becomes denser, range of motion narrows, injury risk climbs.' },
+                    { title: 'Cumulative fascial tightening', description: 'The same muscle groups, calves, hamstrings, IT band, hip flexors | loaded in the same pattern every session. Tissue becomes denser, range of motion narrows, injury risk climbs.' },
                     { title: 'Reduced circulation to loaded tissue', description: 'Muscles under repeated stress develop adhesions and micro-tears that restrict blood flow. General relaxation massage does not reach the depth these tissues need.' },
                     { title: 'Neuromuscular compensation', description: 'A tight left calf changes your gait. A restricted hip flexor shifts load to your lower back. The injury that appears is rarely at the original site of tension.' },
                     { title: 'Mumbai training environment', description: 'Heat, humidity, and hard road surfaces increase the inflammatory response per kilometre. Mumbai runners effectively need more recovery than the same effort in cooler conditions.' },
@@ -325,7 +325,7 @@ export default function SportsMassageRunnersMumbaiPage() {
               </h2>
               <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed max-w-3xl">
                 Our sports massage therapists at R3BOOT work with runners dealing with these specific conditions. If yours is not listed,
-                contact us — our team will tell you honestly whether sports massage is the right starting point or whether{' '}
+                contact us, our team will tell you honestly whether sports massage is the right starting point or whether{' '}
                 <Link href="/services/physiotherapy" className="text-[#513394] dark:text-[#A78BFA] font-bold hover:underline underline-offset-4">
                   physiotherapy
                 </Link>{' '}
@@ -516,7 +516,7 @@ export default function SportsMassageRunnersMumbaiPage() {
             </h2>
             <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed mt-4">
               All sessions are conducted at R3BOOT&apos;s clinic in Mumbai. Our therapists are part of an integrated team including
-              physiotherapists — if your presentation suggests an injury beyond soft tissue scope, you are referred internally.
+              physiotherapists, if your presentation suggests an injury beyond soft tissue scope, you are referred internally.
             </p>
           </div>
 

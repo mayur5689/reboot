@@ -10,9 +10,9 @@ import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema'
 import { contrastTherapyMumbaiFaqs } from '@/lib/faqs/contrast-therapy-mumbai'
 
 export const metadata: Metadata = {
-  title: 'Contrast Therapy Mumbai — Ice Bath & Red Light Sauna | R3BOOT',
+  title: 'Contrast Therapy Mumbai | Ice Bath & Red Light Sauna | R3BOOT',
   description:
-    'Contrast therapy Mumbai at R3BOOT — ice bath + red light sauna, physio-supervised. Day & Night Cycle protocols for athletes in Dadar. 5.0 ★ Google. Book via WhatsApp.',
+    'Contrast therapy Mumbai at R3BOOT | ice bath + red light sauna, physio-supervised. Day & Night Cycle protocols for athletes in Dadar. 5.0 ★ Google. Book via WhatsApp.',
   alternates: { canonical: '/contrast-therapy-mumbai' },
   keywords: [
     'contrast therapy Mumbai',
@@ -58,7 +58,7 @@ const whatToExpect = [
   },
   {
     title: 'Breathing guidance before cold',
-    body: 'We teach you a controlled breathing technique before your first ice bath immersion — this makes the cold phase manageable for most first-time clients.',
+    body: 'We teach you a controlled breathing technique before your first ice bath immersion | this makes the cold phase manageable for most first-time clients.',
   },
   {
     title: 'Supervised protocol',
@@ -78,7 +78,7 @@ export default function ContrastTherapyMumbaiPage() {
       <section className="relative h-[70vh] flex items-end overflow-hidden">
         <Image
           src="/images/contrast-therapy-mumbai_service_page/contrast-therapy-mumbai_Hero_section.webp"
-          alt="Contrast Therapy Mumbai — Ice Bath and Infrared Sauna at R3BOOT"
+          alt="Contrast Therapy Mumbai, Ice Bath and Infrared Sauna at R3BOOT"
           fill
           className="object-cover"
           priority
@@ -127,15 +127,15 @@ export default function ContrastTherapyMumbaiPage() {
               <div className="prose prose-base sm:prose-lg md:prose-xl text-gray-600 dark:text-gray-400 dark:prose-invert max-w-none leading-relaxed space-y-6">
                 <p>
                   Research published in the International Journal of Sports Physiology and Performance found that contrast
-                  therapy — alternating heat and cold in a structured sequence — reduces perceived muscle soreness and
+                  therapy, alternating heat and cold in a structured sequence, reduces perceived muscle soreness and
                   restores muscle function significantly faster than passive recovery alone. The mechanism is vascular:
                   heat dilates blood vessels, cold constricts them, and the alternation creates a pumping action that
                   clears inflammatory waste from muscle tissue.
                 </p>
                 <p>
                   At R3BOOT, our contrast therapy protocol combines a red light sauna (68°C) and ice bath (6–10°C) in a clinically
-                  structured hot-cold sequence. Sessions are supervised by our physiotherapy team. We run Day Cycles — ending cold to
-                  energise — and Night Cycles — ending hot for deep recovery and sleep.
+                  structured hot-cold sequence. Sessions are supervised by our physiotherapy team. We run Day Cycles, ending cold to
+                  energise, and Night Cycles, ending hot for deep recovery and sleep.
                 </p>
               </div>
 
@@ -246,7 +246,7 @@ export default function ContrastTherapyMumbaiPage() {
                   { title: 'During the heat phase (Red Light Sauna, 68°C)', body: 'Blood vessels dilate. Blood flow to muscles increases. Oxygen and nutrients reach damaged tissue. Muscle tension decreases.' },
                   { title: 'During the cold phase (Ice Bath, 6–10°C)', body: 'Blood vessels constrict rapidly. Blood and metabolic waste (lactic acid, inflammatory cytokines) are forced away from muscles. Swelling reduces.' },
                   { title: 'The alternation effect', body: 'Repeating the cycle creates a vascular pumping action. Research shows contrast therapy significantly reduces perceived muscle soreness compared to cold-water immersion alone.' },
-                  { title: 'Day Cycle vs Night Cycle', body: 'Day Cycle ends cold — stimulates the nervous system, improves alertness, no post-session fatigue. Night Cycle ends hot — promotes parasympathetic activation, supports deep recovery and sleep.' },
+                  { title: 'Day Cycle vs Night Cycle', body: 'Day Cycle ends cold, stimulates the nervous system, improves alertness, no post-session fatigue. Night Cycle ends hot, promotes parasympathetic activation, supports deep recovery and sleep.' },
                 ].map((item, idx) => (
                   <div key={idx} className="flex gap-5 group">
                     <div className="w-10 h-10 rounded-2xl bg-[#513394]/10 dark:bg-[#8B5CF6]/20 flex items-center justify-center text-[#513394] dark:text-[#A78BFA] font-black shrink-0 text-sm group-hover:bg-[#513394] group-hover:text-white transition-all duration-300">
@@ -276,7 +276,7 @@ export default function ContrastTherapyMumbaiPage() {
               <span className="text-[#513394] dark:text-[#8B5CF6]">Protocol</span>
             </h2>
             <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed max-w-2xl mx-auto">
-              Built on structured Day and Night Cycle protocols. Half Cycle (30 min) or Full Cycle (60 min — same protocol twice).
+              Built on structured Day and Night Cycle protocols. Half Cycle (30 min) or Full Cycle (60 min, same protocol twice).
               Red Light Sauna at 68°C. Ice Bath at 6–10°C. Adjusted by your physiotherapist based on training load and recovery goals.
             </p>
           </div>
@@ -284,7 +284,7 @@ export default function ContrastTherapyMumbaiPage() {
           <div className="relative rounded-[2.5rem] overflow-hidden w-full shadow-2xl max-w-6xl mx-auto aspect-[16/9]">
             <Image
               src="/images/contrast-therapy-mumbai_service_page/contrast-therapy-mumbai_R3BOOT_PROTOCOL.webp"
-              alt="R3BOOT contrast therapy protocol — ice bath and red light sauna Mumbai"
+              alt="R3BOOT contrast therapy protocol, ice bath and red light sauna Mumbai"
               fill
               className="object-cover"
             />
@@ -323,7 +323,7 @@ export default function ContrastTherapyMumbaiPage() {
                 <span className="text-[#513394] dark:text-[#8B5CF6]">Ice Bath Alone</span>
               </h2>
               <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed max-w-3xl">
-                Many athletes in Mumbai are already using ice baths. Here is why contrast therapy produces different results — and
+                Many athletes in Mumbai are already using ice baths. Here is why contrast therapy produces different results, and
                 when each approach is the right choice.
               </p>
             </div>
@@ -340,7 +340,7 @@ export default function ContrastTherapyMumbaiPage() {
                 <tbody>
                   {[
                     ['Mechanism', 'Cold vasoconstriction only', 'Vascular pumping (dilate + constrict)'],
-                    ['Waste removal', 'Moderate', 'Higher — pumping clears more metabolic waste'],
+                    ['Waste removal', 'Moderate', 'Higher, pumping clears more metabolic waste'],
                     ['Muscle soreness', 'Good', 'Stronger, especially for DOMS'],
                     ['Mental effect', 'High adrenaline response', 'Balanced: stimulating then calming'],
                     ['Next-day performance', 'Moderate', 'Better recovery of muscle function'],
@@ -388,7 +388,7 @@ export default function ContrastTherapyMumbaiPage() {
               </h2>
               <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed mb-10">
                 A full contrast therapy session takes approximately 45–60 minutes including intake, the protocol, and a post-session
-                check-in. Our physiotherapy team is with you through the session — guiding your breathing, monitoring your response,
+                check-in. Our physiotherapy team is with you through the session, guiding your breathing, monitoring your response,
                 and adjusting the protocol if needed.
               </p>
               <div className="space-y-6">

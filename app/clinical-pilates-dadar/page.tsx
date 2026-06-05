@@ -8,7 +8,7 @@ import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema'
 import { clinicalPilatesDadarFaqs } from '@/lib/faqs/clinical-pilates-dadar'
 
 export const metadata: Metadata = {
-  title: 'Clinical Pilates Dadar | Physio-Led, 5 Min from Station — R3BOOT',
+  title: 'Clinical Pilates Dadar | Physio-Led, 5 Min from Station | R3BOOT',
   description:
     'Physiotherapist-led Clinical Pilates in Dadar, 5 min from the station. Back pain, scoliosis & post-surgery programs at R3BOOT. 5.0 ★ Google. Book via WhatsApp today.',
   alternates: { canonical: '/clinical-pilates-dadar' },
@@ -54,7 +54,7 @@ export default function ClinicalPilatesDadarPage() {
               Clinical Pilates in Dadar, Mumbai
             </h1>
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl leading-relaxed font-medium mt-4">
-              R3BOOT — Dadar East's only physiotherapist-led clinical Pilates clinic. 5 minutes from Dadar station.
+              R3BOOT, Dadar East's only physiotherapist-led clinical Pilates clinic. 5 minutes from Dadar station.
             </p>
           </div>
         </div>
@@ -70,15 +70,15 @@ export default function ClinicalPilatesDadarPage() {
               </h2>
               <div className="prose prose-xl text-gray-600 dark:text-gray-400 dark:prose-invert max-w-none leading-relaxed space-y-6">
                 <p>
-                  Dadar and Shivaji Park have several Pilates studios — Moushu's Pilates has a studio near Five
+                  Dadar and Shivaji Park have several Pilates studios, Moushu's Pilates has a studio near Five
                   Gardens Dadar East, and Radhika's Balanced Body recently opened in Dadar West. Both are
                   instructor-led fitness Pilates. Neither is the same as clinical Pilates supervised by a physiotherapist.
                 </p>
                 <p>
-                  R3BOOT is at Palai Plaza, 203, Swami Gyan Jivandas Marg, Dadar East — five minutes walk from Dadar
+                  R3BOOT is at Palai Plaza, 203, Swami Gyan Jivandas Marg, Dadar East, five minutes walk from Dadar
                   Central Line station. Clinical Pilates here is delivered by Dr. Hiral Parikh (BPT, 15+ years) and
                   Dr. Vaishali Vijay Rauniyar (certified Dry Needling and Aquatic Rehabilitation). Every program starts
-                  with a physiotherapy assessment. Reformer and mat-based sessions available. One-to-one — no classes.
+                  with a physiotherapy assessment. Reformer and mat-based sessions available. One-to-one, no classes.
                   Clients from Dadar, Matunga, Sion, Parel, and Shivaji Park walk here because no equivalent
                   physiotherapy-led Pilates exists in the same catchment area.
                 </p>
@@ -91,9 +91,9 @@ export default function ClinicalPilatesDadarPage() {
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   {[
-                    { title: 'Lower Back Pain & Disc Problems', desc: 'L4-L5 disc, lumbar instability, facet joint pain — programs built from your MRI and physiotherapy assessment.', href: '/back-pain-clinical-pilates-mumbai' },
+                    { title: 'Lower Back Pain & Disc Problems', desc: 'L4-L5 disc, lumbar instability, facet joint pain, programs built from your MRI and physiotherapy assessment.', href: '/back-pain-clinical-pilates-mumbai' },
                     { title: 'Scoliosis Management', desc: 'Curve-specific exercises and rotational breathing for adolescent and adult scoliosis.', href: '/scoliosis-pilates-mumbai' },
-                    { title: 'Post-Surgical Rehabilitation', desc: 'ACL, spinal surgery, hip/knee replacement — graded reformer loading from week 6.', href: '/post-surgery-pilates-mumbai' },
+                    { title: 'Post-Surgical Rehabilitation', desc: 'ACL, spinal surgery, hip/knee replacement | graded reformer loading from week 6.', href: '/post-surgery-pilates-mumbai' },
                     { title: 'Sports Performance', desc: 'Core stability and movement quality for runners, gym-goers, and athletes based in Dadar.', href: '/clinical-pilates-mumbai' },
                   ].map((item, idx) => (
                     <Link key={idx} href={item.href} className="bg-white dark:bg-white/5 p-8 rounded-[2.5rem] border border-gray-100 dark:border-white/5 shadow-sm hover:shadow-xl hover:border-[#513394]/20 group transition-all duration-300">
@@ -133,19 +133,19 @@ export default function ClinicalPilatesDadarPage() {
         <div className="container mx-auto px-6 lg:px-8 max-w-5xl">
           <div className="prose prose-lg text-gray-600 dark:text-gray-400 dark:prose-invert max-w-none leading-relaxed space-y-5">
             <h2 className="text-3xl md:text-4xl font-black text-gray-900 dark:text-white tracking-tight not-prose mb-6">
-              Dadar's Clinical Pilates Landscape — <span className="text-[#513394] dark:text-[#8B5CF6]">And Where R3BOOT Sits</span>
+              Dadar's Clinical Pilates Landscape, <span className="text-[#513394] dark:text-[#8B5CF6]">And Where R3BOOT Sits</span>
             </h2>
             <p>
-              Dadar is one of Mumbai's most accessible central hubs — directly on the Central and Western
+              Dadar is one of Mumbai's most accessible central hubs, directly on the Central and Western
               railway lines, connecting Thane, Andheri, Churchgate, and CST. This makes Dadar East a practical
               location for clinical pilates clients coming from Matunga, Sion, Parel, Worli, Bandra, and further.
-              Shivaji Park, a five-minute walk from R3BOOT, is one of Mumbai's primary running grounds — the
+              Shivaji Park, a five-minute walk from R3BOOT, is one of Mumbai's primary running grounds, the
               morning running community there generates a steady stream of hip, IT band, knee, and lower back
               presentations that benefit from the combination of clinical Pilates and sports massage available
               at the same facility.
             </p>
             <p>
-              Moushu's Pilates has a Dadar studio near Five Gardens, Dadar East — approximately one kilometre
+              Moushu's Pilates has a Dadar studio near Five Gardens, Dadar East, approximately one kilometre
               from R3BOOT. Radhika's Balanced Body opened a Pilates studio in Dadar West in April 2026. Both
               are instructor-led fitness Pilates studios without physiotherapy capability. The clinical gap
               they leave is exactly what R3BOOT was built to fill: physiotherapy-led movement rehabilitation
@@ -157,7 +157,7 @@ export default function ClinicalPilatesDadarPage() {
               recovering from IT band syndrome while rebuilding hip stability through clinical Pilates, this
               matters. No other facility in Dadar offers this combination. Physiotherapy, sports massage,
               and clinical Pilates are all under one roof at Palai Plaza, 203, Swami Gyan Jivandas Marg,
-              Dadar East, Mumbai — five minutes from Dadar Central Line station.
+              Dadar East, Mumbai, five minutes from Dadar Central Line station.
             </p>
           </div>
         </div>
@@ -173,7 +173,7 @@ export default function ClinicalPilatesDadarPage() {
               Clinical Pilates <span className="text-white/50">in Dadar.</span>
             </h2>
             <p className="text-xl text-white/70 mb-12 leading-relaxed font-medium max-w-3xl mx-auto">
-              Physiotherapist-led. Assessment-first. Not a class. R3BOOT, Dadar East — 5 minutes from Dadar station.
+              Physiotherapist-led. Assessment-first. Not a class. R3BOOT, Dadar East, 5 minutes from Dadar station.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
               <a href="tel:+919702368612" className="w-full sm:w-auto bg-white text-[#513394] font-black px-10 py-5 rounded-full transition-all hover:scale-105 shadow-2xl text-lg tracking-wide">Call to Book</a>

@@ -10,7 +10,7 @@ import { sportsMassageLowerParelFaqs } from '@/lib/faqs/sports-massage-lower-par
 export const metadata: Metadata = {
   title: 'Sports Massage Near Lower Parel & Worli | R3BOOT Dadar',
   description:
-    'Sports massage near Lower Parel & Worli at R3BOOT Dadar. 10 min away. Clinical soft tissue work for athletes & BKC professionals — not a spa. 5.0 ★ Google. Book via WhatsApp.',
+    'Sports massage near Lower Parel & Worli at R3BOOT Dadar. 10 min away. Clinical soft tissue work for athletes & BKC professionals, not a spa. 5.0 ★ Google. Book via WhatsApp.',
   alternates: { canonical: '/sports-massage-lower-parel' },
   keywords: [
     'sports massage lower parel',
@@ -33,7 +33,7 @@ const profile = [
   },
   {
     title: 'Worli runners & cyclists',
-    body: 'Worli sea face is a popular running and cycling route. Lower limb overuse — calf tightness, IT band, plantar fasciitis — is common in this community.',
+    body: 'Worli sea face is a popular running and cycling route. Lower limb overuse | calf tightness, IT band, plantar fasciitis | is common in this community.',
   },
   {
     title: 'Parel & Sewri athletes',
@@ -73,7 +73,7 @@ export default function SportsMassageLowerParelPage() {
               Sports Massage Near Lower Parel, Mumbai
             </h1>
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl leading-relaxed font-medium mt-4">
-              R3BOOT in Dadar East — 10–15 min from Lower Parel. Clinical recovery for gym-goers, desk workers, and athletes.
+              R3BOOT in Dadar East, 10–15 min from Lower Parel. Clinical recovery for gym-goers, desk workers, and athletes.
             </p>
           </div>
         </div>
@@ -89,15 +89,14 @@ export default function SportsMassageLowerParelPage() {
               </h2>
               <div className="prose prose-xl text-gray-600 dark:text-gray-400 dark:prose-invert max-w-none leading-relaxed space-y-6">
                 <p>
-                  Lower Parel's sports massage options sit inside the Raghuvanshi Mills and Todi Mills compounds —
-                  Oceanic Spa, Nature Wellness, Madisyn. Good for relaxation after a stressful week. Not what
+                  Lower Parel's sports massage options sit inside the Raghuvanshi Mills and Todi Mills compounds, Oceanic Spa, Nature Wellness, Madisyn. Good for relaxation after a stressful week. Not what
                   you need if you train at the Phoenix Mills gym, run the Worli sea face, or carry chronic IT band
                   tightness from your heavy squat programming at a Kamala Mills CrossFit box. A spa session gives
                   you 60 minutes of Swedish strokes. It doesn't assess why your hamstring keeps straining at the
                   same spot on your runs, or why your lower back tightens up two days after every deadlift session.
                 </p>
                 <p>
-                  R3BOOT is 3 minutes by train from Lower Parel station to Dadar — or 10–12 minutes by road.
+                  R3BOOT is 3 minutes by train from Lower Parel station to Dadar, or 10–12 minutes by road.
                   Therapist Akshay Nalawde runs an assessment-first session: your training load, the specific
                   restriction, the muscle group driving the problem. Treatment uses deep tissue, myofascial
                   release, trigger point therapy, and cupping where needed. After the session, you know what
@@ -130,7 +129,7 @@ export default function SportsMassageLowerParelPage() {
                 <h3 className="text-xl font-black text-gray-900 dark:text-white mb-6">Combine Sports Massage with Recovery Tools</h3>
                 <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed mb-6">
                   R3BOOT is not just sports massage. Many Lower Parel clients combine their session with ice bath,
-                  contrast therapy, or red light therapy in the same visit — a recovery stack unavailable anywhere
+                  contrast therapy, or red light therapy in the same visit, a recovery stack unavailable anywhere
                   else in central Mumbai.
                 </p>
                 <div className="flex flex-wrap gap-3">

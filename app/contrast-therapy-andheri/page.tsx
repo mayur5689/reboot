@@ -8,9 +8,9 @@ import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema'
 import { contrastTherapyAndheriFaqs } from '@/lib/faqs/contrast-therapy-andheri'
 
 export const metadata: Metadata = {
-  title: 'Contrast Therapy Near Andheri | Ice Bath & Sauna — R3BOOT Dadar',
+  title: 'Contrast Therapy Near Andheri | Ice Bath & Sauna | R3BOOT Dadar',
   description:
-    'Contrast therapy near Andheri at R3BOOT Dadar — physio-supervised sauna & ice bath. Clinical recovery, not gym cold plunge. Half Cycle ₹2,500. Book via WhatsApp.',
+    'Contrast therapy near Andheri at R3BOOT Dadar | physio-supervised sauna & ice bath. Clinical recovery, not gym cold plunge. Half Cycle ₹2,500. Book via WhatsApp.',
   alternates: { canonical: '/contrast-therapy-andheri' },
   keywords: [
     'contrast therapy andheri',
@@ -28,7 +28,7 @@ export default function ContrastTherapyAndheriPage() {
       <section className="relative h-[70vh] flex items-end overflow-hidden">
         <Image
           src="/images/contrast-therapy-mumbai_service_page/contrast-therapy-mumbai_Hero_section.webp"
-          alt="Contrast therapy near Andheri Mumbai — R3BOOT Dadar"
+          alt="Contrast therapy near Andheri Mumbai, R3BOOT Dadar"
           fill
           className="object-cover"
           priority
@@ -52,7 +52,7 @@ export default function ContrastTherapyAndheriPage() {
               Contrast Therapy Near Andheri, Mumbai
             </h1>
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl leading-relaxed font-medium mt-4">
-              R3BOOT in Dadar East — clinical sauna and ice bath for Andheri athletes. Physio-supervised, not a gym tank.
+              R3BOOT in Dadar East, clinical sauna and ice bath for Andheri athletes. Physio-supervised, not a gym tank.
             </p>
           </div>
         </div>
@@ -72,8 +72,8 @@ export default function ContrastTherapyAndheriPage() {
                   immersion (6–10°C), with a physiotherapist present from intake through exit.
                 </p>
                 <p>
-                  Andheri gym members, weekend football players, and runners who want recovery that fits a training plan — not just a
-                  social cold dip — make the trip to Dadar. Stack with{' '}
+                  Andheri gym members, weekend football players, and runners who want recovery that fits a training plan, not just a
+                  social cold dip, make the trip to Dadar. Stack with{' '}
                   <Link href="/sports-massage-mumbai" className="text-[#513394] dark:text-[#A78BFA] font-bold hover:underline">
                     sports massage
                   </Link>{' '}
@@ -88,7 +88,7 @@ export default function ContrastTherapyAndheriPage() {
                 {[
                   { title: 'From Andheri station', body: '~20–25 min train to Dadar, then short ride to clinic.' },
                   { title: 'By road', body: '30–40 min from Andheri depending on traffic.' },
-                  { title: 'Half / Full Cycle', body: '₹2,500 Half · ₹3,500 Full — sauna + ice bath included.' },
+                  { title: 'Half / Full Cycle', body: '₹2,500 Half · ₹3,500 Full | sauna + ice bath included.' },
                   { title: 'Health intake every time', body: 'Breathing coaching before your first cold phase.' },
                 ].map((item, idx) => (
                   <div key={idx} className="bg-white dark:bg-white/5 p-6 rounded-[2rem] border border-gray-100 dark:border-white/5">

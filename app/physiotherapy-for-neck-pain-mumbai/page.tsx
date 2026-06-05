@@ -8,7 +8,7 @@ import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema'
 import { neckPainPhysiotherapyFaqs } from '@/lib/faqs/physiotherapy-neck-pain-mumbai'
 
 export const metadata: Metadata = {
-  title: 'Physiotherapy for Neck Pain Mumbai | Cervical Rehab — R3BOOT Dadar',
+  title: 'Physiotherapy for Neck Pain Mumbai | Cervical Rehab | R3BOOT Dadar',
   description:
     'Clinical physiotherapy for neck pain in Mumbai at R3BOOT Dadar. Cervical disc, radiculopathy, spondylosis, desk pain & cervicogenic headaches. Dry needling available. 5.0 ★ Google. WhatsApp to book.',
   alternates: { canonical: '/physiotherapy-for-neck-pain-mumbai' },
@@ -29,27 +29,27 @@ export const metadata: Metadata = {
 const neckConditions = [
   {
     title: 'Cervical disc herniation',
-    body: 'A bulging or herniated disc in the cervical spine compresses nerve roots — producing neck pain, shoulder pain, arm pain, tingling, or numbness. Manual therapy, cervical traction techniques, nerve mobilisation, and targeted exercise resolve this in most cases without surgery.',
+    body: 'A bulging or herniated disc in the cervical spine compresses nerve roots | producing neck pain, shoulder pain, arm pain, tingling, or numbness. Manual therapy, cervical traction techniques, nerve mobilisation, and targeted exercise resolve this in most cases without surgery.',
   },
   {
     title: 'Cervical radiculopathy',
-    body: 'Nerve root compression causing shooting pain, weakness, or numbness from the neck into the shoulder, arm, or hand. Physiotherapy addresses the mechanical cause of nerve irritation — producing better long-term outcomes than medication or injections alone.',
+    body: 'Nerve root compression causing shooting pain, weakness, or numbness from the neck into the shoulder, arm, or hand. Physiotherapy addresses the mechanical cause of nerve irritation | producing better long-term outcomes than medication or injections alone.',
   },
   {
     title: 'Cervical spondylosis',
-    body: 'Age-related disc narrowing, osteophyte formation, and joint degeneration in the cervical spine. Physiotherapy cannot reverse degeneration — but it significantly reduces pain and restores function by improving mobility and deep cervical muscle strength.',
+    body: 'Age-related disc narrowing, osteophyte formation, and joint degeneration in the cervical spine. Physiotherapy cannot reverse degeneration, but it significantly reduces pain and restores function by improving mobility and deep cervical muscle strength.',
   },
   {
     title: 'Postural and desk-related neck pain',
-    body: 'Forward head posture, sustained screen use, and poor workstation setup load the cervical extensors and compress the lower cervical discs. The most common neck pain presentation in Mumbai — and the most consistently underestimated in severity.',
+    body: 'Forward head posture, sustained screen use, and poor workstation setup load the cervical extensors and compress the lower cervical discs. The most common neck pain presentation in Mumbai | and the most consistently underestimated in severity.',
   },
   {
     title: 'Cervicogenic headaches',
-    body: 'Headaches originating from the upper cervical joints (C1–C3) and suboccipital muscles — not the brain. Begin at the base of the skull, often radiating to the forehead or behind the eye. Respond extremely well to manual therapy and dry needling.',
+    body: 'Headaches originating from the upper cervical joints (C1–C3) and suboccipital muscles, not the brain. Begin at the base of the skull, often radiating to the forehead or behind the eye. Respond extremely well to manual therapy and dry needling.',
   },
   {
     title: 'Whiplash and acute muscle spasm',
-    body: 'Post-accident cervical strain, acute muscle spasm, and restricted range of motion. Early physiotherapy intervention — not rest and a collar — produces faster and more complete recovery. Most whiplash presentations resolve fully with the right treatment.',
+    body: 'Post-accident cervical strain, acute muscle spasm, and restricted range of motion. Early physiotherapy intervention, not rest and a collar, produces faster and more complete recovery. Most whiplash presentations resolve fully with the right treatment.',
   },
 ]
 
@@ -62,12 +62,12 @@ const sessionSteps = [
   {
     step: '02',
     label: 'Targeted hands-on treatment',
-    body: 'Manual therapy to specific cervical and upper thoracic segments, soft tissue release, dry needling to trapezius and suboccipital trigger points, and nerve mobilisation techniques — applied to what the assessment found.',
+    body: 'Manual therapy to specific cervical and upper thoracic segments, soft tissue release, dry needling to trapezius and suboccipital trigger points, and nerve mobilisation techniques, applied to what the assessment found.',
   },
   {
     step: '03',
     label: 'Your rehabilitation plan',
-    body: 'Specific exercises for deep cervical flexor strength and postural endurance, plus a workstation and posture brief if relevant. You leave with a clear programme and realistic timeline — not a generic neck exercise sheet.',
+    body: 'Specific exercises for deep cervical flexor strength and postural endurance, plus a workstation and posture brief if relevant. You leave with a clear programme and realistic timeline, not a generic neck exercise sheet.',
   },
 ]
 
@@ -88,7 +88,7 @@ export default function PhysiotherapyNeckPainMumbaiPage() {
       <section className="relative h-[70vh] flex items-end overflow-hidden">
         <Image
           src="/images/service/Services_image/Physiotherapy_1.webp"
-          alt="Physiotherapy for neck pain Mumbai — clinical cervical treatment at R3BOOT Dadar"
+          alt="Physiotherapy for neck pain Mumbai, clinical cervical treatment at R3BOOT Dadar"
           fill
           className="object-cover"
           priority
@@ -118,7 +118,7 @@ export default function PhysiotherapyNeckPainMumbaiPage() {
               Physiotherapy for Neck Pain in Mumbai
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl text-white/80 max-w-3xl leading-relaxed font-medium mt-4">
-              Clinical assessment, manual therapy, dry needling, and cervical rehabilitation — at R3BOOT, Dadar East.
+              Clinical assessment, manual therapy, dry needling, and cervical rehabilitation, at R3BOOT, Dadar East.
             </p>
           </div>
         </div>
@@ -138,14 +138,13 @@ export default function PhysiotherapyNeckPainMumbaiPage() {
                 <p>
                   Nine-hour screen days, two-hour commutes on Western and Central lines, and WFH setups built
                   around a laptop on a dining table. Mumbai has the highest concentration of postural neck pain
-                  drivers of any city in India — and most people manage it with a heat pad, a muscle relaxant,
+                  drivers of any city in India, and most people manage it with a heat pad, a muscle relaxant,
                   and the assumption that this is just how their neck is now.
                 </p>
                 <p>
                   At R3BOOT in Dadar East, clinical physiotherapy for neck pain begins with identifying what is
                   actually failing. Postural neck pain, cervical disc herniation, radiculopathy, spondylosis,
-                  and cervicogenic headaches all look similar to patients — they all &quot;feel like neck pain&quot; —
-                  but they have completely different causes, and completely different treatments. Getting this
+                  and cervicogenic headaches all look similar to patients, they all &quot;feel like neck pain&quot;, but they have completely different causes, and completely different treatments. Getting this
                   right at the first session is what determines whether you recover in four sessions or drag
                   it out for four months.
                 </p>
@@ -274,7 +273,7 @@ export default function PhysiotherapyNeckPainMumbaiPage() {
             <div className="relative rounded-[2.5rem] overflow-hidden aspect-[4/5] w-full shadow-2xl">
               <Image
                 src="/images/Services_image/Physiotherapy.webp"
-                alt="Neck pain physiotherapy at R3BOOT Dadar Mumbai — dry needling and manual therapy"
+                alt="Neck pain physiotherapy at R3BOOT Dadar Mumbai, dry needling and manual therapy"
                 fill
                 className="object-cover"
               />
@@ -307,18 +306,18 @@ export default function PhysiotherapyNeckPainMumbaiPage() {
                 </p>
                 <p>
                   At R3BOOT, dry needling is used to release the specific trigger points maintaining your neck
-                  pain — typically in the upper trapezius, levator scapulae, and suboccipital muscles. Combined
+                  pain, typically in the upper trapezius, levator scapulae, and suboccipital muscles. Combined
                   with manual therapy to the restricted cervical segments driving that compensation, and
-                  strengthening of the deep cervical flexors that are failing to stabilise the spine — the
+                  strengthening of the deep cervical flexors that are failing to stabilise the spine, the
                   pattern breaks.
                 </p>
               </div>
               <div className="space-y-4">
                 {[
-                  { label: 'Cervical manual therapy', detail: 'Specific mobilisation of restricted C3–C7 segments — not a generic neck massage' },
-                  { label: 'Dry needling', detail: 'Available at R3BOOT — trapezius, levator scapulae, suboccipital and scalene trigger point release' },
-                  { label: 'Deep cervical flexor retraining', detail: 'The most underaddressed driver of chronic neck pain — restoring the muscle that holds your head correctly' },
-                  { label: 'Nerve mobilisation', detail: 'For cervical radiculopathy and arm symptoms — decompresses the irritated nerve pathway from neck to fingertip' },
+                  { label: 'Cervical manual therapy', detail: 'Specific mobilisation of restricted C3–C7 segments, not a generic neck massage' },
+                  { label: 'Dry needling', detail: 'Available at R3BOOT, trapezius, levator scapulae, suboccipital and scalene trigger point release' },
+                  { label: 'Deep cervical flexor retraining', detail: 'The most underaddressed driver of chronic neck pain, restoring the muscle that holds your head correctly' },
+                  { label: 'Nerve mobilisation', detail: 'For cervical radiculopathy and arm symptoms, decompresses the irritated nerve pathway from neck to fingertip' },
                 ].map((item, idx) => (
                   <div key={idx} className="flex items-start gap-4 group">
                     <div className="w-8 h-8 rounded-xl bg-[#513394]/10 dark:bg-[#8B5CF6]/20 flex items-center justify-center text-[#513394] dark:text-[#A78BFA] font-black shrink-0 text-xs group-hover:bg-[#513394] group-hover:text-white transition-all duration-300">
@@ -408,14 +407,14 @@ export default function PhysiotherapyNeckPainMumbaiPage() {
                 <span className="text-[#513394] dark:text-[#8B5CF6]">in Central Mumbai</span>
               </h2>
               <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed mb-6">
-                R3BOOT is in Dadar East — accessible from every major neighbourhood in central and south
+                R3BOOT is in Dadar East, accessible from every major neighbourhood in central and south
                 Mumbai. Desk workers from BKC, Lower Parel, and Worli commute past Dadar station daily.
                 Adding a physiotherapy session before or after work is 10 minutes off your existing
-                commute — not a separate trip across the city.
+                commute, not a separate trip across the city.
               </p>
               <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed mb-8">
                 Bandra, Sion, Matunga, Parel, and Shivaji Park are all within 15 minutes. We see a limited
-                number of patients per day — your 60-minute session has the clinical time your neck pain
+                number of patients per day, your 60-minute session has the clinical time your neck pain
                 actually requires.
               </p>
 
@@ -499,17 +498,17 @@ export default function PhysiotherapyNeckPainMumbaiPage() {
               {[
                 {
                   title: 'Neck & Shoulder Sports Massage',
-                  desc: 'Deep tissue work on the upper trapezius, rhomboids, levator scapulae, and cervical muscles — addressing the soft tissue tension that drives chronic neck pain. Often combined with physiotherapy on the same visit.',
+                  desc: 'Deep tissue work on the upper trapezius, rhomboids, levator scapulae, and cervical muscles, addressing the soft tissue tension that drives chronic neck pain. Often combined with physiotherapy on the same visit.',
                   href: '/neck-shoulder-pain-sports-massage-mumbai',
                 },
                 {
                   title: 'Contrast Therapy',
-                  desc: 'Ice bath and infrared sauna in a structured protocol. Reduces systemic inflammation and muscle tension — effective for desk workers with chronic upper body tension alongside physiotherapy.',
+                  desc: 'Ice bath and infrared sauna in a structured protocol. Reduces systemic inflammation and muscle tension, effective for desk workers with chronic upper body tension alongside physiotherapy.',
                   href: '/contrast-therapy-mumbai',
                 },
                 {
                   title: 'Physiotherapy for Back Pain',
-                  desc: 'Neck pain rarely exists in isolation — thoracic stiffness and lumbar patterns frequently drive cervical compensations. Combined assessment and treatment for the full spine is often the most efficient approach.',
+                  desc: 'Neck pain rarely exists in isolation | thoracic stiffness and lumbar patterns frequently drive cervical compensations. Combined assessment and treatment for the full spine is often the most efficient approach.',
                   href: '/physiotherapy-for-back-pain-mumbai',
                 },
               ].map((item, idx) => (
@@ -583,7 +582,7 @@ export default function PhysiotherapyNeckPainMumbaiPage() {
               No referral needed. Dr. Hiral Parikh and Dr. Vaishali Rauniyar.
             </p>
             <p className="text-white/40 mb-8 sm:mb-12 text-sm font-bold tracking-widest">
-              203, Palai Plaza, Dadar East, Mumbai 400014 — 5 min from Dadar station
+              203, Palai Plaza, Dadar East, Mumbai 400014, 5 min from Dadar station
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
               <a
