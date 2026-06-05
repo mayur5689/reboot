@@ -49,11 +49,12 @@ export async function generateMetadata(props: { params: Promise<{ slug: string }
 const components = {
     types: {
         image: ({ value }: any) => (
-            <div className="relative w-full h-[300px] sm:h-[500px] my-12 rounded-3xl overflow-hidden shadow-2xl">
+            <div className="relative w-full aspect-video my-12 rounded-3xl overflow-hidden shadow-2xl">
                 <Image
-                    src={urlFor(value).url()}
+                    src={urlFor(value).width(1200).quality(85).url()}
                     alt={value.alt || 'Blog Image'}
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1280px) 66vw, 800px"
                     className="object-cover"
                 />
                 {value.alt && (
@@ -128,9 +129,10 @@ export default async function BlogPostPage(props: { params: Promise<{ slug: stri
             <div className="relative h-[60vh] sm:h-[70vh] w-full">
                 {post.mainImage && (
                     <Image
-                        src={urlFor(post.mainImage).url()}
+                        src={urlFor(post.mainImage).width(1920).quality(85).url()}
                         alt={post.title}
                         fill
+                        sizes="100vw"
                         className="object-cover"
                         priority
                     />
@@ -165,7 +167,7 @@ export default async function BlogPostPage(props: { params: Promise<{ slug: stri
                             <div className="w-12 h-12 rounded-full border-2 border-[#A78BFA] p-0.5">
                                 {post.authorImage ? (
                                     <div className="relative w-full h-full rounded-full overflow-hidden">
-                                        <Image src={urlFor(post.authorImage).url()} alt={post.author ?? 'Author'} fill className="object-cover" />
+                                        <Image src={urlFor(post.authorImage).width(96).quality(85).url()} alt={post.author ?? 'Author'} fill sizes="48px" className="object-cover" />
                                     </div>
                                 ) : (
                                     <div className="w-full h-full rounded-full bg-[#A78BFA] flex items-center justify-center text-[#0A0A0A] font-black uppercase">
