@@ -324,11 +324,6 @@ export default function PhysiotherapyPage() {
                                 image: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=800&q=80",
                             },
                             {
-                                title: "Neurological Rehabilitation",
-                                description: "Vaishali specialises in neurological rehabilitation alongside orthopedic cases. Relevant for stroke recovery, Parkinson's disease management, and nerve-related pain and movement dysfunction.",
-                                image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=800&q=80",
-                            },
-                            {
                                 title: "Postural Correction",
                                 description: "Rounded shoulders, forward head posture, thoracic kyphosis, and pelvic imbalances from prolonged sitting and asymmetrical training. Corrective programming addresses both the structural pattern and the habits driving it.",
                                 image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80",

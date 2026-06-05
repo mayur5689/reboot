@@ -14,7 +14,7 @@ const teamMembers = [
         name: "Dr. Vaishali Vijay Rauniyar",
         role: "Physiotherapist | Dry Needling & Aquatic Rehab Certified",
         image: "/images/trainer2/Trainers/Dr. Vaishali Vijay Rauniyar.webp",
-        bio: "Clinical experience across sports, orthopedic, and neurological rehabilitation. Dual certification in Dry Needling and Aquatic Rehabilitation gives access to treatment approaches most physiotherapy clinics in Mumbai do not offer. Her neurological rehabilitation background makes her particularly well-suited for complex cases requiring multi-system assessment."
+        bio: "Dr. Vaishali Vijay Rauniyar brings clinical experience across sports and orthopaedic rehabilitation. Her dual certification in Dry Needling and Aquatic Rehabilitation gives patients access to treatment approaches most physiotherapy clinics in Mumbai do not offer."
     },
 ];
 
