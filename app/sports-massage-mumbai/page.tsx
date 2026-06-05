@@ -5,12 +5,14 @@ import { services } from '@/lib/services'
 import { FAQSection } from '@/components/faq-section'
 import ServiceSchema from '@/components/schema/ServiceSchema'
 import FAQSchema from '@/components/schema/FAQSchema'
+import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema'
 import { sportsMassageMumbaiFaqs } from '@/lib/faqs/sports-massage-mumbai'
 
 export const metadata: Metadata = {
-  title: 'Sports Massage in Mumbai for Muscle Recovery & Injury Relief | R3boot',
+  title: 'Sports Massage Mumbai | Physio-Led Recovery — R3BOOT Dadar',
   description:
-    'Sports massage in Mumbai at R3boot helps reduce muscle tension, improve recovery, and prevent sports injuries. Located in Dadar, we combine sports massage with cupping therapy and mobility work for faster recovery.',
+    'Sports massage Mumbai at R3BOOT Dadar — physio-led, not a spa. Cupping, mobility work & soft tissue release for athletes & gym-goers. 5.0 ★ on Google. Book via WhatsApp.',
+  alternates: { canonical: '/sports-massage-mumbai' },
   keywords: [
     'sports massage mumbai',
     'gym recovery massage mumbai',
@@ -56,7 +58,7 @@ export default function SportsMassageMumbaiPage() {
               <span className="text-[11px] font-black tracking-[0.3em] uppercase">RECOVERY // MUMBAI</span>
               <div className="w-1.5 h-1.5 rounded-full bg-white/50" />
             </div>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-white mb-2 tracking-tighter leading-[1.05]">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white mb-2 tracking-tighter leading-[1.05]">
               Sports Massage in Mumbai for Gym Recovery, Athletes & Active Lifestyles
             </h1>
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl leading-relaxed font-medium mt-4">
@@ -144,12 +146,18 @@ export default function SportsMassageMumbaiPage() {
                   ))}
                 </ul>
                 <a
-                  href="https://www.practo.com/mumbai/clinic/r3-boot-spoorts-therapy-dadar-east/doctors"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block text-center bg-[#513394] text-white font-black px-8 py-5 rounded-2xl transition-all hover:scale-[1.02] shadow-xl text-lg group-hover:bg-[#603eb0]"
+                  href="tel:+919702368612"
+                  className="block text-center bg-[#513394] text-white font-black px-8 py-5 rounded-2xl transition-all hover:scale-[1.02] shadow-xl text-lg group-hover:bg-[#603eb0] mb-3"
                 >
-                  Book This Service
+                  Call to Book
+                </a>
+                <a
+                  href="https://wa.me/919702368612"
+                  target="_blank"
+                  rel="nofollow noopener noreferrer"
+                  className="block text-center bg-[#25D366] text-white font-black px-8 py-4 rounded-2xl transition-all hover:scale-[1.02] shadow-xl text-base"
+                >
+                  WhatsApp Us
                 </a>
               </div>
             </div>
@@ -163,8 +171,8 @@ export default function SportsMassageMumbaiPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center max-w-7xl mx-auto">
             <div className="relative rounded-[2.5rem] overflow-hidden aspect-[4/5] w-full shadow-2xl">
               <Image
-                src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80"
-                alt="Gym recovery and sports massage Mumbai"
+                src="/images/service/Services_image/Sports Massage_1.webp"
+                alt="Gym recovery and sports massage Mumbai – R3BOOT Dadar"
                 fill
                 className="object-cover"
               />
@@ -250,10 +258,10 @@ export default function SportsMassageMumbaiPage() {
             </div>
             <div className="relative rounded-[2.5rem] overflow-hidden aspect-[4/5] w-full shadow-2xl">
               <Image
-                src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=800&q=80"
-                alt="Sports massage for athletes and runners – R3boot Mumbai"
+                src="/images/service/Services_image/Physiotherapy_1.webp"
+                alt="Sports massage for athletes and runners – R3BOOT Mumbai"
                 fill
-                className="object-cover"
+                className="object-cover object-top"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
               <div className="absolute bottom-8 left-8 right-8">
@@ -370,38 +378,176 @@ export default function SportsMassageMumbaiPage() {
         </div>
       </section>
 
-      {/* ─── MUMBAI LOCAL RELEVANCE (centered like comparison table section) ─── */}
+      {/* ─── COMPARISON TABLE ─── */}
       <section className="py-24 lg:py-32 bg-[#F8F9FA] dark:bg-[#0D0D0D]">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-14">
               <span className="text-[11px] font-black tracking-[0.3em] text-[#513394] dark:text-[#A78BFA] uppercase mb-4 block">
-                MUMBAI //
+                KNOW THE DIFFERENCE //
               </span>
-              <h2 className="text-4xl md:text-6xl font-black text-gray-900 dark:text-white tracking-tight">
-                Sports Recovery Therapy in <span className="text-[#513394] dark:text-[#8B5CF6]">Mumbai</span>
+              <h2 className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white tracking-tight mb-6 leading-tight">
+                Sports Massage vs Deep Tissue vs <span className="text-[#513394] dark:text-[#8B5CF6]">Regular Massage</span>
+              </h2>
+              <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed max-w-3xl mx-auto">
+                Not all massage is the same. Here is how sports massage differs from other types — and why that matters if you train.
+              </p>
+            </div>
+            <div className="overflow-x-auto rounded-[2rem] border border-gray-200 dark:border-white/10 shadow-sm">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="bg-[#513394] text-white">
+                    <th className="text-left px-6 py-5 font-black tracking-wider text-xs uppercase w-[28%]">Feature</th>
+                    <th className="text-left px-6 py-5 font-black tracking-wider text-xs uppercase">
+                      <span className="flex items-center gap-2">
+                        <span className="w-2 h-2 rounded-full bg-white/60 inline-block" />
+                        Sports Massage
+                      </span>
+                    </th>
+                    <th className="text-left px-6 py-5 font-black tracking-wider text-xs uppercase">Deep Tissue</th>
+                    <th className="text-left px-6 py-5 font-black tracking-wider text-xs uppercase">Regular / Relaxation</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-gray-100 dark:divide-white/5">
+                  {[
+                    ['Primary goal', 'Performance & recovery for active bodies', 'Release chronic muscle tension & knots', 'Relaxation & stress relief'],
+                    ['Pressure level', 'Moderate–firm, varies by sport + timing', 'Deep, sustained on specific areas', 'Light–moderate, uniform'],
+                    ['Techniques used', 'Soft tissue release, MFR, cupping, compressions', 'Slow deep strokes, cross-fiber friction', 'Swedish strokes, effleurage, petrissage'],
+                    ['Best timing', 'Pre-event, post-event, maintenance, recovery', 'Chronic injury & desk posture correction', 'Stress, general relaxation'],
+                    ['Who it\'s for', 'Athletes, gym-goers, active professionals', 'Chronic pain, postural issues', 'Anyone seeking relaxation'],
+                    ['At R3BOOT', 'Yes — primary offering', 'Available as needed', 'Not the focus here'],
+                  ].map(([feature, sports, deep, regular], idx) => (
+                    <tr key={idx} className={`${idx % 2 === 0 ? 'bg-white dark:bg-white/3' : 'bg-gray-50 dark:bg-white/[0.02]'} hover:bg-[#513394]/5 dark:hover:bg-[#513394]/10 transition-colors`}>
+                      <td className="px-6 py-5 font-bold text-gray-900 dark:text-white text-sm">{feature}</td>
+                      <td className="px-6 py-5 text-gray-700 dark:text-gray-300 font-medium">{sports}</td>
+                      <td className="px-6 py-5 text-gray-500 dark:text-gray-400">{deep}</td>
+                      <td className="px-6 py-5 text-gray-500 dark:text-gray-400">{regular}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── 4 TYPES OF SPORTS MASSAGE ─── */}
+      <section className="py-24 lg:py-32">
+        <div className="container mx-auto px-6 lg:px-8">
+          <div className="max-w-5xl mx-auto">
+            <div className="mb-14">
+              <span className="text-[11px] font-black tracking-[0.3em] text-[#513394] dark:text-[#A78BFA] uppercase mb-4 block">
+                TYPES OF SPORTS MASSAGE //
+              </span>
+              <h2 className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white tracking-tight mb-6 leading-tight">
+                The 4 Types of <span className="text-[#513394] dark:text-[#8B5CF6]">Sports Massage</span>
+              </h2>
+              <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed max-w-3xl">
+                Sports massage is not one thing. The right approach depends on when you train, where you are in your season, and what your body needs right now.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              {[
+                {
+                  type: 'Pre-Event',
+                  timing: '15–45 min before training or competition',
+                  goal: 'Activate muscles, increase circulation, reduce pre-event tightness. Shorter, lighter strokes that prepare the body — not deep tissue work that creates soreness.',
+                  color: '#513394',
+                },
+                {
+                  type: 'Post-Event',
+                  timing: 'Within 24–48 hours after competition or heavy session',
+                  goal: 'Clear metabolic waste, reduce acute inflammation, ease DOMS. Focuses on muscle groups under the highest load during the event.',
+                  color: '#513394',
+                },
+                {
+                  type: 'Maintenance',
+                  timing: 'Weekly or fortnightly during active training',
+                  goal: 'Address small restrictions before they become injuries. Improves tissue quality and flexibility over time — the most impactful use for regular gym-goers.',
+                  color: '#513394',
+                },
+                {
+                  type: 'Rehabilitation',
+                  timing: 'During injury recovery',
+                  goal: 'Supports healing in muscles, tendons, and soft tissue. Works alongside physiotherapy to restore function, reduce scar tissue adhesion, and rebuild load tolerance.',
+                  color: '#513394',
+                },
+              ].map((item, idx) => (
+                <div key={idx} className="bg-white dark:bg-white/5 p-8 rounded-[2.5rem] border border-gray-100 dark:border-white/5 shadow-sm hover:shadow-xl group transition-all duration-500 relative overflow-hidden">
+                  <div className="absolute -top-4 -right-4 text-8xl font-black text-gray-50 dark:text-white/5 group-hover:text-[#513394]/5 transition-colors">
+                    {idx + 1}
+                  </div>
+                  <div className="relative z-10">
+                    <div className="w-12 h-12 rounded-2xl bg-[#513394]/10 dark:bg-[#8B5CF6]/20 flex items-center justify-center text-[#513394] dark:text-[#A78BFA] font-black mb-4 group-hover:bg-[#513394] dark:group-hover:bg-[#8B5CF6] group-hover:text-white transition-all text-sm">
+                      0{idx + 1}
+                    </div>
+                    <h4 className="text-xl font-black text-gray-900 dark:text-white mb-1">{item.type} Massage</h4>
+                    <p className="text-xs font-bold text-[#513394] dark:text-[#A78BFA] mb-4 tracking-wide uppercase">{item.timing}</p>
+                    <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">{item.goal}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── MUMBAI LOCAL RELEVANCE ─── */}
+      <section className="py-24 lg:py-32 bg-[#F8F9FA] dark:bg-[#0D0D0D]">
+        <div className="container mx-auto px-6 lg:px-8">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-14">
+              <span className="text-[11px] font-black tracking-[0.3em] text-[#513394] dark:text-[#A78BFA] uppercase mb-4 block">
+                DADAR, MUMBAI //
+              </span>
+              <h2 className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white tracking-tight mb-6 leading-tight">
+                Sports Massage Clinic in <span className="text-[#513394] dark:text-[#8B5CF6]">Central Mumbai</span>
               </h2>
             </div>
             <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed text-center mb-8">
-              Mumbai has a growing community of runners, athletes, and fitness enthusiasts. From gym training and
-              CrossFit to marathon running and cycling, many people push their bodies regularly.
-              Sports massage provides an important recovery tool for individuals who want to:
+              R3BOOT is located in Dadar East — central Mumbai, 5 minutes from Dadar railway station and close to Shivaji Park. Runners doing morning loops at Shivaji Park, gym-goers from Dadar, Matunga, Parel, and Worli, and athletes training at Oval Maidan or BKC all reach us in under 20 minutes.
             </p>
-            <div className="flex flex-wrap justify-center gap-3 mb-10">
-              {['train consistently', 'reduce injury risk', 'maintain muscle flexibility', 'recover faster after workouts'].map(
-                (item, idx) => (
+            <div className="flex flex-wrap justify-center gap-3 mb-12">
+              {['Dadar East', 'Dadar West', 'Matunga', 'Sion', 'Parel', 'Lower Parel', 'Worli', 'Shivaji Park', 'Bandra', 'Wadala'].map(
+                (area, idx) => (
                   <span
                     key={idx}
                     className="bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 text-gray-700 dark:text-gray-300 font-bold px-5 py-3 rounded-2xl text-sm"
                   >
-                    {item}
+                    {area}
                   </span>
                 )
               )}
             </div>
-            <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed text-center">
-              At R3boot in Dadar, sports massage therapy is designed specifically for active individuals and athletes across Mumbai.
-            </p>
+            <div className="bg-[#1A1A1A] rounded-[2rem] p-8 lg:p-10 text-white">
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div>
+                  <p className="text-xs font-black tracking-[0.25em] text-white/40 uppercase mb-3">ADDRESS</p>
+                  <p className="text-white font-bold leading-relaxed">
+                    Palai Plaza, 203<br />
+                    Swami Gyan Jivandas Marg<br />
+                    Dadar East, Mumbai – 400 014
+                  </p>
+                </div>
+                <div>
+                  <p className="text-xs font-black tracking-[0.25em] text-white/40 uppercase mb-3">HOURS</p>
+                  <p className="text-white font-bold leading-relaxed">
+                    Monday – Saturday<br />
+                    7:00 AM – 8:00 PM<br />
+                    Sunday by appointment
+                  </p>
+                </div>
+                <div className="flex flex-col gap-3">
+                  <p className="text-xs font-black tracking-[0.25em] text-white/40 uppercase mb-1">BOOK</p>
+                  <a href="tel:+919702368612" className="block text-center bg-[#513394] text-white font-black px-6 py-4 rounded-xl hover:opacity-90 transition-all text-sm">
+                    Call +91 97023 68612
+                  </a>
+                  <a href="https://wa.me/919702368612" target="_blank" rel="nofollow noopener noreferrer" className="block text-center bg-[#25D366] text-white font-black px-6 py-4 rounded-xl hover:opacity-90 transition-all text-sm">
+                    WhatsApp Us
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -423,17 +569,17 @@ export default function SportsMassageMumbaiPage() {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
               <a
-                href="https://www.practo.com/mumbai/clinic/r3-boot-spoorts-therapy-dadar-east/doctors"
+                href="tel:+919702368612"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto bg-white text-[#513394] font-black px-10 py-5 rounded-full transition-all hover:scale-105 shadow-2xl text-lg tracking-wide"
               >
-                Book Your Session
+                Call to Book
               </a>
               <a
                 href="https://wa.me/919702368612"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="nofollow noopener noreferrer"
                 className="w-full sm:w-auto border-2 border-white/30 text-white font-bold px-10 py-5 rounded-full transition-all hover:bg-white/10 text-lg tracking-wide"
               >
                 WhatsApp Us
@@ -499,9 +645,13 @@ export default function SportsMassageMumbaiPage() {
       <ServiceSchema
         serviceName="Sports Massage in Mumbai"
         description="Sports massage in Mumbai at R3boot helps reduce muscle tension, improve recovery, and prevent sports injuries. Located in Dadar, we combine sports massage with cupping therapy and mobility work for faster recovery."
-        serviceUrl="https://r3boot.in/sports-massage-mumbai"
+        serviceUrl="https://www.r3boot.in/sports-massage-mumbai"
       />
       <FAQSchema faqs={sportsMassageMumbaiFaqs} />
+      <BreadcrumbSchema items={[
+        { name: 'Home', url: '/' },
+        { name: 'Sports Massage Mumbai', url: '/sports-massage-mumbai' },
+      ]} />
     </main>
   )
 }

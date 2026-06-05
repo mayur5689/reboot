@@ -1,0 +1,616 @@
+{
+  "_id": "drafts.ipl-cricket-elbow-shoulder-pain-recovery",
+  "_type": "post",
+  "title": "IPL Season Injuries: Cricket Elbow and Shoulder Pain — What Helps",
+  "slug": {
+    "_type": "slug",
+    "current": "ipl-cricket-elbow-shoulder-pain-recovery"
+  },
+  "metaDescription": "IPL season shoulder and elbow pain — thrower's elbow, rotator cuff load, when to rest vs treat. Physio guide for cricketers in Mumbai from R3BOOT Dadar.",
+  "excerpt": "IPL season pushes bowling and throwing volume fast. Here is how cricket elbow and shoulder pain differ, what a week of overload feels like, and when physio beats pushing through.",
+  "author": {
+    "_type": "reference",
+    "_ref": "9e2dceac-e211-479e-a626-6ac189b0ec19"
+  },
+  "categories": [
+    {
+      "_type": "reference",
+      "_ref": "363aaf3d-a61c-4184-9c5b-40a4531eb7a7"
+    },
+    {
+      "_type": "reference",
+      "_ref": "e6247743-ad0d-4c08-a2f0-1de463aec6f7"
+    }
+  ],
+  "publishedAt": "2026-05-19T13:00:00.000Z",
+  "body": [
+    {
+      "_type": "block",
+      "_key": "t72qa63djg",
+      "style": "normal",
+      "children": [
+        {
+          "_type": "span",
+          "_key": "2s2cp03otkv",
+          "text": "May means IPL noise, club nets filling up, and shoulder/elbow complaints rising in our Dadar clinic. Cricket elbow and shoulder pain are not the same problem — but they often show up together when throwing volume jumps faster than tissue adapts.",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "4dy8rojvbna",
+      "style": "h2",
+      "children": [
+        {
+          "_type": "span",
+          "_key": "qw24x12551",
+          "text": "Cricket elbow — what it actually is",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "i5na2vcf48",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s78zoqh05z",
+          "text": "Medial (inside) elbow pain → thrower's elbow; common in bowlers with wrist-heavy actions",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "wa7us547r3",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "children": [
+        {
+          "_type": "span",
+          "_key": "a46ltjxecht",
+          "text": "Lateral (outside) elbow pain → back-hand fielding, tennis-elbow pattern from forearm overload",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "52jdbqmu8md",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "children": [
+        {
+          "_type": "span",
+          "_key": "exf260t5hfl",
+          "text": "Gradual onset over 1–2 weeks beats single-match trauma — overload, not one bad delivery",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "qxz10xncqeb",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "children": [
+        {
+          "_type": "span",
+          "_key": "qacyt3wpf5a",
+          "text": "Grip weakness and pain on wrist extension/flexion are typical signs",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "4dg7eedsxdf",
+      "style": "h2",
+      "children": [
+        {
+          "_type": "span",
+          "_key": "w8hpp6g7vr",
+          "text": "Shoulder pain in cricketers — common patterns",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "xsd7t18dg3i",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "children": [
+        {
+          "_type": "span",
+          "_key": "ntoorb0pgm",
+          "text": "Rotator cuff tendinopathy — deep shoulder ache after throwing, worse overhead",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "zmjdg8euuzs",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "children": [
+        {
+          "_type": "span",
+          "_key": "csuhufcfec",
+          "text": "Scapular dyskinesis — shoulder blade does not move cleanly; often missed on rest-only plans",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "010sf993jrpb",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "children": [
+        {
+          "_type": "span",
+          "_key": "ez7hm4g442f",
+          "text": "AC joint irritation — top-of-shoulder pain from diving or direct impact",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "st3khjieqle",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "children": [
+        {
+          "_type": "span",
+          "_key": "o7bfu5zu45b",
+          "text": "Labral irritation — catching sensation with certain arm angles; needs physio + imaging if persistent",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "4yybau9aaln",
+      "style": "h2",
+      "children": [
+        {
+          "_type": "span",
+          "_key": "36esj32c4p6",
+          "text": "IPL season load trap",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "tg4yxmu816",
+      "style": "normal",
+      "children": [
+        {
+          "_type": "span",
+          "_key": "g2m8fr9g58p",
+          "text": "Club players often add net sessions while watching pros on TV — volume doubles without a planned deload. Tissue adaptation lags about 2–3 weeks behind what you feel capable of doing. That gap is where elbow and shoulder niggles start.",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "e3o3twte2bb",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "children": [
+        {
+          "_type": "span",
+          "_key": "8a0wv9wpmr",
+          "text": "Track throws per week like you track overs — sudden 30% jumps are risky",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "4u9iekaredd",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "children": [
+        {
+          "_type": "span",
+          "_key": "ojai2ppmi07",
+          "text": "One full rest day between high-volume throwing days minimum in peak season",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "xujjocdysbi",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "children": [
+        {
+          "_type": "span",
+          "_key": "bavtd4zdaq",
+          "text": "Warm-up: band work for external rotation before first throw, not after pain starts",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "66ks9zfznca",
+      "style": "h2",
+      "children": [
+        {
+          "_type": "span",
+          "_key": "v9kozevgbm9",
+          "text": "What helps — technique-specific",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "y2ilnnj9kn",
+      "style": "h3",
+      "children": [
+        {
+          "_type": "span",
+          "_key": "rnngeryws4l",
+          "text": "First 48 hours (acute flare)",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "atoqifouiyw",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "children": [
+        {
+          "_type": "span",
+          "_key": "3iinny4nsqi",
+          "text": "Stop throwing — complete rest from aggravating movement",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "qkasmrvc3rb",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "children": [
+        {
+          "_type": "span",
+          "_key": "djhoqeau94s",
+          "text": "Ice 10 min × 2–3/day on painful site",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "44nh1gdqi8s",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "children": [
+        {
+          "_type": "span",
+          "_key": "td0mt3s0n7h",
+          "text": "Compression sleeve if swollen; avoid deep massage on hot tissue",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "2y3gc2ip84a",
+      "style": "h3",
+      "children": [
+        {
+          "_type": "span",
+          "_key": "iwei81u78c8",
+          "text": "Days 3–14 (sub-acute)",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "9ixafcdf5g4",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "children": [
+        {
+          "_type": "span",
+          "_key": "li389rdtxzp",
+          "text": "Physio assessment: action video if bowler, scapular screen if fielder",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "okwfryv488p",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "children": [
+        {
+          "_type": "span",
+          "_key": "ktywz8m9bli",
+          "text": "Eccentric wrist/forearm loading for elbow — graded, not maximal",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "mqmpxraw61",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "children": [
+        {
+          "_type": "span",
+          "_key": "2ytrz733sgb",
+          "text": "Rotator cuff isometrics → band external rotation progressions for shoulder",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "fs8gyj6setn",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "children": [
+        {
+          "_type": "span",
+          "_key": "9c2u346tgiq",
+          "text": "Sports massage on forearm flexors/extensors and posterior shoulder — not bone-on-bone pressure",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "gel6xona0sr",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "children": [
+        {
+          "_type": "span",
+          "_key": "gdq7h2nif4e",
+          "text": "Dry needling for stubborn trigger points when assessment clears it",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "8hzc8406a22",
+      "style": "h3",
+      "children": [
+        {
+          "_type": "span",
+          "_key": "lihgt0eofce",
+          "text": "Return to throw protocol",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "t9acplytnto",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "children": [
+        {
+          "_type": "span",
+          "_key": "qfur0jn5xzq",
+          "text": "Pain-free daily tasks first — reach, lift cup, sleep without night pain",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "mcz68wzjlr",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "children": [
+        {
+          "_type": "span",
+          "_key": "xwx90tqf1g",
+          "text": "Week 1 return: 50% throw distance, 30% volume",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "e65gpmlyc4",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "children": [
+        {
+          "_type": "span",
+          "_key": "82xkzzl2vp8",
+          "text": "Week 2: progress distance; monitor next-morning stiffness",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "ilfcw18ctxs",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "children": [
+        {
+          "_type": "span",
+          "_key": "syk6ff6rr8s",
+          "text": "Full intensity only when 24 hr pain-free after previous session",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "up9arp73g1c",
+      "style": "normal",
+      "children": [
+        {
+          "_type": "span",
+          "_key": "r5m7bexow4d",
+          "text": "Sports injury physio in Dadar: ",
+          "marks": []
+        },
+        {
+          "_type": "span",
+          "_key": "kvx3xq72kpa",
+          "text": "sports injury physiotherapy",
+          "marks": [
+            "h43x2puq4sk"
+          ]
+        },
+        {
+          "_type": "span",
+          "_key": "231jo4xbs7w",
+          "text": ". Targeted soft tissue work: ",
+          "marks": []
+        },
+        {
+          "_type": "span",
+          "_key": "1zc9inl3306",
+          "text": "sports massage Mumbai",
+          "marks": [
+            "6uw4mfd9mqa"
+          ]
+        },
+        {
+          "_type": "span",
+          "_key": "8jbhthq31bh",
+          "text": ".",
+          "marks": []
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "h43x2puq4sk",
+          "_type": "link",
+          "href": "https://www.r3boot.in/sports-injury-physiotherapy-dadar-mumbai"
+        },
+        {
+          "_key": "6uw4mfd9mqa",
+          "_type": "link",
+          "href": "https://www.r3boot.in/sports-massage-mumbai"
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "k71qapo1r6",
+      "style": "normal",
+      "children": [
+        {
+          "_type": "span",
+          "_key": "kzalq4v9chn",
+          "text": "Diyan Kubadia is co-founder at R3BOOT and a competitive cricketer. Last updated May 2026 — IPL season.",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    }
+  ],
+  "faqs": [
+    {
+      "_key": "ujjbh7ad35k",
+      "question": "What is cricket elbow?",
+      "answer": "Usually medial epicondylitis (thrower's elbow) or lateral epicondylitis from repetitive wrist flick and forearm load — common in bowlers and fielders. Pain on inside or outside of elbow, worse after throwing volume spikes."
+    },
+    {
+      "_key": "8efvu6b3qp8",
+      "question": "Should I bowl through shoulder pain during club season?",
+      "answer": "Not if pain is sharp, changes your action, or lingers past 48 hours. Dull muscle soreness differs from rotator cuff or labral irritation. Reduce throwing volume and get assessed — stress fractures and cuff tears worsen with repetition."
+    },
+    {
+      "_key": "49go4a17jmz",
+      "question": "Does ice or heat help cricket elbow?",
+      "answer": "Acute flare (first 48 hr): ice 10 min. Sub-acute tightness: heat before mobility work. Contrast therapy helps when you are past the acute phase and returning to training — not during active swelling."
+    },
+    {
+      "_key": "la1dogsj68b",
+      "question": "Can dry needling help cricket shoulder pain?",
+      "answer": "For chronic trigger points in rotator cuff and scapular stabilisers, dry needling plus graded loading often works faster than rest alone. Assessment first — needling into an acute tear is wrong."
+    },
+    {
+      "_key": "nc1jy7a5jxf",
+      "question": "Where can cricketers get physio in Mumbai during IPL season?",
+      "answer": "R3BOOT Dadar runs sports injury physiotherapy with throwing and bowling load management. Co-founder Diyan Kubadia comes from competitive cricket — we understand season timing. Book: +91 97023 68612."
+    }
+  ]
+}

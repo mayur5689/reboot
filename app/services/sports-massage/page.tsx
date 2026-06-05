@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     title: 'Sports Massage in Mumbai | R3BOOT Dadar',
     description: 'Clinical sports massage in Mumbai by certified specialists. Serving athletes in Dadar, Andheri, Thane & Bandra. Book at R3BOOT Recovery Center.',
     keywords: ['sports massage mumbai', 'sports massage dadar', 'deep tissue sports massage mumbai', 'sports massage therapist mumbai', 'sports recovery massage', 'sports massage near me mumbai'],
+    alternates: { canonical: '/services/sports-massage' },
 }
 
 const otherServices = services.filter(s => s.slug !== 'sports-massage').slice(0, 4)
@@ -141,12 +142,12 @@ export default function SportsMassagePage() {
                                     ))}
                                 </ul>
                                 <a
-                                    href="https://www.practo.com/mumbai/clinic/r3-boot-spoorts-therapy-dadar-east/doctors"
+                                    href="tel:+919702368612"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="block text-center bg-[#513394] text-white font-black px-8 py-5 rounded-2xl transition-all hover:scale-[1.02] shadow-xl text-lg group-hover:bg-[#603eb0]"
                                 >
-                                    Book This Service
+                                    Call to Book
                                 </a>
                             </div>
                         </div>
@@ -449,17 +450,17 @@ export default function SportsMassagePage() {
                         </p>
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
                             <a
-                                href="https://www.practo.com/mumbai/clinic/r3-boot-spoorts-therapy-dadar-east/doctors"
+                                href="tel:+919702368612"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="w-full sm:w-auto bg-white text-[#513394] font-black px-10 py-5 rounded-full transition-all hover:scale-105 shadow-2xl text-lg tracking-wide"
                             >
-                                Book Your Session
+                                Call to Book
                             </a>
                             <a
                                 href="https://wa.me/919702368612"
                                 target="_blank"
-                                rel="noopener noreferrer"
+                                rel="nofollow noopener noreferrer"
                                 className="w-full sm:w-auto border-2 border-white/30 text-white font-bold px-10 py-5 rounded-full transition-all hover:bg-white/10 text-lg tracking-wide"
                             >
                                 WhatsApp Us
@@ -520,6 +521,25 @@ export default function SportsMassagePage() {
                                 </div>
                             </Link>
                         ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* From Our Blog + Related Guides */}
+            <section className="py-16 bg-white dark:bg-[#0A0A0A]">
+                <div className="container mx-auto px-6 lg:px-8 max-w-4xl">
+                    <h2 className="text-2xl font-black text-gray-900 dark:text-white mb-8">From Our Blog</h2>
+                    <div className="flex flex-wrap gap-6">
+                        <Link href="/blog/sports-massage-before-after-marathon" className="group p-6 bg-gray-50 dark:bg-white/5 rounded-[2rem] border border-gray-100 dark:border-white/10 hover:border-[#513394]/40 transition-all flex-1 min-w-[240px] max-w-md">
+                            <p className="text-xs font-black tracking-widest text-[#513394] uppercase mb-2">Sports Massage</p>
+                            <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-[#513394] transition-colors">Sports Massage Before & After a Marathon</h3>
+                            <span className="text-sm text-gray-500 dark:text-gray-400 mt-2 inline-block">Read article →</span>
+                        </Link>
+                        <Link href="/sports-massage-runners-mumbai" className="group p-6 bg-gray-50 dark:bg-white/5 rounded-[2rem] border border-gray-100 dark:border-white/10 hover:border-[#513394]/40 transition-all flex-1 min-w-[240px] max-w-md">
+                            <p className="text-xs font-black tracking-widest text-[#513394] uppercase mb-2">Runner's Guide</p>
+                            <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-[#513394] transition-colors">Sports Massage for Runners in Mumbai</h3>
+                            <span className="text-sm text-gray-500 dark:text-gray-400 mt-2 inline-block">See specialist page →</span>
+                        </Link>
                     </div>
                 </div>
             </section>

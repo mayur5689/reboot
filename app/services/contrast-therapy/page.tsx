@@ -3,11 +3,15 @@ import Link from 'next/link'
 import { Metadata } from 'next'
 import { services } from '@/lib/services'
 import ServiceSchema from '@/components/schema/ServiceSchema'
+import FAQSchema from '@/components/schema/FAQSchema'
+import { FAQSection } from '@/components/faq-section'
+import { contrastTherapyMumbaiFaqs } from '@/lib/faqs/contrast-therapy-mumbai'
 
 export const metadata: Metadata = {
     title: 'Contrast Therapy in Mumbai | R3BOOT Dadar – Sauna & Ice Bath',
     description: 'Contrast therapy at R3BOOT: alternating Red Light Sauna and Ice Bath for recovery, circulation, and stress resilience. Dadar, Mumbai.',
     keywords: ['contrast therapy mumbai', 'ice bath mumbai', 'sauna mumbai', 'cold plunge mumbai', 'recovery therapy dadar', 'contrast therapy near me'],
+    alternates: { canonical: '/contrast-therapy-mumbai' },
 }
 
 const otherServices = services.filter(s => s.slug !== 'contrast-therapy').slice(0, 4)
@@ -146,12 +150,12 @@ export default function ContrastTherapyPage() {
                                     ))}
                                 </ul>
                                 <a
-                                    href="https://www.practo.com/mumbai/clinic/r3-boot-spoorts-therapy-dadar-east/doctors"
+                                    href="tel:+919702368612"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="block text-center bg-[#513394] text-white font-black px-8 py-5 rounded-2xl transition-all hover:scale-[1.02] shadow-xl text-lg group-hover:bg-[#603eb0]"
                                 >
-                                    Book This Service
+                                    Call to Book
                                 </a>
                                 <p className="text-center text-white/30 text-xs mt-6 font-bold tracking-widest">
                                     AVAILABLE 7 DAYS A WEEK
@@ -241,29 +245,29 @@ export default function ContrastTherapyPage() {
                                 HEAT THERAPY //
                             </span>
                             <h2 className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white tracking-tight mb-4 leading-tight">
-                                Benefits of <span className="text-[#513394] dark:text-[#8B5CF6]">Infrared Sauna</span>
+                                Benefits of <span className="text-[#513394] dark:text-[#8B5CF6]">Red Light Sauna</span>
                             </h2>
                             <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed mb-10">
-                                Beyond the immediate sense of relaxation, saunas offer a wide range of benefits for physical and mental health. From detoxification to improved cardiovascular health, sauna is an essential component of contrast therapy when paired with cold plunges.
+                                Our red light sauna pairs gentle infrared warmth with red and near-infrared light—so you get more than generic “hot room” heat. The light reaches tissue in ways heat alone does not, while warmth still drives circulation, relaxation, and sweat. Together with cold plunges, it completes the contrast therapy loop.
                             </p>
 
                             <div className="space-y-6">
                                 {[
                                     {
-                                        title: "Detoxification Through Sweating",
-                                        body: "Sweating is your body's natural way of expelling toxins. The intense heat of a sauna ramps up this process."
+                                        title: "Red & Near-Infrared Beyond Surface Heat",
+                                        body: "Red light saunas add targeted wavelengths on top of infrared warmth. That light is chosen to reach skin and soft tissue—not just warm the air—so each session combines photonic exposure with the sauna heat you already expect from contrast therapy."
+                                    },
+                                    {
+                                        title: "Dual Stimulus for Contrast Protocols",
+                                        body: "In one visit you stack manageable heat stress with red and near-infrared light. Many people use that combination around training or cold plunges: warmth for vessels and muscle ease, plus light for tissue that rarely gets consistent daily exposure."
                                     },
                                     {
                                         title: "Muscle Relaxation and Pain Relief",
-                                        body: "Heat penetrates deep into muscles and joints, helping to relax tight muscles and soothe aches and pains, alleviating stiffness and soreness."
+                                        body: "Heat still penetrates deep into muscles and joints, helping to relax tight muscles and soothe aches and pains, alleviating stiffness and soreness."
                                     },
                                     {
                                         title: "Improved Cardiovascular Health",
                                         body: "In the sauna, heart rate increases and blood vessels dilate, mimicking some effects of moderate exercise. This mild cardiovascular workout can improve heart health over time."
-                                    },
-                                    {
-                                        title: "Boosted Immune System",
-                                        body: "Elevated heat exposure raises core temperature, mimicking a mild fever. This helps stimulate white blood cell production, strengthening your immune response and ability to fight off illness and infection."
                                     },
                                 ].map((tech, idx) => (
                                     <div key={idx} className="flex gap-5 group">
@@ -411,6 +415,24 @@ export default function ContrastTherapyPage() {
                 </div>
             </section>
 
+            {/* Related Guide — internal link to contrast therapy SEO landing page */}
+            <section className="py-12 bg-white dark:bg-[#0A0A0A]">
+                <div className="container mx-auto px-6 lg:px-8 max-w-4xl">
+                    <Link href="/contrast-therapy-mumbai" className="group flex items-center justify-between p-6 bg-gray-50 dark:bg-white/5 rounded-[2rem] border border-gray-100 dark:border-white/10 hover:border-[#513394]/40 transition-all">
+                        <div>
+                            <p className="text-xs font-black tracking-widest text-[#513394] uppercase mb-1">Local Guide</p>
+                            <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-[#513394] transition-colors">Contrast Therapy in Mumbai — Complete Guide</h3>
+                            <span className="text-sm text-gray-500 dark:text-gray-400 mt-1 inline-block">Pricing, benefits, and what to expect →</span>
+                        </div>
+                        <svg className="w-6 h-6 text-[#513394] opacity-0 group-hover:opacity-100 transition-opacity shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                            <path d="M9 18l6-6-6-6" />
+                        </svg>
+                    </Link>
+                </div>
+            </section>
+
+            <FAQSection faqs={contrastTherapyMumbaiFaqs} />
+            <FAQSchema faqs={contrastTherapyMumbaiFaqs} />
             <ServiceSchema
                 serviceName="Contrast Therapy"
                 description="Alternating Red Light Sauna and Ice Bath for optimal recovery, circulation, and stress resilience at R3BOOT Dadar, Mumbai."

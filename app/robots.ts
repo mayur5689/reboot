@@ -6,8 +6,13 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/_next/', '/api/', '/studio/'],
+        disallow: ['/api/', '/studio/'],
       },
+      { userAgent: 'GPTBot', allow: '/' },
+      { userAgent: 'OAI-SearchBot', allow: '/' },
+      { userAgent: 'ClaudeBot', allow: '/' },
+      { userAgent: 'PerplexityBot', allow: '/' },
+      { userAgent: 'Bytespider', allow: '/' },
     ],
     sitemap: 'https://www.r3boot.in/sitemap.xml',
   }

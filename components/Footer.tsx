@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
 
 
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
-        <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 mb-20">
+        <div className="flex flex-col lg:flex-row gap-8 sm:gap-12 lg:gap-20 mb-12 sm:mb-16 lg:mb-20">
           {/* Left Column: Brand & Contact */}
           <div className="lg:w-1/4 space-y-8">
             <Link href="/" className="inline-block group">
@@ -35,7 +35,7 @@ const Footer: React.FC = () => {
             </Link>
 
             <div className="space-y-4 pt-4">
-              <h4 className="text-sm font-bold uppercase tracking-widest text-[#A78BFA]">Contact Information</h4>
+              <h3 className="text-sm font-bold uppercase tracking-widest text-[#A78BFA]">Contact Information</h3>
               <div className="text-white/80 text-base space-y-2 font-medium">
                 <p>Palai Plaza, 203, Swami Gyan Jivandas Marg</p>
                 <p>Dadar East, Mumbai - 400 014</p>
@@ -52,22 +52,27 @@ const Footer: React.FC = () => {
             {/* Column 1: Services 1 */}
             <div className="space-y-4 md:border-l border-white/20 md:pl-8">
               <ul className="space-y-3 text-[13px] md:text-base font-semibold text-white/90">
-                <li><Link href="/services/hydrotherapy" className="hover:text-[#A78BFA] transition-colors">Ice Bath Recovery</Link></li>
-                <li><Link href="/services/sports-massage" className="hover:text-[#A78BFA] transition-colors">Compression Therapy</Link></li>
-                <li><Link href="/services/contrast-therapy" className="hover:text-[#A78BFA] transition-colors">Red Light Therapy</Link></li>
+                <li><Link href="/contrast-therapy-mumbai" className="hover:text-[#A78BFA] transition-colors">Contrast Therapy Mumbai</Link></li>
+                <li><Link href="/ice-bath-mumbai" className="hover:text-[#A78BFA] transition-colors">Ice Bath Mumbai</Link></li>
+                <li><Link href="/cold-plunge-mumbai" className="hover:text-[#A78BFA] transition-colors">Cold Plunge Mumbai</Link></li>
+                <li><Link href="/services/aqua-therapy" className="hover:text-[#A78BFA] transition-colors">Aqua Therapy</Link></li>
                 <li><Link href="/services/sports-massage" className="hover:text-[#A78BFA] transition-colors">Percussive Therapy</Link></li>
                 <li><Link href="/services/clinical-pilates" className="hover:text-[#A78BFA] transition-colors">Clinical Pilates</Link></li>
-                <li><Link href="/services/hydrotherapy" className="hover:text-[#A78BFA] transition-colors">Hydrotherapy</Link></li>
+                <li><Link href="/physiotherapy-dadar-mumbai" className="hover:text-[#A78BFA] transition-colors">Physiotherapy Dadar</Link></li>
               </ul>
             </div>
 
             {/* Column 2: Services 2 */}
             <div className="space-y-4 md:border-l border-white/20 md:pl-8">
               <ul className="space-y-3 text-[13px] md:text-base font-semibold text-white/90">
-                <li><Link href="/services/contrast-therapy" className="hover:text-[#A78BFA] transition-colors">Infrared Sauna</Link></li>
-                <li><Link href="/services/sports-massage" className="hover:text-[#A78BFA] transition-colors">Sport Massage</Link></li>
-                <li><Link href="/services/physiotherapy" className="hover:text-[#A78BFA] transition-colors">Physiotherapy</Link></li>
-                <li><Link href="/services/contrast-therapy" className="hover:text-[#A78BFA] transition-colors">Cryotherapy</Link></li>
+                <li><Link href="/infrared-sauna-mumbai" className="hover:text-[#A78BFA] transition-colors">Infrared Sauna Mumbai</Link></li>
+                <li><Link href="/sports-massage-mumbai" className="hover:text-[#A78BFA] transition-colors">Sports Massage Mumbai</Link></li>
+                <li><Link href="/physiotherapy-dadar-mumbai" className="hover:text-[#A78BFA] transition-colors">Physiotherapy Dadar Mumbai</Link></li>
+                <li><Link href="/contrast-therapy-dadar" className="hover:text-[#A78BFA] transition-colors">Contrast Therapy Dadar</Link></li>
+                <li><Link href="/contrast-therapy-bandra" className="hover:text-[#A78BFA] transition-colors">Contrast Therapy Bandra</Link></li>
+                <li><Link href="/contrast-therapy-lower-parel" className="hover:text-[#A78BFA] transition-colors">Contrast Therapy Lower Parel</Link></li>
+                <li><Link href="/contrast-therapy-andheri" className="hover:text-[#A78BFA] transition-colors">Contrast Therapy Andheri</Link></li>
+                <li><Link href="/contrast-therapy-worli" className="hover:text-[#A78BFA] transition-colors">Contrast Therapy Worli</Link></li>
                 <li><Link href="/services/sports-psychology" className="hover:text-[#A78BFA] transition-colors">Sports Psychology</Link></li>
                 <li><Link href="/services/counselling-mental-training" className="hover:text-[#A78BFA] transition-colors">Counselling & Mental Training</Link></li>
               </ul>
@@ -104,14 +109,14 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6 text-[12px] text-white/40 uppercase tracking-[0.25em] font-bold">
+        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6 text-[12px] text-white/60 uppercase tracking-[0.25em] font-bold">
           <p>© 2025 R3BOOT. All rights reserved.</p>
           <div className="flex gap-12">
             <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
             <Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
           </div>
           <p className="flex items-center gap-2">
-            Designed & Managed by valmiki media
+            Designed and managed by Valmiki Media
           </p>
         </div>
       </div>

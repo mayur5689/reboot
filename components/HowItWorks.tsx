@@ -33,8 +33,8 @@ const steps = [
 
 export default function HowItWorks() {
     return (
-        <section id="how-it-works" className="py-16 bg-white dark:bg-[#0A0A0A] transition-colors duration-500">
-            <div className="container mx-auto px-6 lg:px-12">
+        <section id="how-it-works" className="py-10 sm:py-12 lg:py-16 bg-white dark:bg-[#0A0A0A] transition-colors duration-500">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-12">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
 
                     {/* Left Column: Heading & Large Image */}
@@ -43,7 +43,7 @@ export default function HowItWorks() {
                             <span className="text-[#513394] dark:text-[#A78BFA] text-xs font-bold tracking-[0.2em] uppercase mb-3 block">
                                 How it works
                             </span>
-                            <h2 className="text-4xl md:text-6xl font-black text-[#1A1A1A] dark:text-white tracking-tight leading-[1] mb-6">
+                            <h2 className="text-3xl sm:text-4xl md:text-6xl font-black text-[#1A1A1A] dark:text-white tracking-tight leading-[1] mb-6">
                                 Your path to <br />
                                 <span className="text-[#513394] dark:text-[#A78BFA]">lasting results</span>
                             </h2>
@@ -52,12 +52,12 @@ export default function HowItWorks() {
                             </p>
 
                             <a
-                                href="https://www.practo.com/mumbai/clinic/r3-boot-spoorts-therapy-dadar-east/doctors"
+                                href="tel:+919702368612"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center gap-4 bg-[#513394] text-white px-8 py-3.5 rounded-xl font-bold group hover:bg-[#412975] transition-all shadow-lg shadow-[#513394]/20"
                             >
-                                Book Your Free Call
+                                Call to Book
                                 <div className="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors">
                                     <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7-7 7" />
@@ -72,6 +72,7 @@ export default function HowItWorks() {
                                 src="/images/5.jpg"
                                 alt="Athlete Recovery"
                                 fill
+                                sizes="(max-width: 1024px) 100vw, 50vw"
                                 className="object-cover"
                             />
                             {/* Subtle overlay */}
@@ -84,9 +85,9 @@ export default function HowItWorks() {
                         {steps.map((step, index) => (
                             <div
                                 key={index}
-                                className="group flex flex-col gap-1 border-l-2 border-gray-100 dark:border-white/5 pl-6 hover:border-[#513394] dark:hover:border-[#A78BFA] transition-colors duration-500"
+                                className={`group flex flex-col gap-1 border-l-2 border-gray-100 dark:border-white/5 pl-6 hover:border-[#513394] dark:hover:border-[#A78BFA] transition-colors duration-500${index >= 3 ? ' hidden lg:flex' : ''}`}
                             >
-                                <span className="text-gray-400 dark:text-gray-600 text-base font-bold">
+                                <span aria-hidden="true" className="text-gray-400 dark:text-gray-600 text-base font-bold">
                                     {step.number}
                                 </span>
                                 <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white group-hover:text-[#513394] dark:group-hover:text-[#A78BFA] transition-colors duration-300">

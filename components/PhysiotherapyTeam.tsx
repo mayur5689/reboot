@@ -5,10 +5,10 @@ import { motion } from "framer-motion";
 
 const teamMembers = [
     {
-        name: "Dr. Nirmal Solanki",
-        role: "Physiotherapist & Manual Therapy Specialist",
-        image: "/images/trainer2/Trainers/Dr. Nirmal Solanki.webp",
-        bio: "Over two decades of clinical experience in sports physiotherapy and manual therapy. Internationally trained in advanced osteopathic techniques, his approach prioritises sustainable, long-term outcomes over short-term symptom suppression. His manual therapy expertise addresses complex musculoskeletal presentations that respond poorly to exercise-only approaches."
+        name: "Dr. Hiral Parikh",
+        role: "Lead Physiotherapist",
+        image: "/images/trainer2/Trainers/HIRAL.webp",
+        bio: "Bachelor of Physiotherapy graduate from Pad. Dr. D.Y. Patil College of Physiotherapy, Navi Mumbai, with over 15 years of clinical experience. At R3BOOT, she leads physiotherapy services with focused expertise in sports rehabilitation and post-surgical recovery, helping athletes return to performance and patients rebuild function with structured, evidence-based protocols. Her approach is precise, patient-centred, and built on the belief that recovery done right the first time saves years of recurring injury."
     },
     {
         name: "Dr. Vaishali Vijay Rauniyar",
@@ -20,13 +20,13 @@ const teamMembers = [
 
 export default function PhysiotherapyTeam() {
     return (
-        <section className="py-24 lg:py-32 bg-white dark:bg-[#0A0A0A]">
-            <div className="container mx-auto px-6 lg:px-8">
-                <div className="text-center mb-20 max-w-2xl mx-auto">
+        <section className="py-10 sm:py-14 lg:py-24 xl:py-32 bg-white dark:bg-[#0A0A0A]">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="text-center mb-10 sm:mb-14 lg:mb-20 max-w-2xl mx-auto">
                     <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#513394]/10 text-[#513394] dark:text-[#A78BFA] font-semibold text-xs tracking-widest uppercase mb-6">
                         Professional Team
                     </div>
-                    <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white leading-tight">
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white leading-tight">
                         Meet the specialists behind{" "}
                         <span className="text-[#513394] dark:text-[#A78BFA]">your recovery.</span>
                     </h2>
@@ -49,7 +49,7 @@ export default function PhysiotherapyTeam() {
                                     fill
                                     className="object-cover transition-transform duration-700 group-hover:scale-110"
                                 />
-                                <div className="absolute inset-0 bg-[#513394]/90 opacity-0 group-hover:opacity-100 transition-all duration-500 backdrop-blur-sm p-8 flex flex-col justify-center text-white">
+                                <div className="absolute inset-0 bg-[#513394]/90 opacity-0 group-hover:opacity-100 transition-all duration-500 backdrop-blur-sm p-5 sm:p-6 md:p-8 flex flex-col justify-center text-white">
                                     <p className="text-white/90 text-sm leading-relaxed">
                                         {member.bio}
                                     </p>

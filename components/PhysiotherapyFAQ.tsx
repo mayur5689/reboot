@@ -37,7 +37,7 @@ export default function PhysiotherapyFAQ({ faqs = physiotherapyFaqs }: Physiothe
                             <a
                                 href="https://wa.me/919702368612"
                                 target="_blank"
-                                rel="noopener noreferrer"
+                                rel="nofollow noopener noreferrer"
                                 className="font-semibold text-[#513394] dark:text-[#A78BFA] hover:underline underline-offset-4"
                             >
                                 WhatsApp us directly

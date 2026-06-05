@@ -1,6 +1,20 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    transpilePackages: ['sanity', 'next-sanity', '@sanity/vision', '@sanity/icons', '@sanity/table', '@portabletext/editor'],
+    transpilePackages: ['sanity', 'next-sanity', '@sanity/vision', '@sanity/icons', '@portabletext/editor'],
+    async redirects() {
+        return [
+            {
+                source: '/services/contrast-therapy',
+                destination: '/contrast-therapy-mumbai',
+                permanent: true,
+            },
+            {
+                source: '/services/hydrotherapy',
+                destination: '/services/aqua-therapy',
+                permanent: true,
+            },
+        ]
+    },
     images: {
         remotePatterns: [
             {

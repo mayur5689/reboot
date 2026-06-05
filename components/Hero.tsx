@@ -25,8 +25,17 @@ const testimonials = [
 
 export default function Hero() {
   const [currentTestimonial, setCurrentTestimonial] = useState(0)
-
   const [isVideoOpen, setIsVideoOpen] = useState(false)
+  const [bannerVisible, setBannerVisible] = useState(true)
+
+  useEffect(() => {
+    const dismissed = localStorage.getItem('r3boot-banner-may-2026')
+    if (dismissed) setBannerVisible(false)
+
+    const handleDismiss = () => setBannerVisible(false)
+    window.addEventListener('banner-dismissed', handleDismiss)
+    return () => window.removeEventListener('banner-dismissed', handleDismiss)
+  }, [])
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -39,11 +48,11 @@ export default function Hero() {
     <section className="relative w-full min-h-screen flex flex-col text-white overflow-x-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-black/40 z-10"></div>
+        <div className="absolute inset-0 bg-black/85 z-10"></div>
         {/* Desktop Image */}
         <div className="hidden md:block absolute inset-0">
           <Image
-            src="https://res.cloudinary.com/dj7bot2uc/image/upload/v1773076903/Hero_Section_1_ervwf2.avif"
+            src="/images/New_Hero_image.webp"
             alt="Hero Background Desktop"
             fill
             className="object-cover"
@@ -63,45 +72,55 @@ export default function Hero() {
       </div>
 
       {/* Main Content Area */}
-      <div className="relative z-20 container mx-auto px-6 lg:px-8 pt-32 pb-20 lg:pt-40 lg:pb-32 flex-1 flex flex-col justify-center">
-        <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold leading-[1.1] mb-4 max-w-3xl">
+      <div className={`relative z-20 container mx-auto px-4 sm:px-6 lg:px-8 ${bannerVisible ? 'pt-36' : 'pt-24'} sm:pt-32 pb-16 sm:pb-20 lg:pt-40 lg:pb-32 flex-1 flex flex-col justify-center`}>
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold leading-[1.1] mb-4 max-w-3xl">
           India&apos;s First Integrated Recovery Centre
         </h1>
-        <h2 className="text-xl md:text-2xl font-semibold text-white/90 mb-5">
+        <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-white/90 mb-5">
           Your Recovery. Redefined.
         </h2>
-        <p className="text-base md:text-lg text-gray-200/90 mb-8 max-w-2xl leading-relaxed">
-          Science-driven recovery and performance systems for people who take their body and mind seriously.
-        </p>
-
         {/* CTA Buttons */}
-        <div className="flex flex-wrap gap-4">
-          <a href="https://www.practo.com/mumbai/clinic/r3-boot-spoorts-therapy-dadar-east/doctors" target="_blank" rel="noopener noreferrer" className="z-30">
+        <div className="flex flex-wrap gap-4 mb-8">
+          <a href="tel:+919702368612" className="z-30">
             <button
               className="text-white font-semibold px-8 py-4 rounded-full transition-all hover:opacity-90 text-sm md:text-base shadow-lg hover:scale-105 active:scale-95"
               style={{ backgroundColor: '#513394' }}
             >
-              Book a Session
+              Call to Book
             </button>
           </a>
           <a
             href="https://wa.me/919702368612"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="nofollow noopener noreferrer"
             className="z-30"
           >
             <button className="bg-white/15 backdrop-blur-sm border border-white/40 text-white font-semibold px-8 py-4 rounded-full hover:bg-white/25 transition-all text-sm md:text-base hover:scale-105 active:scale-95">
-              WhatsApp Our Team
+              WhatsApp Us
             </button>
           </a>
         </div>
+
+        {/* Scroll hint — mobile only */}
+        <div className="md:hidden mt-6 flex justify-start">
+          <svg
+            className="w-6 h-6 text-white/40 animate-bounce"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth={1.5}
+            aria-hidden="true"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
+        </div>
       </div>
 
-      {/* Bottom Cards Section - Hidden on Mobile */}
-      <div className="relative z-20 container mx-auto px-6 lg:px-8 pb-16 hidden md:grid grid-cols-1 md:grid-cols-3 gap-8">
+      {/* Bottom Cards Section */}
+      <div className="relative z-20 container mx-auto px-4 sm:px-6 lg:px-8 pb-10 sm:pb-16 grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
 
         {/* Card 1: Services & Features (White) */}
-        <div className="bg-white dark:bg-[#1A1A1A] text-black dark:text-white p-7 rounded-2xl flex flex-col justify-between shadow-2xl min-h-[210px] border border-transparent dark:border-white/5">
+        <div className="bg-white dark:bg-[#1A1A1A] text-black dark:text-white p-5 sm:p-7 rounded-2xl flex flex-col justify-between shadow-2xl min-h-[180px] sm:min-h-[210px] border border-transparent dark:border-white/5">
           <p className="text-[17px] font-semibold leading-snug">
             Experience <span className="text-[#513394] font-bold">world-class recovery protocols</span> tailored for your performance.
           </p>
@@ -133,8 +152,8 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Card 2: Testimonial (Glassmorphism) - Auto Changing */}
-        <div className="bg-white/10 dark:bg-white/5 backdrop-blur-xl border border-white/20 dark:border-white/10 p-7 rounded-2xl flex flex-col justify-center items-center text-center shadow-2xl min-h-[210px] text-white transition-all duration-500">
+        {/* Card 2: Testimonial (Glassmorphism) - Auto Changing — desktop only */}
+        <div className="hidden md:flex bg-white/10 dark:bg-white/5 backdrop-blur-xl border border-white/20 dark:border-white/10 p-5 sm:p-7 rounded-2xl flex-col justify-center items-center text-center shadow-2xl min-h-[180px] sm:min-h-[210px] text-white transition-all duration-500">
           <p key={currentTestimonial} className="text-lg font-medium italic mb-4 leading-relaxed tracking-tight animate-in fade-in slide-in-from-bottom-2 duration-500 min-h-[50px] flex items-center justify-center">
             &ldquo;{testimonials[currentTestimonial].quote}&rdquo;
           </p>
@@ -154,11 +173,11 @@ export default function Hero() {
         {/* Card 3: Video Introduction (Purple) */}
         <div
           onClick={() => setIsVideoOpen(true)}
-          className="bg-[#513394] p-7 rounded-2xl flex items-center gap-5 shadow-2xl min-h-[210px] text-white group cursor-pointer transition-transform hover:scale-[1.02]"
+          className="bg-[#513394] p-5 sm:p-7 rounded-2xl flex items-center gap-5 shadow-2xl min-h-[180px] sm:min-h-[210px] text-white group cursor-pointer transition-transform hover:scale-[1.02]"
         >
           <div className="flex-1">
             <h3 className="text-2xl font-black leading-tight mb-8">
-              Watch video <br /> introduction.
+              How we treat <br /> every patient.
             </h3>
             <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center text-[#513394] shadow-xl group-hover:scale-110 transition-transform">
               <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24">
@@ -168,8 +187,8 @@ export default function Hero() {
           </div>
           <div className="w-[140px] h-[160px] rounded-xl overflow-hidden shadow-inner relative">
             <Image
-              src="https://res.cloudinary.com/dj7bot2uc/image/upload/v1773076903/Hero_Section_1_ervwf2.avif"
-              alt="Video thumbnail"
+              src="/images/New_Hero_image.webp"
+              alt="R3BOOT facility"
               fill
               className="object-cover grayscale-[0.2]"
             />

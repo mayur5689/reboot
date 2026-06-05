@@ -60,16 +60,17 @@ const BlogPage = () => {
                                 transition={{ duration: 0.5, delay: index * 0.1 }}
                             >
                                 <Link
-                                    href={`/blog/${blog.slug.current}`}
+                                    href={`/blog/${blog.slug}`}
                                     className="group block bg-white dark:bg-white/5 border border-gray-100 dark:border-white/10 rounded-3xl shadow-xl hover:shadow-[#513394]/10 transition-all duration-500 overflow-hidden h-full"
                                 >
                                     {/* Blog Image */}
-                                    <div className="relative h-64 overflow-hidden">
-                                        {blog.mainImage ? (
+                                    <div className="relative aspect-video overflow-hidden">
+                                        {blog.mainImage?.asset ? (
                                             <Image
-                                                src={urlFor(blog.mainImage).url()}
+                                                src={urlFor(blog.mainImage).width(800).quality(85).url()}
                                                 alt={blog.title}
                                                 fill
+                                                sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
                                                 className="object-cover group-hover:scale-110 transition-transform duration-700"
                                             />
                                         ) : (

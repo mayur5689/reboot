@@ -44,8 +44,9 @@ const branding = localFont({
 })
 
 export const metadata: Metadata = {
-  title: 'R3BOOT - Recovery & Performance',
-  description: 'India\'s First Integrated Recovery Centre',
+  metadataBase: new URL('https://www.r3boot.in'),
+  title: 'R3BOOT Dadar | Physiotherapy, Clinical Pilates & Recovery Mumbai',
+  description: 'Physiotherapy, clinical Pilates, sports massage & contrast therapy in Dadar, Mumbai. Expert physio team at R3BOOT — 5.0 stars. Open 7 days. Book via WhatsApp.',
   icons: {
     icon: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1773062628/R3boot_Logo_za7ymb.png',
     apple: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1773062628/R3boot_Logo_za7ymb.png',
@@ -58,10 +59,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" suppressHydrationWarning className={branding.variable}>
+    <html lang="en-IN" suppressHydrationWarning className={branding.variable}>
       <head>
         {gtmId ? (
-          <Script id="google-tag-manager" strategy="afterInteractive">
+          <Script id="google-tag-manager" strategy="lazyOnload">
             {`
               (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
               new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -75,9 +76,9 @@ export default function RootLayout({
           <>
             <Script
               src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
-              strategy="afterInteractive"
+              strategy="lazyOnload"
             />
-            <Script id="google-analytics" strategy="afterInteractive">
+            <Script id="google-analytics" strategy="lazyOnload">
               {`
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}

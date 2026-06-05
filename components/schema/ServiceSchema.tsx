@@ -1,4 +1,4 @@
-const SITE_URL = 'https://r3boot.in'
+const SITE_URL = 'https://www.r3boot.in'
 
 type ServiceSchemaProps = {
   serviceName: string

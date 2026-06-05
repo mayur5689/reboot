@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
@@ -6,6 +7,29 @@ import ServiceSchema from '@/components/schema/ServiceSchema'
 
 interface ServicePageProps {
     params: Promise<{ slug: string }>
+}
+
+const metadataOverrides: Record<string, { title: string; description: string }> = {
+    'aqua-therapy': {
+        title: 'Aqua Therapy for Sports Recovery in Mumbai | R3BOOT Dadar',
+        description: 'Pool-based aqua therapy at R3BOOT Dadar, Mumbai. Supervised by physiotherapists for sports injury rehab, joint recovery, and post-surgery treatment. Book a session.',
+    },
+    'clinical-pilates': {
+        title: 'Clinical Pilates in Mumbai | Spine & Core Rehab at R3BOOT Dadar',
+        description: 'Clinical pilates by certified physiotherapists in Dadar Mumbai. Ideal for back pain, posture correction, and post-injury rehabilitation. Book at R3BOOT.',
+    },
+}
+
+export async function generateMetadata({ params }: ServicePageProps): Promise<Metadata> {
+    const { slug } = await params
+    const service = services.find(s => s.slug === slug)
+    if (!service) return {}
+    const override = metadataOverrides[slug]
+    return {
+        title: override?.title ?? `${service.title} in Mumbai | R3BOOT Dadar`,
+        description: override?.description ?? `${service.description} Expert ${service.title.toLowerCase()} at R3BOOT Recovery & Performance Clinic, Dadar, Mumbai.`,
+        alternates: { canonical: `/services/${slug}` },
+    }
 }
 
 export default async function ServicePage({ params }: ServicePageProps) {
@@ -134,12 +158,12 @@ export default async function ServicePage({ params }: ServicePageProps) {
                                 </ul>
 
                                 <a
-                                    href="https://www.practo.com/mumbai/clinic/r3-boot-spoorts-therapy-dadar-east/doctors"
+                                    href="tel:+919702368612"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="block text-center bg-[#513394] text-white font-black px-8 py-5 rounded-2xl transition-all hover:scale-[1.02] shadow-xl text-lg group-hover:bg-[#603eb0]"
                                 >
-                                    Book This Service
+                                    Call to Book
                                 </a>
                                 <p className="text-center text-white/30 text-xs mt-6 font-bold tracking-widest">
                                     AVAILABLE 7 DAYS A WEEK
@@ -224,12 +248,12 @@ export default async function ServicePage({ params }: ServicePageProps) {
 
                         <div className="text-center mt-12">
                             <a
-                                href="https://www.practo.com/mumbai/clinic/r3-boot-spoorts-therapy-dadar-east/doctors"
+                                href="tel:+919702368612"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center gap-3 bg-[#513394] text-white font-bold px-10 py-4 rounded-full hover:bg-[#412975] transition-all shadow-xl shadow-[#513394]/20 hover:scale-105"
                             >
-                                Book a Consultation
+                                Call to Book
                                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                                 </svg>
@@ -305,7 +329,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
 
 export async function generateStaticParams() {
     // Exclude slugs that have dedicated page files to prevent build conflicts
-    const dedicatedSlugs = ['physiotherapy', 'contrast-therapy', 'sports-massage']
+    const dedicatedSlugs = ['physiotherapy', 'contrast-therapy', 'sports-massage', 'clinical-pilates']
     return services
         .filter((service) => !dedicatedSlugs.includes(service.slug))
         .map((service) => ({
