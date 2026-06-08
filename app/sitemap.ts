@@ -103,6 +103,36 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.9,
     },
     {
+      url: `${BASE_URL}/aqua-therapy-dadar`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    },
+    {
+      url: `${BASE_URL}/aqua-therapy-bandra`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    },
+    {
+      url: `${BASE_URL}/aqua-therapy-lower-parel`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    },
+    {
+      url: `${BASE_URL}/aqua-therapy-worli`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    },
+    {
+      url: `${BASE_URL}/aqua-therapy-andheri`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    },
+    {
       url: `${BASE_URL}/sports-massage-runners-mumbai`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
