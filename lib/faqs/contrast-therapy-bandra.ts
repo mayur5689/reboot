@@ -2,7 +2,7 @@ export const contrastTherapyBandraFaqs = [
   {
     question: 'Is contrast therapy near Bandra available at R3BOOT?',
     answer:
-      'Yes. R3BOOT in Dadar East is 15–20 minutes from Bandra by road, or 8 minutes by train from Bandra station to Dadar. We offer physio-supervised contrast therapy, red light sauna and ice bath, for Bandra athletes, runners, and gym-goers.',
+      'Yes. R3BOOT in Dadar East is 15–20 minutes from Bandra by road, or 8 minutes by train from Bandra station to Dadar. We offer physio-supervised contrast therapy, infrared sauna and ice bath, for Bandra athletes, runners, and gym-goers.',
   },
   {
     question: 'Why do Bandra clients choose R3BOOT over Khar wellness studios?',
@@ -17,11 +17,11 @@ export const contrastTherapyBandraFaqs = [
   {
     question: 'How much does contrast therapy cost for Bandra clients?',
     answer:
-      'Half Cycle (30 minutes): ₹2,500. Full Cycle (60 minutes): ₹3,500. Both include red light sauna and supervised ice bath. Call +91 97023 68612 to book.',
+      'Half Cycle (30 minutes): ₹2,500. Full Cycle (60 minutes): ₹3,500. Both include infrared sauna and supervised ice bath. Call +91 97023 68612 to book.',
   },
   {
     question: 'Can I book ice bath or sauna only near Bandra?',
     answer:
-      'Our protocol combines red light sauna and ice bath in contrast therapy for best recovery outcomes. Standalone cold plunge without sauna is not offered. See our ice bath and red light sauna pages for details on each phase.',
+      'Our protocol combines infrared sauna and ice bath in contrast therapy for best recovery outcomes. Standalone cold plunge without sauna is not offered. See our ice bath and infrared sauna pages for details on each phase.',
   },
 ]

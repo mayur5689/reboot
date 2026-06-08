@@ -9,7 +9,7 @@ import { contrastTherapyMumbaiFaqs } from '@/lib/faqs/contrast-therapy-mumbai'
 
 export const metadata: Metadata = {
     title: 'Contrast Therapy in Mumbai | R3BOOT Dadar – Sauna & Ice Bath',
-    description: 'Contrast therapy at R3BOOT: alternating Red Light Sauna and Ice Bath for recovery, circulation, and stress resilience. Dadar, Mumbai.',
+    description: 'Contrast therapy at R3BOOT: alternating Infrared Sauna and Ice Bath for recovery, circulation, and stress resilience. Dadar, Mumbai.',
     keywords: ['contrast therapy mumbai', 'ice bath mumbai', 'sauna mumbai', 'cold plunge mumbai', 'recovery therapy dadar', 'contrast therapy near me'],
     alternates: { canonical: '/contrast-therapy-mumbai' },
 }
@@ -54,7 +54,7 @@ export default function ContrastTherapyPage() {
                             Heat. Cold. Recovery.
                         </p>
                         <p className="text-xl md:text-2xl text-white/80 max-w-2xl leading-relaxed font-medium">
-                            Alternating Red Light Sauna and Ice Bath for circulation, resilience, and faster recovery at R3BOOT, Dadar – Mumbai.
+                            Alternating Infrared Sauna and Ice Bath for circulation, resilience, and faster recovery at R3BOOT, Dadar – Mumbai.
                         </p>
                     </div>
                 </div>
@@ -95,7 +95,7 @@ export default function ContrastTherapyPage() {
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                                     {[
                                         { title: "Preparation", description: "Preparing the body for rapid temperature changes." },
-                                        { title: "Hot Phase, Red Light Sauna", description: "Vasodilation phase to increase circulation and relax muscles." },
+                                        { title: "Hot Phase, Infrared Sauna", description: "Vasodilation phase to increase circulation and relax muscles." },
                                         { title: "Cold Phase, Ice Bath", description: "Vasoconstriction phase to reduce inflammation and flush toxins." },
                                         { title: "Recovery", description: "Allowing the body to return to homeostatic balance." },
                                         { title: "Alternation", description: "The cycle trains your nervous system to switch between activation and recovery, building stress resilience." },
@@ -245,21 +245,21 @@ export default function ContrastTherapyPage() {
                                 HEAT THERAPY //
                             </span>
                             <h2 className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white tracking-tight mb-4 leading-tight">
-                                Benefits of <span className="text-[#513394] dark:text-[#8B5CF6]">Red Light Sauna</span>
+                                Benefits of <span className="text-[#513394] dark:text-[#8B5CF6]">Infrared Sauna</span>
                             </h2>
                             <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed mb-10">
-                                Our red light sauna pairs gentle infrared warmth with red and near-infrared light, so you get more than generic “hot room” heat. The light reaches tissue in ways heat alone does not, while warmth still drives circulation, relaxation, and sweat. Together with cold plunges, it completes the contrast therapy loop.
+                                Our infrared sauna delivers deep tissue warmth that goes beyond a standard hot room. Infrared energy penetrates muscle and soft tissue directly, driving circulation and relaxation at depth. Paired with cold plunges, it completes the contrast therapy loop.
                             </p>
 
                             <div className="space-y-6">
                                 {[
                                     {
-                                        title: "Red & Near-Infrared Beyond Surface Heat",
-                                        body: "Red light saunas add targeted wavelengths on top of infrared warmth. That light is chosen to reach skin and soft tissue, not just warm the air, so each session combines photonic exposure with the sauna heat you already expect from contrast therapy."
+                                        title: "Deep Tissue Penetration Beyond Surface Heat",
+                                        body: "Infrared energy reaches muscle and soft tissue directly rather than just warming the air. Each session delivers heat where it matters - inside the tissue - so vasodilation and muscle ease happen faster than in a conventional sauna."
                                     },
                                     {
                                         title: "Dual Stimulus for Contrast Protocols",
-                                        body: "In one visit you stack manageable heat stress with red and near-infrared light. Many people use that combination around training or cold plunges: warmth for vessels and muscle ease, plus light for tissue that rarely gets consistent daily exposure."
+                                        body: "In one visit you stack manageable heat stress with infrared penetration. Many people use that combination around training or cold plunges: warmth for vessels and muscle ease, plus deep tissue exposure that primes the body for the cold phase."
                                     },
                                     {
                                         title: "Muscle Relaxation and Pain Relief",
@@ -297,7 +297,7 @@ export default function ContrastTherapyPage() {
                                     HEAT THERAPY //
                                 </span>
                                 <p className="text-white text-xl font-black tracking-tight leading-tight">
-                                    Red Light Sauna at R3BOOT Dadar
+                                    Infrared Sauna at R3BOOT Dadar
                                 </p>
                             </div>
                         </div>
@@ -435,7 +435,7 @@ export default function ContrastTherapyPage() {
             <FAQSchema faqs={contrastTherapyMumbaiFaqs} />
             <ServiceSchema
                 serviceName="Contrast Therapy"
-                description="Alternating Red Light Sauna and Ice Bath for optimal recovery, circulation, and stress resilience at R3BOOT Dadar, Mumbai."
+                description="Alternating Infrared Sauna and Ice Bath for optimal recovery, circulation, and stress resilience at R3BOOT Dadar, Mumbai."
                 serviceUrl="https://r3boot.in/services/contrast-therapy"
             />
         </main>

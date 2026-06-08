@@ -115,8 +115,8 @@ export const services: Service[] = [
     {
         title: "Contrast Therapy",
         category: "THERAPY",
-        description: "Alternating Red Light Sauna and Ice Bath for circulation, resilience, and faster recovery at R3BOOT Dadar.",
-        fullDescription: "Welcome to R3BOOT. Our Contrast Therapy combines Red Light Sauna (hot phase) and Ice Bath (cold phase) to accelerate healing, improve mood, reduce anxiety, and build stress resilience. Alternating between heat and cold trains your autonomic nervous system and is used by elite athletes worldwide for recovery.",
+        description: "Alternating Infrared Sauna and Ice Bath for circulation, resilience, and faster recovery at R3BOOT Dadar.",
+        fullDescription: "Welcome to R3BOOT. Our Contrast Therapy combines Infrared Sauna (hot phase) and Ice Bath (cold phase) to accelerate healing, improve mood, reduce anxiety, and build stress resilience. Alternating between heat and cold trains your autonomic nervous system and is used by elite athletes worldwide for recovery.",
         benefits: [
             "Boosted Immunity system",
             "Improved cardiovascular health (Increases HR)",
@@ -127,7 +127,7 @@ export const services: Service[] = [
         ],
         process: [
             { title: "Preparation", description: "Preparing the body for rapid temperature changes." },
-            { title: "Hot Phase, Red Light Sauna", description: "Red light sauna: vasodilation phase to increase circulation and relax muscles." },
+            { title: "Hot Phase, Infrared Sauna", description: "Infrared sauna: vasodilation phase to increase circulation and relax muscles." },
             { title: "Cold Phase, Ice Bath", description: "Ice bath: vasoconstriction phase to reduce inflammation and flush toxins." },
             { title: "Recovery", description: "Allowing the body to return to homeostatic balance." }
         ],

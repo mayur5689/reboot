@@ -72,7 +72,7 @@ export default function ClinicalPilatesBandraPage() {
                 <p>
                   My Pain Clinic Global in Bandra West offers clinical Pilates and is a well-regarded option.
                   R3BOOT in Dadar East adds an integrated recovery environment that has no parallel in Bandra:
-                  clinical Pilates combined with sports massage, ice bath, contrast therapy, red light therapy,
+                  clinical Pilates combined with sports massage, ice bath, contrast therapy, infrared sauna,
                   and physiotherapy, all in one visit, all under one roof. For Bandra clients managing complex
                   presentations (post-surgical rehab combined with sports massage, or scoliosis with concurrent
                   physiotherapy), R3BOOT offers a breadth of clinical tools unavailable in a standalone Pilates clinic.

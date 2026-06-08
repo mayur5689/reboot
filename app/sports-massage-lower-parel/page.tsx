@@ -129,7 +129,7 @@ export default function SportsMassageLowerParelPage() {
                 <h3 className="text-xl font-black text-gray-900 dark:text-white mb-6">Combine Sports Massage with Recovery Tools</h3>
                 <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed mb-6">
                   R3BOOT is not just sports massage. Many Lower Parel clients combine their session with ice bath,
-                  contrast therapy, or red light therapy in the same visit, a recovery stack unavailable anywhere
+                  contrast therapy, or infrared sauna in the same visit, a recovery stack unavailable anywhere
                   else in central Mumbai.
                 </p>
                 <div className="flex flex-wrap gap-3">

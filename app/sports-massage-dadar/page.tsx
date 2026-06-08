@@ -163,7 +163,7 @@ export default function SportsMassageDadarPage() {
                 Combine Sports Massage with <span className="text-[#513394] dark:text-[#8B5CF6]">Other Recovery Tools</span>
               </h2>
               <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed max-w-3xl mx-auto">
-                R3BOOT in Dadar is an integrated recovery centre. Many clients combine sports massage with ice bath, contrast therapy, and red light therapy in a single visit.
+                R3BOOT in Dadar is an integrated recovery centre. Many clients combine sports massage with ice bath, contrast therapy, and infrared sauna in a single visit.
               </p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">

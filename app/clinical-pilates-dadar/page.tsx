@@ -153,7 +153,7 @@ export default function ClinicalPilatesDadarPage() {
             </p>
             <p>
               R3BOOT's integrated model means clinical Pilates clients can also access ice bath, contrast
-              therapy, red light therapy, and sports massage in the same visit. For a Shivaji Park runner
+              therapy, infrared sauna, and sports massage in the same visit. For a Shivaji Park runner
               recovering from IT band syndrome while rebuilding hip stability through clinical Pilates, this
               matters. No other facility in Dadar offers this combination. Physiotherapy, sports massage,
               and clinical Pilates are all under one roof at Palai Plaza, 203, Swami Gyan Jivandas Marg,

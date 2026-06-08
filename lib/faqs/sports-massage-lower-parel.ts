@@ -7,7 +7,7 @@ export const sportsMassageLowerParelFaqs = [
   {
     question: 'Why do Lower Parel gym-goers use R3BOOT for sports massage?',
     answer:
-      'Lower Parel has a high density of gyms, CrossFit boxes, and fitness studios, but few dedicated sports recovery clinics. R3BOOT in Dadar East offers clinical sports massage by trained therapists, combined with ice bath, contrast therapy, and red light therapy under one roof. Clients come for an hour and address recovery comprehensively.',
+      'Lower Parel has a high density of gyms, CrossFit boxes, and fitness studios, but few dedicated sports recovery clinics. R3BOOT in Dadar East offers clinical sports massage by trained therapists, combined with ice bath, contrast therapy, and infrared sauna under one roof. Clients come for an hour and address recovery comprehensively.',
   },
   {
     question: 'I work in Lower Parel / BKC and have desk neck and shoulder pain. Can I come?',

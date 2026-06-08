@@ -2,7 +2,7 @@ export const contrastTherapyAndheriFaqs = [
   {
     question: 'Is contrast therapy near Andheri available at R3BOOT?',
     answer:
-      'Yes. R3BOOT in Dadar East is approximately 30–40 minutes from Andheri by road, or reachable via train through Dadar station. We offer physio-supervised contrast therapy, red light sauna and ice bath, for Andheri gym-goers, runners, and athletes.',
+      'Yes. R3BOOT in Dadar East is approximately 30–40 minutes from Andheri by road, or reachable via train through Dadar station. We offer physio-supervised contrast therapy, infrared sauna and ice bath, for Andheri gym-goers, runners, and athletes.',
   },
   {
     question: 'Why would someone from Andheri come to R3BOOT instead of a local ice bath studio?',
@@ -17,7 +17,7 @@ export const contrastTherapyAndheriFaqs = [
   {
     question: 'How much does contrast therapy cost?',
     answer:
-      'Half Cycle (30 minutes): ₹2,500. Full Cycle (60 minutes): ₹3,500. Both include red light sauna and supervised ice bath. Call +91 97023 68612 to book.',
+      'Half Cycle (30 minutes): ₹2,500. Full Cycle (60 minutes): ₹3,500. Both include infrared sauna and supervised ice bath. Call +91 97023 68612 to book.',
   },
   {
     question: 'Can I combine contrast therapy with sports massage in one visit?',

@@ -68,7 +68,7 @@ export default function ContrastTherapyAndheriPage() {
               <div className="prose prose-xl text-gray-600 dark:text-gray-400 dark:prose-invert max-w-none leading-relaxed space-y-6">
                 <p>
                   Ice bath options in Andheri and Lokhandwala often mean gym add-ons or standalone wellness sessions with no clinical
-                  screening. R3BOOT in Dadar East runs contrast therapy as a structured protocol: red light sauna (68°C), then supervised cold
+                  screening. R3BOOT in Dadar East runs contrast therapy as a structured protocol: infrared sauna (68°C), then supervised cold
                   immersion (6–10°C), with a physiotherapist present from intake through exit.
                 </p>
                 <p>
@@ -123,7 +123,7 @@ export default function ContrastTherapyAndheriPage() {
 
       <ServiceSchema
         serviceName="Contrast Therapy near Andheri Mumbai"
-        description="Physio-supervised contrast therapy near Andheri at R3BOOT Dadar East. Red light sauna (68°C) and ice bath (6–10°C) for Andheri athletes."
+        description="Physio-supervised contrast therapy near Andheri at R3BOOT Dadar East. Infrared sauna (68°C) and ice bath (6–10°C) for Andheri athletes."
         serviceUrl="https://www.r3boot.in/contrast-therapy-andheri"
       />
       <FAQSchema faqs={contrastTherapyAndheriFaqs} />

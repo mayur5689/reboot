@@ -7,7 +7,7 @@ export const sportsMassageBandraFaqs = [
   {
     question: 'Why do Bandra athletes come to R3BOOT instead of local options?',
     answer:
-      'R3BOOT is an integrated recovery centre, not a general spa or physiotherapy chain. Sports massage at R3BOOT is clinical and outcome-focused, done by therapists trained in sports soft tissue work, not relaxation massage. The ability to combine sports massage with ice bath, contrast therapy, and red light therapy in one visit is also a significant draw.',
+      'R3BOOT is an integrated recovery centre, not a general spa or physiotherapy chain. Sports massage at R3BOOT is clinical and outcome-focused, done by therapists trained in sports soft tissue work, not relaxation massage. The ability to combine sports massage with ice bath, contrast therapy, and infrared sauna in one visit is also a significant draw.',
   },
   {
     question: 'Is there parking near R3BOOT for visitors coming from Bandra?',

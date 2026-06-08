@@ -2,7 +2,7 @@ export const contrastTherapyLowerParelFaqs = [
   {
     question: 'Is contrast therapy near Lower Parel available?',
     answer:
-      'Yes. R3BOOT in Dadar East is 10–15 minutes from Lower Parel and Worli by road. We offer physio-supervised contrast therapy, alternating red light sauna and ice bath, for gym-goers from Kamala Mills, Phoenix Mills, and BKC professionals.',
+      'Yes. R3BOOT in Dadar East is 10–15 minutes from Lower Parel and Worli by road. We offer physio-supervised contrast therapy, alternating infrared sauna and ice bath, for gym-goers from Kamala Mills, Phoenix Mills, and BKC professionals.',
   },
   {
     question: 'Why do Lower Parel gym members come to R3BOOT for contrast therapy?',
@@ -17,7 +17,7 @@ export const contrastTherapyLowerParelFaqs = [
   {
     question: 'How much does contrast therapy cost?',
     answer:
-      'Half Cycle (30 minutes): ₹2,500. Full Cycle (60 minutes): ₹3,500. Both include red light sauna and supervised ice bath rounds.',
+      'Half Cycle (30 minutes): ₹2,500. Full Cycle (60 minutes): ₹3,500. Both include infrared sauna and supervised ice bath rounds.',
   },
   {
     question: 'How do I book contrast therapy coming from Lower Parel?',

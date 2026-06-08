@@ -70,7 +70,7 @@ const videos: VideoCard[] = [
     id: 5,
     title: "LOVED THE EXPERIENCE",
     subtitle: "Mumbai Member",
-    description: "Trying out Red Light Therapy combined with cold exposure.",
+    description: "Trying out Infrared Sauna combined with cold exposure.",
     videoUrl: "https://res.cloudinary.com/dj7bot2uc/video/upload/v1770182044/New_Testimonial_5_mhymut_gkt6gw.webm",
     thumbnailUrl: "",
     timestamp: "0:30",

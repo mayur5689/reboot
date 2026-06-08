@@ -80,7 +80,7 @@ export default function SportsMassagePage() {
                                 </p>
                                 <p>
                                     Located in Dadar, central Mumbai, accessible from Andheri, Thane, Bandra, and Navi Mumbai, R3BOOT is an integrated performance recovery center.
-                                    Sports massage here is one part of a structured recovery ecosystem that includes physiotherapy, ice bath therapy, red light therapy, and compression recovery.
+                                    Sports massage here is one part of a structured recovery ecosystem that includes physiotherapy, ice bath therapy, infrared sauna, and compression recovery.
                                 </p>
                             </div>
 
