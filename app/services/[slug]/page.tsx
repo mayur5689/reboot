@@ -9,10 +9,11 @@ interface ServicePageProps {
     params: Promise<{ slug: string }>
 }
 
-const metadataOverrides: Record<string, { title: string; description: string }> = {
+const metadataOverrides: Record<string, { title: string; description: string; canonical?: string }> = {
     'aqua-therapy': {
         title: 'Aqua Therapy for Sports Recovery in Mumbai | R3BOOT Dadar',
         description: 'Pool-based aqua therapy at R3BOOT Dadar, Mumbai. Supervised by physiotherapists for sports injury rehab, joint recovery, and post-surgery treatment. Book a session.',
+        canonical: '/aqua-therapy-mumbai',
     },
     'clinical-pilates': {
         title: 'Clinical Pilates in Mumbai | Spine & Core Rehab at R3BOOT Dadar',
@@ -28,7 +29,7 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
     return {
         title: override?.title ?? `${service.title} in Mumbai | R3BOOT Dadar`,
         description: override?.description ?? `${service.description} Expert ${service.title.toLowerCase()} at R3BOOT Recovery & Performance Clinic, Dadar, Mumbai.`,
-        alternates: { canonical: `/services/${slug}` },
+        alternates: { canonical: override?.canonical ?? `/services/${slug}` },
     }
 }
 
