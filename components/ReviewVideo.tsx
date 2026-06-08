@@ -89,6 +89,18 @@ const videos: VideoCard[] = [
     transcript: "This was my first experience at R3boot, and it was excellent from start to finish. I received a warm welcome and a clear explanation of how the therapy works and how it helps. The massage, sauna, infrared session, and ice bath were all very well structured and professionally executed. Overall, it was a thorough and genuinely rewarding experience. I’m happy to be an early member and I wish the team great success as they expand.",
     reviewerName: "R3boot Client",
     rating: 5
+  },
+  {
+    id: 7,
+    title: "GENUINE LEADERSHIP TRANSFORMATION",
+    subtitle: "Leadership Coaching Client",
+    description: "Powerful leadership coaching rooted in real business experience and deep understanding of teams.",
+    videoUrl: "https://res.cloudinary.com/dj7bot2uc/video/upload/v1780844487/R3BOOT_TESTIMONIAL_45_ymsbgb.mov",
+    thumbnailUrl: "https://res.cloudinary.com/dj7bot2uc/video/upload/so_0,w_600,h_900,c_fill,q_auto,f_jpg/v1780844487/R3BOOT_TESTIMONIAL_45_ymsbgb.jpg",
+    timestamp: "0:45",
+    transcript: "Leadership coaching becomes powerful when it’s real, practical, and rooted in experience. And that’s exactly what Alkesh Khubaria brings. As a seasoned businessman himself, he truly understands teams, personalities, priorities, and what it takes to truly bond and grow. His coaching cuts through the noise and creates genuine leadership transformation.",
+    reviewerName: "R3boot Client",
+    rating: 5
   }
 ];
 
@@ -108,9 +120,9 @@ const getCloudinaryThumbnail = (videoUrl: string): string => {
       pathParts.splice(uploadIndex + 1, 0, 'so_0,w_600,h_900,c_fill,q_auto,f_jpg');
     }
 
-    // Change file extension from .mp4 to .jpg
+    // Change file extension from .mp4/.mov/.webm to .jpg
     const lastPart = pathParts[pathParts.length - 1];
-    pathParts[pathParts.length - 1] = lastPart.replace(/\.mp4$/i, '.jpg');
+    pathParts[pathParts.length - 1] = lastPart.replace(/\.(mp4|mov|webm)$/i, '.jpg');
 
     url.pathname = pathParts.join('/');
     return url.toString();
