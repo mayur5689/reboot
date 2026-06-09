@@ -5,6 +5,8 @@ import { FAQSection } from '@/components/faq-section'
 import ServiceSchema from '@/components/schema/ServiceSchema'
 import FAQSchema from '@/components/schema/FAQSchema'
 import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema'
+import PhysiotherapyTeam from '@/components/PhysiotherapyTeam'
+import AquaTherapyLocationInfo from '@/components/AquaTherapyLocationInfo'
 import { aquaTherapyLowerParelFaqs } from '@/lib/faqs/aqua-therapy-lower-parel'
 
 export const metadata: Metadata = {
@@ -166,6 +168,9 @@ export default function AquaTherapyLowerParelPage() {
         </div>
       </section>
 
+      <PhysiotherapyTeam />
+      <AquaTherapyLocationInfo />
+
       <FAQSection faqs={aquaTherapyLowerParelFaqs} />
 
       <section className="py-24 bg-[#513394]">
@@ -188,10 +193,11 @@ export default function AquaTherapyLowerParelPage() {
           <p className="text-center text-xs font-black tracking-[0.3em] text-gray-400 dark:text-gray-600 uppercase mb-8">
             AQUA THERAPY ACROSS MUMBAI //
           </p>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-3xl mx-auto">
+          <div className="grid grid-cols-2 sm:grid-cols-5 gap-4 max-w-4xl mx-auto">
             {[
               { label: 'Aqua Therapy Mumbai', href: '/aqua-therapy-mumbai' },
               { label: 'Dadar (On-Site)', href: '/aqua-therapy-dadar' },
+              { label: 'Near Andheri', href: '/aqua-therapy-andheri' },
               { label: 'Near Bandra', href: '/aqua-therapy-bandra' },
               { label: 'Near Worli', href: '/aqua-therapy-worli' },
             ].map((link) => (
@@ -211,6 +217,7 @@ export default function AquaTherapyLowerParelPage() {
         serviceName="Aqua Therapy near Lower Parel Mumbai"
         description="Physio-supervised aqua therapy near Lower Parel at R3BOOT Dadar. 5-10 minutes away. Pool rehabilitation for gym injuries, post-surgery recovery, and sports rehab."
         serviceUrl="https://www.r3boot.in/aqua-therapy-lower-parel"
+        areaServed="Lower Parel"
       />
       <FAQSchema faqs={aquaTherapyLowerParelFaqs} />
       <BreadcrumbSchema items={[

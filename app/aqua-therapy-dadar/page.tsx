@@ -5,6 +5,8 @@ import { FAQSection } from '@/components/faq-section'
 import ServiceSchema from '@/components/schema/ServiceSchema'
 import FAQSchema from '@/components/schema/FAQSchema'
 import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema'
+import PhysiotherapyTeam from '@/components/PhysiotherapyTeam'
+import AquaTherapyLocationInfo from '@/components/AquaTherapyLocationInfo'
 import { aquaTherapyDadarFaqs } from '@/lib/faqs/aqua-therapy-dadar'
 
 export const metadata: Metadata = {
@@ -170,6 +172,9 @@ export default function AquaTherapyDadarPage() {
         </div>
       </section>
 
+      <PhysiotherapyTeam />
+      <AquaTherapyLocationInfo />
+
       <FAQSection faqs={aquaTherapyDadarFaqs} />
 
       <section className="py-24 bg-[#513394]">
@@ -192,9 +197,10 @@ export default function AquaTherapyDadarPage() {
           <p className="text-center text-xs font-black tracking-[0.3em] text-gray-400 dark:text-gray-600 uppercase mb-8">
             AQUA THERAPY ACROSS MUMBAI //
           </p>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-3xl mx-auto">
+          <div className="grid grid-cols-2 sm:grid-cols-5 gap-4 max-w-4xl mx-auto">
             {[
               { label: 'Aqua Therapy Mumbai', href: '/aqua-therapy-mumbai' },
+              { label: 'Near Andheri', href: '/aqua-therapy-andheri' },
               { label: 'Near Bandra', href: '/aqua-therapy-bandra' },
               { label: 'Lower Parel', href: '/aqua-therapy-lower-parel' },
               { label: 'Near Worli', href: '/aqua-therapy-worli' },
@@ -215,6 +221,7 @@ export default function AquaTherapyDadarPage() {
         serviceName="Aqua Therapy Dadar Mumbai"
         description="Physio-supervised aqua therapy in Dadar East at R3BOOT. Pool-based rehabilitation for post-surgery recovery, sports injuries, knee pain, and arthritis. Minutes from Dadar station."
         serviceUrl="https://www.r3boot.in/aqua-therapy-dadar"
+        areaServed="Dadar"
       />
       <FAQSchema faqs={aquaTherapyDadarFaqs} />
       <BreadcrumbSchema items={[

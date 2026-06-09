@@ -4,12 +4,14 @@ type ServiceSchemaProps = {
   serviceName: string
   description: string
   serviceUrl?: string
+  areaServed?: string
 }
 
 export default function ServiceSchema({
   serviceName,
   description,
   serviceUrl,
+  areaServed = 'Mumbai',
 }: ServiceSchemaProps) {
   const url = serviceUrl ?? SITE_URL
   const schema = {
@@ -22,8 +24,15 @@ export default function ServiceSchema({
       '@id': `${SITE_URL}/#organization`,
     },
     areaServed: {
-      '@type': 'City',
-      name: 'Mumbai',
+      '@type': 'Place',
+      name: areaServed,
+    },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '5.0',
+      reviewCount: '80',
+      bestRating: '5',
+      worstRating: '1',
     },
   }
 

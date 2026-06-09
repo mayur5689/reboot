@@ -5,6 +5,8 @@ import { FAQSection } from '@/components/faq-section'
 import ServiceSchema from '@/components/schema/ServiceSchema'
 import FAQSchema from '@/components/schema/FAQSchema'
 import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema'
+import PhysiotherapyTeam from '@/components/PhysiotherapyTeam'
+import AquaTherapyLocationInfo from '@/components/AquaTherapyLocationInfo'
 import { aquaTherapyBandraFaqs } from '@/lib/faqs/aqua-therapy-bandra'
 
 export const metadata: Metadata = {
@@ -166,6 +168,9 @@ export default function AquaTherapyBandraPage() {
         </div>
       </section>
 
+      <PhysiotherapyTeam />
+      <AquaTherapyLocationInfo />
+
       <FAQSection faqs={aquaTherapyBandraFaqs} />
 
       <section className="py-24 bg-[#513394]">
@@ -188,10 +193,11 @@ export default function AquaTherapyBandraPage() {
           <p className="text-center text-xs font-black tracking-[0.3em] text-gray-400 dark:text-gray-600 uppercase mb-8">
             AQUA THERAPY ACROSS MUMBAI //
           </p>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-3xl mx-auto">
+          <div className="grid grid-cols-2 sm:grid-cols-5 gap-4 max-w-4xl mx-auto">
             {[
               { label: 'Aqua Therapy Mumbai', href: '/aqua-therapy-mumbai' },
               { label: 'Dadar (On-Site)', href: '/aqua-therapy-dadar' },
+              { label: 'Near Andheri', href: '/aqua-therapy-andheri' },
               { label: 'Lower Parel', href: '/aqua-therapy-lower-parel' },
               { label: 'Near Worli', href: '/aqua-therapy-worli' },
             ].map((link) => (
@@ -211,6 +217,7 @@ export default function AquaTherapyBandraPage() {
         serviceName="Aqua Therapy near Bandra Mumbai"
         description="Physio-supervised aqua therapy near Bandra at R3BOOT Dadar. 8 min by train from Bandra station. Pool rehabilitation for runners, post-surgery patients, and sports injuries."
         serviceUrl="https://www.r3boot.in/aqua-therapy-bandra"
+        areaServed="Bandra"
       />
       <FAQSchema faqs={aquaTherapyBandraFaqs} />
       <BreadcrumbSchema items={[

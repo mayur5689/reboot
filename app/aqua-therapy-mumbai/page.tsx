@@ -7,6 +7,7 @@ import PhysiotherapyTeam from '@/components/PhysiotherapyTeam'
 import ServiceSchema from '@/components/schema/ServiceSchema'
 import FAQSchema from '@/components/schema/FAQSchema'
 import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema'
+import AquaTherapyLocationInfo from '@/components/AquaTherapyLocationInfo'
 import { aquaTherapyMumbaiFaqs } from '@/lib/faqs/aqua-therapy-mumbai'
 
 export const metadata: Metadata = {
@@ -484,6 +485,9 @@ export default function AquaTherapyMumbaiPage() {
       {/* TEAM */}
       <PhysiotherapyTeam />
 
+      {/* LOCATION & HOURS */}
+      <AquaTherapyLocationInfo />
+
       {/* FAQ */}
       <FAQSection faqs={aquaTherapyMumbaiFaqs} />
 
@@ -614,6 +618,7 @@ export default function AquaTherapyMumbaiPage() {
         serviceName="Aqua Therapy in Mumbai"
         description="Pool-based aquatic physiotherapy for sports injury rehabilitation, post-surgical recovery, knee pain, arthritis, and lower back pain. Supervised by physiotherapists at R3BOOT, Dadar, Mumbai."
         serviceUrl="https://www.r3boot.in/aqua-therapy-mumbai"
+        areaServed="Mumbai"
       />
       <FAQSchema faqs={aquaTherapyMumbaiFaqs} />
       <BreadcrumbSchema items={[

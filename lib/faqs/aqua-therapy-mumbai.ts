@@ -59,4 +59,29 @@ export const aquaTherapyMumbaiFaqs = [
     answer:
       'Please contact R3BOOT directly for current pricing and package options. Sessions can be booked individually or as part of a structured rehabilitation package. Call or WhatsApp us at +91 97023 68612 and our team will advise on the right program for your condition and budget.',
   },
+  {
+    question: 'Is aqua therapy good for back pain?',
+    answer:
+      'Aqua therapy is highly effective for lower back pain. In chest-deep water, spinal compression reduces significantly, allowing movement, core strengthening, and flexibility work that causes pain on land. Common aqua therapy exercises for back pain include water walking, trunk rotation, pelvic tilts, and buoyancy-supported stretching. At R3BOOT, your physiotherapist designs the program around your specific diagnosis - disc bulge, muscle strain, spondylosis, or post-surgical back - since the right exercises vary by condition.',
+  },
+  {
+    question: 'What aqua therapy exercises help with neck and shoulder pain?',
+    answer:
+      'Aqua therapy exercises for neck and shoulder pain typically include supported arm circles, shoulder blade retractions against water resistance, rotator cuff strengthening in neutral positions, neck mobility work with buoyancy support, and scapular stability movements. Water reduces load through the shoulder joint, allowing range-of-motion and strengthening work earlier than is possible on land. At R3BOOT, shoulder and neck programs are prescribed by our physiotherapists based on your specific diagnosis - rotator cuff, labral injury, impingement, or post-surgical.',
+  },
+  {
+    question: 'What aqua therapy exercises are used for back pain?',
+    answer:
+      'Common aqua therapy exercises for back pain include water walking (forward and backward), trunk rotation against water resistance, standing hip extensions, knee-to-chest stretches with buoyancy support, and bridging in shallow water. For disc-related pain, buoyancy-assisted lumbar traction movements are used. Your physiotherapist at R3BOOT selects exercises based on your diagnosis and pain response - not all back pain exercises are appropriate for all conditions.',
+  },
+  {
+    question: 'What aqua therapy exercises help with knee pain?',
+    answer:
+      'Aqua therapy exercises for knee pain include straight leg raises, mini squats against water resistance, step-ups on pool stairs, terminal knee extensions, and leg swings in supported standing. The sequence depends on your knee condition - post-replacement, ACL repair, and osteoarthritis each require different progressions and load levels. At R3BOOT, your physiotherapist adjusts exercises and water depth to control how much load goes through your knee at each stage of recovery.',
+  },
+  {
+    question: 'Is aqua therapy effective for a herniated disc?',
+    answer:
+      'Yes, aqua therapy is effective for herniated disc rehabilitation. Water reduces spinal compression significantly, allowing movement, neural mobilisation, and core strengthening that would aggravate symptoms on land. Warm water also relaxes the paraspinal muscle spasm that often accompanies disc herniation. At R3BOOT, herniated disc programs focus on pain-free range of motion first, progressing to core stability and functional loading as symptoms settle. Your physiotherapist reviews your MRI or imaging before designing your program.',
+  },
 ]

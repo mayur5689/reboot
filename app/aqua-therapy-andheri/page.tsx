@@ -5,17 +5,21 @@ import { FAQSection } from '@/components/faq-section'
 import ServiceSchema from '@/components/schema/ServiceSchema'
 import FAQSchema from '@/components/schema/FAQSchema'
 import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema'
+import PhysiotherapyTeam from '@/components/PhysiotherapyTeam'
+import AquaTherapyLocationInfo from '@/components/AquaTherapyLocationInfo'
 import { aquaTherapyAndheriFaqs } from '@/lib/faqs/aqua-therapy-andheri'
 
 export const metadata: Metadata = {
-  title: 'Aqua Therapy Near Andheri | Pool Physiotherapy at R3BOOT Dadar',
+  title: 'Aqua Therapy Near Andheri West | Pool Physiotherapy at R3BOOT Dadar',
   description:
-    'Physio-supervised aqua therapy near Andheri at R3BOOT Dadar - 30 min by road or 20 min by train. No pool in Andheri. The closest clinical aqua therapy for Andheri patients.',
+    'Physio-supervised aqua therapy near Andheri West at R3BOOT Dadar - 30 min by road or 20 min by train. No pool in Andheri West. The closest clinical aqua therapy for Andheri patients.',
   alternates: { canonical: '/aqua-therapy-andheri' },
   keywords: [
+    'aqua therapy andheri west',
+    'aqua therapy near andheri west',
     'aqua therapy andheri',
     'aquatic therapy andheri mumbai',
-    'hydrotherapy andheri',
+    'hydrotherapy andheri west',
     'pool physiotherapy andheri',
     'aqua therapy near andheri',
     'water therapy andheri mumbai',
@@ -49,10 +53,10 @@ export default function AquaTherapyAndheriPage() {
               <span className="text-[11px] font-black tracking-[0.3em] uppercase">ANDHERI // MUMBAI</span>
             </div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white mb-2 tracking-tighter leading-[1.05]">
-              Aqua Therapy Near Andheri, Mumbai
+              Aqua Therapy Near Andheri West, Mumbai
             </h1>
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl leading-relaxed font-medium mt-4">
-              R3BOOT in Dadar East - 30 min by road, 20 min by Western line train. Andheri has dozens of physio clinics. None have a pool. R3BOOT does.
+              R3BOOT in Dadar East - 30 min by road, 20 min by Western line train. Andheri West has dozens of physio clinics. None have a pool. R3BOOT does.
             </p>
           </div>
         </div>
@@ -63,7 +67,7 @@ export default function AquaTherapyAndheriPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-start">
             <div className="lg:col-span-7">
               <h2 className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white mb-8 tracking-tight">
-                Andheri Has 40+ Physio Clinics.{' '}
+                Andheri West Has 40+ Physio Clinics.{' '}
                 <span className="text-[#513394] dark:text-[#8B5CF6]">None Have a Pool. R3BOOT Does.</span>
               </h2>
               <div className="prose prose-xl text-gray-600 dark:text-gray-400 dark:prose-invert max-w-none leading-relaxed space-y-6">
@@ -171,6 +175,9 @@ export default function AquaTherapyAndheriPage() {
         </div>
       </section>
 
+      <PhysiotherapyTeam />
+      <AquaTherapyLocationInfo />
+
       <FAQSection faqs={aquaTherapyAndheriFaqs} />
 
       <section className="py-24 bg-[#513394]">
@@ -193,12 +200,13 @@ export default function AquaTherapyAndheriPage() {
           <p className="text-center text-xs font-black tracking-[0.3em] text-gray-400 dark:text-gray-600 uppercase mb-8">
             AQUA THERAPY ACROSS MUMBAI //
           </p>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-3xl mx-auto">
+          <div className="grid grid-cols-2 sm:grid-cols-5 gap-4 max-w-4xl mx-auto">
             {[
               { label: 'Aqua Therapy Mumbai', href: '/aqua-therapy-mumbai' },
               { label: 'Dadar (On-Site)', href: '/aqua-therapy-dadar' },
               { label: 'Near Bandra', href: '/aqua-therapy-bandra' },
               { label: 'Lower Parel', href: '/aqua-therapy-lower-parel' },
+              { label: 'Near Worli', href: '/aqua-therapy-worli' },
             ].map((link) => (
               <Link
                 key={link.href}
@@ -213,9 +221,10 @@ export default function AquaTherapyAndheriPage() {
       </section>
 
       <ServiceSchema
-        serviceName="Aqua Therapy near Andheri Mumbai"
-        description="Physio-supervised aqua therapy near Andheri at R3BOOT Dadar. 20 min by Western line train from Andheri. The only clinical pool rehabilitation option serving Andheri patients."
+        serviceName="Aqua Therapy near Andheri West Mumbai"
+        description="Physio-supervised aqua therapy near Andheri West at R3BOOT Dadar. 20 min by Western line train from Andheri. The only clinical pool rehabilitation option serving Andheri West patients."
         serviceUrl="https://www.r3boot.in/aqua-therapy-andheri"
+        areaServed="Andheri"
       />
       <FAQSchema faqs={aquaTherapyAndheriFaqs} />
       <BreadcrumbSchema items={[
