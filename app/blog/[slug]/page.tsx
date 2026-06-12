@@ -5,6 +5,7 @@ import Link from "next/link";
 import { getPostBySlug, client, urlFor } from "@/sanity/lib/client";
 import BlogPostingSchema from "@/components/schema/BlogPostingSchema";
 import FAQSchema from "@/components/schema/FAQSchema";
+import { FAQSection } from "@/components/faq-section";
 
 export const revalidate = 60;
 
@@ -48,22 +49,27 @@ export async function generateMetadata(props: { params: Promise<{ slug: string }
 
 const components = {
     types: {
-        image: ({ value }: any) => (
-            <div className="relative w-full aspect-video my-12 rounded-3xl overflow-hidden shadow-2xl">
-                <Image
-                    src={urlFor(value).width(1200).quality(85).url()}
-                    alt={value.alt || 'Blog Image'}
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1280px) 66vw, 800px"
-                    className="object-cover"
-                />
-                {value.alt && (
-                    <div className="absolute bottom-0 left-0 right-0 bg-black/50 backdrop-blur-md text-white px-6 py-3 text-sm font-medium">
-                        {value.alt}
+        image: ({ value }: any) => {
+            if (!value?.asset) return null;
+            return (
+                <figure className="my-12">
+                    <div className="rounded-3xl overflow-hidden shadow-2xl">
+                        <Image
+                            src={urlFor(value).width(1200).quality(85).url()}
+                            alt={value.alt || 'Blog Image'}
+                            width={1200}
+                            height={900}
+                            className="w-full h-auto rounded-2xl"
+                        />
                     </div>
-                )}
-            </div>
-        ),
+                    {value.alt && (
+                        <figcaption className="text-sm font-medium text-gray-500 dark:text-gray-400 text-center mt-3 px-2 italic">
+                            {value.alt}
+                        </figcaption>
+                    )}
+                </figure>
+            );
+        },
     },
     block: {
         h1: ({ children }: any) => <h1 className="text-4xl sm:text-5xl font-black text-gray-900 dark:text-white mb-8 mt-16 tracking-tight leading-tight">{children}</h1>,
@@ -195,20 +201,6 @@ export default async function BlogPostPage(props: { params: Promise<{ slug: stri
                             <PortableText value={(post.body ?? []) as Parameters<typeof PortableText>[0]['value']} components={components} />
                         </div>
 
-                        {/* FAQs Section */}
-                        {post.faqs && post.faqs.length > 0 && (
-                            <div className="mt-24 pt-16 border-t border-gray-100 dark:border-white/5">
-                                <h2 className="text-3xl font-black text-gray-900 dark:text-white mb-12 tracking-tight">Frequently Asked Questions</h2>
-                                <div className="space-y-8">
-                                    {post.faqs.map((faq: any, i: number) => (
-                                        <div key={i} className="bg-gray-50 dark:bg-white/5 p-8 rounded-3xl border border-gray-100 dark:border-white/10">
-                                            <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-4 leading-tight">{faq.question}</h4>
-                                            <p className="text-gray-600 dark:text-gray-400 font-medium leading-relaxed">{faq.answer}</p>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-                        )}
                     </div>
 
                     {/* Sidebar */}
@@ -248,6 +240,7 @@ export default async function BlogPostPage(props: { params: Promise<{ slug: stri
                     </aside>
                 </div>
             </div>
+            {post.faqs?.length > 0 && <FAQSection faqs={post.faqs} />}
             {/* Mobile Sticky CTA Bar */}
             <div className="fixed bottom-0 left-0 right-0 z-50 lg:hidden bg-white dark:bg-[#0A0A0A] border-t border-gray-200 dark:border-white/10 px-4 py-3 flex gap-3 shadow-2xl">
                 <a
