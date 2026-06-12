@@ -10,7 +10,7 @@ import AquaTherapyLocationInfo from '@/components/AquaTherapyLocationInfo'
 import { aquaTherapyWorliFaqs } from '@/lib/faqs/aqua-therapy-worli'
 
 export const metadata: Metadata = {
-  title: 'Aqua Therapy Near Worli | Pool Physiotherapy at R3BOOT Dadar',
+  title: 'Aqua Therapy Near Worli | Aqua Treadmill Physiotherapy at R3BOOT Dadar',
   description:
     'Physio-supervised aqua therapy near Worli at R3BOOT Dadar - 10 to 15 min away. Post-surgery rehab, arthritis, sports injuries. Serving the Worli and BKC corridor.',
   alternates: { canonical: '/aqua-therapy-worli' },
@@ -54,7 +54,7 @@ export default function AquaTherapyWorliPage() {
               Aqua Therapy Near Worli, Mumbai
             </h1>
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl leading-relaxed font-medium mt-4">
-              R3BOOT in Dadar East is 10 to 15 minutes from Worli. Physio-supervised pool rehabilitation for post-surgery patients, arthritis, and the BKC corridor professional athlete.
+              R3BOOT in Dadar East is 10 to 15 minutes from Worli. Physio-supervised aqua treadmill rehabilitation for post-surgery patients, arthritis, and the BKC corridor professional athlete.
             </p>
           </div>
         </div>
@@ -89,7 +89,7 @@ export default function AquaTherapyWorliPage() {
                   },
                   {
                     title: 'For arthritis',
-                    body: 'Warm water reduces stiffness. Buoyancy removes compressive load. Worli and Mahalaxmi patients with knee and hip arthritis use the pool when land-based exercise is too painful.',
+                    body: 'Warm water reduces stiffness. Buoyancy removes compressive load. Worli and Mahalaxmi patients with knee and hip arthritis use the aqua treadmill when land-based exercise is too painful.',
                   },
                   {
                     title: '10 - 15 min from Worli',
@@ -210,7 +210,7 @@ export default function AquaTherapyWorliPage() {
 
       <ServiceSchema
         serviceName="Aqua Therapy near Worli Mumbai"
-        description="Physio-supervised aqua therapy near Worli at R3BOOT Dadar. 10-15 minutes from Worli. Pool rehabilitation for post-surgery patients, arthritis, and BKC professionals."
+        description="Physio-supervised aqua therapy near Worli at R3BOOT Dadar. 10-15 minutes from Worli. Aqua treadmill rehabilitation for post-surgery patients, arthritis, and BKC professionals."
         serviceUrl="https://www.r3boot.in/aqua-therapy-worli"
         areaServed="Worli"
       />

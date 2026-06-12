@@ -2,7 +2,7 @@ export const aquaTherapyWorliFaqs = [
   {
     question: 'Is there aqua therapy near Worli?',
     answer:
-      'R3BOOT in Dadar East is 10 to 15 minutes from Worli by road, and accessible via the Central line from Mahalaxmi. No physio-supervised aqua therapy pool currently operates in Worli. R3BOOT is the closest clinical option serving Worli and the BKC-Worli corridor for physio-led water-based rehabilitation.',
+      'R3BOOT in Dadar East is 10 to 15 minutes from Worli by road, and accessible via the Central line from Mahalaxmi. No physio-supervised aqua treadmill currently operates in Worli. R3BOOT is the closest clinical option serving Worli and the BKC-Worli corridor for physio-led water-based rehabilitation.',
   },
   {
     question: 'Can I use aqua therapy for post-surgery recovery if I am based in Worli?',

@@ -10,9 +10,9 @@ import AquaTherapyLocationInfo from '@/components/AquaTherapyLocationInfo'
 import { aquaTherapyBandraFaqs } from '@/lib/faqs/aqua-therapy-bandra'
 
 export const metadata: Metadata = {
-  title: 'Aqua Therapy Near Bandra | Pool Physiotherapy at R3BOOT Dadar',
+  title: 'Aqua Therapy Near Bandra | Aqua Treadmill Physiotherapy at R3BOOT Dadar',
   description:
-    'Physio-supervised aqua therapy near Bandra at R3BOOT Dadar - 15 min by road, 8 min by train. Post-surgery, knee injuries, runner rehab. No pool in Bandra comes close.',
+    'Physio-supervised aqua therapy near Bandra at R3BOOT Dadar - 15 min by road, 8 min by train. Post-surgery, knee injuries, runner rehab. No aqua treadmill in Bandra comes close.',
   alternates: { canonical: '/aqua-therapy-bandra' },
   keywords: [
     'aqua therapy bandra',
@@ -54,7 +54,7 @@ export default function AquaTherapyBandraPage() {
               Aqua Therapy Near Bandra, Mumbai
             </h1>
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl leading-relaxed font-medium mt-4">
-              R3BOOT in Dadar East - 15 min by road, 8 min by train from Bandra. Physio-supervised pool rehabilitation for Bandra athletes, runners, and post-surgery patients.
+              R3BOOT in Dadar East - 15 min by road, 8 min by train from Bandra. Physio-supervised aqua treadmill rehabilitation for Bandra athletes, runners, and post-surgery patients.
             </p>
           </div>
         </div>
@@ -66,20 +66,20 @@ export default function AquaTherapyBandraPage() {
             <div className="lg:col-span-7">
               <h2 className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white mb-8 tracking-tight">
                 Bandra Has Gyms.{' '}
-                <span className="text-[#513394] dark:text-[#8B5CF6]">None Have a Physio-Supervised Pool.</span>
+                <span className="text-[#513394] dark:text-[#8B5CF6]">None Have a Physio-Supervised Aqua Treadmill.</span>
               </h2>
               <div className="prose prose-xl text-gray-600 dark:text-gray-400 dark:prose-invert max-w-none leading-relaxed space-y-6">
                 <p>
                   Carter Road runners, Joggers Park half-marathoners, CrossFit athletes in Khar and Santacruz - Bandra
                   has one of Mumbai&apos;s most active fitness populations. It also has a high rate of the injuries
                   that come with that activity: IT band syndrome, patellar tendinopathy, ACL injuries, rotator cuff
-                  damage. Bandra has physiotherapy clinics. None have a pool.
+                  damage. Bandra has physiotherapy clinics. None have an aqua treadmill.
                 </p>
                 <p>
                   R3BOOT in Dadar East is 8 minutes by train from Bandra station on the Western line, or 15 to 20
                   minutes by road. Post-surgical patients from Lilavati Hospital and Breach Candy Hospital use R3BOOT
                   because their surgeons refer them for aqua therapy - and R3BOOT is the closest physio-supervised
-                  pool to Bandra. Combine aqua therapy with{' '}
+                  aqua treadmill facility to Bandra. Combine aqua therapy with{' '}
                   <Link href="/sports-massage-bandra" className="text-[#513394] dark:text-[#A78BFA] font-bold hover:underline">
                     sports massage near Bandra
                   </Link>{' '}
@@ -90,7 +90,7 @@ export default function AquaTherapyBandraPage() {
                 {[
                   {
                     title: 'For Bandra runners',
-                    body: 'Knee and ankle rehab in the pool before land-based running resumes. Maintain fitness without aggravating the injury.',
+                    body: 'Knee and ankle rehab on the aqua treadmill before land-based running resumes. Maintain fitness without aggravating the injury.',
                   },
                   {
                     title: 'Post-surgical',
@@ -102,7 +102,7 @@ export default function AquaTherapyBandraPage() {
                   },
                   {
                     title: 'No swimming required',
-                    body: 'All exercises performed upright in the pool. Physiotherapist present throughout. No swim ability needed.',
+                    body: 'All exercises performed upright on the aqua treadmill. Physiotherapist present throughout. No swim ability needed.',
                   },
                 ].map((item, idx) => (
                   <div key={idx} className="bg-white dark:bg-white/5 p-6 rounded-[2rem] border border-gray-100 dark:border-white/5">
@@ -178,7 +178,7 @@ export default function AquaTherapyBandraPage() {
           <h2 className="text-4xl md:text-6xl font-black text-white mb-6">
             8 Min from Bandra. Worth the Trip.
           </h2>
-          <p className="text-white/70 text-lg mb-10">The pool that Bandra doesn't have. Our physiotherapists will assess your condition and tell you honestly whether aqua therapy is the right starting point.</p>
+          <p className="text-white/70 text-lg mb-10">The aqua treadmill that Bandra doesn't have. Our physiotherapists will assess your condition and tell you honestly whether aqua therapy is the right starting point.</p>
           <a
             href="tel:+919702368612"
             className="inline-block bg-white text-[#513394] font-black px-10 py-5 rounded-full hover:scale-105 transition-all shadow-2xl"
@@ -215,7 +215,7 @@ export default function AquaTherapyBandraPage() {
 
       <ServiceSchema
         serviceName="Aqua Therapy near Bandra Mumbai"
-        description="Physio-supervised aqua therapy near Bandra at R3BOOT Dadar. 8 min by train from Bandra station. Pool rehabilitation for runners, post-surgery patients, and sports injuries."
+        description="Physio-supervised aqua therapy near Bandra at R3BOOT Dadar. 8 min by train from Bandra station. Aqua treadmill rehabilitation for runners, post-surgery patients, and sports injuries."
         serviceUrl="https://www.r3boot.in/aqua-therapy-bandra"
         areaServed="Bandra"
       />

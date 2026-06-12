@@ -2,7 +2,7 @@ export const aquaTherapyDadarFaqs = [
   {
     question: 'Is there aqua therapy in Dadar?',
     answer:
-      'Yes. R3BOOT is located at Palai Plaza, 203, Swami Gyan Jivandas Marg, Dadar East. Our aqua therapy pool is on-site and sessions are supervised by our physiotherapy team. You do not need to travel across the city - the pool is in Dadar. Call +91 97023 68612 to book.',
+      'Yes. R3BOOT is located at Palai Plaza, 203, Swami Gyan Jivandas Marg, Dadar East. Our aqua treadmill is on-site and sessions are supervised by our physiotherapy team. You do not need to travel across the city - the aqua treadmill is in Dadar. Call +91 97023 68612 to book.',
   },
   {
     question: 'How close is R3BOOT to Dadar station?',
@@ -17,7 +17,7 @@ export const aquaTherapyDadarFaqs = [
   {
     question: 'Is R3BOOT Dadar different from a regular hydrotherapy pool or spa?',
     answer:
-      'Yes. R3BOOT is a clinical recovery and physiotherapy centre. Every aqua therapy session is supervised by a qualified physiotherapist, not a gym instructor or spa attendant. Your program is prescribed based on your injury, surgical history, or condition - not a generic pool class.',
+      'Yes. R3BOOT is a clinical recovery and physiotherapy centre. Every aqua therapy session is supervised by a qualified physiotherapist, not a gym instructor or spa attendant. Your program is prescribed based on your injury, surgical history, or condition - not a generic exercise class.',
   },
   {
     question: 'What conditions does aqua therapy treat at R3BOOT Dadar?',

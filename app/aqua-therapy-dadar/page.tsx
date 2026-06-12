@@ -10,9 +10,9 @@ import AquaTherapyLocationInfo from '@/components/AquaTherapyLocationInfo'
 import { aquaTherapyDadarFaqs } from '@/lib/faqs/aqua-therapy-dadar'
 
 export const metadata: Metadata = {
-  title: 'Aqua Therapy Dadar | Pool Physiotherapy at R3BOOT Dadar East',
+  title: 'Aqua Therapy Dadar | Aqua Treadmill Physiotherapy at R3BOOT Dadar East',
   description:
-    'Aqua therapy in Dadar East at R3BOOT | physio-supervised pool rehabilitation on-site. Post-surgery, knee pain, sports injury. Walk from Dadar station. Book today.',
+    'Aqua therapy in Dadar East at R3BOOT | physio-supervised aqua treadmill rehabilitation on-site. Post-surgery, knee pain, sports injury. Walk from Dadar station. Book today.',
   alternates: { canonical: '/aqua-therapy-dadar' },
   keywords: [
     'aqua therapy dadar',
@@ -30,7 +30,7 @@ export default function AquaTherapyDadarPage() {
       <section className="relative h-[70vh] flex items-end overflow-hidden">
         <Image
           src="/images/Services_image/Hydrotherapy.webp"
-          alt="Aqua therapy pool at R3BOOT Dadar Mumbai"
+          alt="Aqua therapy aqua treadmill at R3BOOT Dadar Mumbai"
           fill
           className="object-cover"
           priority
@@ -54,7 +54,7 @@ export default function AquaTherapyDadarPage() {
               Aqua Therapy in Dadar, Mumbai
             </h1>
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl leading-relaxed font-medium mt-4">
-              R3BOOT is in Dadar East. The pool is here - not nearby, not accessible from. Physio-supervised water rehabilitation at the clinic, minutes from Dadar station.
+              R3BOOT is in Dadar East. The aqua treadmill is here - not nearby, not accessible from. Physio-supervised water rehabilitation at the clinic, minutes from Dadar station.
             </p>
           </div>
         </div>
@@ -65,8 +65,9 @@ export default function AquaTherapyDadarPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-start">
             <div className="lg:col-span-7">
               <h2 className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white mb-8 tracking-tight">
-                The Pool Is Here.{' '}
+                The Aqua Treadmill Is Here.{' '}
                 <span className="text-[#513394] dark:text-[#8B5CF6]">Walk from Dadar Station.</span>
+
               </h2>
               <div className="prose prose-xl text-gray-600 dark:text-gray-400 dark:prose-invert max-w-none leading-relaxed space-y-6">
                 <p>
@@ -76,7 +77,7 @@ export default function AquaTherapyDadarPage() {
                 </p>
                 <p>
                   Every session is supervised by a qualified physiotherapist. Your program is built around your
-                  specific condition - post-surgical timeline, injury stage, pain response - not a generic pool
+                  specific condition - post-surgical timeline, injury stage, pain response - not a generic exercise
                   class. Dadar athletes and post-op patients can stack aqua therapy with{' '}
                   <Link href="/physiotherapy-dadar-mumbai" className="text-[#513394] dark:text-[#A78BFA] font-bold hover:underline">
                     physiotherapy
@@ -91,8 +92,8 @@ export default function AquaTherapyDadarPage() {
               <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-6">
                 {[
                   {
-                    title: 'On-site pool in Dadar East',
-                    body: 'Temperature-controlled pool at R3BOOT. Not a hotel pool, not a gym pool - a physiotherapy pool.',
+                    title: 'On-site aqua treadmill in Dadar East',
+                    body: 'Temperature-controlled aqua treadmill at R3BOOT. Designed for physiotherapy - not hotel equipment, not a gym machine.',
                   },
                   {
                     title: 'Physio-supervised every session',
@@ -180,7 +181,7 @@ export default function AquaTherapyDadarPage() {
       <section className="py-24 bg-[#513394]">
         <div className="container mx-auto px-6 text-center max-w-3xl">
           <h2 className="text-4xl md:text-6xl font-black text-white mb-6">
-            Aqua Therapy in Dadar. The Pool Is Here.
+            Aqua Therapy in Dadar. The Aqua Treadmill Is Here.
           </h2>
           <p className="text-white/70 text-lg mb-10">Call or WhatsApp to book. Our physiotherapists will assess whether aqua therapy is the right starting point for your recovery.</p>
           <a
@@ -219,7 +220,7 @@ export default function AquaTherapyDadarPage() {
 
       <ServiceSchema
         serviceName="Aqua Therapy Dadar Mumbai"
-        description="Physio-supervised aqua therapy in Dadar East at R3BOOT. Pool-based rehabilitation for post-surgery recovery, sports injuries, knee pain, and arthritis. Minutes from Dadar station."
+        description="Physio-supervised aqua therapy in Dadar East at R3BOOT. Aqua treadmill rehabilitation for post-surgery recovery, sports injuries, knee pain, and arthritis. Minutes from Dadar station."
         serviceUrl="https://www.r3boot.in/aqua-therapy-dadar"
         areaServed="Dadar"
       />

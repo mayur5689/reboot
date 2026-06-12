@@ -2,7 +2,7 @@ export const aquaTherapyLowerParelFaqs = [
   {
     question: 'Is there aqua therapy near Lower Parel?',
     answer:
-      'R3BOOT in Dadar East is 5 to 10 minutes from Lower Parel by car or cab, and Dadar is one station from Lower Parel on the Central line. No physio-supervised aqua therapy pool currently operates in Lower Parel itself. R3BOOT is the closest clinical aqua therapy option for Lower Parel residents and working professionals.',
+      'R3BOOT in Dadar East is 5 to 10 minutes from Lower Parel by car or cab, and Dadar is one station from Lower Parel on the Central line. No physio-supervised aqua treadmill currently operates in Lower Parel itself. R3BOOT is the closest clinical aqua therapy option for Lower Parel residents and working professionals.',
   },
   {
     question: 'Is aqua therapy useful for gym injuries from Lower Parel?',
@@ -17,11 +17,11 @@ export const aquaTherapyLowerParelFaqs = [
   {
     question: 'Is aqua therapy good for post-surgery recovery near Lower Parel?',
     answer:
-      'Yes. Patients who have knee replacement, hip replacement, ACL repair, or spinal procedures at hospitals in the Lower Parel and Worli corridor use R3BOOT for their post-surgical aqua therapy phase. Once your surgeon clears you for pool work, our physiotherapists design a program around your specific procedure and timeline. The 5-10 minute distance from Lower Parel to Dadar makes regular sessions practical during the recovery period.',
+      'Yes. Patients who have knee replacement, hip replacement, ACL repair, or spinal procedures at hospitals in the Lower Parel and Worli corridor use R3BOOT for their post-surgical aqua therapy phase. Once your surgeon clears you for aqua treadmill sessions, our physiotherapists design a program around your specific procedure and timeline. The 5-10 minute distance from Lower Parel to Dadar makes regular sessions practical during the recovery period.',
   },
   {
     question: 'Can I combine aqua therapy with other services at R3BOOT from Lower Parel?',
     answer:
-      'Yes. R3BOOT integrates aqua therapy, land-based physiotherapy, sports massage, and clinical pilates under one roof. Lower Parel patients frequently combine aqua therapy with sports massage in a single visit - pool rehabilitation followed by soft tissue work in the same session slot. Mention this when booking and we will schedule both back to back.',
+      'Yes. R3BOOT integrates aqua therapy, land-based physiotherapy, sports massage, and clinical pilates under one roof. Lower Parel patients frequently combine aqua therapy with sports massage in a single visit - aqua treadmill rehabilitation followed by soft tissue work in the same session slot. Mention this when booking and we will schedule both back to back.',
   },
 ]

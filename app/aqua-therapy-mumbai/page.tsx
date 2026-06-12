@@ -11,9 +11,9 @@ import AquaTherapyLocationInfo from '@/components/AquaTherapyLocationInfo'
 import { aquaTherapyMumbaiFaqs } from '@/lib/faqs/aqua-therapy-mumbai'
 
 export const metadata: Metadata = {
-  title: 'Aqua Therapy Mumbai | Pool-Based Physiotherapy at R3BOOT Dadar',
+  title: 'Aqua Therapy Mumbai | Aqua Treadmill Physiotherapy at R3BOOT Dadar',
   description:
-    'Aqua therapy in Mumbai at R3BOOT | physio-supervised pool rehabilitation for sports injuries, post-surgery recovery, knee pain, and arthritis. Dadar, Mumbai. Call to book.',
+    'Aqua therapy in Mumbai at R3BOOT | physio-supervised aqua treadmill rehabilitation for sports injuries, post-surgery recovery, knee pain, and arthritis. Dadar, Mumbai. Call to book.',
   alternates: { canonical: '/aqua-therapy-mumbai' },
   keywords: [
     'aqua therapy Mumbai',
@@ -35,7 +35,7 @@ const whatItHelps = [
   {
     title: 'Post-surgical rehabilitation',
     description:
-      'Knee replacement, hip replacement, ACL repair, and shoulder surgery all benefit from early pool-based movement. Water reduces joint load by up to 75%, allowing physiotherapy exercises weeks before land-based work is possible.',
+      'Knee replacement, hip replacement, ACL repair, and shoulder surgery all benefit from early aqua treadmill rehabilitation. Water reduces joint load by up to 75%, allowing physiotherapy exercises weeks before land-based work is possible.',
   },
   {
     title: 'Sports injury recovery',
@@ -69,18 +69,18 @@ const howItWorks = [
   },
   {
     title: 'Controlled temperature supports tissue recovery',
-    body: 'Warm water relaxes muscle spasm, improves circulation to healing tissue, and reduces pain perception before exercise begins. Our pool temperature is maintained at therapeutic range for recovery-focused sessions.',
+    body: 'Warm water relaxes muscle spasm, improves circulation to healing tissue, and reduces pain perception before exercise begins. Our aqua treadmill chamber temperature is maintained at therapeutic range for recovery-focused sessions.',
   },
 ]
 
 const protocol = [
   {
     title: 'Initial assessment and clearance',
-    body: 'Your physiotherapist reviews your injury, surgical history, current pain levels, and medical background. We confirm aqua therapy is appropriate for your stage of recovery before any pool work begins.',
+    body: 'Your physiotherapist reviews your injury, surgical history, current pain levels, and medical background. We confirm aqua therapy is appropriate for your stage of recovery before any aqua treadmill sessions begin.',
   },
   {
-    title: 'Pool acclimatisation',
-    body: 'Your first entry into the pool is gradual. We ensure you are comfortable with the water depth, temperature, and environment before beginning therapeutic movement. No swimming ability is required.',
+    title: 'Aqua treadmill acclimatisation',
+    body: 'Your first session on the aqua treadmill is gradual. We ensure you are comfortable with the water level, temperature, and environment before beginning therapeutic movement. No swimming ability is required.',
   },
   {
     title: 'Supervised therapeutic exercise',
@@ -100,7 +100,7 @@ export default function AquaTherapyMumbaiPage() {
       <section className="relative h-[70vh] flex items-end overflow-hidden">
         <Image
           src="/images/Services_image/Hydrotherapy.webp"
-          alt="Aqua therapy pool at R3BOOT Mumbai, physio-supervised water-based rehabilitation"
+          alt="Aqua therapy aqua treadmill at R3BOOT Mumbai, physio-supervised water-based rehabilitation"
           fill
           className="object-cover"
           priority
@@ -127,10 +127,10 @@ export default function AquaTherapyMumbaiPage() {
               <div className="w-1.5 h-1.5 rounded-full bg-white/50" />
             </div>
             <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black text-white mb-2 tracking-tighter leading-[1.05]">
-              Aqua Therapy in Mumbai | Pool-Based Physiotherapy at R3BOOT
+              Aqua Therapy in Mumbai | Aqua Treadmill Physiotherapy at R3BOOT
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl text-white/80 max-w-3xl leading-relaxed font-medium mt-4">
-              Water-based rehabilitation supervised by physiotherapists. Post-surgery, sports injury, knee pain, and arthritis recovery - in a temperature-controlled pool at R3BOOT, Dadar.
+              Water-based rehabilitation supervised by physiotherapists. Post-surgery, sports injury, knee pain, and arthritis recovery - on a temperature-controlled aqua treadmill at R3BOOT, Dadar.
             </p>
           </div>
         </div>
@@ -156,7 +156,7 @@ export default function AquaTherapyMumbaiPage() {
                 </p>
                 <p>
                   At R3BOOT, aqua therapy is prescribed and supervised by our physiotherapy team. Sessions are
-                  built around your specific injury or surgical history, not a generic pool class. We use the
+                  built around your specific injury or surgical history, not a generic exercise class. We use the
                   properties of water - buoyancy, hydrostatic pressure, resistance, and temperature - as clinical
                   tools, adjusting each variable to match your recovery stage.
                 </p>
@@ -238,7 +238,7 @@ export default function AquaTherapyMumbaiPage() {
             <div className="relative rounded-[2.5rem] overflow-hidden aspect-[4/5] w-full shadow-2xl">
               <Image
                 src="/images/Services_image/Hydrotherapy.webp"
-                alt="Aqua therapy pool session at R3BOOT Mumbai physiotherapy"
+                alt="Aqua therapy treadmill session at R3BOOT Mumbai physiotherapy"
                 fill
                 className="object-cover"
               />
@@ -360,7 +360,7 @@ export default function AquaTherapyMumbaiPage() {
               </h2>
               <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed mb-10">
                 A standard aqua therapy session is 45 to 60 minutes. Your physiotherapist is with you throughout - in
-                or beside the pool - adjusting the program in real time based on your pain response and movement quality.
+                or beside the aqua treadmill - adjusting the program in real time based on your pain response and movement quality.
                 No swimming ability is required.
               </p>
               <div className="space-y-6">
@@ -616,7 +616,7 @@ export default function AquaTherapyMumbaiPage() {
 
       <ServiceSchema
         serviceName="Aqua Therapy in Mumbai"
-        description="Pool-based aquatic physiotherapy for sports injury rehabilitation, post-surgical recovery, knee pain, arthritis, and lower back pain. Supervised by physiotherapists at R3BOOT, Dadar, Mumbai."
+        description="Aqua treadmill physiotherapy for sports injury rehabilitation, post-surgical recovery, knee pain, arthritis, and lower back pain. Supervised by physiotherapists at R3BOOT, Dadar, Mumbai."
         serviceUrl="https://www.r3boot.in/aqua-therapy-mumbai"
         areaServed="Mumbai"
       />
