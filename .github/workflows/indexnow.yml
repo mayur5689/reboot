@@ -5,7 +5,7 @@ on:
 
 jobs:
   ping-indexnow:
-    if: github.event.deployment_status.state == 'success' && github.event.deployment_status.environment == 'Production'
+    if: github.event.deployment_status.state == 'success'
     runs-on: ubuntu-latest
     steps:
       - name: Submit all URLs to IndexNow
