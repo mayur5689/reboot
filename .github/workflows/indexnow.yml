@@ -1,11 +1,12 @@
 name: Ping IndexNow after deploy
 
 on:
-  deployment_status:
+  repository_dispatch:
+    types:
+      - 'vercel.deployment.success'
 
 jobs:
   ping-indexnow:
-    if: github.event.deployment_status.state == 'success'
     runs-on: ubuntu-latest
     steps:
       - name: Submit all URLs to IndexNow
