@@ -1,0 +1,15 @@
+name: Ping IndexNow after deploy
+
+on:
+  deployment_status:
+
+jobs:
+  ping-indexnow:
+    if: github.event.deployment_status.state == 'success' && github.event.deployment_status.environment == 'Production'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Submit all URLs to IndexNow
+        run: |
+          curl -X POST https://www.r3boot.in/api/indexnow \
+            -H "Content-Type: application/json" \
+            -H "x-indexnow-secret: ${{ secrets.INDEXNOW_SECRET }}"
