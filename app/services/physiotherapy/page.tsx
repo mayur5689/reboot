@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     title: 'Physiotherapy in Mumbai | R3BOOT Dadar – Clinical Care',
     description: 'Clinical physiotherapy in Mumbai by certified specialists. Back pain, knee pain, sports injuries, post-surgery rehab. Dadar location, accessible from Andheri, Thane & Bandra.',
     keywords: ['physiotherapy clinic in mumbai', 'physiotherapy dadar', 'sports physiotherapy mumbai', 'physiotherapy for back pain mumbai', 'physiotherapy for knee pain mumbai', 'physiotherapy near me mumbai'],
+    alternates: { canonical: '/services/physiotherapy' },
 }
 
 const otherServices = services.filter(s => s.slug !== 'physiotherapy').slice(0, 4)
@@ -74,7 +75,7 @@ export default function PhysiotherapyPage() {
                             <div className="prose prose-xl text-gray-600 dark:text-gray-400 dark:prose-invert max-w-none leading-relaxed space-y-6">
                                 <p>
                                     Most physiotherapy in Mumbai is reactive. You arrive in pain, get treated for the symptom, and return when it comes back.
-                                    At R3BOOT, physiotherapy is built around a different philosophy. Every session begins with understanding why the problem exists — not just where it hurts. Treatment is structured, progressive, and connected to your actual goals.
+                                    At R3BOOT, physiotherapy is built around a different philosophy. Every session begins with understanding why the problem exists, not just where it hurts. Treatment is structured, progressive, and connected to your actual goals.
                                 </p>
                                 <p>
                                     Located in Dadar, central Mumbai, R3BOOT is an integrated performance recovery center. Our physiotherapy team works directly alongside sports massage therapists, recovery specialists, and rehabilitation equipment to deliver outcomes that a standalone clinic cannot replicate.
@@ -91,8 +92,8 @@ export default function PhysiotherapyPage() {
                                     {[
                                         { title: "Initial Assessment", description: "Comprehensive review of your history, movement patterns, strength, flexibility, and the specific mechanisms contributing to your symptoms. No treatment is applied until the assessment is complete." },
                                         { title: "Treatment Plan", description: "Based on the assessment, a structured plan is built with clear goals, expected timelines, and session frequency. You leave the first session knowing exactly what the problem is and what the path forward looks like." },
-                                        { title: "Treatment Sessions", description: "Each session combines hands-on treatment with progressive exercise work. Our treatment methods are selected and adjusted based on how you are responding — sessions evolve as your condition improves.", link: "#treatment-methods", linkText: "treatment methods" },
-                                        { title: "Integration with Recovery", description: "For athletes and high-load patients, physiotherapy sessions can be combined with sports massage, ice bath, and red light therapy within the same visit — not available at a standalone clinic." },
+                                        { title: "Treatment Sessions", description: "Each session combines hands-on treatment with progressive exercise work. Our treatment methods are selected and adjusted based on how you are responding, sessions evolve as your condition improves.", link: "#treatment-methods", linkText: "treatment methods" },
+                                        { title: "Integration with Recovery", description: "For athletes and high-load patients, physiotherapy sessions can be combined with sports massage, ice bath, and infrared sauna within the same visit | not available at a standalone clinic." },
                                         { title: "Clinical Pilates for Strengthening", description: "Where appropriate, clinical Pilates is integrated to build core stability, improve control, and support long-term strength. Mat and equipment-based options are used based on your assessment and goals." },
                                         { title: "Discharge & Maintenance", description: "When clinical goals are met, you leave with a clear maintenance program and an understanding of what patterns to monitor. The goal is independence from treatment, not ongoing dependency on sessions." },
                                     ].map((step, idx) => (
@@ -153,12 +154,12 @@ export default function PhysiotherapyPage() {
                                     ))}
                                 </ul>
                                 <a
-                                    href="https://www.practo.com/mumbai/clinic/r3-boot-spoorts-therapy-dadar-east/doctors"
+                                    href="tel:+919702368612"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="block text-center bg-[#513394] text-white font-black px-8 py-5 rounded-2xl transition-all hover:scale-[1.02] shadow-xl text-lg group-hover:bg-[#603eb0]"
                                 >
-                                    Book This Service
+                                    Call to Book
                                 </a>
                             </div>
                         </div>
@@ -185,7 +186,7 @@ export default function PhysiotherapyPage() {
                                     MANUAL THERAPY //
                                 </span>
                                 <p className="text-white text-xl font-black tracking-tight leading-tight">
-                                    Dr. Nirmal Solanki — 20+ Years Clinical Experience
+                                    Dr. Hiral Parikh, Lead Physiotherapist | 15+ Years Clinical Experience
                                 </p>
                             </div>
                         </div>
@@ -199,14 +200,14 @@ export default function PhysiotherapyPage() {
                                 Treatment Methods at <span className="text-[#513394] dark:text-[#8B5CF6]">R3BOOT</span>
                             </h2>
                             <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed mb-10">
-                                Techniques are selected based on your assessment findings — not a default protocol applied to every patient.
+                                Techniques are selected based on your assessment findings, not a default protocol applied to every patient.
                             </p>
 
                             <div className="space-y-6">
                                 {[
                                     {
                                         title: "Manual Therapy",
-                                        body: "Joint mobilisation, manipulation, and soft tissue work. Nirmal's advanced osteopathic training allows application at a clinical level beyond standard physiotherapy practice — effective for back pain, neck stiffness, joint restrictions, and post-surgical recovery."
+                                        body: "Joint mobilisation, manipulation, and soft tissue work. As Lead Physiotherapist, Dr. Parikh applies advanced manual techniques within structured, evidence-based protocols, effective for back pain, neck stiffness, joint restrictions, and post-surgical recovery."
                                     },
                                     {
                                         title: "Dry Needling",
@@ -222,7 +223,7 @@ export default function PhysiotherapyPage() {
                                     },
                                     {
                                         title: "Postural & Movement Assessment",
-                                        body: "Comprehensive analysis of movement patterns, load distribution, and compensatory habits. The foundation of all treatment at R3BOOT — understanding why a problem exists is the only way to resolve it structurally."
+                                        body: "Comprehensive analysis of movement patterns, load distribution, and compensatory habits. The foundation of all treatment at R3BOOT, understanding why a problem exists is the only way to resolve it structurally."
                                     },
                                 ].map((tech, idx) => (
                                     <div key={idx} className="flex gap-5 group">
@@ -375,12 +376,12 @@ export default function PhysiotherapyPage() {
 
                     <div className="text-center mt-12">
                         <a
-                            href="https://www.practo.com/mumbai/clinic/r3-boot-spoorts-therapy-dadar-east/doctors"
+                            href="tel:+919702368612"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex items-center gap-3 bg-[#513394] text-white font-bold px-10 py-4 rounded-full hover:bg-[#412975] transition-all shadow-xl shadow-[#513394]/20 hover:scale-105"
                         >
-                            Book a Consultation
+                            Call to Book
                             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                             </svg>
@@ -420,14 +421,14 @@ export default function PhysiotherapyPage() {
                             {
                                 sport: "Cricketers",
                                 tag: "CRICKET //",
-                                description: "Rotator cuff injuries, lumbar asymmetry from bowling mechanics, forearm and elbow overuse, and hamstring strain risk — sports-specific rehabilitation aligned with your sport's demands.",
+                                description: "Rotator cuff injuries, lumbar asymmetry from bowling mechanics, forearm and elbow overuse, and hamstring strain risk, sports-specific rehabilitation aligned with your sport's demands.",
                                 image: "https://images.unsplash.com/photo-1531415074968-036ba1b575da?auto=format&fit=crop&w=800&q=80",
                                 points: ["Rotator cuff injuries", "Lumbar asymmetry", "Elbow overuse"],
                             },
                             {
                                 sport: "Corporate Professionals",
                                 tag: "DESK + TRAINING //",
-                                description: "Thoracic stiffness, neck pain, lumbar compression, and piriformis syndrome that accumulates quietly over months — physiotherapy addresses the desk load and training load as a single connected problem.",
+                                description: "Thoracic stiffness, neck pain, lumbar compression, and piriformis syndrome that accumulates quietly over months, physiotherapy addresses the desk load and training load as a single connected problem.",
                                 image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80",
                                 points: ["Neck & thoracic stiffness", "Lumbar compression", "Piriformis syndrome"],
                             },
@@ -495,17 +496,17 @@ export default function PhysiotherapyPage() {
                         </p>
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
                             <a
-                                href="https://www.practo.com/mumbai/clinic/r3-boot-spoorts-therapy-dadar-east/doctors"
+                                href="tel:+919702368612"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="w-full sm:w-auto bg-white text-[#513394] font-black px-10 py-5 rounded-full transition-all hover:scale-105 shadow-2xl text-lg tracking-wide"
                             >
-                                Book Your Session
+                                Call to Book
                             </a>
                             <a
                                 href="https://wa.me/919702368612"
                                 target="_blank"
-                                rel="noopener noreferrer"
+                                rel="nofollow noopener noreferrer"
                                 className="w-full sm:w-auto border-2 border-white/30 text-white font-bold px-10 py-5 rounded-full transition-all hover:bg-white/10 text-lg tracking-wide"
                             >
                                 WhatsApp Us
@@ -566,6 +567,25 @@ export default function PhysiotherapyPage() {
                                 </div>
                             </Link>
                         ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* From Our Blog */}
+            <section className="py-16 bg-white dark:bg-[#0A0A0A]">
+                <div className="container mx-auto px-6 lg:px-8 max-w-4xl">
+                    <h2 className="text-2xl font-black text-gray-900 dark:text-white mb-8">From Our Blog</h2>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <Link href="/blog/posture-workout-better-alignment" className="group p-6 bg-gray-50 dark:bg-white/5 rounded-[2rem] border border-gray-100 dark:border-white/10 hover:border-[#513394]/40 transition-all">
+                            <p className="text-xs font-black tracking-widest text-[#513394] uppercase mb-2">Physiotherapy</p>
+                            <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-[#513394] transition-colors">Posture Workout for Better Alignment</h3>
+                            <span className="text-sm text-gray-500 dark:text-gray-400 mt-2 inline-block">Read article →</span>
+                        </Link>
+                        <Link href="/blog/cat-cow-stretch-back-pain-relief" className="group p-6 bg-gray-50 dark:bg-white/5 rounded-[2rem] border border-gray-100 dark:border-white/10 hover:border-[#513394]/40 transition-all">
+                            <p className="text-xs font-black tracking-widest text-[#513394] uppercase mb-2">Back Pain</p>
+                            <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-[#513394] transition-colors">Cat-Cow Stretch for Back Pain Relief</h3>
+                            <span className="text-sm text-gray-500 dark:text-gray-400 mt-2 inline-block">Read article →</span>
+                        </Link>
                     </div>
                 </div>
             </section>

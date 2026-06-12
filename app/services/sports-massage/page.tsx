@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     title: 'Sports Massage in Mumbai | R3BOOT Dadar',
     description: 'Clinical sports massage in Mumbai by certified specialists. Serving athletes in Dadar, Andheri, Thane & Bandra. Book at R3BOOT Recovery Center.',
     keywords: ['sports massage mumbai', 'sports massage dadar', 'deep tissue sports massage mumbai', 'sports massage therapist mumbai', 'sports recovery massage', 'sports massage near me mumbai'],
+    alternates: { canonical: '/services/sports-massage' },
 }
 
 const otherServices = services.filter(s => s.slug !== 'sports-massage').slice(0, 4)
@@ -75,11 +76,11 @@ export default function SportsMassagePage() {
                                 <p>
                                     Most sports massage in Mumbai is performed by spa therapists trained in general relaxation techniques.
                                     At R3BOOT, it is performed by a certified sports massage specialist with hands-on experience across 1,000+ athletes and active individuals.
-                                    The difference is not subtle — it is the difference between feeling temporarily relaxed and actually recovering.
+                                    The difference is not subtle, it is the difference between feeling temporarily relaxed and actually recovering.
                                 </p>
                                 <p>
                                     Located in Dadar, central Mumbai, accessible from Andheri, Thane, Bandra, and Navi Mumbai, R3BOOT is an integrated performance recovery center.
-                                    Sports massage here is one part of a structured recovery ecosystem that includes physiotherapy, ice bath therapy, red light therapy, and compression recovery.
+                                    Sports massage here is one part of a structured recovery ecosystem that includes physiotherapy, ice bath therapy, infrared sauna, and compression recovery.
                                 </p>
                             </div>
 
@@ -93,8 +94,8 @@ export default function SportsMassagePage() {
                                     {[
                                         { title: "Pre-Session Assessment", description: "Therapist reviews training load, pain location, sleep, and hydration. A movement screen sets the session goal before any bodywork begins." },
                                         { title: "Warm-Up Phase", description: "Light effleurage and rhythmic strokes increase tissue temperature and prepare the nervous system for targeted work." },
-                                        { title: "Targeted Treatment", description: "Deep tissue, trigger point therapy, and myofascial release based on your assessment — not a generic routine." },
-                                        { title: "Sports Massage Cupping", description: "Cupping is applied where indicated to improve blood flow, reduce tension, and support recovery — integrated into your session when assessment calls for it." },
+                                        { title: "Targeted Treatment", description: "Deep tissue, trigger point therapy, and myofascial release based on your assessment | not a generic routine." },
+                                        { title: "Sports Massage Cupping", description: "Cupping is applied where indicated to improve blood flow, reduce tension, and support recovery | integrated into your session when assessment calls for it." },
                                         { title: "Activation & Advice", description: "Assisted stretching, PNF, and muscle activation finish each session. Recovery protocol and home drills are given before you leave." },
                                     ].map((step, idx) => (
                                         <div key={idx} className="bg-white dark:bg-white/5 p-8 rounded-[2.5rem] border border-gray-100 dark:border-white/5 shadow-sm hover:shadow-xl group transition-all duration-500 relative overflow-hidden">
@@ -141,12 +142,12 @@ export default function SportsMassagePage() {
                                     ))}
                                 </ul>
                                 <a
-                                    href="https://www.practo.com/mumbai/clinic/r3-boot-spoorts-therapy-dadar-east/doctors"
+                                    href="tel:+919702368612"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="block text-center bg-[#513394] text-white font-black px-8 py-5 rounded-2xl transition-all hover:scale-[1.02] shadow-xl text-lg group-hover:bg-[#603eb0]"
                                 >
-                                    Book This Service
+                                    Call to Book
                                 </a>
                             </div>
                         </div>
@@ -173,7 +174,7 @@ export default function SportsMassagePage() {
                                     CUPPING THERAPY //
                                 </span>
                                 <p className="text-white text-xl font-black tracking-tight leading-tight">
-                                    Certified Level 1 & 2 — Akshay Anil Nalawde
+                                    Certified Level 1 & 2, Akshay Anil Nalawde
                                 </p>
                             </div>
                         </div>
@@ -198,11 +199,11 @@ export default function SportsMassagePage() {
                                     },
                                     {
                                         title: "Trigger Point Therapy",
-                                        body: "Addresses localised knots and referred pain patterns. A common example: calf trigger points that present as heel pain. Releasing the source — not just treating the symptom — is what produces lasting results."
+                                        body: "Addresses localised knots and referred pain patterns. A common example: calf trigger points that present as heel pain. Releasing the source, not just treating the symptom, is what produces lasting results."
                                     },
                                     {
                                         title: "Myofascial Release",
-                                        body: "Targets the fascial system surrounding muscles. Restrictions here cause postural issues and limit range of motion in ways deep tissue work alone cannot resolve — especially relevant for desk workers and athletes with repetitive movement demands."
+                                        body: "Targets the fascial system surrounding muscles. Restrictions here cause postural issues and limit range of motion in ways deep tissue work alone cannot resolve, especially relevant for desk workers and athletes with repetitive movement demands."
                                     },
                                     {
                                         title: "Cupping Therapy (Level 1 & 2 Certified)",
@@ -284,7 +285,7 @@ export default function SportsMassagePage() {
                                 Sports Massage for Women – <span className="text-[#513394] dark:text-[#8B5CF6]">With Vaishali Sonar</span>
                             </h2>
                             <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed mb-4">
-                                Most sports massage in Mumbai is not adapted for female physiology. Pressure, technique selection, and recovery protocols built around male athletes do not automatically translate to women — especially those managing training load, hormonal cycles, or sport-specific injury patterns.
+                                Most sports massage in Mumbai is not adapted for female physiology. Pressure, technique selection, and recovery protocols built around male athletes do not automatically translate to women, especially those managing training load, hormonal cycles, or sport-specific injury patterns.
                             </p>
                             <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed mb-10">
                                 At R3BOOT, female clients are treated by Vaishali Sonar, a certified sports massage therapist with cupping therapy certification at Level 1 and 2, and hands-on experience working with both competitive players and the general population.
@@ -332,7 +333,7 @@ export default function SportsMassagePage() {
                                     WOMEN&apos;S SPORTS MASSAGE //
                                 </span>
                                 <p className="text-white text-xl font-black tracking-tight leading-tight">
-                                    Vaishali Sonar — Cupping Certified Level 1 & 2
+                                    Vaishali Sonar, Cupping Certified Level 1 & 2
                                 </p>
                             </div>
                         </div>
@@ -353,13 +354,13 @@ export default function SportsMassagePage() {
                         </h2>
                     </div>
 
-                    {/* 2x2 grid on desktop — image-background cards */}
+                    {/* 2x2 grid on desktop: image-background cards */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                         {[
                             {
                                 sport: "Runners",
                                 tag: "RUNNING //",
-                                description: "Calf tightness, plantar fascia pain, hamstring overload, and hip flexor stiffness — especially common in Mumbai runners who sit at a desk all day before evening runs.",
+                                description: "Calf tightness, plantar fascia pain, hamstring overload, and hip flexor stiffness | especially common in Mumbai runners who sit at a desk all day before evening runs.",
                                 image: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=800&q=80",
                                 points: ["Calf & plantar fascia", "Hamstring overload", "Hip flexor release"],
                             },
@@ -397,7 +398,7 @@ export default function SportsMassagePage() {
                                     className="object-cover transition-transform duration-700 group-hover:scale-105"
                                 />
 
-                                {/* Base gradient — always visible */}
+                                {/* Base gradient: always visible */}
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/10" />
 
                                 {/* Hover tint */}
@@ -449,17 +450,17 @@ export default function SportsMassagePage() {
                         </p>
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
                             <a
-                                href="https://www.practo.com/mumbai/clinic/r3-boot-spoorts-therapy-dadar-east/doctors"
+                                href="tel:+919702368612"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="w-full sm:w-auto bg-white text-[#513394] font-black px-10 py-5 rounded-full transition-all hover:scale-105 shadow-2xl text-lg tracking-wide"
                             >
-                                Book Your Session
+                                Call to Book
                             </a>
                             <a
                                 href="https://wa.me/919702368612"
                                 target="_blank"
-                                rel="noopener noreferrer"
+                                rel="nofollow noopener noreferrer"
                                 className="w-full sm:w-auto border-2 border-white/30 text-white font-bold px-10 py-5 rounded-full transition-all hover:bg-white/10 text-lg tracking-wide"
                             >
                                 WhatsApp Us
@@ -520,6 +521,25 @@ export default function SportsMassagePage() {
                                 </div>
                             </Link>
                         ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* From Our Blog + Related Guides */}
+            <section className="py-16 bg-white dark:bg-[#0A0A0A]">
+                <div className="container mx-auto px-6 lg:px-8 max-w-4xl">
+                    <h2 className="text-2xl font-black text-gray-900 dark:text-white mb-8">From Our Blog</h2>
+                    <div className="flex flex-wrap gap-6">
+                        <Link href="/blog/sports-massage-before-after-marathon" className="group p-6 bg-gray-50 dark:bg-white/5 rounded-[2rem] border border-gray-100 dark:border-white/10 hover:border-[#513394]/40 transition-all flex-1 min-w-[240px] max-w-md">
+                            <p className="text-xs font-black tracking-widest text-[#513394] uppercase mb-2">Sports Massage</p>
+                            <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-[#513394] transition-colors">Sports Massage Before & After a Marathon</h3>
+                            <span className="text-sm text-gray-500 dark:text-gray-400 mt-2 inline-block">Read article →</span>
+                        </Link>
+                        <Link href="/sports-massage-runners-mumbai" className="group p-6 bg-gray-50 dark:bg-white/5 rounded-[2rem] border border-gray-100 dark:border-white/10 hover:border-[#513394]/40 transition-all flex-1 min-w-[240px] max-w-md">
+                            <p className="text-xs font-black tracking-widest text-[#513394] uppercase mb-2">Runner's Guide</p>
+                            <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-[#513394] transition-colors">Sports Massage for Runners in Mumbai</h3>
+                            <span className="text-sm text-gray-500 dark:text-gray-400 mt-2 inline-block">See specialist page →</span>
+                        </Link>
                     </div>
                 </div>
             </section>

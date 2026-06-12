@@ -1,0 +1,664 @@
+{
+  "_id": "drafts.hyrox-mumbai-2026-recovery-guide",
+  "_type": "post",
+  "title": "HYROX Mumbai 2026 Recovery Guide: What to Do Before and After Race Day",
+  "slug": {
+    "_type": "slug",
+    "current": "hyrox-mumbai-2026-recovery-guide"
+  },
+  "metaDescription": "HYROX Mumbai 2026 recovery plan, station-by-station muscle load, race-week timing, and what actually helps sore legs in Mumbai heat. Physio-backed guide from R3BOOT.",
+  "excerpt": "HYROX Mumbai lands 18–20 September 2026 at NESCO Goregaon. Here is a practical recovery timeline, what to do in the final week, race day, and the four days after, without guessing.",
+  "author": {
+    "_type": "reference",
+    "_ref": "9e2dceac-e211-479e-a626-6ac189b0ec19"
+  },
+  "categories": [
+    {
+      "_type": "reference",
+      "_ref": "e6247743-ad0d-4c08-a2f0-1de463aec6f7"
+    },
+    {
+      "_type": "reference",
+      "_ref": "363aaf3d-a61c-4184-9c5b-40a4531eb7a7"
+    }
+  ],
+  "publishedAt": "2026-05-19T10:00:00.000Z",
+  "body": [
+    {
+      "_type": "block",
+      "_key": "khzozm5m9c",
+      "style": "normal",
+      "children": [
+        {
+          "_type": "span",
+          "_key": "w4ek2f3mw7",
+          "text": "HYROX Mumbai 2026 is set for 18–20 September at NESCO Centre, Goregaon. If you are training for it, or eyeing a Delhi or Pune race first, recovery is not something you figure out after you cannot walk downstairs. This guide maps what actually gets sore, when to pull back, and what helps in Mumbai heat and humidity.",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "fyfrv3s637",
+      "style": "normal",
+      "children": [
+        {
+          "_type": "span",
+          "_key": "31t06itcdmt",
+          "text": "We work with hybrid athletes at R3BOOT Dadar every week. This is the protocol we use when someone has a multi-station race on the calendar, not generic “rest and stretch” advice.",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "ts36c9qykf",
+      "style": "h2",
+      "children": [
+        {
+          "_type": "span",
+          "_key": "kpgcufcyiun",
+          "text": "What HYROX does to your body",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "xd0a68hk7m",
+      "style": "normal",
+      "children": [
+        {
+          "_type": "span",
+          "_key": "4gxzxj5q3t4",
+          "text": "HYROX is eight 1 km runs broken up by functional stations. The load is repetitive and full-body, but certain muscles take a disproportionate hit:",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "h8mkp0f9lac",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "children": [
+        {
+          "_type": "span",
+          "_key": "1rx2coyfhjv",
+          "text": "Ski erg, lats, triceps, core bracing; grip fatigue shows up late in the race",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "7zendet4g6a",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "children": [
+        {
+          "_type": "span",
+          "_key": "2pqypo6e3qa",
+          "text": "Sled push / pull, quads, glutes, calves; eccentric load on push, posterior chain on pull",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "mjt9yjrkp0m",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "children": [
+        {
+          "_type": "span",
+          "_key": "cy3op9kwerf",
+          "text": "Burpee broad jumps, chest, hip flexors, quads; heart rate spikes here",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "gvxq53yjvbt",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "children": [
+        {
+          "_type": "span",
+          "_key": "706ygdt732g",
+          "text": "Rowing, hamstrings, mid-back, grip again",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "itlk83p632",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "children": [
+        {
+          "_type": "span",
+          "_key": "wkbyp30b9no",
+          "text": "Farmers carry, traps, forearms, obliques; posture matters more than people expect",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "mgj81zywh0s",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "children": [
+        {
+          "_type": "span",
+          "_key": "hfpjqsbfjhm",
+          "text": "Sandbag lunges, quads and glutes under load; knee tracking breaks down when tired",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "xpv0ceoxojd",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s175n10ze7n",
+          "text": "Wall balls, shoulders, quads, cardiovascular peak; where races are often won or lost",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "p7pchw8he6",
+      "style": "normal",
+      "children": [
+        {
+          "_type": "span",
+          "_key": "2mlapnn2vv6",
+          "text": "Research on mixed-modal racing shows DOMS peaks 48–72 hours after unfamiliar eccentric work, sled and lunges qualify for most people. Plan your week accordingly.",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "covslxfc4e6",
+      "style": "h2",
+      "children": [
+        {
+          "_type": "span",
+          "_key": "6vmronep15o",
+          "text": "4 weeks out: build capacity, not fatigue",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "ok3t9xz9a4r",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "children": [
+        {
+          "_type": "span",
+          "_key": "yqfadsj3p39",
+          "text": "Run one full simulation (or half-distance station practice) every 7–10 days max",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "uw2pgdo2dkq",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "children": [
+        {
+          "_type": "span",
+          "_key": "jnnp4u58zvd",
+          "text": "Keep one easy run day between hard station sessions, Mumbai humidity makes back-to-back hard days costly",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "tqbf7rcs6b",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "children": [
+        {
+          "_type": "span",
+          "_key": "g2jxisa0fb9",
+          "text": "Add sports massage every 10–14 days focused on quads, calves, and lats, not a spa-style full body",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "xijq3v8rho",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "children": [
+        {
+          "_type": "span",
+          "_key": "68eqrhjlur",
+          "text": "Practice nasal breathing and cold exposure if you plan contrast therapy post-race; first ice bath on race week is a bad idea",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "mbpwty70lhl",
+      "style": "h2",
+      "children": [
+        {
+          "_type": "span",
+          "_key": "qoxdwxie24",
+          "text": "Race week: taper rules",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "0g6a9na6giv6",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "children": [
+        {
+          "_type": "span",
+          "_key": "nm3f1x3aqzq",
+          "text": "T-7 to T-5: last heavy sled or wall ball session; cut sets by 30%",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "5kmgcyq6t5",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "children": [
+        {
+          "_type": "span",
+          "_key": "rt2oycjtien",
+          "text": "T-4 to T-3: 20–30 min easy run + mobility only",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "m975tysvmgo",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "children": [
+        {
+          "_type": "span",
+          "_key": "8zt06zmc90d",
+          "text": "T-2: walk, light spin, or rest; hydrate aggressively, you lose more fluid in Mumbai than you feel",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "5vuzsfiknm6",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "children": [
+        {
+          "_type": "span",
+          "_key": "b2gcwg4hpb",
+          "text": "T-1: no training. Pack race kit, prep nutrition, sleep 7+ hours",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "4ihq6bl5snh",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "children": [
+        {
+          "_type": "span",
+          "_key": "xqekmps5f9",
+          "text": "Race morning: dynamic warm-up only, leg swings, band work, 5 min row; skip static stretching",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "nryfxs0rpkj",
+      "style": "h2",
+      "children": [
+        {
+          "_type": "span",
+          "_key": "jcgioskl3ao",
+          "text": "Race day recovery (hour 0–6)",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "kgyvl47s57",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "children": [
+        {
+          "_type": "span",
+          "_key": "jgxawgv3wdo",
+          "text": "0–30 min: walk 10 min, do not sit immediately; electrolytes + carbs within 30 min",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "7d7aholmbx3",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "children": [
+        {
+          "_type": "span",
+          "_key": "sfxteu40h0h",
+          "text": "30–120 min: light food, compression socks optional, elevate legs 15 min if swollen",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "cn1poqfckz9",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "children": [
+        {
+          "_type": "span",
+          "_key": "bz0e6c47syi",
+          "text": "2–6 hours: contrast shower at home (2 min warm / 1 min cool × 3) if no clinic visit; avoid deep tissue massage same day",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "cxtzywg8l5b",
+      "style": "h2",
+      "children": [
+        {
+          "_type": "span",
+          "_key": "7ccj1s6o50j",
+          "text": "Days 1–4 after HYROX",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "b61yq40ohmp",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "children": [
+        {
+          "_type": "span",
+          "_key": "i3sa8yv5ee8",
+          "text": "Day 1: walk 20–30 min, foam roll calves and quads, gentle only",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "gl3ljk8dqed",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "children": [
+        {
+          "_type": "span",
+          "_key": "d1x3m3pz33",
+          "text": "Day 2: peak soreness for many athletes; sports massage or physio assessment if limping",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "atwueyshc3g",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "children": [
+        {
+          "_type": "span",
+          "_key": "ksvpynhud8k",
+          "text": "Day 3: contrast therapy or supervised ice bath, vascular flush helps when DOMS is highest",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "8jhd8dh9jw",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "children": [
+        {
+          "_type": "span",
+          "_key": "jlq17c7f26",
+          "text": "Day 4: easy spin or swim; reintroduce movement before loading again",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "67np0fsk3ss",
+      "style": "normal",
+      "children": [
+        {
+          "_type": "span",
+          "_key": "yo0z4liuqk8",
+          "text": "For a supervised session in Mumbai, see our ",
+          "marks": []
+        },
+        {
+          "_type": "span",
+          "_key": "4siuh3lmwtk",
+          "text": "contrast therapy page",
+          "marks": [
+            "mwwurt5jk3k"
+          ]
+        },
+        {
+          "_type": "span",
+          "_key": "f9ag3ipfhyt",
+          "text": " (Full Cycle recommended post-race) or ",
+          "marks": []
+        },
+        {
+          "_type": "span",
+          "_key": "ovcjab0odq",
+          "text": "sports massage for athletes",
+          "marks": [
+            "h88qo0o6adq"
+          ]
+        },
+        {
+          "_type": "span",
+          "_key": "xuefm812q2",
+          "text": " for station-specific leg work.",
+          "marks": []
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "mwwurt5jk3k",
+          "_type": "link",
+          "href": "https://www.r3boot.in/contrast-therapy-mumbai"
+        },
+        {
+          "_key": "h88qo0o6adq",
+          "_type": "link",
+          "href": "https://www.r3boot.in/sports-massage-mumbai"
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "9xo84agd1ji",
+      "style": "h2",
+      "children": [
+        {
+          "_type": "span",
+          "_key": "2w9w6egf2i6",
+          "text": "When to see a physiotherapist",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "076psmisk7qn",
+      "style": "normal",
+      "children": [
+        {
+          "_type": "span",
+          "_key": "7dfwhet5zih",
+          "text": "Normal post-HYROX soreness is diffuse and bilateral. Book a physio assessment if you have sharp single-joint pain, swelling that does not settle in 48 hours, numbness, or pain that changes your gait after day 4. Early intervention beats training through a stress fracture or rotator cuff flare.",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "0cyonup2pimg",
+      "style": "normal",
+      "children": [
+        {
+          "_type": "span",
+          "_key": "ah39axbydce",
+          "text": "Last updated May 2026. Written with input from the R3BOOT physio team. ",
+          "marks": []
+        },
+        {
+          "_type": "span",
+          "_key": "q9a0m0ngwek",
+          "text": "Book recovery",
+          "marks": [
+            "o3c3s9o6bl"
+          ]
+        },
+        {
+          "_type": "span",
+          "_key": "5tsrb9uy3xx",
+          "text": " or call +91 97023 68612.",
+          "marks": []
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "o3c3s9o6bl",
+          "_type": "link",
+          "href": "https://wa.me/919702368612"
+        }
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "_key": "ztz26wmkwpf",
+      "question": "When is HYROX Mumbai 2026?",
+      "answer": "HYROX Mumbai 2026 runs 18–20 September at NESCO Centre, Goregaon. Registration opened May 2026. If you are racing, build recovery into your plan now, not the week after tickets sell out."
+    },
+    {
+      "_key": "7pyt3y3lv9k",
+      "question": "How sore will I be after HYROX?",
+      "answer": "Most first-timers feel peak soreness 48–72 hours post-race, especially quads from sled work, lats from ski erg, and shoulders from wall balls. Expect 4–5 days of meaningful DOMS if you race hard."
+    },
+    {
+      "_key": "7cpn4uk6olg",
+      "question": "Should I ice bath right after HYROX?",
+      "answer": "A cold immersion within 2 hours can blunt acute soreness and swelling. If your goal is purely recovery (not muscle gain that week), contrast therapy or a supervised ice bath helps. Wait at least 3–4 hours if you also did heavy strength work in the same week."
+    },
+    {
+      "_key": "8pkmt3hrvv",
+      "question": "Can I train the week before HYROX Mumbai?",
+      "answer": "Yes, but taper. Cut volume by 40–50%, keep short movement sessions, and stop heavy sled or wall ball work 5 days out. Your legs should feel springy, not trashed, at the start line."
+    },
+    {
+      "_key": "b2hhbzv4eaw",
+      "question": "Where can HYROX athletes recover in Mumbai?",
+      "answer": "R3BOOT in Dadar East runs physio-supervised contrast therapy and sports massage for athletes across Mumbai. Many Goregaon racers drive in post-event for a Full Cycle session or targeted leg work. Book via WhatsApp: +91 97023 68612."
+    }
+  ]
+}

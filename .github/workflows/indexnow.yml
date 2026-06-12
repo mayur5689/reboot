@@ -1,0 +1,16 @@
+name: Ping IndexNow after deploy
+
+on:
+  repository_dispatch:
+    types:
+      - 'vercel.deployment.success'
+
+jobs:
+  ping-indexnow:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Submit all URLs to IndexNow
+        run: |
+          curl -X POST https://www.r3boot.in/api/indexnow \
+            -H "Content-Type: application/json" \
+            -H "x-indexnow-secret: ${{ secrets.INDEXNOW_SECRET }}"

@@ -37,7 +37,7 @@ export default function AboutPage() {
 
                             <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 {[
-                                    "Clinical Physiotherapy & Hydrotherapy",
+                                    "Clinical Physiotherapy & Aqua Therapy",
                                     "Advanced Recovery Modalities",
                                     "Personalized Performance Programs",
                                     "Mental Training & Counselling"
@@ -123,12 +123,6 @@ export default function AboutPage() {
                                 bio: "Alkesh Kubadia holds a Master's degree in Psychology and brings decades of entrepreneurial experience. At r3boot, he oversees strategy, operations, and client experience, ensuring systems-driven execution and ethical practices."
                             },
                             {
-                                name: "Nirmal Solanki",
-                                role: "Physiotherapist & Manual Therapy Specialist",
-                                image: "/images/trainer2/Trainers/Dr. Nirmal Solanki.webp",
-                                bio: "Physiotherapist with over 20 years of experience in sports physiotherapy and manual therapy. Internationally trained in advanced osteopathic techniques with a focus on sustainable, long-term outcomes."
-                            },
-                            {
                                 name: "Parinaaz Irani",
                                 role: "Sports Counselling & Mental Performance",
                                 image: "/images/trainer2/Trainers/Parinaaz Irani.webp",
@@ -145,6 +139,12 @@ export default function AboutPage() {
                                 role: "Physiotherapist | Sports & Orthopedic Rehabilitation",
                                 image: "/images/trainer2/Trainers/Dr. Vaishali Vijay Rauniyar.webp",
                                 bio: "Clinical experience in sports and orthopedic rehabilitation. Certified in Dry Needling and Aquatic Rehabilitation, she designs personalized plans for efficient recovery."
+                            },
+                            {
+                                name: "Dr. Hiral Parikh",
+                                role: "Lead Physiotherapist",
+                                image: "/images/trainer2/Trainers/HIRAL.webp",
+                                bio: "Bachelor of Physiotherapy graduate from Pad. Dr. D.Y. Patil College of Physiotherapy, Navi Mumbai, with over 15 years of clinical experience. At R3BOOT, she leads physiotherapy services with focused expertise in sports rehabilitation and post-surgical recovery, helping athletes return to performance and patients rebuild function with structured, evidence-based protocols. Her approach is precise, patient-centred, and built on the belief that recovery done right the first time saves years of recurring injury."
                             },
                             {
                                 name: "Ganesh S. Gadhave",
@@ -292,8 +292,8 @@ export default function AboutPage() {
                         >
                             <div className="relative aspect-[4/5] max-w-lg rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white dark:border-white/5">
                                 <Image
-                                    src="/images/trainer2/Trainers/Dr. Nirmal Solanki.webp"
-                                    alt="Professional Care"
+                                    src="/images/trainer2/Trainers/HIRAL.webp"
+                                    alt="Dr. Hiral Parikh, Lead Physiotherapist"
                                     fill
                                     className="object-cover"
                                 />
@@ -317,7 +317,7 @@ export default function AboutPage() {
 
                             <div className="space-y-4">
                                 {[
-                                    { title: "Hydrotherapy & Contrast Bathing", desc: "Regulate blood flow and reduce muscle soreness." },
+                                    { title: "Aqua Therapy & Contrast Bathing", desc: "Regulate blood flow and reduce muscle soreness." },
                                     { title: "Infrared Sauna & Heat Exposure", desc: "Cellular repair and detoxification for deeper recovery." },
                                     { title: "Pneumatic Compression", desc: "Dynamic compression to flush out metabolic waste." },
                                     { title: "Sports Massage", desc: "Targeted soft-tissue work to support recovery and reduce muscle tension between training." }

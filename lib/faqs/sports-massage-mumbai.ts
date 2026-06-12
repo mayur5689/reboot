@@ -19,4 +19,9 @@ export const sportsMassageMumbaiFaqs = [
     answer:
       'Yes. Cupping therapy improves blood circulation and helps release tight fascia, which can support muscle recovery.',
   },
+  {
+    question: 'How much does sports massage cost at R3BOOT Mumbai?',
+    answer:
+      'Sports massage at R3BOOT Dadar is priced at ₹3,500 for men and ₹2,500 for women. Sessions typically run 60–90 minutes and include clinical sports massage combined with cupping therapy and mobility work where indicated by our therapists.',
+  },
 ]

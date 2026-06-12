@@ -3,12 +3,14 @@ import { PortableText } from '@portabletext/react';
 import Image from "next/image";
 import Link from "next/link";
 import { getPostBySlug, client, urlFor } from "@/sanity/lib/client";
-import { motion } from "framer-motion";
+import BlogPostingSchema from "@/components/schema/BlogPostingSchema";
+import FAQSchema from "@/components/schema/FAQSchema";
 
 export const revalidate = 60;
 
 // Generate Dynamic Metadata
-export async function generateMetadata({ params }: { params: { slug: string } }) {
+export async function generateMetadata(props: { params: Promise<{ slug: string }> }) {
+    const params = await props.params;
     const { slug } = params;
 
     const query = `*[_type == "post" && slug.current == $slug][0]{
@@ -26,9 +28,13 @@ export async function generateMetadata({ params }: { params: { slug: string } })
         return { title: "Blog | R3BOOT", description: "This blog post does not exist." };
     }
 
+    const titleTag = post.title.length > 50
+        ? `${post.title.slice(0, 47)}... | R3BOOT`
+        : `${post.title} | R3BOOT`
     return {
-        title: `${post.title} | R3BOOT`,
+        title: titleTag,
         description: post.metaDescription || post.excerpt || "Read this article on our blog.",
+        alternates: { canonical: `/blog/${slug}` },
         openGraph: {
             title: post.title,
             description: post.metaDescription || post.excerpt,
@@ -43,11 +49,12 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 const components = {
     types: {
         image: ({ value }: any) => (
-            <div className="relative w-full h-[300px] sm:h-[500px] my-12 rounded-3xl overflow-hidden shadow-2xl">
+            <div className="relative w-full aspect-video my-12 rounded-3xl overflow-hidden shadow-2xl">
                 <Image
-                    src={urlFor(value).url()}
+                    src={urlFor(value).width(1200).quality(85).url()}
                     alt={value.alt || 'Blog Image'}
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1280px) 66vw, 800px"
                     className="object-cover"
                 />
                 {value.alt && (
@@ -86,7 +93,8 @@ const components = {
     },
 };
 
-export default async function BlogPostPage({ params }: { params: { slug: string } }) {
+export default async function BlogPostPage(props: { params: Promise<{ slug: string }> }) {
+    const params = await props.params;
     const post = await getPostBySlug(params.slug);
 
     if (!post) {
@@ -104,15 +112,27 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
         );
     }
 
+    const thumbnailUrl = post.mainImage ? urlFor(post.mainImage).url() : undefined;
+
     return (
-        <article className="min-h-screen dark:bg-[#0A0A0A] overflow-hidden">
+        <article className="min-h-screen dark:bg-[#0A0A0A] overflow-hidden pb-20 lg:pb-0">
+            <BlogPostingSchema
+                title={post.title}
+                description={post.metaDescription || post.excerpt || post.title}
+                slug={params.slug}
+                publishedAt={post.publishedAt}
+                authorName={post.author}
+                imageUrl={thumbnailUrl}
+            />
+            {post.faqs?.length > 0 && <FAQSchema faqs={post.faqs} />}
             {/* Hero Header */}
             <div className="relative h-[60vh] sm:h-[70vh] w-full">
                 {post.mainImage && (
                     <Image
-                        src={urlFor(post.mainImage).url()}
+                        src={urlFor(post.mainImage).width(1920).quality(85).url()}
                         alt={post.title}
                         fill
+                        sizes="100vw"
                         className="object-cover"
                         priority
                     />
@@ -147,7 +167,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
                             <div className="w-12 h-12 rounded-full border-2 border-[#A78BFA] p-0.5">
                                 {post.authorImage ? (
                                     <div className="relative w-full h-full rounded-full overflow-hidden">
-                                        <Image src={urlFor(post.authorImage).url()} alt={post.author ?? 'Author'} fill className="object-cover" />
+                                        <Image src={urlFor(post.authorImage).width(96).quality(85).url()} alt={post.author ?? 'Author'} fill sizes="48px" className="object-cover" />
                                     </div>
                                 ) : (
                                     <div className="w-full h-full rounded-full bg-[#A78BFA] flex items-center justify-center text-[#0A0A0A] font-black uppercase">
@@ -200,12 +220,12 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
                                 <h3 className="text-2xl font-black mb-6 relative z-10 leading-tight">Ready to start your recovery?</h3>
                                 <p className="text-white/80 font-medium mb-8 relative z-10">Expertly guided sessions designed for your peak performance.</p>
                                 <a
-                                    href="https://www.practo.com/mumbai/clinic/r3-boot-spoorts-therapy-dadar-east/doctors"
+                                    href="tel:+919702368612"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="inline-block bg-white text-[#513394] px-8 py-4 rounded-full font-black uppercase tracking-widest text-xs hover:bg-gray-100 transition-all relative z-10 shadow-lg"
                                 >
-                                    Book A Session
+                                    Call to Book
                                 </a>
                             </div>
 
@@ -227,6 +247,23 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
                         </div>
                     </aside>
                 </div>
+            </div>
+            {/* Mobile Sticky CTA Bar */}
+            <div className="fixed bottom-0 left-0 right-0 z-50 lg:hidden bg-white dark:bg-[#0A0A0A] border-t border-gray-200 dark:border-white/10 px-4 py-3 flex gap-3 shadow-2xl">
+                <a
+                    href="tel:+919702368612"
+                    className="flex-1 bg-[#513394] text-white text-center py-3 rounded-full font-black uppercase tracking-widest text-xs hover:opacity-90 transition-all"
+                >
+                    Call to Book
+                </a>
+                <a
+                    href="https://wa.me/919702368612"
+                    target="_blank"
+                    rel="nofollow noopener noreferrer"
+                    className="flex-1 bg-gray-100 dark:bg-white/10 text-gray-900 dark:text-white text-center py-3 rounded-full font-black uppercase tracking-widest text-xs hover:opacity-80 transition-all"
+                >
+                    WhatsApp
+                </a>
             </div>
         </article>
     );

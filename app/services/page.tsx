@@ -1,6 +1,14 @@
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { services } from '@/lib/services'
+
+export const metadata: Metadata = {
+  title: 'Therapy & Recovery Services in Dadar Mumbai | R3BOOT',
+  description: 'Physiotherapy, contrast therapy, aqua therapy, sports massage & sports psychology in Dadar, Mumbai. Book your session at R3BOOT, open 7 days.',
+  keywords: ['therapy dadar', 'therapy services dadar', 'recovery services dadar', 'physiotherapy mumbai', 'contrast therapy dadar', 'sports clinic mumbai'],
+  alternates: { canonical: '/services' },
+}
 
 export default function ServicesPage() {
     return (
@@ -107,19 +115,21 @@ export default function ServicesPage() {
                         </p>
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
                             <a
-                                href="https://www.practo.com/mumbai/clinic/r3-boot-spoorts-therapy-dadar-east/doctors"
+                                href="tel:+919702368612"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="w-full sm:w-auto bg-white text-[#513394] font-black px-10 py-5 rounded-full transition-all hover:scale-105 shadow-2xl text-lg tracking-wide"
                             >
-                                Book a Consultation
+                                Call to Book
                             </a>
-                            <Link
-                                href="https://wa.me/yournumber"
+                            <a
+                                href="https://wa.me/919702368612"
+                                target="_blank"
+                                rel="nofollow noopener noreferrer"
                                 className="w-full sm:w-auto border-2 border-white/30 text-white font-bold px-10 py-5 rounded-full transition-all hover:bg-white/10 text-lg tracking-wide"
                             >
                                 Contact Support
-                            </Link>
+                            </a>
                         </div>
                     </div>
                 </div>

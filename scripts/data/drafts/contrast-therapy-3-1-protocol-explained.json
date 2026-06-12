@@ -1,0 +1,570 @@
+{
+  "_id": "drafts.contrast-therapy-3-1-protocol-explained",
+  "_type": "post",
+  "title": "Contrast Therapy Explained: The 3:1 Protocol We Use at R3BOOT",
+  "slug": {
+    "_type": "slug",
+    "current": "contrast-therapy-3-1-protocol-explained"
+  },
+  "metaDescription": "What contrast therapy 3:1 means, 3 minutes infrared heat, 1 minute cold, always end on cold. How many rounds, who it suits, and how it differs from ice alone. R3BOOT Mumbai.",
+  "excerpt": "3:1 means three minutes of heat for every one minute of cold, and you always finish cold. Here is why that ratio works, how a full session is structured, and who should modify it.",
+  "author": {
+    "_type": "reference",
+    "_ref": "8a6bf0f1-64c7-4ce6-b5da-bef89b57d983"
+  },
+  "categories": [
+    {
+      "_type": "reference",
+      "_ref": "fdcd74bf-a430-4304-82d4-5d41ed9c5ee8"
+    }
+  ],
+  "publishedAt": "2026-05-19T12:00:00.000Z",
+  "body": [
+    {
+      "_type": "block",
+      "_key": "ok9pf0sjb8e",
+      "style": "normal",
+      "children": [
+        {
+          "_type": "span",
+          "_key": "dv96210gdi",
+          "text": "Contrast therapy is alternating heat and cold to flush fatigued muscle. At R3BOOT we run a specific 3:1 protocol, three minutes of infrared heat for every one minute of supervised cold immersion. This post explains the ratio, the round structure, and who should tweak it. For ice bath vs contrast debates, see our separate comparison article.",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "rqld64hy0gp",
+      "style": "h2",
+      "children": [
+        {
+          "_type": "span",
+          "_key": "38443jo1bai",
+          "text": "What happens in each phase",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "sw5a6dv2es8",
+      "style": "h3",
+      "children": [
+        {
+          "_type": "span",
+          "_key": "uvom6pac5oc",
+          "text": "Heat phase (infrared sauna)",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "7uugvc6ukgk",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "children": [
+        {
+          "_type": "span",
+          "_key": "9cxsgfs632",
+          "text": "Vessels dilate; blood flow to skin and muscle increases",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "4m6frwkqynm",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "children": [
+        {
+          "_type": "span",
+          "_key": "v3indpnx8tm",
+          "text": "Muscle tissue warms, makes the upcoming cold phase tolerable",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "np0oy6atsho",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "children": [
+        {
+          "_type": "span",
+          "_key": "qtr588zhah",
+          "text": "Parasympathetic tone rises; many athletes report mental calm here",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "7bkowgquthr",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "children": [
+        {
+          "_type": "span",
+          "_key": "v9cz8juq4b",
+          "text": "Typical duration in our protocol: ~3 minutes per round",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "mi376i7ru8e",
+      "style": "h3",
+      "children": [
+        {
+          "_type": "span",
+          "_key": "8wazys6d5w8",
+          "text": "Cold phase (ice bath)",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "liuc7q3xmq",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "children": [
+        {
+          "_type": "span",
+          "_key": "i08ehhgxo5",
+          "text": "Vessels constrict rapidly; inflammation markers drop locally",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "bxg5ebu63c",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "children": [
+        {
+          "_type": "span",
+          "_key": "ggqhjmfr4kq",
+          "text": "Nerve conduction slows, soreness perception drops within hours",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "otl7p5003gn",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "children": [
+        {
+          "_type": "span",
+          "_key": "s4ennzcxoap",
+          "text": "Breathing control is coached in the first 60 seconds",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "xes097gf7u",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "children": [
+        {
+          "_type": "span",
+          "_key": "b6i00wug1x4",
+          "text": "Typical duration: ~1 minute per round at 10–15°C",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "e5zm9i9en9",
+      "style": "h2",
+      "children": [
+        {
+          "_type": "span",
+          "_key": "u6sshwgjp1o",
+          "text": "Why 3:1 and not 1:1",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "paika7f3cpp",
+      "style": "normal",
+      "children": [
+        {
+          "_type": "span",
+          "_key": "4gnkywsykd9",
+          "text": "Equal time heat and cold works for some spa traditions. For athletes arriving with already-fatigued muscle, longer heat primes tissue and makes cold manageable without shortening the cold enough to lose the constrictive benefit. Shorter cold bursts repeated across rounds beat one long miserable plunge.",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "se4kizglt9",
+      "style": "normal",
+      "children": [
+        {
+          "_type": "span",
+          "_key": "8k4wq39pxe",
+          "text": "Your physiotherapist may adjust toward 2:1 if you are new to cold or toward 4:1 during deload weeks, but the default at R3BOOT is 3:1, always ending on cold.",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "y52e63qwcu",
+      "style": "h2",
+      "children": [
+        {
+          "_type": "span",
+          "_key": "6xq8l7meqph",
+          "text": "Sample Full Cycle structure (60 min)",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "7mqcdidt2u8",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "children": [
+        {
+          "_type": "span",
+          "_key": "mlhtzjv4qos",
+          "text": "Intake + health screen, 5 min",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "w1lkc8mpkzk",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "children": [
+        {
+          "_type": "span",
+          "_key": "jrcb5fw2sjm",
+          "text": "Breathing briefing before first cold, 3 min",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "a7joa8e2eni",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "children": [
+        {
+          "_type": "span",
+          "_key": "02kq76shysmd",
+          "text": "Round 1: 3 min heat → 1 min cold",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "wyk0y2neiu",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "children": [
+        {
+          "_type": "span",
+          "_key": "5sq290yphx7",
+          "text": "Round 2: 3 min heat → 1 min cold",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "1fv4khvswkf",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "children": [
+        {
+          "_type": "span",
+          "_key": "8m1s8chuxo",
+          "text": "Round 3: 3 min heat → 1 min cold",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "exv532qd44",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "children": [
+        {
+          "_type": "span",
+          "_key": "lnvrqin9vo",
+          "text": "Optional Round 4 for heavy training load, 3 min heat → 1 min cold",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "s7c4la0v5p",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "children": [
+        {
+          "_type": "span",
+          "_key": "mjjc1b9hfr",
+          "text": "Rewarm, hydrate, post-session check-in, 5 min",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "hvketiubl6o",
+      "style": "h2",
+      "children": [
+        {
+          "_type": "span",
+          "_key": "mlr6ug7ji18",
+          "text": "Who should modify the protocol",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "p3b8hdm6pq",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "children": [
+        {
+          "_type": "span",
+          "_key": "981toenwai",
+          "text": "First cold exposure: shorter cold (30–45 sec) with team present",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "e8v26ma5wlo",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "children": [
+        {
+          "_type": "span",
+          "_key": "63nhona9kmx",
+          "text": "Uncontrolled blood pressure or Raynaud's: medical clearance first",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "vfm9fkkaljn",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "children": [
+        {
+          "_type": "span",
+          "_key": "r421rr1pfr",
+          "text": "Acute injury (first 72 hr): rest and ice only, not full contrast",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "u1t1v734k4m",
+      "style": "normal",
+      "listItem": "bullet",
+      "level": 1,
+      "children": [
+        {
+          "_type": "span",
+          "_key": "3snjd2bn19p",
+          "text": "Pregnancy: not recommended without obstetric clearance",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "stb57mh46o7",
+      "style": "h2",
+      "children": [
+        {
+          "_type": "span",
+          "_key": "ex2vzt11bd",
+          "text": "How this differs from our service pages",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "fa6omwoiimc",
+      "style": "normal",
+      "children": [
+        {
+          "_type": "span",
+          "_key": "p18js3wptcl",
+          "text": "Our Mumbai service pages cover booking, pricing, and location. This article is the protocol logic, so you know what you are walking into before you book.",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    },
+    {
+      "_type": "block",
+      "_key": "0rpuuyrtq11",
+      "style": "normal",
+      "children": [
+        {
+          "_type": "span",
+          "_key": "aq5y6luoe1d",
+          "text": "Book a supervised session: ",
+          "marks": []
+        },
+        {
+          "_type": "span",
+          "_key": "qriwyknvxjf",
+          "text": "contrast therapy Mumbai",
+          "marks": [
+            "b5b8waj5h5h"
+          ]
+        },
+        {
+          "_type": "span",
+          "_key": "c77s590xmbd",
+          "text": " · Dadar East · WhatsApp ",
+          "marks": []
+        },
+        {
+          "_type": "span",
+          "_key": "2anh6yr3uip",
+          "text": "+91 97023 68612",
+          "marks": [
+            "mwo7i6w2oqs"
+          ]
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "b5b8waj5h5h",
+          "_type": "link",
+          "href": "https://www.r3boot.in/contrast-therapy-mumbai"
+        },
+        {
+          "_key": "mwo7i6w2oqs",
+          "_type": "link",
+          "href": "https://wa.me/919702368612"
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "_key": "4xj3f5n95sh",
+      "style": "normal",
+      "children": [
+        {
+          "_type": "span",
+          "_key": "qvowu33p5",
+          "text": "Dr Hiral Parikh is a physiotherapist at R3BOOT Dadar. Last updated May 2026.",
+          "marks": []
+        }
+      ],
+      "markDefs": []
+    }
+  ],
+  "faqs": [
+    {
+      "_key": "x0wbzip8ux",
+      "question": "What does 3:1 mean in contrast therapy?",
+      "answer": "Three minutes in infrared heat for every one minute in cold immersion. Heat dilates vessels; cold constricts them. The alternation creates a pumping effect that moves fluid through muscle tissue faster than heat or cold alone."
+    },
+    {
+      "_key": "8h5ez05u5e",
+      "question": "Why always end on cold?",
+      "answer": "Finishing cold leaves vessels constricted and inflammation suppressed, the state you want walking out of a recovery session. Ending on heat re-opens vessels and can bring swelling back."
+    },
+    {
+      "_key": "mzhhngkisra",
+      "question": "How many rounds in a Half vs Full Cycle?",
+      "answer": "Half Cycle (30 min): two full rounds of heat-cold alternation. Full Cycle (60 min): three to four rounds. First-timers usually start Half; post-competition or heavy training weeks suit Full."
+    },
+    {
+      "_key": "i0lywzo287t",
+      "question": "Is 3:1 the same as a Finnish sauna protocol?",
+      "answer": "No. Traditional sauna protocols often use longer heat blocks and shorter cold dips with different ratios. Our 3:1 uses infrared heat at lower air temperature with physiotherapist supervision, built for athletes, not spa relaxation."
+    },
+    {
+      "_key": "jjgslxwv2n8",
+      "question": "Can I do 3:1 contrast therapy at home?",
+      "answer": "You can approximate with hot shower / cold shower alternation, but temperature control and breathing supervision matter for the ice phase. First cold exposure should be guided, that is why we run intake before any immersion at R3BOOT."
+    }
+  ]
+}

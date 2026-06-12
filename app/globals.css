@@ -12,3 +12,37 @@
     scrollbar-width: none;
   }
 }
+
+@keyframes marquee-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee-scroll 30s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Single ambient light glint: sweeps every ~14s */
+@keyframes banner-sweep {
+  0%   { transform: translateX(-80px) skewX(-12deg); opacity: 0; }
+  3%   { opacity: 1; }
+  28%  { transform: translateX(calc(100vw + 80px)) skewX(-12deg); opacity: 0; }
+  100% { transform: translateX(calc(100vw + 80px)) skewX(-12deg); opacity: 0; }
+}
+
+.animate-banner-sweep {
+  animation: banner-sweep 14s ease-out 2s infinite;
+  will-change: transform, opacity;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee,
+  .animate-banner-sweep {
+    animation: none;
+  }
+}

@@ -22,7 +22,7 @@ export const sportsMassageFaqs = [
   {
     question: 'Can recovery therapy help with chronic pain?',
     answer:
-      'Yes, therapies like Red Light and Infrared Sauna are excellent for reducing inflammation and managing long-term muscle or joint discomfort.',
+      'Yes, therapies like Infrared Sauna are excellent for reducing inflammation and managing long-term muscle or joint discomfort.',
   },
   {
     question: 'How often should I use the recovery services?',

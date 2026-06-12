@@ -3,11 +3,15 @@ import Link from 'next/link'
 import { Metadata } from 'next'
 import { services } from '@/lib/services'
 import ServiceSchema from '@/components/schema/ServiceSchema'
+import FAQSchema from '@/components/schema/FAQSchema'
+import { FAQSection } from '@/components/faq-section'
+import { contrastTherapyMumbaiFaqs } from '@/lib/faqs/contrast-therapy-mumbai'
 
 export const metadata: Metadata = {
     title: 'Contrast Therapy in Mumbai | R3BOOT Dadar – Sauna & Ice Bath',
-    description: 'Contrast therapy at R3BOOT: alternating Red Light Sauna and Ice Bath for recovery, circulation, and stress resilience. Dadar, Mumbai.',
+    description: 'Contrast therapy at R3BOOT: alternating Infrared Sauna and Ice Bath for recovery, circulation, and stress resilience. Dadar, Mumbai.',
     keywords: ['contrast therapy mumbai', 'ice bath mumbai', 'sauna mumbai', 'cold plunge mumbai', 'recovery therapy dadar', 'contrast therapy near me'],
+    alternates: { canonical: '/contrast-therapy-mumbai' },
 }
 
 const otherServices = services.filter(s => s.slug !== 'contrast-therapy').slice(0, 4)
@@ -50,7 +54,7 @@ export default function ContrastTherapyPage() {
                             Heat. Cold. Recovery.
                         </p>
                         <p className="text-xl md:text-2xl text-white/80 max-w-2xl leading-relaxed font-medium">
-                            Alternating Red Light Sauna and Ice Bath for circulation, resilience, and faster recovery at R3BOOT, Dadar – Mumbai.
+                            Alternating Infrared Sauna and Ice Bath for circulation, resilience, and faster recovery at R3BOOT, Dadar – Mumbai.
                         </p>
                     </div>
                 </div>
@@ -74,7 +78,7 @@ export default function ContrastTherapyPage() {
                                     Contrast therapy works on neurotransmitters by creating a controlled stress response, triggering the release of feel-good chemicals like endorphins, and boosting alertness and focus-related ones like norepinephrine (up to 500% increase!) and dopamine (up to 250% increase), leading to improved mood, reduced anxiety, enhanced focus, and greater resilience through a &ldquo;stress inoculation&rdquo; effect on the nervous system.
                                 </p>
                                 <p>
-                                    The rapid shifts between heat (vasodilation/relaxation) and cold (vasoconstriction/activation) train your autonomic nervous system to manage stress better. Heat causes vasodilation — widening of blood vessels — which increases blood flow in the limbs. Cold causes vasoconstriction — contraction of blood vessels — which helps numb pain and redirect blood to the core.
+                                    The rapid shifts between heat (vasodilation/relaxation) and cold (vasoconstriction/activation) train your autonomic nervous system to manage stress better. Heat causes vasodilation, widening of blood vessels, which increases blood flow in the limbs. Cold causes vasoconstriction, contraction of blood vessels, which helps numb pain and redirect blood to the core.
                                 </p>
                                 <p>
                                     <span className="text-[11px] font-black tracking-[0.3em] text-[#513394] dark:text-[#A78BFA] uppercase block mb-2">SAFETY FIRST //</span>
@@ -91,8 +95,8 @@ export default function ContrastTherapyPage() {
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                                     {[
                                         { title: "Preparation", description: "Preparing the body for rapid temperature changes." },
-                                        { title: "Hot Phase — Red Light Sauna", description: "Vasodilation phase to increase circulation and relax muscles." },
-                                        { title: "Cold Phase — Ice Bath", description: "Vasoconstriction phase to reduce inflammation and flush toxins." },
+                                        { title: "Hot Phase, Infrared Sauna", description: "Vasodilation phase to increase circulation and relax muscles." },
+                                        { title: "Cold Phase, Ice Bath", description: "Vasoconstriction phase to reduce inflammation and flush toxins." },
                                         { title: "Recovery", description: "Allowing the body to return to homeostatic balance." },
                                         { title: "Alternation", description: "The cycle trains your nervous system to switch between activation and recovery, building stress resilience." },
                                     ].map((step, idx) => (
@@ -146,12 +150,12 @@ export default function ContrastTherapyPage() {
                                     ))}
                                 </ul>
                                 <a
-                                    href="https://www.practo.com/mumbai/clinic/r3-boot-spoorts-therapy-dadar-east/doctors"
+                                    href="tel:+919702368612"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="block text-center bg-[#513394] text-white font-black px-8 py-5 rounded-2xl transition-all hover:scale-[1.02] shadow-xl text-lg group-hover:bg-[#603eb0]"
                                 >
-                                    Book This Service
+                                    Call to Book
                                 </a>
                                 <p className="text-center text-white/30 text-xs mt-6 font-bold tracking-widest">
                                     AVAILABLE 7 DAYS A WEEK
@@ -206,7 +210,7 @@ export default function ContrastTherapyPage() {
                                     },
                                     {
                                         title: "Reduced Inflammation and Pain Relief",
-                                        body: "Cold water lowers tissue temperature, slowing the inflammatory response and reducing swelling. Cold plunges are especially helpful for sore muscles, sprains, and chronic conditions like arthritis — similar to ice packs but more comprehensive."
+                                        body: "Cold water lowers tissue temperature, slowing the inflammatory response and reducing swelling. Cold plunges are especially helpful for sore muscles, sprains, and chronic conditions like arthritis, similar to ice packs but more comprehensive."
                                     },
                                     {
                                         title: "Increased Metabolism",
@@ -244,26 +248,26 @@ export default function ContrastTherapyPage() {
                                 Benefits of <span className="text-[#513394] dark:text-[#8B5CF6]">Infrared Sauna</span>
                             </h2>
                             <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed mb-10">
-                                Beyond the immediate sense of relaxation, saunas offer a wide range of benefits for physical and mental health. From detoxification to improved cardiovascular health, sauna is an essential component of contrast therapy when paired with cold plunges.
+                                Our infrared sauna delivers deep tissue warmth that goes beyond a standard hot room. Infrared energy penetrates muscle and soft tissue directly, driving circulation and relaxation at depth. Paired with cold plunges, it completes the contrast therapy loop.
                             </p>
 
                             <div className="space-y-6">
                                 {[
                                     {
-                                        title: "Detoxification Through Sweating",
-                                        body: "Sweating is your body's natural way of expelling toxins. The intense heat of a sauna ramps up this process."
+                                        title: "Deep Tissue Penetration Beyond Surface Heat",
+                                        body: "Infrared energy reaches muscle and soft tissue directly rather than just warming the air. Each session delivers heat where it matters - inside the tissue - so vasodilation and muscle ease happen faster than in a conventional sauna."
+                                    },
+                                    {
+                                        title: "Dual Stimulus for Contrast Protocols",
+                                        body: "In one visit you stack manageable heat stress with infrared penetration. Many people use that combination around training or cold plunges: warmth for vessels and muscle ease, plus deep tissue exposure that primes the body for the cold phase."
                                     },
                                     {
                                         title: "Muscle Relaxation and Pain Relief",
-                                        body: "Heat penetrates deep into muscles and joints, helping to relax tight muscles and soothe aches and pains, alleviating stiffness and soreness."
+                                        body: "Heat still penetrates deep into muscles and joints, helping to relax tight muscles and soothe aches and pains, alleviating stiffness and soreness."
                                     },
                                     {
                                         title: "Improved Cardiovascular Health",
                                         body: "In the sauna, heart rate increases and blood vessels dilate, mimicking some effects of moderate exercise. This mild cardiovascular workout can improve heart health over time."
-                                    },
-                                    {
-                                        title: "Boosted Immune System",
-                                        body: "Elevated heat exposure raises core temperature, mimicking a mild fever. This helps stimulate white blood cell production, strengthening your immune response and ability to fight off illness and infection."
                                     },
                                 ].map((tech, idx) => (
                                     <div key={idx} className="flex gap-5 group">
@@ -293,7 +297,7 @@ export default function ContrastTherapyPage() {
                                     HEAT THERAPY //
                                 </span>
                                 <p className="text-white text-xl font-black tracking-tight leading-tight">
-                                    Red Light Sauna at R3BOOT Dadar
+                                    Infrared Sauna at R3BOOT Dadar
                                 </p>
                             </div>
                         </div>
@@ -327,7 +331,7 @@ export default function ContrastTherapyPage() {
                                 },
                                 {
                                     title: "Reduced Muscle Soreness",
-                                    body: "Alternating between heat and cold minimizes delayed onset muscle soreness (DOMS). Cold reduces swelling and microtears; heat encourages blood flow to those areas, speeding healing. This cycle reduces the stiffness and soreness that follow a tough workout — especially useful for athletes and active individuals."
+                                    body: "Alternating between heat and cold minimizes delayed onset muscle soreness (DOMS). Cold reduces swelling and microtears; heat encourages blood flow to those areas, speeding healing. This cycle reduces the stiffness and soreness that follow a tough workout, especially useful for athletes and active individuals."
                                 },
                                 {
                                     title: "Vascular Workout for Better Circulation",
@@ -411,9 +415,27 @@ export default function ContrastTherapyPage() {
                 </div>
             </section>
 
+            {/* Related Guide: internal link to contrast therapy SEO landing page */}
+            <section className="py-12 bg-white dark:bg-[#0A0A0A]">
+                <div className="container mx-auto px-6 lg:px-8 max-w-4xl">
+                    <Link href="/contrast-therapy-mumbai" className="group flex items-center justify-between p-6 bg-gray-50 dark:bg-white/5 rounded-[2rem] border border-gray-100 dark:border-white/10 hover:border-[#513394]/40 transition-all">
+                        <div>
+                            <p className="text-xs font-black tracking-widest text-[#513394] uppercase mb-1">Local Guide</p>
+                            <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-[#513394] transition-colors">Contrast Therapy in Mumbai, Complete Guide</h3>
+                            <span className="text-sm text-gray-500 dark:text-gray-400 mt-1 inline-block">Pricing, benefits, and what to expect →</span>
+                        </div>
+                        <svg className="w-6 h-6 text-[#513394] opacity-0 group-hover:opacity-100 transition-opacity shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                            <path d="M9 18l6-6-6-6" />
+                        </svg>
+                    </Link>
+                </div>
+            </section>
+
+            <FAQSection faqs={contrastTherapyMumbaiFaqs} />
+            <FAQSchema faqs={contrastTherapyMumbaiFaqs} />
             <ServiceSchema
                 serviceName="Contrast Therapy"
-                description="Alternating Red Light Sauna and Ice Bath for optimal recovery, circulation, and stress resilience at R3BOOT Dadar, Mumbai."
+                description="Alternating Infrared Sauna and Ice Bath for optimal recovery, circulation, and stress resilience at R3BOOT Dadar, Mumbai."
                 serviceUrl="https://r3boot.in/services/contrast-therapy"
             />
         </main>

@@ -26,16 +26,16 @@ export default function OurServices() {
     const displayedServices = isMobile ? services.slice(0, 4) : services;
 
     return (
-        <section className="py-20 bg-gradient-to-b from-gray-50 to-white dark:from-[#0A0A0A] dark:to-[#0A0A0A] transition-colors duration-500">
-            <div className="container mx-auto px-6 lg:px-8">
+        <section className="py-10 sm:py-14 lg:py-20 bg-gradient-to-b from-gray-50 to-white dark:from-[#0A0A0A] dark:to-[#0A0A0A] transition-colors duration-500">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Section Header */}
-                <div className="text-center mb-20">
+                <div className="text-center mb-10 sm:mb-14 lg:mb-20">
                     <div className="inline-flex items-center justify-center gap-3 text-[#513394] dark:text-[#A78BFA] mb-4">
                         <div className="w-1.5 h-1.5 rounded-full bg-[#513394] dark:bg-[#A78BFA]"></div>
                         <span className="text-[13px] font-bold tracking-[0.3em] uppercase">OUR SERVICES</span>
                         <div className="w-1.5 h-1.5 rounded-full bg-[#513394] dark:bg-[#A78BFA]"></div>
                     </div>
-                    <h2 className="text-3xl md:text-6xl font-bold text-[#1A1A1A] dark:text-white tracking-tight leading-[1.1]">
+                    <h2 className="text-2xl sm:text-3xl md:text-6xl font-bold text-[#1A1A1A] dark:text-white tracking-tight leading-[1.1]">
                         The Best Services We Offer <br />
                         <span className="text-[#513394] dark:text-[#A78BFA]">For Your Recovery</span>
                     </h2>
@@ -63,6 +63,7 @@ export default function OurServices() {
                                     src={service.image}
                                     alt={service.title}
                                     fill
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 700px"
                                     className="object-cover transition-transform duration-1000 group-hover:scale-110"
                                     priority={index < 3}
                                 />
@@ -120,6 +121,23 @@ export default function OurServices() {
                         <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                         </svg>
+                    </Link>
+                </div>
+
+                {/* Popular in Mumbai: internal links for SEO landing pages */}
+                <div className="flex flex-wrap justify-center gap-3 mt-8">
+                    <span className="text-xs font-bold tracking-widest text-gray-400 dark:text-gray-600 uppercase self-center">Popular in Mumbai:</span>
+                    <Link href="/sports-massage-mumbai" className="text-xs font-bold text-[#513394] dark:text-[#A78BFA] border border-[#513394]/30 dark:border-[#A78BFA]/30 px-4 py-2 rounded-full hover:bg-[#513394]/10 transition-colors">
+                        Sports Massage Mumbai
+                    </Link>
+                    <Link href="/contrast-therapy-mumbai" className="text-xs font-bold text-[#513394] dark:text-[#A78BFA] border border-[#513394]/30 dark:border-[#A78BFA]/30 px-4 py-2 rounded-full hover:bg-[#513394]/10 transition-colors">
+                        Contrast Therapy Mumbai
+                    </Link>
+                    <Link href="/ice-bath-mumbai" className="text-xs font-bold text-[#513394] dark:text-[#A78BFA] border border-[#513394]/30 dark:border-[#A78BFA]/30 px-4 py-2 rounded-full hover:bg-[#513394]/10 transition-colors">
+                        Ice Bath Mumbai
+                    </Link>
+                    <Link href="/physiotherapy-dadar-mumbai" className="text-xs font-bold text-[#513394] dark:text-[#A78BFA] border border-[#513394]/30 dark:border-[#A78BFA]/30 px-4 py-2 rounded-full hover:bg-[#513394]/10 transition-colors">
+                        Physiotherapy Dadar
                     </Link>
                 </div>
             </div>

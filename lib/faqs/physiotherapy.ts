@@ -22,7 +22,7 @@ export const physiotherapyFaqs = [
   {
     question: 'Can I combine physiotherapy with other R3BOOT services?',
     answer:
-      'Yes. Many clients combine physiotherapy with sports massage, ice bath, and red light therapy on the same visit. Your physiotherapist can guide you on the most effective combination for your condition.',
+      'Yes. Many clients combine physiotherapy with sports massage, ice bath, and infrared sauna on the same visit. Your physiotherapist can guide you on the most effective combination for your condition.',
   },
   {
     question: 'What should I bring to my first session?',

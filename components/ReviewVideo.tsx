@@ -70,7 +70,7 @@ const videos: VideoCard[] = [
     id: 5,
     title: "LOVED THE EXPERIENCE",
     subtitle: "Mumbai Member",
-    description: "Trying out Red Light Therapy combined with cold exposure.",
+    description: "Trying out Infrared Sauna combined with cold exposure.",
     videoUrl: "https://res.cloudinary.com/dj7bot2uc/video/upload/v1770182044/New_Testimonial_5_mhymut_gkt6gw.webm",
     thumbnailUrl: "",
     timestamp: "0:30",
@@ -87,6 +87,18 @@ const videos: VideoCard[] = [
     thumbnailUrl: "",
     timestamp: "0:30",
     transcript: "This was my first experience at R3boot, and it was excellent from start to finish. I received a warm welcome and a clear explanation of how the therapy works and how it helps. The massage, sauna, infrared session, and ice bath were all very well structured and professionally executed. Overall, it was a thorough and genuinely rewarding experience. I’m happy to be an early member and I wish the team great success as they expand.",
+    reviewerName: "R3boot Client",
+    rating: 5
+  },
+  {
+    id: 7,
+    title: "GENUINE LEADERSHIP TRANSFORMATION",
+    subtitle: "Leadership Coaching Client",
+    description: "Powerful leadership coaching rooted in real business experience and deep understanding of teams.",
+    videoUrl: "https://res.cloudinary.com/dj7bot2uc/video/upload/v1780844487/R3BOOT_TESTIMONIAL_45_ymsbgb.mov",
+    thumbnailUrl: "https://res.cloudinary.com/dj7bot2uc/video/upload/so_0,w_600,h_900,c_fill,q_auto,f_jpg/v1780844487/R3BOOT_TESTIMONIAL_45_ymsbgb.jpg",
+    timestamp: "0:45",
+    transcript: "Leadership coaching becomes powerful when it’s real, practical, and rooted in experience. And that’s exactly what Alkesh Khubaria brings. As a seasoned businessman himself, he truly understands teams, personalities, priorities, and what it takes to truly bond and grow. His coaching cuts through the noise and creates genuine leadership transformation.",
     reviewerName: "R3boot Client",
     rating: 5
   }
@@ -108,9 +120,9 @@ const getCloudinaryThumbnail = (videoUrl: string): string => {
       pathParts.splice(uploadIndex + 1, 0, 'so_0,w_600,h_900,c_fill,q_auto,f_jpg');
     }
 
-    // Change file extension from .mp4 to .jpg
+    // Change file extension from .mp4/.mov/.webm to .jpg
     const lastPart = pathParts[pathParts.length - 1];
-    pathParts[pathParts.length - 1] = lastPart.replace(/\.mp4$/i, '.jpg');
+    pathParts[pathParts.length - 1] = lastPart.replace(/\.(mp4|mov|webm)$/i, '.jpg');
 
     url.pathname = pathParts.join('/');
     return url.toString();
@@ -403,6 +415,7 @@ export default function ReviewVideo() {
             {/* Close Button */}
             <button
               onClick={handleCloseModal}
+              aria-label="Close video"
               className="absolute top-2 right-2 sm:top-4 sm:right-4 w-8 h-8 sm:w-10 sm:h-10 bg-black/50 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-all z-20"
             >
               <X className="w-4 h-4 sm:w-5 sm:h-5" />
@@ -494,7 +507,7 @@ export default function ReviewVideo() {
                 {/* Fixed Call to Action Button at Bottom */}
                 <div className="mt-4 pt-4 border-t border-gray-200 flex-shrink-0">
                   <a
-                    href="https://www.practo.com/mumbai/clinic/r3-boot-spoorts-therapy-dadar-east/doctors"
+                    href="tel:+919702368612"
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={() => handleCloseModal()}
@@ -552,6 +565,7 @@ const VideoCard: React.FC<{
           e.stopPropagation();
           onPlayClick(video);
         }}
+        aria-label={`Play ${video.reviewerName}'s review`}
         className="absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-all duration-300 group-hover:scale-110 z-20"
       >
         <Play className="w-8 h-8" fill="white" />
@@ -570,7 +584,7 @@ const VideoCard: React.FC<{
 
         {/* Reviewer Name and Title */}
         <div className="mb-2 select-none">
-          <h4 className="font-bold text-sm sm:text-base mb-1 select-none">{video.reviewerName}</h4>
+          <p className="font-bold text-sm sm:text-base mb-1 select-none">{video.reviewerName}</p>
           <p className="text-xs sm:text-sm text-gray-200 font-medium select-none">{video.title}</p>
         </div>
 
@@ -594,7 +608,7 @@ const VideoCard: React.FC<{
                 </svg>
               ))}
             </div>
-            <h4 className="font-bold text-base mb-1 select-none">{video.reviewerName}</h4>
+            <p className="font-bold text-base mb-1 select-none">{video.reviewerName}</p>
             <p className="text-xs text-gray-300 mb-2 select-none">{video.title}</p>
             <p className="text-xs leading-relaxed text-gray-200 line-clamp-2 mb-3 select-none">
               &quot;{video.transcript.length > 80 ? video.transcript.substring(0, 80) + '...' : video.transcript}&quot;
