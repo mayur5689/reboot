@@ -27,13 +27,6 @@ export default function ServiceSchema({
       '@type': 'Place',
       name: areaServed,
     },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5.0',
-      reviewCount: '80',
-      bestRating: '5',
-      worstRating: '1',
-    },
   }
 
   return (
