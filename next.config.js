@@ -13,6 +13,11 @@ const nextConfig = {
                 destination: '/services/aqua-therapy',
                 permanent: true,
             },
+            {
+                source: '/services/counselling-%26-mental-training',
+                destination: '/services/counselling-mental-training',
+                permanent: true,
+            },
         ]
     },
     images: {
