@@ -34,9 +34,8 @@ export default function AquaTherapyLocationInfo() {
                   R3BOOT | Integrated Recovery Center
                 </p>
                 <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-                  203, Palai Plaza, Swami Gyan Jivandas Marg<br />
-                  Opp Pritam Hotel, Dadar East<br />
-                  Mumbai - 400 014, Maharashtra
+                  Palai Plaza, 203, Swami Gyan Jivandas Marg<br />
+                  Dadar East, Mumbai, Maharashtra 400014
                 </p>
                 <div className="mt-5 pt-5 border-t border-gray-100 dark:border-white/10 space-y-2">
                   <p className="text-sm">

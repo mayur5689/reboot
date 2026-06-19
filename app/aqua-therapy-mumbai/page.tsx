@@ -541,6 +541,7 @@ export default function AquaTherapyMumbaiPage() {
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
             {[
+              { label: 'Aqua Therapy for Knee Pain', href: '/aqua-therapy-for-knee-pain-mumbai' },
               { label: 'Physiotherapy Mumbai', href: '/physiotherapy-mumbai' },
               { label: 'Sports Massage', href: '/sports-massage-mumbai' },
               { label: 'Contrast Therapy', href: '/contrast-therapy-mumbai' },

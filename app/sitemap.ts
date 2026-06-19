@@ -83,6 +83,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: 'monthly',
       priority: 0.9,
     },
+    {
+      url: `${BASE_URL}/services/aqua-therapy`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
     // SEO landing pages (dedicated transactional pages)
     {
       url: `${BASE_URL}/sports-massage-mumbai`,
@@ -131,6 +137,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.85,
+    },
+    // Aqua Therapy condition pages
+    {
+      url: `${BASE_URL}/aqua-therapy-for-knee-pain-mumbai`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.9,
     },
     {
       url: `${BASE_URL}/sports-massage-runners-mumbai`,

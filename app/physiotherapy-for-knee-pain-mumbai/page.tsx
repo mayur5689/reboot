@@ -543,6 +543,7 @@ export default function PhysiotherapyKneePainMumbaiPage() {
               { label: 'Physiotherapy for Back Pain', href: '/physiotherapy-for-back-pain-mumbai' },
               { label: 'Sports Injury Physiotherapy Dadar', href: '/sports-injury-physiotherapy-dadar-mumbai' },
               { label: 'Knee Pain Sports Massage', href: '/knee-pain-sports-massage-mumbai' },
+              { label: 'Aqua Therapy for Knee Pain', href: '/aqua-therapy-for-knee-pain-mumbai' },
               { label: 'Contrast Therapy Mumbai', href: '/contrast-therapy-mumbai' },
               { label: 'Clinical Pilates Mumbai', href: '/clinical-pilates-mumbai' },
             ].map((link) => (
