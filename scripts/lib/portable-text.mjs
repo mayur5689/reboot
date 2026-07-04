@@ -59,6 +59,30 @@ function bullets(items) {
   }))
 }
 
+/** Question-style H2 + direct-answer bullets + optional follow-up paragraphs. */
+export function qaSection(question, items, paragraphs = []) {
+  const out = [h2(question), ...bullets(items)]
+  for (const text of paragraphs) out.push(p(text))
+  return out
+}
+
+/** Semrush-style paragraph snippet: H2 question → 40–60 word answer → optional context paragraphs. */
+export function snippetSection(question, snippet, paragraphs = []) {
+  const out = [h2(question), p(snippet)]
+  for (const text of paragraphs) out.push(p(text))
+  return out
+}
+
+export function blogTable(caption, headers, rows) {
+  return {
+    _type: 'blogTable',
+    _key: key(),
+    caption,
+    headers,
+    rows: rows.map((cells) => ({ _type: 'row', _key: key(), cells })),
+  }
+}
+
 export function buildBody(sections) {
   const out = []
   for (const s of sections) {
@@ -68,6 +92,10 @@ export function buildBody(sections) {
     else if (s.type === 'quote') out.push(quote(s.text))
     else if (s.type === 'ul') out.push(...bullets(s.items))
     else if (s.type === 'rich') out.push(strongP(s.parts))
+    else if (s.type === 'qa') out.push(...qaSection(s.question, s.bullets, s.paragraphs ?? []))
+    else if (s.type === 'snippet')
+      out.push(...snippetSection(s.question, s.snippet, s.paragraphs ?? []))
+    else if (s.type === 'table') out.push(blogTable(s.caption, s.headers, s.rows))
   }
   return out
 }

@@ -37,6 +37,19 @@ export const authorType = defineType({
                 }),
             ],
         }),
+        defineField({
+            name: 'role',
+            title: 'Role / title',
+            type: 'string',
+            description: 'e.g. Physiotherapist, R3BOOT Recovery Centre',
+        }),
+        defineField({
+            name: 'credentials',
+            title: 'Credentials',
+            type: 'array',
+            of: [{ type: 'string' }],
+            description: 'Short credential chips shown on blog author cards.',
+        }),
     ],
     preview: {
         select: {

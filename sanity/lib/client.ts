@@ -37,7 +37,15 @@ export async function getPostBySlug(slug: string) {
       excerpt,
       metaDescription,
       publishedAt,
+      _updatedAt,
       "author": author->name,
+      "authorDetails": author->{
+        name,
+        role,
+        credentials,
+        "bio": pt::text(bio),
+        image
+      },
       "authorImage": author->image,
       "categories": categories[]->title,
       faqs
