@@ -25,13 +25,13 @@ export const contrastTherapyMumbaiFaqs = [
       'Bring swimwear or athletic shorts you are comfortable wearing in both the sauna and ice bath. Bring a towel and arrive hydrated. Avoid eating a heavy meal within 90 minutes of your session. We provide the rest.',
   },
   {
-    question: 'How much does contrast therapy cost at R3BOOT Mumbai?',
-    answer:
-      'Contrast therapy at R3BOOT costs ₹2,500 for a Half Cycle (30 minutes) or ₹3,500 for a Full Cycle (60 minutes). The Full Cycle repeats the same Half Cycle protocol twice, same sequence, same temperatures, no mixing. Both sessions are supervised by our physiotherapy team at Dadar, Mumbai.',
-  },
-  {
     question: 'What is the difference between the Half Cycle and Full Cycle?',
     answer:
-      'The Half Cycle (30 min, ₹2,500) is one complete contrast sequence, suitable for regular maintenance recovery or first-time clients. The Full Cycle (60 min, ₹3,500) repeats the same Half Cycle protocol a second time with no changes to the sequence, temperatures, or intent. Recommended after competition, heavy training weeks, or for athletes who want maximum benefit per session.',
+      'The Half Cycle (30 minutes) is one complete contrast sequence, suitable for regular maintenance recovery or first-time clients. The Full Cycle (60 minutes) repeats the same Half Cycle protocol a second time with no changes to the sequence, temperatures, or intent. Recommended after competition, heavy training weeks, or for athletes who want maximum benefit per session.',
+  },
+  {
+    question: 'How do you maintain hygiene for the ice bath and sauna?',
+    answer:
+      'We use filtered water for the ice bath, and it is screened and cleaned thoroughly after every single session, not just at the end of the day. The infrared sauna is cleaned and sanitised between every session too. Fresh towels and single-use disposables are provided so each client starts on a clean setup, held to clinical hygiene standards throughout.',
   },
 ]

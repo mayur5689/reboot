@@ -1,40 +1,22 @@
 import Image from 'next/image'
-import Link from 'next/link'
 import type { Metadata } from 'next'
-import { services } from '@/lib/services'
 import { FAQSection } from '@/components/faq-section'
-import ServiceSchema from '@/components/schema/ServiceSchema'
-import FAQSchema from '@/components/schema/FAQSchema'
-import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema'
 import { contrastTherapyMumbaiFaqs } from '@/lib/faqs/contrast-therapy-mumbai'
+import { HeroSlider } from './HeroSlider'
+import { TeamSectionDemo } from './TeamSectionDemo'
+import { TestimonialsCarousel } from './TestimonialsCarousel'
 import ServiceNavbar from '@/components/ServiceNavbar'
-import { HeroSlider } from '@/app/services-demo/contrast-therapy/HeroSlider'
-import { PainPointsSection } from '@/app/services-demo/contrast-therapy/PainPointsSection'
-import { WhyMumbaiAthletesSection } from '@/app/services-demo/contrast-therapy/WhyMumbaiAthletesSection'
-import { HowItWorksSection } from '@/app/services-demo/contrast-therapy/HowItWorksSection'
-import { ComparisonSection } from '@/app/services-demo/contrast-therapy/ComparisonSection'
-import { HygieneSection } from '@/app/services-demo/contrast-therapy/HygieneSection'
-import { TeamSectionDemo } from '@/app/services-demo/contrast-therapy/TeamSectionDemo'
-import { TestimonialsCarousel } from '@/app/services-demo/contrast-therapy/TestimonialsCarousel'
-import { LocationSection } from '@/app/services-demo/contrast-therapy/LocationSection'
+import { PainPointsSection } from './PainPointsSection'
+import { WhyMumbaiAthletesSection } from './WhyMumbaiAthletesSection'
+import { HowItWorksSection } from './HowItWorksSection'
+import { ComparisonSection } from './ComparisonSection'
+import { HygieneSection } from './HygieneSection'
+import { LocationSection } from './LocationSection'
 
 export const metadata: Metadata = {
-  title: 'Contrast Therapy Mumbai | Ice Bath & Infrared Sauna | R3BOOT',
-  description:
-    'Contrast therapy Mumbai at R3BOOT | ice bath + infrared sauna, physio-supervised. Day & Night Cycle protocols for athletes in Dadar. 5.0 ★ Google. Book via WhatsApp.',
-  alternates: { canonical: '/contrast-therapy-mumbai' },
-  keywords: [
-    'contrast therapy Mumbai',
-    'contrast bath therapy Mumbai',
-    'ice bath recovery Mumbai',
-    'hot cold therapy for muscle recovery',
-    'contrast therapy for athletes Mumbai',
-    'contrast therapy for muscle recovery Mumbai',
-    'infrared sauna ice bath Mumbai',
-  ],
+  title: 'Contrast Therapy Service Page - Demo | R3BOOT',
+  robots: { index: false, follow: false },
 }
-
-const otherServices = services.filter((s) => s.slug !== 'contrast-therapy').slice(0, 4)
 
 // ─── DATA ─────────────────────────────────────────────────────────────────────
 
@@ -50,6 +32,34 @@ const heroSlides = [
   {
     src: '/images/contrast-therapy-mumbai_service_page/contrast-therapy-mumbai_sauna.webp',
     alt: 'Infrared sauna session at R3BOOT Mumbai',
+  },
+]
+
+
+const painPoints = [
+  {
+    title: 'Still sore two days after training',
+    description: 'DOMS that lingers past 48 hours and cuts your next session short.',
+  },
+  {
+    title: 'High training volume, slow recovery',
+    description: 'Training 4+ times a week but your body never fully resets between sessions.',
+  },
+  {
+    title: 'Performance drops mid-week',
+    description: 'Strong on Monday, dead by Wednesday. Recovery is the missing variable.',
+  },
+  {
+    title: 'Tight muscles stretching cannot fix',
+    description: 'Foam rolling helps briefly. The tension returns within hours.',
+  },
+  {
+    title: 'Post-match fatigue lasting too long',
+    description: 'The day after competition should be productive. Currently it is wasted.',
+  },
+  {
+    title: 'Sleep disturbed by muscle discomfort',
+    description: 'Inflammatory tension stays elevated into the evening and disrupts rest.',
   },
 ]
 
@@ -96,6 +106,25 @@ const processSteps = [
     number: '04',
     title: 'Clinical Hygiene Standards',
     body: 'Sauna, ice bath, and changing areas are cleaned and sanitised between every session. Fresh towels, filtered water, and single-use disposables where needed — held to clinical standards throughout.',
+  },
+]
+
+const teamMembers = [
+  {
+    name: 'Dr. Hiral Parikh',
+    role: 'Lead Physiotherapist',
+    credentials: 'BPT - Padmashree Dr. D.Y. Patil College of Physiotherapy',
+    experience: '15 years experience',
+    specialties: ['Sports Rehabilitation', 'Post-surgical Recovery', 'Contrast Therapy'],
+    image: '/images/trainer2/Trainers/HIRAL.webp',
+  },
+  {
+    name: 'Dr. Vaishali Vijay Rauniyar',
+    role: 'Physiotherapist',
+    credentials: 'Dry Needling and Aquatic Rehab Certified',
+    experience: 'Certified Specialist',
+    specialties: ['Dry Needling', 'Aquatic Rehabilitation', 'Orthopaedic Rehab'],
+    image: '/images/trainer2/Trainers/Dr. Vaishali Vijay Rauniyar.webp',
   },
 ]
 
@@ -156,9 +185,9 @@ function PhoneIcon({ className }: { className?: string }) {
 
 // ─── PAGE ─────────────────────────────────────────────────────────────────────
 
-export default function ContrastTherapyMumbaiPage() {
+export default function ContrastTherapyServiceDemo() {
   return (
-    <main className="ct-page min-h-screen bg-white dark:bg-[#0A0A0A]">
+    <main className="demo-page min-h-screen bg-white dark:bg-[#0A0A0A]">
 
       <ServiceNavbar />
 
@@ -171,7 +200,7 @@ export default function ContrastTherapyMumbaiPage() {
         <div className="absolute inset-0">
           <Image
             src="/images/R3BOOT_CONTRAST_THERAPY_IMAGE (2).webp"
-            alt="Contrast Therapy Mumbai, Ice Bath and Infrared Sauna at R3BOOT"
+            alt=""
             fill
             className="object-cover"
             style={{ objectPosition: '40% center' }}
@@ -406,7 +435,8 @@ export default function ContrastTherapyMumbaiPage() {
       <PainPointsSection />
 
       {/* ─────────────────────────────────────────────
-          SECTION 4: OUR APPROACH
+          SECTION 4: REBOOT REACH  [NEW]
+          Our specific solution to those pain points
           Left: heading + context | Right: 4 numbered points
       ───────────────────────────────────────────── */}
       <section id="benefits" className="py-16 sm:py-20 lg:py-28 bg-white dark:bg-[#0A0A0A]">
@@ -472,11 +502,13 @@ export default function ContrastTherapyMumbaiPage() {
 
       {/* ─────────────────────────────────────────────
           SECTION 5D: WHY MUMBAI ATHLETES CHOOSE CONTRAST THERAPY
+          Left: audience + copy | Right: bento image grid
       ───────────────────────────────────────────── */}
       <WhyMumbaiAthletesSection />
 
       {/* ─────────────────────────────────────────────
           SECTION 6: PROCESS (4 STEPS)
+          What to expect — four numbered cards, full width
       ───────────────────────────────────────────── */}
       <section className="py-16 sm:py-20 lg:py-28 bg-white dark:bg-[#0A0A0A]">
         <div className="container mx-auto px-5 sm:px-6 lg:px-8">
@@ -517,7 +549,7 @@ export default function ContrastTherapyMumbaiPage() {
         </div>
       </section>
 
-      {/* SECTION 7: TEAM */}
+      {/* SECTION 7: TEAM - interactive tab switcher (mobile) */}
       <TeamSectionDemo />
 
       {/* MOBILE: Google Review cards */}
@@ -532,6 +564,7 @@ export default function ContrastTherapyMumbaiPage() {
               {/* Top row: Google logo + rating pill */}
               <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center gap-2.5">
+                  {/* Google G SVG */}
                   <svg className="w-7 h-7 flex-shrink-0" viewBox="0 0 48 48">
                     <path fill="#4285F4" d="M44.5 20H24v8.5h11.8C34.7 33.9 30 37 24 37c-7.2 0-13-5.8-13-13s5.8-13 13-13c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 4.1 29.6 2 24 2 11.8 2 2 11.8 2 24s9.8 22 22 22c11 0 21-8 21-22 0-1.3-.2-2.7-.5-4z"/>
                     <path fill="#34A853" d="M6.3 14.7l7 5.1C15 16.1 19.1 13 24 13c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 4.1 29.6 2 24 2 16.3 2 9.6 7.3 6.3 14.7z"/>
@@ -550,8 +583,10 @@ export default function ContrastTherapyMumbaiPage() {
                 </div>
               </div>
 
+              {/* Divider */}
               <div className="h-px bg-white/[0.07] mb-4" />
 
+              {/* Reviewer */}
               <div className="flex items-center gap-3 mb-3">
                 <div className="relative w-11 h-11 rounded-full overflow-hidden flex-shrink-0">
                   <Image src={r.avatar} alt={r.name} fill className="object-cover" />
@@ -562,6 +597,7 @@ export default function ContrastTherapyMumbaiPage() {
                 </div>
               </div>
 
+              {/* Time ago */}
               <div className="flex items-center gap-1.5 mb-4">
                 <svg className="w-3.5 h-3.5 text-white/30 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -569,10 +605,12 @@ export default function ContrastTherapyMumbaiPage() {
                 <span className="text-white/35 text-[12px]">{r.ago}</span>
               </div>
 
+              {/* Quote */}
               <blockquote className="text-white/80 text-[15px] leading-relaxed italic flex-grow mb-5">
                 &ldquo;{r.quote}&rdquo;
               </blockquote>
 
+              {/* Verified */}
               <div className="flex items-center gap-2 pt-4 border-t border-white/[0.06]">
                 <svg className="w-4 h-4 text-green-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
@@ -607,6 +645,8 @@ export default function ContrastTherapyMumbaiPage() {
 
       {/* ─────────────────────────────────────────────
           SECTION 10: CTA BANNER
+          Full purple, two actions
+          Extra bottom padding on mobile for sticky bar
       ───────────────────────────────────────────── */}
       {/* MOBILE CTA CARD */}
       <section className="md:hidden bg-white dark:bg-[#0A0A0A] pt-10 pb-28">
@@ -651,7 +691,7 @@ export default function ContrastTherapyMumbaiPage() {
         </div>
       </section>
 
-      {/* DESKTOP CTA */}
+      {/* DESKTOP CTA - original full-bleed */}
       <section className="hidden md:block py-16 lg:py-20 bg-[#513394] relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-white/[0.07] rounded-full blur-[100px] -translate-y-1/2 translate-x-1/4" />
@@ -687,97 +727,9 @@ export default function ContrastTherapyMumbaiPage() {
       </section>
 
       {/* ─────────────────────────────────────────────
-          SECTION 11: CONTRAST THERAPY CLUSTER — internal links
-      ───────────────────────────────────────────── */}
-      <section className="py-16 sm:py-20 lg:py-28 bg-[#0D0D0D] border-t border-white/[0.06]">
-        <div className="container mx-auto px-5 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <span className="text-[11px] font-black tracking-[0.3em] text-[#A78BFA] uppercase mb-4 block">
-              RECOVERY SERVICES //
-            </span>
-            <h2 className="text-3xl md:text-5xl font-black text-white tracking-tight">
-              Ice Bath, Sauna &amp; <span className="text-[#7B5FCA]">Locations</span>
-            </h2>
-          </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
-            {[
-              { label: 'Ice Bath Mumbai', href: '/ice-bath-mumbai' },
-              { label: 'Cold Plunge Mumbai', href: '/cold-plunge-mumbai' },
-              { label: 'Infrared Sauna', href: '/infrared-sauna-mumbai' },
-              { label: 'Near Bandra', href: '/contrast-therapy-bandra' },
-              { label: 'Dadar', href: '/contrast-therapy-dadar' },
-              { label: 'Lower Parel', href: '/contrast-therapy-lower-parel' },
-              { label: 'Andheri', href: '/contrast-therapy-andheri' },
-              { label: 'Worli', href: '/contrast-therapy-worli' },
-            ].map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="text-center px-4 py-4 rounded-2xl border border-white/[0.08] bg-white/[0.03] text-sm font-bold text-white hover:border-[#A78BFA]/40 hover:text-[#A78BFA] transition-all"
-              >
-                {link.label}
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ─────────────────────────────────────────────
-          SECTION 12: OTHER SERVICES
-      ───────────────────────────────────────────── */}
-      <section className="py-16 sm:py-20 lg:py-28 bg-[#0A0A0A]">
-        <div className="container mx-auto px-5 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <span className="text-[11px] font-black tracking-[0.3em] text-[#A78BFA] uppercase mb-4 block">
-              KEEP EXPLORING //
-            </span>
-            <h2 className="text-4xl md:text-6xl font-black text-white tracking-tight">
-              Other Ways to <span className="text-[#7B5FCA]">Recover</span>
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {otherServices.map((service, idx) => (
-              <Link
-                key={idx}
-                href={`/services/${service.slug}`}
-                className="group bg-white/[0.03] p-4 rounded-[2.5rem] border border-white/[0.08] hover:border-[#A78BFA]/30 transition-all duration-300 transform hover:-translate-y-2 flex flex-col h-full"
-              >
-                <div className="relative h-48 w-full shrink-0 overflow-hidden rounded-[2rem] mb-6">
-                  <Image
-                    src={service.image}
-                    alt={service.title}
-                    fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors" />
-                </div>
-                <div className="px-2 pb-2 flex flex-col flex-grow">
-                  <h3 className="text-xl font-bold text-white group-hover:text-[#A78BFA] transition-colors mb-3">
-                    {service.title}
-                  </h3>
-                  <p className="text-sm text-white/45 line-clamp-2 leading-relaxed mb-6">
-                    {service.description}
-                  </p>
-                  <div className="mt-auto">
-                    <div className="flex items-center justify-between w-full bg-[#513394]/15 group-hover:bg-[#513394] text-[#A78BFA] group-hover:text-white rounded-full p-1 transition-all duration-300">
-                      <span className="text-[13px] font-black pl-5">EXPLORE</span>
-                      <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-sm">
-                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
-                          <path d="M9 18l6-6-6-6" />
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ─────────────────────────────────────────────
           STICKY MOBILE CTA
+          Fixed bottom bar - mobile only (md:hidden)
+          Always visible as user scrolls
       ───────────────────────────────────────────── */}
       <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden">
         <div className="bg-[#0A0A0A]/95 backdrop-blur-md border-t border-white/[0.09] px-4 pt-3 pb-5">
@@ -801,16 +753,6 @@ export default function ContrastTherapyMumbaiPage() {
         </div>
       </div>
 
-      <ServiceSchema
-        serviceName="Contrast Therapy in Mumbai"
-        description="Clinically structured hot-cold recovery protocol using infrared sauna (68°C) and ice bath (6–10°C). Day &amp; Night Cycle protocols supervised by physiotherapists at R3BOOT, Mumbai."
-        serviceUrl="https://www.r3boot.in/contrast-therapy-mumbai"
-      />
-      <FAQSchema faqs={contrastTherapyMumbaiFaqs} />
-      <BreadcrumbSchema items={[
-        { name: 'Home', url: '/' },
-        { name: 'Contrast Therapy Mumbai', url: '/contrast-therapy-mumbai' },
-      ]} />
     </main>
   )
 }
