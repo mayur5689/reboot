@@ -149,7 +149,7 @@ export const CONTRAST_BLOG_QA_UPDATES = [
         type: 'snippet',
         question: 'What is the contrast bath therapy protocol at R3BOOT Dadar?',
         snippet:
-          'At R3BOOT Dadar, every contrast bath therapy session starts with health intake and a blood pressure check, then alternates Red Light Sauna (68°C) and Ice Bath (6–10°C) in a Day or Night Cycle. Half Cycle runs 30 minutes (₹2,500); Full Cycle runs 60 minutes (₹3,500).',
+          'At R3BOOT Dadar, every contrast bath therapy session starts with health intake and a blood pressure check, then alternates Red Light Sauna (68°C) and Ice Bath (6–10°C) in a Day or Night Cycle. Half Cycle runs 30 minutes; Full Cycle runs 60 minutes.',
         paragraphs: [
           'Half Cycle is one complete hot–cold sequence, enough for most training-week recovery days. Full Cycle repeats the same Half Cycle twice at the same temperatures and same cycle type, recommended after competition weeks or when a single round feels insufficient. We do not mix Day and Night in one session.',
           'Before your first cold phase, a physiotherapist coaches breathing to manage cold shock in the opening 60 seconds. Staff stay present for the full protocol. Between phases, gentle mobility is encouraged because it improves transitions and reduces stiffness going into the next immersion.',
@@ -161,7 +161,6 @@ export const CONTRAST_BLOG_QA_UPDATES = [
         headers: ['', 'Half Cycle', 'Full Cycle'],
         rows: [
           ['Duration', '30 minutes', '60 minutes'],
-          ['Price', '₹2,500', '₹3,500'],
           ['What you get', 'One complete Day or Night sequence', 'The same Half Cycle repeated twice'],
           ['Temperatures', 'Sauna 68°C · Ice Bath 6–10°C', 'Same as Half Cycle (no change mid-session)'],
           ['Best for', 'Regular training-week recovery; first-time clients', 'Post-competition weeks; heavy training blocks'],
