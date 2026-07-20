@@ -18,9 +18,16 @@ export default function StudioLayoutWrapper({
     const pathname = usePathname();
     // Check if we are in studio
     const isStudio = pathname?.startsWith('/studio');
+    const isServiceLanding =
+        pathname?.startsWith('/services-demo/') ||
+        pathname === '/l4-l5-disc-bulge-mumbai';
 
     if (isStudio) {
         return <>{children}</>;
+    }
+
+    if (isServiceLanding) {
+        return <>{children}{footer}{fab}</>;
     }
 
     return (

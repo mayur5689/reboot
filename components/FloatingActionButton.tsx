@@ -1,9 +1,12 @@
 "use client";
 import { useState } from 'react';
+import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaWhatsapp, FaPhone, FaEnvelope } from 'react-icons/fa';
 import { IoChatbubbleEllipsesSharp, IoClose } from 'react-icons/io5';
 import { MdMessage } from 'react-icons/md';
+
+const NON_SERVICE_PAGES = ['/', '/about', '/contact', '/blog', '/reviews', '/privacy', '/terms', '/studio'];
 
 const BRAND = '#513394';
 
@@ -26,7 +29,10 @@ const iconStyles = {
 };
 
 const FloatingActionButton = () => {
+  const pathname = usePathname();
   const [open, setOpen] = useState(false);
+
+  if (!NON_SERVICE_PAGES.includes(pathname)) return null;
 
   return (
     <div className="fixed bottom-20 right-5 sm:bottom-24 sm:right-8 z-50 flex flex-col items-end gap-2">
