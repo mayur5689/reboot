@@ -8,6 +8,25 @@ export type Testimonial = {
   ago: string
   avatar: string
   quote: string
+  rating?: number
+}
+
+function StarRow({ rating = 5 }: { rating?: number }) {
+  const score = Math.max(0, Math.min(5, rating))
+  return (
+    <div className="flex items-center gap-1.5 bg-[#222] rounded-full px-3 py-1.5">
+      {[...Array(5)].map((_, j) => (
+        <svg
+          key={j}
+          className={`w-3.5 h-3.5 ${j < score ? 'fill-yellow-400' : 'fill-white/20'}`}
+          viewBox="0 0 20 20"
+        >
+          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+        </svg>
+      ))}
+      <span className="text-white font-bold text-[13px] ml-0.5">{score.toFixed(1)}</span>
+    </div>
+  )
 }
 
 function GoogleLogo({ className }: { className?: string }) {
@@ -29,21 +48,19 @@ function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
           <GoogleLogo className="w-7 h-7 flex-shrink-0" />
           <span className="text-white font-bold text-[15px]">Google Review</span>
         </div>
-        <div className="flex items-center gap-1.5 bg-[#222] rounded-full px-3 py-1.5">
-          {[...Array(5)].map((_, j) => (
-            <svg key={j} className="w-3.5 h-3.5 fill-yellow-400" viewBox="0 0 20 20">
-              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-            </svg>
-          ))}
-          <span className="text-white font-bold text-[13px] ml-0.5">5.0</span>
-        </div>
+        <StarRow rating={testimonial.rating} />
       </div>
 
       <div className="h-px bg-white/[0.07] mb-5" />
 
       <div className="flex items-center gap-3 mb-3">
         <div className="relative w-11 h-11 rounded-full overflow-hidden flex-shrink-0">
-          <Image src={testimonial.avatar} alt={testimonial.name} fill className="object-cover" />
+          {testimonial.avatar.endsWith('.svg') ? (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img src={testimonial.avatar} alt={testimonial.name} className="h-full w-full object-cover" />
+          ) : (
+            <Image src={testimonial.avatar} alt={testimonial.name} fill className="object-cover" />
+          )}
         </div>
         <div>
           <p className="text-white font-bold text-[15px] leading-tight">{testimonial.name}</p>
@@ -72,17 +89,27 @@ function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
   )
 }
 
-export function TestimonialsCarousel({ testimonials }: { testimonials: Testimonial[] }) {
+export function TestimonialsCarousel({
+  testimonials,
+  showEdgeFade = true,
+}: {
+  testimonials: Testimonial[]
+  showEdgeFade?: boolean
+}) {
   const duplicated = [...testimonials, ...testimonials, ...testimonials, ...testimonials]
 
   return (
-    <div className="relative overflow-hidden">
-      <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-20 bg-gradient-to-r from-[#0A0A0A] to-transparent sm:w-32" />
-      <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-20 bg-gradient-to-l from-[#0A0A0A] to-transparent sm:w-32" />
+    <div className="relative isolate overflow-hidden">
+      {showEdgeFade && (
+        <>
+          <div className="pointer-events-none absolute inset-y-0 left-0 z-20 w-24 bg-gradient-to-r from-white to-transparent dark:from-[#0A0A0A] sm:w-40 lg:w-44" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 z-20 w-24 bg-gradient-to-l from-white to-transparent dark:from-[#0A0A0A] sm:w-40 lg:w-44" />
+        </>
+      )}
 
       <div
-        className="flex w-max animate-marquee-left py-1 hover:[animation-play-state:paused]"
-        style={{ '--duration': '70s' } as React.CSSProperties}
+        className="relative z-0 flex w-max animate-marquee-right py-1 hover:[animation-play-state:paused]"
+        style={{ '--duration': '80s' } as React.CSSProperties}
       >
         {duplicated.map((testimonial, i) => (
           <TestimonialCard key={`${testimonial.name}-${i}`} testimonial={testimonial} />

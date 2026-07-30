@@ -4,7 +4,7 @@ import { FAQSection } from '@/components/faq-section'
 import { contrastTherapyMumbaiFaqs } from '@/lib/faqs/contrast-therapy-mumbai'
 import { HeroSlider } from './HeroSlider'
 import { TeamSectionDemo } from './TeamSectionDemo'
-import { TestimonialsCarousel } from './TestimonialsCarousel'
+import { GoogleReviewsSection } from './GoogleReviewsSection'
 import ServiceNavbar from '@/components/ServiceNavbar'
 import { PainPointsSection } from './PainPointsSection'
 import { WhyMumbaiAthletesSection } from './WhyMumbaiAthletesSection'
@@ -125,51 +125,6 @@ const teamMembers = [
     experience: 'Certified Specialist',
     specialties: ['Dry Needling', 'Aquatic Rehabilitation', 'Orthopaedic Rehab'],
     image: '/images/trainer2/Trainers/Dr. Vaishali Vijay Rauniyar.webp',
-  },
-]
-
-const testimonials = [
-  {
-    name: 'Chandrakant Chande',
-    meta: 'Local Guide · 24 reviews',
-    ago: '2 months ago',
-    avatar: '/images/Customer_Review/Namrata Doshi.png',
-    quote: 'Reboot team was wonderful. Navigated me through the entire contrast therapy experience with great insights. My body also feels lighter and better. Would definitely recommend this place for someone looking for good recovery.',
-  },
-  {
-    name: 'Dharmesh Thakkar',
-    meta: 'Google User · 8 reviews',
-    ago: '3 months ago',
-    avatar: '/images/Customer_Review/Sonal Malik.png',
-    quote: 'The deep tissue massage, cupping therapy, and ice water treatment helped relieve my body stiffness tremendously, while the sauna session left me feeling completely rejuvenated. Professional and well-equipped.',
-  },
-  {
-    name: 'Namrata Doshi',
-    meta: 'Local Guide · 12 reviews',
-    ago: '1 month ago',
-    avatar: '/images/Customer_Review/Namrata Doshi.png',
-    quote: 'The team is highly professional, knowledgeable, and genuinely caring. From the initial assessment to the recovery plan, everything was clearly explained and tailored to my needs. Highly recommend R3BOOT.',
-  },
-  {
-    name: 'Sonal Malik',
-    meta: 'Google User · 6 reviews',
-    ago: '4 months ago',
-    avatar: '/images/Customer_Review/Sonal Malik.png',
-    quote: 'The Pilates sessions were highly personalized, with clear focus on alignment and core strength. I have already noticed better posture and reduced stiffness. Highly recommend for anyone serious about long-term physical wellness.',
-  },
-  {
-    name: 'JugalKishore Shah',
-    meta: 'Google User · 3 reviews',
-    ago: '5 months ago',
-    avatar: '/images/Customer_Review/JugalKishore Shah.png',
-    quote: 'Excellent idea brought into reality. People will love to take benefit of it. Very professionally done. Keep it up and maintain high standard of services.',
-  },
-  {
-    name: 'Arjun',
-    meta: 'Google User · 5 reviews',
-    ago: '1 month ago',
-    avatar: '/images/Customer_Review/Arjun.png',
-    quote: 'Wonderful experience. It is one of those places you actually wait to visit again because the first time was so amazing. Highly recommended!',
   },
 ]
 
@@ -552,86 +507,7 @@ export default function ContrastTherapyServiceDemo() {
       {/* SECTION 7: TEAM - interactive tab switcher (mobile) */}
       <TeamSectionDemo />
 
-      {/* MOBILE: Google Review cards */}
-      <section className="md:hidden py-10 bg-[#0A0A0A]">
-        <div className="px-5 mb-6">
-          <span className="text-[11px] font-black tracking-[0.3em] text-[#A78BFA] uppercase block mb-2">Patient Stories</span>
-          <h2 className="text-[26px] font-extrabold text-white leading-tight">What clients say</h2>
-        </div>
-        <div className="flex gap-4 overflow-x-auto px-5 pb-2 snap-x snap-mandatory scrollbar-hide">
-          {testimonials.map((r, i) => (
-            <figure key={i} className="flex-shrink-0 w-[85vw] snap-start bg-[#161616] border border-white/[0.07] rounded-3xl p-5 flex flex-col">
-              {/* Top row: Google logo + rating pill */}
-              <div className="flex items-center justify-between mb-4">
-                <div className="flex items-center gap-2.5">
-                  {/* Google G SVG */}
-                  <svg className="w-7 h-7 flex-shrink-0" viewBox="0 0 48 48">
-                    <path fill="#4285F4" d="M44.5 20H24v8.5h11.8C34.7 33.9 30 37 24 37c-7.2 0-13-5.8-13-13s5.8-13 13-13c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 4.1 29.6 2 24 2 11.8 2 2 11.8 2 24s9.8 22 22 22c11 0 21-8 21-22 0-1.3-.2-2.7-.5-4z"/>
-                    <path fill="#34A853" d="M6.3 14.7l7 5.1C15 16.1 19.1 13 24 13c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 4.1 29.6 2 24 2 16.3 2 9.6 7.3 6.3 14.7z"/>
-                    <path fill="#FBBC05" d="M24 46c5.6 0 10.5-1.9 14.4-5l-6.7-5.5C29.6 37 26.9 38 24 38c-5.9 0-10.9-4-12.7-9.5l-7 5.4C7.5 41.8 15.2 46 24 46z"/>
-                    <path fill="#EA4335" d="M44.5 20H24v8.5h11.8c-.8 2.4-2.3 4.4-4.3 5.8l6.7 5.5C42.1 36.4 45 30.7 45 24c0-1.3-.2-2.7-.5-4z"/>
-                  </svg>
-                  <span className="text-white font-bold text-[15px]">Google Review</span>
-                </div>
-                <div className="flex items-center gap-1.5 bg-[#222] rounded-full px-3 py-1.5">
-                  {[...Array(5)].map((_, j) => (
-                    <svg key={j} className="w-3.5 h-3.5 fill-yellow-400" viewBox="0 0 20 20">
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                  ))}
-                  <span className="text-white font-bold text-[13px] ml-0.5">5.0</span>
-                </div>
-              </div>
-
-              {/* Divider */}
-              <div className="h-px bg-white/[0.07] mb-4" />
-
-              {/* Reviewer */}
-              <div className="flex items-center gap-3 mb-3">
-                <div className="relative w-11 h-11 rounded-full overflow-hidden flex-shrink-0">
-                  <Image src={r.avatar} alt={r.name} fill className="object-cover" />
-                </div>
-                <div>
-                  <p className="text-white font-bold text-[15px] leading-tight">{r.name}</p>
-                  <p className="text-white/40 text-[12px]">{r.meta}</p>
-                </div>
-              </div>
-
-              {/* Time ago */}
-              <div className="flex items-center gap-1.5 mb-4">
-                <svg className="w-3.5 h-3.5 text-white/30 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-                <span className="text-white/35 text-[12px]">{r.ago}</span>
-              </div>
-
-              {/* Quote */}
-              <blockquote className="text-white/80 text-[15px] leading-relaxed italic flex-grow mb-5">
-                &ldquo;{r.quote}&rdquo;
-              </blockquote>
-
-              {/* Verified */}
-              <div className="flex items-center gap-2 pt-4 border-t border-white/[0.06]">
-                <svg className="w-4 h-4 text-green-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                </svg>
-                <span className="text-white/35 text-[12px]">Verified Google Review</span>
-              </div>
-            </figure>
-          ))}
-        </div>
-      </section>
-
-      {/* DESKTOP: continuously moving testimonials marquee */}
-      <section className="hidden md:block py-20 lg:py-28 bg-[#0A0A0A]">
-        <div className="container mx-auto px-5 sm:px-6 lg:px-8">
-          <div className="text-center max-w-xl mx-auto mb-10 sm:mb-14">
-            <span className="text-[11px] font-black tracking-[0.3em] text-[#513394] dark:text-[#A78BFA] uppercase mb-4 block">PATIENT STORIES //</span>
-            <h2 className="text-3xl sm:text-4xl font-black text-white tracking-tight">What clients say</h2>
-          </div>
-          <TestimonialsCarousel testimonials={testimonials} />
-        </div>
-      </section>
+      <GoogleReviewsSection />
 
       {/* ─────────────────────────────────────────────
           SECTION 8B: LOCATION — address, hours, map embed
