@@ -1,7 +1,7 @@
 "use client";
 
 import Image from 'next/image'
-import Link from 'next/link'
+import { Reveal, Stagger, StaggerItem, fadeLeft, scaleIn, fadeUp } from '@/components/motion/Reveal'
 
 const steps = [
     {
@@ -39,7 +39,7 @@ export default function HowItWorks() {
 
                     {/* Left Column: Heading & Large Image */}
                     <div className="lg:sticky lg:top-32">
-                        <div className="text-left mb-8">
+                        <Reveal variants={fadeLeft} className="text-left mb-8">
                             <span className="text-[#513394] dark:text-[#A78BFA] text-xs font-bold tracking-[0.2em] uppercase mb-3 block">
                                 How it works
                             </span>
@@ -64,27 +64,28 @@ export default function HowItWorks() {
                                     </svg>
                                 </div>
                             </a>
-                        </div>
+                        </Reveal>
 
                         {/* Large High-End Image */}
-                        <div className="relative h-[380px] w-full rounded-[2.5rem] overflow-hidden shadow-2xl">
+                        <Reveal variants={scaleIn} className="relative h-[380px] w-full rounded-[2.5rem] overflow-hidden shadow-2xl">
                             <Image
-                                src="/images/5.jpg"
-                                alt="Athlete Recovery"
+                                src="/images/hero/r3boot-contrast-therapy-v2.png"
+                                alt="R3BOOT contrast therapy cold plunge session"
                                 fill
                                 sizes="(max-width: 1024px) 100vw, 50vw"
-                                className="object-cover"
+                                className="object-cover object-[center_38%]"
                             />
                             {/* Subtle overlay */}
                             <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
-                        </div>
+                        </Reveal>
                     </div>
 
                     {/* Right Column: Steps */}
-                    <div className="space-y-8 lg:pt-4">
+                    <Stagger className="space-y-8 lg:pt-4">
                         {steps.map((step, index) => (
-                            <div
+                            <StaggerItem
                                 key={index}
+                                variants={fadeUp}
                                 className={`group flex flex-col gap-1 border-l-2 border-gray-100 dark:border-white/5 pl-6 hover:border-[#513394] dark:hover:border-[#A78BFA] transition-colors duration-500${index >= 3 ? ' hidden lg:flex' : ''}`}
                             >
                                 <span aria-hidden="true" className="text-gray-400 dark:text-gray-600 text-base font-bold">
@@ -96,9 +97,9 @@ export default function HowItWorks() {
                                 <p className="text-gray-500 dark:text-gray-400 text-sm md:text-base leading-relaxed max-w-md">
                                     {step.description}
                                 </p>
-                            </div>
+                            </StaggerItem>
                         ))}
-                    </div>
+                    </Stagger>
 
                 </div>
             </div>

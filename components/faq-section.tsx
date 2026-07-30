@@ -8,13 +8,13 @@ import {
   BookOpen,
   Phone,
   Package,
-  Zap,
   ChevronDown,
-  LucideIcon
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Reveal, Stagger, StaggerItem, fadeUp, fadeLeft } from '@/components/motion/Reveal';
 
-const DEFAULT_ICONS = [FileText, ShieldCheck, BookOpen, Phone, Package, Zap] as const;
+const DEFAULT_ICONS = [FileText, ShieldCheck, BookOpen, Phone, Package] as const;
+const MAP_EMBED_SRC = 'https://www.google.com/maps?q=19.0165473,72.8459274&z=16&output=embed';
 
 export type FAQSectionItem = {
   question: string;
@@ -23,9 +23,10 @@ export type FAQSectionItem = {
 
 interface FAQSectionProps {
   faqs?: FAQSectionItem[];
+  showMap?: boolean;
 }
 
-export function FAQSection({ faqs: faqsProp }: FAQSectionProps = {}) {
+export function FAQSection({ faqs: faqsProp, showMap = false }: FAQSectionProps = {}) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const faqsWithIcons = (faqsProp ?? [
@@ -35,9 +36,9 @@ export function FAQSection({ faqs: faqsProp }: FAQSectionProps = {}) {
         'We recommend wearing comfortable swimwear or athletic shorts. We provide towels and a clean changing area for your convenience.',
     },
     {
-      question: 'How long does a typical compression therapy session last?',
+      question: 'How long does a typical physiotherapy session last?',
       answer:
-        'A standard session with NormaTec compression boots usually lasts between 30 to 45 minutes, depending on your recovery needs.',
+        'A standard physiotherapy session at R3BOOT lasts 45 to 60 minutes, including assessment, hands-on treatment, and guided exercise as needed for your condition.',
     },
     {
       question: 'Is entry-level recovery suitable for beginners?',
@@ -54,11 +55,6 @@ export function FAQSection({ faqs: faqsProp }: FAQSectionProps = {}) {
       answer:
         'Yes, therapies like Infrared Sauna are excellent for reducing inflammation and managing long-term muscle or joint discomfort.',
     },
-    {
-      question: 'How often should I use the recovery services?',
-      answer:
-        'For active athletes, 2-3 times a week is ideal. However, even a single session after an intense workout can significantly reduce soreness.',
-    },
   ]).map((faq, index) => ({
     ...faq,
     icon: DEFAULT_ICONS[index % DEFAULT_ICONS.length],
@@ -69,17 +65,17 @@ export function FAQSection({ faqs: faqsProp }: FAQSectionProps = {}) {
   };
 
   return (
-    <section className="bg-white dark:bg-[#0A0A0A] py-16 sm:py-24 px-4 sm:px-6 lg:px-8 transition-colors duration-500">
+    <section className={`bg-white dark:bg-[#0A0A0A] pt-16 sm:pt-24 px-4 sm:px-6 lg:px-8 transition-colors duration-500 ${showMap ? 'pb-8 sm:pb-10' : 'pb-16 sm:pb-24'}`}>
       <div className="container mx-auto max-w-[1400px]">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8">
+        <div className={`grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 ${showMap ? 'items-start' : ''}`}>
 
           {/* Left Column: Heading & Support */}
-          <div className="lg:col-span-5">
+          <Reveal variants={fadeLeft} className="lg:col-span-5">
             <div className="inline-flex items-center gap-3 text-[#513394] dark:text-[#A78BFA] mb-6">
               <div className="w-1.5 h-1.5 rounded-full bg-[#513394] dark:bg-[#A78BFA]"></div>
               <span className="text-[13px] font-bold tracking-[0.3em] uppercase">FAQ</span>
             </div>
-            <h2 className="text-3xl font-bold tracking-tight text-neutral-900 dark:text-white sm:text-4xl lg:text-6xl mb-6">
+            <h2 className="text-3xl font-bold tracking-tight text-neutral-900 dark:text-white sm:text-4xl md:text-6xl mb-6">
               Frequently Asked <br />
               <span className="text-[#513394] dark:text-[#A78BFA]">Questions</span>
             </h2>
@@ -90,17 +86,31 @@ export function FAQSection({ faqs: faqsProp }: FAQSectionProps = {}) {
                 customer support team
               </Link>
             </p>
-          </div>
+
+            {showMap && (
+              <div className="relative rounded-3xl overflow-hidden border border-neutral-200 dark:border-white/[0.08] min-h-[240px] sm:min-h-[280px] w-full max-w-xl">
+                <iframe
+                  src={MAP_EMBED_SRC}
+                  className="absolute inset-0 w-full h-full grayscale-[0.3] contrast-[1.05]"
+                  style={{ border: 0 }}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="R3BOOT Dadar location map"
+                />
+              </div>
+            )}
+          </Reveal>
 
           {/* Right Column: FAQ List */}
-          <div className="lg:col-span-7 flex flex-col gap-4">
+          <Stagger className="lg:col-span-7 flex flex-col gap-4">
             {faqsWithIcons.map((faq, index) => {
               const Icon = faq.icon;
               const isOpen = openIndex === index;
 
               return (
-                <div
+                <StaggerItem
                   key={index}
+                  variants={fadeUp}
                   className={`group rounded-[2rem] border transition-all duration-300 ${isOpen
                     ? 'bg-[#F8F9FA] dark:bg-[#1A1A1A] border-transparent shadow-xl'
                     : 'bg-transparent border-neutral-200 dark:border-white/5 hover:border-[#513394] dark:hover:border-[#A78BFA]'
@@ -145,10 +155,10 @@ export function FAQSection({ faqs: faqsProp }: FAQSectionProps = {}) {
                       </motion.div>
                     )}
                   </AnimatePresence>
-                </div>
+                </StaggerItem>
               );
             })}
-          </div>
+          </Stagger>
 
         </div>
       </div>

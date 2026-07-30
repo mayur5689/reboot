@@ -36,7 +36,13 @@ const HomeBlog = () => {
             <div className="container mx-auto px-4 sm:px-6 lg:px-12">
                 {/* Header */}
                 <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 sm:gap-8 mb-8 sm:mb-12 lg:mb-16">
-                    <div className="max-w-2xl">
+                    <motion.div
+                        initial={{ opacity: 0, y: 24 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+                        className="max-w-2xl"
+                    >
                         <div className="inline-flex items-center gap-3 text-[#513394] dark:text-[#A78BFA] mb-4">
                             <div className="w-1.5 h-1.5 rounded-full bg-[#513394] dark:bg-[#A78BFA]"></div>
                             <span className="text-[13px] font-bold tracking-[0.3em] uppercase">LATEST UPDATES</span>
@@ -45,17 +51,24 @@ const HomeBlog = () => {
                             Insights from <br />
                             <span className="text-[#513394] dark:text-[#A78BFA]">Our Experts</span>
                         </h2>
-                    </div>
+                    </motion.div>
 
-                    <Link
-                        href="/blog"
-                        className="inline-flex items-center gap-2 px-8 py-4 bg-[#513394] text-white font-bold rounded-full hover:bg-[#412975] transition-all duration-300 group shadow-lg shadow-[#513394]/20"
+                    <motion.div
+                        initial={{ opacity: 0, y: 16 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.15, duration: 0.5 }}
                     >
-                        View All Posts
-                        <svg className="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                        </svg>
-                    </Link>
+                        <Link
+                            href="/blog"
+                            className="inline-flex items-center gap-2 px-8 py-4 bg-[#513394] text-white font-bold rounded-full hover:bg-[#412975] transition-all duration-300 group shadow-lg shadow-[#513394]/20"
+                        >
+                            View All Posts
+                            <svg className="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                        </Link>
+                    </motion.div>
                 </div>
 
                 {/* Loading State */}
