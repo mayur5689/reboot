@@ -51,3 +51,18 @@ CREATIVE-AUDIT-REPORT.md
 components/Untitled
 skills-lock.json
 .env*
+
+# marketing / build / research — local only, never commit
+MARKETING_CAROUSEL/
+/dist/
+.sanity/
+brand/
+R3BOOT_SEO DATAA.txt
+Hook.md
+personal-brand-discovery-questionnaire.html
+personal-brand-discovery-questionnaire.pdf
+scripts/data/mcp-args/
+scripts/data/output/
+public/video/Achilles......-preview.mp4
+
+.local/
