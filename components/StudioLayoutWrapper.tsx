@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation';
 interface StudioLayoutWrapperProps {
     children: React.ReactNode;
     navbar: React.ReactNode;
-    footer: React.ReactNode;
+    footer: React.ReactNode | null;
     fab: React.ReactNode;
 }
 

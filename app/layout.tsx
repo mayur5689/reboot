@@ -2,11 +2,8 @@ import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import Script from 'next/script'
 import './globals.css'
-import Navbar from '@/components/Navbar'
-import Footer from '@/components/Footer'
-import FloatingActionButton from '@/components/FloatingActionButton'
 import { ThemeProvider } from '@/components/ThemeProvider'
-import StudioLayoutWrapper from '@/components/StudioLayoutWrapper'
+import LayoutWrapper from '@/components/LayoutWrapper'
 import BusinessSchema from '@/components/schema/BusinessSchema'
 
 const gaId = process.env.NEXT_PUBLIC_GA_ID
@@ -108,14 +105,7 @@ export default function RootLayout({
           enableSystem={false}
           disableTransitionOnChange
         >
-          <StudioLayoutWrapper
-            navbar={<Navbar />}
-            footer={<Footer />}
-            fab={<FloatingActionButton />}
-          >
-            {/* hello  */}
-            {children}
-          </StudioLayoutWrapper>
+          <LayoutWrapper>{children}</LayoutWrapper>
         </ThemeProvider>
       </body>
     </html>
