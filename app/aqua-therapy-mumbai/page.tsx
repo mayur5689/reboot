@@ -1,22 +1,12 @@
 import Image from 'next/image'
 import type { Metadata } from 'next'
-import { FAQSection } from '@/components/faq-section'
-import { aquaTherapyFaqs } from '@/lib/faqs/aqua-therapy'
 import { aquaTherapyMumbaiFaqs } from '@/lib/faqs/aqua-therapy-mumbai'
 import ServiceSchema from '@/components/schema/ServiceSchema'
 import FAQSchema from '@/components/schema/FAQSchema'
 import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema'
-import { HeroSlider } from './HeroSlider'
 import { TeamSectionDemo } from './TeamSectionDemo'
-import { GoogleReviewsSection } from './GoogleReviewsSection'
 import ServiceNavbar from '@/components/ServiceNavbar'
 import { PainPointsSection } from './PainPointsSection'
-import { WhyMumbaiPatientsSection } from './WhyMumbaiPatientsSection'
-import { HowItWorksSection } from './HowItWorksSection'
-import { ComparisonSection } from './ComparisonSection'
-import { HygieneSection } from './HygieneSection'
-import { BlogSection } from './BlogSection'
-import { AboutSection } from './AboutSection'
 import { ContactBookingSection } from './ContactBookingSection'
 
 export const metadata: Metadata = {
@@ -38,47 +28,7 @@ export const metadata: Metadata = {
   ],
 }
 
-// ─── DATA ─────────────────────────────────────────────────────────────────────
-
-const heroSlides = [
-  {
-    src: '/images/hero/r3boot-aqua-therapy-v2.png',
-    alt: 'Aqua treadmill chamber session at R3BOOT Mumbai',
-  },
-  {
-    src: '/images/hero/aqua-therapy-1.png',
-    alt: 'Aqua therapy session at R3BOOT Dadar',
-  },
-  {
-    src: '/images/hero/aqua-therapy-2.png',
-    alt: 'Supervised gait retraining following aqua treadmill rehabilitation at R3BOOT',
-  },
-]
-
-const processSteps = [
-  {
-    number: '01',
-    title: 'Assessment & Clearance',
-    body: 'We review your injury, surgical notes and health history. Your physiotherapist confirms aqua therapy is the right stage for your recovery.',
-  },
-  {
-    number: '02',
-    title: 'Chamber Set To You',
-    body: 'Water level, treadmill speed and temperature are configured for your specific condition before you step in. Never a generic pool setting.',
-  },
-  {
-    number: '03',
-    title: 'Supervised Session',
-    body: '45-60 minutes, one-to-one with your physiotherapist inside the chamber. Standing, walking or seated exercises as prescribed.',
-  },
-  {
-    number: '04',
-    title: 'Progress Review',
-    body: 'We track range of motion, pain response and load tolerance each session, and adjust water level and resistance for next time.',
-  },
-]
-
-// ─── PHONE SVG ────────────────────────────────────────────────────────────────
+const HERO_IMAGE = '/images/hero/r3boot-aqua-therapy-v2.png'
 
 function PhoneIcon({ className }: { className?: string }) {
   return (
@@ -88,64 +38,44 @@ function PhoneIcon({ className }: { className?: string }) {
   )
 }
 
-// ─── PAGE ─────────────────────────────────────────────────────────────────────
-
-export default function AquaTherapyServiceDemo() {
+export default function AquaTherapyMumbaiPage() {
   return (
-    <main className="demo-page min-h-screen bg-white dark:bg-[#0A0A0A]">
-
+    <main className="demo-page min-h-screen bg-white dark:bg-[#0A0A0A] pb-24 md:pb-0">
       <ServiceNavbar showPromoRibbon />
 
-      {/* ─────────────────────────────────────────────
-          DESKTOP HERO (md+): full-bleed bg image, text overlaid left
-      ───────────────────────────────────────────── */}
+      {/* ── 1. HERO ─────────────────────────────────── */}
       <section className="hidden md:flex relative bg-black overflow-hidden" style={{ minHeight: 'calc(100vh - 110px)' }}>
-
-        {/* BG: full image */}
         <div className="absolute inset-0">
           <Image
-            src="/images/hero/r3boot-aqua-therapy-v2.png"
-            alt=""
+            src={HERO_IMAGE}
+            alt="Aqua treadmill chamber session at R3BOOT Mumbai"
             fill
             className="object-cover"
             style={{ objectPosition: '65% center' }}
             priority
           />
         </div>
-
-        {/* Left fade gradient — 30% */}
         <div
           className="absolute inset-0 pointer-events-none"
           style={{ background: 'linear-gradient(to right, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.5) 20%, transparent 30%)' }}
         />
-
-        {/* TEXT CONTENT — left side, relative z-10 */}
         <div className="relative z-10 flex flex-col justify-center px-12 lg:px-16 xl:px-20 py-24 max-w-[54%]">
-
-          {/* Label row */}
           <p className="text-[#A78BFA] text-[11px] font-black tracking-[0.25em] uppercase mb-5">
             Physio-Supervised&nbsp;&nbsp;•&nbsp;&nbsp;Private Chamber&nbsp;&nbsp;•&nbsp;&nbsp;Not a Shared Pool
           </p>
-
-          {/* H1 */}
           <h1 className="text-5xl lg:text-6xl xl:text-7xl font-black text-white tracking-tight leading-[1.04] mb-5">
             Aqua Therapy<br />
             in <span className="text-[#A78BFA]">Mumbai</span>
           </h1>
-
-          {/* Subtitle */}
           <p className="text-[17px] text-white/55 max-w-md leading-relaxed mb-8">
             Aqua treadmill rehabilitation that removes up to 75% of joint load. Recover earlier, move sooner, without the pain of land-based exercise.
           </p>
-
-          {/* CTAs */}
-          <div className="flex items-center gap-4 mb-10">
+          <div className="flex items-center gap-4">
             <a
-              href="tel:+919702368612"
+              href="#contact"
               className="inline-flex items-center gap-2.5 bg-[#513394] hover:bg-[#603eb0] text-white font-black px-8 py-4 rounded-full transition-all hover:scale-[1.02] text-[15px] tracking-wide shadow-lg shadow-[#513394]/30"
             >
-              <PhoneIcon className="w-4 h-4" />
-              Book Your Session
+              Free Consultation
             </a>
             <a
               href="https://wa.me/919702368612"
@@ -153,362 +83,52 @@ export default function AquaTherapyServiceDemo() {
               rel="nofollow noopener noreferrer"
               className="inline-flex items-center gap-2.5 border border-white/20 text-white hover:bg-white/[0.07] font-bold px-8 py-4 rounded-full transition-all text-[15px] tracking-wide"
             >
-              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
-                <path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.118 1.524 5.855L0 24l6.335-1.502A11.942 11.942 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.013-1.38l-.36-.214-3.732.885.916-3.629-.235-.373A9.818 9.818 0 1112 21.818z"/>
-              </svg>
               WhatsApp Us
             </a>
           </div>
-
-          {/* 4 Trust cards */}
-          <div className="flex items-stretch gap-3">
-
-            {/* Card 1: Google Reviews */}
-            <div className="flex items-center gap-3 bg-[#16161e] border border-white/[0.08] rounded-2xl px-4 py-3.5">
-              <svg className="w-8 h-8 flex-shrink-0" viewBox="0 0 48 48">
-                <path fill="#4285F4" d="M44.5 20H24v8.5h11.8C34.7 33.9 30 37 24 37c-7.2 0-13-5.8-13-13s5.8-13 13-13c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 4.1 29.6 2 24 2 11.8 2 2 11.8 2 24s9.8 22 22 22c11 0 21-8 21-22 0-1.3-.2-2.7-.5-4z"/><path fill="#34A853" d="M6.3 14.7l7 5.1C15 16.1 19.1 13 24 13c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 4.1 29.6 2 24 2 16.3 2 9.6 7.3 6.3 14.7z"/><path fill="#FBBC05" d="M24 46c5.6 0 10.5-1.9 14.4-5l-6.7-5.5C29.6 37 26.9 38 24 38c-5.9 0-10.9-4-12.7-9.5l-7 5.4C7.5 41.8 15.2 46 24 46z"/><path fill="#EA4335" d="M44.5 20H24v8.5h11.8c-.8 2.4-2.3 4.4-4.3 5.8l6.7 5.5C42.1 36.4 45 30.7 45 24c0-1.3-.2-2.7-.5-4z"/>
-              </svg>
-              <div>
-                <p className="text-white text-[14px] font-bold leading-none mb-1.5">Google Reviews</p>
-                <div className="flex items-center gap-0.5 mb-1">
-                  {[...Array(5)].map((_, i) => <svg key={i} className="w-3.5 h-3.5 fill-yellow-400" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>)}
-                  <span className="text-white font-bold text-[13px] ml-1">5.0</span>
-                </div>
-                <p className="text-white/40 text-[12px]">500+ Happy Clients</p>
-              </div>
-            </div>
-
-            {/* Card 2: 75% Less Load */}
-            <div className="flex items-center gap-3 bg-[#16161e] border border-white/[0.08] rounded-2xl px-4 py-3.5">
-              <svg className="w-7 h-7 text-[#A78BFA] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.75a5.25 5.25 0 016.775-5.025.75.75 0 01.313 1.248l-3.32 3.319c.063.475.276.934.641 1.299.365.365.824.578 1.3.64l3.318-3.319a.75.75 0 011.248.313 5.25 5.25 0 01-5.472 6.756c-1.018-.086-1.87.1-2.309.634L7.344 21.3A3.298 3.298 0 112.7 16.657l8.684-7.151c.533-.44.72-1.291.634-2.309A5.342 5.342 0 0112 6.75z" />
-              </svg>
-              <div>
-                <p className="text-white text-[14px] font-bold leading-none mb-1">75% Less Load</p>
-                <p className="text-white/40 text-[12px]">Joint Offloading</p>
-              </div>
-            </div>
-
-            {/* Card 3: Physiotherapist */}
-            <div className="flex items-center gap-3 bg-[#16161e] border border-white/[0.08] rounded-2xl px-4 py-3.5">
-              <svg className="w-7 h-7 text-[#A78BFA] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-              </svg>
-              <div>
-                <p className="text-white text-[14px] font-bold leading-none mb-1">Physiotherapist</p>
-                <p className="text-white/40 text-[12px]">Led &amp; Supervised</p>
-              </div>
-            </div>
-
-            {/* Card 4: Private Chamber */}
-            <div className="flex items-center gap-3 bg-[#16161e] border border-white/[0.08] rounded-2xl px-4 py-3.5">
-              <svg className="w-7 h-7 text-[#A78BFA] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
-              </svg>
-              <div>
-                <p className="text-white text-[14px] font-bold leading-none mb-1">Private Chamber</p>
-                <p className="text-white/40 text-[12px]">Not a Shared Pool</p>
-              </div>
-            </div>
-
-          </div>
         </div>
-
       </section>
 
-      {/* ─────────────────────────────────────────────
-          MOBILE HERO (<md): text-first layout
-      ───────────────────────────────────────────── */}
-      <section className="md:hidden pt-8 pb-0 bg-white dark:bg-[#0A0A0A]">
+      {/* Mobile hero — same single image, no carousel */}
+      <section className="md:hidden pt-8 pb-6 bg-white dark:bg-[#0A0A0A]">
         <div className="container mx-auto px-5">
-
-          {/* Image slider - FIRST */}
-          <HeroSlider slides={heroSlides} />
-
-          {/* Label chip */}
+          <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
+            <Image
+              src={HERO_IMAGE}
+              alt="Aqua treadmill chamber session at R3BOOT Mumbai"
+              fill
+              className="object-cover object-center"
+              priority
+              sizes="100vw"
+            />
+          </div>
           <div className="inline-flex items-center gap-2 bg-[#513394]/10 dark:bg-[#513394]/20 rounded-full px-4 py-2 mt-5 mb-4">
             <div className="w-1.5 h-1.5 rounded-full bg-[#513394] dark:bg-[#A78BFA]" />
-            <span className="text-[#513394] dark:text-[#A78BFA] text-[11px] font-black tracking-[0.3em] uppercase">Recovery Service</span>
+            <span className="text-[#513394] dark:text-[#A78BFA] text-[11px] font-black tracking-[0.3em] uppercase">
+              Recovery Service
+            </span>
           </div>
-
-          {/* H1 */}
           <h1 className="text-[2rem] font-black text-gray-900 dark:text-white tracking-tight leading-[1.1] mb-3">
             Aqua Therapy in{' '}
             <span className="text-[#513394] dark:text-[#A78BFA]">Mumbai</span>
           </h1>
-
-          {/* Subtext */}
-          <p className="text-base text-gray-500 dark:text-gray-400 leading-relaxed mb-6">
-            Private aqua treadmill chamber. Water level, speed and temperature set to your condition. Supervised by physiotherapists at R3BOOT Dadar.
+          <p className="text-base text-gray-500 dark:text-gray-400 leading-relaxed">
+            Private aqua treadmill chamber. Water level, speed and temperature set to your condition.
+            Supervised by physiotherapists at R3BOOT Dadar.
           </p>
-
-          {/* Row 1: Google Reviews card */}
-          <div className="mt-5 bg-[#1A1A1A] dark:bg-[#1A1A1A] rounded-2xl p-4 flex items-center gap-0">
-            {/* Avatars */}
-            <div className="flex items-center shrink-0 pr-4">
-              {[
-                { src: '/images/Customer_Review/Namrata Doshi.png',     alt: 'Namrata' },
-                { src: '/images/Customer_Review/Sonal Malik.png',       alt: 'Sonal' },
-                { src: '/images/Customer_Review/JugalKishore Shah.png', alt: 'Jugal' },
-              ].map((av, i) => (
-                <div
-                  key={i}
-                  className={`relative w-12 h-12 rounded-full border-2 border-[#1A1A1A] overflow-hidden shrink-0 ${i > 0 ? '-ml-3' : ''}`}
-                  style={{ zIndex: 3 - i }}
-                >
-                  <Image src={av.src} alt={av.alt} fill className="object-cover" />
-                </div>
-              ))}
-            </div>
-
-            {/* Divider */}
-            <div className="w-px self-stretch bg-white/10 shrink-0 mr-4" />
-
-            {/* Google + stars */}
-            <div className="flex flex-col gap-1 min-w-0">
-              <div className="flex items-center gap-2">
-                <div className="relative w-5 h-5 shrink-0">
-                  <Image src="/images/GOOGLE_LOGO.webp" alt="Google" fill className="object-contain" />
-                </div>
-                <span className="text-white font-bold text-sm">Google Reviews</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="flex gap-0.5">
-                  {[...Array(5)].map((_, j) => (
-                    <svg key={j} className="w-5 h-5 fill-yellow-400" viewBox="0 0 20 20">
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                  ))}
-                </div>
-                <span className="text-white font-black text-xl">5.0</span>
-              </div>
-              <span className="text-gray-500 text-xs font-medium">500+ happy clients</span>
-            </div>
-          </div>
-
-          {/* Row 2: 2 stat cards */}
-          <div className="grid grid-cols-2 gap-3 mt-3 mb-2">
-            {[
-              {
-                icon: (
-                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.75a5.25 5.25 0 016.775-5.025.75.75 0 01.313 1.248l-3.32 3.319c.063.475.276.934.641 1.299.365.365.824.578 1.3.64l3.318-3.319a.75.75 0 011.248.313 5.25 5.25 0 01-5.472 6.756c-1.018-.086-1.87.1-2.309.634L7.344 21.3A3.298 3.298 0 112.7 16.657l8.684-7.151c.533-.44.72-1.291.634-2.309A5.342 5.342 0 0112 6.75z" />
-                  </svg>
-                ),
-                value: '75%',
-                label: 'LESS JOINT LOAD',
-                desc: 'Buoyancy removes compressive load from injured joints.',
-              },
-              {
-                icon: (
-                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
-                  </svg>
-                ),
-                value: 'Physio',
-                label: 'SUPERVISED',
-                desc: 'One-to-one with your physiotherapist, every session.',
-              },
-            ].map((card, i) => (
-              <div key={i} className="bg-[#1A1A1A] dark:bg-[#1A1A1A] rounded-2xl p-4 flex flex-col gap-3">
-                {/* Row 1: icon + value/label */}
-                <div className="flex items-center gap-3">
-                  <div className="w-11 h-11 rounded-full bg-[#513394]/20 flex items-center justify-center text-[#A78BFA] shrink-0">
-                    {card.icon}
-                  </div>
-                  <div>
-                    <div className="text-xl font-black text-white leading-none">{card.value}</div>
-                    <div className="text-[10px] font-bold text-gray-500 uppercase tracking-widest mt-0.5">{card.label}</div>
-                  </div>
-                </div>
-                {/* Divider */}
-                <div className="w-8 h-[2px] bg-[#513394] rounded-full" />
-                {/* Row 2: description */}
-                <p className="text-gray-500 text-xs leading-relaxed">{card.desc}</p>
-              </div>
-            ))}
-          </div>
-
         </div>
       </section>
 
-      {/* ─────────────────────────────────────────────
-          SECTION 2A: CONTACT / BOOK AN APPOINTMENT
-      ───────────────────────────────────────────── */}
+      {/* ── 2. FORM ─────────────────────────────────── */}
       <ContactBookingSection />
 
-      {/* ─────────────────────────────────────────────
-          SECTION 2B: ABOUT — what it is, bullets, 2-image grid
-      ───────────────────────────────────────────── */}
-      <AboutSection />
-
-      {/* ─────────────────────────────────────────────
-          SECTION 3: PAIN POINTS — accordion + image crossfade
-      ───────────────────────────────────────────── */}
-      <PainPointsSection />
-
-      {/* ─────────────────────────────────────────────
-          SECTION 5: HOW IT WORKS — color-coded phase cards
-      ───────────────────────────────────────────── */}
-      <HowItWorksSection />
-
-      {/* ─────────────────────────────────────────────
-          SECTION 5B: COMPARISON — land physio vs aqua therapy
-      ───────────────────────────────────────────── */}
-      <ComparisonSection />
-
-      {/* ─────────────────────────────────────────────
-          SECTION 5C: HYGIENE — filtered water, private chamber
-      ───────────────────────────────────────────── */}
-      <HygieneSection />
-
-      {/* ─────────────────────────────────────────────
-          SECTION 5D: WHY MUMBAI PATIENTS CHOOSE AQUA THERAPY
-      ───────────────────────────────────────────── */}
-      <WhyMumbaiPatientsSection />
-
-      {/* ─────────────────────────────────────────────
-          SECTION 6: PROCESS (4 STEPS)
-      ───────────────────────────────────────────── */}
-      <section className="py-16 sm:py-20 lg:py-28 bg-white dark:bg-[#0A0A0A]">
-        <div className="container mx-auto px-5 sm:px-6 lg:px-8">
-
-          <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-14">
-            <span className="text-[11px] font-black tracking-[0.3em] text-[#513394] dark:text-[#A78BFA] uppercase mb-4 block">
-              YOUR SESSION //
-            </span>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 dark:text-white tracking-tight leading-[1.1] mb-4">
-              What to expect at{' '}
-              <span className="text-[#513394] dark:text-[#8B5CF6]">R3BOOT</span>
-            </h2>
-            <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed">
-              A full session takes 45-60 minutes including assessment, supervised chamber work, and progress review.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5 lg:gap-6 max-w-7xl mx-auto">
-            {processSteps.map((step, i) => (
-              <div
-                key={i}
-                className="relative flex flex-col p-6 lg:p-7 rounded-2xl bg-[#F8F9FA] dark:bg-white/[0.04] border border-gray-100 dark:border-white/[0.08] group hover:border-[#513394]/30 hover:shadow-lg dark:hover:shadow-none transition-all duration-300 overflow-hidden"
-              >
-                <div className="absolute -top-4 -right-2 text-[5.5rem] lg:text-[6rem] font-black text-gray-100 dark:text-white/[0.035] leading-none select-none pointer-events-none">
-                  {step.number}
-                </div>
-                <div className="relative z-10">
-                  <div className="w-11 h-11 rounded-xl bg-[#513394]/10 dark:bg-[#8B5CF6]/20 flex items-center justify-center text-[#513394] dark:text-[#A78BFA] font-black text-sm mb-4 group-hover:bg-[#513394] group-hover:text-white transition-all duration-300">
-                    {step.number}
-                  </div>
-                  <h3 className="font-black text-gray-900 dark:text-white text-base lg:text-[17px] mb-2 leading-snug">{step.title}</h3>
-                  <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">{step.body}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-
-        </div>
-      </section>
-
-      {/* SECTION 7: TEAM */}
+      {/* ── 3. TEAM ─────────────────────────────────── */}
       <TeamSectionDemo />
 
-      <GoogleReviewsSection />
+      {/* ── 4. PAIN POINTS ──────────────────────────── */}
+      <PainPointsSection />
 
-      {/* ─────────────────────────────────────────────
-          SECTION 8C: BLOG — recovery reading
-      ───────────────────────────────────────────── */}
-      <BlogSection />
-
-      {/* ─────────────────────────────────────────────
-          SECTION 9: FAQ
-      ───────────────────────────────────────────── */}
-      <FAQSection faqs={aquaTherapyFaqs} layout="grid" />
-
-      {/* ─────────────────────────────────────────────
-          SECTION 10: CTA BANNER
-      ───────────────────────────────────────────── */}
-      {/* MOBILE CTA CARD */}
-      <section className="md:hidden bg-white dark:bg-[#0A0A0A] pt-10 pb-28">
-        <div className="px-4">
-          <div
-            className="relative rounded-3xl overflow-hidden px-6 pt-7 pb-6"
-            style={{ background: 'linear-gradient(135deg, #2a0d6e 0%, #1a0850 55%, #110638 100%)' }}
-          >
-            <div className="absolute top-0 right-0 w-48 h-48 rounded-full blur-[60px] opacity-30 pointer-events-none" style={{ background: '#7c3aed' }} />
-            <div className="absolute bottom-0 left-0 w-40 h-40 rounded-full blur-[50px] opacity-20 pointer-events-none" style={{ background: '#1e0a5e' }} />
-            <div className="relative">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white leading-[1.1] tracking-tight mb-2">
-                Book a session{' '}
-                <span className="text-[#A78BFA]">in Mumbai</span>
-              </h2>
-              <p className="text-white/55 text-[13px] leading-relaxed mb-5">
-                R3BOOT, Dadar. Open Monday to Saturday. Our physiotherapists will tell you honestly if aqua therapy is the right starting point for your recovery.
-              </p>
-              <div className="flex flex-col gap-3">
-                <a
-                  href="tel:+919702368612"
-                  className="flex items-center justify-center gap-2 bg-white text-[#513394] font-black rounded-full py-3.5 text-[15px] tracking-wide"
-                >
-                  <PhoneIcon className="w-4 h-4" />
-                  Call to Book
-                </a>
-                <a
-                  href="https://wa.me/919702368612"
-                  target="_blank"
-                  rel="nofollow noopener noreferrer"
-                  className="flex items-center justify-center gap-2 border border-white/25 text-white font-bold rounded-full py-3.5 text-[15px] tracking-wide"
-                >
-                  <PhoneIcon className="w-4 h-4" />
-                  WhatsApp
-                </a>
-              </div>
-              <p className="text-center text-white/30 text-[10px] tracking-[0.2em] uppercase mt-4">
-                Dadar, Mumbai
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* DESKTOP CTA */}
-      <section className="hidden md:block py-16 lg:py-20 bg-[#513394] relative overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-white/[0.07] rounded-full blur-[100px] -translate-y-1/2 translate-x-1/4" />
-          <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-black/20 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/4" />
-        </div>
-        <div className="container mx-auto px-6 lg:px-8 relative z-10 text-center">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight mb-5 max-w-3xl mx-auto leading-[1.1]">
-            Book a session in{' '}
-            <span className="text-white/45">Mumbai</span>
-          </h2>
-          <p className="text-lg text-white/65 mb-10 max-w-xl mx-auto leading-relaxed">
-            R3BOOT, Dadar. Open Monday to Saturday. Our physiotherapists will tell you honestly if aqua therapy is the right starting point for your recovery.
-          </p>
-          <div className="flex flex-row gap-4 justify-center">
-            <a
-              href="tel:+919702368612"
-              className="inline-flex items-center justify-center gap-2.5 bg-white text-[#513394] font-black px-10 py-5 rounded-full hover:scale-105 transition-all shadow-2xl text-base tracking-wide"
-            >
-              <PhoneIcon className="w-4 h-4" />
-              Call to Book
-            </a>
-            <a
-              href="https://wa.me/919702368612"
-              target="_blank"
-              rel="nofollow noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2.5 border-2 border-white/30 text-white font-bold px-10 py-5 rounded-full hover:bg-white/10 transition-all text-base tracking-wide"
-            >
-              WhatsApp
-            </a>
-          </div>
-          <p className="text-white/35 mt-8 font-bold tracking-widest text-xs uppercase">Dadar, Mumbai</p>
-        </div>
-      </section>
-
-      {/* ─────────────────────────────────────────────
-          STICKY MOBILE CTA
-      ───────────────────────────────────────────── */}
+      {/* Sticky mobile CTA */}
       <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden">
         <div className="bg-[#0A0A0A]/95 backdrop-blur-md border-t border-white/[0.09] px-4 pt-3 pb-5">
           <div className="flex gap-3">
@@ -538,11 +158,12 @@ export default function AquaTherapyServiceDemo() {
         areaServed="Mumbai"
       />
       <FAQSchema faqs={aquaTherapyMumbaiFaqs} />
-      <BreadcrumbSchema items={[
-        { name: 'Home', url: '/' },
-        { name: 'Aqua Therapy Mumbai', url: '/aqua-therapy-mumbai' },
-      ]} />
-
+      <BreadcrumbSchema
+        items={[
+          { name: 'Home', url: '/' },
+          { name: 'Aqua Therapy Mumbai', url: '/aqua-therapy-mumbai' },
+        ]}
+      />
     </main>
   )
 }

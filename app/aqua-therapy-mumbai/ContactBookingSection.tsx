@@ -72,6 +72,7 @@ export function ContactBookingSection() {
   const [recovery, setRecovery] = useState('')
   const [startWhen, setStartWhen] = useState('')
   const [callTime, setCallTime] = useState('')
+  const [submitted, setSubmitted] = useState(false)
 
   function handleSubmit(e: FormEvent) {
     e.preventDefault()
@@ -89,33 +90,35 @@ export function ContactBookingSection() {
     ].filter(Boolean)
     const url = `https://wa.me/919702368612?text=${encodeURIComponent(lines.join('\n'))}`
     window.open(url, '_blank', 'noopener,noreferrer')
+    setSubmitted(true)
   }
 
   const fieldClass =
-    'w-full bg-white dark:bg-white/[0.05] border border-gray-200 dark:border-white/[0.1] rounded-xl px-4 py-3 text-[14px] text-gray-900 dark:text-white placeholder:text-gray-400 outline-none focus:border-[#513394] focus:ring-2 focus:ring-[#513394]/15 transition-colors'
+    'w-full bg-white dark:bg-white/[0.05] border border-gray-200 dark:border-white/[0.1] rounded-xl px-4 py-3.5 text-[15px] text-gray-900 dark:text-white placeholder:text-gray-400 outline-none focus:border-[#513394] focus:ring-2 focus:ring-[#513394]/15 transition-colors'
 
   return (
-    <section id="contact" className="pt-16 sm:pt-20 lg:pt-24 pb-6 sm:pb-8 lg:pb-10 bg-[#F3F4F6] dark:bg-[#0A0A0A]">
-      <div className="container mx-auto px-5 sm:px-6 lg:px-8">
-        <div className="rounded-[2rem] bg-white dark:bg-[#111111] border border-gray-100 dark:border-white/[0.08] shadow-sm p-6 sm:p-8 lg:p-10 xl:p-12">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 xl:gap-14">
-            <div className="lg:col-span-6 flex flex-col">
-              <span className="inline-flex items-center gap-2 text-[11px] font-black tracking-[0.2em] text-[#513394] dark:text-[#A78BFA] uppercase bg-[#513394]/10 dark:bg-[#513394]/20 rounded-full px-4 py-2 mb-5 w-fit">
+    <section id="contact" className="pt-10 sm:pt-16 lg:pt-20 pb-8 sm:pb-10 lg:pb-12 bg-[#F3F4F6] dark:bg-[#0A0A0A]">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="rounded-[1.75rem] sm:rounded-[2rem] bg-white dark:bg-[#111111] border border-gray-100 dark:border-white/[0.08] shadow-sm p-5 sm:p-8 lg:p-10 xl:p-12">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 xl:gap-12">
+            {/* Left copy + hours — after form on mobile */}
+            <div className="lg:col-span-5 flex flex-col order-2 lg:order-1">
+              <span className="hidden lg:inline-flex items-center gap-2 text-[11px] font-black tracking-[0.2em] text-[#513394] dark:text-[#A78BFA] uppercase bg-[#513394]/10 dark:bg-[#513394]/20 rounded-full px-4 py-2 mb-5 w-fit">
                 <Droplets className="w-3.5 h-3.5" strokeWidth={2.5} />
-                Contact Us
+                Free Consultation
               </span>
 
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 dark:text-white tracking-tight leading-[1.1] mb-5">
-                One message away from{' '}
-                <span className="text-[#513394] dark:text-[#8B5CF6]">starting your recovery.</span>
+              <h2 className="hidden lg:block text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 dark:text-white tracking-tight leading-[1.1] mb-5">
+                Book your{' '}
+                <span className="text-[#513394] dark:text-[#8B5CF6]">free consultation</span>
               </h2>
 
-              <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed mb-8 max-w-xl">
-                Ready to take control of your recovery? Our team is here to answer your questions,
-                understand your condition, and guide you to a personalised aqua therapy plan.
+              <p className="hidden lg:block text-gray-500 dark:text-gray-400 text-base leading-relaxed mb-8 max-w-xl">
+                Tell us what you&apos;re recovering from. We&apos;ll confirm on WhatsApp and guide you to
+                the right aqua therapy plan.
               </p>
 
-              <div className="rounded-2xl overflow-hidden border border-gray-100 dark:border-white/[0.08] mt-auto">
+              <div className="rounded-2xl overflow-hidden border border-gray-100 dark:border-white/[0.08] mt-2 lg:mt-auto">
                 <div className="grid grid-cols-2 bg-[#F3F4F6] dark:bg-white/[0.04] px-5 py-3.5">
                   <span className="font-black text-gray-900 dark:text-white text-[14px]">Day</span>
                   <span className="font-black text-gray-900 dark:text-white text-[14px]">Schedule</span>
@@ -134,110 +137,129 @@ export function ContactBookingSection() {
               </div>
             </div>
 
-            <div className="lg:col-span-6">
-              <div className="rounded-[1.75rem] bg-[#F8F5FF] dark:bg-white/[0.04] border border-[#513394]/15 dark:border-white/[0.08] p-7 lg:p-8 xl:p-9 h-full">
-                <h3 className="text-2xl font-black text-gray-900 dark:text-white tracking-tight mb-2 text-center sm:text-left">
-                  Book An Appointment
-                </h3>
-                <p className="text-gray-500 dark:text-gray-400 text-[14px] leading-relaxed mb-7 text-center sm:text-left">
-                  Answer a few quick questions and we&apos;ll confirm on WhatsApp.
-                </p>
-
-                <form onSubmit={handleSubmit} className="space-y-5">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div>
-                      <label className="block text-[12px] font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2">
-                        Your Name
-                      </label>
-                      <input
-                        type="text"
-                        value={name}
-                        onChange={(e) => setName(e.target.value)}
-                        placeholder="Full name"
-                        required
-                        className={fieldClass}
-                      />
+            {/* Form — first on mobile, wider on desktop */}
+            <div className="lg:col-span-7 order-1 lg:order-2">
+              <div className="rounded-[1.5rem] sm:rounded-[1.75rem] bg-[#F8F5FF] dark:bg-white/[0.04] border border-[#513394]/15 dark:border-white/[0.08] p-5 sm:p-7 lg:p-8 xl:p-9 h-full">
+                {submitted ? (
+                  <div className="flex flex-col items-center justify-center text-center py-10 sm:py-14 px-2">
+                    <div className="w-14 h-14 rounded-full bg-[#513394] flex items-center justify-center mb-5">
+                      <svg className="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                      </svg>
                     </div>
-                    <div>
-                      <label className="block text-[12px] font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2">
-                        Phone Number
-                      </label>
-                      <input
-                        type="tel"
-                        value={phone}
-                        onChange={(e) => setPhone(e.target.value)}
-                        placeholder="+91"
-                        required
-                        className={fieldClass}
-                      />
-                    </div>
+                    <h3 className="text-xl sm:text-2xl font-black text-gray-900 dark:text-white tracking-tight mb-3">
+                      Thank you for submitting the form
+                    </h3>
+                    <p className="text-gray-500 dark:text-gray-400 text-[15px] leading-relaxed max-w-md">
+                      We will reach out to you within 24 hours.
+                    </p>
                   </div>
+                ) : (
+                  <>
+                    <h3 className="text-xl sm:text-2xl font-black text-gray-900 dark:text-white tracking-tight mb-2">
+                      Get a free consultation
+                    </h3>
+                    <p className="text-gray-500 dark:text-gray-400 text-[14px] leading-relaxed mb-6">
+                      No charge to talk it through. Fill this in and we&apos;ll confirm on WhatsApp.
+                    </p>
 
-                  <div className="border-t border-gray-200 dark:border-white/[0.08] pt-5 space-y-5">
-                    <div>
-                      <QuestionLabel n={1}>What are you recovering from?</QuestionLabel>
-                      <select
-                        value={recovery}
-                        onChange={(e) => setRecovery(e.target.value)}
-                        required
-                        className={fieldClass}
+                    <form onSubmit={handleSubmit} className="space-y-5">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                          <label className="block text-[12px] font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2">
+                            Your Name
+                          </label>
+                          <input
+                            type="text"
+                            value={name}
+                            onChange={(e) => setName(e.target.value)}
+                            placeholder="Full name"
+                            required
+                            className={fieldClass}
+                          />
+                        </div>
+                        <div>
+                          <label className="block text-[12px] font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2">
+                            Phone Number
+                          </label>
+                          <input
+                            type="tel"
+                            value={phone}
+                            onChange={(e) => setPhone(e.target.value)}
+                            placeholder="+91"
+                            required
+                            className={fieldClass}
+                          />
+                        </div>
+                      </div>
+
+                      <div className="border-t border-gray-200 dark:border-white/[0.08] pt-5 space-y-5">
+                        <div>
+                          <QuestionLabel n={1}>What are you recovering from?</QuestionLabel>
+                          <select
+                            value={recovery}
+                            onChange={(e) => setRecovery(e.target.value)}
+                            required
+                            className={fieldClass}
+                          >
+                            <option value="">Select an option</option>
+                            {RECOVERY_OPTIONS.map((o) => (
+                              <option key={o.id} value={o.id}>
+                                {o.label}
+                              </option>
+                            ))}
+                          </select>
+                        </div>
+
+                        <div>
+                          <QuestionLabel n={2}>When would you like to start?</QuestionLabel>
+                          <select
+                            value={startWhen}
+                            onChange={(e) => setStartWhen(e.target.value)}
+                            required
+                            className={fieldClass}
+                          >
+                            <option value="">Select an option</option>
+                            {START_OPTIONS.map((o) => (
+                              <option key={o.id} value={o.id}>
+                                {o.label}
+                              </option>
+                            ))}
+                          </select>
+                        </div>
+
+                        <div>
+                          <QuestionLabel n={3}>What&apos;s the best time to call you?</QuestionLabel>
+                          <select
+                            value={callTime}
+                            onChange={(e) => setCallTime(e.target.value)}
+                            required
+                            className={fieldClass}
+                          >
+                            <option value="">Select an option</option>
+                            {CALL_TIME_OPTIONS.map((o) => (
+                              <option key={o.id} value={o.id}>
+                                {o.label}
+                              </option>
+                            ))}
+                          </select>
+                        </div>
+                      </div>
+
+                      <button
+                        type="submit"
+                        className="w-full bg-[#513394] hover:bg-[#603eb0] text-white font-black py-4 rounded-xl transition-all hover:scale-[1.01] text-[15px] tracking-wide"
                       >
-                        <option value="">Select an option</option>
-                        {RECOVERY_OPTIONS.map((o) => (
-                          <option key={o.id} value={o.id}>
-                            {o.label}
-                          </option>
-                        ))}
-                      </select>
-                    </div>
-
-                    <div>
-                      <QuestionLabel n={2}>When would you like to start?</QuestionLabel>
-                      <select
-                        value={startWhen}
-                        onChange={(e) => setStartWhen(e.target.value)}
-                        required
-                        className={fieldClass}
-                      >
-                        <option value="">Select an option</option>
-                        {START_OPTIONS.map((o) => (
-                          <option key={o.id} value={o.id}>
-                            {o.label}
-                          </option>
-                        ))}
-                      </select>
-                    </div>
-
-                    <div>
-                      <QuestionLabel n={3}>What&apos;s the best time to call you?</QuestionLabel>
-                      <select
-                        value={callTime}
-                        onChange={(e) => setCallTime(e.target.value)}
-                        required
-                        className={fieldClass}
-                      >
-                        <option value="">Select an option</option>
-                        {CALL_TIME_OPTIONS.map((o) => (
-                          <option key={o.id} value={o.id}>
-                            {o.label}
-                          </option>
-                        ))}
-                      </select>
-                    </div>
-                  </div>
-
-                  <button
-                    type="submit"
-                    className="w-full bg-[#513394] hover:bg-[#603eb0] text-white font-black py-4 rounded-xl transition-all hover:scale-[1.01] text-[15px] tracking-wide"
-                  >
-                    Book Now
-                  </button>
-                </form>
+                        Get Free Consultation
+                      </button>
+                    </form>
+                  </>
+                )}
               </div>
             </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8 lg:mt-10">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 mt-6 sm:mt-8 lg:mt-10">
             {CONTACT_CHIPS.map((c, i) => {
               const Icon = c.icon
               return (
@@ -246,14 +268,14 @@ export function ContactBookingSection() {
                   href={c.href}
                   target={c.href.startsWith('http') ? '_blank' : undefined}
                   rel={c.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                  className={`flex items-center gap-4 rounded-2xl border px-5 py-5 transition-all ${
+                  className={`flex items-center gap-4 rounded-2xl border px-5 py-4 sm:py-5 transition-all ${
                     c.highlight
                       ? 'bg-[#513394] border-[#513394] hover:bg-[#603eb0]'
                       : 'bg-white dark:bg-white/[0.03] border-gray-100 dark:border-white/[0.08] hover:border-[#513394]/30'
                   }`}
                 >
                   <div
-                    className={`w-12 h-12 rounded-full flex items-center justify-center shrink-0 ${
+                    className={`w-11 h-11 sm:w-12 sm:h-12 rounded-full flex items-center justify-center shrink-0 ${
                       c.highlight ? 'bg-white/20' : 'bg-[#513394]'
                     }`}
                   >
@@ -261,7 +283,7 @@ export function ContactBookingSection() {
                   </div>
                   <div className="min-w-0">
                     <p
-                      className={`font-bold text-[15px] leading-tight mb-0.5 ${
+                      className={`font-bold text-[14px] sm:text-[15px] leading-tight mb-0.5 ${
                         c.highlight ? 'text-white' : 'text-gray-900 dark:text-white'
                       }`}
                     >
