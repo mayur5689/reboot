@@ -12,10 +12,10 @@ const HOURS = [
 ]
 
 const RECOVERY_OPTIONS = [
-  { id: 'post-surgery', label: 'Post surgery — Knee / hip / shoulder' },
-  { id: 'arthritis', label: 'Arthritis — Joint pain & stiffness' },
-  { id: 'acl-sports', label: 'ACL / sports — Ligament or muscle' },
-  { id: 'back-spine', label: 'Back or spine — Pain or mobility' },
+  { id: 'post-surgery', label: 'Post surgery' },
+  { id: 'pre-surgery', label: 'Pre-surgery rehab' },
+  { id: 'back-spine', label: 'Back or spine pain' },
+  { id: 'other', label: 'Other' },
 ]
 
 const START_OPTIONS = [
@@ -26,10 +26,10 @@ const START_OPTIONS = [
 ]
 
 const CALL_TIME_OPTIONS = [
-  { id: 'morning', label: 'Morning (9 am – 12 pm)' },
-  { id: 'afternoon', label: 'Afternoon (12 pm – 4 pm)' },
-  { id: 'evening', label: 'Evening (6 pm – 9 pm)' },
-  { id: 'anytime', label: 'Anytime works' },
+  { id: 'morning', label: 'Morning — 9am–12pm' },
+  { id: 'afternoon', label: 'Afternoon — 12pm–4pm' },
+  { id: 'evening', label: 'Evening — 6pm–9pm' },
+  { id: 'anytime', label: 'Anytime' },
 ]
 
 const CONTACT_CHIPS = [
