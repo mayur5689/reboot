@@ -80,6 +80,23 @@ export function ContactBookingSection() {
   async function handleSubmit(e: FormEvent) {
     e.preventDefault()
     setError('')
+
+    const trimmedName = name.trim()
+    const digitsOnly = phone.replace(/\D/g, '')
+
+    if (!trimmedName) {
+      setError('Please enter your name.')
+      return
+    }
+    if (!digitsOnly) {
+      setError('Please enter your phone number.')
+      return
+    }
+    if (digitsOnly.length < 10) {
+      setError('Please enter a valid phone number (at least 10 digits).')
+      return
+    }
+
     setLoading(true)
 
     const recoveryLabel = RECOVERY_OPTIONS.find((o) => o.id === recovery)?.label
@@ -98,8 +115,8 @@ export function ContactBookingSection() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          name,
-          phone,
+          name: trimmedName,
+          phone: digitsOnly,
           subject: 'Aqua Therapy Free Consultation',
           message,
         }),
@@ -179,10 +196,13 @@ export function ContactBookingSection() {
                       </label>
                       <input
                         type="text"
+                        name="name"
                         value={name}
                         onChange={(e) => setName(e.target.value)}
                         placeholder="Full name"
                         required
+                        minLength={2}
+                        autoComplete="name"
                         disabled={loading}
                         className={fieldClass}
                       />
@@ -193,10 +213,16 @@ export function ContactBookingSection() {
                       </label>
                       <input
                         type="tel"
+                        name="phone"
                         value={phone}
-                        onChange={(e) => setPhone(e.target.value)}
-                        placeholder="+91"
+                        onChange={(e) => setPhone(e.target.value.replace(/\D/g, '').slice(0, 12))}
+                        placeholder="10-digit mobile number"
                         required
+                        inputMode="numeric"
+                        pattern="[0-9]{10,12}"
+                        minLength={10}
+                        maxLength={12}
+                        autoComplete="tel"
                         disabled={loading}
                         className={fieldClass}
                       />
