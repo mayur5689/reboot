@@ -1,14 +1,23 @@
 import Image from 'next/image'
-import Link from 'next/link'
-import { Metadata } from 'next'
-import { services } from '@/lib/services'
+import type { Metadata } from 'next'
 import { FAQSection } from '@/components/faq-section'
-import PhysiotherapyTeam from '@/components/PhysiotherapyTeam'
+import { aquaTherapyFaqs } from '@/lib/faqs/aqua-therapy'
+import { aquaTherapyMumbaiFaqs } from '@/lib/faqs/aqua-therapy-mumbai'
 import ServiceSchema from '@/components/schema/ServiceSchema'
 import FAQSchema from '@/components/schema/FAQSchema'
 import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema'
-import AquaTherapyLocationInfo from '@/components/AquaTherapyLocationInfo'
-import { aquaTherapyMumbaiFaqs } from '@/lib/faqs/aqua-therapy-mumbai'
+import { HeroSlider } from './HeroSlider'
+import { TeamSectionDemo } from './TeamSectionDemo'
+import { GoogleReviewsSection } from './GoogleReviewsSection'
+import ServiceNavbar from '@/components/ServiceNavbar'
+import { PainPointsSection } from './PainPointsSection'
+import { WhyMumbaiPatientsSection } from './WhyMumbaiPatientsSection'
+import { HowItWorksSection } from './HowItWorksSection'
+import { ComparisonSection } from './ComparisonSection'
+import { HygieneSection } from './HygieneSection'
+import { BlogSection } from './BlogSection'
+import { AboutSection } from './AboutSection'
+import { ContactBookingSection } from './ContactBookingSection'
 
 export const metadata: Metadata = {
   title: 'Aqua Therapy Mumbai | Aqua Treadmill Physiotherapy at R3BOOT Dadar',
@@ -29,591 +38,498 @@ export const metadata: Metadata = {
   ],
 }
 
-const otherServices = services.filter((s) => s.slug !== 'aqua-therapy').slice(0, 4)
+// ─── DATA ─────────────────────────────────────────────────────────────────────
 
-const whatItHelps = [
+const heroSlides = [
   {
-    title: 'Post-surgical rehabilitation',
-    description:
-      'Knee replacement, hip replacement, ACL repair, and shoulder surgery all benefit from early aqua treadmill rehabilitation. Water reduces joint load by up to 75%, allowing physiotherapy exercises weeks before land-based work is possible.',
+    src: '/images/hero/r3boot-aqua-therapy-v2.png',
+    alt: 'Aqua treadmill chamber session at R3BOOT Mumbai',
   },
   {
-    title: 'Sports injury recovery',
-    description:
-      'Runners, cricketers, gym athletes, and team sport players use aqua therapy to maintain fitness and rebuild strength during injury recovery without aggravating the injured tissue.',
+    src: '/images/hero/aqua-therapy-1.png',
+    alt: 'Aqua therapy session at R3BOOT Dadar',
   },
   {
-    title: 'Knee pain and arthritis',
-    description:
-      'Osteoarthritis and rheumatoid arthritis respond well to warm water therapy. Buoyancy removes the compressive load that makes land-based movement painful. Hydrostatic pressure reduces joint swelling between sessions.',
-  },
-  {
-    title: 'Lower back pain and spinal conditions',
-    description:
-      'In water, spinal load reduces dramatically. Aqua therapy allows progressive movement, core strengthening, and flexibility work that is too painful to perform at the same intensity on land.',
+    src: '/images/hero/aqua-therapy-2.png',
+    alt: 'Supervised gait retraining following aqua treadmill rehabilitation at R3BOOT',
   },
 ]
 
-const howItWorks = [
+const processSteps = [
   {
-    title: 'Buoyancy reduces joint load',
-    body: 'In chest-deep water, your body bears only 25% of its normal weight. This reduces compression through injured or arthritic joints to a level where pain-free movement becomes possible earlier in the recovery cycle.',
+    number: '01',
+    title: 'Assessment & Clearance',
+    body: 'We review your injury, surgical notes and health history. Your physiotherapist confirms aqua therapy is the right stage for your recovery.',
   },
   {
-    title: 'Hydrostatic pressure controls swelling',
-    body: 'Water pressure acts on all submerged surfaces simultaneously, reducing oedema and improving venous return. This is particularly valuable for post-surgical swelling and acute sports injuries in the sub-acute phase.',
+    number: '02',
+    title: 'Chamber Set To You',
+    body: 'Water level, treadmill speed and temperature are configured for your specific condition before you step in. Never a generic pool setting.',
   },
   {
-    title: 'Water resistance builds strength without impact',
-    body: 'Moving through water creates multidirectional resistance that strengthens muscles without the ground-reaction forces of land exercise. Resistance increases with movement speed, allowing progressive loading under physiotherapist control.',
+    number: '03',
+    title: 'Supervised Session',
+    body: '45-60 minutes, one-to-one with your physiotherapist inside the chamber. Standing, walking or seated exercises as prescribed.',
   },
   {
-    title: 'Controlled temperature supports tissue recovery',
-    body: 'Warm water relaxes muscle spasm, improves circulation to healing tissue, and reduces pain perception before exercise begins. Our aqua treadmill chamber temperature is maintained at therapeutic range for recovery-focused sessions.',
-  },
-]
-
-const protocol = [
-  {
-    title: 'Initial assessment and clearance',
-    body: 'Your physiotherapist reviews your injury, surgical history, current pain levels, and medical background. We confirm aqua therapy is appropriate for your stage of recovery before any aqua treadmill sessions begin.',
-  },
-  {
-    title: 'Aqua treadmill acclimatisation',
-    body: 'Your first session on the aqua treadmill is gradual. We ensure you are comfortable with the water level, temperature, and environment before beginning therapeutic movement. No swimming ability is required.',
-  },
-  {
-    title: 'Supervised therapeutic exercise',
-    body: 'Your physiotherapist guides you through a structured sequence of movements designed for your specific condition - range of motion work, progressive strengthening, balance and proprioception, or functional movement patterns depending on your goals.',
-  },
-  {
-    title: 'Post-session review and progression',
-    body: 'We review how you responded to the session, adjust the next session\'s program, and give you a home exercise plan where appropriate. Sessions progress in intensity as your recovery advances.',
+    number: '04',
+    title: 'Progress Review',
+    body: 'We track range of motion, pain response and load tolerance each session, and adjust water level and resistance for next time.',
   },
 ]
 
-export default function AquaTherapyMumbaiPage() {
+// ─── PHONE SVG ────────────────────────────────────────────────────────────────
+
+function PhoneIcon({ className }: { className?: string }) {
   return (
-    <main className="min-h-screen bg-white dark:bg-[#0A0A0A]">
+    <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+    </svg>
+  )
+}
 
-      {/* HERO */}
-      <section className="relative h-[70vh] flex items-end overflow-hidden">
-        <Image
-          src="/images/Services_image/Hydrotherapy.webp"
-          alt="Aqua therapy aqua treadmill at R3BOOT Mumbai, physio-supervised water-based rehabilitation"
-          fill
-          className="object-cover"
-          priority
+// ─── PAGE ─────────────────────────────────────────────────────────────────────
+
+export default function AquaTherapyServiceDemo() {
+  return (
+    <main className="demo-page min-h-screen bg-white dark:bg-[#0A0A0A]">
+
+      <ServiceNavbar showPromoRibbon />
+
+      {/* ─────────────────────────────────────────────
+          DESKTOP HERO (md+): full-bleed bg image, text overlaid left
+      ───────────────────────────────────────────── */}
+      <section className="hidden md:flex relative bg-black overflow-hidden" style={{ minHeight: 'calc(100vh - 110px)' }}>
+
+        {/* BG: full image */}
+        <div className="absolute inset-0">
+          <Image
+            src="/images/hero/r3boot-aqua-therapy-v2.png"
+            alt=""
+            fill
+            className="object-cover"
+            style={{ objectPosition: '65% center' }}
+            priority
+          />
+        </div>
+
+        {/* Left fade gradient — 30% */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{ background: 'linear-gradient(to right, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.5) 20%, transparent 30%)' }}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
 
-        <div className="container mx-auto px-6 lg:px-8 relative z-10 pb-20">
-          <Link
-            href="/services"
-            className="inline-flex items-center gap-2 text-white/70 hover:text-white transition-all mb-8 group"
-          >
-            <div className="w-8 h-8 rounded-full border border-white/30 flex items-center justify-center group-hover:bg-white group-hover:text-[#513394] transition-all">
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+        {/* TEXT CONTENT — left side, relative z-10 */}
+        <div className="relative z-10 flex flex-col justify-center px-12 lg:px-16 xl:px-20 py-24 max-w-[54%]">
+
+          {/* Label row */}
+          <p className="text-[#A78BFA] text-[11px] font-black tracking-[0.25em] uppercase mb-5">
+            Physio-Supervised&nbsp;&nbsp;•&nbsp;&nbsp;Private Chamber&nbsp;&nbsp;•&nbsp;&nbsp;Not a Shared Pool
+          </p>
+
+          {/* H1 */}
+          <h1 className="text-5xl lg:text-6xl xl:text-7xl font-black text-white tracking-tight leading-[1.04] mb-5">
+            Aqua Therapy<br />
+            in <span className="text-[#A78BFA]">Mumbai</span>
+          </h1>
+
+          {/* Subtitle */}
+          <p className="text-[17px] text-white/55 max-w-md leading-relaxed mb-8">
+            Aqua treadmill rehabilitation that removes up to 75% of joint load. Recover earlier, move sooner, without the pain of land-based exercise.
+          </p>
+
+          {/* CTAs */}
+          <div className="flex items-center gap-4 mb-10">
+            <a
+              href="tel:+919702368612"
+              className="inline-flex items-center gap-2.5 bg-[#513394] hover:bg-[#603eb0] text-white font-black px-8 py-4 rounded-full transition-all hover:scale-[1.02] text-[15px] tracking-wide shadow-lg shadow-[#513394]/30"
+            >
+              <PhoneIcon className="w-4 h-4" />
+              Book Your Session
+            </a>
+            <a
+              href="https://wa.me/919702368612"
+              target="_blank"
+              rel="nofollow noopener noreferrer"
+              className="inline-flex items-center gap-2.5 border border-white/20 text-white hover:bg-white/[0.07] font-bold px-8 py-4 rounded-full transition-all text-[15px] tracking-wide"
+            >
+              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+                <path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.118 1.524 5.855L0 24l6.335-1.502A11.942 11.942 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.013-1.38l-.36-.214-3.732.885.916-3.629-.235-.373A9.818 9.818 0 1112 21.818z"/>
               </svg>
-            </div>
-            <span className="font-bold tracking-wider text-sm">BACK TO SERVICES</span>
-          </Link>
-
-          <div className="max-w-4xl">
-            <div className="flex items-center gap-3 text-white/70 mb-4">
-              <div className="w-1.5 h-1.5 rounded-full bg-white/50" />
-              <span className="text-[11px] font-black tracking-[0.3em] uppercase">REHABILITATION // MUMBAI</span>
-              <div className="w-1.5 h-1.5 rounded-full bg-white/50" />
-            </div>
-            <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black text-white mb-2 tracking-tighter leading-[1.05]">
-              Aqua Therapy in Mumbai | Aqua Treadmill Physiotherapy at R3BOOT
-            </h1>
-            <p className="text-lg sm:text-xl md:text-2xl text-white/80 max-w-3xl leading-relaxed font-medium mt-4">
-              Water-based rehabilitation supervised by physiotherapists. Post-surgery, sports injury, knee pain, and arthritis recovery - on a temperature-controlled aqua treadmill at R3BOOT, Dadar.
-            </p>
+              WhatsApp Us
+            </a>
           </div>
-        </div>
-      </section>
 
-      {/* OPENING SECTION */}
-      <section className="py-12 sm:py-16 lg:py-24 xl:py-32">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 md:gap-12 lg:gap-24 items-start">
+          {/* 4 Trust cards */}
+          <div className="flex items-stretch gap-3">
 
-            <div className="lg:col-span-7">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 dark:text-white mb-6 sm:mb-8 tracking-tight">
-                Land-Based Physio Has Limits.{' '}
-                <span className="text-[#513394] dark:text-[#8B5CF6]">Water Removes Them.</span>
-              </h2>
-              <div className="prose prose-base sm:prose-lg md:prose-xl text-gray-600 dark:text-gray-400 dark:prose-invert max-w-none leading-relaxed space-y-6">
-                <p>
-                  Research published in clinical rehabilitation journals consistently shows that aquatic physiotherapy
-                  produces faster functional recovery in the early post-surgical and sub-acute injury phases than
-                  land-based therapy alone. The mechanism is biomechanical: water reduces compressive joint load by
-                  up to 75% in chest-deep immersion, allowing therapeutic movement and progressive strengthening
-                  at a stage where equivalent land-based exercise would be too painful or risky.
-                </p>
-                <p>
-                  At R3BOOT, aqua therapy is prescribed and supervised by our physiotherapy team. Sessions are
-                  built around your specific injury or surgical history, not a generic exercise class. We use the
-                  properties of water - buoyancy, hydrostatic pressure, resistance, and temperature - as clinical
-                  tools, adjusting each variable to match your recovery stage.
-                </p>
-              </div>
-
-              <div className="mt-10 sm:mt-14 md:mt-20">
-                <h3 className="text-xl sm:text-2xl font-black text-gray-900 dark:text-white mb-6 sm:mb-8 md:mb-10 flex items-center gap-4">
-                  <span className="w-12 h-[2px] bg-[#513394] dark:bg-[#8B5CF6]" />
-                  WHAT IT HELPS WITH
-                </h3>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
-                  {whatItHelps.map((item, idx) => (
-                    <div
-                      key={idx}
-                      className="bg-white dark:bg-white/5 p-5 sm:p-6 md:p-8 rounded-2xl sm:rounded-[2.5rem] border border-gray-100 dark:border-white/5 shadow-sm hover:shadow-xl group transition-all duration-500 relative overflow-hidden"
-                    >
-                      <div className="absolute -top-4 -right-4 text-8xl font-black text-gray-50 dark:text-white/5 group-hover:text-[#513394]/5 dark:group-hover:text-[#8B5CF6]/5 transition-colors">
-                        {idx + 1}
-                      </div>
-                      <div className="relative z-10">
-                        <div className="w-12 h-12 rounded-2xl bg-[#513394]/10 dark:bg-[#8B5CF6]/20 flex items-center justify-center text-[#513394] dark:text-[#A78BFA] font-black mb-6 group-hover:bg-[#513394] dark:group-hover:bg-[#8B5CF6] group-hover:text-white transition-all">
-                          0{idx + 1}
-                        </div>
-                        <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-3">{item.title}</h4>
-                        <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">{item.description}</p>
-                      </div>
-                    </div>
-                  ))}
+            {/* Card 1: Google Reviews */}
+            <div className="flex items-center gap-3 bg-[#16161e] border border-white/[0.08] rounded-2xl px-4 py-3.5">
+              <svg className="w-8 h-8 flex-shrink-0" viewBox="0 0 48 48">
+                <path fill="#4285F4" d="M44.5 20H24v8.5h11.8C34.7 33.9 30 37 24 37c-7.2 0-13-5.8-13-13s5.8-13 13-13c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 4.1 29.6 2 24 2 11.8 2 2 11.8 2 24s9.8 22 22 22c11 0 21-8 21-22 0-1.3-.2-2.7-.5-4z"/><path fill="#34A853" d="M6.3 14.7l7 5.1C15 16.1 19.1 13 24 13c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 4.1 29.6 2 24 2 16.3 2 9.6 7.3 6.3 14.7z"/><path fill="#FBBC05" d="M24 46c5.6 0 10.5-1.9 14.4-5l-6.7-5.5C29.6 37 26.9 38 24 38c-5.9 0-10.9-4-12.7-9.5l-7 5.4C7.5 41.8 15.2 46 24 46z"/><path fill="#EA4335" d="M44.5 20H24v8.5h11.8c-.8 2.4-2.3 4.4-4.3 5.8l6.7 5.5C42.1 36.4 45 30.7 45 24c0-1.3-.2-2.7-.5-4z"/>
+              </svg>
+              <div>
+                <p className="text-white text-[14px] font-bold leading-none mb-1.5">Google Reviews</p>
+                <div className="flex items-center gap-0.5 mb-1">
+                  {[...Array(5)].map((_, i) => <svg key={i} className="w-3.5 h-3.5 fill-yellow-400" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>)}
+                  <span className="text-white font-bold text-[13px] ml-1">5.0</span>
                 </div>
+                <p className="text-white/40 text-[12px]">500+ Happy Clients</p>
               </div>
             </div>
 
-            {/* Sticky CTA card */}
-            <div className="lg:col-span-4 lg:sticky lg:top-32">
-              <div className="bg-[#1A1A1A] p-6 sm:p-8 md:p-10 rounded-2xl sm:rounded-[2.5rem] md:rounded-[3rem] text-white shadow-2xl relative overflow-hidden group">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-[#513394]/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
-                <h3 className="text-2xl font-black mb-8 tracking-wide flex items-center gap-3">
-                  <div className="w-2 h-8 bg-[#513394]" />
-                  IDEAL FOR //
-                </h3>
-                <ul className="space-y-6 mb-12">
-                  {[
-                    'Post-knee or hip replacement',
-                    'ACL and ligament repair recovery',
-                    'Sports injury rehabilitation',
-                    'Osteoarthritis and joint pain',
-                    'Lower back pain management',
-                    'Return-to-sport conditioning',
-                    'Shoulder injury rehabilitation',
-                  ].map((item, idx) => (
-                    <li key={idx} className="flex items-start gap-4 group/item">
-                      <div className="w-6 h-6 rounded-full bg-[#513394] flex items-center justify-center shrink-0 mt-1 group-hover/item:scale-110 transition-transform">
-                        <svg className="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
-                          <path d="M5 13l4 4L19 7" />
-                        </svg>
-                      </div>
-                      <span className="text-white/80 font-medium leading-snug group-hover/item:text-white transition-colors">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-                <a
-                  href="tel:+919702368612"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block text-center bg-[#513394] text-white font-black px-8 py-5 rounded-2xl transition-all hover:scale-[1.02] shadow-xl text-lg group-hover:bg-[#603eb0]"
-                >
-                  Call to Book
-                </a>
+            {/* Card 2: 75% Less Load */}
+            <div className="flex items-center gap-3 bg-[#16161e] border border-white/[0.08] rounded-2xl px-4 py-3.5">
+              <svg className="w-7 h-7 text-[#A78BFA] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.75a5.25 5.25 0 016.775-5.025.75.75 0 01.313 1.248l-3.32 3.319c.063.475.276.934.641 1.299.365.365.824.578 1.3.64l3.318-3.319a.75.75 0 011.248.313 5.25 5.25 0 01-5.472 6.756c-1.018-.086-1.87.1-2.309.634L7.344 21.3A3.298 3.298 0 112.7 16.657l8.684-7.151c.533-.44.72-1.291.634-2.309A5.342 5.342 0 0112 6.75z" />
+              </svg>
+              <div>
+                <p className="text-white text-[14px] font-bold leading-none mb-1">75% Less Load</p>
+                <p className="text-white/40 text-[12px]">Joint Offloading</p>
               </div>
             </div>
+
+            {/* Card 3: Physiotherapist */}
+            <div className="flex items-center gap-3 bg-[#16161e] border border-white/[0.08] rounded-2xl px-4 py-3.5">
+              <svg className="w-7 h-7 text-[#A78BFA] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+              </svg>
+              <div>
+                <p className="text-white text-[14px] font-bold leading-none mb-1">Physiotherapist</p>
+                <p className="text-white/40 text-[12px]">Led &amp; Supervised</p>
+              </div>
+            </div>
+
+            {/* Card 4: Private Chamber */}
+            <div className="flex items-center gap-3 bg-[#16161e] border border-white/[0.08] rounded-2xl px-4 py-3.5">
+              <svg className="w-7 h-7 text-[#A78BFA] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+              </svg>
+              <div>
+                <p className="text-white text-[14px] font-bold leading-none mb-1">Private Chamber</p>
+                <p className="text-white/40 text-[12px]">Not a Shared Pool</p>
+              </div>
+            </div>
+
           </div>
         </div>
+
       </section>
 
-      {/* HOW WATER WORKS */}
-      <section className="py-24 lg:py-32 bg-[#F8F9FA] dark:bg-[#0D0D0D]">
-        <div className="container mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center max-w-7xl mx-auto">
-            <div className="relative rounded-[2.5rem] overflow-hidden aspect-[4/5] w-full shadow-2xl">
-              <Image
-                src="/images/Services_image/Hydrotherapy.webp"
-                alt="Aqua therapy treadmill session at R3BOOT Mumbai physiotherapy"
-                fill
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-              <div className="absolute bottom-8 left-8 right-8">
-                <span className="text-[10px] font-black tracking-[0.3em] text-white/60 uppercase block mb-2">
-                  WATER MECHANICS //
-                </span>
-                <p className="text-white text-xl font-black tracking-tight leading-tight">
-                  25% body weight in chest-deep water. Move earlier. Recover faster.
-                </p>
-              </div>
-            </div>
+      {/* ─────────────────────────────────────────────
+          MOBILE HERO (<md): text-first layout
+      ───────────────────────────────────────────── */}
+      <section className="md:hidden pt-8 pb-0 bg-white dark:bg-[#0A0A0A]">
+        <div className="container mx-auto px-5">
 
-            <div>
-              <span className="text-[11px] font-black tracking-[0.3em] text-[#513394] dark:text-[#A78BFA] uppercase mb-4 block">
-                WHY WATER WORKS //
-              </span>
-              <h2 className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white tracking-tight mb-4 leading-tight">
-                What Water Does{' '}
-                <span className="text-[#513394] dark:text-[#8B5CF6]">to Your Recovery</span>
-              </h2>
-              <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed mb-10">
-                The therapeutic value of aqua therapy comes from four simultaneous properties of water that no land-based
-                environment can replicate at the same time. Your physiotherapist adjusts each of these to match your
-                recovery stage.
-              </p>
-              <div className="space-y-6">
-                {howItWorks.map((item, idx) => (
-                  <div key={idx} className="flex gap-5 group">
-                    <div className="w-10 h-10 rounded-2xl bg-[#513394]/10 dark:bg-[#8B5CF6]/20 flex items-center justify-center text-[#513394] dark:text-[#A78BFA] font-black shrink-0 text-sm group-hover:bg-[#513394] group-hover:text-white transition-all duration-300">
-                      0{idx + 1}
-                    </div>
-                    <div>
-                      <h3 className="text-base font-bold text-gray-900 dark:text-white mb-1">{item.title}</h3>
-                      <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">{item.body}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
+          {/* Image slider - FIRST */}
+          <HeroSlider slides={heroSlides} />
+
+          {/* Label chip */}
+          <div className="inline-flex items-center gap-2 bg-[#513394]/10 dark:bg-[#513394]/20 rounded-full px-4 py-2 mt-5 mb-4">
+            <div className="w-1.5 h-1.5 rounded-full bg-[#513394] dark:bg-[#A78BFA]" />
+            <span className="text-[#513394] dark:text-[#A78BFA] text-[11px] font-black tracking-[0.3em] uppercase">Recovery Service</span>
           </div>
-        </div>
-      </section>
 
-      {/* COMPARISON TABLE */}
-      <section className="py-24 lg:py-32">
-        <div className="container mx-auto px-6 lg:px-8">
-          <div className="max-w-5xl mx-auto">
-            <div className="mb-14">
-              <span className="text-[11px] font-black tracking-[0.3em] text-[#513394] dark:text-[#A78BFA] uppercase mb-4 block">
-                COMPARISON //
-              </span>
-              <h2 className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white tracking-tight mb-6 leading-tight">
-                Aqua Therapy vs{' '}
-                <span className="text-[#513394] dark:text-[#8B5CF6]">Land-Based Physiotherapy</span>
-              </h2>
-              <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed max-w-3xl">
-                Aqua therapy and land-based physiotherapy are not competing approaches. They serve different stages of
-                recovery. Here is how to understand which is right for your current situation.
-              </p>
-            </div>
+          {/* H1 */}
+          <h1 className="text-[2rem] font-black text-gray-900 dark:text-white tracking-tight leading-[1.1] mb-3">
+            Aqua Therapy in{' '}
+            <span className="text-[#513394] dark:text-[#A78BFA]">Mumbai</span>
+          </h1>
 
-            <div className="overflow-hidden rounded-[2rem] shadow-2xl border border-gray-100 dark:border-white/5">
-              <table className="w-full text-left border-collapse">
-                <thead>
-                  <tr className="bg-[#513394]">
-                    <th className="px-6 py-5 text-white font-black text-sm tracking-wider uppercase">Factor</th>
-                    <th className="px-6 py-5 text-white font-black text-sm tracking-wider uppercase">Land Physio</th>
-                    <th className="px-6 py-5 text-white font-black text-sm tracking-wider uppercase">Aqua Therapy</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {[
-                    ['Joint load', 'Full body weight', 'Up to 75% reduction in chest-deep water'],
-                    ['Pain during exercise', 'Higher at early recovery stage', 'Lower - buoyancy removes compressive load'],
-                    ['Swelling management', 'Compression garments, elevation', 'Hydrostatic pressure acts on all surfaces simultaneously'],
-                    ['Strength building', 'Gravity-based resistance', 'Multidirectional water resistance - no impact forces'],
-                    ['When to use', 'All recovery stages, especially mid to late', 'Early rehabilitation - allows earlier movement after injury or surgery'],
-                    ['Balance and proprioception', 'Full weight-bearing challenge', 'Progressive - start with water support, progress to challenge'],
-                    ['Best for', 'Functional movement, strength, return to sport', 'Post-surgical, acute sub-acute, high-load joint conditions'],
-                  ].map(([factor, land, aqua], idx) => (
-                    <tr
-                      key={idx}
-                      className={idx % 2 === 0 ? 'bg-white dark:bg-white/5' : 'bg-[#F8F9FA] dark:bg-white/[0.02]'}
-                    >
-                      <td className="px-6 py-4 font-bold text-gray-900 dark:text-white text-sm">{factor}</td>
-                      <td className="px-6 py-4 text-gray-500 dark:text-gray-400 text-sm">{land}</td>
-                      <td className="px-6 py-4 text-[#513394] dark:text-[#A78BFA] font-medium text-sm">{aqua}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
+          {/* Subtext */}
+          <p className="text-base text-gray-500 dark:text-gray-400 leading-relaxed mb-6">
+            Private aqua treadmill chamber. Water level, speed and temperature set to your condition. Supervised by physiotherapists at R3BOOT Dadar.
+          </p>
 
-            <p className="text-gray-500 dark:text-gray-400 text-sm mt-8 leading-relaxed text-center">
-              Our physiotherapists will tell you which is the right starting point. Most rehabilitation programs combine both:
-              aqua therapy first, progressing to{' '}
-              <Link href="/physiotherapy-mumbai" className="text-[#513394] dark:text-[#A78BFA] font-bold hover:underline underline-offset-4">
-                land-based physiotherapy
-              </Link>{' '}
-              as strength and range of motion improve.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* PROTOCOL */}
-      <section className="py-24 lg:py-32 bg-[#F8F9FA] dark:bg-[#0D0D0D]">
-        <div className="container mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center max-w-7xl mx-auto">
-            <div>
-              <span className="text-[11px] font-black tracking-[0.3em] text-[#513394] dark:text-[#A78BFA] uppercase mb-4 block">
-                YOUR SESSION //
-              </span>
-              <h2 className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white tracking-tight mb-4 leading-tight">
-                What to Expect at{' '}
-                <span className="text-[#513394] dark:text-[#8B5CF6]">R3BOOT</span>
-              </h2>
-              <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed mb-10">
-                A standard aqua therapy session is 45 to 60 minutes. Your physiotherapist is with you throughout - in
-                or beside the aqua treadmill - adjusting the program in real time based on your pain response and movement quality.
-                No swimming ability is required.
-              </p>
-              <div className="space-y-6">
-                {protocol.map((item, idx) => (
-                  <div key={idx} className="flex gap-5 group">
-                    <div className="w-10 h-10 rounded-2xl bg-[#513394]/10 dark:bg-[#8B5CF6]/20 flex items-center justify-center text-[#513394] dark:text-[#A78BFA] font-black shrink-0 text-sm group-hover:bg-[#513394] group-hover:text-white transition-all duration-300">
-                      0{idx + 1}
-                    </div>
-                    <div>
-                      <h3 className="text-base font-bold text-gray-900 dark:text-white mb-1">{item.title}</h3>
-                      <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">{item.body}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="relative rounded-[2.5rem] overflow-hidden aspect-[4/5] w-full shadow-2xl">
-              <Image
-                src="/images/Services_image/Hydrotherapy_!.webp"
-                alt="Physiotherapist supervising aqua therapy session R3BOOT Mumbai"
-                fill
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-              <div className="absolute bottom-8 left-8 right-8">
-                <span className="text-[10px] font-black tracking-[0.3em] text-white/60 uppercase block mb-2">
-                  SUPERVISED //
-                </span>
-                <p className="text-white text-xl font-black tracking-tight leading-tight">
-                  Physiotherapist present through every session
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* MUMBAI RELEVANCE */}
-      <section className="py-24 lg:py-32">
-        <div className="container mx-auto px-6 lg:px-8">
-          <div className="max-w-5xl mx-auto">
-            <div className="mb-14">
-              <span className="text-[11px] font-black tracking-[0.3em] text-[#513394] dark:text-[#A78BFA] uppercase mb-4 block">
-                MUMBAI //
-              </span>
-              <h2 className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white tracking-tight mb-6 leading-tight">
-                Why Mumbai Athletes and Patients Choose{' '}
-                <span className="text-[#513394] dark:text-[#8B5CF6]">Aqua Therapy</span>
-              </h2>
-              <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed max-w-3xl mb-8">
-                Mumbai&apos;s heat and humidity add joint stress that patients in cooler climates do not contend with.
-                For post-surgical patients, the early weeks of recovery in Mumbai summer are particularly challenging.
-                Aqua therapy&apos;s temperature-controlled environment and reduced joint load address this directly,
-                giving you a controlled recovery space regardless of the season.
-              </p>
-              <div className="flex flex-wrap gap-3 mb-10">
-                {[
-                  'Post-knee replacement',
-                  'ACL recovery',
-                  'Hip replacement rehab',
-                  'Cricket injuries',
-                  'Marathon runners',
-                  'Gym athletes',
-                  'Arthritis management',
-                  'Back pain recovery',
-                ].map((item, idx) => (
-                  <span
-                    key={idx}
-                    className="bg-[#513394]/10 dark:bg-[#8B5CF6]/20 text-[#513394] dark:text-[#A78BFA] font-bold px-5 py-2.5 rounded-full text-sm"
-                  >
-                    {item}
-                  </span>
-                ))}
-              </div>
-              <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                R3BOOT is located in Dadar, central Mumbai, accessible from Bandra, Worli, Lower Parel, and Andheri.
-                Our integrated approach means aqua therapy sits alongside{' '}
-                <Link href="/physiotherapy-mumbai" className="text-[#513394] dark:text-[#A78BFA] font-bold hover:underline underline-offset-4">
-                  physiotherapy
-                </Link>
-                ,{' '}
-                <Link href="/services/sports-massage" className="text-[#513394] dark:text-[#A78BFA] font-bold hover:underline underline-offset-4">
-                  sports massage
-                </Link>
-                , and{' '}
-                <Link href="/contrast-therapy-mumbai" className="text-[#513394] dark:text-[#A78BFA] font-bold hover:underline underline-offset-4">
-                  contrast therapy
-                </Link>{' '}
-                - all under one roof, coordinated by the same physiotherapy team.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+          {/* Row 1: Google Reviews card */}
+          <div className="mt-5 bg-[#1A1A1A] dark:bg-[#1A1A1A] rounded-2xl p-4 flex items-center gap-0">
+            {/* Avatars */}
+            <div className="flex items-center shrink-0 pr-4">
               {[
-                {
-                  stat: '75%',
-                  label: 'reduction in joint load in chest-deep water',
-                },
-                {
-                  stat: '4 - 12',
-                  label: 'sessions for most post-surgical and sports injury cases',
-                },
-                {
-                  stat: 'Dadar',
-                  label: 'central Mumbai location, accessible from across the city',
-                },
-              ].map((item, idx) => (
+                { src: '/images/Customer_Review/Namrata Doshi.png',     alt: 'Namrata' },
+                { src: '/images/Customer_Review/Sonal Malik.png',       alt: 'Sonal' },
+                { src: '/images/Customer_Review/JugalKishore Shah.png', alt: 'Jugal' },
+              ].map((av, i) => (
                 <div
-                  key={idx}
-                  className="bg-white dark:bg-white/5 p-8 rounded-[2.5rem] border border-gray-100 dark:border-white/5 shadow-sm text-center"
+                  key={i}
+                  className={`relative w-12 h-12 rounded-full border-2 border-[#1A1A1A] overflow-hidden shrink-0 ${i > 0 ? '-ml-3' : ''}`}
+                  style={{ zIndex: 3 - i }}
                 >
-                  <div className="text-4xl font-black text-[#513394] dark:text-[#8B5CF6] mb-3">{item.stat}</div>
-                  <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">{item.label}</p>
+                  <Image src={av.src} alt={av.alt} fill className="object-cover" />
                 </div>
               ))}
             </div>
-          </div>
-        </div>
-      </section>
 
-      {/* TEAM */}
-      <PhysiotherapyTeam />
+            {/* Divider */}
+            <div className="w-px self-stretch bg-white/10 shrink-0 mr-4" />
 
-      {/* LOCATION & HOURS */}
-      <AquaTherapyLocationInfo />
-
-      {/* FAQ */}
-      <FAQSection faqs={aquaTherapyMumbaiFaqs} />
-
-      {/* CTA BANNER */}
-      <section className="py-24 lg:py-32 bg-[#513394] relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-white/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2" />
-        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-white/5 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/2" />
-        <div className="container mx-auto px-6 lg:px-8 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-6xl font-black text-white mb-8 tracking-tight">
-              Book Aqua Therapy in{' '}
-              <span className="text-white/50">Mumbai</span>
-            </h2>
-            <p className="text-xl text-white/70 mb-12 leading-relaxed font-medium max-w-3xl mx-auto">
-              R3BOOT is in Dadar, central Mumbai. Our physiotherapists will assess whether aqua therapy is the right
-              starting point for your recovery and build a program around your specific condition.
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-              <a
-                href="tel:+919702368612"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full sm:w-auto bg-white text-[#513394] font-black px-10 py-5 rounded-full transition-all hover:scale-105 shadow-2xl text-lg tracking-wide"
-              >
-                Call to Book
-              </a>
-              <a
-                href="https://wa.me/919702368612"
-                target="_blank"
-                rel="nofollow noopener noreferrer"
-                className="w-full sm:w-auto border-2 border-white/30 text-white font-bold px-10 py-5 rounded-full transition-all hover:bg-white/10 text-lg tracking-wide"
-              >
-                WhatsApp Us
-              </a>
-            </div>
-            <p className="text-white/40 mt-8 font-bold tracking-widest text-sm">DADAR, MUMBAI</p>
-          </div>
-        </div>
-      </section>
-
-      {/* RELATED SERVICES */}
-      <section className="py-24 lg:py-32 border-t border-gray-100 dark:border-white/5">
-        <div className="container mx-auto px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <span className="text-[11px] font-black tracking-[0.3em] text-[#513394] dark:text-[#A78BFA] uppercase mb-4 block">
-              RECOVERY SERVICES //
-            </span>
-            <h2 className="text-3xl md:text-5xl font-black text-gray-900 dark:text-white tracking-tight">
-              Complete Recovery at <span className="text-[#513394] dark:text-[#8B5CF6]">R3BOOT</span>
-            </h2>
-          </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
-            {[
-              { label: 'Aqua Therapy for Knee Pain', href: '/aqua-therapy-for-knee-pain-mumbai' },
-              { label: 'Physiotherapy Mumbai', href: '/physiotherapy-mumbai' },
-              { label: 'Sports Massage', href: '/sports-massage-mumbai' },
-              { label: 'Contrast Therapy', href: '/contrast-therapy-mumbai' },
-              { label: 'Clinical Pilates', href: '/clinical-pilates-mumbai' },
-              { label: 'Ice Bath Mumbai', href: '/ice-bath-mumbai' },
-              { label: 'Post-Surgery Physio', href: '/post-surgery-physiotherapy-mumbai' },
-              { label: 'Knee Pain Physio', href: '/physiotherapy-for-knee-pain-mumbai' },
-              { label: 'Back Pain Physio', href: '/physiotherapy-for-back-pain-mumbai' },
-            ].map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="text-center px-4 py-4 rounded-2xl border border-gray-100 dark:border-white/10 bg-white dark:bg-white/5 text-sm font-bold text-gray-900 dark:text-white hover:border-[#513394]/40 hover:text-[#513394] dark:hover:text-[#A78BFA] transition-all"
-              >
-                {link.label}
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* OTHER SERVICES */}
-      <section className="py-24 lg:py-32 bg-[#F8F9FA] dark:bg-[#0D0D0D]">
-        <div className="container mx-auto px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <span className="text-[11px] font-black tracking-[0.3em] text-[#513394] dark:text-[#A78BFA] uppercase mb-4 block">
-              KEEP EXPLORING //
-            </span>
-            <h2 className="text-4xl md:text-6xl font-black text-gray-900 dark:text-white tracking-tight">
-              Other Ways to <span className="text-[#513394] dark:text-[#8B5CF6]">Recover</span>
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {otherServices.map((service, idx) => (
-              <Link
-                key={idx}
-                href={`/services/${service.slug}`}
-                className="group bg-white dark:bg-white/5 p-4 rounded-[2.5rem] shadow-sm hover:shadow-xl border border-transparent dark:border-white/5 transition-all duration-300 transform hover:-translate-y-2 flex flex-col h-full"
-              >
-                <div className="relative h-48 w-full shrink-0 overflow-hidden rounded-[2rem] mb-6 shadow-sm">
-                  <Image
-                    src={service.image}
-                    alt={service.title}
-                    fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors" />
+            {/* Google + stars */}
+            <div className="flex flex-col gap-1 min-w-0">
+              <div className="flex items-center gap-2">
+                <div className="relative w-5 h-5 shrink-0">
+                  <Image src="/images/GOOGLE_LOGO.webp" alt="Google" fill className="object-contain" />
                 </div>
-                <div className="px-2 pb-2 flex flex-col flex-grow">
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-[#513394] dark:group-hover:text-[#A78BFA] transition-colors mb-3">
-                    {service.title}
-                  </h3>
-                  <p className="text-sm text-gray-500 dark:text-gray-400 line-clamp-2 leading-relaxed mb-6">
-                    {service.description}
-                  </p>
-                  <div className="mt-auto">
-                    <div className="flex items-center justify-between w-full bg-[#513394]/10 group-hover:bg-[#513394] text-[#513394] group-hover:text-white rounded-full p-1 transition-all duration-300">
-                      <span className="text-[13px] font-black pl-5">EXPLORE</span>
-                      <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-sm">
-                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
-                          <path d="M9 18l6-6-6-6" />
-                        </svg>
-                      </div>
-                    </div>
+                <span className="text-white font-bold text-sm">Google Reviews</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="flex gap-0.5">
+                  {[...Array(5)].map((_, j) => (
+                    <svg key={j} className="w-5 h-5 fill-yellow-400" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+                </div>
+                <span className="text-white font-black text-xl">5.0</span>
+              </div>
+              <span className="text-gray-500 text-xs font-medium">500+ happy clients</span>
+            </div>
+          </div>
+
+          {/* Row 2: 2 stat cards */}
+          <div className="grid grid-cols-2 gap-3 mt-3 mb-2">
+            {[
+              {
+                icon: (
+                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.75a5.25 5.25 0 016.775-5.025.75.75 0 01.313 1.248l-3.32 3.319c.063.475.276.934.641 1.299.365.365.824.578 1.3.64l3.318-3.319a.75.75 0 011.248.313 5.25 5.25 0 01-5.472 6.756c-1.018-.086-1.87.1-2.309.634L7.344 21.3A3.298 3.298 0 112.7 16.657l8.684-7.151c.533-.44.72-1.291.634-2.309A5.342 5.342 0 0112 6.75z" />
+                  </svg>
+                ),
+                value: '75%',
+                label: 'LESS JOINT LOAD',
+                desc: 'Buoyancy removes compressive load from injured joints.',
+              },
+              {
+                icon: (
+                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+                  </svg>
+                ),
+                value: 'Physio',
+                label: 'SUPERVISED',
+                desc: 'One-to-one with your physiotherapist, every session.',
+              },
+            ].map((card, i) => (
+              <div key={i} className="bg-[#1A1A1A] dark:bg-[#1A1A1A] rounded-2xl p-4 flex flex-col gap-3">
+                {/* Row 1: icon + value/label */}
+                <div className="flex items-center gap-3">
+                  <div className="w-11 h-11 rounded-full bg-[#513394]/20 flex items-center justify-center text-[#A78BFA] shrink-0">
+                    {card.icon}
+                  </div>
+                  <div>
+                    <div className="text-xl font-black text-white leading-none">{card.value}</div>
+                    <div className="text-[10px] font-bold text-gray-500 uppercase tracking-widest mt-0.5">{card.label}</div>
                   </div>
                 </div>
-              </Link>
+                {/* Divider */}
+                <div className="w-8 h-[2px] bg-[#513394] rounded-full" />
+                {/* Row 2: description */}
+                <p className="text-gray-500 text-xs leading-relaxed">{card.desc}</p>
+              </div>
             ))}
+          </div>
+
+        </div>
+      </section>
+
+      {/* ─────────────────────────────────────────────
+          SECTION 2A: CONTACT / BOOK AN APPOINTMENT
+      ───────────────────────────────────────────── */}
+      <ContactBookingSection />
+
+      {/* ─────────────────────────────────────────────
+          SECTION 2B: ABOUT — what it is, bullets, 2-image grid
+      ───────────────────────────────────────────── */}
+      <AboutSection />
+
+      {/* ─────────────────────────────────────────────
+          SECTION 3: PAIN POINTS — accordion + image crossfade
+      ───────────────────────────────────────────── */}
+      <PainPointsSection />
+
+      {/* ─────────────────────────────────────────────
+          SECTION 5: HOW IT WORKS — color-coded phase cards
+      ───────────────────────────────────────────── */}
+      <HowItWorksSection />
+
+      {/* ─────────────────────────────────────────────
+          SECTION 5B: COMPARISON — land physio vs aqua therapy
+      ───────────────────────────────────────────── */}
+      <ComparisonSection />
+
+      {/* ─────────────────────────────────────────────
+          SECTION 5C: HYGIENE — filtered water, private chamber
+      ───────────────────────────────────────────── */}
+      <HygieneSection />
+
+      {/* ─────────────────────────────────────────────
+          SECTION 5D: WHY MUMBAI PATIENTS CHOOSE AQUA THERAPY
+      ───────────────────────────────────────────── */}
+      <WhyMumbaiPatientsSection />
+
+      {/* ─────────────────────────────────────────────
+          SECTION 6: PROCESS (4 STEPS)
+      ───────────────────────────────────────────── */}
+      <section className="py-16 sm:py-20 lg:py-28 bg-white dark:bg-[#0A0A0A]">
+        <div className="container mx-auto px-5 sm:px-6 lg:px-8">
+
+          <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-14">
+            <span className="text-[11px] font-black tracking-[0.3em] text-[#513394] dark:text-[#A78BFA] uppercase mb-4 block">
+              YOUR SESSION //
+            </span>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 dark:text-white tracking-tight leading-[1.1] mb-4">
+              What to expect at{' '}
+              <span className="text-[#513394] dark:text-[#8B5CF6]">R3BOOT</span>
+            </h2>
+            <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed">
+              A full session takes 45-60 minutes including assessment, supervised chamber work, and progress review.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5 lg:gap-6 max-w-7xl mx-auto">
+            {processSteps.map((step, i) => (
+              <div
+                key={i}
+                className="relative flex flex-col p-6 lg:p-7 rounded-2xl bg-[#F8F9FA] dark:bg-white/[0.04] border border-gray-100 dark:border-white/[0.08] group hover:border-[#513394]/30 hover:shadow-lg dark:hover:shadow-none transition-all duration-300 overflow-hidden"
+              >
+                <div className="absolute -top-4 -right-2 text-[5.5rem] lg:text-[6rem] font-black text-gray-100 dark:text-white/[0.035] leading-none select-none pointer-events-none">
+                  {step.number}
+                </div>
+                <div className="relative z-10">
+                  <div className="w-11 h-11 rounded-xl bg-[#513394]/10 dark:bg-[#8B5CF6]/20 flex items-center justify-center text-[#513394] dark:text-[#A78BFA] font-black text-sm mb-4 group-hover:bg-[#513394] group-hover:text-white transition-all duration-300">
+                    {step.number}
+                  </div>
+                  <h3 className="font-black text-gray-900 dark:text-white text-base lg:text-[17px] mb-2 leading-snug">{step.title}</h3>
+                  <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">{step.body}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+        </div>
+      </section>
+
+      {/* SECTION 7: TEAM */}
+      <TeamSectionDemo />
+
+      <GoogleReviewsSection />
+
+      {/* ─────────────────────────────────────────────
+          SECTION 8C: BLOG — recovery reading
+      ───────────────────────────────────────────── */}
+      <BlogSection />
+
+      {/* ─────────────────────────────────────────────
+          SECTION 9: FAQ
+      ───────────────────────────────────────────── */}
+      <FAQSection faqs={aquaTherapyFaqs} layout="grid" />
+
+      {/* ─────────────────────────────────────────────
+          SECTION 10: CTA BANNER
+      ───────────────────────────────────────────── */}
+      {/* MOBILE CTA CARD */}
+      <section className="md:hidden bg-white dark:bg-[#0A0A0A] pt-10 pb-28">
+        <div className="px-4">
+          <div
+            className="relative rounded-3xl overflow-hidden px-6 pt-7 pb-6"
+            style={{ background: 'linear-gradient(135deg, #2a0d6e 0%, #1a0850 55%, #110638 100%)' }}
+          >
+            <div className="absolute top-0 right-0 w-48 h-48 rounded-full blur-[60px] opacity-30 pointer-events-none" style={{ background: '#7c3aed' }} />
+            <div className="absolute bottom-0 left-0 w-40 h-40 rounded-full blur-[50px] opacity-20 pointer-events-none" style={{ background: '#1e0a5e' }} />
+            <div className="relative">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white leading-[1.1] tracking-tight mb-2">
+                Book a session{' '}
+                <span className="text-[#A78BFA]">in Mumbai</span>
+              </h2>
+              <p className="text-white/55 text-[13px] leading-relaxed mb-5">
+                R3BOOT, Dadar. Open Monday to Saturday. Our physiotherapists will tell you honestly if aqua therapy is the right starting point for your recovery.
+              </p>
+              <div className="flex flex-col gap-3">
+                <a
+                  href="tel:+919702368612"
+                  className="flex items-center justify-center gap-2 bg-white text-[#513394] font-black rounded-full py-3.5 text-[15px] tracking-wide"
+                >
+                  <PhoneIcon className="w-4 h-4" />
+                  Call to Book
+                </a>
+                <a
+                  href="https://wa.me/919702368612"
+                  target="_blank"
+                  rel="nofollow noopener noreferrer"
+                  className="flex items-center justify-center gap-2 border border-white/25 text-white font-bold rounded-full py-3.5 text-[15px] tracking-wide"
+                >
+                  <PhoneIcon className="w-4 h-4" />
+                  WhatsApp
+                </a>
+              </div>
+              <p className="text-center text-white/30 text-[10px] tracking-[0.2em] uppercase mt-4">
+                Dadar, Mumbai
+              </p>
+            </div>
           </div>
         </div>
       </section>
+
+      {/* DESKTOP CTA */}
+      <section className="hidden md:block py-16 lg:py-20 bg-[#513394] relative overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-white/[0.07] rounded-full blur-[100px] -translate-y-1/2 translate-x-1/4" />
+          <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-black/20 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/4" />
+        </div>
+        <div className="container mx-auto px-6 lg:px-8 relative z-10 text-center">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight mb-5 max-w-3xl mx-auto leading-[1.1]">
+            Book a session in{' '}
+            <span className="text-white/45">Mumbai</span>
+          </h2>
+          <p className="text-lg text-white/65 mb-10 max-w-xl mx-auto leading-relaxed">
+            R3BOOT, Dadar. Open Monday to Saturday. Our physiotherapists will tell you honestly if aqua therapy is the right starting point for your recovery.
+          </p>
+          <div className="flex flex-row gap-4 justify-center">
+            <a
+              href="tel:+919702368612"
+              className="inline-flex items-center justify-center gap-2.5 bg-white text-[#513394] font-black px-10 py-5 rounded-full hover:scale-105 transition-all shadow-2xl text-base tracking-wide"
+            >
+              <PhoneIcon className="w-4 h-4" />
+              Call to Book
+            </a>
+            <a
+              href="https://wa.me/919702368612"
+              target="_blank"
+              rel="nofollow noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2.5 border-2 border-white/30 text-white font-bold px-10 py-5 rounded-full hover:bg-white/10 transition-all text-base tracking-wide"
+            >
+              WhatsApp
+            </a>
+          </div>
+          <p className="text-white/35 mt-8 font-bold tracking-widest text-xs uppercase">Dadar, Mumbai</p>
+        </div>
+      </section>
+
+      {/* ─────────────────────────────────────────────
+          STICKY MOBILE CTA
+      ───────────────────────────────────────────── */}
+      <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden">
+        <div className="bg-[#0A0A0A]/95 backdrop-blur-md border-t border-white/[0.09] px-4 pt-3 pb-5">
+          <div className="flex gap-3">
+            <a
+              href="tel:+919702368612"
+              className="flex-1 flex items-center justify-center gap-2 bg-[#513394] hover:bg-[#603eb0] text-white font-black rounded-xl py-3.5 text-[14px] tracking-wide transition-colors"
+            >
+              <PhoneIcon className="w-4 h-4" />
+              Call
+            </a>
+            <a
+              href="https://wa.me/919702368612"
+              target="_blank"
+              rel="nofollow noopener noreferrer"
+              className="flex-1 flex items-center justify-center gap-2 border border-white/20 text-white font-bold rounded-xl py-3.5 text-[14px] tracking-wide hover:bg-white/[0.07] transition-colors"
+            >
+              WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
 
       <ServiceSchema
         serviceName="Aqua Therapy in Mumbai"
@@ -626,6 +542,7 @@ export default function AquaTherapyMumbaiPage() {
         { name: 'Home', url: '/' },
         { name: 'Aqua Therapy Mumbai', url: '/aqua-therapy-mumbai' },
       ]} />
+
     </main>
   )
 }

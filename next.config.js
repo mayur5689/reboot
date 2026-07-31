@@ -18,6 +18,16 @@ const nextConfig = {
                 destination: '/services/counselling-mental-training',
                 permanent: true,
             },
+            {
+                source: '/services-demo/aqua-therapy',
+                destination: '/aqua-therapy-mumbai',
+                permanent: true,
+            },
+            {
+                source: '/Aqua-therapy-mumbai',
+                destination: '/aqua-therapy-mumbai',
+                permanent: true,
+            },
         ]
     },
     images: {
