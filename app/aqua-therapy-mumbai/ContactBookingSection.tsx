@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, type FormEvent, type ReactNode } from 'react'
+import { useRouter } from 'next/navigation'
 import { Mail, Phone, MapPin, Droplets } from 'lucide-react'
 
 const HOURS = [
@@ -67,30 +68,53 @@ function QuestionLabel({ n, children }: { n: number; children: ReactNode }) {
 }
 
 export function ContactBookingSection() {
+  const router = useRouter()
   const [name, setName] = useState('')
   const [phone, setPhone] = useState('')
   const [recovery, setRecovery] = useState('')
   const [startWhen, setStartWhen] = useState('')
   const [callTime, setCallTime] = useState('')
-  const [submitted, setSubmitted] = useState(false)
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState('')
 
-  function handleSubmit(e: FormEvent) {
+  async function handleSubmit(e: FormEvent) {
     e.preventDefault()
+    setError('')
+    setLoading(true)
+
     const recoveryLabel = RECOVERY_OPTIONS.find((o) => o.id === recovery)?.label
     const startLabel = START_OPTIONS.find((o) => o.id === startWhen)?.label
     const callLabel = CALL_TIME_OPTIONS.find((o) => o.id === callTime)?.label
 
-    const lines = [
-      `Hi R3BOOT, I want a free consultation for Aqua Therapy.`,
-      name && `Name: ${name}`,
-      phone && `Phone: ${phone}`,
-      recoveryLabel && `Recovering from: ${recoveryLabel}`,
-      startLabel && `Want to start: ${startLabel}`,
-      callLabel && `Best time to call: ${callLabel}`,
-    ].filter(Boolean)
-    const url = `https://wa.me/919702368612?text=${encodeURIComponent(lines.join('\n'))}`
-    window.open(url, '_blank', 'noopener,noreferrer')
-    setSubmitted(true)
+    const message = [
+      'Aqua Therapy free consultation request',
+      `Recovering from: ${recoveryLabel}`,
+      `Want to start: ${startLabel}`,
+      `Best time to call: ${callLabel}`,
+    ].join('\n')
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name,
+          phone,
+          subject: 'Aqua Therapy Free Consultation',
+          message,
+        }),
+      })
+
+      if (!response.ok) {
+        const data = await response.json().catch(() => ({}))
+        throw new Error(data.message || 'Failed to send. Please try again.')
+      }
+
+      router.push('/aqua-therapy-mumbai/thank-you')
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Something went wrong. Please try again.')
+      setLoading(false)
+    }
   }
 
   const fieldClass =
@@ -114,8 +138,8 @@ export function ContactBookingSection() {
               </h2>
 
               <p className="hidden lg:block text-gray-500 dark:text-gray-400 text-base leading-relaxed mb-8 max-w-xl">
-                Tell us what you&apos;re recovering from. We&apos;ll confirm on WhatsApp and guide you to
-                the right aqua therapy plan.
+                Tell us what you&apos;re recovering from. We&apos;ll get back to you within 24 hours
+                and guide you to the right aqua therapy plan.
               </p>
 
               <div className="rounded-2xl overflow-hidden border border-gray-100 dark:border-white/[0.08] mt-2 lg:mt-auto">
@@ -140,121 +164,113 @@ export function ContactBookingSection() {
             {/* Form — first on mobile, wider on desktop */}
             <div className="lg:col-span-7 order-1 lg:order-2">
               <div className="rounded-[1.5rem] sm:rounded-[1.75rem] bg-[#F8F5FF] dark:bg-white/[0.04] border border-[#513394]/15 dark:border-white/[0.08] p-5 sm:p-7 lg:p-8 xl:p-9 h-full">
-                {submitted ? (
-                  <div className="flex flex-col items-center justify-center text-center py-10 sm:py-14 px-2">
-                    <div className="w-14 h-14 rounded-full bg-[#513394] flex items-center justify-center mb-5">
-                      <svg className="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-                      </svg>
+                <h3 className="text-xl sm:text-2xl font-black text-gray-900 dark:text-white tracking-tight mb-2">
+                  Get a free consultation
+                </h3>
+                <p className="text-gray-500 dark:text-gray-400 text-[14px] leading-relaxed mb-6">
+                  No charge to talk it through. Fill this in and we&apos;ll reach out within 24 hours.
+                </p>
+
+                <form onSubmit={handleSubmit} className="space-y-5">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-[12px] font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2">
+                        Your Name
+                      </label>
+                      <input
+                        type="text"
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                        placeholder="Full name"
+                        required
+                        disabled={loading}
+                        className={fieldClass}
+                      />
                     </div>
-                    <h3 className="text-xl sm:text-2xl font-black text-gray-900 dark:text-white tracking-tight mb-3">
-                      Thank you for submitting the form
-                    </h3>
-                    <p className="text-gray-500 dark:text-gray-400 text-[15px] leading-relaxed max-w-md">
-                      We will reach out to you within 24 hours.
-                    </p>
+                    <div>
+                      <label className="block text-[12px] font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2">
+                        Phone Number
+                      </label>
+                      <input
+                        type="tel"
+                        value={phone}
+                        onChange={(e) => setPhone(e.target.value)}
+                        placeholder="+91"
+                        required
+                        disabled={loading}
+                        className={fieldClass}
+                      />
+                    </div>
                   </div>
-                ) : (
-                  <>
-                    <h3 className="text-xl sm:text-2xl font-black text-gray-900 dark:text-white tracking-tight mb-2">
-                      Get a free consultation
-                    </h3>
-                    <p className="text-gray-500 dark:text-gray-400 text-[14px] leading-relaxed mb-6">
-                      No charge to talk it through. Fill this in and we&apos;ll confirm on WhatsApp.
-                    </p>
 
-                    <form onSubmit={handleSubmit} className="space-y-5">
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <div>
-                          <label className="block text-[12px] font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2">
-                            Your Name
-                          </label>
-                          <input
-                            type="text"
-                            value={name}
-                            onChange={(e) => setName(e.target.value)}
-                            placeholder="Full name"
-                            required
-                            className={fieldClass}
-                          />
-                        </div>
-                        <div>
-                          <label className="block text-[12px] font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2">
-                            Phone Number
-                          </label>
-                          <input
-                            type="tel"
-                            value={phone}
-                            onChange={(e) => setPhone(e.target.value)}
-                            placeholder="+91"
-                            required
-                            className={fieldClass}
-                          />
-                        </div>
-                      </div>
-
-                      <div className="border-t border-gray-200 dark:border-white/[0.08] pt-5 space-y-5">
-                        <div>
-                          <QuestionLabel n={1}>What are you recovering from?</QuestionLabel>
-                          <select
-                            value={recovery}
-                            onChange={(e) => setRecovery(e.target.value)}
-                            required
-                            className={fieldClass}
-                          >
-                            <option value="">Select an option</option>
-                            {RECOVERY_OPTIONS.map((o) => (
-                              <option key={o.id} value={o.id}>
-                                {o.label}
-                              </option>
-                            ))}
-                          </select>
-                        </div>
-
-                        <div>
-                          <QuestionLabel n={2}>When would you like to start?</QuestionLabel>
-                          <select
-                            value={startWhen}
-                            onChange={(e) => setStartWhen(e.target.value)}
-                            required
-                            className={fieldClass}
-                          >
-                            <option value="">Select an option</option>
-                            {START_OPTIONS.map((o) => (
-                              <option key={o.id} value={o.id}>
-                                {o.label}
-                              </option>
-                            ))}
-                          </select>
-                        </div>
-
-                        <div>
-                          <QuestionLabel n={3}>What&apos;s the best time to call you?</QuestionLabel>
-                          <select
-                            value={callTime}
-                            onChange={(e) => setCallTime(e.target.value)}
-                            required
-                            className={fieldClass}
-                          >
-                            <option value="">Select an option</option>
-                            {CALL_TIME_OPTIONS.map((o) => (
-                              <option key={o.id} value={o.id}>
-                                {o.label}
-                              </option>
-                            ))}
-                          </select>
-                        </div>
-                      </div>
-
-                      <button
-                        type="submit"
-                        className="w-full bg-[#513394] hover:bg-[#603eb0] text-white font-black py-4 rounded-xl transition-all hover:scale-[1.01] text-[15px] tracking-wide"
+                  <div className="border-t border-gray-200 dark:border-white/[0.08] pt-5 space-y-5">
+                    <div>
+                      <QuestionLabel n={1}>What are you recovering from?</QuestionLabel>
+                      <select
+                        value={recovery}
+                        onChange={(e) => setRecovery(e.target.value)}
+                        required
+                        disabled={loading}
+                        className={fieldClass}
                       >
-                        Get Free Consultation
-                      </button>
-                    </form>
-                  </>
-                )}
+                        <option value="">Select an option</option>
+                        {RECOVERY_OPTIONS.map((o) => (
+                          <option key={o.id} value={o.id}>
+                            {o.label}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+
+                    <div>
+                      <QuestionLabel n={2}>When would you like to start?</QuestionLabel>
+                      <select
+                        value={startWhen}
+                        onChange={(e) => setStartWhen(e.target.value)}
+                        required
+                        disabled={loading}
+                        className={fieldClass}
+                      >
+                        <option value="">Select an option</option>
+                        {START_OPTIONS.map((o) => (
+                          <option key={o.id} value={o.id}>
+                            {o.label}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+
+                    <div>
+                      <QuestionLabel n={3}>What&apos;s the best time to call you?</QuestionLabel>
+                      <select
+                        value={callTime}
+                        onChange={(e) => setCallTime(e.target.value)}
+                        required
+                        disabled={loading}
+                        className={fieldClass}
+                      >
+                        <option value="">Select an option</option>
+                        {CALL_TIME_OPTIONS.map((o) => (
+                          <option key={o.id} value={o.id}>
+                            {o.label}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+                  </div>
+
+                  {error && (
+                    <p className="text-red-600 dark:text-red-400 text-[14px] font-medium">{error}</p>
+                  )}
+
+                  <button
+                    type="submit"
+                    disabled={loading}
+                    className="w-full bg-[#513394] hover:bg-[#603eb0] disabled:opacity-60 disabled:hover:scale-100 text-white font-black py-4 rounded-xl transition-all hover:scale-[1.01] text-[15px] tracking-wide"
+                  >
+                    {loading ? 'Sending…' : 'Get Free Consultation'}
+                  </button>
+                </form>
               </div>
             </div>
           </div>

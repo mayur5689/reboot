@@ -6,8 +6,8 @@ export async function POST(req: Request) {
         const body = await req.json();
         const { name, email, phone, subject, message } = body;
 
-        // Basic validation
-        if (!name || !email || !message) {
+        // Require name + message, plus at least email or phone
+        if (!name || !message || (!email && !phone)) {
             return NextResponse.json({ message: 'Missing required fields' }, { status: 400 });
         }
 
@@ -22,11 +22,11 @@ export async function POST(req: Request) {
         const mailOptions = {
             from: process.env.EMAIL_USER,
             to: 'info.r3boot@gmail.com',
-            replyTo: email,
+            ...(email ? { replyTo: email } : {}),
             subject: `Contact Form Submission: ${subject || 'New Message'}`,
             text: `
                 Name: ${name}
-                Email: ${email}
+                Email: ${email || 'Not provided'}
                 Phone: ${phone || 'Not provided'}
                 Subject: ${subject || 'General Inquiry'}
                 Message: ${message}
@@ -41,7 +41,7 @@ export async function POST(req: Request) {
                         
                         <div style="background-color: #f9f9f9; padding: 20px; border-radius: 8px; margin-bottom: 25px;">
                             <p style="margin: 5px 0;"><strong>Name:</strong> ${name}</p>
-                            <p style="margin: 5px 0;"><strong>Email:</strong> ${email}</p>
+                            <p style="margin: 5px 0;"><strong>Email:</strong> ${email || 'Not provided'}</p>
                             <p style="margin: 5px 0;"><strong>Phone:</strong> ${phone || 'Not provided'}</p>
                             <p style="margin: 5px 0;"><strong>Subject:</strong> ${subject || 'General Inquiry'}</p>
                         </div>
