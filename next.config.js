@@ -24,7 +24,7 @@ const nextConfig = {
                 permanent: true,
             },
             {
-                source: '/Aqua-therapy-mumbai',
+                source: '/services/aqua-therapy-mumbai',
                 destination: '/aqua-therapy-mumbai',
                 permanent: true,
             },
