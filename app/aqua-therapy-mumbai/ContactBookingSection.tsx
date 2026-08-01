@@ -82,18 +82,14 @@ export function ContactBookingSection() {
     setError('')
 
     const trimmedName = name.trim()
-    const digitsOnly = phone.replace(/\D/g, '')
+    const phoneDigits = phone.replace(/\D/g, '').slice(0, 10)
 
     if (!trimmedName) {
       setError('Please enter your name.')
       return
     }
-    if (!digitsOnly) {
-      setError('Please enter your phone number.')
-      return
-    }
-    if (digitsOnly.length < 10) {
-      setError('Please enter a valid phone number (at least 10 digits).')
+    if (phoneDigits.length !== 10) {
+      setError('Please enter a valid 10-digit mobile number.')
       return
     }
     if (!recovery || !startWhen || !callTime) {
@@ -102,6 +98,8 @@ export function ContactBookingSection() {
     }
 
     setLoading(true)
+
+    const fullPhone = `+91${phoneDigits}`
 
     const recoveryLabel = RECOVERY_OPTIONS.find((o) => o.id === recovery)?.label ?? recovery
     const startLabel = START_OPTIONS.find((o) => o.id === startWhen)?.label ?? startWhen
@@ -120,7 +118,7 @@ export function ContactBookingSection() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           name: trimmedName,
-          phone: digitsOnly,
+          phone: fullPhone,
           subject: 'Aqua Therapy Free Consultation',
           message,
           source: 'aqua-therapy-mumbai',
@@ -222,21 +220,31 @@ export function ContactBookingSection() {
                       <label className="block text-[12px] font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2">
                         Phone Number
                       </label>
-                      <input
-                        type="tel"
-                        name="phone"
-                        value={phone}
-                        onChange={(e) => setPhone(e.target.value.replace(/\D/g, '').slice(0, 12))}
-                        placeholder="10-digit mobile number"
-                        required
-                        inputMode="numeric"
-                        pattern="[0-9]{10,12}"
-                        minLength={10}
-                        maxLength={12}
-                        autoComplete="tel"
-                        disabled={loading}
-                        className={fieldClass}
-                      />
+                      <div
+                        className={`flex items-center overflow-hidden rounded-xl border border-gray-200 dark:border-white/[0.1] bg-white dark:bg-[#1A1A1A] focus-within:border-[#513394] focus-within:ring-2 focus-within:ring-[#513394]/15 transition-colors ${
+                          loading ? 'opacity-60' : ''
+                        }`}
+                      >
+                        <span className="shrink-0 pl-4 pr-2 py-3.5 text-[15px] font-bold text-gray-700 dark:text-gray-200 select-none">
+                          +91
+                        </span>
+                        <input
+                          type="tel"
+                          name="phone"
+                          value={phone}
+                          onChange={(e) => setPhone(e.target.value.replace(/\D/g, '').slice(0, 10))}
+                          placeholder="10-digit number"
+                          required
+                          inputMode="numeric"
+                          pattern="[0-9]{10}"
+                          minLength={10}
+                          maxLength={10}
+                          autoComplete="tel-national"
+                          disabled={loading}
+                          aria-label="10-digit mobile number"
+                          className="w-full bg-transparent border-0 px-2 py-3.5 text-[15px] text-gray-900 dark:text-white placeholder:text-gray-400 outline-none"
+                        />
+                      </div>
                     </div>
                   </div>
 
