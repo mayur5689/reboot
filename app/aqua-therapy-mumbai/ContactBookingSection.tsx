@@ -12,16 +12,16 @@ const HOURS = [
 ]
 
 const RECOVERY_OPTIONS = [
-  { id: 'post-surgery', label: 'Post surgery' },
-  { id: 'pre-surgery', label: 'Pre-surgery rehab' },
-  { id: 'back-spine', label: 'Back or spine pain' },
+  { id: 'acl-knee', label: 'ACL tear / Knee replacement' },
+  { id: 'back-disc', label: 'Back pain or disc issue' },
+  { id: 'hip-shoulder', label: 'Hip or shoulder pain' },
   { id: 'other', label: 'Other' },
 ]
 
 const START_OPTIONS = [
+  { id: 'immediately', label: 'Immediately' },
   { id: 'this-week', label: 'This week' },
   { id: 'this-month', label: 'This month' },
-  { id: '1-2-months', label: 'In 1–2 months' },
   { id: 'exploring', label: 'Just exploring' },
 ]
 
@@ -96,12 +96,16 @@ export function ContactBookingSection() {
       setError('Please enter a valid phone number (at least 10 digits).')
       return
     }
+    if (!recovery || !startWhen || !callTime) {
+      setError('Please answer all questions.')
+      return
+    }
 
     setLoading(true)
 
-    const recoveryLabel = RECOVERY_OPTIONS.find((o) => o.id === recovery)?.label
-    const startLabel = START_OPTIONS.find((o) => o.id === startWhen)?.label
-    const callLabel = CALL_TIME_OPTIONS.find((o) => o.id === callTime)?.label
+    const recoveryLabel = RECOVERY_OPTIONS.find((o) => o.id === recovery)?.label ?? recovery
+    const startLabel = START_OPTIONS.find((o) => o.id === startWhen)?.label ?? startWhen
+    const callLabel = CALL_TIME_OPTIONS.find((o) => o.id === callTime)?.label ?? callTime
 
     const message = [
       'Aqua Therapy free consultation request',
@@ -119,6 +123,10 @@ export function ContactBookingSection() {
           phone: digitsOnly,
           subject: 'Aqua Therapy Free Consultation',
           message,
+          source: 'aqua-therapy-mumbai',
+          recovery: recoveryLabel,
+          startWhen: startLabel,
+          callTime: callLabel,
         }),
       })
 
@@ -135,7 +143,10 @@ export function ContactBookingSection() {
   }
 
   const fieldClass =
-    'w-full bg-white dark:bg-white/[0.05] border border-gray-200 dark:border-white/[0.1] rounded-xl px-4 py-3.5 text-[15px] text-gray-900 dark:text-white placeholder:text-gray-400 outline-none focus:border-[#513394] focus:ring-2 focus:ring-[#513394]/15 transition-colors'
+    'w-full bg-white dark:bg-[#1A1A1A] border border-gray-200 dark:border-white/[0.1] rounded-xl px-4 py-3.5 text-[15px] text-gray-900 dark:text-white placeholder:text-gray-400 outline-none focus:border-[#513394] focus:ring-2 focus:ring-[#513394]/15 transition-colors disabled:opacity-60'
+  const selectClass = `${fieldClass} appearance-none cursor-pointer pr-10 bg-[length:1rem] bg-[right_0.9rem_center] bg-no-repeat`
+  const selectChevron =
+    "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%236b7280'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E\")"
 
   return (
     <section id="contact" className="pt-10 sm:pt-16 lg:pt-20 pb-8 sm:pb-10 lg:pb-12 bg-[#F3F4F6] dark:bg-[#0A0A0A]">
@@ -237,7 +248,8 @@ export function ContactBookingSection() {
                         onChange={(e) => setRecovery(e.target.value)}
                         required
                         disabled={loading}
-                        className={fieldClass}
+                        className={selectClass}
+                        style={{ backgroundImage: selectChevron }}
                       >
                         <option value="">Select an option</option>
                         {RECOVERY_OPTIONS.map((o) => (
@@ -255,7 +267,8 @@ export function ContactBookingSection() {
                         onChange={(e) => setStartWhen(e.target.value)}
                         required
                         disabled={loading}
-                        className={fieldClass}
+                        className={selectClass}
+                        style={{ backgroundImage: selectChevron }}
                       >
                         <option value="">Select an option</option>
                         {START_OPTIONS.map((o) => (
@@ -273,7 +286,8 @@ export function ContactBookingSection() {
                         onChange={(e) => setCallTime(e.target.value)}
                         required
                         disabled={loading}
-                        className={fieldClass}
+                        className={selectClass}
+                        style={{ backgroundImage: selectChevron }}
                       >
                         <option value="">Select an option</option>
                         {CALL_TIME_OPTIONS.map((o) => (
