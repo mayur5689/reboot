@@ -24,22 +24,45 @@ async function appendInquiryToSheet(payload: {
   callTime: string;
   message: string;
   source: string;
-}) {
-  const webhookUrl = process.env.GOOGLE_SHEETS_WEBHOOK_URL;
-  if (!webhookUrl) return { skipped: true as const };
+}): Promise<{ status: 'ok' | 'skipped' | 'error'; detail?: string }> {
+  const webhookUrl = process.env.GOOGLE_SHEETS_WEBHOOK_URL?.trim();
+  if (!webhookUrl) {
+    console.error(
+      'GOOGLE_SHEETS_WEBHOOK_URL is not set — inquiry was emailed but not added to the Sheet.'
+    );
+    return { status: 'skipped', detail: 'GOOGLE_SHEETS_WEBHOOK_URL missing' };
+  }
 
+  // text/plain avoids Google Apps Script POST→GET redirect issues with application/json
   const res = await fetch(webhookUrl, {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
+    headers: { 'Content-Type': 'text/plain;charset=utf-8' },
     body: JSON.stringify(payload),
+    redirect: 'follow',
   });
 
+  const text = await res.text().catch(() => '');
+
   if (!res.ok) {
-    const text = await res.text().catch(() => '');
     throw new Error(`Sheet webhook failed (${res.status}): ${text || res.statusText}`);
   }
 
-  return { skipped: false as const };
+  if (text) {
+    try {
+      const parsed = JSON.parse(text) as { ok?: boolean; error?: string };
+      if (parsed.ok === false) {
+        throw new Error(parsed.error || 'Sheet script returned ok:false');
+      }
+    } catch (err) {
+      if (err instanceof SyntaxError) {
+        // Non-JSON success body from Google — treat as ok
+      } else {
+        throw err;
+      }
+    }
+  }
+
+  return { status: 'ok' };
 }
 
 export async function POST(req: Request) {
@@ -114,8 +137,12 @@ export async function POST(req: Request) {
 
     await transporter.sendMail(mailOptions);
 
+    let sheetSync: { status: 'ok' | 'skipped' | 'error'; detail?: string } = {
+      status: 'skipped',
+    };
+
     try {
-      await appendInquiryToSheet({
+      sheetSync = await appendInquiryToSheet({
         timestamp: new Date().toISOString(),
         name,
         email: email || '',
@@ -131,10 +158,13 @@ export async function POST(req: Request) {
       const sheetMessage =
         sheetError instanceof Error ? sheetError.message : 'Unknown sheet error';
       console.error('Failed to append inquiry to Google Sheet:', sheetMessage);
-      // Email already sent — do not fail the request if sheet sync fails
+      sheetSync = { status: 'error', detail: sheetMessage };
     }
 
-    return NextResponse.json({ message: 'Email sent successfully' }, { status: 200 });
+    return NextResponse.json(
+      { message: 'Email sent successfully', sheetSync },
+      { status: 200 }
+    );
   } catch (error: unknown) {
     const errorMessage = error instanceof Error ? error.message : 'Unknown error';
     console.error('Error sending email:', errorMessage);
