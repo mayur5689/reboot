@@ -3,7 +3,7 @@
 import { useState, useEffect, useCallback } from 'react'
 import Image from 'next/image'
 
-type TeamMember = {
+export type TeamMember = {
   name: string
   role: string
   credentials: string
@@ -13,10 +13,12 @@ type TeamMember = {
   stats: {
     years: string
     rating: string
+    yearsLabel?: string
+    ratingLabel?: string
   }
 }
 
-const members: TeamMember[] = [
+const DEFAULT_MEMBERS: TeamMember[] = [
   {
     name: 'Dr. Hiral Parikh',
     role: 'Lead Physiotherapist',
@@ -105,7 +107,7 @@ function TeamSlide({ member }: { member: TeamMember }) {
               </svg>
             }
             value={member.stats.years}
-            label="Years Experience"
+            label={member.stats.yearsLabel ?? 'Years Experience'}
           />
           <StatCard
             icon={
@@ -117,7 +119,7 @@ function TeamSlide({ member }: { member: TeamMember }) {
               </svg>
             }
             value={member.stats.rating}
-            label="Google Rating"
+            label={member.stats.ratingLabel ?? 'Google Rating'}
           />
         </div>
       </div>
@@ -125,19 +127,23 @@ function TeamSlide({ member }: { member: TeamMember }) {
   )
 }
 
-function TeamDesktopCarousel() {
+function TeamDesktopCarousel({ members }: { members: TeamMember[] }) {
   const [active, setActive] = useState(0)
   const [paused, setPaused] = useState(false)
 
   const next = useCallback(() => {
     setActive((i) => (i + 1) % members.length)
-  }, [])
+  }, [members.length])
 
   useEffect(() => {
     if (paused) return
     const id = setInterval(next, AUTOPLAY_MS)
     return () => clearInterval(id)
   }, [paused, next])
+
+  useEffect(() => {
+    setActive(0)
+  }, [members])
 
   return (
     <section className="hidden md:block py-20 lg:py-28 bg-[#0D0D0D]">
@@ -226,9 +232,15 @@ function TeamDesktopCarousel() {
   )
 }
 
-function TeamMobileSection() {
+function TeamMobileSection({ members }: { members: TeamMember[] }) {
   const [active, setActive] = useState(0)
-  const member = members[active]
+  const member = members[active] ?? members[0]
+
+  useEffect(() => {
+    setActive(0)
+  }, [members])
+
+  if (!member) return null
 
   return (
     <section className="md:hidden py-12 bg-[#0D0D0D]">
@@ -320,11 +332,12 @@ function TeamMobileSection() {
   )
 }
 
-export function TeamSectionDemo() {
+export function TeamSectionDemo({ members = DEFAULT_MEMBERS }: { members?: TeamMember[] }) {
+  const list = members.length > 0 ? members : DEFAULT_MEMBERS
   return (
     <>
-      <TeamMobileSection />
-      <TeamDesktopCarousel />
+      <TeamMobileSection members={list} />
+      <TeamDesktopCarousel members={list} />
     </>
   )
 }
