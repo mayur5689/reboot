@@ -6,9 +6,9 @@ import { motion, AnimatePresence, useReducedMotion } from 'framer-motion'
 import { AnimatedCounter, easeOut, staggerContainer, fadeUp } from '@/components/motion/Reveal'
 
 const stats = [
-  { value: 1000, suffix: '+', label: 'Patients Treated' },
-  { value: 15, suffix: '+', label: 'Years of Expertise' },
-  { value: 10, suffix: '+', label: 'Certified Specialists' },
+  { value: 1000, suffix: '+', label: 'Patients Treated', shortLabel: 'patients' },
+  { value: 15, suffix: '+', label: 'Years of Expertise', shortLabel: 'yrs experience' },
+  { value: 10, suffix: '+', label: 'Certified Specialists', shortLabel: 'specialists' },
 ]
 
 const GOOGLE_REVIEW_URL = 'https://g.page/r/CYyiDNqpXoE2EBE/review'
@@ -43,7 +43,7 @@ const slides = [
   {
     src: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1785290132/hero_image_lxzfvf.png',
     alt: 'R3BOOT Pilates studio, clients on reformer machines beneath the Rebuild. Recover. wall',
-    position: 'object-[30%_center]',
+    position: 'object-center sm:object-[30%_center]',
   },
   {
     src: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1785290109/Contrast_Therapy_qduuzc.png',
@@ -53,22 +53,23 @@ const slides = [
   {
     src: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1785290140/Sports_Massage_chl8lo.png',
     alt: 'R3BOOT sports massage therapy session beneath the Restore. Rebuild. Recover. wall',
-    position: 'object-center',
+    position: 'object-[75%_center] sm:object-center',
   },
   {
     src: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1785290331/Physio_hero_w9sqkm.png',
     alt: 'R3BOOT physiotherapy session beside the Restore. Rebuild. Recover. wall',
-    position: 'object-center',
+    position: 'object-[75%_center] sm:object-center',
   },
   {
     src: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1785290155/Aqua_therpy_hero_kgkg0j.png',
     alt: 'R3BOOT aqua therapy underwater treadmill session beside the Restore. Rebuild. Recover. wall',
-    position: 'object-center',
+    position: 'object-[68%_center] sm:object-center',
+    darken: true,
   },
   {
     src: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1785290108/Councelling_hero_zql7pz.png',
     alt: 'R3BOOT counselling session beside the branded mental performance wall',
-    position: 'object-center',
+    position: 'object-[68%_center] sm:object-center',
   },
 ]
 
@@ -130,13 +131,16 @@ export default function Hero() {
         {/* Legibility: room is bright, so scrim harder on the left (text) and bottom (CTAs/stats) */}
         <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/25 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent" />
+        {slides[slideIndex].darken && (
+          <div className="absolute inset-0 bg-black/30" />
+        )}
 
-        {/* Arrows */}
+        {/* Arrows — hidden on mobile, no clear band to sit in without overlapping content; dots remain for navigation */}
         <button
           type="button"
           onClick={() => goTo('prev')}
           aria-label="Previous photo"
-          className="absolute left-4 sm:left-6 top-[72%] -translate-y-1/2 z-20 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white/10 backdrop-blur-md border border-white/25 hover:bg-white/20 flex items-center justify-center text-white transition-all hover:scale-105 active:scale-95"
+          className="hidden sm:flex absolute left-4 sm:left-6 top-[72%] -translate-y-1/2 z-20 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white/10 backdrop-blur-md border border-white/25 hover:bg-white/20 items-center justify-center text-white transition-all hover:scale-105 active:scale-95"
         >
           <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.25}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
@@ -146,7 +150,7 @@ export default function Hero() {
           type="button"
           onClick={() => goTo('next')}
           aria-label="Next photo"
-          className="absolute right-4 sm:right-6 top-[72%] -translate-y-1/2 z-20 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white/10 backdrop-blur-md border border-white/25 hover:bg-white/20 flex items-center justify-center text-white transition-all hover:scale-105 active:scale-95"
+          className="hidden sm:flex absolute right-4 sm:right-6 top-[72%] -translate-y-1/2 z-20 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white/10 backdrop-blur-md border border-white/25 hover:bg-white/20 items-center justify-center text-white transition-all hover:scale-105 active:scale-95"
         >
           <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.25}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
@@ -164,14 +168,16 @@ export default function Hero() {
                 setSlideIndex(idx)
               }}
               aria-label={`Go to photo ${idx + 1}`}
-              className={`h-1.5 rounded-full transition-all duration-300 ${idx === slideIndex ? 'w-6 bg-white' : 'w-1.5 bg-white/40'}`}
-            />
+              className="p-2 -m-2 flex items-center"
+            >
+              <span className={`block h-1.5 rounded-full transition-all duration-300 ${idx === slideIndex ? 'w-6 bg-white' : 'w-1.5 bg-white/40'}`} />
+            </button>
           ))}
         </div>
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 min-h-screen flex flex-col justify-between pt-32 sm:pt-36 lg:pt-40 pb-10 sm:pb-12">
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 min-h-screen flex flex-col justify-between gap-8 pt-32 sm:pt-36 lg:pt-40 pb-24 sm:pb-12">
 
         {/* Headline block */}
         <motion.div
@@ -270,25 +276,41 @@ export default function Hero() {
             </a>
           </motion.div>
 
-          <motion.div variants={fadeUp} className="flex flex-wrap items-center gap-6 sm:gap-10">
-            {stats.map((stat, idx) => (
-              <div key={stat.label} className="flex items-center gap-6 sm:gap-10">
-                <div>
-                  <AnimatedCounter
-                    value={stat.value}
-                    suffix={stat.suffix}
-                    className="text-3xl sm:text-4xl font-black text-white leading-none"
-                    suffixClassName="text-[#A78BFA]"
-                  />
-                  <p className="text-[11px] sm:text-xs font-semibold uppercase tracking-[0.15em] text-white/60 mt-2">
-                    {stat.label}
-                  </p>
+          <motion.div variants={fadeUp} className="w-full sm:w-auto">
+            {/* Tablet/desktop — unchanged animated stat cards */}
+            <div className="hidden sm:flex flex-wrap items-center gap-6 sm:gap-10">
+              {stats.map((stat, idx) => (
+                <div key={stat.label} className="flex items-center gap-6 sm:gap-10">
+                  <div>
+                    <AnimatedCounter
+                      value={stat.value}
+                      suffix={stat.suffix}
+                      className="text-3xl sm:text-4xl font-black text-white leading-none"
+                      suffixClassName="text-[#A78BFA]"
+                    />
+                    <p className="text-[11px] sm:text-xs font-semibold uppercase tracking-[0.15em] text-white/60 mt-2">
+                      {stat.label}
+                    </p>
+                  </div>
+                  {idx < stats.length - 1 && (
+                    <div className="block w-px h-10 bg-white/20" />
+                  )}
                 </div>
-                {idx < stats.length - 1 && (
-                  <div className="hidden sm:block w-px h-10 bg-white/20" />
-                )}
-              </div>
-            ))}
+              ))}
+            </div>
+
+            {/* Mobile only — compact one-line trust strip, replaces bulky stat cards */}
+            <div className="flex sm:hidden flex-wrap items-center gap-x-2 gap-y-1 pr-16 text-[13px] text-white/70">
+              {stats.map((stat, idx) => (
+                <span key={stat.label} className="flex items-center gap-2">
+                  <span>
+                    <strong className="text-white font-bold">{stat.value}{stat.suffix}</strong>{' '}
+                    {stat.shortLabel}
+                  </span>
+                  {idx < stats.length - 1 && <span className="text-white/30">&bull;</span>}
+                </span>
+              ))}
+            </div>
           </motion.div>
         </motion.div>
       </div>

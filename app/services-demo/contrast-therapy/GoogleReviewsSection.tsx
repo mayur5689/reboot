@@ -114,7 +114,7 @@ function GoogleLogo({ className }: { className?: string }) {
 
 function MobileReviewCard({ review }: { review: Testimonial }) {
   return (
-    <figure className="flex-shrink-0 w-[85vw] snap-start bg-[#161616] border border-white/[0.07] rounded-3xl p-5 flex flex-col">
+    <figure className="flex-shrink-0 w-[85vw] snap-center bg-[#161616] border border-white/[0.07] rounded-3xl p-5 flex flex-col">
       <div className="flex items-center justify-between mb-4">
         <div className="flex items-center gap-2.5">
           <GoogleLogo className="w-7 h-7 flex-shrink-0" />
@@ -163,7 +163,7 @@ function MobileReviewCard({ review }: { review: Testimonial }) {
         <span className="text-white/35 text-[12px]">{review.ago}</span>
       </div>
 
-      <blockquote className="text-white/80 text-[15px] leading-relaxed italic flex-grow mb-5">
+      <blockquote className="text-white/80 text-[15px] leading-relaxed italic flex-grow mb-5 line-clamp-6">
         &ldquo;{review.quote}&rdquo;
       </blockquote>
 
@@ -177,32 +177,51 @@ function MobileReviewCard({ review }: { review: Testimonial }) {
   )
 }
 
+const GOOGLE_REVIEW_URL = 'https://g.page/r/CYyiDNqpXoE2EBE/review'
+const MOBILE_REVIEW_COUNT = 5
+
 export function GoogleReviewsSection({
   testimonials = googleReviews,
 }: {
   testimonials?: Testimonial[]
 }) {
+  const mobileTestimonials = testimonials.slice(0, MOBILE_REVIEW_COUNT)
+
   return (
     <>
-      {/* MOBILE: Google Review cards */}
-      <section className="md:hidden py-10 bg-[#0A0A0A]">
+      {/* MOBILE: Google Review cards — capped list + "see all" link so the swipe-through stays short */}
+      <section className="md:hidden pt-10 pb-24 bg-[#0A0A0A]">
         <Reveal className="px-5 mb-6">
           <span className="text-[11px] font-black tracking-[0.3em] text-[#A78BFA] uppercase block mb-2">Patient Stories</span>
           <h2 className="text-[26px] font-extrabold text-white leading-tight">What clients say</h2>
         </Reveal>
-        <div className="flex gap-4 overflow-x-auto px-5 pb-2 snap-x snap-mandatory scrollbar-hide">
-          {testimonials.map((r, i) => (
+        <div className="flex gap-4 overflow-x-auto px-[7.5vw] pb-2 snap-x snap-mandatory scrollbar-hide [touch-action:pan-y]">
+          {mobileTestimonials.map((r, i) => (
             <motion.div
               key={`${r.name}-${i}`}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: '0px 0px -15% 0px' }}
               transition={{ delay: Math.min(i, 3) * 0.1, duration: 0.5, ease: easeOut }}
               className="flex-shrink-0"
             >
               <MobileReviewCard review={r} />
             </motion.div>
           ))}
+          <motion.a
+            href={GOOGLE_REVIEW_URL}
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '0px 0px -15% 0px' }}
+            transition={{ delay: 0.3, duration: 0.5, ease: easeOut }}
+            className="flex-shrink-0 w-[45vw] snap-center bg-[#161616] border border-white/[0.07] rounded-3xl p-5 flex flex-col items-center justify-center text-center gap-3"
+          >
+            <GoogleLogo className="w-8 h-8" />
+            <span className="text-white font-bold text-[15px] leading-snug">See all 150+ reviews</span>
+            <span className="text-[#A78BFA] text-[13px] font-semibold">on Google →</span>
+          </motion.a>
         </div>
       </section>
 
