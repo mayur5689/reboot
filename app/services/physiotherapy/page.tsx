@@ -2,11 +2,15 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Metadata } from 'next'
 import { services } from '@/lib/services'
-import PhysiotherapyTeam from '@/components/PhysiotherapyTeam'
 import PhysiotherapyFAQ from '@/components/PhysiotherapyFAQ'
+import { PhysiotherapyTeamSection } from './_components/PhysiotherapyTeamSection'
+import { TestimonialsCarousel } from './_components/PhysiotherapyTestimonials'
+import { PhysiotherapyLocation } from './_components/PhysiotherapyLocation'
+import { PhysiotherapyServices } from './_components/PhysiotherapyServices'
 import ServiceSchema from '@/components/schema/ServiceSchema'
 import FAQSchema from '@/components/schema/FAQSchema'
 import { physiotherapyFaqs } from '@/lib/faqs/physiotherapy'
+import { HeroTrustBadge, serviceTrustBadges } from '@/components/HeroTrustBadge'
 
 export const metadata: Metadata = {
     title: 'Physiotherapy in Mumbai | R3BOOT Dadar – Clinical Care',
@@ -17,49 +21,124 @@ export const metadata: Metadata = {
 
 const otherServices = services.filter(s => s.slug !== 'physiotherapy').slice(0, 4)
 
+const testimonials = [
+  {
+    name: 'Chandrakant Chande',
+    meta: 'Local Guide · 24 reviews',
+    ago: '2 months ago',
+    avatar: '/images/Customer_Review/Namrata Doshi.png',
+    quote: 'Dr. Hiral fixed my back pain after 2 years of trying other clinics. The assessment was thorough and the treatment actually addresses root causes, not just symptoms. Highly recommend.',
+  },
+  {
+    name: 'Dharmesh Thakkar',
+    meta: 'Google User · 8 reviews',
+    ago: '3 months ago',
+    avatar: '/images/Customer_Review/Sonal Malik.png',
+    quote: 'My knee pain from running disappeared within 6 sessions. They gave me a clear plan and explained exactly what was wrong. Professional and results-driven.',
+  },
+  {
+    name: 'Namrata Doshi',
+    meta: 'Local Guide · 12 reviews',
+    ago: '1 month ago',
+    avatar: '/images/Customer_Review/Namrata Doshi.png',
+    quote: 'After my ACL surgery, their rehab protocol was exactly what I needed. Structured, progressive, and they coordinated with my surgeon. Back to playing cricket in 4 months.',
+  },
+  {
+    name: 'Sonal Malik',
+    meta: 'Google User · 6 reviews',
+    ago: '4 months ago',
+    avatar: '/images/Customer_Review/Sonal Malik.png',
+    quote: 'Dry needling sessions combined with exercises changed my shoulder problem completely. Dr. Vaishali is incredibly knowledgeable and caring.',
+  },
+  {
+    name: 'JugalKishore Shah',
+    meta: 'Google User · 3 reviews',
+    ago: '5 months ago',
+    avatar: '/images/Customer_Review/JugalKishore Shah.png',
+    quote: 'Best physio clinic in Dadar. They treat the problem, not just the pain. Long-term results, not quick fixes.',
+  },
+  {
+    name: 'Arjun',
+    meta: 'Google User · 5 reviews',
+    ago: '1 month ago',
+    avatar: '/images/Customer_Review/Arjun.png',
+    quote: 'Fantastic experience. The team is professional, the facility is clean, and the results speak for themselves. Worth every rupee.',
+  },
+]
+
 export default function PhysiotherapyPage() {
     return (
-        <main className="min-h-screen bg-white dark:bg-[#0A0A0A]">
+        <main className="physio-page min-h-screen bg-white dark:bg-[#0A0A0A]">
 
-            {/* ─── HERO ─── */}
-            <section className="relative h-[70vh] flex items-end overflow-hidden">
-                <Image
-                    src="/images/service/Services_image/Physiotherapy_1.webp"
-                    alt="Physiotherapy Mumbai – R3BOOT Recovery Center Dadar"
-                    fill
-                    className="object-cover"
-                    priority
+            {/* ─── HERO (DESKTOP) ─── */}
+            <section className="hidden md:flex relative flex-col bg-black overflow-hidden" style={{ minHeight: '92vh' }}>
+                <div className="absolute inset-0">
+                    <Image
+                        src="/images/service/Services_image/Physiotherapy_1.webp"
+                        alt="Physiotherapy Mumbai, Clinical Care at R3BOOT"
+                        fill
+                        className="object-cover"
+                        style={{ objectPosition: '40% center' }}
+                        priority
+                    />
+                </div>
+
+                <div
+                    className="absolute inset-0 pointer-events-none"
+                    style={{
+                        background:
+                            'linear-gradient(to right, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.78) 18%, rgba(0,0,0,0.45) 38%, rgba(0,0,0,0.15) 55%, transparent 68%)',
+                    }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
+                <div
+                    className="absolute inset-x-0 bottom-0 h-[34%] pointer-events-none"
+                    style={{ background: 'linear-gradient(to top, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.18) 50%, transparent 100%)' }}
+                />
 
-                <div className="container mx-auto px-6 lg:px-8 relative z-10 pb-20">
-                    <Link href="/services" className="inline-flex items-center gap-2 text-white/70 hover:text-white transition-all mb-8 group">
-                        <div className="w-8 h-8 rounded-full border border-white/30 flex items-center justify-center group-hover:bg-white group-hover:text-[#513394] transition-all">
-                            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                <div className="relative z-10 flex flex-1 flex-col justify-center px-12 lg:px-16 xl:px-20 pt-28 max-w-[54%]">
+                    <p className="text-[#A78BFA] text-[11px] font-black tracking-[0.25em] uppercase mb-4">
+                        Clinically Structured&nbsp;&nbsp;•&nbsp;&nbsp;Evidence-Based&nbsp;&nbsp;•&nbsp;&nbsp;Results-Focused
+                    </p>
+
+                    <h1 className="text-5xl lg:text-6xl xl:text-[4.25rem] font-black text-white tracking-tight leading-[1.04] mb-4">
+                        Physiotherapy<br />
+                        in <span className="text-[#A78BFA]">Mumbai</span>
+                    </h1>
+
+                    <p className="text-[16px] text-white/55 max-w-md leading-relaxed mb-7">
+                        Clinical care by certified specialists. Root cause treatment, not symptom management. Structured progression to lasting results.
+                    </p>
+
+                    <div className="flex items-center gap-4">
+                        <a
+                            href="tel:+919702368612"
+                            className="inline-flex items-center gap-2.5 bg-[#513394] hover:bg-[#603eb0] text-white font-black px-7 py-3.5 rounded-full transition-all hover:scale-[1.02] text-[14px] tracking-wide shadow-lg shadow-[#513394]/30"
+                        >
+                            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
                             </svg>
-                        </div>
-                        <span className="font-bold tracking-wider text-sm">BACK TO SERVICES</span>
-                    </Link>
-
-                    <div className="max-w-4xl">
-                        <div className="flex items-center gap-3 text-white/70 mb-4">
-                            <div className="w-1.5 h-1.5 rounded-full bg-white/50" />
-                            <span className="text-[11px] font-black tracking-[0.3em] uppercase">RECOVERY // EXCELLENCE</span>
-                            <div className="w-1.5 h-1.5 rounded-full bg-white/50" />
-                        </div>
-                        <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-2 uppercase tracking-tighter leading-[0.9]">
-                            Physiotherapy
-                        </h1>
-                        <p className="text-2xl md:text-4xl font-black text-[#8B5CF6] mb-8 italic tracking-tight">
-                            Evidence-Based. Results-Focused.
-                        </p>
-                        <p className="text-xl md:text-2xl text-white/80 max-w-2xl leading-relaxed font-medium">
-                            Clinical physiotherapy by certified specialists at R3BOOT, Dadar – Mumbai.
-                        </p>
+                            Book Your Session
+                        </a>
+                        <a
+                            href="https://wa.me/919702368612"
+                            target="_blank"
+                            rel="nofollow noopener noreferrer"
+                            className="inline-flex items-center gap-2.5 border border-white/20 text-white hover:bg-white/[0.07] font-bold px-7 py-3.5 rounded-full transition-all text-[14px] tracking-wide"
+                        >
+                            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+                                <path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.118 1.524 5.855L0 24l6.335-1.502A11.942 11.942 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.013-1.38l-.36-.214-3.732.885.916-3.629-.235-.373A9.818 9.818 0 1112 21.818z"/>
+                            </svg>
+                            WhatsApp Us
+                        </a>
                     </div>
                 </div>
+
+                <HeroTrustBadge items={serviceTrustBadges.physiotherapy} />
             </section>
+
+            {/* ─── PHYSIOTHERAPY SERVICES ─── */}
+            <PhysiotherapyServices />
 
             {/* ─── CORE DETAILS ─── */}
             <section className="py-24 lg:py-32">
@@ -477,7 +556,21 @@ export default function PhysiotherapyPage() {
             </section>
 
             {/* ─── TEAM SECTION ─── */}
-            <PhysiotherapyTeam />
+            <PhysiotherapyTeamSection />
+
+            {/* ─── PATIENT STORIES ─── */}
+            <section className="hidden md:block py-20 lg:py-28 bg-[#0A0A0A]">
+                <div className="container mx-auto px-5 sm:px-6 lg:px-8">
+                    <div className="text-center max-w-xl mx-auto mb-10 sm:mb-14">
+                        <span className="text-[11px] font-black tracking-[0.3em] text-[#513394] dark:text-[#A78BFA] uppercase mb-4 block">PATIENT STORIES //</span>
+                        <h2 className="text-3xl sm:text-4xl font-black text-white tracking-tight">What clients say</h2>
+                    </div>
+                    <TestimonialsCarousel testimonials={testimonials} />
+                </div>
+            </section>
+
+            {/* ─── LOCATION ─── */}
+            <PhysiotherapyLocation />
 
             {/* ─── FAQ ─── */}
             <PhysiotherapyFAQ />

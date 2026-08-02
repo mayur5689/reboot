@@ -17,6 +17,7 @@ import { HygieneSection } from '@/app/services-demo/contrast-therapy/HygieneSect
 import { TeamSectionDemo } from '@/app/services-demo/contrast-therapy/TeamSectionDemo'
 import { TestimonialsCarousel } from '@/app/services-demo/contrast-therapy/TestimonialsCarousel'
 import { LocationSection } from '@/app/services-demo/contrast-therapy/LocationSection'
+import { HeroTrustBadge, serviceTrustBadges } from '@/components/HeroTrustBadge'
 
 export const metadata: Metadata = {
   title: 'Contrast Therapy Mumbai | Ice Bath & Infrared Sauna | R3BOOT',
@@ -165,9 +166,7 @@ export default function ContrastTherapyMumbaiPage() {
       {/* ─────────────────────────────────────────────
           DESKTOP HERO (md+): full-bleed bg images, text overlaid left
       ───────────────────────────────────────────── */}
-      <section className="hidden md:flex relative bg-black overflow-hidden" style={{ minHeight: '92vh' }}>
-
-        {/* BG: full image */}
+      <section className="hidden md:flex relative flex-col bg-black overflow-hidden" style={{ minHeight: '92vh' }}>
         <div className="absolute inset-0">
           <Image
             src="/images/R3BOOT_CONTRAST_THERAPY_IMAGE (2).webp"
@@ -179,36 +178,36 @@ export default function ContrastTherapyMumbaiPage() {
           />
         </div>
 
-        {/* Left fade gradient — 30% */}
         <div
           className="absolute inset-0 pointer-events-none"
-          style={{ background: 'linear-gradient(to right, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.5) 20%, transparent 30%)' }}
+          style={{
+            background:
+              'linear-gradient(to right, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.78) 18%, rgba(0,0,0,0.45) 38%, rgba(0,0,0,0.15) 55%, transparent 68%)',
+          }}
+        />
+        <div
+          className="absolute inset-x-0 bottom-0 h-[34%] pointer-events-none"
+          style={{ background: 'linear-gradient(to top, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.18) 50%, transparent 100%)' }}
         />
 
-        {/* TEXT CONTENT — left side, relative z-10 */}
-        <div className="relative z-10 flex flex-col justify-center px-12 lg:px-16 xl:px-20 py-24 max-w-[54%]">
-
-          {/* Label row */}
-          <p className="text-[#A78BFA] text-[11px] font-black tracking-[0.25em] uppercase mb-5">
+        <div className="relative z-10 flex flex-1 flex-col justify-center px-12 lg:px-16 xl:px-20 pt-28 max-w-[54%]">
+          <p className="text-[#A78BFA] text-[11px] font-black tracking-[0.25em] uppercase mb-4">
             Clinically Structured&nbsp;&nbsp;•&nbsp;&nbsp;Safe&nbsp;&nbsp;•&nbsp;&nbsp;Supervised
           </p>
 
-          {/* H1 */}
-          <h1 className="text-5xl lg:text-6xl xl:text-7xl font-black text-white tracking-tight leading-[1.04] mb-5">
+          <h1 className="text-5xl lg:text-6xl xl:text-[4.25rem] font-black text-white tracking-tight leading-[1.04] mb-4">
             Contrast Therapy<br />
             in <span className="text-[#A78BFA]">Mumbai</span>
           </h1>
 
-          {/* Subtitle */}
-          <p className="text-[17px] text-white/55 max-w-md leading-relaxed mb-8">
+          <p className="text-[16px] text-white/55 max-w-md leading-relaxed mb-7">
             Ice bath and infrared sauna using advanced protocols to help you recover, reset and perform at your best.
           </p>
 
-          {/* CTAs */}
-          <div className="flex items-center gap-4 mb-10">
+          <div className="flex items-center gap-4">
             <a
               href="tel:+919702368612"
-              className="inline-flex items-center gap-2.5 bg-[#513394] hover:bg-[#603eb0] text-white font-black px-8 py-4 rounded-full transition-all hover:scale-[1.02] text-[15px] tracking-wide shadow-lg shadow-[#513394]/30"
+              className="inline-flex items-center gap-2.5 bg-[#513394] hover:bg-[#603eb0] text-white font-black px-7 py-3.5 rounded-full transition-all hover:scale-[1.02] text-[14px] tracking-wide shadow-lg shadow-[#513394]/30"
             >
               <PhoneIcon className="w-4 h-4" />
               Book Your Session
@@ -217,7 +216,7 @@ export default function ContrastTherapyMumbaiPage() {
               href="https://wa.me/919702368612"
               target="_blank"
               rel="nofollow noopener noreferrer"
-              className="inline-flex items-center gap-2.5 border border-white/20 text-white hover:bg-white/[0.07] font-bold px-8 py-4 rounded-full transition-all text-[15px] tracking-wide"
+              className="inline-flex items-center gap-2.5 border border-white/20 text-white hover:bg-white/[0.07] font-bold px-7 py-3.5 rounded-full transition-all text-[14px] tracking-wide"
             >
               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
@@ -226,61 +225,9 @@ export default function ContrastTherapyMumbaiPage() {
               WhatsApp Us
             </a>
           </div>
-
-          {/* 4 Trust cards — precise match to reference */}
-          <div className="flex items-stretch gap-3">
-
-            {/* Card 1: Google Reviews — G logo left, content right, no divider */}
-            <div className="flex items-center gap-3 bg-[#16161e] border border-white/[0.08] rounded-2xl px-4 py-3.5">
-              <svg className="w-8 h-8 flex-shrink-0" viewBox="0 0 48 48">
-                <path fill="#4285F4" d="M44.5 20H24v8.5h11.8C34.7 33.9 30 37 24 37c-7.2 0-13-5.8-13-13s5.8-13 13-13c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 4.1 29.6 2 24 2 11.8 2 2 11.8 2 24s9.8 22 22 22c11 0 21-8 21-22 0-1.3-.2-2.7-.5-4z"/><path fill="#34A853" d="M6.3 14.7l7 5.1C15 16.1 19.1 13 24 13c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 4.1 29.6 2 24 2 16.3 2 9.6 7.3 6.3 14.7z"/><path fill="#FBBC05" d="M24 46c5.6 0 10.5-1.9 14.4-5l-6.7-5.5C29.6 37 26.9 38 24 38c-5.9 0-10.9-4-12.7-9.5l-7 5.4C7.5 41.8 15.2 46 24 46z"/><path fill="#EA4335" d="M44.5 20H24v8.5h11.8c-.8 2.4-2.3 4.4-4.3 5.8l6.7 5.5C42.1 36.4 45 30.7 45 24c0-1.3-.2-2.7-.5-4z"/>
-              </svg>
-              <div>
-                <p className="text-white text-[14px] font-bold leading-none mb-1.5">Google Reviews</p>
-                <div className="flex items-center gap-0.5 mb-1">
-                  {[...Array(5)].map((_, i) => <svg key={i} className="w-3.5 h-3.5 fill-yellow-400" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>)}
-                  <span className="text-white font-bold text-[13px] ml-1">5.0</span>
-                </div>
-                <p className="text-white/40 text-[12px]">500+ Happy Clients</p>
-              </div>
-            </div>
-
-            {/* Card 2: 15+ Years — shield icon left, large purple "15+" title */}
-            <div className="flex items-center gap-3 bg-[#16161e] border border-white/[0.08] rounded-2xl px-4 py-3.5">
-              <svg className="w-7 h-7 text-[#A78BFA] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-              </svg>
-              <div>
-                <p className="text-white text-[14px] font-bold leading-none mb-1">15+ Years</p>
-                <p className="text-white/40 text-[12px]">Clinical Experience</p>
-              </div>
-            </div>
-
-            {/* Card 3: Physiotherapist — person icon left */}
-            <div className="flex items-center gap-3 bg-[#16161e] border border-white/[0.08] rounded-2xl px-4 py-3.5">
-              <svg className="w-7 h-7 text-[#A78BFA] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-              </svg>
-              <div>
-                <p className="text-white text-[14px] font-bold leading-none mb-1">Physiotherapist</p>
-                <p className="text-white/40 text-[12px]">Led &amp; Supervised</p>
-              </div>
-            </div>
-
-            {/* Card 4: Day & Night — clock icon left */}
-            <div className="flex items-center gap-3 bg-[#16161e] border border-white/[0.08] rounded-2xl px-4 py-3.5">
-              <svg className="w-7 h-7 text-[#A78BFA] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-              <div>
-                <p className="text-white text-[14px] font-bold leading-none mb-1">Day &amp; Night</p>
-                <p className="text-white/40 text-[12px]">Cycle Protocols</p>
-              </div>
-            </div>
-
-          </div>
         </div>
 
+        <HeroTrustBadge items={serviceTrustBadges['contrast-therapy']} />
       </section>
 
       {/* ─────────────────────────────────────────────

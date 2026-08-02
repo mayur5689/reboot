@@ -7,6 +7,7 @@ import { FAQSection } from '@/components/faq-section'
 import ServiceSchema from '@/components/schema/ServiceSchema'
 import FAQSchema from '@/components/schema/FAQSchema'
 import { clinicalPilatesMumbaiFaqs } from '@/lib/faqs/clinical-pilates-mumbai'
+import { HeroTrustBadge, serviceTrustBadges } from '@/components/HeroTrustBadge'
 
 export const metadata: Metadata = {
     title: 'Clinical Pilates in Mumbai | Spine & Core Rehab at R3BOOT Dadar',
@@ -30,7 +31,7 @@ export default function ClinicalPilatesPage() {
         <main className="min-h-screen bg-white dark:bg-[#0A0A0A]">
 
             {/* ─── HERO ─── */}
-            <section className="relative h-[70vh] flex items-end overflow-hidden">
+            <section className="relative min-h-[85vh] md:min-h-[92vh] flex flex-col overflow-hidden">
                 <Image
                     src="https://res.cloudinary.com/dj7bot2uc/image/upload/v1777793706/Clinical_Pillates_Image_2_jc05pa.png"
                     alt="Clinical Pilates Mumbai – R3BOOT Physiotherapist-Led Pilates Dadar"
@@ -38,9 +39,9 @@ export default function ClinicalPilatesPage() {
                     className="object-cover"
                     priority
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-black/20" />
 
-                <div className="container mx-auto px-6 lg:px-8 relative z-10 pb-20">
+                <div className="container mx-auto px-6 lg:px-8 relative z-10 flex-1 flex flex-col justify-end pb-6 pt-28">
                     <Link href="/services" className="inline-flex items-center gap-2 text-white/70 hover:text-white transition-all mb-8 group">
                         <div className="w-8 h-8 rounded-full border border-white/30 flex items-center justify-center group-hover:bg-white group-hover:text-[#513394] transition-all">
                             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -59,7 +60,7 @@ export default function ClinicalPilatesPage() {
                         <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-2 uppercase tracking-tighter leading-[0.9]">
                             Clinical Pilates
                         </h1>
-                        <p className="text-2xl md:text-4xl font-black text-[#8B5CF6] mb-8 italic tracking-tight">
+                        <p className="text-2xl md:text-4xl font-black text-[#8B5CF6] mb-6 italic tracking-tight">
                             Movement Prescribed. Not Performed.
                         </p>
                         <p className="text-xl md:text-2xl text-white/80 max-w-2xl leading-relaxed font-medium">
@@ -67,6 +68,8 @@ export default function ClinicalPilatesPage() {
                         </p>
                     </div>
                 </div>
+
+                <HeroTrustBadge items={serviceTrustBadges['clinical-pilates']} className="px-6 lg:px-8" />
             </section>
 
             {/* ─── CORE DETAILS ─── */}
