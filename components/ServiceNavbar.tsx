@@ -189,9 +189,9 @@ export default function ServiceNavbar({
             <Image
               src="/images/REBOOT FINAL LOGO_1.png"
               alt="R3BOOT"
-              width={110}
-              height={36}
-              className="h-9 w-auto"
+              width={150}
+              height={49}
+              className="h-12 w-auto"
             />
             <button
               onClick={() => setIsMobileMenuOpen(false)}

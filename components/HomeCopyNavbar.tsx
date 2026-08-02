@@ -82,11 +82,11 @@ export default function HomeCopyNavbar() {
             )}
             <a href="tel:+919702368612">
               <button
-                className="flex items-center gap-2 text-white font-semibold px-7 py-3.5 text-[17px] rounded-full transition-all hover:opacity-90"
+                className="flex items-center gap-1 sm:gap-2 whitespace-nowrap text-white font-semibold px-3.5 py-2 text-[12px] sm:px-7 sm:py-3.5 sm:text-[17px] rounded-full transition-all hover:opacity-90"
                 style={{ backgroundColor: '#513394' }}
               >
                 Book Now
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                <svg className="hidden sm:block w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </button>
@@ -103,9 +103,9 @@ export default function HomeCopyNavbar() {
               <Image
                 src="/images/r3boot-logo-mobile-menu.png"
                 alt="R3BOOT Logo"
-                width={110}
-                height={36}
-                className="h-9 w-auto brightness-0 invert"
+                width={150}
+                height={49}
+                className="h-12 w-auto"
               />
             </Link>
             <button

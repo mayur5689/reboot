@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import localFont from 'next/font/local'
+import { Plus_Jakarta_Sans } from 'next/font/google'
 import Script from 'next/script'
 import './globals.css'
 import { ThemeProvider } from '@/components/ThemeProvider'
@@ -9,35 +9,11 @@ import BusinessSchema from '@/components/schema/BusinessSchema'
 const gaId = process.env.NEXT_PUBLIC_GA_ID
 const gtmId = process.env.NEXT_PUBLIC_GTM_ID ?? 'GTM-PQ4GT4DX'
 
-const branding = localFont({
-  src: [
-    {
-      path: '../public/fonts/fonnts.com-Branding-Light.otf',
-      weight: '300',
-      style: 'normal',
-    },
-    {
-      path: '../public/fonts/fonnts.com-Branding-Medium.otf',
-      weight: '400',
-      style: 'normal',
-    },
-    {
-      path: '../public/fonts/fonnts.com-Branding-Semibold.otf',
-      weight: '600',
-      style: 'normal',
-    },
-    {
-      path: '../public/fonts/fonnts.com-Branding-Bold.otf',
-      weight: '700',
-      style: 'normal',
-    },
-    {
-      path: '../public/fonts/fonnts.com-Branding-Black.otf',
-      weight: '900',
-      style: 'normal',
-    },
-  ],
+const branding = Plus_Jakarta_Sans({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700', '800'],
   variable: '--font-branding',
+  display: 'swap',
 })
 
 export const metadata: Metadata = {

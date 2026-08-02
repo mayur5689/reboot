@@ -156,7 +156,7 @@ const TeamCarousel: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: '0px 0px -15% 0px' }}
             className="inline-flex items-center justify-center gap-3 text-[#513394] dark:text-[#A78BFA] mb-4"
           >
             <div className="w-1.5 h-1.5 rounded-full bg-[#513394] dark:bg-[#A78BFA]" />
@@ -166,7 +166,7 @@ const TeamCarousel: React.FC = () => {
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: '0px 0px -15% 0px' }}
             transition={{ delay: 0.1 }}
             className="text-3xl sm:text-4xl md:text-6xl font-black text-[#1A1A1A] dark:text-white tracking-tight leading-[1.1]"
           >

@@ -20,7 +20,11 @@ export default function StudioLayoutWrapper({
     const isStudio = pathname?.startsWith('/studio');
     const isServiceLanding =
         pathname?.startsWith('/services-demo/') ||
-        pathname === '/l4-l5-disc-bulge-mumbai';
+        pathname === '/l4-l5-disc-bulge-mumbai' ||
+        pathname === '/contrast-therapy-mumbai' ||
+        pathname === '/services/aqua-therapy' ||
+        pathname === '/services/sports-massage' ||
+        pathname === '/aqua-therapy-mumbai';
 
     if (isStudio) {
         return <>{children}</>;
