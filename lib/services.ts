@@ -198,4 +198,27 @@ export const services: Service[] = [
         image: "/images/hero/r3boot-counselling.png",
         slug: "sports-psychology"
     },
+    {
+        title: "Athlete Screening",
+        tagline: "Know Your Body. Own Your Game.",
+        category: "ASSESSMENT",
+        description: "A full-body, evidence-based screening that maps your injury risk and performance ceiling before either one catches you off guard.",
+        fullDescription: "Athlete Screening at R3BOOT is a structured, evidence-based assessment that reads your body the way a coach reads game film. We take your sports history, injury history, and goals, then run you through a full musculoskeletal exam, gait analysis, special tests, and a coordination battery. You walk out with a clear performance report and a plan: what to fix before it becomes an injury, and what to load before it becomes a limiter.",
+        benefits: [
+            "Full injury risk profile before it becomes an injury",
+            "Gait analysis, mobility, and stability mapped in one session",
+            "Personalised Recovery & Performance Plan",
+            "Sport-specific evaluation, not a generic checklist",
+            "Baseline benchmarks to track progress over time",
+            "Direct line into R3BOOT's recovery and training programs"
+        ],
+        process: [
+            { title: "History & Goals", description: "Sports background, training load, injury history, and where you want to be." },
+            { title: "MSK & Movement Exam", description: "Range of motion, flexibility, and gait analysed joint by joint." },
+            { title: "Special Tests", description: "Balance, strength, and sport-specific tests that expose what you can't feel yet." },
+            { title: "Risk Summary & Plan", description: "A clinician-built report on your risk factors, with a program to close the gaps." }
+        ],
+        image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&q=80&w=800",
+        slug: "athlete-screening"
+    },
 ];
