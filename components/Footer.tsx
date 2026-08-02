@@ -73,8 +73,7 @@ const Footer: React.FC = () => {
                 <li><Link href="/contrast-therapy-lower-parel" className="hover:text-[#A78BFA] transition-colors">Contrast Therapy Lower Parel</Link></li>
                 <li><Link href="/contrast-therapy-andheri" className="hover:text-[#A78BFA] transition-colors">Contrast Therapy Andheri</Link></li>
                 <li><Link href="/contrast-therapy-worli" className="hover:text-[#A78BFA] transition-colors">Contrast Therapy Worli</Link></li>
-                <li><Link href="/services/sports-psychology" className="hover:text-[#A78BFA] transition-colors">Sports Psychology</Link></li>
-                <li><Link href="/services/counselling-mental-training" className="hover:text-[#A78BFA] transition-colors">Counselling & Mental Training</Link></li>
+                <li><Link href="/services/sports-psychology" className="hover:text-[#A78BFA] transition-colors">Sports Psychology & Counselling</Link></li>
               </ul>
             </div>
 

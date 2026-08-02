@@ -135,29 +135,6 @@ export const services: Service[] = [
         slug: "contrast-therapy"
     },
     {
-        title: "Counselling & Mental Training",
-        tagline: "Stronger Mind, Better You",
-        category: "MENTAL",
-        description: "Sports performance is not driven by physical strength alone. Our Sports Counselling and Mental Training program is designed to help athletes manage pressure and perform at their best.",
-        fullDescription: "Our integrated approach ensures close coordination between sports physiotherapy, rehabilitation, and mental training. This holistic model supports faster recovery, improved adherence to rehab programs, and a smoother transition from injury to full performance. Athletes learn not only how to heal their bodies, but also how to trust them again.",
-        benefits: [
-            "Performance enhancement",
-            "Injury and rehabilitation support",
-            "Behaviour and habit building",
-            "Mind body connection",
-            "Emotional resilience"
-        ],
-        process: [
-            { title: "Goal setting and mindset alignment", description: "Defining objectives and aligning your mental state with recovery." },
-            { title: "Stimulation and practice", description: "Applying mental techniques in various scenarios." },
-            { title: "Performance Evaluation", description: "Assessing the effectiveness of mental strategies." },
-            { title: "Integration with physical rehabilitation", description: "Coordinating mental work with physical recovery protocols." },
-            { title: "Progress review and ongoing support", description: "Continuous monitoring and adjustment of the program." }
-        ],
-        image: "https://res.cloudinary.com/dj7bot2uc/image/upload/v1785287448/Councelling_de3x4o.webp",
-        slug: "counselling-mental-training"
-    },
-    {
         title: "Aqua Therapy",
         category: "THERAPY",
         description: "Recovery through the therapeutic power of water.",
@@ -200,24 +177,25 @@ export const services: Service[] = [
         slug: "sports-massage"
     },
     {
-        title: "Sports Psychology",
+        title: "Sports Psychology & Counselling",
+        tagline: "Stronger Mind, Better Performance",
         category: "MENTAL",
-        description: "Sports performance is not driven by physical strength alone. Our Sports Psychology program is designed to help athletes manage pressure and perform at their best.",
-        fullDescription: "Sports psychology focuses on the mental aspects of athletic performance. Our expert psychologists help you develop mental resilience, focus, and confidence to perform at your best when it matters most. Overcome performance anxiety, build winning habits, and unlock your full potential.",
+        description: "Integrated sports psychology and counselling for pressure, focus, injury psychology, and mental training — one service for athletes and high performers.",
+        fullDescription: "Sports performance is not physical alone. At R3BOOT, sports psychology and counselling run as one mental performance service. Build focus, composure, and competition routines while also addressing injury anxiety, burnout, motivation, and learning to trust your body again — coordinated with physiotherapy when rehab is involved.",
         benefits: [
-            "Enhanced mental focus",
+            "Enhanced mental focus under pressure",
             "Performance anxiety management",
-            "Goal setting strategies",
-            "Confidence building",
-            "Mental resilience training"
+            "Injury psychology & return-to-sport trust",
+            "Confidence and habit building",
+            "Emotional resilience alongside physical rehab"
         ],
         process: [
-            { title: "Analysis", description: "Identifying mental blocks and performance triggers." },
-            { title: "Strategy", description: "Developing mental tools like imagery and self-talk." },
-            { title: "Practice", description: "Applying mental strategies during training sessions." },
-            { title: "Competition", description: "Executing mental skills under high-pressure scenarios." }
+            { title: "Assessment & goal setting", description: "Identifying mental blocks, emotional load, and performance triggers." },
+            { title: "Skill building & practice", description: "Imagery, focus, self-talk, and emotional regulation practised for real scenarios." },
+            { title: "Integration with training / rehab", description: "Carrying tools into practice, competition, or physiotherapy." },
+            { title: "Review & refine", description: "Tracking composure and confidence as pressure or return-to-sport increases." }
         ],
-        image: "/images/service/Services_image/Sports_Pyscology.webp",
+        image: "/images/hero/r3boot-counselling.png",
         slug: "sports-psychology"
     },
 ];

@@ -15,7 +15,12 @@ const nextConfig = {
             },
             {
                 source: '/services/counselling-%26-mental-training',
-                destination: '/services/counselling-mental-training',
+                destination: '/services/sports-psychology',
+                permanent: true,
+            },
+            {
+                source: '/services/counselling-mental-training',
+                destination: '/services/sports-psychology',
                 permanent: true,
             },
             {

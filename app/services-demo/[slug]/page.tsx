@@ -13,7 +13,7 @@ const FOR_YOU_IF: Record<string, string[]> = {
   'counselling-mental-training': ['Pre-competition nerves', 'Returning from injury', 'Performance plateau', 'Motivation loss', 'Want a mental edge'],
   'aqua-therapy': ['Knee or hip pain', 'Cannot do high-impact exercise', 'Arthritis or joint stiffness', 'Post-surgery recovery', 'Elderly or sedentary'],
   'sports-massage': ['Tight muscles after training', 'Upcoming race or event', 'Poor flexibility', 'Recurring muscle knots', 'Training every day'],
-  'sports-psychology': ['Choking under pressure', 'Fear of failure', 'Returning from injury mentally', 'Pre-competition anxiety', 'Want elite mindset'],
+  'sports-psychology': ['Choking under pressure', 'Fear of failure', 'Returning from injury mentally', 'Pre-competition anxiety', 'Burnout or motivation loss', 'Want elite mindset'],
 }
 
 const SESSION_META: Record<string, { duration: string; sessions: string }> = {
@@ -70,10 +70,10 @@ const FAQS: Record<string, { q: string; a: string }[]> = {
     { q: 'What is the difference between this and sports psychology?', a: 'Counselling addresses emotional challenges like injury anxiety and burnout. Sports psychology focuses on performance skills like focus and mental routines. Both are available at R3BOOT.' },
   ],
   'sports-psychology': [
-    { q: 'What does a session look like?', a: 'Structured conversation, mental skills training (visualisation, focus techniques, self-talk), and goal-setting work. Practical and performance-focused - not traditional therapy.' },
+    { q: 'What is covered under this service?', a: 'Sports psychology and counselling are combined into one mental performance service — focus and competition skills plus emotional support for injury anxiety, burnout, and motivation.' },
+    { q: 'What does a session look like?', a: 'Structured conversation, mental skills training (visualisation, focus techniques, self-talk), and goal-setting work. Practical and performance-focused - not traditional open-ended therapy.' },
     { q: 'Can this help with performance anxiety?', a: 'Yes. Managing competition anxiety is one of the core areas. Most athletes see measurable improvement in composure and consistency within 4 - 6 sessions.' },
-    { q: 'Do I need to be struggling to book?', a: 'No. Many elite athletes use sports psychology proactively to stay at their best, not just when something is wrong.' },
-    { q: 'How is this different from regular therapy?', a: 'Sports psychology is performance-focused and future-oriented. It uses evidence-based techniques validated for athletic and high-performance contexts.' },
+    { q: 'Can this run alongside physiotherapy?', a: 'Yes. Mental sessions are often coordinated with rehab so you rebuild trust in your body while physical recovery continues.' },
     { q: 'Is this available for youth athletes?', a: 'Yes. Mental skills training is particularly valuable for young athletes navigating competitive pressure, identity, and performance expectations.' },
   ],
 }

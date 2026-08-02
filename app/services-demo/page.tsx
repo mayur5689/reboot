@@ -12,8 +12,8 @@ const PROBLEMS = [
   { id: 'injury', label: 'Sports Injury', slugs: ['physiotherapy', 'sports-massage', 'contrast-therapy', 'aqua-therapy'] },
   { id: 'surgery', label: 'Post Surgery', slugs: ['physiotherapy', 'aqua-therapy', 'clinical-pilates'] },
   { id: 'recovery', label: 'Muscle Recovery', slugs: ['contrast-therapy', 'sports-massage', 'aqua-therapy'] },
-  { id: 'performance', label: 'Peak Performance', slugs: ['clinical-pilates', 'sports-psychology', 'counselling-mental-training'] },
-  { id: 'mental', label: 'Mental Strength', slugs: ['counselling-mental-training', 'sports-psychology'] },
+  { id: 'performance', label: 'Peak Performance', slugs: ['clinical-pilates', 'sports-psychology'] },
+  { id: 'mental', label: 'Mental Strength', slugs: ['sports-psychology'] },
 ]
 
 // ─── Per-service metadata not in services.ts ─────────────────────────────────
@@ -22,17 +22,16 @@ const META: Record<string, { duration: string; forWho: string; popular?: boolean
   'physiotherapy':             { duration: '45 - 60 min', forWho: 'Injuries · Pain · Rehab', popular: true },
   'clinical-pilates':          { duration: '45 - 60 min', forWho: 'Core · Posture · Strength' },
   'contrast-therapy':          { duration: '60 - 90 min', forWho: 'Athletes · Deep Recovery', popular: true },
-  'counselling-mental-training': { duration: '50 min',    forWho: 'Athletes · Performers' },
   'aqua-therapy':              { duration: '45 min',      forWho: 'Joint Pain · Low Impact' },
   'sports-massage':            { duration: '45 - 60 min', forWho: 'Muscle Tension · Athletes' },
-  'sports-psychology':         { duration: '50 min',      forWho: 'Performance Anxiety · Focus' },
+  'sports-psychology':         { duration: '50 min',      forWho: 'Performance · Counselling' },
 }
 
 // ─── Stats ────────────────────────────────────────────────────────────────────
 
 const STATS = [
   { value: '50,000+', label: 'Recoveries' },
-  { value: '7',       label: 'Therapies' },
+  { value: '6',       label: 'Therapies' },
   { value: '5★',      label: 'Google Rating' },
   { value: '7 Days',  label: 'Open Every Week' },
 ]
