@@ -25,6 +25,10 @@ export default function StudioLayoutWrapper({
         pathname === '/services/aqua-therapy' ||
         pathname === '/services/sports-massage' ||
         pathname === '/services/clinical-pilates' ||
+        pathname === '/services/athlete-screening' ||
+        pathname === '/services/sports-psychology' ||
+        pathname === '/services/physiotherapy' ||
+        pathname === '/athlete-screening-mumbai' ||
         pathname === '/aqua-therapy-mumbai';
 
     if (isStudio) {
