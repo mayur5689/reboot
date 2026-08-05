@@ -10,6 +10,38 @@ import Link from "next/link";
 export default function AboutPage() {
     const content = (
         <main className="min-h-screen bg-white dark:bg-[#0A0A0A]">
+            {/* Hero Banner: Team Image */}
+            <section className="pt-20 lg:pt-24 w-full">
+                <div className="relative h-[55vh] md:h-[70vh] w-full overflow-hidden">
+                    <Image
+                        src="https://res.cloudinary.com/dj7bot2uc/image/upload/v1785932777/r3boot_team_image_harc8w.webp"
+                        alt="The R3BOOT Team"
+                        fill
+                        priority
+                        className="object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/10" />
+                    <div className="absolute inset-0 flex items-center">
+                        <div className="container mx-auto px-6 lg:px-8">
+                            <motion.div
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.6 }}
+                                className="max-w-2xl space-y-4"
+                            >
+                                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white font-semibold text-sm">
+                                    <span className="w-2 h-2 rounded-full bg-[#8B5CF6] animate-pulse" />
+                                    About R3BOOT
+                                </div>
+                                <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.05]">
+                                    Meet the team behind your recovery.
+                                </h1>
+                            </motion.div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             {/* Section 1: Hero / Introduction */}
             <section className="min-h-[90vh] flex items-center pt-24 pb-12 lg:pt-32 lg:pb-16">
                 <div className="container mx-auto px-6 lg:px-8">
@@ -307,11 +339,11 @@ export default function AboutPage() {
                             className="space-y-10 order-1 lg:order-2"
                         >
                             <div className="space-y-6">
-                                <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white leading-tight italic">
-                                    &ldquo;Active recovery is not an option. It&rsquo;s a <span className="text-[#513394]">discipline.</span>&rdquo;
+                                <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white leading-tight">
+                                    Recovery is not an afterthought. It&rsquo;s a <span className="text-[#513394]">discipline.</span>
                                 </h2>
                                 <p className="text-xl text-gray-600 dark:text-gray-400 leading-relaxed">
-                                    We provide an integrated suite of modalities designed to optimize your central nervous system, reduce inflammation, and restore structural integrity.
+                                    Every modality here is chosen for a reason: to calm your nervous system, cut inflammation, and rebuild structural integrity, one session at a time.
                                 </p>
                             </div>
 
@@ -366,7 +398,7 @@ export default function AboutPage() {
                                 transition={{ delay: 0.2 }}
                                 className="text-xl md:text-2xl text-white/50 leading-relaxed font-light max-w-3xl mx-auto"
                             >
-                                Your safety is our benchmark. Every R3BOOT program is designed based on professional clinical assessments, evidence-based judgment, and individual physiology.
+                                No guesswork. Every R3BOOT program runs on clinical assessment, evidence-based judgment, and a plan built around your physiology, not a template.
                             </motion.p>
                         </div>
 
@@ -384,7 +416,7 @@ export default function AboutPage() {
                                     <div className="w-16 h-16 rounded-2xl bg-[#513394]/20 flex items-center justify-center mb-8 group-hover:bg-[#513394]/40 transition-colors">
                                         {stat.icon}
                                     </div>
-                                    <h4 className="font-black text-5xl mb-3 italic tracking-tighter">{stat.title}</h4>
+                                    <h4 className="font-black text-5xl mb-3 tracking-tighter">{stat.title}</h4>
                                     <p className="text-xs uppercase tracking-[0.3em] opacity-40 font-bold">{stat.sub}</p>
                                 </motion.div>
                             ))}
@@ -398,7 +430,7 @@ export default function AboutPage() {
                 <div className="container mx-auto px-6 lg:px-8">
                     <div className="max-w-3xl mx-auto text-center space-y-4">
                         <p className="text-[10px] uppercase tracking-[0.2em] font-bold text-gray-400 dark:text-gray-500">Medical Disclaimer</p>
-                        <p className="text-xs text-gray-500 dark:text-gray-400 leading-relaxed italic">
+                        <p className="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">
                             R3BOOT services are not a substitute for medical diagnosis, emergency treatment, or hospital care.
                             Participating in physical and recovery-based services involves inherent risks.
                             Consult with our professionals for personalized assessments.
