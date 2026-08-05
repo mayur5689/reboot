@@ -13,7 +13,6 @@ interface NavLink {
 interface ServiceNavbarProps {
   phoneNumber?: string
   phoneDisplay?: string
-  bookingHref?: string
   navLinks?: NavLink[]
   /** Top promo ribbon — e.g. Free consultation + Call now */
   showPromoRibbon?: boolean
@@ -30,7 +29,6 @@ const DEFAULT_NAV_LINKS: NavLink[] = [
 export default function ServiceNavbar({
   phoneNumber = '919702368612',
   phoneDisplay = '+91 97023 68612',
-  bookingHref = '/contact',
   navLinks = DEFAULT_NAV_LINKS,
   showPromoRibbon = false,
 }: ServiceNavbarProps) {
@@ -158,12 +156,14 @@ export default function ServiceNavbar({
                 <PhoneIcon className="w-4 h-4" />
                 {phoneDisplay}
               </a>
-              <Link
-                href={bookingHref}
+              <a
+                href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent('Hi R3BOOT, I want to book a session.')}`}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-[#513394] hover:bg-[#412975] text-white text-[14px] font-semibold px-6 py-2.5 rounded-full transition-all duration-200 hover:scale-105 active:scale-95 shadow-lg shadow-[#513394]/25"
               >
                 Book Now
-              </Link>
+              </a>
             </div>
 
             {/* Mobile hamburger */}
