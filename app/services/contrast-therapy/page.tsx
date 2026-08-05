@@ -6,6 +6,7 @@ import ServiceSchema from '@/components/schema/ServiceSchema'
 import FAQSchema from '@/components/schema/FAQSchema'
 import { FAQSection } from '@/components/faq-section'
 import { contrastTherapyMumbaiFaqs } from '@/lib/faqs/contrast-therapy-mumbai'
+import ServiceNavbar from '@/components/ServiceNavbar'
 
 export const metadata: Metadata = {
     title: 'Contrast Therapy in Mumbai | R3BOOT Dadar – Sauna & Ice Bath',
@@ -19,6 +20,7 @@ const otherServices = services.filter(s => s.slug !== 'contrast-therapy').slice(
 export default function ContrastTherapyPage() {
     return (
         <main className="min-h-screen bg-white dark:bg-[#0A0A0A]">
+            <ServiceNavbar />
 
             {/* ─── HERO ─── */}
             <section className="relative h-[70vh] flex items-end overflow-hidden">

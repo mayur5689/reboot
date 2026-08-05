@@ -134,14 +134,6 @@ const testimonials = [
   },
 ]
 
-const navLinks = [
-  { label: 'Signs', href: '#signs', isScroll: true },
-  { label: 'Methodology', href: '#methodology', isScroll: true },
-  { label: 'Your Session', href: '#session', isScroll: true },
-  { label: 'About Us', href: '/about' },
-  { label: 'Contact', href: '/contact' },
-]
-
 function PhoneIcon({ className }: { className?: string }) {
   return (
     <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
@@ -153,7 +145,7 @@ function PhoneIcon({ className }: { className?: string }) {
 export default function SportsPsychologyPage() {
   return (
     <main className="psych-page min-h-screen bg-white dark:bg-[#0A0A0A]">
-      <ServiceNavbar navLinks={navLinks} />
+      <ServiceNavbar />
 
       {/* ─── DESKTOP HERO ─── */}
       <section className="hidden md:flex relative flex-col bg-black overflow-hidden" style={{ minHeight: '92vh' }}>
@@ -280,8 +272,8 @@ export default function SportsPsychologyPage() {
               {
                 icon: Activity,
                 number: '03',
-                title: 'Integration with Training / Rehab',
-                body: 'Carry tools into practice, competition, or physiotherapy. Where useful, the mental plan is coordinated with your physical recovery team.',
+                title: 'Integration with Training & Recovery',
+                body: 'Carry tools into practice, competition, physiotherapy, or recovery work. Where useful, the mental plan is coordinated with your physical recovery team.',
               },
               {
                 icon: TrendingUp,

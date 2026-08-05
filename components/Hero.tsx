@@ -212,7 +212,7 @@ export default function Hero() {
 
           <motion.p
             variants={fadeUp}
-            className="text-lg sm:text-xl text-white/80 leading-relaxed max-w-lg"
+            className="hidden sm:block text-lg sm:text-xl text-white/80 leading-relaxed max-w-lg"
           >
             Physiotherapy, contrast therapy, and performance coaching, delivered by clinicians who treat recovery as a science, not an afterthought.
           </motion.p>

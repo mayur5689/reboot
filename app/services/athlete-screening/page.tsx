@@ -26,14 +26,6 @@ export const metadata: Metadata = {
 
 const otherServices = services.filter(s => s.slug !== 'athlete-screening').slice(0, 4)
 
-const navLinks = [
-    { label: 'Signs', href: '#signs', isScroll: true },
-    { label: 'Methodology', href: '#methodology', isScroll: true },
-    { label: 'Your Session', href: '#session', isScroll: true },
-    { label: 'About Us', href: '/about' },
-    { label: 'Contact', href: '/contact' },
-]
-
 const heroSlides = [
     {
         src: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1785859437/Hero_image_fsjnt8.webp',
@@ -113,7 +105,7 @@ export default function AthleteScreeningPage() {
     return (
         <main className="min-h-screen bg-white dark:bg-[#0A0A0A]">
 
-            <ServiceNavbar navLinks={navLinks} />
+            <ServiceNavbar />
 
             {/* ─────────────────────────────────────────────
                 DESKTOP HERO (md+): full-bleed bg image, text overlaid left

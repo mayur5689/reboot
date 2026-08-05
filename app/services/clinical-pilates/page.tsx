@@ -93,14 +93,6 @@ const testimonials = [
     },
 ]
 
-const navLinks = [
-    { label: 'Signs', href: '#signs', isScroll: true },
-    { label: 'Methodology', href: '#methodology', isScroll: true },
-    { label: 'Your Session', href: '#session', isScroll: true },
-    { label: 'About Us', href: '/about' },
-    { label: 'Contact', href: '/contact' },
-]
-
 function PhoneIcon({ className }: { className?: string }) {
     return (
         <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
@@ -113,7 +105,7 @@ export default function ClinicalPilatesPage() {
     return (
         <main className="min-h-screen bg-white dark:bg-[#0A0A0A]">
 
-            <ServiceNavbar navLinks={navLinks} />
+            <ServiceNavbar />
 
             {/* ─────────────────────────────────────────────
                 DESKTOP HERO (md+): full-bleed bg image, text overlaid left
