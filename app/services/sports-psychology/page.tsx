@@ -174,12 +174,11 @@ export default function SportsPsychologyPage() {
 
         <div className="relative z-10 flex flex-1 flex-col justify-center px-12 lg:px-16 xl:px-20 pt-28 max-w-[54%]">
           <p className="text-[#A78BFA] text-[11px] font-black tracking-[0.25em] uppercase mb-4">
-            Performance Skills&nbsp;&nbsp;•&nbsp;&nbsp;Counselling&nbsp;&nbsp;•&nbsp;&nbsp;Confidential
+            Sports Psychology&nbsp;&nbsp;•&nbsp;&nbsp;Counselling&nbsp;&nbsp;•&nbsp;&nbsp;Corporate Training
           </p>
 
           <h1 className="text-5xl lg:text-6xl xl:text-[4.25rem] font-black text-white tracking-tight leading-[1.04] mb-4">
-            Sports Psychology<br />
-            &amp; Counselling in <span className="text-[#A78BFA]">Mumbai</span>
+            Mental Training in <span className="text-[#A78BFA]">Mumbai</span>
           </h1>
 
           <p className="text-[16px] text-white/55 max-w-md leading-relaxed mb-7">
@@ -220,12 +219,12 @@ export default function SportsPsychologyPage() {
           <div className="inline-flex items-center gap-2 bg-[#513394]/10 dark:bg-[#513394]/20 rounded-full px-4 py-2 mt-5 mb-4">
             <div className="w-1.5 h-1.5 rounded-full bg-[#513394] dark:bg-[#A78BFA]" />
             <span className="text-[#513394] dark:text-[#A78BFA] text-[11px] font-black tracking-[0.3em] uppercase">
-              Mental Performance
+              Mental Training
             </span>
           </div>
 
           <h1 className="text-[2rem] font-black text-gray-900 dark:text-white tracking-tight leading-[1.1] mb-3">
-            Sports Psychology &amp; Counselling in{' '}
+            Mental Training in{' '}
             <span className="text-[#513394] dark:text-[#A78BFA]">Mumbai</span>
           </h1>
 
