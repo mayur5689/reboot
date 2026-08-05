@@ -39,7 +39,9 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className={`flex items-center transition-all duration-300 ${shouldBeSolid ? 'py-1.5' : 'py-3'}`}>
             <Image
-              src="/images/REBOOT FINAL LOGO_1.png"
+              src={shouldBeSolid && theme === 'light'
+                ? 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1785934037/R3BOOT_WHITE_LOGO_g4qgbl.svg'
+                : '/images/REBOOT FINAL LOGO_1.png'}
               alt="R3BOOT Logo"
               width={160}
               height={50}
@@ -86,34 +88,10 @@ export default function Navbar() {
                               {getServiceIcon(service.title)}
                             </div>
                             <div className="pt-1 flex-1">
-                              <div className="flex items-center gap-2">
-                                <h4 className="text-[15px] font-bold text-gray-900 dark:text-white mb-1 group-hover:text-[#513394] dark:group-hover:text-[#A78BFA] transition-colors">{service.title}</h4>
-                                {service.subServices && service.subServices.length > 0 && (
-                                  <ChevronDownIcon className="w-3 h-3 text-gray-400 -rotate-90 group-hover/service:rotate-0 transition-transform duration-300" />
-                                )}
-                              </div>
+                              <h4 className="text-[15px] font-bold text-gray-900 dark:text-white mb-1 group-hover:text-[#513394] dark:group-hover:text-[#A78BFA] transition-colors">{service.title}</h4>
                               <p className="text-[11px] text-gray-500 dark:text-gray-400 leading-tight line-clamp-2">{service.description}</p>
                             </div>
                           </Link>
-
-                          {/* Sub-services dropdown for Physiotherapy */}
-                          {service.subServices && service.subServices.length > 0 && (
-                            <div className="hidden group-hover/service:block absolute left-full top-0 ml-2 w-72 bg-white dark:bg-[#1A1A1A] rounded-2xl shadow-2xl border border-gray-100 dark:border-white/10 p-3 z-50 animate-in fade-in slide-in-from-left-2 duration-200">
-                              <div className="text-[10px] font-bold text-[#513394] dark:text-[#A78BFA] uppercase tracking-widest mb-2 px-3">Specializations</div>
-                              <div className="space-y-1 max-h-[320px] overflow-y-auto">
-                                {service.subServices.map((sub, subIdx) => (
-                                  <Link
-                                    key={subIdx}
-                                    href={`/services/${service.slug}#${sub.slug}`}
-                                    className="block px-3 py-2 rounded-xl hover:bg-[#513394]/10 dark:hover:bg-white/5 transition-all group/sub"
-                                  >
-                                    <h5 className="text-[13px] font-semibold text-gray-800 dark:text-white group-hover/sub:text-[#513394] dark:group-hover/sub:text-[#A78BFA] transition-colors">{sub.title}</h5>
-                                    <p className="text-[10px] text-gray-500 dark:text-gray-400 leading-snug mt-0.5">{sub.description}</p>
-                                  </Link>
-                                ))}
-                              </div>
-                            </div>
-                          )}
                         </div>
                       ))}
                     </div>
@@ -189,7 +167,7 @@ export default function Navbar() {
           <div className="flex items-center justify-between px-6 py-5">
             <Link href="/" onClick={() => setIsMobileMenuOpen(false)}>
               <Image
-                src="/images/REBOOT FINAL LOGO_1.png"
+                src="https://res.cloudinary.com/dj7bot2uc/image/upload/v1785934037/R3BOOT_WHITE_LOGO_g4qgbl.svg"
                 alt="R3BOOT Logo"
                 width={150}
                 height={49}

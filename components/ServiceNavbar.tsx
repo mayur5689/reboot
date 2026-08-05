@@ -145,7 +145,7 @@ export default function ServiceNavbar({
             </Link>
 
             {/* Center nav links — desktop */}
-            <div className="hidden lg:flex items-center gap-9">
+            <div className="hidden lg:flex items-center gap-9 lg:translate-x-3">
               {navLinks.map((link) =>
                 link.href === '/services' ? (
                   <div
@@ -198,15 +198,6 @@ export default function ServiceNavbar({
 
             {/* Right — theme toggle + phone + CTA */}
             <div className="hidden lg:flex items-center gap-7">
-              {mounted && (
-                <button
-                  onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-                  className="p-2 rounded-full text-white/70 hover:text-white hover:bg-white/10 transition-all duration-200"
-                  aria-label="Toggle Theme"
-                >
-                  {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
-                </button>
-              )}
               <a
                 href={`tel:+${phoneNumber}`}
                 className="flex items-center gap-2 text-white/70 hover:text-white text-[14px] font-medium transition-colors duration-200"
@@ -222,6 +213,15 @@ export default function ServiceNavbar({
               >
                 Book Now
               </a>
+              {mounted && (
+                <button
+                  onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+                  className="p-2 rounded-full text-white/70 hover:text-white hover:bg-white/10 transition-all duration-200"
+                  aria-label="Toggle Theme"
+                >
+                  {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+                </button>
+              )}
             </div>
 
             {/* Mobile: theme toggle + hamburger */}
