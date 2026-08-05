@@ -1,8 +1,11 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useTheme } from 'next-themes'
+import { Sun, Moon, ChevronDown } from 'lucide-react'
+import { services } from '@/lib/services'
 
 interface NavLink {
   label: string
@@ -19,9 +22,9 @@ interface ServiceNavbarProps {
 }
 
 const DEFAULT_NAV_LINKS: NavLink[] = [
-  { label: 'Services', href: '#services', isScroll: true },
-  { label: 'Benefits', href: '#benefits', isScroll: true },
-  { label: 'Protocol', href: '#protocol', isScroll: true },
+  { label: 'Home', href: '/' },
+  { label: 'Services', href: '/services' },
+  { label: 'Blog', href: '/blog' },
   { label: 'About Us', href: '/about' },
   { label: 'Contact', href: '/contact' },
 ]
@@ -33,6 +36,14 @@ export default function ServiceNavbar({
   showPromoRibbon = false,
 }: ServiceNavbarProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isServicesOpen, setIsServicesOpen] = useState(false)
+  const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false)
+  const { theme, setTheme } = useTheme()
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string, isScroll?: boolean) => {
     if (!isScroll) return
@@ -135,20 +146,67 @@ export default function ServiceNavbar({
 
             {/* Center nav links — desktop */}
             <div className="hidden lg:flex items-center gap-9">
-              {navLinks.map((link) => (
-                <a
-                  key={link.label}
-                  href={link.href}
-                  onClick={(e) => handleNavClick(e, link.href, link.isScroll)}
-                  className="text-white/70 hover:text-white text-[15px] font-medium tracking-wide transition-colors duration-200 cursor-pointer"
-                >
-                  {link.label}
-                </a>
-              ))}
+              {navLinks.map((link) =>
+                link.href === '/services' ? (
+                  <div
+                    key={link.label}
+                    className="relative h-[70px] flex items-center"
+                    onMouseEnter={() => setIsServicesOpen(true)}
+                    onMouseLeave={() => setIsServicesOpen(false)}
+                  >
+                    <Link
+                      href={link.href}
+                      className="flex items-center gap-1.5 text-white/70 hover:text-white text-[15px] font-medium tracking-wide transition-colors duration-200 cursor-pointer"
+                    >
+                      {link.label}
+                      <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${isServicesOpen ? 'rotate-180' : ''}`} />
+                    </Link>
+
+                    {isServicesOpen && (
+                      <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 w-72 animate-in fade-in slide-in-from-top-2 duration-200">
+                        <div
+                          className="rounded-2xl border border-white/10 shadow-2xl overflow-hidden p-2"
+                          style={{ background: 'rgba(12, 9, 24, 0.98)', backdropFilter: 'blur(14px)' }}
+                        >
+                          {services.map((service) => (
+                            <Link
+                              key={service.slug}
+                              href={`/services/${service.slug}`}
+                              onClick={() => setIsServicesOpen(false)}
+                              className="block px-4 py-3 rounded-xl hover:bg-white/[0.06] transition-colors group"
+                            >
+                              <p className="text-white text-[14px] font-bold group-hover:text-[#A78BFA] transition-colors">{service.title}</p>
+                              <p className="text-white/40 text-[12px] leading-snug mt-0.5 line-clamp-1">{service.description}</p>
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    onClick={(e) => handleNavClick(e, link.href, link.isScroll)}
+                    className="text-white/70 hover:text-white text-[15px] font-medium tracking-wide transition-colors duration-200 cursor-pointer"
+                  >
+                    {link.label}
+                  </a>
+                )
+              )}
             </div>
 
-            {/* Right — phone + CTA */}
+            {/* Right — theme toggle + phone + CTA */}
             <div className="hidden lg:flex items-center gap-7">
+              {mounted && (
+                <button
+                  onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+                  className="p-2 rounded-full text-white/70 hover:text-white hover:bg-white/10 transition-all duration-200"
+                  aria-label="Toggle Theme"
+                >
+                  {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+                </button>
+              )}
               <a
                 href={`tel:+${phoneNumber}`}
                 className="flex items-center gap-2 text-white/70 hover:text-white text-[14px] font-medium transition-colors duration-200"
@@ -166,14 +224,25 @@ export default function ServiceNavbar({
               </a>
             </div>
 
-            {/* Mobile hamburger */}
-            <button
-              onClick={() => setIsMobileMenuOpen(true)}
-              className="lg:hidden text-white/80 hover:text-white p-1 transition-colors"
-              aria-label="Open navigation menu"
-            >
-              <MenuIcon className="w-6 h-6" />
-            </button>
+            {/* Mobile: theme toggle + hamburger */}
+            <div className="flex lg:hidden items-center gap-1">
+              {mounted && (
+                <button
+                  onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+                  className="p-2 text-white/80 hover:text-white transition-colors"
+                  aria-label="Toggle Theme"
+                >
+                  {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+                </button>
+              )}
+              <button
+                onClick={() => setIsMobileMenuOpen(true)}
+                className="text-white/80 hover:text-white p-1 transition-colors"
+                aria-label="Open navigation menu"
+              >
+                <MenuIcon className="w-6 h-6" />
+              </button>
+            </div>
           </div>
         </nav>
       </div>
@@ -205,26 +274,63 @@ export default function ServiceNavbar({
           <div className="mx-6 h-px bg-white/[0.07]" />
 
           {/* Links */}
-          <nav className="flex-1 flex flex-col justify-center px-6">
-            {navLinks.map((link, i) => (
-              <a
-                key={link.label}
-                href={link.href}
-                onClick={(e) => {
-                  handleNavClick(e, link.href, link.isScroll)
-                  setIsMobileMenuOpen(false)
-                }}
-                className="group flex items-center gap-4 py-[18px] border-b border-white/[0.06] last:border-0"
-              >
-                <span className="text-[#513394] text-[10px] font-black tracking-widest w-5 shrink-0">
-                  0{i + 1}
-                </span>
-                <span className="text-white text-[1.75rem] font-black tracking-tight leading-none group-active:text-[#A78BFA] transition-colors duration-150">
-                  {link.label}
-                </span>
-                <ChevronRightIcon className="w-4 h-4 text-white/15 ml-auto shrink-0" />
-              </a>
-            ))}
+          <nav className="flex-1 flex flex-col justify-center px-6 overflow-y-auto py-4">
+            {navLinks.map((link, i) =>
+              link.href === '/services' ? (
+                <div key={link.label} className="border-b border-white/[0.06]">
+                  <button
+                    onClick={() => setIsMobileServicesOpen((open) => !open)}
+                    className="group flex items-center gap-4 py-[18px] w-full text-left"
+                  >
+                    <span className="text-[#513394] text-[10px] font-black tracking-widest w-5 shrink-0">
+                      0{i + 1}
+                    </span>
+                    <span className="text-white text-[1.75rem] font-black tracking-tight leading-none group-active:text-[#A78BFA] transition-colors duration-150">
+                      {link.label}
+                    </span>
+                    <ChevronRightIcon
+                      className={`w-4 h-4 text-white/15 ml-auto shrink-0 transition-transform duration-200 ${isMobileServicesOpen ? 'rotate-90' : ''}`}
+                    />
+                  </button>
+
+                  {isMobileServicesOpen && (
+                    <div className="pb-4 pl-9 flex flex-col gap-1 animate-in fade-in slide-in-from-top-1 duration-200">
+                      {services.map((service) => (
+                        <Link
+                          key={service.slug}
+                          href={`/services/${service.slug}`}
+                          onClick={() => {
+                            setIsMobileServicesOpen(false)
+                            setIsMobileMenuOpen(false)
+                          }}
+                          className="py-2.5 text-white/70 active:text-[#A78BFA] text-[15px] font-semibold transition-colors"
+                        >
+                          {service.title}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  onClick={(e) => {
+                    handleNavClick(e, link.href, link.isScroll)
+                    setIsMobileMenuOpen(false)
+                  }}
+                  className="group flex items-center gap-4 py-[18px] border-b border-white/[0.06] last:border-0"
+                >
+                  <span className="text-[#513394] text-[10px] font-black tracking-widest w-5 shrink-0">
+                    0{i + 1}
+                  </span>
+                  <span className="text-white text-[1.75rem] font-black tracking-tight leading-none group-active:text-[#A78BFA] transition-colors duration-150">
+                    {link.label}
+                  </span>
+                  <ChevronRightIcon className="w-4 h-4 text-white/15 ml-auto shrink-0" />
+                </a>
+              )
+            )}
           </nav>
 
           {/* Bottom CTA */}
