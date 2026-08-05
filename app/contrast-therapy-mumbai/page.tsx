@@ -8,7 +8,6 @@ import FAQSchema from '@/components/schema/FAQSchema'
 import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema'
 import { contrastTherapyMumbaiFaqs } from '@/lib/faqs/contrast-therapy-mumbai'
 import ServiceNavbar from '@/components/ServiceNavbar'
-import { HeroSlider } from '@/app/services-demo/contrast-therapy/HeroSlider'
 import { PainPointsSection } from '@/app/services-demo/contrast-therapy/PainPointsSection'
 import { WhyMumbaiAthletesSection } from '@/app/services-demo/contrast-therapy/WhyMumbaiAthletesSection'
 import { HowItWorksSection } from '@/app/services-demo/contrast-therapy/HowItWorksSection'
@@ -18,6 +17,7 @@ import { TeamSectionDemo } from '@/app/services-demo/contrast-therapy/TeamSectio
 import { TestimonialsCarousel } from '@/app/services-demo/contrast-therapy/TestimonialsCarousel'
 import { LocationSection } from '@/app/services-demo/contrast-therapy/LocationSection'
 import { HeroTrustBadge, serviceTrustBadges } from '@/components/HeroTrustBadge'
+import { HeroTrustCarousel } from '@/components/HeroTrustCarousel'
 
 export const metadata: Metadata = {
   title: 'Contrast Therapy Mumbai | Ice Bath & Infrared Sauna | R3BOOT',
@@ -37,45 +37,20 @@ export const metadata: Metadata = {
 
 const otherServices = services.filter((s) => s.slug !== 'contrast-therapy').slice(0, 4)
 
+const navLinks = [
+  { label: 'Recognition', href: '#services', isScroll: true },
+  { label: 'Your Session', href: '#benefits', isScroll: true },
+  { label: 'Protocol', href: '#protocol', isScroll: true },
+  { label: 'About Us', href: '/about' },
+  { label: 'Contact', href: '/contact' },
+]
+
 // ─── DATA ─────────────────────────────────────────────────────────────────────
 
-const heroSlides = [
-  {
-    src: '/images/contrast-therapy-mumbai_service_page/contrast-therapy-mumbai_Hero_section.webp',
-    alt: 'Contrast therapy session at R3BOOT Mumbai',
-  },
-  {
-    src: '/images/contrast-therapy-mumbai_service_page/contrast-therapy-mumbai_ice_bath.webp',
-    alt: 'Ice bath cold immersion at R3BOOT Mumbai',
-  },
-  {
-    src: '/images/contrast-therapy-mumbai_service_page/contrast-therapy-mumbai_sauna.webp',
-    alt: 'Infrared sauna session at R3BOOT Mumbai',
-  },
-]
-
-const rebootReachPoints = [
-  {
-    step: '01',
-    title: 'Health screening before every session',
-    body: 'Contrast therapy is not appropriate for everyone. We run a brief intake before your first session and flag any conditions that need modification or deferral. You are not just buying a cold dip.',
-  },
-  {
-    step: '02',
-    title: 'Breathing guided before the cold phase',
-    body: 'The first 60 seconds in ice-cold water is manageable when you know how to breathe through it. We teach you before you get in. No guessing, no hyperventilating.',
-  },
-  {
-    step: '03',
-    title: 'Day Cycle or Night Cycle - decided for you',
-    body: 'Day Cycle ends cold to lock in the anti-inflammatory effect and keep you energised. Night Cycle ends hot to down-regulate your nervous system and support sleep. Your physiotherapist decides based on your training schedule.',
-  },
-  {
-    step: '04',
-    title: 'Temperatures held precisely, not approximately',
-    body: 'Infrared sauna at 68°C. Ice bath at 6-10°C. These are the evidence-based ranges. We maintain them. Contrast therapy only works when temperatures are far enough apart to trigger vascular response.',
-  },
-]
+const heroImage = {
+  src: '/images/contrast-therapy-mumbai_service_page/contrast-therapy-mumbai_Hero_section.webp',
+  alt: 'Contrast therapy session at R3BOOT Mumbai',
+}
 
 const processSteps = [
   {
@@ -161,7 +136,7 @@ export default function ContrastTherapyMumbaiPage() {
   return (
     <main className="ct-page min-h-screen bg-white dark:bg-[#0A0A0A]">
 
-      <ServiceNavbar />
+      <ServiceNavbar navLinks={navLinks} />
 
       {/* ─────────────────────────────────────────────
           DESKTOP HERO (md+): full-bleed bg images, text overlaid left
@@ -237,8 +212,16 @@ export default function ContrastTherapyMumbaiPage() {
       <section className="md:hidden pt-20 pb-0 bg-white dark:bg-[#0A0A0A]">
         <div className="container mx-auto px-5">
 
-          {/* Image slider - FIRST */}
-          <HeroSlider slides={heroSlides} />
+          {/* Hero image - FIRST */}
+          <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-xl mt-2">
+            <Image
+              src={heroImage.src}
+              alt={heroImage.alt}
+              fill
+              className="object-cover object-top"
+              priority
+            />
+          </div>
 
           {/* Label chip */}
           <div className="inline-flex items-center gap-2 bg-[#513394]/10 dark:bg-[#513394]/20 rounded-full px-4 py-2 mt-5 mb-4">
@@ -301,48 +284,8 @@ export default function ContrastTherapyMumbaiPage() {
             </div>
           </div>
 
-          {/* Row 2: 2 stat cards */}
-          <div className="grid grid-cols-2 gap-3 mt-3 mb-2">
-            {[
-              {
-                icon: (
-                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
-                  </svg>
-                ),
-                value: '15+',
-                label: 'YEARS EXPERIENCE',
-                desc: 'Delivering expert care you can trust.',
-              },
-              {
-                icon: (
-                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
-                  </svg>
-                ),
-                value: 'Physio',
-                label: 'SUPERVISED',
-                desc: 'Every session is guided by qualified physiotherapists.',
-              },
-            ].map((card, i) => (
-              <div key={i} className="bg-[#1A1A1A] dark:bg-[#1A1A1A] rounded-2xl p-4 flex flex-col gap-3">
-                {/* Row 1: icon + value/label */}
-                <div className="flex items-center gap-3">
-                  <div className="w-11 h-11 rounded-full bg-[#513394]/20 flex items-center justify-center text-[#A78BFA] shrink-0">
-                    {card.icon}
-                  </div>
-                  <div>
-                    <div className="text-xl font-black text-white leading-none">{card.value}</div>
-                    <div className="text-[10px] font-bold text-gray-500 uppercase tracking-widest mt-0.5">{card.label}</div>
-                  </div>
-                </div>
-                {/* Divider */}
-                <div className="w-8 h-[2px] bg-[#513394] rounded-full" />
-                {/* Row 2: description */}
-                <p className="text-gray-500 text-xs leading-relaxed">{card.desc}</p>
-              </div>
-            ))}
-          </div>
+          {/* Row 2: trust badge carousel (mobile-only horizontal scroll) */}
+          <HeroTrustCarousel items={serviceTrustBadges['contrast-therapy'].slice(1)} />
 
         </div>
       </section>
@@ -353,79 +296,9 @@ export default function ContrastTherapyMumbaiPage() {
       <PainPointsSection />
 
       {/* ─────────────────────────────────────────────
-          SECTION 4: OUR APPROACH
-          Left: heading + context | Right: 4 numbered points
+          SECTION 4: YOUR SESSION (moved from PROCESS section below)
       ───────────────────────────────────────────── */}
       <section id="benefits" className="py-16 sm:py-20 lg:py-28 bg-white dark:bg-[#0A0A0A]">
-        <div className="container mx-auto px-5 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
-
-            {/* Left: heading */}
-            <div className="lg:col-span-5 lg:sticky lg:top-32">
-              <span className="text-[11px] font-black tracking-[0.3em] text-[#513394] dark:text-[#A78BFA] uppercase mb-4 block">
-                OUR APPROACH //
-              </span>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 dark:text-white tracking-tight leading-tight mb-5">
-                How R3BOOT{' '}
-                <span className="text-[#513394] dark:text-[#8B5CF6]">
-                  reaches that pain.
-                </span>
-              </h2>
-              <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed mb-6">
-                Contrast therapy only works when it is done right. Temperatures must be precise, the protocol must be structured, and you need to know how to breathe through the cold phase. This is what separates a clinical protocol from a cold dip.
-              </p>
-              <div className="hidden lg:flex items-center gap-3 text-[#513394] dark:text-[#A78BFA]">
-                <div className="w-8 h-[1.5px] bg-[#513394] dark:bg-[#A78BFA]" />
-                <span className="text-xs font-black tracking-widest uppercase">Physio-supervised, always</span>
-              </div>
-            </div>
-
-            {/* Right: 4 points */}
-            <div className="lg:col-span-7 space-y-3">
-              {rebootReachPoints.map((point, i) => (
-                <div
-                  key={i}
-                  className="flex gap-5 p-6 rounded-2xl bg-[#F8F9FA] dark:bg-white/[0.04] border border-gray-100 dark:border-white/[0.06] hover:border-[#513394]/30 dark:hover:border-[#513394]/40 transition-all duration-300 group"
-                >
-                  <div className="text-[#513394] dark:text-[#A78BFA] font-black text-xs shrink-0 w-7 pt-1 opacity-50 group-hover:opacity-100 transition-opacity">
-                    {point.step}
-                  </div>
-                  <div>
-                    <h3 className="font-black text-gray-900 dark:text-white text-[15px] mb-2 leading-snug">{point.title}</h3>
-                    <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">{point.body}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      {/* ─────────────────────────────────────────────
-          SECTION 5: HOW IT WORKS — color-coded phase cards
-      ───────────────────────────────────────────── */}
-      <HowItWorksSection />
-
-      {/* ─────────────────────────────────────────────
-          SECTION 5B: COMPARISON — ice bath vs contrast therapy
-      ───────────────────────────────────────────── */}
-      <ComparisonSection />
-
-      {/* ─────────────────────────────────────────────
-          SECTION 5C: HYGIENE — filtered water, sanitised setup
-      ───────────────────────────────────────────── */}
-      <HygieneSection />
-
-      {/* ─────────────────────────────────────────────
-          SECTION 5D: WHY MUMBAI ATHLETES CHOOSE CONTRAST THERAPY
-      ───────────────────────────────────────────── */}
-      <WhyMumbaiAthletesSection />
-
-      {/* ─────────────────────────────────────────────
-          SECTION 6: PROCESS (4 STEPS)
-      ───────────────────────────────────────────── */}
-      <section className="py-16 sm:py-20 lg:py-28 bg-white dark:bg-[#0A0A0A]">
         <div className="container mx-auto px-5 sm:px-6 lg:px-8">
 
           <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-14">
@@ -463,6 +336,26 @@ export default function ContrastTherapyMumbaiPage() {
 
         </div>
       </section>
+
+      {/* ─────────────────────────────────────────────
+          SECTION 5: HOW IT WORKS — color-coded phase cards
+      ───────────────────────────────────────────── */}
+      <HowItWorksSection />
+
+      {/* ─────────────────────────────────────────────
+          SECTION 5B: COMPARISON — ice bath vs contrast therapy
+      ───────────────────────────────────────────── */}
+      <ComparisonSection />
+
+      {/* ─────────────────────────────────────────────
+          SECTION 5C: HYGIENE — filtered water, sanitised setup
+      ───────────────────────────────────────────── */}
+      <HygieneSection />
+
+      {/* ─────────────────────────────────────────────
+          SECTION 5D: WHY MUMBAI ATHLETES CHOOSE CONTRAST THERAPY
+      ───────────────────────────────────────────── */}
+      <WhyMumbaiAthletesSection />
 
       {/* SECTION 7: TEAM */}
       <TeamSectionDemo />

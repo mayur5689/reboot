@@ -113,10 +113,10 @@ export function WhyMumbaiAthletesSection() {
           </div>
 
           {/* ── RIGHT: bento image grid ─────────────────────── */}
-          <div className="grid grid-cols-2 gap-4 w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 w-full">
 
-            {/* Card 01 — Ice bath, spans both rows */}
-            <div className="row-span-2 relative rounded-3xl overflow-hidden min-h-[420px] lg:min-h-[560px]">
+            {/* Card 01 — Ice bath: full-width row on mobile, spans both rows on desktop */}
+            <div className="relative rounded-3xl overflow-hidden min-h-[420px] lg:min-h-[560px] lg:row-span-2">
               <Image src={iceBath.src} alt={iceBath.alt} fill className="object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-black/40" />
               <div className="absolute top-5 left-5">
@@ -135,44 +135,49 @@ export function WhyMumbaiAthletesSection() {
               </div>
             </div>
 
-            {/* Card 02 — Infrared sauna */}
-            <div className="relative rounded-3xl overflow-hidden min-h-[200px] lg:min-h-[268px]">
-              <Image src={sauna.src} alt={sauna.alt} fill className="object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/15 to-black/35" />
-              <div className="absolute top-4 left-4">
-                <span className="text-[#A78BFA] font-black text-base leading-none block mb-1">{sauna.num}</span>
-                <div className="w-5 h-[2px] bg-[#A78BFA] mb-2" />
-                <span className="text-white font-black text-[12px] tracking-widest uppercase">{sauna.label}</span>
-              </div>
-              <div className="absolute bottom-4 left-4 right-4 flex items-start gap-2.5">
-                <div
-                  className="w-10 h-10 rounded-full border-[1.5px] flex items-center justify-center shrink-0 bg-black/40 backdrop-blur-sm"
-                  style={{ borderColor: sauna.accentColor, color: sauna.iconColor }}
-                >
-                  <GlyphIcon path={sauna.iconPath} className="w-4 h-4" />
-                </div>
-                <p className="text-white/85 text-[13px] leading-snug pt-1">{sauna.caption}</p>
-              </div>
-            </div>
+            {/* Row 2 — sauna + recovery: side-by-side on mobile, stacked column on desktop */}
+            <div className="grid grid-cols-2 gap-4 lg:flex lg:flex-col">
 
-            {/* Card 03 — Recovery session */}
-            <div className="relative rounded-3xl overflow-hidden min-h-[200px] lg:min-h-[268px]">
-              <Image src={recovery.src} alt={recovery.alt} fill className="object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/15 to-black/35" />
-              <div className="absolute top-4 left-4">
-                <span className="text-[#A78BFA] font-black text-base leading-none block mb-1">{recovery.num}</span>
-                <div className="w-5 h-[2px] bg-[#A78BFA] mb-2" />
-                <span className="text-white font-black text-[12px] tracking-widest uppercase">{recovery.label}</span>
-              </div>
-              <div className="absolute bottom-4 left-4 right-4 flex items-start gap-2.5">
-                <div
-                  className="w-10 h-10 rounded-full border-[1.5px] flex items-center justify-center shrink-0 bg-black/40 backdrop-blur-sm"
-                  style={{ borderColor: recovery.accentColor, color: recovery.iconColor }}
-                >
-                  <GlyphIcon path={recovery.iconPath} className="w-4 h-4" />
+              {/* Card 02 — Infrared sauna */}
+              <div className="relative rounded-3xl overflow-hidden min-h-[200px] lg:min-h-[268px]">
+                <Image src={sauna.src} alt={sauna.alt} fill className="object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/15 to-black/35" />
+                <div className="absolute top-3 left-3 lg:top-4 lg:left-4">
+                  <span className="text-[#A78BFA] font-black text-sm lg:text-base leading-none block mb-1">{sauna.num}</span>
+                  <div className="w-5 h-[2px] bg-[#A78BFA] mb-2" />
+                  <span className="text-white font-black text-[10px] tracking-wide lg:text-[12px] lg:tracking-widest uppercase">{sauna.label}</span>
                 </div>
-                <p className="text-white/85 text-[13px] leading-snug pt-1">{recovery.caption}</p>
+                <div className="absolute bottom-3 left-3 right-3 flex flex-col items-start gap-1.5 lg:bottom-4 lg:left-4 lg:right-4 lg:flex-row lg:items-start lg:gap-2.5">
+                  <div
+                    className="w-8 h-8 rounded-full border-[1.5px] flex items-center justify-center shrink-0 bg-black/40 backdrop-blur-sm lg:w-10 lg:h-10"
+                    style={{ borderColor: sauna.accentColor, color: sauna.iconColor }}
+                  >
+                    <GlyphIcon path={sauna.iconPath} className="w-3.5 h-3.5 lg:w-4 lg:h-4" />
+                  </div>
+                  <p className="text-white/85 text-[11px] leading-snug lg:text-[13px] lg:pt-1">{sauna.caption}</p>
+                </div>
               </div>
+
+              {/* Card 03 — Recovery session */}
+              <div className="relative rounded-3xl overflow-hidden min-h-[200px] lg:min-h-[268px]">
+                <Image src={recovery.src} alt={recovery.alt} fill className="object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/15 to-black/35" />
+                <div className="absolute top-3 left-3 lg:top-4 lg:left-4">
+                  <span className="text-[#A78BFA] font-black text-sm lg:text-base leading-none block mb-1">{recovery.num}</span>
+                  <div className="w-5 h-[2px] bg-[#A78BFA] mb-2" />
+                  <span className="text-white font-black text-[10px] tracking-wide lg:text-[12px] lg:tracking-widest uppercase">{recovery.label}</span>
+                </div>
+                <div className="absolute bottom-3 left-3 right-3 flex flex-col items-start gap-1.5 lg:bottom-4 lg:left-4 lg:right-4 lg:flex-row lg:items-start lg:gap-2.5">
+                  <div
+                    className="w-8 h-8 rounded-full border-[1.5px] flex items-center justify-center shrink-0 bg-black/40 backdrop-blur-sm lg:w-10 lg:h-10"
+                    style={{ borderColor: recovery.accentColor, color: recovery.iconColor }}
+                  >
+                    <GlyphIcon path={recovery.iconPath} className="w-3.5 h-3.5 lg:w-4 lg:h-4" />
+                  </div>
+                  <p className="text-white/85 text-[11px] leading-snug lg:text-[13px] lg:pt-1">{recovery.caption}</p>
+                </div>
+              </div>
+
             </div>
 
           </div>

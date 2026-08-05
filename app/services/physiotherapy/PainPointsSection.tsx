@@ -41,16 +41,16 @@ export function PainPointsSection() {
   const pad = (n: number) => String(n).padStart(2, '0')
 
   return (
-    <section id="signs" className="bg-[#080808] py-16 sm:py-20 lg:py-24">
+    <section id="signs" className="bg-[#F8F9FA] dark:bg-[#080808] py-16 sm:py-20 lg:py-24">
 
       <div className="text-center mb-10 sm:mb-12 px-5">
-        <span className="text-[11px] font-black tracking-[0.3em] text-[#A78BFA] uppercase mb-3 block">
+        <span className="text-[11px] font-black tracking-[0.3em] text-[#513394] dark:text-[#A78BFA] uppercase mb-3 block">
           RECOGNITION //
         </span>
-        <h2 className="text-5xl sm:text-6xl lg:text-[4rem] font-black text-white tracking-tight leading-[1.06]">
+        <h2 className="text-5xl sm:text-6xl lg:text-[4rem] font-black text-gray-900 dark:text-white tracking-tight leading-[1.06]">
           Sound familiar<span className="text-[#7B5FCA]">?</span>
         </h2>
-        <p className="text-white/40 text-base sm:text-lg mt-4 max-w-2xl mx-auto leading-relaxed">
+        <p className="text-gray-500 dark:text-white/40 text-base sm:text-lg mt-4 max-w-2xl mx-auto leading-relaxed">
           If any of these feel like your week, a clinical assessment — not another quick fix — is the missing step.
         </p>
       </div>
@@ -116,21 +116,21 @@ export function PainPointsSection() {
                     onClick={() => setActive(i)}
                     className={`cursor-pointer rounded-xl border transition-all duration-300 ${
                       isActive
-                        ? 'border-[#513394]/50 bg-white/[0.05]'
-                        : 'border-white/[0.07] bg-white/[0.025] hover:bg-white/[0.04] hover:border-white/[0.13]'
+                        ? 'border-[#513394]/40 dark:border-[#513394]/50 bg-[#513394]/[0.04] dark:bg-white/[0.05]'
+                        : 'border-gray-200 dark:border-white/[0.07] bg-white dark:bg-white/[0.025] hover:bg-gray-50 dark:hover:bg-white/[0.04] hover:border-gray-300 dark:hover:border-white/[0.13]'
                     }`}
                   >
                     <div className="flex items-center gap-5 px-6 py-5">
                       <div
                         className={`shrink-0 w-10 h-10 rounded-full flex items-center justify-center text-[13px] font-black transition-all duration-300 ${
-                          isActive ? 'bg-[#513394] text-white' : 'bg-white/[0.07] text-white/45'
+                          isActive ? 'bg-[#513394] text-white' : 'bg-gray-100 dark:bg-white/[0.07] text-gray-500 dark:text-white/45'
                         }`}
                       >
                         {pad(i + 1)}
                       </div>
                       <span
                         className={`flex-1 font-bold text-[17px] leading-snug transition-colors duration-300 ${
-                          isActive ? 'text-white' : 'text-white/55'
+                          isActive ? 'text-gray-900 dark:text-white' : 'text-gray-500 dark:text-white/55'
                         }`}
                       >
                         {pt.title}
@@ -138,8 +138,8 @@ export function PainPointsSection() {
                       <div
                         className={`shrink-0 w-8 h-8 rounded-full border flex items-center justify-center transition-all duration-300 ${
                           isActive
-                            ? 'border-[#513394]/60 text-[#A78BFA] bg-[#513394]/15'
-                            : 'border-white/[0.15] text-white/35'
+                            ? 'border-[#513394]/60 text-[#513394] dark:text-[#A78BFA] bg-[#513394]/15'
+                            : 'border-gray-300 dark:border-white/[0.15] text-gray-400 dark:text-white/35'
                         }`}
                       >
                         {isActive ? (
@@ -156,7 +156,7 @@ export function PainPointsSection() {
                     {isActive && (
                       <div className="px-6 pb-6 pt-0">
                         <div className="pl-[60px]">
-                          <p className="text-white/50 text-[15px] leading-relaxed">{pt.description}</p>
+                          <p className="text-gray-500 dark:text-white/50 text-[15px] leading-relaxed">{pt.description}</p>
                         </div>
                       </div>
                     )}
@@ -178,23 +178,23 @@ export function PainPointsSection() {
               onClick={() => setActive(i)}
               className={`cursor-pointer rounded-2xl border transition-all duration-300 overflow-hidden ${
                 isActive
-                  ? 'border-[#513394]/45 bg-white/[0.05]'
-                  : 'border-white/[0.07] bg-white/[0.02]'
+                  ? 'border-[#513394]/35 dark:border-[#513394]/45 bg-[#513394]/[0.04] dark:bg-white/[0.05]'
+                  : 'border-gray-200 dark:border-white/[0.07] bg-white dark:bg-white/[0.02]'
               }`}
             >
               <div className="flex items-center gap-4 p-5">
                 <div
                   className={`shrink-0 w-9 h-9 rounded-full flex items-center justify-center text-[12px] font-black transition-all duration-300 ${
-                    isActive ? 'bg-[#513394] text-white' : 'bg-white/[0.07] text-white/45'
+                    isActive ? 'bg-[#513394] text-white' : 'bg-gray-100 dark:bg-white/[0.07] text-gray-500 dark:text-white/45'
                   }`}
                 >
                   {pad(i + 1)}
                 </div>
-                <span className={`flex-1 font-bold text-[16px] transition-colors ${isActive ? 'text-white' : 'text-white/55'}`}>
+                <span className={`flex-1 font-bold text-[16px] transition-colors ${isActive ? 'text-gray-900 dark:text-white' : 'text-gray-500 dark:text-white/55'}`}>
                   {pt.title}
                 </span>
                 <svg
-                  className={`w-4 h-4 shrink-0 transition-colors ${isActive ? 'text-[#A78BFA]' : 'text-white/30'}`}
+                  className={`w-4 h-4 shrink-0 transition-colors ${isActive ? 'text-[#513394] dark:text-[#A78BFA]' : 'text-gray-400 dark:text-white/30'}`}
                   fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}
                 >
                   <path strokeLinecap="round" strokeLinejoin="round" d={isActive ? 'M18 12H6' : 'M12 6v12m6-6H6'} />
@@ -206,7 +206,7 @@ export function PainPointsSection() {
                     <Image src={pt.image} alt={pt.title} fill className="object-cover" sizes="90vw" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                   </div>
-                  <p className="text-white/50 text-[14px] leading-relaxed">{pt.description}</p>
+                  <p className="text-gray-500 dark:text-white/50 text-[14px] leading-relaxed">{pt.description}</p>
                 </div>
               )}
             </div>

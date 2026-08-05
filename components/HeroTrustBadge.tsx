@@ -20,8 +20,7 @@ export type TrustBadgeItem = {
   stars?: boolean
 }
 
-function Icon({ type }: { type: TrustBadgeIcon }) {
-  const className = 'w-[18px] h-[18px]'
+export function Icon({ type, className = 'w-[18px] h-[18px]' }: { type: TrustBadgeIcon; className?: string }) {
   switch (type) {
     case 'google':
       return (

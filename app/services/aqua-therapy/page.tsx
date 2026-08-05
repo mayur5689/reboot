@@ -11,8 +11,8 @@ import ServiceNavbar from '@/components/ServiceNavbar'
 import { HeroTrustBadge, serviceTrustBadges } from '@/components/HeroTrustBadge'
 import { HeroSlider } from '@/app/services-demo/contrast-therapy/HeroSlider'
 import { TeamSectionDemo } from '@/app/services-demo/contrast-therapy/TeamSectionDemo'
-import { TestimonialsCarousel } from '@/app/services-demo/contrast-therapy/TestimonialsCarousel'
-import { LocationSection } from '@/app/services-demo/contrast-therapy/LocationSection'
+import { TestimonialsCarousel } from './TestimonialsCarousel'
+import { LocationSection } from './LocationSection'
 
 export const metadata: Metadata = {
   title: 'Aqua Therapy Mumbai | Aqua Treadmill Rehabilitation at R3BOOT Dadar',
@@ -798,14 +798,14 @@ export default function AquaTherapyPage() {
       <TeamSectionDemo />
 
       {/* MOBILE: Google Review cards */}
-      <section className="md:hidden py-10 bg-[#0A0A0A]">
+      <section className="md:hidden py-10 bg-white dark:bg-[#0A0A0A]">
         <div className="px-5 mb-6">
-          <span className="text-[11px] font-black tracking-[0.3em] text-[#A78BFA] uppercase block mb-2">Patient Stories</span>
-          <h2 className="text-[26px] font-extrabold text-white leading-tight">What clients say</h2>
+          <span className="text-[11px] font-black tracking-[0.3em] text-[#513394] dark:text-[#A78BFA] uppercase block mb-2">Patient Stories</span>
+          <h2 className="text-[26px] font-extrabold text-gray-900 dark:text-white leading-tight">What clients say</h2>
         </div>
         <div className="flex gap-4 overflow-x-auto px-5 pb-2 snap-x snap-mandatory scrollbar-hide">
           {testimonials.map((r, i) => (
-            <figure key={i} className="flex-shrink-0 w-[85vw] snap-start bg-[#161616] border border-white/[0.07] rounded-3xl p-5 flex flex-col">
+            <figure key={i} className="flex-shrink-0 w-[85vw] snap-start bg-white dark:bg-[#161616] border border-gray-100 dark:border-white/[0.07] shadow-sm dark:shadow-none rounded-3xl p-5 flex flex-col">
               {/* Top row: Google logo + rating pill */}
               <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center gap-2.5">
@@ -815,46 +815,46 @@ export default function AquaTherapyPage() {
                     <path fill="#FBBC05" d="M24 46c5.6 0 10.5-1.9 14.4-5l-6.7-5.5C29.6 37 26.9 38 24 38c-5.9 0-10.9-4-12.7-9.5l-7 5.4C7.5 41.8 15.2 46 24 46z"/>
                     <path fill="#EA4335" d="M44.5 20H24v8.5h11.8c-.8 2.4-2.3 4.4-4.3 5.8l6.7 5.5C42.1 36.4 45 30.7 45 24c0-1.3-.2-2.7-.5-4z"/>
                   </svg>
-                  <span className="text-white font-bold text-[15px]">Google Review</span>
+                  <span className="text-gray-900 dark:text-white font-bold text-[15px]">Google Review</span>
                 </div>
-                <div className="flex items-center gap-1.5 bg-[#222] rounded-full px-3 py-1.5">
+                <div className="flex items-center gap-1.5 bg-gray-100 dark:bg-[#222] rounded-full px-3 py-1.5">
                   {[...Array(5)].map((_, j) => (
                     <svg key={j} className="w-3.5 h-3.5 fill-yellow-400" viewBox="0 0 20 20">
                       <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                     </svg>
                   ))}
-                  <span className="text-white font-bold text-[13px] ml-0.5">5.0</span>
+                  <span className="text-gray-900 dark:text-white font-bold text-[13px] ml-0.5">5.0</span>
                 </div>
               </div>
 
-              <div className="h-px bg-white/[0.07] mb-4" />
+              <div className="h-px bg-gray-100 dark:bg-white/[0.07] mb-4" />
 
               <div className="flex items-center gap-3 mb-3">
                 <div className="relative w-11 h-11 rounded-full overflow-hidden flex-shrink-0">
                   <Image src={r.avatar} alt={r.name} fill className="object-cover" />
                 </div>
                 <div>
-                  <p className="text-white font-bold text-[15px] leading-tight">{r.name}</p>
-                  <p className="text-white/40 text-[12px]">{r.meta}</p>
+                  <p className="text-gray-900 dark:text-white font-bold text-[15px] leading-tight">{r.name}</p>
+                  <p className="text-gray-400 dark:text-white/40 text-[12px]">{r.meta}</p>
                 </div>
               </div>
 
               <div className="flex items-center gap-1.5 mb-4">
-                <svg className="w-3.5 h-3.5 text-white/30 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <svg className="w-3.5 h-3.5 text-gray-400 dark:text-white/30 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                 </svg>
-                <span className="text-white/35 text-[12px]">{r.ago}</span>
+                <span className="text-gray-400 dark:text-white/35 text-[12px]">{r.ago}</span>
               </div>
 
-              <blockquote className="text-white/80 text-[15px] leading-relaxed italic flex-grow mb-5">
+              <blockquote className="text-gray-600 dark:text-white/80 text-[15px] leading-relaxed italic flex-grow mb-5">
                 &ldquo;{r.quote}&rdquo;
               </blockquote>
 
-              <div className="flex items-center gap-2 pt-4 border-t border-white/[0.06]">
+              <div className="flex items-center gap-2 pt-4 border-t border-gray-100 dark:border-white/[0.06]">
                 <svg className="w-4 h-4 text-green-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                 </svg>
-                <span className="text-white/35 text-[12px]">Verified Google Review</span>
+                <span className="text-gray-400 dark:text-white/35 text-[12px]">Verified Google Review</span>
               </div>
             </figure>
           ))}
@@ -862,11 +862,11 @@ export default function AquaTherapyPage() {
       </section>
 
       {/* DESKTOP: continuously moving testimonials marquee */}
-      <section className="hidden md:block py-20 lg:py-28 bg-[#0A0A0A]">
+      <section className="hidden md:block py-20 lg:py-28 bg-white dark:bg-[#0A0A0A]">
         <div className="container mx-auto px-5 sm:px-6 lg:px-8">
           <div className="text-center max-w-xl mx-auto mb-10 sm:mb-14">
             <span className="text-[11px] font-black tracking-[0.3em] text-[#513394] dark:text-[#A78BFA] uppercase mb-4 block">PATIENT STORIES //</span>
-            <h2 className="text-3xl sm:text-4xl font-black text-white tracking-tight">What clients say</h2>
+            <h2 className="text-3xl sm:text-4xl font-black text-gray-900 dark:text-white tracking-tight">What clients say</h2>
           </div>
           <TestimonialsCarousel testimonials={testimonials} />
         </div>
@@ -880,7 +880,7 @@ export default function AquaTherapyPage() {
       {/* ─────────────────────────────────────────────
           SECTION 11: FAQ
       ───────────────────────────────────────────── */}
-      <FAQSection faqs={aquaTherapyFaqs} />
+      <FAQSection faqs={aquaTherapyFaqs} layout="grid" />
 
       {/* ─────────────────────────────────────────────
           SECTION 12: CTA BANNER
@@ -966,13 +966,13 @@ export default function AquaTherapyPage() {
       {/* ─────────────────────────────────────────────
           SECTION 13: AQUA THERAPY LOCATION CLUSTER — internal links
       ───────────────────────────────────────────── */}
-      <section className="py-16 sm:py-20 lg:py-28 bg-[#0D0D0D] border-t border-white/[0.06]">
+      <section className="py-16 sm:py-20 lg:py-28 bg-[#F8F9FA] dark:bg-[#0D0D0D] border-t border-gray-100 dark:border-white/[0.06]">
         <div className="container mx-auto px-5 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <span className="text-[11px] font-black tracking-[0.3em] text-[#A78BFA] uppercase mb-4 block">
+            <span className="text-[11px] font-black tracking-[0.3em] text-[#513394] dark:text-[#A78BFA] uppercase mb-4 block">
               AQUA THERAPY LOCATIONS //
             </span>
-            <h2 className="text-3xl md:text-5xl font-black text-white tracking-tight">
+            <h2 className="text-3xl md:text-5xl font-black text-gray-900 dark:text-white tracking-tight">
               Aqua Treadmill &amp; <span className="text-[#7B5FCA]">Locations</span>
             </h2>
           </div>
@@ -981,7 +981,7 @@ export default function AquaTherapyPage() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-center px-4 py-4 rounded-2xl border border-white/[0.08] bg-white/[0.03] text-sm font-bold text-white hover:border-[#A78BFA]/40 hover:text-[#A78BFA] transition-all"
+                className="text-center px-4 py-4 rounded-2xl border border-gray-200 dark:border-white/[0.08] bg-white dark:bg-white/[0.03] text-sm font-bold text-gray-900 dark:text-white hover:border-[#513394]/40 dark:hover:border-[#A78BFA]/40 hover:text-[#513394] dark:hover:text-[#A78BFA] transition-all"
               >
                 {link.label}
               </Link>
@@ -993,13 +993,13 @@ export default function AquaTherapyPage() {
       {/* ─────────────────────────────────────────────
           SECTION 14: OTHER SERVICES
       ───────────────────────────────────────────── */}
-      <section className="py-16 sm:py-20 lg:py-28 bg-[#0A0A0A]">
+      <section className="py-16 sm:py-20 lg:py-28 bg-white dark:bg-[#0A0A0A]">
         <div className="container mx-auto px-5 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <span className="text-[11px] font-black tracking-[0.3em] text-[#A78BFA] uppercase mb-4 block">
+            <span className="text-[11px] font-black tracking-[0.3em] text-[#513394] dark:text-[#A78BFA] uppercase mb-4 block">
               KEEP EXPLORING //
             </span>
-            <h2 className="text-4xl md:text-6xl font-black text-white tracking-tight">
+            <h2 className="text-4xl md:text-6xl font-black text-gray-900 dark:text-white tracking-tight">
               Other Ways to <span className="text-[#7B5FCA]">Recover</span>
             </h2>
           </div>
@@ -1009,7 +1009,7 @@ export default function AquaTherapyPage() {
               <Link
                 key={idx}
                 href={`/services/${service.slug}`}
-                className="group bg-white/[0.03] p-4 rounded-[2.5rem] border border-white/[0.08] hover:border-[#A78BFA]/30 transition-all duration-300 transform hover:-translate-y-2 flex flex-col h-full"
+                className="group bg-gray-50 dark:bg-white/[0.03] p-4 rounded-[2.5rem] border border-gray-100 dark:border-white/[0.08] hover:border-[#513394]/30 dark:hover:border-[#A78BFA]/30 transition-all duration-300 transform hover:-translate-y-2 flex flex-col h-full"
               >
                 <div className="relative h-48 w-full shrink-0 overflow-hidden rounded-[2rem] mb-6">
                   <Image
@@ -1021,14 +1021,14 @@ export default function AquaTherapyPage() {
                   <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors" />
                 </div>
                 <div className="px-2 pb-2 flex flex-col flex-grow">
-                  <h3 className="text-xl font-bold text-white group-hover:text-[#A78BFA] transition-colors mb-3">
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-[#513394] dark:group-hover:text-[#A78BFA] transition-colors mb-3">
                     {service.title}
                   </h3>
-                  <p className="text-sm text-white/45 line-clamp-2 leading-relaxed mb-6">
+                  <p className="text-sm text-gray-500 dark:text-white/45 line-clamp-2 leading-relaxed mb-6">
                     {service.description}
                   </p>
                   <div className="mt-auto">
-                    <div className="flex items-center justify-between w-full bg-[#513394]/15 group-hover:bg-[#513394] text-[#A78BFA] group-hover:text-white rounded-full p-1 transition-all duration-300">
+                    <div className="flex items-center justify-between w-full bg-[#513394]/10 dark:bg-[#513394]/15 group-hover:bg-[#513394] text-[#513394] dark:text-[#A78BFA] group-hover:text-white rounded-full p-1 transition-all duration-300">
                       <span className="text-[13px] font-black pl-5">EXPLORE</span>
                       <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-sm">
                         <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
@@ -1048,7 +1048,7 @@ export default function AquaTherapyPage() {
           STICKY MOBILE CTA
       ───────────────────────────────────────────── */}
       <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden">
-        <div className="bg-[#0A0A0A]/95 backdrop-blur-md border-t border-white/[0.09] px-4 pt-3 pb-5">
+        <div className="bg-white/95 dark:bg-[#0A0A0A]/95 backdrop-blur-md border-t border-gray-200 dark:border-white/[0.09] px-4 pt-3 pb-5">
           <div className="flex gap-3">
             <a
               href="tel:+919702368612"
@@ -1061,7 +1061,7 @@ export default function AquaTherapyPage() {
               href="https://wa.me/919702368612"
               target="_blank"
               rel="nofollow noopener noreferrer"
-              className="flex-1 flex items-center justify-center gap-2 border border-white/20 text-white font-bold rounded-xl py-3.5 text-[14px] tracking-wide hover:bg-white/[0.07] transition-colors"
+              className="flex-1 flex items-center justify-center gap-2 border border-gray-300 dark:border-white/20 text-gray-900 dark:text-white font-bold rounded-xl py-3.5 text-[14px] tracking-wide hover:bg-gray-100 dark:hover:bg-white/[0.07] transition-colors"
             >
               WhatsApp
             </a>

@@ -64,7 +64,7 @@ export default function HomeCopyNavbar() {
               alt="R3BOOT Logo"
               width={160}
               height={52}
-              className="h-[34px] w-auto transition-all duration-300"
+              className={`h-[34px] w-auto transition-all duration-300 ${shouldBeSolid && theme === 'light' ? 'brightness-0' : ''}`}
               priority
             />
           </Link>
@@ -143,6 +143,15 @@ export default function HomeCopyNavbar() {
 
           <div className="px-6 pb-10 pt-4 space-y-3 animate-in fade-in slide-in-from-bottom-4 fill-mode-both" style={{ animationDelay: '320ms', animationDuration: '350ms' }}>
             <div className="h-px bg-white/[0.07] mb-5" />
+            {mounted && (
+              <button
+                onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+                className="flex items-center justify-center gap-2.5 w-full py-4 rounded-2xl bg-white/[0.07] border border-white/10 text-white font-bold text-[15px] active:scale-95 transition-transform"
+              >
+                {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+                {theme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
+              </button>
+            )}
             <a
               href="tel:+919702368612"
               className="flex items-center justify-center gap-2.5 w-full py-4 rounded-2xl text-white font-bold text-[17px] active:scale-95 transition-transform"

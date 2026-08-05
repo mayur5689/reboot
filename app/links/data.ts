@@ -1,0 +1,77 @@
+export const linktreeData = {
+  profile: {
+    name: 'R3BOOT',
+    tagline: "India's First Integrated Recovery Centre",
+    phone: '+919702368612',
+    bio: 'R3boot is a performance-driven recovery and rehabilitation brand built for people who take movement seriously. We blend clinical expertise with modern sports science to reduce pain, restore mobility, and improve performance. From injury rehab to deep recovery work, every session is structured, purposeful, and results-focused. This is not relaxation therapy, it is intelligent recovery.',
+  },
+  links: [
+    {
+      id: 'appointment',
+      title: 'Book your Appointment',
+      icon: '📅',
+      description: '',
+      action: 'modal',
+      modalType: 'appointment',
+    },
+    {
+      id: 'reviews',
+      title: 'Client Reviews',
+      icon: '⭐',
+      description: '⭐  Google Reviews',
+      action: 'modal',
+      modalType: 'reviews',
+    },
+    {
+      id: 'location',
+      title: 'Find Us Here',
+      icon: '📍',
+      description: '📍  Palai Plaza, 203, Swami Gyan Jivandas Marg, Dadar East, Dadar...',
+      action: 'modal',
+      modalType: 'location',
+    },
+  ],
+  socials: [
+    { platform: 'instagram', url: 'https://instagram.com/r3boot.active.life' },
+    { platform: 'email', url: 'mailto:info@skillupexchange.com' },
+    { platform: 'phone', url: 'tel:+919702368612' },
+    { platform: 'whatsapp', url: 'https://wa.me/919702368612' },
+    { platform: 'website', url: 'https://r3boot.in' },
+  ],
+  reviews: [
+    {
+      id: 1,
+      name: 'Kapil Jagtap',
+      rating: 5,
+      timeAgo: '5 months ago',
+      text: 'Session was really helpful. Dr. Nirmal was fabulous.',
+    },
+    {
+      id: 2,
+      name: 'Om Bhimjiyani',
+      rating: 5,
+      timeAgo: '5 months ago',
+      text: 'Absolutely Fantastic, I opted for a sports massage, I feel really good A lot of facilities available here including hydrotherapy that has a treadmill with half your body under water for recovery. Definitely worth it for any rehabilitation and recovery post surgery/injury.',
+    },
+    {
+      id: 3,
+      name: 'Aarya Bhatte',
+      rating: 5,
+      timeAgo: '6 months ago',
+      text: 'R3boot Active life is absolutely outstanding! The Pilates instructors are skilled, supportive, and inspiring, and the recovery center makes the experience complete. Every visit leaves me feeling stronger, refreshed, and truly cared for - a perfect place for wellness and balance.',
+    },
+    {
+      id: 4,
+      name: 'Sonal Malik',
+      rating: 5,
+      timeAgo: '6 months ago',
+      text: 'Great facilities and posture correction at Reboot. The team is amazing and supportive during the session.',
+    },
+  ],
+  location: {
+    address: 'Palai Plaza, 203, Swami Gyan Jivandas Marg, Dadar East, Dadar, Mumbai, Maharashtra 400014, India',
+    lat: 19.0176,
+    lng: 72.8479,
+    phone: '+919702368612',
+  },
+};

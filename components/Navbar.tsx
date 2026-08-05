@@ -191,9 +191,9 @@ export default function Navbar() {
               <Image
                 src="/images/REBOOT FINAL LOGO_1.png"
                 alt="R3BOOT Logo"
-                width={110}
-                height={36}
-                className="h-9 w-auto brightness-0 invert"
+                width={150}
+                height={49}
+                className="h-12 w-auto"
               />
             </Link>
             <button
