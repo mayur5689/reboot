@@ -14,7 +14,7 @@ export default function Navbar() {
   const [isServicesOpen, setIsServicesOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const { theme, setTheme } = useTheme()
+  const { theme, resolvedTheme, setTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
   const isHome = pathname === '/'
   const shouldBeSolid = !isHome || isScrolled || isServicesOpen
@@ -39,13 +39,13 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className={`flex items-center transition-all duration-300 ${shouldBeSolid ? 'py-1.5' : 'py-3'}`}>
             <Image
-              src={shouldBeSolid && theme === 'light'
+              src={mounted && shouldBeSolid && resolvedTheme === 'light'
                 ? 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1785934037/R3BOOT_WHITE_LOGO_g4qgbl.svg'
                 : '/images/REBOOT FINAL LOGO_1.png'}
               alt="R3BOOT Logo"
               width={160}
               height={50}
-              className={`h-12 w-auto transition-all duration-300 ${shouldBeSolid && theme === 'light' ? 'brightness-0' : ''}`}
+              className={`h-12 w-auto transition-all duration-300 ${mounted && shouldBeSolid && resolvedTheme === 'light' ? 'brightness-0' : ''}`}
               priority
             />
           </Link>

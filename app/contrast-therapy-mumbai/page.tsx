@@ -7,7 +7,6 @@ import ServiceSchema from '@/components/schema/ServiceSchema'
 import FAQSchema from '@/components/schema/FAQSchema'
 import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema'
 import { contrastTherapyMumbaiFaqs } from '@/lib/faqs/contrast-therapy-mumbai'
-import ServiceNavbar from '@/components/ServiceNavbar'
 import { PainPointsSection } from './PainPointsSection'
 import { WhyMumbaiAthletesSection } from './WhyMumbaiAthletesSection'
 import { HowItWorksSection } from './HowItWorksSection'
@@ -36,14 +35,6 @@ export const metadata: Metadata = {
 }
 
 const otherServices = services.filter((s) => s.slug !== 'contrast-therapy').slice(0, 4)
-
-const navLinks = [
-  { label: 'Recognition', href: '#services', isScroll: true },
-  { label: 'Your Session', href: '#benefits', isScroll: true },
-  { label: 'Protocol', href: '#protocol', isScroll: true },
-  { label: 'About Us', href: '/about' },
-  { label: 'Contact', href: '/contact' },
-]
 
 // ─── DATA ─────────────────────────────────────────────────────────────────────
 
@@ -136,73 +127,73 @@ export default function ContrastTherapyMumbaiPage() {
   return (
     <main className="ct-page min-h-screen bg-white dark:bg-[#0A0A0A]">
 
-      <ServiceNavbar navLinks={navLinks} />
-
       {/* ─────────────────────────────────────────────
           DESKTOP HERO (md+): full-bleed bg images, text overlaid left
       ───────────────────────────────────────────── */}
-      <section className="hidden md:flex relative flex-col bg-black overflow-hidden" style={{ minHeight: '92vh' }}>
-        <div className="absolute inset-0">
-          <Image
-            src="/images/R3BOOT_CONTRAST_THERAPY_IMAGE (2).webp"
-            alt="Contrast Therapy Mumbai, Ice Bath and Infrared Sauna at R3BOOT"
-            fill
-            className="object-cover"
-            style={{ objectPosition: '40% center' }}
-            priority
-          />
-        </div>
-
-        <div
-          className="absolute inset-0 pointer-events-none"
-          style={{
-            background:
-              'linear-gradient(to right, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.78) 18%, rgba(0,0,0,0.45) 38%, rgba(0,0,0,0.15) 55%, transparent 68%)',
-          }}
-        />
-        <div
-          className="absolute inset-x-0 bottom-0 h-[34%] pointer-events-none"
-          style={{ background: 'linear-gradient(to top, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.18) 50%, transparent 100%)' }}
-        />
-
-        <div className="relative z-10 flex flex-1 flex-col justify-center px-12 lg:px-16 xl:px-20 pt-28 max-w-[54%]">
-          <p className="text-[#A78BFA] text-[11px] font-black tracking-[0.25em] uppercase mb-4">
-            Clinically Structured&nbsp;&nbsp;•&nbsp;&nbsp;Safe&nbsp;&nbsp;•&nbsp;&nbsp;Supervised
-          </p>
-
-          <h1 className="text-5xl lg:text-6xl xl:text-[4.25rem] font-black text-white tracking-tight leading-[1.04] mb-4">
-            Contrast Therapy<br />
-            in <span className="text-[#A78BFA]">Mumbai</span>
-          </h1>
-
-          <p className="text-[16px] text-white/55 max-w-md leading-relaxed mb-7">
-            Ice bath and infrared sauna using advanced protocols to help you recover, reset and perform at your best.
-          </p>
-
-          <div className="flex items-center gap-4">
-            <a
-              href="tel:+919702368612"
-              className="inline-flex items-center gap-2.5 bg-[#513394] hover:bg-[#603eb0] text-white font-black px-7 py-3.5 rounded-full transition-all hover:scale-[1.02] text-[14px] tracking-wide shadow-lg shadow-[#513394]/30"
-            >
-              <PhoneIcon className="w-4 h-4" />
-              Book Your Session
-            </a>
-            <a
-              href="https://wa.me/919702368612"
-              target="_blank"
-              rel="nofollow noopener noreferrer"
-              className="inline-flex items-center gap-2.5 border border-white/20 text-white hover:bg-white/[0.07] font-bold px-7 py-3.5 rounded-full transition-all text-[14px] tracking-wide"
-            >
-              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
-                <path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.118 1.524 5.855L0 24l6.335-1.502A11.942 11.942 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.013-1.38l-.36-.214-3.732.885.916-3.629-.235-.373A9.818 9.818 0 1112 21.818z"/>
-              </svg>
-              WhatsApp Us
-            </a>
+      <section className="hidden md:flex flex-col bg-black overflow-hidden pt-20 lg:pt-24" style={{ minHeight: '92vh' }}>
+        <div className="relative flex flex-1 flex-col">
+          <div className="absolute inset-0">
+            <Image
+              src="/images/R3BOOT_CONTRAST_THERAPY_IMAGE (2).webp"
+              alt="Contrast Therapy Mumbai, Ice Bath and Infrared Sauna at R3BOOT"
+              fill
+              className="object-cover"
+              style={{ objectPosition: '40% center' }}
+              priority
+            />
           </div>
-        </div>
 
-        <HeroTrustBadge items={serviceTrustBadges['contrast-therapy']} />
+          <div
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              background:
+                'linear-gradient(to right, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.78) 18%, rgba(0,0,0,0.45) 38%, rgba(0,0,0,0.15) 55%, transparent 68%)',
+            }}
+          />
+          <div
+            className="absolute inset-x-0 bottom-0 h-[34%] pointer-events-none"
+            style={{ background: 'linear-gradient(to top, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.18) 50%, transparent 100%)' }}
+          />
+
+          <div className="relative z-10 flex flex-1 flex-col justify-center px-12 lg:px-16 xl:px-20 max-w-[54%]">
+            <p className="text-[#A78BFA] text-[11px] font-black tracking-[0.25em] uppercase mb-4">
+              Clinically Structured&nbsp;&nbsp;•&nbsp;&nbsp;Safe&nbsp;&nbsp;•&nbsp;&nbsp;Supervised
+            </p>
+
+            <h1 className="text-5xl lg:text-6xl xl:text-[4.25rem] font-black text-white tracking-tight leading-[1.04] mb-4">
+              Contrast Therapy<br />
+              in <span className="text-[#A78BFA]">Mumbai</span>
+            </h1>
+
+            <p className="text-[16px] text-white/55 max-w-md leading-relaxed mb-7">
+              Ice bath and infrared sauna using advanced protocols to help you recover, reset and perform at your best.
+            </p>
+
+            <div className="flex items-center gap-4">
+              <a
+                href="tel:+919702368612"
+                className="inline-flex items-center gap-2.5 bg-[#513394] hover:bg-[#603eb0] text-white font-black px-7 py-3.5 rounded-full transition-all hover:scale-[1.02] text-[14px] tracking-wide shadow-lg shadow-[#513394]/30"
+              >
+                <PhoneIcon className="w-4 h-4" />
+                Book Your Session
+              </a>
+              <a
+                href="https://wa.me/919702368612"
+                target="_blank"
+                rel="nofollow noopener noreferrer"
+                className="inline-flex items-center gap-2.5 border border-white/20 text-white hover:bg-white/[0.07] font-bold px-7 py-3.5 rounded-full transition-all text-[14px] tracking-wide"
+              >
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+                  <path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.118 1.524 5.855L0 24l6.335-1.502A11.942 11.942 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.013-1.38l-.36-.214-3.732.885.916-3.629-.235-.373A9.818 9.818 0 1112 21.818z"/>
+                </svg>
+                WhatsApp Us
+              </a>
+            </div>
+          </div>
+
+          <HeroTrustBadge items={serviceTrustBadges['contrast-therapy']} />
+        </div>
       </section>
 
       {/* ─────────────────────────────────────────────

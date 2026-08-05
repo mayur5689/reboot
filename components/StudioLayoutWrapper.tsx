@@ -18,18 +18,7 @@ export default function StudioLayoutWrapper({
     const pathname = usePathname();
     // Check if we are in studio
     const isStudio = pathname?.startsWith('/studio');
-    const isServiceLanding =
-        pathname?.startsWith('/services-demo/') ||
-        pathname === '/l4-l5-disc-bulge-mumbai' ||
-        pathname === '/contrast-therapy-mumbai' ||
-        pathname === '/services/aqua-therapy' ||
-        pathname === '/services/sports-massage' ||
-        pathname === '/services/clinical-pilates' ||
-        pathname === '/services/athlete-screening' ||
-        pathname === '/services/sports-psychology' ||
-        pathname === '/services/physiotherapy' ||
-        pathname === '/athlete-screening-mumbai' ||
-        pathname === '/aqua-therapy-mumbai';
+    const isServiceLanding = pathname?.startsWith('/services-demo/');
 
     if (isStudio) {
         return <>{children}</>;

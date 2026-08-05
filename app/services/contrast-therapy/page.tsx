@@ -6,7 +6,6 @@ import ServiceSchema from '@/components/schema/ServiceSchema'
 import FAQSchema from '@/components/schema/FAQSchema'
 import { FAQSection } from '@/components/faq-section'
 import { contrastTherapyMumbaiFaqs } from '@/lib/faqs/contrast-therapy-mumbai'
-import ServiceNavbar from '@/components/ServiceNavbar'
 
 export const metadata: Metadata = {
     title: 'Contrast Therapy in Mumbai | R3BOOT Dadar – Sauna & Ice Bath',
@@ -20,10 +19,10 @@ const otherServices = services.filter(s => s.slug !== 'contrast-therapy').slice(
 export default function ContrastTherapyPage() {
     return (
         <main className="min-h-screen bg-white dark:bg-[#0A0A0A]">
-            <ServiceNavbar />
 
             {/* ─── HERO ─── */}
-            <section className="relative h-[70vh] flex items-end overflow-hidden">
+            <section className="flex flex-col min-h-[70vh] overflow-hidden pt-20 lg:pt-24">
+                <div className="relative flex flex-1 flex-col justify-end">
                 <Image
                     src="/images/service/Services_image/Contrast_Therepy.webp"
                     alt="Contrast Therapy Mumbai – R3BOOT Sauna & Ice Bath Dadar"
@@ -59,6 +58,7 @@ export default function ContrastTherapyPage() {
                             Alternating Infrared Sauna and Ice Bath for circulation, resilience, and faster recovery at R3BOOT, Dadar – Mumbai.
                         </p>
                     </div>
+                </div>
                 </div>
             </section>
 

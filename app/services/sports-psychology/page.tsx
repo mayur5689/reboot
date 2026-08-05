@@ -7,7 +7,6 @@ import ServiceSchema from '@/components/schema/ServiceSchema'
 import FAQSchema from '@/components/schema/FAQSchema'
 import { sportsPsychologyFaqs } from '@/lib/faqs/sports-psychology'
 import { HeroTrustBadge, serviceTrustBadges } from '@/components/HeroTrustBadge'
-import ServiceNavbar from '@/components/ServiceNavbar'
 import { HeroSlider } from '@/app/services-demo/contrast-therapy/HeroSlider'
 import { TeamSectionDemo, type TeamMember } from '@/app/services-demo/contrast-therapy/TeamSectionDemo'
 import { TestimonialsCarousel } from './TestimonialsCarousel'
@@ -145,10 +144,10 @@ function PhoneIcon({ className }: { className?: string }) {
 export default function SportsPsychologyPage() {
   return (
     <main className="psych-page min-h-screen bg-white dark:bg-[#0A0A0A]">
-      <ServiceNavbar />
 
       {/* ─── DESKTOP HERO ─── */}
-      <section className="hidden md:flex relative flex-col bg-black overflow-hidden" style={{ minHeight: '92vh' }}>
+      <section className="hidden md:flex flex-col bg-black overflow-hidden pt-20 lg:pt-24" style={{ minHeight: '92vh' }}>
+        <div className="relative flex flex-1 flex-col">
         <div className="absolute inset-0">
           <Image
             src="/images/hero/r3boot-counselling.png"
@@ -172,7 +171,7 @@ export default function SportsPsychologyPage() {
           style={{ background: 'linear-gradient(to top, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.18) 50%, transparent 100%)' }}
         />
 
-        <div className="relative z-10 flex flex-1 flex-col justify-center px-12 lg:px-16 xl:px-20 pt-28 max-w-[54%]">
+        <div className="relative z-10 flex flex-1 flex-col justify-center px-12 lg:px-16 xl:px-20 max-w-[54%]">
           <p className="text-[#A78BFA] text-[11px] font-black tracking-[0.25em] uppercase mb-4">
             Sports Psychology&nbsp;&nbsp;•&nbsp;&nbsp;Counselling&nbsp;&nbsp;•&nbsp;&nbsp;Corporate Training
           </p>
@@ -209,6 +208,7 @@ export default function SportsPsychologyPage() {
         </div>
 
         <HeroTrustBadge items={serviceTrustBadges['sports-psychology']} />
+        </div>
       </section>
 
       {/* ─── MOBILE HERO ─── */}

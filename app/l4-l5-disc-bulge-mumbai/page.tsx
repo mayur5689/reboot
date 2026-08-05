@@ -5,7 +5,6 @@ import { l4L5DiscBulgeFaqs } from '@/lib/faqs/l4-l5-disc-bulge-mumbai'
 import ServiceSchema from '@/components/schema/ServiceSchema'
 import FAQSchema from '@/components/schema/FAQSchema'
 import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema'
-import ServiceNavbar from '@/components/ServiceNavbar'
 import { HeroSlider } from '../services-demo/contrast-therapy/HeroSlider'
 import { TeamSectionDemo } from '../services-demo/contrast-therapy/TeamSectionDemo'
 import { TestimonialsCarousel } from '../services-demo/contrast-therapy/TestimonialsCarousel'
@@ -150,25 +149,24 @@ export default function L4L5DiscBulgeMumbaiPage() {
   return (
     <main className="disc-bulge-page min-h-screen bg-white dark:bg-[#0A0A0A]">
 
-      <ServiceNavbar />
-
       {/* DESKTOP HERO */}
-      <section className="hidden md:flex relative bg-black overflow-hidden" style={{ minHeight: '92vh' }}>
-        <div className="absolute inset-0">
-          <Image
-            src="/images/service/Services_image/Physiotherapy_1.webp"
-            alt=""
-            fill
-            className="object-cover"
-            style={{ objectPosition: '50% center' }}
-            priority
+      <section className="hidden md:flex flex-col bg-black overflow-hidden pt-20 lg:pt-24" style={{ minHeight: '92vh' }}>
+        <div className="relative flex flex-1 flex-col">
+          <div className="absolute inset-0">
+            <Image
+              src="/images/service/Services_image/Physiotherapy_1.webp"
+              alt=""
+              fill
+              className="object-cover"
+              style={{ objectPosition: '50% center' }}
+              priority
+            />
+          </div>
+          <div
+            className="absolute inset-0 pointer-events-none"
+            style={{ background: 'linear-gradient(to right, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.5) 20%, transparent 30%)' }}
           />
-        </div>
-        <div
-          className="absolute inset-0 pointer-events-none"
-          style={{ background: 'linear-gradient(to right, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.5) 20%, transparent 30%)' }}
-        />
-        <div className="relative z-10 flex flex-col justify-center px-12 lg:px-16 xl:px-20 py-24 max-w-[54%]">
+          <div className="relative z-10 flex flex-1 flex-col justify-center px-12 lg:px-16 xl:px-20 max-w-[54%]">
           <p className="text-[#A78BFA] text-[11px] font-black tracking-[0.25em] uppercase mb-5">
             Non-Surgical&nbsp;&nbsp;•&nbsp;&nbsp;Physio-Led&nbsp;&nbsp;•&nbsp;&nbsp;Most Improve Without Surgery
           </p>
@@ -237,6 +235,7 @@ export default function L4L5DiscBulgeMumbaiPage() {
                 <p className="text-white/40 text-[12px]">Integrated Rehab</p>
               </div>
             </div>
+          </div>
           </div>
         </div>
       </section>

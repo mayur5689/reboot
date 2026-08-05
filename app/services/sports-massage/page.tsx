@@ -9,7 +9,6 @@ import FAQSchema from '@/components/schema/FAQSchema'
 import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema'
 import { sportsMassageFaqs } from '@/lib/faqs/sports-massage'
 import { HeroTrustBadge, serviceTrustBadges } from '@/components/HeroTrustBadge'
-import ServiceNavbar from '@/components/ServiceNavbar'
 import { HeroSlider } from '@/app/services-demo/contrast-therapy/HeroSlider'
 import { TestimonialsCarousel } from './TestimonialsCarousel'
 import { LocationSection } from './LocationSection'
@@ -154,10 +153,10 @@ function PhoneIcon({ className }: { className?: string }) {
 export default function SportsMassagePage() {
   return (
     <main className="ct-page min-h-screen bg-white dark:bg-[#0A0A0A] pb-24 md:pb-0">
-      <ServiceNavbar />
 
       {/* ─── DESKTOP HERO ─── */}
-      <section className="hidden md:flex relative flex-col bg-black overflow-hidden" style={{ minHeight: '92vh' }}>
+      <section className="hidden md:flex flex-col bg-black overflow-hidden pt-20 lg:pt-24" style={{ minHeight: '92vh' }}>
+        <div className="relative flex flex-1 flex-col">
         <div className="absolute inset-0">
           <Image
             src="/images/hero/sports-massage-hero.png"
@@ -181,7 +180,7 @@ export default function SportsMassagePage() {
           style={{ background: 'linear-gradient(to top, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.18) 50%, transparent 100%)' }}
         />
 
-        <div className="relative z-10 flex flex-1 flex-col justify-center px-12 lg:px-16 xl:px-20 pt-28 max-w-[54%]">
+        <div className="relative z-10 flex flex-1 flex-col justify-center px-12 lg:px-16 xl:px-20 max-w-[54%]">
           <p className="text-[#A78BFA] text-[11px] font-black tracking-[0.25em] uppercase mb-4">
             Clinical Recovery&nbsp;&nbsp;•&nbsp;&nbsp;Certified Specialists&nbsp;&nbsp;•&nbsp;&nbsp;Performance-Driven
           </p>
@@ -220,6 +219,7 @@ export default function SportsMassagePage() {
         </div>
 
         <HeroTrustBadge items={serviceTrustBadges['sports-massage']} />
+        </div>
       </section>
 
       {/* ─── MOBILE HERO ─── */}

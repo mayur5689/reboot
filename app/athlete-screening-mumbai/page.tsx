@@ -7,7 +7,6 @@ import ServiceSchema from '@/components/schema/ServiceSchema'
 import FAQSchema from '@/components/schema/FAQSchema'
 import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema'
 import { athleteScreeningFaqs } from '@/lib/faqs/athlete-screening'
-import ServiceNavbar from '@/components/ServiceNavbar'
 import { HeroSlider } from '@/app/services-demo/contrast-therapy/HeroSlider'
 import { TestimonialsCarousel } from '@/app/services-demo/contrast-therapy/TestimonialsCarousel'
 import { LocationSection } from '@/app/services-demo/contrast-therapy/LocationSection'
@@ -160,12 +159,11 @@ export default function AthleteScreeningMumbaiPage() {
   return (
     <main className="as-page min-h-screen bg-white dark:bg-[#0A0A0A]">
 
-      <ServiceNavbar />
-
       {/* ─────────────────────────────────────────────
           DESKTOP HERO (md+): full-bleed bg images, text overlaid left
       ───────────────────────────────────────────── */}
-      <section className="hidden md:flex relative bg-black overflow-hidden" style={{ minHeight: '92vh' }}>
+      <section className="hidden md:flex flex-col bg-black overflow-hidden pt-20 lg:pt-24" style={{ minHeight: '92vh' }}>
+        <div className="relative flex flex-1 flex-col">
 
         {/* BG: full image */}
         <div className="absolute inset-0">
@@ -186,7 +184,7 @@ export default function AthleteScreeningMumbaiPage() {
         />
 
         {/* TEXT CONTENT — left side, relative z-10 */}
-        <div className="relative z-10 flex flex-col justify-center px-12 lg:px-16 xl:px-20 py-24 max-w-[54%]">
+        <div className="relative z-10 flex flex-1 flex-col justify-center px-12 lg:px-16 xl:px-20 max-w-[54%]">
 
           {/* Label row */}
           <p className="text-[#A78BFA] text-[11px] font-black tracking-[0.25em] uppercase mb-5">
@@ -281,6 +279,7 @@ export default function AthleteScreeningMumbaiPage() {
           </div>
         </div>
 
+        </div>
       </section>
 
       {/* ─────────────────────────────────────────────

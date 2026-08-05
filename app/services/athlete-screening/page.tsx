@@ -8,7 +8,6 @@ import FAQSchema from '@/components/schema/FAQSchema'
 import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema'
 import { athleteScreeningFaqs } from '@/lib/faqs/athlete-screening'
 import { HeroTrustBadge, serviceTrustBadges } from '@/components/HeroTrustBadge'
-import ServiceNavbar from '@/components/ServiceNavbar'
 import { HeroSlider } from '@/app/services-demo/contrast-therapy/HeroSlider'
 import { TeamSectionDemo } from '@/app/services-demo/contrast-therapy/TeamSectionDemo'
 import { TestimonialsCarousel } from './TestimonialsCarousel'
@@ -105,12 +104,11 @@ export default function AthleteScreeningPage() {
     return (
         <main className="min-h-screen bg-white dark:bg-[#0A0A0A]">
 
-            <ServiceNavbar />
-
             {/* ─────────────────────────────────────────────
                 DESKTOP HERO (md+): full-bleed bg image, text overlaid left
             ───────────────────────────────────────────── */}
-            <section className="hidden md:flex relative flex-col bg-black overflow-hidden" style={{ minHeight: '92vh' }}>
+            <section className="hidden md:flex flex-col bg-black overflow-hidden pt-20 lg:pt-24" style={{ minHeight: '92vh' }}>
+                <div className="relative flex flex-1 flex-col">
                 <div className="absolute inset-0">
                     <Image
                         src="https://res.cloudinary.com/dj7bot2uc/image/upload/v1785859437/Hero_image_fsjnt8.webp"
@@ -134,7 +132,7 @@ export default function AthleteScreeningPage() {
                     style={{ background: 'linear-gradient(to top, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.18) 50%, transparent 100%)' }}
                 />
 
-                <div className="relative z-10 flex flex-1 flex-col justify-center px-12 lg:px-16 xl:px-20 pt-28 max-w-[54%]">
+                <div className="relative z-10 flex flex-1 flex-col justify-center px-12 lg:px-16 xl:px-20 max-w-[54%]">
                     <p className="text-[#A78BFA] text-[11px] font-black tracking-[0.25em] uppercase mb-4">
                         Evidence-Based&nbsp;&nbsp;•&nbsp;&nbsp;Sport-Specific&nbsp;&nbsp;•&nbsp;&nbsp;Physio-Led
                     </p>
@@ -172,6 +170,7 @@ export default function AthleteScreeningPage() {
                 </div>
 
                 <HeroTrustBadge items={serviceTrustBadges['athlete-screening']} />
+                </div>
             </section>
 
             {/* ─────────────────────────────────────────────

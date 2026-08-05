@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import ServiceNavbar from '@/components/ServiceNavbar'
 
 export const metadata: Metadata = {
   title: 'Thank You | Aqua Therapy Consultation | R3BOOT',
@@ -15,9 +14,8 @@ const WHATSAPP_URL =
 export default function AquaTherapyThankYouPage() {
   return (
     <main className="min-h-screen bg-[#F3F4F6] dark:bg-[#0A0A0A]">
-      <ServiceNavbar showPromoRibbon />
 
-      <section className="flex items-center justify-center px-4 sm:px-6 py-16 sm:py-24 lg:py-32">
+      <section className="flex items-center justify-center px-4 sm:px-6 pt-36 sm:pt-40 lg:pt-44 pb-16 sm:pb-24 lg:pb-32">
         <div className="w-full max-w-lg rounded-[1.75rem] sm:rounded-[2rem] bg-white dark:bg-[#111111] border border-gray-100 dark:border-white/[0.08] shadow-sm p-8 sm:p-10 text-center">
           <div className="w-14 h-14 rounded-full bg-[#513394] flex items-center justify-center mx-auto mb-5">
             <svg className="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
