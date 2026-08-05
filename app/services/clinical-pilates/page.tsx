@@ -619,7 +619,7 @@ export default function ClinicalPilatesPage() {
             <LocationSection />
 
             {/* ─── FAQ ─── */}
-            <FAQSection faqs={clinicalPilatesMumbaiFaqs} />
+            <FAQSection faqs={clinicalPilatesMumbaiFaqs} layout="grid" />
 
             {/* ─── CTA: MOBILE CARD ─── */}
             <section className="md:hidden bg-white dark:bg-[#0A0A0A] pt-10 pb-28">

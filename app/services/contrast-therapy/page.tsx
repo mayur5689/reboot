@@ -431,7 +431,7 @@ export default function ContrastTherapyPage() {
                 </div>
             </section>
 
-            <FAQSection faqs={contrastTherapyMumbaiFaqs} />
+            <FAQSection faqs={contrastTherapyMumbaiFaqs} layout="grid" />
             <FAQSchema faqs={contrastTherapyMumbaiFaqs} />
             <ServiceSchema
                 serviceName="Contrast Therapy"
