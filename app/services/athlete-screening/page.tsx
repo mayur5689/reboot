@@ -8,6 +8,7 @@ import FAQSchema from '@/components/schema/FAQSchema'
 import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema'
 import { athleteScreeningFaqs } from '@/lib/faqs/athlete-screening'
 import { HeroTrustBadge, serviceTrustBadges } from '@/components/HeroTrustBadge'
+import { MobileHeroTrust } from '@/components/MobileHeroTrust'
 import { HeroSlider } from '@/app/services-demo/contrast-therapy/HeroSlider'
 import { TeamSectionDemo } from '@/app/services-demo/contrast-therapy/TeamSectionDemo'
 import { TestimonialsCarousel } from './TestimonialsCarousel'
@@ -195,14 +196,10 @@ export default function AthleteScreeningPage() {
                         A full-body MSK exam, gait analysis, and sport-specific special tests — supervised by physiotherapists at R3BOOT Dadar.
                     </p>
 
-                    <HeroTrustBadge items={serviceTrustBadges['athlete-screening']} className="px-0" />
+                    <MobileHeroTrust items={serviceTrustBadges['athlete-screening']} />
 
                 </div>
             </section>
-
-            {/* ─── SIGNS YOU NEED A SCREENING ─── */}
-            <PainPointsSection />
-
             {/* ─── WHAT TO EXPECT (4 STEPS) ─── */}
             <section id="session" className="py-16 sm:py-20 lg:py-28 bg-white dark:bg-[#0A0A0A]">
                 <div className="container mx-auto px-5 sm:px-6 lg:px-8">
@@ -226,7 +223,7 @@ export default function AthleteScreeningPage() {
                             return (
                                 <div
                                     key={i}
-                                    className="relative flex flex-col aspect-square p-6 lg:p-7 rounded-2xl bg-[#F8F9FA] dark:bg-white/[0.04] border border-gray-100 dark:border-white/[0.08] group hover:border-[#513394]/30 hover:shadow-lg dark:hover:shadow-none transition-all duration-300 overflow-hidden"
+                                    className="relative flex flex-col sm:aspect-square p-5 sm:p-6 lg:p-7 rounded-2xl bg-[#F8F9FA] dark:bg-white/[0.04] border border-gray-100 dark:border-white/[0.08] group hover:border-[#513394]/30 hover:shadow-lg dark:hover:shadow-none transition-all duration-300 overflow-hidden"
                                 >
                                     <div className="absolute -top-4 -right-2 text-[5.5rem] lg:text-[6rem] font-black text-gray-100 dark:text-white/[0.035] leading-none select-none pointer-events-none">
                                         {step.number}
@@ -245,6 +242,10 @@ export default function AthleteScreeningPage() {
 
                 </div>
             </section>
+
+
+            {/* ─── SIGNS YOU NEED A SCREENING ─── */}
+            <PainPointsSection />
 
             {/* ─── METHODOLOGY (image left, techniques right) ─── */}
             <section id="methodology" className="py-16 sm:py-24 lg:py-32 bg-[#F8F9FA] dark:bg-[#0D0D0D]">

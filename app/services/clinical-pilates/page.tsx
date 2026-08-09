@@ -7,6 +7,7 @@ import ServiceSchema from '@/components/schema/ServiceSchema'
 import FAQSchema from '@/components/schema/FAQSchema'
 import { clinicalPilatesMumbaiFaqs } from '@/lib/faqs/clinical-pilates-mumbai'
 import { HeroTrustBadge, serviceTrustBadges } from '@/components/HeroTrustBadge'
+import { MobileHeroTrust } from '@/components/MobileHeroTrust'
 import { HeroSlider } from '@/app/services-demo/contrast-therapy/HeroSlider'
 import { TeamSectionDemo } from '@/app/services-demo/contrast-therapy/TeamSectionDemo'
 import { TestimonialsCarousel } from './TestimonialsCarousel'
@@ -200,15 +201,10 @@ export default function ClinicalPilatesPage() {
                         Movement prescribed, not performed. Reformer and mat-based programs for back pain, scoliosis, post-surgery rehab, and sports performance at R3BOOT Dadar.
                     </p>
 
-                    {/* Trust badge — glass panel, same component as desktop, 2x2 on mobile */}
-                    <HeroTrustBadge items={serviceTrustBadges['clinical-pilates']} className="px-0" />
+                    <MobileHeroTrust items={serviceTrustBadges['clinical-pilates']} />
 
                 </div>
             </section>
-
-            {/* ─── SIGNS YOU NEED CLINICAL PILATES — accordion + image crossfade ─── */}
-            <PainPointsSection />
-
             {/* ─── WHAT TO EXPECT (4 STEPS) ─── */}
             <section id="session" className="py-16 sm:py-20 lg:py-28 bg-white dark:bg-[#0A0A0A]">
                 <div className="container mx-auto px-5 sm:px-6 lg:px-8">
@@ -243,8 +239,8 @@ export default function ClinicalPilatesPage() {
                             {
                                 icon: Stethoscope,
                                 number: '03',
-                                title: 'Supervised Session',
-                                body: 'Your physiotherapist guides every rep. Where needed, dry needling or manual therapy is integrated into the same session.',
+                                title: 'Integrated',
+                                body: 'Pilates, dry needling, and manual therapy can run in the same session when your body needs it, so activation and movement progress together.',
                             },
                             {
                                 icon: TrendingUp,
@@ -257,7 +253,7 @@ export default function ClinicalPilatesPage() {
                             return (
                                 <div
                                     key={i}
-                                    className="relative flex flex-col aspect-square p-6 lg:p-7 rounded-2xl bg-[#F8F9FA] dark:bg-white/[0.04] border border-gray-100 dark:border-white/[0.08] group hover:border-[#513394]/30 hover:shadow-lg dark:hover:shadow-none transition-all duration-300 overflow-hidden"
+                                    className="relative flex flex-col sm:aspect-square p-5 sm:p-6 lg:p-7 rounded-2xl bg-[#F8F9FA] dark:bg-white/[0.04] border border-gray-100 dark:border-white/[0.08] group hover:border-[#513394]/30 hover:shadow-lg dark:hover:shadow-none transition-all duration-300 overflow-hidden"
                                 >
                                     <div className="absolute -top-4 -right-2 text-[5.5rem] lg:text-[6rem] font-black text-gray-100 dark:text-white/[0.035] leading-none select-none pointer-events-none">
                                         {step.number}
@@ -276,6 +272,10 @@ export default function ClinicalPilatesPage() {
 
                 </div>
             </section>
+
+
+            {/* ─── SIGNS YOU NEED CLINICAL PILATES — accordion + image crossfade ─── */}
+            <PainPointsSection />
 
             {/* ─── METHODOLOGY (image left, techniques right) ─── */}
             <section id="methodology" className="py-16 sm:py-24 lg:py-32 bg-[#F8F9FA] dark:bg-[#0D0D0D]">
@@ -389,7 +389,7 @@ export default function ClinicalPilatesPage() {
                                     {
                                         icon: Zap,
                                         title: 'Dry Needling Integration',
-                                        body: 'Where muscle inhibition or trigger points prevent correct activation, dry needling restores normal neuromuscular function before Pilates exercise. Dr. Vaishali is certified in dry needling.',
+                                        body: 'Where muscle inhibition or trigger points prevent correct activation, dry needling restores normal neuromuscular function before Pilates exercise. Our physiotherapy team is certified in dry needling.',
                                         light: '#B45309', dark: '#FBBF24',
                                         bgLight: 'rgba(180,83,9,0.08)', bgDark: 'rgba(251,191,36,0.14)',
                                         borderLight: 'rgba(180,83,9,0.35)', borderDark: 'rgba(251,191,36,0.45)',

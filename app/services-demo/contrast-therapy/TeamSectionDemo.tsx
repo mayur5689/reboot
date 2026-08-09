@@ -22,7 +22,7 @@ const DEFAULT_MEMBERS: TeamMember[] = [
   {
     name: 'Dr. Hiral Parikh',
     role: 'Lead Physiotherapist',
-    credentials: 'BPT — Padmashree Dr. D.Y. Patil College of Physiotherapy',
+    credentials: 'BPT, Padmashree Dr. D.Y. Patil College of Physiotherapy',
     experience: '15+ Years Experience',
     description:
       'Every protocol is supervised by a qualified physiotherapist. Your safety, comfort and recovery are in expert hands.',
@@ -35,7 +35,7 @@ const DEFAULT_MEMBERS: TeamMember[] = [
     credentials: 'Dry Needling & Aquatic Rehabilitation Certified',
     experience: 'Certified Specialist',
     description:
-      'Specialised in dry needling and aquatic rehabilitation — treatment approaches most clinics in Mumbai do not offer.',
+      'Specialised in dry needling and aquatic rehabilitation, treatment approaches most clinics in Mumbai do not offer.',
     image: '/images/trainer2/Trainers/Vaishali_rawat.webp',
     stats: { years: '10+', rating: '5.0 ★' },
   },

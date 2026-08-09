@@ -1,14 +1,14 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { PersonStanding, Dumbbell, CircleDot, Activity, Waves, Bike, UserRound } from 'lucide-react'
+import { PersonStanding, Dumbbell, CircleDot, Briefcase, Waves, Building2, UserRound } from 'lucide-react'
 
-const SPORTS = [
-  { icon: PersonStanding, label: 'Marathon Runners' },
-  { icon: Dumbbell, label: 'CrossFit Athletes' },
+const AUDIENCES = [
+  { icon: PersonStanding, label: 'Athletes & Sport' },
+  { icon: Dumbbell, label: 'Gym Goers' },
+  { icon: Briefcase, label: 'Corporate Pros' },
+  { icon: Building2, label: 'Desk Workers' },
   { icon: CircleDot, label: 'Cricket Players' },
-  { icon: Activity, label: 'Gym Athletes' },
-  { icon: Waves, label: 'Swimmers' },
-  { icon: Bike, label: 'Cyclists' },
+  { icon: Waves, label: 'Runners & Swimmers' },
 ]
 
 const HEAT_PATH = 'M20.5,24c-.042,0-.086-.005-.129-.017-.267-.071-.426-.345-.354-.612,.114-.428,.243-.826,.369-1.218,.315-.98,.614-1.906,.614-3.16,0-2.766-1.029-4.801-1.927-6.265-.965-1.576-2.073-3.771-2.073-6.788,0-1.884,.772-4.482,1.294-5.646,.113-.252,.409-.365,.661-.251,.252,.113,.364,.409,.251,.661-.421,.938-1.206,3.436-1.206,5.236,0,2.766,1.029,4.801,1.927,6.265,.965,1.576,2.073,3.771,2.073,6.788,0,1.411-.337,2.456-.663,3.467-.121,.375-.244,.758-.354,1.168-.06,.224-.262,.371-.483,.371Zm-7,0c-.042,0-.086-.005-.129-.017-.267-.071-.426-.345-.354-.612,.114-.428,.243-.826,.369-1.218,.315-.98,.614-1.906,.614-3.16,0-2.766-1.029-4.801-1.927-6.265-.965-1.576-2.073-3.771-2.073-6.788,0-1.884,.772-4.482,1.294-5.646,.112-.252,.409-.365,.661-.251,.252,.113,.364,.409,.251,.661-.421,.938-1.206,3.436-1.206,5.236,0,2.766,1.029,4.801,1.927,6.265,.965,1.576,2.073,3.771,2.073,6.788,0,1.411-.337,2.456-.663,3.467-.121,.375-.244,.758-.354,1.168-.06,.224-.262,.371-.483,.371Zm-7,0c-.042,0-.086-.005-.129-.017-.267-.071-.426-.345-.354-.612,.114-.428,.243-.826,.369-1.218,.315-.98,.614-1.906,.614-3.16,0-2.766-1.029-4.801-1.927-6.265-.965-1.576-2.073-3.771-2.073-6.788,0-1.884,.772-4.482,1.294-5.646,.112-.252,.41-.365,.661-.251,.252,.113,.364,.409,.251,.661-.421,.938-1.206,3.436-1.206,5.236,0,2.766,1.029,4.801,1.927,6.265,.965,1.576,2.073,3.771,2.073,6.788,0,1.411-.337,2.456-.663,3.467-.121,.375-.244,.758-.354,1.168-.06,.224-.262,.371-.483,.371Z'
@@ -70,18 +70,18 @@ export function WhyMumbaiAthletesSection() {
               MUMBAI //
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-[2.75rem] font-black text-gray-900 dark:text-white tracking-tight leading-[1.1] mb-5">
-              Why Mumbai Athletes<br />
-              Choose <span className="text-[#513394] dark:text-[#7B5FCA]">Contrast Therapy</span>
+              Why Mumbai Chooses<br />
+              <span className="text-[#513394] dark:text-[#7B5FCA]">Contrast Therapy</span>
             </h2>
             <div className="w-10 h-[2px] bg-[#513394] dark:bg-[#7B5FCA] mb-5" />
             <p className="text-gray-500 dark:text-white/45 text-base leading-relaxed mb-8">
-              Mumbai&apos;s climate and intense training loads make recovery harder. Contrast therapy resets your vascular system, reduces inflammation and helps your body perform at its best.
+              Heat, humidity, long desk days, and heavy training all stack recovery debt. Contrast therapy helps athletes, gym goers, and corporate professionals reset circulation, reduce soreness, and feel sharper again.
             </p>
 
             {/* Audience pills */}
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-8">
-              {SPORTS.map((sport, i) => {
-                const Icon = sport.icon
+              {AUDIENCES.map((audience, i) => {
+                const Icon = audience.icon
                 return (
                   <div
                     key={i}
@@ -89,7 +89,7 @@ export function WhyMumbaiAthletesSection() {
                   >
                     <Icon className="w-4 h-4 text-[#513394] dark:text-[#A78BFA] shrink-0" strokeWidth={2} />
                     <span className="text-gray-700 dark:text-white/80 text-[13px] font-bold leading-tight">
-                      {sport.label}
+                      {audience.label}
                     </span>
                   </div>
                 )

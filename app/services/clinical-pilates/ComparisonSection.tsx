@@ -61,11 +61,11 @@ function Divider({ row }: { row: number }) {
 
 export function ComparisonSection() {
   return (
-    <section className="py-16 sm:py-20 lg:py-28 bg-[#F8F9FA] dark:bg-[#09090E]">
+    <section className="py-10 md:py-16 lg:py-28 bg-[#F8F9FA] dark:bg-[#09090E]">
       <div className="container mx-auto px-5 sm:px-6 lg:px-8">
 
         {/* Centered heading */}
-        <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-14">
+        <div className="hidden md:block text-center max-w-2xl mx-auto mb-12 sm:mb-14">
           <span className="text-[11px] font-black tracking-[0.3em] text-[#513394] dark:text-[#A78BFA] uppercase mb-4 block">
             COMPARISON //
           </span>
@@ -78,46 +78,54 @@ export function ComparisonSection() {
             A group class follows a fixed sequence for everyone in the room. Clinical Pilates starts with your diagnosis and progresses on objective clinical markers.
           </p>
         </div>
+        {/* MOBILE: compact comparison table */}
+        <div className="md:hidden relative rounded-2xl border border-gray-100 dark:border-white/[0.08] bg-white dark:bg-[#0D0D13] overflow-hidden">
+          <div className="grid grid-cols-[68px_minmax(0,1fr)_minmax(0,1.2fr)]">
+            <div className="px-1 py-3 border-b border-gray-100 dark:border-white/[0.07]" />
+            <div className="flex items-center justify-center px-1.5 py-3 border-b border-gray-100 dark:border-white/[0.07]">
+              <span className="text-gray-500 dark:text-white/45 font-black text-[10px] tracking-wide uppercase text-center leading-tight">
+                Group Class
+              </span>
+            </div>
+            <div className="flex items-center justify-center px-1.5 py-3 border-b border-[#7B5FCA]/30 bg-[rgba(123,95,202,0.06)]">
+              <span className="text-[#513394] dark:text-[#A78BFA] font-black text-[10px] tracking-wide uppercase text-center leading-tight">
+                Clinical
+              </span>
+            </div>
 
-        {/* MOBILE: stacked cards — one per factor, Group Class then Clinical Pilates */}
-        <div className="md:hidden flex flex-col gap-3">
-          {ROWS.map((row, i) => {
-            const Icon = row.icon
-            return (
-              <div key={i} className="rounded-2xl border border-gray-100 dark:border-white/[0.08] bg-white dark:bg-[#0D0D13] overflow-hidden">
-                <div className="flex items-center gap-3 px-5 py-4 border-b border-gray-100 dark:border-white/[0.06]">
-                  <div className="w-9 h-9 rounded-full border-[1.5px] border-[#513394] dark:border-[#A78BFA] flex items-center justify-center shrink-0">
-                    <Icon className="w-4 h-4 text-[#513394] dark:text-[#A78BFA]" strokeWidth={2} />
-                  </div>
-                  <span className="text-gray-900 dark:text-white font-black text-[13px] tracking-wide uppercase">{row.label}</span>
-                </div>
-
-                <div className="px-5 py-4 border-b border-gray-100 dark:border-white/[0.06]">
-                  <div className="flex items-center gap-2 mb-1.5">
-                    <Users className="w-3.5 h-3.5 text-gray-400 dark:text-white/35" strokeWidth={2} />
-                    <span className="text-gray-400 dark:text-white/35 text-[10px] font-black tracking-widest uppercase">Group Pilates Class</span>
-                  </div>
-                  <p className="text-gray-500 dark:text-white/45 text-[14px] leading-snug pl-[22px]">{row.groupClass}</p>
-                </div>
-
-                <div className="px-5 py-4 bg-[#513394]/[0.05] dark:bg-[rgba(123,95,202,0.08)]">
-                  <div className="flex items-center justify-between mb-1.5">
-                    <div className="flex items-center gap-2">
-                      <Stethoscope className="w-3.5 h-3.5 text-[#513394] dark:text-[#A78BFA]" strokeWidth={2} />
-                      <span className="text-[#513394] dark:text-[#A78BFA] text-[10px] font-black tracking-widest uppercase">Clinical Pilates</span>
+            {ROWS.map((row, i) => {
+              const Icon = row.icon
+              const isLast = i === ROWS.length - 1
+              return (
+                <Fragment key={i}>
+                  <div className={`flex flex-col items-center justify-center gap-1 px-1 py-3 ${!isLast ? 'border-b border-gray-100 dark:border-white/[0.07]' : ''}`}>
+                    <div className="w-7 h-7 rounded-full border-[1.5px] border-[#513394] dark:border-[#A78BFA] flex items-center justify-center shrink-0">
+                      <Icon className="w-3 h-3 text-[#513394] dark:text-[#A78BFA]" strokeWidth={2} />
                     </div>
-                    <div className="w-5 h-5 rounded-full bg-[#7B5FCA] flex items-center justify-center shrink-0">
-                      <Check className="w-3 h-3 text-white" strokeWidth={3} />
+                    <span className="text-gray-900 dark:text-white font-black text-[9px] tracking-wide uppercase text-center leading-tight">
+                      {row.label}
+                    </span>
+                  </div>
+                  <div className={`flex items-center justify-center px-2 py-3 text-center ${!isLast ? 'border-b border-gray-100 dark:border-white/[0.07]' : ''}`}>
+                    <span className="text-gray-500 dark:text-white/45 text-[11px] leading-snug">
+                      {row.groupClass}
+                    </span>
+                  </div>
+                  <div className={`flex items-center justify-between gap-1 px-2 py-3 bg-[rgba(123,95,202,0.06)] ${!isLast ? 'border-b border-[#7B5FCA]/20' : ''}`}>
+                    <span className="text-[#513394] dark:text-[#C4B5FD] font-bold text-[11px] leading-snug">
+                      {row.clinical}
+                    </span>
+                    <div className="w-4 h-4 rounded-full bg-[#7B5FCA] flex items-center justify-center shrink-0">
+                      <Check className="w-2.5 h-2.5 text-white" strokeWidth={3} />
                     </div>
                   </div>
-                  <p className="text-[#513394] dark:text-[#C4B5FD] font-bold text-[14px] leading-snug pl-[22px]">{row.clinical}</p>
-                </div>
-              </div>
-            )
-          })}
+                </Fragment>
+              )
+            })}
+          </div>
         </div>
 
-        {/* DESKTOP: comparison table — fully explicit CSS grid (every cell has its own
+{/* DESKTOP: comparison table — fully explicit CSS grid (every cell has its own
             row + column) so nothing can be knocked out of place by auto-flow */}
         <div className="hidden md:block relative max-w-6xl mx-auto rounded-3xl border border-gray-100 dark:border-white/[0.08] bg-white dark:bg-[#0D0D13] overflow-hidden">
 

@@ -53,6 +53,7 @@ skills-lock.json
 .env*
 
 # marketing / build / research — local only, never commit
+research/ai-search-content-topics.md
 MARKETING_CAROUSEL/
 /dist/
 .sanity/

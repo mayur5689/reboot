@@ -1,37 +1,62 @@
 export const clinicalPilatesMumbaiFaqs = [
   {
-    question: 'What is the difference between Pilates and Clinical Pilates?',
+    question: 'What is the best clinical Pilates option in Mumbai for rehab and injury recovery?',
     answer:
-      'Regular Pilates is a group fitness class taught by a Pilates instructor. Clinical Pilates is a physiotherapy-led program designed around your specific diagnosis, injury history, and movement deficits. At R3BOOT, every clinical pilates program starts with a physiotherapy assessment. Your exercises are prescribed, not generic, and progress based on your clinical response rather than a fixed class structure.',
+      'Choose a physiotherapist-led clinic with a full assessment before exercise, not a group fitness studio. R3BOOT in Dadar East offers clinical Pilates for back pain, posture correction, sports conditioning, and post-surgery rehab. Sessions are one-to-one, reformer and mat based, and led by physiotherapists including Dr. Hiral Parikh.',
   },
   {
-    question: 'What is the cost of clinical Pilates in Mumbai?',
+    question: 'Where is R3BOOT clinical Pilates located in Mumbai?',
     answer:
-      'Call +91 97023 68612 or WhatsApp R3BOOT for current session fees and package options. All sessions are conducted by a qualified physiotherapist at Palai Plaza, Dadar East, Mumbai.',
+      'R3BOOT is at Palai Plaza, 203, Swami Gyan Jivandas Marg, Dadar East, Mumbai 400014, about 5 minutes from Dadar station. Clients commonly visit from Bandra, Lower Parel, Worli, Parel, Matunga, Sion, Andheri, and South Mumbai.',
   },
   {
-    question: 'Is clinical Pilates worth it for lower back pain?',
+    question: 'How much do reformer Pilates or clinical Pilates sessions cost in Mumbai at R3BOOT?',
     answer:
-      'Clinical Pilates is one of the most evidence-supported interventions for chronic lower back pain. The core stabilisation and spinal segmental control work directly targets the muscular deficits that drive recurring back pain. Most clients with lower back pain notice measurable improvement in pain and function within 6–8 sessions when the program is correctly prescribed.',
+      'Fees depend on your assessment and program plan. For current clinical Pilates and reformer session pricing at R3BOOT Dadar, call or WhatsApp +91 97023 68612. After your first assessment, you get a clear session estimate based on your condition, not a generic membership push.',
   },
   {
-    question: 'How many clinical Pilates sessions do I need?',
+    question: 'How do I book a clinical Pilates session at R3BOOT Dadar?',
     answer:
-      'For acute and sub-acute conditions (less than 3 months), most clients see significant improvement in 6–10 sessions. For chronic conditions, post-surgical rehabilitation, or scoliosis management, a longer program of 12–20 sessions is typically recommended. Your physiotherapist at R3BOOT will give you a realistic timeline after your initial assessment.',
+      'Call +91 97023 68612 or WhatsApp the same number to book. No doctor referral is required. Your first visit includes a physiotherapy assessment before any Pilates exercise begins. Appointment-based booking is recommended.',
   },
   {
-    question: 'Do I need a physiotherapy assessment before starting clinical Pilates at R3BOOT?',
+    question: 'What are the clinical Pilates hours at R3BOOT?',
     answer:
-      'Yes. Every client starts with a physiotherapy assessment before their first clinical Pilates session. This is what makes clinical Pilates different from a fitness class. The assessment identifies your movement deficits, pain patterns, and goals. Your program is designed from those findings, not adapted from a standard class.',
+      'Monday and Tuesday: 8:00 AM to 9:00 PM. Wednesday: 8:00 AM to 4:00 PM. Thursday to Saturday: 8:00 AM to 9:00 PM. Sunday: 2:00 PM to 9:00 PM. Early morning, evening, and weekend slots are available for working professionals and athletes.',
   },
   {
-    question: 'Can clinical Pilates help after surgery?',
+    question: 'What should I expect in my first clinical Pilates session at R3BOOT?',
     answer:
-      'Yes. Post-surgical rehabilitation is one of the most common reasons clients come to R3BOOT for clinical Pilates. Common post-surgical applications include spinal surgery recovery, ACL and knee reconstruction, hip and shoulder replacements, and abdominal surgeries. Timing and exercise selection depend on your surgical procedure and your surgeon\'s clearance. Our physiotherapists coordinate with your surgical team when needed.',
+      'A full session typically lasts 45 to 60 minutes. Your physiotherapist assesses posture, movement patterns, strength deficits, and pain triggers first. Exercises and equipment, reformer or mat, are then prescribed for your specific clinical needs, with a clear progression plan.',
   },
   {
-    question: 'Is clinical Pilates available on a reformer at R3BOOT?',
+    question: 'What is the difference between mat Pilates and reformer Pilates at R3BOOT?',
     answer:
-      'Yes. R3BOOT offers both mat-based and reformer-based clinical Pilates. The reformer provides resistance-based loading and spring-assisted support that is particularly useful in early post-surgical rehabilitation and for clients with limited mobility. Your physiotherapist will determine the appropriate format based on your clinical needs.',
+      'Mat Pilates uses bodyweight and small props on the mat. Reformer Pilates uses spring resistance for more precise loading and support, which is useful in early rehab and for controlled strength work. At R3BOOT, your physiotherapist chooses mat, reformer, or both based on your assessment, not a fixed class format.',
+  },
+  {
+    question: 'Is clinical Pilates at R3BOOT good for injury rehabilitation in Mumbai?',
+    answer:
+      'Yes. Clinical Pilates at R3BOOT is built for rehab, not general fitness classes. Common cases include lower back pain, posture-related neck and shoulder issues, sports injuries, and return-to-training after overload. Where needed, dry needling or manual therapy can be integrated in the same session.',
+  },
+  {
+    question: 'Can clinical Pilates help with posture correction in Mumbai?',
+    answer:
+      'Yes. Posture correction at R3BOOT starts with a physiotherapy assessment of how you sit, stand, and move. Your Pilates program then targets the specific strength and control deficits driving the pattern, rather than generic core classes.',
+  },
+  {
+    question: 'Does R3BOOT offer private one-to-one Pilates sessions in Mumbai?',
+    answer:
+      'Yes. Clinical Pilates at R3BOOT is one-to-one and physiotherapist-led. There are no large group classes. This allows precise cueing, load progression, and clinical integration when dry needling or manual therapy is needed.',
+  },
+  {
+    question: 'Can I do clinical Pilates after surgery at R3BOOT?',
+    answer:
+      'Yes. Post-surgery Pilates is common at R3BOOT for spinal procedures, ACL and knee rehab, hip or shoulder recovery, and similar cases. Timing depends on your surgeon\'s clearance. Bring surgical notes or imaging if you have them. Reformer work is often used for graduated loading before full bodyweight exercise.',
+  },
+  {
+    question: 'Who leads clinical Pilates at R3BOOT, and what qualifications matter?',
+    answer:
+      'Clinical Pilates at R3BOOT is led by qualified physiotherapists, not only fitness instructors. Look for assessment-first programming, clinical reasoning, and the ability to integrate rehab techniques. Our team is certified in dry needling where that support is needed before Pilates activation.',
   },
 ]

@@ -9,6 +9,7 @@ import FAQSchema from '@/components/schema/FAQSchema'
 import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema'
 import { sportsMassageFaqs } from '@/lib/faqs/sports-massage'
 import { HeroTrustBadge, serviceTrustBadges } from '@/components/HeroTrustBadge'
+import { MobileHeroTrust } from '@/components/MobileHeroTrust'
 import { HeroSlider } from '@/app/services-demo/contrast-therapy/HeroSlider'
 import { TestimonialsCarousel } from './TestimonialsCarousel'
 import { LocationSection } from './LocationSection'
@@ -21,8 +22,7 @@ import {
   Crosshair,
   CircleDot,
   Layers,
-  Activity,
-  StretchHorizontal,
+  FileText,
 } from 'lucide-react'
 
 export const metadata: Metadata = {
@@ -242,13 +242,9 @@ export default function SportsMassagePage() {
             Performance-driven massage by certified specialists at R3BOOT, Dadar. Clinical recovery, not spa relaxation.
           </p>
 
-          <HeroTrustBadge items={serviceTrustBadges['sports-massage']} className="px-0" />
+          <MobileHeroTrust items={serviceTrustBadges['sports-massage']} />
         </div>
       </section>
-
-      {/* ─── SIGNS ─── */}
-      <PainPointsSection />
-
       {/* ─── WHAT TO EXPECT ─── */}
       <section id="session" className="py-16 sm:py-20 lg:py-28 bg-white dark:bg-[#0A0A0A]">
         <div className="container mx-auto px-5 sm:px-6 lg:px-8">
@@ -260,7 +256,7 @@ export default function SportsMassagePage() {
               What to expect at <span className="text-[#513394] dark:text-[#8B5CF6]">R3BOOT</span>
             </h2>
             <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed">
-              Each session is structured around your training phase, movement assessment, and recovery goals.
+              Each session is structured around your pain points, movement assessment, and recovery goals.
             </p>
           </div>
 
@@ -282,7 +278,7 @@ export default function SportsMassagePage() {
                 icon: Hand,
                 number: '03',
                 title: 'Targeted Treatment',
-                body: 'Deep tissue, trigger point therapy, and myofascial release based on your assessment — not a generic routine.',
+                body: 'Deep tissue, trigger point therapy, and myofascial release based on your assessment, not a generic routine.',
               },
               {
                 icon: CircleDot,
@@ -291,17 +287,17 @@ export default function SportsMassagePage() {
                 body: 'Cupping is applied where indicated to improve blood flow, reduce tension, and support recovery.',
               },
               {
-                icon: StretchHorizontal,
+                icon: FileText,
                 number: '05',
-                title: 'Activation & Advice',
-                body: 'Assisted stretching, PNF, and muscle activation finish each session. Recovery protocol and home drills before you leave.',
+                title: 'Stiffness Report',
+                body: 'You leave with a clear read on where stiffness is holding, what drove it, and what to prioritise before your next session.',
               },
             ].map((step, i) => {
               const Icon = step.icon
               return (
                 <div
                   key={i}
-                  className="relative flex flex-col aspect-square p-6 lg:p-7 rounded-2xl bg-[#F8F9FA] dark:bg-white/[0.04] border border-gray-100 dark:border-white/[0.08] group hover:border-[#513394]/30 hover:shadow-lg dark:hover:shadow-none transition-all duration-300 overflow-hidden"
+                  className="relative flex flex-col sm:aspect-square p-5 sm:p-6 lg:p-7 rounded-2xl bg-[#F8F9FA] dark:bg-white/[0.04] border border-gray-100 dark:border-white/[0.08] group hover:border-[#513394]/30 hover:shadow-lg dark:hover:shadow-none transition-all duration-300 overflow-hidden"
                 >
                   <div className="absolute -top-4 -right-2 text-[5.5rem] lg:text-[6rem] font-black text-gray-100 dark:text-white/[0.035] leading-none select-none pointer-events-none">
                     {step.number}
@@ -322,6 +318,10 @@ export default function SportsMassagePage() {
         </div>
       </section>
 
+
+      {/* ─── SIGNS ─── */}
+      <PainPointsSection />
+
       {/* ─── METHODOLOGY ─── */}
       <section id="methodology" className="py-16 sm:py-24 lg:py-32 bg-[#F8F9FA] dark:bg-[#0D0D0D]">
         <div className="container mx-auto px-5 sm:px-6 lg:px-8">
@@ -337,7 +337,7 @@ export default function SportsMassagePage() {
               Techniques Used at <span className="text-[#513394] dark:text-[#8B5CF6]">R3BOOT</span>
             </h2>
             <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed">
-              Methods are selected from your assessment findings — not a default routine for every athlete.
+              Methods are selected from your assessment findings, not a default routine for every client.
             </p>
           </div>
 
@@ -399,7 +399,7 @@ export default function SportsMassagePage() {
                   {
                     icon: Crosshair,
                     title: 'Trigger Point Therapy',
-                    body: 'Addresses localised knots and referred pain patterns. A common example: calf trigger points that present as heel pain. Releasing the source — not just the symptom — produces lasting results.',
+                    body: 'Addresses localised knots and referred pain patterns. A common example: calf trigger points that present as heel pain. Releasing the source, not just the symptom, produces lasting results.',
                     light: '#B45309',
                     dark: '#FBBF24',
                     bgLight: 'rgba(180,83,9,0.08)',
@@ -428,17 +428,6 @@ export default function SportsMassagePage() {
                     bgDark: 'rgba(56,189,248,0.14)',
                     borderLight: 'rgba(3,105,161,0.35)',
                     borderDark: 'rgba(56,189,248,0.45)',
-                  },
-                  {
-                    icon: Activity,
-                    title: 'Activation & Mobility Finish',
-                    body: 'Assisted stretching, PNF, and muscle activation close every session so tissue work translates into usable range — not just temporary softness.',
-                    light: '#7C3AED',
-                    dark: '#C4B5FD',
-                    bgLight: 'rgba(124,58,237,0.08)',
-                    bgDark: 'rgba(196,181,253,0.14)',
-                    borderLight: 'rgba(124,58,237,0.35)',
-                    borderDark: 'rgba(196,181,253,0.45)',
                   },
                 ].map((phase, idx, arr) => {
                   const Icon = phase.icon

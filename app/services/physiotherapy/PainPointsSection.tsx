@@ -6,7 +6,7 @@ import Image from 'next/image'
 const POINTS = [
   {
     title: 'Pain that keeps coming back',
-    description: 'Rest calms it. Training or desk work brings it straight back. The underlying pattern was never treated — only the flare.',
+    description: 'Rest calms it. Training or desk work brings it straight back. The underlying pattern was never treated, only the flare.',
     image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1785856300/image-7_bpblht.webp',
   },
   {
@@ -16,12 +16,12 @@ const POINTS = [
   },
   {
     title: 'Cleared after surgery, not confident yet',
-    description: 'Your surgeon has signed off — but you still hesitate to load the joint. You need progressive rehab, not guesswork.',
+    description: 'Your surgeon has signed off, but you still hesitate to load the joint. You need progressive rehab, not guesswork.',
     image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1785856298/image_3_v2_jx6jky.webp',
   },
   {
     title: 'Desk all day, train at night',
-    description: 'Neck stiffness, lower back ache, and hip tightness stack from sitting — then you load them in the gym. One connected problem.',
+    description: 'Neck stiffness, lower back ache, and hip tightness stack from sitting, then you load them in the gym. One connected problem.',
     image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1785856299/image-4_q31xrd.webp',
   },
   {
@@ -31,7 +31,7 @@ const POINTS = [
   },
   {
     title: 'Same niggle every training block',
-    description: 'Shoulder, knee, or hamstring that flares whenever volume goes up. Compensations are driving it — not bad luck.',
+    description: 'Shoulder, knee, or hamstring that flares whenever volume goes up. Compensations are driving it, not bad luck.',
     image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1785856300/image-6_z4cmvp.webp',
   },
 ]
@@ -51,7 +51,7 @@ export function PainPointsSection() {
           Sound familiar<span className="text-[#7B5FCA]">?</span>
         </h2>
         <p className="text-gray-500 dark:text-white/40 text-base sm:text-lg mt-4 max-w-2xl mx-auto leading-relaxed">
-          If any of these feel like your week, a clinical assessment — not another quick fix — is the missing step.
+          If any of these feel like your week, a clinical assessment, not another quick fix, is the missing step.
         </p>
       </div>
 

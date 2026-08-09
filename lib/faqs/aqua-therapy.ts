@@ -1,62 +1,67 @@
 export const aquaTherapyFaqs = [
   {
-    question: 'What is aqua therapy and how does it work?',
+    question: 'What are the best aqua therapy centres in Mumbai for clinical rehab?',
     answer:
-      'Aqua therapy (aquatic physiotherapy) uses the physical properties of water - buoyancy, hydrostatic pressure, viscosity, and temperature - to enable rehabilitation that is not possible on land. Buoyancy reduces joint load by up to 75% in chest-deep water. Hydrostatic pressure reduces swelling and improves venous return. Water viscosity provides multidirectional resistance for strengthening without impact forces. Warm water relaxes muscle spasm and improves circulation. At R3BOOT, every session is prescribed and supervised by a physiotherapist, not a general instructor.',
+      'Look for physiotherapist-led aquatic rehab with adjustable water depth, private access, and a clear screening process, not only aqua fitness classes. R3BOOT in Dadar East offers aqua treadmill therapy in a private chamber for post-surgery rehab, sports injuries, arthritis, and back pain. Sessions are one-to-one and supervised by physiotherapists.',
   },
   {
-    question: 'What is an aqua treadmill and how is it different from a pool?',
+    question: 'Where is R3BOOT aqua therapy located in Mumbai?',
     answer:
-      'An aqua treadmill is a temperature-controlled chamber with an underwater treadmill belt. Unlike a shared pool, the aqua treadmill at R3BOOT allows precise control of water level (adjustable up to 4 feet to vary joint load), treadmill speed (0.1 to 15 km/h for gait-specific training), and water temperature (set to therapeutic range for your condition). Targeted hydrotherapy jets provide localised pain relief. Seated movements can also be performed inside the chamber. This precision is not possible in a shared pool - water depth, speed, and resistance are tuned to your specific injury and recovery stage.',
+      'R3BOOT is at Palai Plaza, 203, Swami Gyan Jivandas Marg, Dadar East, Mumbai 400014, about 5 minutes from Dadar station. Clients commonly visit from Bandra, Lower Parel, Worli, Andheri, South Mumbai, and across the city for aquatic physiotherapy.',
   },
   {
-    question: 'What conditions does aqua therapy treat?',
+    question: 'How much does an aqua therapy session cost in Mumbai at R3BOOT?',
     answer:
-      'Aqua therapy at R3BOOT is clinically applied for: post-surgical rehabilitation (knee replacement, hip replacement, ACL repair, spinal procedures), sports injuries (muscle, ligament, and tendon), osteoarthritis and rheumatoid arthritis, lower back and spinal conditions (disc herniation, spondylosis), fractures with weight-bearing restrictions, gait and movement retraining, joint stiffness after immobilisation, chronic pain syndromes, and return-to-sport conditioning. It is also used for geriatric rehabilitation (balance, fall prevention) and pregnancy-related pelvic and back pain.',
+      'Fees depend on your assessment and rehab plan. For current aqua therapy session pricing at R3BOOT Dadar, call or WhatsApp +91 97023 68612. After your first assessment, you get a clear session estimate based on your condition, not a generic package push.',
   },
   {
-    question: 'Is aqua therapy good for post-surgery recovery?',
+    question: 'How do I book an aqua therapy session at R3BOOT Dadar?',
     answer:
-      'Yes. Aqua therapy is one of the most recommended post-surgical rehabilitation modalities for lower limb and spinal procedures. Once wound healing is confirmed and your surgeon clears you, water-based rehabilitation allows progressive movement, early strengthening, and gait retraining at a stage when equivalent land-based exercise would be too painful or risky. Reduced joint load means you can begin functional rehabilitation weeks earlier than land-based physio alone permits. At R3BOOT, your physiotherapist reviews your surgical notes and designs the aqua program around your specific procedure and timeline.',
+      'Call +91 97023 68612 or WhatsApp the same number to book. No doctor referral is required to start. Share your condition or surgical history when booking so the team can plan screening and session length. Appointment-based booking is recommended.',
   },
   {
-    question: 'How does aqua therapy differ from land-based physiotherapy?',
+    question: 'What are the aqua therapy hours at R3BOOT?',
     answer:
-      'Land-based physiotherapy works under full gravity with body weight loading the joints. Aqua therapy uses buoyancy to remove up to 75% of that load, hydrostatic pressure to manage swelling, and water resistance to provide graduated strengthening without ground-reaction forces. Research shows muscle blood flow increases by up to 225% during aqua therapy compared to land-based exercise - improving oxygen delivery to healing tissue. The two are not competing: aqua therapy enables early rehabilitation, and land-based physiotherapy follows as strength and range of motion improve. Most comprehensive rehabilitation programmes use both sequentially.',
+      'Monday and Tuesday: 8:00 AM to 9:00 PM. Wednesday: 8:00 AM to 4:00 PM. Thursday to Saturday: 8:00 AM to 9:00 PM. Sunday: 2:00 PM to 9:00 PM. Evening and weekend slots are available for working professionals and athletes.',
   },
   {
-    question: 'Is aqua therapy good for arthritis?',
+    question: 'How long does a typical aqua therapy session last at R3BOOT?',
     answer:
-      'Aqua therapy has strong evidence for both osteoarthritis and rheumatoid arthritis. Warm water reduces joint stiffness and muscle spasm before movement begins. Buoyancy removes the compressive load that makes land exercise painful. Hydrostatic pressure reduces joint swelling between and during sessions. Water resistance provides gentle, progressive strengthening without joint stress. For knee and hip osteoarthritis specifically, aqua therapy allows a level of pain-free exercise that most patients cannot achieve on land at the same stage.',
+      'A full session typically lasts 45 to 60 minutes, including intake, supervised aqua treadmill work, and a post-session check-in. Your physiotherapist adjusts water level, speed, temperature, and jets in real time during the session.',
   },
   {
-    question: 'Do I need to know how to swim for aqua therapy?',
+    question: 'What conditions does aqua therapy help with in Mumbai?',
     answer:
-      'No. Aqua therapy at R3BOOT is performed on an underwater treadmill inside a controlled chamber. You stand upright and walk or perform prescribed exercises. No swimming ability is required. Your physiotherapist is present throughout every session. The water level is set to your therapeutic requirements - you are never submerged and never unsupported.',
+      'At R3BOOT, aqua therapy is commonly used for post-surgical rehab (knee, hip, ACL, spinal), sports injuries, osteoarthritis and rheumatoid arthritis, lower back and disc-related pain, gait retraining, joint stiffness after immobilisation, and return-to-sport conditioning. It also helps when land-based exercise is still too painful.',
   },
   {
-    question: 'What water temperature is used for aqua therapy?',
+    question: 'Is aqua therapy good for arthritis and back pain?',
     answer:
-      'Water temperature at R3BOOT is adjusted based on your condition and the therapeutic goals of your session. Warm water (typically 32 to 36 degrees Celsius) is used for most musculoskeletal and post-surgical cases to relax muscle spasm, improve circulation, and reduce pain perception before exercise. Temperature is one of several variables your physiotherapist controls alongside water level, treadmill speed, and jet settings.',
+      'Yes. Warm water reduces stiffness and spasm, while buoyancy lowers joint compression so movement and strengthening can start with less pain. For knee and hip arthritis, and for many lower back patterns, aqua therapy often allows safer loading than land exercise at the same stage of recovery.',
   },
   {
-    question: 'What treadmill speeds are used in aqua therapy at R3BOOT?',
+    question: 'Is aqua therapy useful for post-surgery and sports injury rehab?',
     answer:
-      'The aqua treadmill at R3BOOT operates at speeds from 0.1 to 15 km/h. Early rehabilitation sessions for post-surgical patients typically begin at very low speeds (0.1 to 1 km/h) to focus on gait quality and range of motion. As recovery progresses, speed increases to challenge balance, endurance, and strength. Athletes in return-to-sport conditioning may train at higher speeds. Speed is one of several variables your physiotherapist adjusts - along with water level and jet resistance - to match your current recovery stage.',
+      'Yes. Once your surgeon clears water-based rehab and wounds are suitable, aqua treadmill work lets you rebuild gait, mobility, and strength with reduced joint load. Athletes use it for ligament, tendon, and muscle injury rehab when land training still reloads the injured tissue too hard.',
   },
   {
-    question: 'What are the contraindications for aqua therapy?',
+    question: 'Is aqua therapy at R3BOOT a private chamber or a shared pool?',
     answer:
-      'Aqua therapy is not appropriate for patients with: unstable cardiovascular conditions, deep vein thrombosis (DVT), active infections or fever, open wounds or active skin infections, contagious diseases, urinary tract infection, recent chemotherapy, severe epilepsy, labyrinthitis, severe aquaphobia, or incontinence. Proper screening is conducted before your first session at R3BOOT. If you have any of these conditions, inform our physiotherapy team when booking and they will advise whether aqua therapy is appropriate or when it becomes safe to proceed.',
+      'Private chamber. R3BOOT uses a temperature-controlled aqua treadmill chamber with adjustable water level (up to about 4 feet), treadmill speeds from 0.1 to 15 km/h, and targeted hydrotherapy jets. Every session is one-to-one with your physiotherapist, not a shared pool class.',
   },
   {
-    question: 'How many sessions of aqua therapy will I need?',
+    question: 'Do I need to know how to swim, and what should I wear?',
     answer:
-      'Session count depends on your condition, not a fixed protocol. Post-surgical patients (knee replacement, hip replacement, ACL repair) typically require 8 to 12 sessions over 6 to 8 weeks. Sports injury rehabilitation typically requires 4 to 8 sessions. Chronic conditions like osteoarthritis may benefit from ongoing maintenance sessions. Your physiotherapist provides a session estimate after your initial assessment, along with a clear progression plan. Many patients combine aqua therapy with land-based physiotherapy or sports massage in the same visit.',
+      'No swimming ability is required. You stand and walk on an underwater treadmill with your physiotherapist present. Wear comfortable swimwear or athletic shorts suitable for water. Bring a towel and any surgical notes or imaging if you have them.',
+  },
+  {
+    question: 'Do I need a doctor referral for aquatic physiotherapy at R3BOOT?',
+    answer:
+      'No referral is required to book. Bring surgical discharge notes or imaging if relevant. Every first session includes screening for contraindications such as open wounds, active infection, unstable cardiovascular issues, or DVT. If aqua therapy is not appropriate yet, the team will advise timing or alternatives.',
   },
   {
     question: 'Can I combine aqua therapy with physiotherapy or sports massage at R3BOOT?',
     answer:
-      'Yes. R3BOOT integrates aqua therapy, physiotherapy, sports massage, clinical pilates, and contrast therapy under one roof. Combining aqua therapy with land-based physiotherapy in the same visit is common and clinically effective - aqua therapy handles early-stage loading and mobility, while physiotherapy addresses manual therapy, dry needling, and functional movement. Sports massage complements aqua therapy by reducing post-exercise muscle soreness and improving tissue extensibility. Your physiotherapy team coordinates across services so there is no duplication or conflicting load.',
+      'Yes. R3BOOT integrates aqua therapy with land-based physiotherapy, sports massage, clinical Pilates, and contrast therapy under one roof. Many clients use aqua therapy for early loading and add land physio or massage in the same visit when it fits the plan.',
   },
 ]

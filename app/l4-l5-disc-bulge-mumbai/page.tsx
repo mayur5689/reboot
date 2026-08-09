@@ -412,7 +412,7 @@ export default function L4L5DiscBulgeMumbaiPage() {
             {processSteps.map((step, i) => (
               <div
                 key={i}
-                className="relative flex flex-col aspect-square p-6 lg:p-7 rounded-2xl bg-[#F8F9FA] dark:bg-white/[0.04] border border-gray-100 dark:border-white/[0.08] group hover:border-[#513394]/30 transition-all duration-300 overflow-hidden"
+                className="relative flex flex-col sm:aspect-square p-5 sm:p-6 lg:p-7 rounded-2xl bg-[#F8F9FA] dark:bg-white/[0.04] border border-gray-100 dark:border-white/[0.08] group hover:border-[#513394]/30 transition-all duration-300 overflow-hidden"
               >
                 <div className="absolute -top-4 -right-2 text-[5.5rem] lg:text-[6rem] font-black text-gray-100 dark:text-white/[0.035] leading-none select-none pointer-events-none">
                   {step.number}

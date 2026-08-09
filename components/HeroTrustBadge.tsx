@@ -284,7 +284,7 @@ export const serviceTrustBadges: Record<string, TrustBadgeItem[]> = {
       icon: 'clipboard',
       value: 'Clinical Care',
       label: 'Not Spa Relaxation',
-      description: 'Targeted recovery for training load.',
+      description: 'Targeted recovery for stiffness, pain, and load.',
     },
   ],
   'clinical-pilates': [

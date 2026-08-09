@@ -176,11 +176,14 @@ export default function OurServicesCarousel() {
         </div>
 
         {/* Carousel */}
-        <div
-          ref={scrollContainer}
-          className="flex items-center gap-5 sm:gap-6 overflow-x-auto scroll-smooth scrollbar-hide -mx-5 px-5 sm:mx-0 sm:px-0 py-2"
-          onScroll={checkScroll}
-        >
+        <div className="relative">
+          <div className="pointer-events-none absolute inset-y-0 left-0 z-10 hidden w-16 bg-gradient-to-r from-[#0D0B12] to-transparent sm:block lg:w-24" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 z-10 hidden w-16 bg-gradient-to-l from-[#0D0B12] to-transparent sm:block lg:w-24" />
+          <div
+            ref={scrollContainer}
+            className="flex items-center gap-5 sm:gap-6 overflow-x-auto scroll-smooth scrollbar-hide -mx-5 px-5 sm:mx-0 sm:px-0 py-2"
+            onScroll={checkScroll}
+          >
           {services.map((service, index) => (
             <motion.div
               key={service.slug}
@@ -222,6 +225,7 @@ export default function OurServicesCarousel() {
               </Link>
             </motion.div>
           ))}
+          </div>
         </div>
       </div>
     </section>

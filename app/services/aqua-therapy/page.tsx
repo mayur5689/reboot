@@ -8,6 +8,7 @@ import FAQSchema from '@/components/schema/FAQSchema'
 import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema'
 import { aquaTherapyFaqs } from '@/lib/faqs/aqua-therapy'
 import { HeroTrustBadge, serviceTrustBadges } from '@/components/HeroTrustBadge'
+import { MobileHeroTrust } from '@/components/MobileHeroTrust'
 import { HeroSlider } from '@/app/services-demo/contrast-therapy/HeroSlider'
 import { TeamSectionDemo } from '@/app/services-demo/contrast-therapy/TeamSectionDemo'
 import { TestimonialsCarousel } from './TestimonialsCarousel'
@@ -142,44 +143,6 @@ const testimonials = [
   },
 ]
 
-const conditions = [
-  {
-    label: '01 // POST-SURGICAL',
-    title: 'Post-Surgical Rehabilitation',
-    body: 'After knee replacement, hip replacement, ACL repair, shoulder surgery, or spinal procedures, water removes the load that makes early movement painful. Once your surgeon clears you, we begin progressive loading and gait retraining on the aqua treadmill - often weeks earlier than land-based rehab alone allows.',
-    tags: ['Knee replacement', 'Hip replacement', 'ACL repair', 'Shoulder surgery', 'Spinal procedures', 'Fracture rehab'],
-    image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1781294269/POST-SURGICAL_REHABILITATION_bc9mdn.webp',
-    alt: 'Post-surgical aqua treadmill rehabilitation at R3BOOT Dadar',
-    caption: 'Progressive loading begins weeks earlier than land-based rehab alone.',
-  },
-  {
-    label: '02 // SPORTS INJURIES',
-    title: 'Sports Injuries & Return to Sport',
-    body: 'Ligament and tendon injuries, muscle tears, IT band syndrome, patellar tendinopathy, and rotator cuff problems all need movement to heal - but movement reloads the injury on land. In water, the same movement happens with up to 75% less joint load and 225% more muscle blood flow, so training continues while the injury heals.',
-    tags: ['Ligament & tendon injuries', 'Muscle tears', 'IT band syndrome', 'Patellar tendinopathy', 'Rotator cuff', 'Return-to-sport conditioning'],
-    image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1781294289/SPORTS_INJURIES_RETURN_TO_SPORT_wlvjqr.webp',
-    alt: 'Sports injury rehabilitation on aqua treadmill at R3BOOT Dadar',
-    caption: '75% less joint load. 225% more muscle blood flow than land training.',
-  },
-  {
-    label: '03 // JOINT & SPINE',
-    title: 'Joint & Spine Conditions',
-    body: 'Knee and hip osteoarthritis, rheumatoid arthritis, disc herniation, spondylosis, and lumbar spine conditions all cause pain that worsens under load. Aqua therapy reduces that load enough for pain-free movement and strengthening. Joint stiffness after immobilisation responds quickly too - warm water relaxes muscle before movement begins.',
-    tags: ['Knee & hip osteoarthritis', 'Rheumatoid arthritis', 'Disc herniation', 'Spondylosis', 'Lumbar spine conditions', 'Post-immobilisation stiffness'],
-    image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1781294628/a2997f88-f950-4783-956a-43885816055f_uztncr.webp',
-    alt: 'Aqua therapy for joint and spine conditions at R3BOOT Dadar',
-    caption: 'Pain-free movement and strengthening for arthritic and spinal conditions.',
-  },
-  {
-    label: '04 // EXTENDED CARE',
-    title: 'Extended & Long-Term Applications',
-    body: 'Beyond injury and surgery, aqua therapy supports chronic pain management, gait retraining, and postural correction. For older adults, it builds balance and strength without joint stress. For pregnancy-related pain, it offers safe relief. Hydrostatic pressure also reduces swelling in edema and circulatory conditions.',
-    tags: ['Chronic pain', 'Gait retraining', 'Geriatric balance', 'Postural dysfunction', 'Pregnancy-related pain', 'Edema & circulation'],
-    image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1781294394/EXTENDED_LONG-TERM_APPLICATIONS_sgyuig.webp',
-    alt: 'Extended aqua therapy applications for chronic and geriatric care at R3BOOT',
-    caption: 'Long-term care for chronic pain, balance, and circulatory conditions.',
-  },
-]
 
 const chamberSpecs = [
   {
@@ -208,20 +171,6 @@ const chamberSpecs = [
   },
 ]
 
-const clinicalDepthPoints = [
-  {
-    title: 'Spinal Protection',
-    body: 'Reduced axial loading through the spine allows safe core strengthening and stabilisation exercises without the compressive load that aggravates disc and vertebral conditions on land.',
-  },
-  {
-    title: '225% Blood Flow',
-    body: 'Muscle blood flow increases by up to 225% during aqua treadmill exercise compared to land-based exercise, improving oxygen delivery to healing tissue and accelerating recovery.',
-  },
-  {
-    title: 'Earlier Rehab',
-    body: 'The primary clinical advantage of aqua therapy is not that it replaces land physio - it is that it allows functional rehabilitation to begin earlier in the recovery cycle, improving long-term outcomes.',
-  },
-]
 
 const goodCandidates = [
   'Post-surgical patients cleared for water-based rehab',
@@ -366,323 +315,13 @@ export default function AquaTherapyPage() {
             Physio-supervised aqua treadmill rehabilitation. Post-surgery, sports injuries, arthritis. Private chamber. R3BOOT Dadar.
           </p>
 
-          {/* Row 1: Google Reviews card */}
-          <div className="mt-5 bg-[#1A1A1A] dark:bg-[#1A1A1A] rounded-2xl p-4 flex items-center gap-0">
-            {/* Avatars */}
-            <div className="flex items-center shrink-0 pr-4">
-              {[
-                { src: '/images/Customer_Review/Namrata Doshi.png',     alt: 'Namrata' },
-                { src: '/images/Customer_Review/Sonal Malik.png',       alt: 'Sonal' },
-                { src: '/images/Customer_Review/JugalKishore Shah.png', alt: 'Jugal' },
-              ].map((av, i) => (
-                <div
-                  key={i}
-                  className={`relative w-12 h-12 rounded-full border-2 border-[#1A1A1A] overflow-hidden shrink-0 ${i > 0 ? '-ml-3' : ''}`}
-                  style={{ zIndex: 3 - i }}
-                >
-                  <Image src={av.src} alt={av.alt} fill className="object-cover" />
-                </div>
-              ))}
-            </div>
-
-            {/* Divider */}
-            <div className="w-px self-stretch bg-white/10 shrink-0 mr-4" />
-
-            {/* Google + stars */}
-            <div className="flex flex-col gap-1 min-w-0">
-              <div className="flex items-center gap-2">
-                <div className="relative w-5 h-5 shrink-0">
-                  <Image src="/images/GOOGLE_LOGO.webp" alt="Google" fill className="object-contain" />
-                </div>
-                <span className="text-white font-bold text-sm">Google Reviews</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="flex gap-0.5">
-                  {[...Array(5)].map((_, j) => (
-                    <svg key={j} className="w-5 h-5 fill-yellow-400" viewBox="0 0 20 20">
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                  ))}
-                </div>
-                <span className="text-white font-black text-xl">5.0</span>
-              </div>
-              <span className="text-gray-500 text-xs font-medium">500+ happy clients</span>
-            </div>
-          </div>
-
-          {/* Row 2: 2 stat cards */}
-          <div className="grid grid-cols-2 gap-3 mt-3 mb-2">
-            {[
-              {
-                icon: (
-                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
-                  </svg>
-                ),
-                value: '15+',
-                label: 'YEARS EXPERIENCE',
-                desc: 'Delivering expert care you can trust.',
-              },
-              {
-                icon: (
-                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
-                  </svg>
-                ),
-                value: 'Physio',
-                label: 'SUPERVISED',
-                desc: 'Every session is guided by qualified physiotherapists.',
-              },
-            ].map((card, i) => (
-              <div key={i} className="bg-[#1A1A1A] dark:bg-[#1A1A1A] rounded-2xl p-4 flex flex-col gap-3">
-                {/* Row 1: icon + value/label */}
-                <div className="flex items-center gap-3">
-                  <div className="w-11 h-11 rounded-full bg-[#513394]/20 flex items-center justify-center text-[#A78BFA] shrink-0">
-                    {card.icon}
-                  </div>
-                  <div>
-                    <div className="text-xl font-black text-white leading-none">{card.value}</div>
-                    <div className="text-[10px] font-bold text-gray-500 uppercase tracking-widest mt-0.5">{card.label}</div>
-                  </div>
-                </div>
-                {/* Divider */}
-                <div className="w-8 h-[2px] bg-[#513394] rounded-full" />
-                {/* Row 2: description */}
-                <p className="text-gray-500 text-xs leading-relaxed">{card.desc}</p>
-              </div>
-            ))}
-          </div>
+          <MobileHeroTrust items={serviceTrustBadges['aqua-therapy']} />
 
         </div>
       </section>
 
       {/* ─────────────────────────────────────────────
-          SECTION 3: OUR APPROACH — Four properties of water
-      ───────────────────────────────────────────── */}
-      <section id="benefits" className="py-16 sm:py-20 lg:py-28 bg-white dark:bg-[#0A0A0A]">
-        <div className="container mx-auto px-5 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
-
-            {/* Left: heading */}
-            <div className="lg:col-span-5 lg:sticky lg:top-32">
-              <span className="text-[11px] font-black tracking-[0.3em] text-[#513394] dark:text-[#A78BFA] uppercase mb-4 block">
-                OUR APPROACH //
-              </span>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 dark:text-white tracking-tight leading-tight mb-5">
-                How R3BOOT{' '}
-                <span className="text-[#513394] dark:text-[#8B5CF6]">
-                  reaches that pain.
-                </span>
-              </h2>
-              <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed mb-6">
-                Aqua therapy is effective because four physical properties of water act simultaneously on your body. No land-based environment replicates this combination. Your physiotherapist adjusts each variable to match your recovery stage - water depth, treadmill speed, temperature, and jet pressure.
-              </p>
-              <div className="hidden lg:flex items-center gap-3 text-[#513394] dark:text-[#A78BFA]">
-                <div className="w-8 h-[1.5px] bg-[#513394] dark:bg-[#A78BFA]" />
-                <span className="text-xs font-black tracking-widest uppercase">Physio-supervised, always</span>
-              </div>
-            </div>
-
-            {/* Right: 4 points */}
-            <div className="lg:col-span-7 space-y-3">
-              {rebootReachPoints.map((point, i) => (
-                <div
-                  key={i}
-                  className="flex gap-5 p-6 rounded-2xl bg-[#F8F9FA] dark:bg-white/[0.04] border border-gray-100 dark:border-white/[0.06] hover:border-[#513394]/30 dark:hover:border-[#513394]/40 transition-all duration-300 group"
-                >
-                  <div className="text-[#513394] dark:text-[#A78BFA] font-black text-xs shrink-0 w-7 pt-1 opacity-50 group-hover:opacity-100 transition-opacity">
-                    {point.step}
-                  </div>
-                  <div>
-                    <h3 className="font-black text-gray-900 dark:text-white text-[15px] mb-2 leading-snug">{point.title}</h3>
-                    <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">{point.body}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      {/* ─────────────────────────────────────────────
-          SECTION 4: CONDITIONS TREATED (4 cards)
-      ───────────────────────────────────────────── */}
-      <section className="py-16 sm:py-20 lg:py-28 bg-[#F8F9FA] dark:bg-[#0D0D0D]">
-        <div className="container mx-auto px-5 sm:px-6 lg:px-8">
-          <div className="max-w-5xl mx-auto mb-14 text-center">
-            <span className="text-[11px] font-black tracking-[0.3em] text-[#513394] dark:text-[#A78BFA] uppercase mb-4 block">
-              CLINICAL APPLICATIONS //
-            </span>
-            <h2 className="text-4xl md:text-6xl font-black text-gray-900 dark:text-white tracking-tight mb-4">
-              What Aqua Therapy <span className="text-[#513394] dark:text-[#8B5CF6]">Treats at R3BOOT</span>
-            </h2>
-            <p className="text-gray-600 dark:text-gray-400 leading-relaxed max-w-3xl mx-auto">
-              Aqua therapy has broad clinical application from acute injury management to chronic disease care.
-              Your physiotherapist will assess whether aqua therapy is the right starting point or where it fits
-              in your overall rehabilitation programme.
-            </p>
-          </div>
-
-          <div className="space-y-6 max-w-5xl mx-auto">
-            {conditions.map((c, idx) => (
-              <div key={c.label} className="bg-white dark:bg-white/5 p-8 rounded-[2.5rem] border border-gray-100 dark:border-white/5 shadow-sm hover:shadow-xl group transition-all duration-500">
-                <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
-                  <div className="md:col-span-4 relative rounded-[2rem] overflow-hidden aspect-[4/3] shadow-lg">
-                    <Image src={c.image} alt={c.alt} fill className="object-cover" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                    <div className="absolute bottom-4 left-4 right-4">
-                      <p className="text-white text-sm font-black tracking-tight leading-tight">{c.caption}</p>
-                    </div>
-                  </div>
-                  <div className="md:col-span-8">
-                    <div className="flex gap-5">
-                      <div className="w-12 h-12 rounded-2xl bg-[#513394]/10 dark:bg-[#8B5CF6]/20 flex items-center justify-center text-[#513394] dark:text-[#A78BFA] font-black shrink-0 text-base group-hover:bg-[#513394] group-hover:text-white transition-all duration-300">
-                        0{idx + 1}
-                      </div>
-                      <div>
-                        <span className="text-[11px] font-black tracking-[0.3em] text-[#513394] dark:text-[#A78BFA] uppercase block mb-2">
-                          {c.label}
-                        </span>
-                        <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">{c.title}</h3>
-                        <p className="text-gray-500 dark:text-gray-400 leading-relaxed mb-4">{c.body}</p>
-                        <div className="flex flex-wrap gap-2">
-                          {c.tags.map((tag) => (
-                            <span key={tag} className="text-xs font-bold text-gray-600 dark:text-gray-300 bg-[#F8F9FA] dark:bg-white/5 border border-gray-100 dark:border-white/10 px-3 py-1.5 rounded-full">
-                              {tag}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ─────────────────────────────────────────────
-          SECTION 5: CHAMBER SPECS (6 specs as list + image)
-      ───────────────────────────────────────────── */}
-      <section className="py-16 sm:py-20 lg:py-28 bg-white dark:bg-[#0A0A0A]">
-        <div className="container mx-auto px-5 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center max-w-7xl mx-auto">
-
-            <div className="order-2 lg:order-1">
-              <span className="text-[11px] font-black tracking-[0.3em] text-[#513394] dark:text-[#A78BFA] uppercase mb-4 block">
-                THE EQUIPMENT //
-              </span>
-              <h2 className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white tracking-tight mb-4 leading-tight">
-                Not a Pool.{' '}
-                <span className="text-[#513394] dark:text-[#8B5CF6]">A Precision Rehabilitation Chamber.</span>
-              </h2>
-              <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed mb-10">
-                Every variable below is adjustable in real time by your physiotherapist - the difference between a shared pool and clinical precision.
-              </p>
-
-              <div className="space-y-6">
-                {chamberSpecs.map((spec, idx) => (
-                  <div key={spec.title} className="flex gap-5 group">
-                    <div className="w-10 h-10 rounded-2xl bg-[#513394]/10 dark:bg-[#8B5CF6]/20 flex items-center justify-center text-[#513394] dark:text-[#A78BFA] font-black shrink-0 text-sm group-hover:bg-[#513394] group-hover:text-white transition-all duration-300">
-                      0{idx + 1}
-                    </div>
-                    <div>
-                      <h3 className="text-base font-bold text-gray-900 dark:text-white mb-1">{spec.title}</h3>
-                      <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">{spec.body}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="relative rounded-[2.5rem] overflow-hidden aspect-[4/5] w-full shadow-2xl order-1 lg:order-2">
-              <Image
-                src="https://res.cloudinary.com/dj7bot2uc/image/upload/v1781292109/Aqua_Trademll_Chamber_image_xzyhbf.webp"
-                alt="Aqua treadmill chamber at R3BOOT Dadar - adjustable water level and speed controls"
-                fill
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-              <div className="absolute bottom-8 left-8 right-8">
-                <span className="text-[10px] font-black tracking-[0.3em] text-white/60 uppercase block mb-2">
-                  PRECISION REHAB //
-                </span>
-                <p className="text-white text-xl font-black tracking-tight leading-tight">
-                  Speed 0.1 to 15 km/h. Water level 0 to 4 feet. Temperature adjustable.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ─────────────────────────────────────────────
-          SECTION 6: CLINICAL DEPTH (Deep vs Shallow + 3 points)
-      ───────────────────────────────────────────── */}
-      <section className="py-16 sm:py-20 lg:py-28 bg-[#F8F9FA] dark:bg-[#0D0D0D]">
-        <div className="container mx-auto px-5 sm:px-6 lg:px-8">
-          <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-14">
-              <span className="text-[11px] font-black tracking-[0.3em] text-[#513394] dark:text-[#A78BFA] uppercase mb-4 block">
-                CLINICAL DEPTH //
-              </span>
-              <h2 className="text-4xl md:text-6xl font-black text-gray-900 dark:text-white tracking-tight">
-                Water Level Is Not a Setting.{' '}
-                <span className="text-[#513394] dark:text-[#8B5CF6]">It Is a Clinical Decision.</span>
-              </h2>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-              <div className="bg-[#513394] text-white p-8 rounded-[2.5rem]">
-                <div className="text-xs font-black tracking-[0.25em] uppercase text-white/60 mb-4">DEEP WATER</div>
-                <h3 className="text-2xl font-black mb-4">Open Chain. Maximum Offload.</h3>
-                <p className="text-white/80 text-sm leading-relaxed mb-4">
-                  Higher water level means maximum buoyancy and minimum joint compression.
-                  Used for: early post-surgical mobility, acute pain reduction, range-of-motion work,
-                  and cases where even minimal weight-bearing on land is not safe.
-                </p>
-                <div className="bg-white/10 rounded-xl p-3">
-                  <p className="text-white/70 text-xs font-bold">Environment: open chain - exercises focus on mobility and motor control without stability demands.</p>
-                </div>
-              </div>
-
-              <div className="bg-[#1A1A1A] text-white p-8 rounded-[2.5rem]">
-                <div className="text-xs font-black tracking-[0.25em] uppercase text-white/60 mb-4">SHALLOW WATER</div>
-                <h3 className="text-2xl font-black mb-4">Closed Chain. Progressive Loading.</h3>
-                <p className="text-white/80 text-sm leading-relaxed mb-4">
-                  Lower water level allows more body weight through the joint, simulating land-based loading
-                  in a controlled, protected environment. Used for: strength training, gait retraining,
-                  balance work, and progressive return-to-sport conditioning.
-                </p>
-                <div className="bg-white/10 rounded-xl p-3">
-                  <p className="text-white/70 text-xs font-bold">Environment: closed chain simulation - load is graduated by adjusting water depth, not by changing the exercise.</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="space-y-6">
-              {clinicalDepthPoints.map((item, idx) => (
-                <div key={item.title} className="bg-white dark:bg-white/5 p-8 rounded-[2.5rem] border border-gray-100 dark:border-white/5 shadow-sm hover:shadow-xl group transition-all duration-500">
-                  <div className="flex gap-5">
-                    <div className="w-12 h-12 rounded-2xl bg-[#513394]/10 dark:bg-[#8B5CF6]/20 flex items-center justify-center text-[#513394] dark:text-[#A78BFA] font-black shrink-0 text-base group-hover:bg-[#513394] group-hover:text-white transition-all duration-300">
-                      0{idx + 1}
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">{item.title}</h3>
-                      <p className="text-gray-500 dark:text-gray-400 leading-relaxed">{item.body}</p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ─────────────────────────────────────────────
-          SECTION 7: SCREENING (Good candidates + contraindications)
+          SCREENING (Good candidates + contraindications)
       ───────────────────────────────────────────── */}
       <section className="py-16 sm:py-20 lg:py-28 bg-white dark:bg-[#0A0A0A]">
         <div className="container mx-auto px-5 sm:px-6 lg:px-8">
@@ -752,7 +391,7 @@ export default function AquaTherapyPage() {
       </section>
 
       {/* ─────────────────────────────────────────────
-          SECTION 8: PROCESS (4 STEPS)
+          YOUR SESSION (4 STEPS)
       ───────────────────────────────────────────── */}
       <section className="py-16 sm:py-20 lg:py-28 bg-[#F8F9FA] dark:bg-[#0D0D0D]">
         <div className="container mx-auto px-5 sm:px-6 lg:px-8">
@@ -774,7 +413,7 @@ export default function AquaTherapyPage() {
             {processSteps.map((step, i) => (
               <div
                 key={i}
-                className="relative flex flex-col aspect-square p-6 lg:p-7 rounded-2xl bg-white dark:bg-white/[0.04] border border-gray-100 dark:border-white/[0.08] group hover:border-[#513394]/30 hover:shadow-lg dark:hover:shadow-none transition-all duration-300 overflow-hidden"
+                className="relative flex flex-col sm:aspect-square p-5 sm:p-6 lg:p-7 rounded-2xl bg-white dark:bg-white/[0.04] border border-gray-100 dark:border-white/[0.08] group hover:border-[#513394]/30 hover:shadow-lg dark:hover:shadow-none transition-all duration-300 overflow-hidden"
               >
                 <div className="absolute -top-4 -right-2 text-[5.5rem] lg:text-[6rem] font-black text-gray-100 dark:text-white/[0.035] leading-none select-none pointer-events-none">
                   {step.number}
@@ -790,6 +429,157 @@ export default function AquaTherapyPage() {
             ))}
           </div>
 
+        </div>
+      </section>
+
+      {/* ─────────────────────────────────────────────
+          OUR APPROACH — Four properties of water
+      ───────────────────────────────────────────── */}
+      <section id="benefits" className="py-16 sm:py-20 lg:py-28 bg-white dark:bg-[#0A0A0A]">
+        <div className="container mx-auto px-5 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+
+            {/* Left: heading */}
+            <div className="lg:col-span-5 lg:sticky lg:top-32">
+              <span className="text-[11px] font-black tracking-[0.3em] text-[#513394] dark:text-[#A78BFA] uppercase mb-4 block">
+                OUR APPROACH //
+              </span>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 dark:text-white tracking-tight leading-tight mb-5">
+                How R3BOOT{' '}
+                <span className="text-[#513394] dark:text-[#8B5CF6]">
+                  reaches that pain.
+                </span>
+              </h2>
+              <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed mb-6">
+                Aqua therapy is effective because four physical properties of water act simultaneously on your body. No land-based environment replicates this combination. Your physiotherapist adjusts each variable to match your recovery stage - water depth, treadmill speed, temperature, and jet pressure.
+              </p>
+              <div className="hidden lg:flex items-center gap-3 text-[#513394] dark:text-[#A78BFA]">
+                <div className="w-8 h-[1.5px] bg-[#513394] dark:bg-[#A78BFA]" />
+                <span className="text-xs font-black tracking-widest uppercase">Physio-supervised, always</span>
+              </div>
+            </div>
+
+            {/* Right: 4 points */}
+            <div className="lg:col-span-7 space-y-3">
+              {rebootReachPoints.map((point, i) => (
+                <div
+                  key={i}
+                  className="flex gap-5 p-6 rounded-2xl bg-[#F8F9FA] dark:bg-white/[0.04] border border-gray-100 dark:border-white/[0.06] hover:border-[#513394]/30 dark:hover:border-[#513394]/40 transition-all duration-300 group"
+                >
+                  <div className="text-[#513394] dark:text-[#A78BFA] font-black text-xs shrink-0 w-7 pt-1 opacity-50 group-hover:opacity-100 transition-opacity">
+                    {point.step}
+                  </div>
+                  <div>
+                    <h3 className="font-black text-gray-900 dark:text-white text-[15px] mb-2 leading-snug">{point.title}</h3>
+                    <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">{point.body}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* ─────────────────────────────────────────────
+          CHAMBER SPECS (6 specs as list + image)
+      ───────────────────────────────────────────── */}
+      <section className="py-16 sm:py-20 lg:py-28 bg-white dark:bg-[#0A0A0A]">
+        <div className="container mx-auto px-5 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center max-w-7xl mx-auto">
+
+            <div className="order-2 lg:order-1">
+              <span className="text-[11px] font-black tracking-[0.3em] text-[#513394] dark:text-[#A78BFA] uppercase mb-4 block">
+                THE EQUIPMENT //
+              </span>
+              <h2 className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white tracking-tight mb-4 leading-tight">
+                Not a Pool.{' '}
+                <span className="text-[#513394] dark:text-[#8B5CF6]">A Precision Rehabilitation Chamber.</span>
+              </h2>
+              <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed mb-10">
+                Every variable below is adjustable in real time by your physiotherapist - the difference between a shared pool and clinical precision.
+              </p>
+
+              <div className="space-y-6">
+                {chamberSpecs.map((spec, idx) => (
+                  <div key={spec.title} className="flex gap-5 group">
+                    <div className="w-10 h-10 rounded-2xl bg-[#513394]/10 dark:bg-[#8B5CF6]/20 flex items-center justify-center text-[#513394] dark:text-[#A78BFA] font-black shrink-0 text-sm group-hover:bg-[#513394] group-hover:text-white transition-all duration-300">
+                      0{idx + 1}
+                    </div>
+                    <div>
+                      <h3 className="text-base font-bold text-gray-900 dark:text-white mb-1">{spec.title}</h3>
+                      <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">{spec.body}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="relative rounded-[2.5rem] overflow-hidden aspect-[4/5] w-full shadow-2xl order-1 lg:order-2">
+              <Image
+                src="https://res.cloudinary.com/dj7bot2uc/image/upload/v1781292109/Aqua_Trademll_Chamber_image_xzyhbf.webp"
+                alt="Aqua treadmill chamber at R3BOOT Dadar - adjustable water level and speed controls"
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+              <div className="absolute bottom-8 left-8 right-8">
+                <span className="text-[10px] font-black tracking-[0.3em] text-white/60 uppercase block mb-2">
+                  PRECISION REHAB //
+                </span>
+                <p className="text-white text-xl font-black tracking-tight leading-tight">
+                  Speed 0.1 to 15 km/h. Water level 0 to 4 feet. Temperature adjustable.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ─────────────────────────────────────────────
+          SECTION: CLINICAL DEPTH (Deep vs Shallow)
+      ───────────────────────────────────────────── */}
+      <section className="py-16 sm:py-20 lg:py-28 bg-[#F8F9FA] dark:bg-[#0D0D0D]">
+        <div className="container mx-auto px-5 sm:px-6 lg:px-8">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-14">
+              <span className="text-[11px] font-black tracking-[0.3em] text-[#513394] dark:text-[#A78BFA] uppercase mb-4 block">
+                CLINICAL DEPTH //
+              </span>
+              <h2 className="text-4xl md:text-6xl font-black text-gray-900 dark:text-white tracking-tight">
+                Water Level Is Not a Setting.{' '}
+                <span className="text-[#513394] dark:text-[#8B5CF6]">It Is a Clinical Decision.</span>
+              </h2>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+              <div className="bg-[#513394] text-white p-8 rounded-[2.5rem]">
+                <div className="text-xs font-black tracking-[0.25em] uppercase text-white/60 mb-4">DEEP WATER</div>
+                <h3 className="text-2xl font-black mb-4">Open Chain. Maximum Offload.</h3>
+                <p className="text-white/80 text-sm leading-relaxed mb-4">
+                  Higher water level means maximum buoyancy and minimum joint compression.
+                  Used for: early post-surgical mobility, acute pain reduction, range-of-motion work,
+                  and cases where even minimal weight-bearing on land is not safe.
+                </p>
+                <div className="bg-white/10 rounded-xl p-3">
+                  <p className="text-white/70 text-xs font-bold">Environment: open chain - exercises focus on mobility and motor control without stability demands.</p>
+                </div>
+              </div>
+
+              <div className="bg-[#1A1A1A] text-white p-8 rounded-[2.5rem]">
+                <div className="text-xs font-black tracking-[0.25em] uppercase text-white/60 mb-4">SHALLOW WATER</div>
+                <h3 className="text-2xl font-black mb-4">Closed Chain. Progressive Loading.</h3>
+                <p className="text-white/80 text-sm leading-relaxed mb-4">
+                  Lower water level allows more body weight through the joint, simulating land-based loading
+                  in a controlled, protected environment. Used for: strength training, gait retraining,
+                  balance work, and progressive return-to-sport conditioning.
+                </p>
+                <div className="bg-white/10 rounded-xl p-3">
+                  <p className="text-white/70 text-xs font-bold">Environment: closed chain simulation - load is graduated by adjusting water depth, not by changing the exercise.</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

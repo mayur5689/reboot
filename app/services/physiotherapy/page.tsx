@@ -7,6 +7,7 @@ import ServiceSchema from '@/components/schema/ServiceSchema'
 import FAQSchema from '@/components/schema/FAQSchema'
 import { physiotherapyFaqs } from '@/lib/faqs/physiotherapy'
 import { HeroTrustBadge, serviceTrustBadges } from '@/components/HeroTrustBadge'
+import { MobileHeroTrust } from '@/components/MobileHeroTrust'
 import { HeroSlider } from '@/app/services-demo/contrast-therapy/HeroSlider'
 import { TeamSectionDemo } from '@/app/services-demo/contrast-therapy/TeamSectionDemo'
 import { TestimonialsCarousel } from './TestimonialsCarousel'
@@ -26,7 +27,7 @@ import {
 } from 'lucide-react'
 
 export const metadata: Metadata = {
-    title: 'Physiotherapy in Mumbai | R3BOOT Dadar – Clinical Care',
+    title: 'Physiotherapy in Mumbai | R3BOOT Dadar - Clinical Care',
     description:
         'Clinical physiotherapy in Mumbai by certified specialists. Back pain, knee pain, sports injuries, post-surgery rehab. Dadar location, accessible from Andheri, Thane & Bandra.',
     keywords: [
@@ -203,15 +204,12 @@ export default function PhysiotherapyPage() {
                     </h1>
 
                     <p className="text-base text-gray-500 dark:text-gray-400 leading-relaxed mb-6">
-                        Clinical care by certified specialists. Root cause treatment, not symptom management — at R3BOOT Dadar.
+                        Clinical care by certified specialists. Root cause treatment, not symptom management, at R3BOOT Dadar.
                     </p>
 
-                    <HeroTrustBadge items={serviceTrustBadges.physiotherapy} className="px-0" />
+                    <MobileHeroTrust items={serviceTrustBadges.physiotherapy} />
                 </div>
             </section>
-
-            {/* ─── SIGNS ─── */}
-            <PainPointsSection />
 
             {/* ─── WHAT TO EXPECT ─── */}
             <section id="session" className="py-16 sm:py-20 lg:py-28 bg-white dark:bg-[#0A0A0A]">
@@ -225,7 +223,7 @@ export default function PhysiotherapyPage() {
                             <span className="text-[#513394] dark:text-[#8B5CF6]">R3BOOT</span>
                         </h2>
                         <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed">
-                            A full session takes 45–60 minutes including assessment, hands-on treatment, and a clear next-step plan.
+                            A full session takes 45-60 minutes including assessment, hands-on treatment, and a clear next-step plan.
                         </p>
                     </div>
 
@@ -235,32 +233,32 @@ export default function PhysiotherapyPage() {
                                 icon: ClipboardCheck,
                                 number: '01',
                                 title: 'Initial Assessment',
-                                body: 'History, movement patterns, strength, and flexibility reviewed before any treatment is applied. You leave knowing what is driving the problem.',
+                                body: 'We focus on understanding your pain: what aggravates it, what eases it, and which structures are driving it, before any treatment is applied. You leave knowing what is causing the problem.',
                             },
                             {
                                 icon: Target,
                                 number: '02',
                                 title: 'Treatment Plan',
-                                body: 'Clear goals, expected timelines, and session frequency. Built around your diagnosis — not a one-size-fits-all protocol.',
+                                body: 'Clear goals, expected timelines, and session frequency. Built around your diagnosis, not a one-size-fits-all protocol.',
                             },
                             {
                                 icon: Hand,
                                 number: '03',
                                 title: 'Treatment Sessions',
-                                body: 'Hands-on care plus progressive exercise. Methods adjust as you respond — sessions evolve with your condition.',
+                                body: 'Hands-on care plus progressive exercise. Methods adjust as you respond. Sessions evolve with your condition.',
                             },
                             {
                                 icon: TrendingUp,
                                 number: '04',
                                 title: 'Progress & Independence',
-                                body: 'Re-assessment keeps the plan matched to your capacity. The goal is lasting function — not ongoing dependency on sessions.',
+                                body: 'Re-assessment keeps the plan matched to your capacity. The goal is lasting function, not ongoing dependency on sessions.',
                             },
                         ].map((step, i) => {
                             const Icon = step.icon
                             return (
                                 <div
                                     key={i}
-                                    className="relative flex flex-col aspect-square p-6 lg:p-7 rounded-2xl bg-[#F8F9FA] dark:bg-white/[0.04] border border-gray-100 dark:border-white/[0.08] group hover:border-[#513394]/30 hover:shadow-lg dark:hover:shadow-none transition-all duration-300 overflow-hidden"
+                                    className="relative flex flex-col sm:aspect-square p-5 sm:p-6 lg:p-7 rounded-2xl bg-[#F8F9FA] dark:bg-white/[0.04] border border-gray-100 dark:border-white/[0.08] group hover:border-[#513394]/30 hover:shadow-lg dark:hover:shadow-none transition-all duration-300 overflow-hidden"
                                 >
                                     <div className="absolute -top-4 -right-2 text-[5.5rem] lg:text-[6rem] font-black text-gray-100 dark:text-white/[0.035] leading-none select-none pointer-events-none">
                                         {step.number}
@@ -281,6 +279,9 @@ export default function PhysiotherapyPage() {
                 </div>
             </section>
 
+            {/* ─── SIGNS ─── */}
+            <PainPointsSection />
+
             {/* ─── METHODOLOGY ─── */}
             <section id="methodology" className="py-16 sm:py-24 lg:py-32 bg-[#F8F9FA] dark:bg-[#0D0D0D]">
                 <div className="container mx-auto px-5 sm:px-6 lg:px-8">
@@ -297,7 +298,7 @@ export default function PhysiotherapyPage() {
                             <span className="text-[#513394] dark:text-[#8B5CF6]">R3BOOT</span>
                         </h2>
                         <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed">
-                            Techniques are selected from your assessment findings — not a default protocol for every patient.
+                            Techniques are selected from your assessment findings, not a default protocol for every patient.
                         </p>
                     </div>
 
@@ -305,7 +306,7 @@ export default function PhysiotherapyPage() {
                         <div className="relative rounded-[2rem] sm:rounded-[2.5rem] overflow-hidden aspect-[4/5] w-full shadow-2xl lg:sticky lg:top-28">
                             <Image
                                 src="https://res.cloudinary.com/dj7bot2uc/image/upload/v1785857717/Physio_Studio_V1_zw15cj.png"
-                                alt="Manual Therapy Physiotherapy – R3BOOT Dadar Mumbai"
+                                alt="Manual Therapy Physiotherapy - R3BOOT Dadar Mumbai"
                                 fill
                                 className="object-cover"
                             />
@@ -348,7 +349,7 @@ export default function PhysiotherapyPage() {
                                     {
                                         icon: Hand,
                                         title: 'Manual Therapy',
-                                        body: 'Joint mobilisation, manipulation, and soft tissue work for back pain, neck stiffness, joint restrictions, and post-surgical recovery — applied within structured protocols.',
+                                        body: 'Joint mobilisation, manipulation, and soft tissue and deep tissue work for back pain, neck stiffness, joint restrictions, and post-surgical recovery, applied within structured protocols.',
                                         light: '#513394',
                                         dark: '#A78BFA',
                                         bgLight: 'rgba(81,51,148,0.08)',
@@ -359,7 +360,7 @@ export default function PhysiotherapyPage() {
                                     {
                                         icon: Zap,
                                         title: 'Dry Needling',
-                                        body: 'Trigger-point needling to release tension, reduce referred pain, and restore neuromuscular function — used as part of a broader plan, not alone.',
+                                        body: 'Trigger-point needling to release tension, reduce referred pain, and restore neuromuscular function, used as part of a broader plan, not alone.',
                                         light: '#B45309',
                                         dark: '#FBBF24',
                                         bgLight: 'rgba(180,83,9,0.08)',
@@ -370,7 +371,7 @@ export default function PhysiotherapyPage() {
                                     {
                                         icon: Waves,
                                         title: 'Aquatic Rehabilitation',
-                                        body: 'Water-based rehab for post-surgical patients and those who cannot tolerate land loading — progressive functional retraining with lower joint stress.',
+                                        body: 'Water-based rehab for post-surgical patients and those who cannot tolerate land loading, with progressive functional retraining and lower joint stress.',
                                         light: '#0D9488',
                                         dark: '#2DD4BF',
                                         bgLight: 'rgba(13,148,136,0.08)',
@@ -381,7 +382,7 @@ export default function PhysiotherapyPage() {
                                     {
                                         icon: Activity,
                                         title: 'Exercise Therapy & Progressive Rehab',
-                                        body: 'Structured programs built around your diagnosis and goals. Monitored and adjusted across sessions — not generic home exercise sheets.',
+                                        body: 'Structured programs built around your diagnosis and goals. Monitored and adjusted across sessions, not generic home exercise sheets.',
                                         light: '#0369A1',
                                         dark: '#38BDF8',
                                         bgLight: 'rgba(3,105,161,0.08)',
@@ -486,7 +487,7 @@ export default function PhysiotherapyPage() {
                                 label: 'Cricketers & Field Sports',
                                 tag: 'SPORT //',
                                 description:
-                                    'Rotator cuff injuries, lumbar asymmetry from bowling, elbow overuse, and hamstring strain risk — sport-specific rehab.',
+                                    'Rotator cuff injuries, lumbar asymmetry from bowling, elbow overuse, and hamstring strain risk. Sport-specific rehab.',
                                 image: 'https://images.unsplash.com/photo-1531415074968-036ba1b575da?auto=format&fit=crop&w=800&q=80',
                                 points: ['Rotator cuff', 'Lumbar asymmetry', 'Hamstring risk'],
                             },
@@ -494,7 +495,7 @@ export default function PhysiotherapyPage() {
                                 label: 'Post-Surgery & Desk Pros',
                                 tag: 'REHAB //',
                                 description:
-                                    'ACL, joint replacement, and spinal recovery — plus thoracic stiffness and neck pain from prolonged sitting.',
+                                    'ACL, joint replacement, and spinal recovery, plus thoracic stiffness and neck pain from prolonged sitting.',
                                 image: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=800&q=80',
                                 points: ['ACL rehab', 'Posture pain', 'Joint replacement'],
                             },
@@ -681,7 +682,7 @@ export default function PhysiotherapyPage() {
                         <span className="text-white/45">Recover Properly.</span>
                     </h2>
                     <p className="text-lg text-white/65 mb-10 max-w-xl mx-auto leading-relaxed">
-                        Structured clinical physiotherapy by specialists who treat the root cause — not just the flare. Your first session starts with an assessment.
+                        Structured clinical physiotherapy by specialists who treat the root cause, not just the flare. Your first session starts with an assessment.
                     </p>
                     <div className="flex flex-row gap-4 justify-center">
                         <a
@@ -765,7 +766,7 @@ export default function PhysiotherapyPage() {
                         <div>
                             <p className="text-xs font-black tracking-widest text-[#513394] uppercase mb-1">Mumbai Guide</p>
                             <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-[#513394] transition-colors">
-                                Physiotherapy in Mumbai — What to Expect & How to Choose
+                                Physiotherapy in Mumbai: What to Expect & How to Choose
                             </h3>
                             <span className="text-sm text-gray-500 dark:text-gray-400 mt-1 inline-block">Full local guide →</span>
                         </div>

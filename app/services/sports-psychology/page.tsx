@@ -7,6 +7,7 @@ import ServiceSchema from '@/components/schema/ServiceSchema'
 import FAQSchema from '@/components/schema/FAQSchema'
 import { sportsPsychologyFaqs } from '@/lib/faqs/sports-psychology'
 import { HeroTrustBadge, serviceTrustBadges } from '@/components/HeroTrustBadge'
+import { MobileHeroTrust } from '@/components/MobileHeroTrust'
 import { HeroSlider } from '@/app/services-demo/contrast-therapy/HeroSlider'
 import { TeamSectionDemo, type TeamMember } from '@/app/services-demo/contrast-therapy/TeamSectionDemo'
 import { TestimonialsCarousel } from './TestimonialsCarousel'
@@ -232,12 +233,9 @@ export default function SportsPsychologyPage() {
             Performance skills and counselling in one service. Manage pressure, rebuild trust after injury, and train the mental side at R3BOOT Dadar.
           </p>
 
-          <HeroTrustBadge items={serviceTrustBadges['sports-psychology']} className="px-0" />
+          <MobileHeroTrust items={serviceTrustBadges['sports-psychology']} />
         </div>
       </section>
-
-      <PainPointsSection />
-
       {/* ─── WHAT TO EXPECT ─── */}
       <section id="session" className="py-16 sm:py-20 lg:py-28 bg-white dark:bg-[#0A0A0A]">
         <div className="container mx-auto px-5 sm:px-6 lg:px-8">
@@ -285,7 +283,7 @@ export default function SportsPsychologyPage() {
               return (
                 <div
                   key={step.number}
-                  className="relative flex flex-col aspect-square p-6 lg:p-7 rounded-2xl bg-[#F8F9FA] dark:bg-white/[0.04] border border-gray-100 dark:border-white/[0.08] group hover:border-[#513394]/30 hover:shadow-lg dark:hover:shadow-none transition-all duration-300 overflow-hidden"
+                  className="relative flex flex-col sm:aspect-square p-5 sm:p-6 lg:p-7 rounded-2xl bg-[#F8F9FA] dark:bg-white/[0.04] border border-gray-100 dark:border-white/[0.08] group hover:border-[#513394]/30 hover:shadow-lg dark:hover:shadow-none transition-all duration-300 overflow-hidden"
                 >
                   <div className="absolute -top-4 -right-2 text-[5.5rem] lg:text-[6rem] font-black text-gray-100 dark:text-white/[0.035] leading-none select-none pointer-events-none">
                     {step.number}
@@ -303,6 +301,9 @@ export default function SportsPsychologyPage() {
           </div>
         </div>
       </section>
+
+
+      <PainPointsSection />
 
       <WhoWeHelpSection />
 
@@ -514,6 +515,13 @@ export default function SportsPsychologyPage() {
                 description: 'Coaches, performers, and anyone who performs under load, including students and high-stakes roles.',
                 image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1785885843/WIIF_IMAGE_4_tvrmw5.webp',
                 points: ['Emotional regulation', 'Burnout & motivation', 'Composure under load'],
+              },
+              {
+                label: 'Relationship Management',
+                tag: 'RELATIONSHIPS //',
+                description: 'Pressure at sport or work spills into partnerships, family, and team dynamics. Learn to communicate, set boundaries, and stay connected without losing yourself.',
+                image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1786259654/image_7_lifsap.webp',
+                points: ['Partner & family load', 'Coach–athlete dynamics', 'Communication under stress'],
               },
             ].map((item) => (
               <div

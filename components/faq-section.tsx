@@ -24,7 +24,7 @@ export type FAQSectionItem = {
 interface FAQSectionProps {
   faqs?: FAQSectionItem[];
   showMap?: boolean;
-  /** Centered heading + 2-column FAQ grid */
+  /** Centered heading + 2-column FAQ grid (service-page standard) */
   layout?: 'default' | 'grid';
 }
 
@@ -78,10 +78,10 @@ export function FAQSection({
       <StaggerItem
         key={index}
         variants={fadeUp}
-        className={`group rounded-[2rem] border transition-all duration-300 h-fit ${
+        className={`group rounded-2xl border transition-all duration-300 h-fit ${
           isOpen
-            ? 'bg-[#F8F9FA] dark:bg-[#1A1A1A] border-transparent shadow-xl'
-            : 'bg-transparent border-neutral-200 dark:border-white/5 hover:border-[#513394] dark:hover:border-[#A78BFA]'
+            ? 'bg-[#F8F9FA] dark:bg-white/[0.05] border-[#513394]/35 dark:border-[#513394]/45 shadow-lg dark:shadow-none'
+            : 'bg-white dark:bg-white/[0.025] border-gray-200 dark:border-white/[0.07] hover:border-[#513394]/30 dark:hover:border-white/[0.13]'
         }`}
       >
         <button
@@ -90,17 +90,17 @@ export function FAQSection({
         >
           <div className="flex items-center gap-3 sm:gap-4 min-w-0">
             <div
-              className={`flex h-11 w-11 sm:h-12 sm:w-12 shrink-0 items-center justify-center rounded-2xl transition-all duration-300 ${
+              className={`flex h-11 w-11 sm:h-12 sm:w-12 shrink-0 items-center justify-center rounded-xl transition-all duration-300 ${
                 isOpen
                   ? 'bg-[#513394] text-white'
-                  : 'bg-[#F8F9FA] text-neutral-500 dark:bg-white/5 dark:text-neutral-400 group-hover:bg-[#513394]/10 group-hover:text-[#513394]'
+                  : 'bg-[#513394]/10 text-[#513394] dark:bg-[#8B5CF6]/20 dark:text-[#A78BFA] group-hover:bg-[#513394] group-hover:text-white'
               }`}
             >
-              <Icon className="h-5 w-5" />
+              <Icon className="h-5 w-5" strokeWidth={1.75} />
             </div>
             <span
-              className={`text-base sm:text-lg font-bold transition-colors ${
-                isOpen ? 'text-neutral-900 dark:text-white' : 'text-neutral-700 dark:text-neutral-300'
+              className={`text-[15px] sm:text-base font-bold leading-snug transition-colors ${
+                isOpen ? 'text-gray-900 dark:text-white' : 'text-gray-700 dark:text-white/80'
               }`}
             >
               {faq.question}
@@ -108,13 +108,13 @@ export function FAQSection({
           </div>
 
           <div
-            className={`p-2 rounded-full transition-all duration-300 shrink-0 ${
+            className={`w-8 h-8 rounded-full border flex items-center justify-center transition-all duration-300 shrink-0 ${
               isOpen
-                ? 'bg-[#513394] text-white rotate-180'
-                : 'bg-neutral-100 dark:bg-white/5 text-neutral-400'
+                ? 'border-[#513394]/60 text-[#513394] dark:text-[#A78BFA] bg-[#513394]/15 rotate-180'
+                : 'border-gray-300 dark:border-white/[0.15] text-gray-400 dark:text-white/35'
             }`}
           >
-            <ChevronDown className="h-4 w-4" />
+            <ChevronDown className="h-4 w-4" strokeWidth={2.5} />
           </div>
         </button>
 
@@ -127,8 +127,8 @@ export function FAQSection({
               transition={{ duration: 0.3, ease: 'easeOut' }}
               className="overflow-hidden"
             >
-              <div className="px-5 sm:px-6 pb-6 pt-0 sm:ml-[3.75rem]">
-                <p className="text-base leading-relaxed text-neutral-600 dark:text-neutral-400">
+              <div className="px-5 sm:px-6 pb-6 pt-0 sm:pl-[4.75rem]">
+                <p className="text-sm sm:text-[15px] leading-relaxed text-gray-500 dark:text-white/50">
                   {faq.answer}
                 </p>
               </div>
@@ -142,37 +142,46 @@ export function FAQSection({
   if (layout === 'grid') {
     return (
       <section
-        className={`bg-white dark:bg-[#0A0A0A] pt-16 sm:pt-24 px-4 sm:px-6 lg:px-8 transition-colors duration-500 ${
-          showMap ? 'pb-8 sm:pb-10' : 'pb-16 sm:pb-24'
+        className={`bg-white dark:bg-[#0A0A0A] py-16 sm:py-20 lg:py-28 transition-colors duration-500 ${
+          showMap ? 'pb-8 sm:pb-10' : ''
         }`}
       >
-        <div className="container mx-auto max-w-[1400px]">
-          <Reveal variants={fadeUp} className="text-center mb-12 sm:mb-14">
-            <div className="inline-flex items-center gap-3 text-[#513394] dark:text-[#A78BFA] mb-6">
-              <div className="w-1.5 h-1.5 rounded-full bg-[#513394] dark:bg-[#A78BFA]" />
-              <span className="text-[13px] font-bold tracking-[0.3em] uppercase">FAQ</span>
-            </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-neutral-900 dark:text-white leading-[1.1] mb-5">
+        <div className="container mx-auto px-5 sm:px-6 lg:px-8">
+          <Reveal variants={fadeUp} className="text-center max-w-2xl mx-auto mb-12 sm:mb-14">
+            <span className="text-[11px] font-black tracking-[0.3em] text-[#513394] dark:text-[#A78BFA] uppercase mb-4 block">
+              FAQ //
+            </span>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 dark:text-white tracking-tight leading-[1.1] mb-4">
               Frequently Asked{' '}
-              <span className="text-[#513394] dark:text-[#A78BFA]">Questions</span>
+              <span className="text-[#513394] dark:text-[#8B5CF6]">Questions</span>
             </h2>
-            <p className="text-lg text-neutral-600 dark:text-neutral-400 max-w-xl mx-auto">
-              Can&apos;t find what you&apos;re looking for? Contact our{' '}
-              <Link
-                href="/contact"
-                className="font-semibold text-[#513394] dark:text-[#A78BFA] hover:underline underline-offset-4"
+            <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed">
+              Still unsure? Call{' '}
+              <a
+                href="tel:+919702368612"
+                className="font-bold text-[#513394] dark:text-[#A78BFA] hover:underline underline-offset-4"
               >
-                customer support team
-              </Link>
+                +91 97023 68612
+              </a>{' '}
+              or{' '}
+              <a
+                href="https://wa.me/919702368612"
+                target="_blank"
+                rel="nofollow noopener noreferrer"
+                className="font-bold text-[#513394] dark:text-[#A78BFA] hover:underline underline-offset-4"
+              >
+                WhatsApp us
+              </a>
+              .
             </p>
           </Reveal>
 
-          <Stagger className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-5 items-start">
+          <Stagger className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 lg:gap-5 items-start max-w-6xl mx-auto">
             {faqsWithIcons.map((faq, index) => faqCard(faq, index))}
           </Stagger>
 
           {showMap && (
-            <div className="relative rounded-3xl overflow-hidden border border-neutral-200 dark:border-white/[0.08] min-h-[240px] sm:min-h-[280px] w-full mt-10">
+            <div className="relative rounded-3xl overflow-hidden border border-gray-200 dark:border-white/[0.08] min-h-[240px] sm:min-h-[280px] w-full mt-10 max-w-6xl mx-auto">
               <iframe
                 src={MAP_EMBED_SRC}
                 className="absolute inset-0 w-full h-full grayscale-[0.3] contrast-[1.05]"
@@ -190,7 +199,7 @@ export function FAQSection({
 
   return (
     <section
-      className={`bg-white dark:bg-[#0A0A0A] pt-16 sm:pt-24 px-4 sm:px-6 lg:px-8 transition-colors duration-500 ${
+      className={`bg-white dark:bg-[#0A0A0A] pt-16 sm:pt-24 px-5 sm:px-6 lg:px-8 transition-colors duration-500 ${
         showMap ? 'pb-8 sm:pb-10' : 'pb-16 sm:pb-24'
       }`}
     >
@@ -201,27 +210,33 @@ export function FAQSection({
           }`}
         >
           <Reveal variants={fadeLeft} className="lg:col-span-5">
-            <div className="inline-flex items-center gap-3 text-[#513394] dark:text-[#A78BFA] mb-6">
-              <div className="w-1.5 h-1.5 rounded-full bg-[#513394] dark:bg-[#A78BFA]" />
-              <span className="text-[13px] font-bold tracking-[0.3em] uppercase">FAQ</span>
-            </div>
-            <h2 className="text-3xl font-bold tracking-tight text-neutral-900 dark:text-white sm:text-4xl md:text-6xl mb-6">
+            <span className="text-[11px] font-black tracking-[0.3em] text-[#513394] dark:text-[#A78BFA] uppercase mb-4 block">
+              FAQ //
+            </span>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-gray-900 dark:text-white mb-5 leading-[1.1]">
               Frequently Asked <br />
-              <span className="text-[#513394] dark:text-[#A78BFA]">Questions</span>
+              <span className="text-[#513394] dark:text-[#8B5CF6]">Questions</span>
             </h2>
-            <p className="text-lg text-neutral-600 dark:text-neutral-400 mb-8 max-w-md">
-              Can&apos;t find what you&apos;re looking for? <br className="hidden sm:block" />
-              Contact our{' '}
+            <p className="text-base text-gray-500 dark:text-gray-400 mb-8 max-w-md leading-relaxed">
+              Still unsure? Call{' '}
+              <a
+                href="tel:+919702368612"
+                className="font-bold text-[#513394] dark:text-[#A78BFA] hover:underline underline-offset-4"
+              >
+                +91 97023 68612
+              </a>{' '}
+              or{' '}
               <Link
                 href="/contact"
-                className="font-semibold text-[#513394] dark:text-[#A78BFA] hover:underline underline-offset-4"
+                className="font-bold text-[#513394] dark:text-[#A78BFA] hover:underline underline-offset-4"
               >
-                customer support team
+                contact us
               </Link>
+              .
             </p>
 
             {showMap && (
-              <div className="relative rounded-3xl overflow-hidden border border-neutral-200 dark:border-white/[0.08] min-h-[240px] sm:min-h-[280px] w-full max-w-xl">
+              <div className="relative rounded-3xl overflow-hidden border border-gray-200 dark:border-white/[0.08] min-h-[240px] sm:min-h-[280px] w-full max-w-xl">
                 <iframe
                   src={MAP_EMBED_SRC}
                   className="absolute inset-0 w-full h-full grayscale-[0.3] contrast-[1.05]"
@@ -234,7 +249,7 @@ export function FAQSection({
             )}
           </Reveal>
 
-          <Stagger className="lg:col-span-7 flex flex-col gap-4">
+          <Stagger className="lg:col-span-7 flex flex-col gap-3 sm:gap-4">
             {faqsWithIcons.map((faq, index) => faqCard(faq, index))}
           </Stagger>
         </div>
