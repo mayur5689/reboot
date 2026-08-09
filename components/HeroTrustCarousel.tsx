@@ -30,10 +30,6 @@ export function HeroTrustCarousel({ items }: { items: TrustBadgeItem[] }) {
     return () => observer.disconnect()
   }, [items.length])
 
-  const scrollToCard = (index: number) => {
-    cardRefs.current[index]?.scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' })
-  }
-
   return (
     <div className="mt-3">
       <div
@@ -45,38 +41,31 @@ export function HeroTrustCarousel({ items }: { items: TrustBadgeItem[] }) {
             key={`${item.label}-${item.value}`}
             ref={(el) => { cardRefs.current[i] = el }}
             className={`shrink-0 w-[58%] snap-start rounded-xl border p-3 transition-colors duration-200 ${
-              i === active ? 'border-[#513394] bg-[#1A1A1A]' : 'border-white/[0.08] bg-[#141414]'
+              i === active
+                ? 'border-[#513394] bg-white dark:bg-[#1A1A1A] shadow-sm dark:shadow-none'
+                : 'border-gray-200 dark:border-white/[0.08] bg-[#F8F9FA] dark:bg-[#141414]'
             }`}
           >
             <div className="flex items-center gap-2.5 mb-2">
-              <div className="w-8 h-8 rounded-full bg-[#513394]/20 flex items-center justify-center text-[#A78BFA] shrink-0">
+              <div className="w-8 h-8 rounded-full bg-[#513394]/10 dark:bg-[#513394]/20 flex items-center justify-center text-[#513394] dark:text-[#A78BFA] shrink-0">
                 <Icon type={item.icon} className="w-3.5 h-3.5" />
               </div>
               <div className="min-w-0">
-                <p className="text-white font-black text-[15px] leading-none mb-1">{item.value}</p>
-                <p className="text-[#A78BFA] text-[9px] font-black uppercase tracking-wide leading-none">{item.label}</p>
+                <p className="text-gray-900 dark:text-white font-black text-[15px] leading-none mb-1">
+                  {item.value}
+                </p>
+                <p className="text-[#513394] dark:text-[#A78BFA] text-[9px] font-black uppercase tracking-wide leading-none">
+                  {item.label}
+                </p>
               </div>
             </div>
-            <div className="w-6 h-[2px] bg-[#513394] mb-2" />
-            <p className="text-gray-500 text-[11px] leading-relaxed">{item.description}</p>
+            <div className="w-6 h-[2px] bg-[#513394] dark:bg-[#513394] mb-2" />
+            <p className="text-gray-500 dark:text-gray-500 text-[11px] leading-relaxed">
+              {item.description}
+            </p>
           </div>
         ))}
       </div>
-
-      {items.length > 1 && (
-        <div className="flex justify-center items-center gap-2 mt-3">
-          {items.map((_, i) => (
-            <button
-              key={i}
-              onClick={() => scrollToCard(i)}
-              aria-label={`Go to card ${i + 1}`}
-              className={`h-2 rounded-full transition-all duration-300 ${
-                i === active ? 'w-6 bg-[#513394]' : 'w-2 bg-gray-600 hover:bg-gray-400'
-              }`}
-            />
-          ))}
-        </div>
-      )}
     </div>
   )
 }

@@ -74,38 +74,28 @@ export function ComparisonSection() {
         </div>
         {/* MOBILE: compact comparison table */}
         <div className="md:hidden relative rounded-2xl border border-gray-100 dark:border-white/[0.08] bg-white dark:bg-[#0D0D13] overflow-hidden">
-          <div className="grid grid-cols-[68px_minmax(0,1fr)_minmax(0,1.2fr)]">
-            <div className="px-1 py-3 border-b border-gray-100 dark:border-white/[0.07]" />
-            <div className="flex items-center justify-center px-1.5 py-3 border-b border-gray-100 dark:border-white/[0.07]">
+          <div className="grid grid-cols-2">
+            <div className="flex items-center justify-center px-2 py-3 border-b border-gray-100 dark:border-white/[0.07]">
               <span className="text-gray-500 dark:text-white/45 font-black text-[10px] tracking-wide uppercase text-center leading-tight">
                 Generic
               </span>
             </div>
-            <div className="flex items-center justify-center px-1.5 py-3 border-b border-[#7B5FCA]/30 bg-[rgba(123,95,202,0.06)]">
+            <div className="flex items-center justify-center px-2 py-3 border-b border-[#7B5FCA]/30 bg-[rgba(123,95,202,0.06)]">
               <span className="text-[#513394] dark:text-[#A78BFA] font-black text-[10px] tracking-wide uppercase text-center leading-tight">
                 R3BOOT
               </span>
             </div>
 
             {ROWS.map((row, i) => {
-              const Icon = row.icon
               const isLast = i === ROWS.length - 1
               return (
                 <Fragment key={i}>
-                  <div className={`flex flex-col items-center justify-center gap-1 px-1 py-3 ${!isLast ? 'border-b border-gray-100 dark:border-white/[0.07]' : ''}`}>
-                    <div className="w-7 h-7 rounded-full border-[1.5px] border-[#513394] dark:border-[#A78BFA] flex items-center justify-center shrink-0">
-                      <Icon className="w-3 h-3 text-[#513394] dark:text-[#A78BFA]" strokeWidth={2} />
-                    </div>
-                    <span className="text-gray-900 dark:text-white font-black text-[9px] tracking-wide uppercase text-center leading-tight">
-                      {row.label}
-                    </span>
-                  </div>
-                  <div className={`flex items-center justify-center px-2 py-3 text-center ${!isLast ? 'border-b border-gray-100 dark:border-white/[0.07]' : ''}`}>
+                  <div className={`flex items-center justify-center px-2.5 py-3.5 text-center ${!isLast ? 'border-b border-gray-100 dark:border-white/[0.07]' : ''}`}>
                     <span className="text-gray-500 dark:text-white/45 text-[11px] leading-snug">
                       {row.generic}
                     </span>
                   </div>
-                  <div className={`flex items-center justify-between gap-1 px-2 py-3 bg-[rgba(123,95,202,0.06)] ${!isLast ? 'border-b border-[#7B5FCA]/20' : ''}`}>
+                  <div className={`flex items-center justify-between gap-1.5 px-2.5 py-3.5 bg-[rgba(123,95,202,0.06)] ${!isLast ? 'border-b border-[#7B5FCA]/20' : ''}`}>
                     <span className="text-[#513394] dark:text-[#C4B5FD] font-bold text-[11px] leading-snug">
                       {row.clinical}
                     </span>
@@ -119,7 +109,9 @@ export function ComparisonSection() {
           </div>
         </div>
 
-<div className="hidden md:block relative max-w-6xl mx-auto rounded-3xl border border-gray-100 dark:border-white/[0.08] bg-white dark:bg-[#0D0D13] overflow-hidden">
+
+        {/* DESKTOP */}
+        <div className="hidden md:block relative max-w-6xl mx-auto rounded-3xl border border-gray-100 dark:border-white/[0.08] bg-white dark:bg-[#0D0D13] overflow-hidden">
           <div
             className="absolute top-0 bottom-0 w-px bg-gray-100 dark:bg-white/[0.07] pointer-events-none"
             style={{ left: `${COL1_2_BOUNDARY_PCT}%` }}
