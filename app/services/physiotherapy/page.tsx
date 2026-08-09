@@ -326,7 +326,7 @@ export default function PhysiotherapyPage() {
 
                             <div className="absolute bottom-6 left-6 right-6 sm:bottom-8 sm:left-8 sm:right-8">
                                 <p className="text-white text-lg sm:text-xl font-black tracking-tight leading-tight mb-3">
-                                    Dr. Hiral Parikh · Lead Physiotherapist
+                                    Vaishali Vijay Rauniyar · Lead Physiotherapist
                                 </p>
                                 <div className="flex flex-col gap-2">
                                     {['15+ Years Clinical Experience', 'Root-Cause Assessment First'].map((point, i) => (
