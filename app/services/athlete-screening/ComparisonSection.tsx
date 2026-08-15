@@ -40,7 +40,7 @@ const ROWS = [
   },
 ]
 
-// Column fractions — shared by every row so boundaries line up pixel-for-pixel.
+// Column fractions - shared by every row so boundaries line up pixel-for-pixel.
 const COL_FR = [1.25, 0.9, 1.25]
 const TOTAL_FR = COL_FR.reduce((a, b) => a + b, 0)
 const COLS = COL_FR.map((f) => `minmax(0,${f}fr)`).join(' ')

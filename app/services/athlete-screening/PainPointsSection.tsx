@@ -64,7 +64,7 @@ export function PainPointsSection() {
             {/* LEFT: image pane */}
             <div className="relative rounded-2xl overflow-hidden min-h-[560px] xl:min-h-[600px]">
 
-              {/* Stacked images — opacity crossfade */}
+              {/* Stacked images - opacity crossfade */}
               {POINTS.map((pt, i) => (
                 <div
                   key={i}
@@ -82,7 +82,7 @@ export function PainPointsSection() {
                 </div>
               ))}
 
-              {/* Gradient overlays — always dark, this sits on a photo regardless of page theme */}
+              {/* Gradient overlays - always dark, this sits on a photo regardless of page theme */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-black/35 pointer-events-none" />
               <div className="absolute inset-0 bg-gradient-to-r from-black/25 to-transparent pointer-events-none" />
 

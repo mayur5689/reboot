@@ -42,10 +42,10 @@ const heroSlides = [
 ]
 
 const processSteps = [
-    { icon: ClipboardList, number: '01', title: 'History & Goals', body: 'Sports background, training load, injury history, and where you want to be, covered before we touch a single test.' },
+    { icon: ClipboardList, number: '01', title: 'History & Goals', body: 'PAR-Q clearance, sports background, training load, and injury history, covered before we touch a single test.' },
     { icon: Activity, number: '02', title: 'MSK & Movement Exam', body: 'Range of motion, flexibility, and gait analysed joint by joint, left versus right, hands-on.' },
-    { icon: Target, number: '03', title: 'Special Tests', body: 'Balance, strength, and sport-specific tests that expose what you can\'t feel yet.' },
-    { icon: ClipboardCheck, number: '04', title: 'Risk Summary & Plan', body: 'A clinician-built report on your risk factors, with a program to close the gaps.' },
+    { icon: Target, number: '03', title: 'Special Tests', body: 'Balance, strength, power, and sport-specific tests that expose what you can\'t feel yet.' },
+    { icon: ClipboardCheck, number: '04', title: 'Risk Summary & Plan', body: 'Your Risk Summary & Clinician Recommendations report, scored across mobility, strength, and neuromuscular control, with a program to close the gaps.' },
 ]
 
 const testimonials = [
@@ -144,7 +144,7 @@ export default function AthleteScreeningPage() {
                     </h1>
 
                     <p className="text-[16px] text-white/55 max-w-md leading-relaxed mb-7">
-                        A full-body, evidence-based assessment that finds your injury risk and your performance ceiling — before either one finds you first.
+                        A full-body, evidence-based assessment that finds your injury risk and your performance ceiling - before either one finds you first.
                     </p>
 
                     <div className="flex items-center gap-4">
@@ -193,7 +193,7 @@ export default function AthleteScreeningPage() {
                     </h1>
 
                     <p className="text-base text-gray-500 dark:text-gray-400 leading-relaxed mb-6">
-                        A full-body MSK exam, gait analysis, and sport-specific special tests — supervised by physiotherapists at R3BOOT Dadar.
+                        A full-body MSK exam, gait analysis, and sport-specific special tests - supervised by physiotherapists at R3BOOT Dadar.
                     </p>
 
                     <MobileHeroTrust items={serviceTrustBadges['athlete-screening']} />
@@ -258,20 +258,20 @@ export default function AthleteScreeningPage() {
                             <span className="w-8 h-px bg-[#513394]/40 dark:bg-[#A78BFA]/40" />
                         </div>
                         <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 dark:text-white tracking-tight mb-4 leading-tight">
-                            Screening Protocol at{' '}
-                            <span className="text-[#513394] dark:text-[#8B5CF6]">R3BOOT</span>
+                            Built from Sports Medicine,{' '}
+                            <span className="text-[#513394] dark:text-[#8B5CF6]">Not a Template</span>
                         </h2>
                         <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed">
-                            Every joint tested like it&rsquo;s game day. Tests are selected from your sport and history — not a generic checklist.
+                            Grounded in validated tools like the Functional Movement Screen - chosen for your sport and injury history, not lifted from a generic checklist.
                         </p>
                     </div>
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-24 items-start max-w-7xl mx-auto">
 
-                        {/* Left: photo panel — sticky on desktop */}
+                        {/* Left: photo panel - sticky on desktop */}
                         <div className="relative rounded-[2rem] sm:rounded-[2.5rem] overflow-hidden aspect-[4/5] w-full shadow-2xl lg:sticky lg:top-28">
                             <Image
-                                src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&q=80&w=1200"
+                                src="https://res.cloudinary.com/dj7bot2uc/image/upload/v1786783722/METHOLOGY_PAGE_u7x7br.webp"
                                 alt="Musculoskeletal exam and movement assessment – R3BOOT Athlete Screening"
                                 fill
                                 className="object-cover"
@@ -290,7 +290,7 @@ export default function AthleteScreeningPage() {
 
                             <div className="absolute bottom-6 left-6 right-6 sm:bottom-8 sm:left-8 sm:right-8">
                                 <p className="text-white text-lg sm:text-xl font-black tracking-tight leading-tight mb-3">
-                                    Hands-On Exam at R3BOOT Dadar
+                                    Full-Body Exam, Joint by Joint
                                 </p>
                                 <div className="flex flex-col gap-2">
                                     {['Joint-by-Joint Range of Motion', 'Gait & Coordination Battery'].map((point, i) => (
@@ -313,32 +313,32 @@ export default function AthleteScreeningPage() {
                                 {[
                                     {
                                         icon: Activity,
-                                        title: 'Joint-by-Joint MSK Exam',
-                                        body: 'Cervical, shoulder, hip, knee, ankle, every major joint taken through its full range and logged left versus right. Asymmetry is where injuries start, and it\'s the first thing most athletes never get checked.',
+                                        title: 'Full-Range Joint Check',
+                                        body: 'Cervical, shoulder, hip, knee, ankle, and more - every major joint moved through full range and scored left versus right, using named tests like the Modified Thomas Test. Most athletes carry an asymmetry for years before it turns into an injury. This is where we catch it first.',
                                         light: '#513394', dark: '#A78BFA',
                                         bgLight: 'rgba(81,51,148,0.08)', bgDark: 'rgba(167,139,250,0.14)',
                                         borderLight: 'rgba(81,51,148,0.35)', borderDark: 'rgba(167,139,250,0.45)',
                                     },
                                     {
                                         icon: Footprints,
-                                        title: 'Gait & Movement Analysis',
-                                        body: 'We watch how your foot lands, how wide your stride is, and how your trunk leans under load. Small faults here compound over thousands of strides into real injury risk.',
+                                        title: 'Gait Under Load',
+                                        body: 'Foot strike, step width, trunk lean, arm swing, pelvic drop - tracked while you move, not while you stand still. A fault that looks minor at walking pace compounds into real strain over thousands of strides in-season.',
                                         light: '#0D9488', dark: '#2DD4BF',
                                         bgLight: 'rgba(13,148,136,0.08)', bgDark: 'rgba(45,212,191,0.14)',
                                         borderLight: 'rgba(13,148,136,0.35)', borderDark: 'rgba(45,212,191,0.45)',
                                     },
                                     {
                                         icon: Zap,
-                                        title: 'Special Tests & Coordination',
-                                        body: 'From the Overhead Squat to the Star Excursion Balance Test, every special test is chosen because it predicts something real about your sport. Coordination and reaction get tested too, not skipped.',
+                                        title: 'Sport-Specific Special Tests',
+                                        body: 'Overhead Squat, Single Leg Hop Test, Star Excursion, Copenhagen Adductor - picked because each one predicts something specific to your sport, not because it\'s on a template. Reaction and coordination get scored too, with tests like Wall Throw and T-Jump.',
                                         light: '#B45309', dark: '#FBBF24',
                                         bgLight: 'rgba(180,83,9,0.08)', bgDark: 'rgba(251,191,36,0.14)',
                                         borderLight: 'rgba(180,83,9,0.35)', borderDark: 'rgba(251,191,36,0.45)',
                                     },
                                     {
                                         icon: ClipboardCheck,
-                                        title: 'Risk Scoring & Recovery Plan',
-                                        body: 'Every finding gets ranked by risk and turned into a personalised Recovery & Performance Plan you can actually train with, not a printout you file away.',
+                                        title: 'Risk Score & Recovery Roadmap',
+                                        body: 'Mobility, strength, movement compensation, neuromuscular control - every risk factor gets scored and rolled into your Risk Summary & Clinician Recommendations report, not a printout you file away. Every recommendation ties back to a specific result from your exam.',
                                         light: '#0369A1', dark: '#38BDF8',
                                         bgLight: 'rgba(3,105,161,0.08)', bgDark: 'rgba(56,189,248,0.14)',
                                         borderLight: 'rgba(3,105,161,0.35)', borderDark: 'rgba(56,189,248,0.45)',
@@ -407,7 +407,7 @@ export default function AthleteScreeningPage() {
                                 label: 'Runners',
                                 tag: 'RUNNING //',
                                 description:
-                                    'Gait asymmetries, hip drop, Achilles load tolerance, and IT band risk — scored before mileage climbs and something gives out mid-block.',
+                                    'Gait asymmetries, hip drop, Achilles load tolerance, and IT band risk - scored before mileage climbs and something gives out mid-block.',
                                 image: 'https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=800&q=80',
                                 points: ['Gait asymmetries', 'Achilles load risk', 'IT band predictors'],
                             },
@@ -423,7 +423,7 @@ export default function AthleteScreeningPage() {
                                 label: 'Cricketers & Field Sports',
                                 tag: 'SPORT //',
                                 description:
-                                    'Bowling-side lumbar risk, hamstring strain predictors, and single-leg control under fatigue — tested against your sport, not a generic template.',
+                                    'Bowling-side lumbar risk, hamstring strain predictors, and single-leg control under fatigue - tested against your sport, not a generic template.',
                                 image: 'https://images.unsplash.com/photo-1531415074968-036ba1b575da?auto=format&fit=crop&w=800&q=80',
                                 points: ['Lumbar asymmetry', 'Hamstring risk', 'Single-leg control'],
                             },
@@ -697,7 +697,7 @@ export default function AthleteScreeningPage() {
                         <div>
                             <p className="text-xs font-black tracking-widest text-[#513394] uppercase mb-1">Mumbai Guide</p>
                             <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-[#513394] transition-colors">
-                                Athlete Screening in Mumbai — What to Expect & How to Book
+                                Athlete Screening in Mumbai - What to Expect & How to Book
                             </h3>
                             <span className="text-sm text-gray-500 dark:text-gray-400 mt-1 inline-block">Full local guide →</span>
                         </div>
