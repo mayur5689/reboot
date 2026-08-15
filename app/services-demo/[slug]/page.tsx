@@ -13,7 +13,7 @@ const FOR_YOU_IF: Record<string, string[]> = {
   'counselling-mental-training': ['Pre-competition nerves', 'Returning from injury', 'Performance plateau', 'Motivation loss', 'Want a mental edge'],
   'aqua-therapy': ['Knee or hip pain', 'Cannot do high-impact exercise', 'Arthritis or joint stiffness', 'Post-surgery recovery', 'Elderly or sedentary'],
   'sports-massage': ['Tight muscles after training', 'Upcoming race or event', 'Poor flexibility', 'Recurring muscle knots', 'Training every day'],
-  'sports-psychology': ['Choking under pressure', 'Fear of failure', 'Returning from injury mentally', 'Pre-competition anxiety', 'Burnout or motivation loss', 'Want elite mindset'],
+  'mental-training': ['Choking under pressure', 'Fear of failure', 'Returning from injury mentally', 'Pre-competition anxiety', 'Burnout or motivation loss', 'Want elite mindset'],
 }
 
 const SESSION_META: Record<string, { duration: string; sessions: string }> = {
@@ -23,7 +23,7 @@ const SESSION_META: Record<string, { duration: string; sessions: string }> = {
   'counselling-mental-training': { duration: '50 min',    sessions: '4 - 8 sessions typical' },
   'aqua-therapy':              { duration: '45 min',      sessions: '6 - 12 sessions typical' },
   'sports-massage':            { duration: '45 - 60 min', sessions: 'Single session or package' },
-  'sports-psychology':         { duration: '50 min',      sessions: '4 - 8 sessions typical' },
+  'mental-training':           { duration: '50 min',      sessions: '4 - 8 sessions typical' },
 }
 
 const FAQS: Record<string, { q: string; a: string }[]> = {
@@ -69,7 +69,7 @@ const FAQS: Record<string, { q: string; a: string }[]> = {
     { q: 'Can this run alongside physical rehabilitation?', a: 'Yes - and it often produces better outcomes when combined. R3BOOT coordinates your mental and physical recovery simultaneously.' },
     { q: 'What is the difference between this and sports psychology?', a: 'Counselling addresses emotional challenges like injury anxiety and burnout. Sports psychology focuses on performance skills like focus and mental routines. Both are available at R3BOOT.' },
   ],
-  'sports-psychology': [
+  'mental-training': [
     { q: 'What is covered under this service?', a: 'Sports psychology and counselling are combined into one mental performance service — focus and competition skills plus emotional support for injury anxiety, burnout, and motivation.' },
     { q: 'What does a session look like?', a: 'Structured conversation, mental skills training (visualisation, focus techniques, self-talk), and goal-setting work. Practical and performance-focused - not traditional open-ended therapy.' },
     { q: 'Can this help with performance anxiety?', a: 'Yes. Managing competition anxiety is one of the core areas. Most athletes see measurable improvement in composure and consistency within 4 - 6 sessions.' },

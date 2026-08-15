@@ -107,7 +107,7 @@ export function WhyMumbaiAthletesSection() {
                 We combine contrast therapy with{' '}
                 <Link href="/services/sports-massage" className="text-[#513394] dark:text-[#C4B5FD] font-bold hover:underline underline-offset-4">sports massage</Link>,{' '}
                 <Link href="/services/physiotherapy" className="text-[#513394] dark:text-[#C4B5FD] font-bold hover:underline underline-offset-4">physiotherapy</Link> and{' '}
-                <Link href="/services/sports-psychology" className="text-[#513394] dark:text-[#C4B5FD] font-bold hover:underline underline-offset-4">sports psychology</Link> for complete, stage-wise recovery.
+                <Link href="/services/mental-training" className="text-[#513394] dark:text-[#C4B5FD] font-bold hover:underline underline-offset-4">sports psychology</Link> for complete, stage-wise recovery.
               </p>
             </div>
           </div>

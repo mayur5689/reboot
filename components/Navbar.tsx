@@ -16,8 +16,11 @@ export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const { theme, resolvedTheme, setTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
-  const isHome = pathname === '/'
-  const shouldBeSolid = !isHome || isScrolled || isServicesOpen
+  const isDarkHero =
+    pathname === '/' ||
+    pathname === '/partnerships' ||
+    pathname === '/employee-wellness'
+  const shouldBeSolid = !isDarkHero || isScrolled || isServicesOpen
 
   useEffect(() => {
     setMounted(true)
@@ -254,6 +257,7 @@ function getServiceIcon(title: string) {
     case "Clinical Pilates": return <PilatesIcon />;
     case "Contrast Therapy": return <ContrastIcon />;
     case "Sports Massage": return <MassageIcon />;
+    case "Mental Training": return <BrainIcon />;
     case "Sports Psychology": return <BrainIcon />;
     case "Sports Psychology & Counselling": return <BrainIcon />;
     case "Counselling & Mental Training": return <MentalIcon />;

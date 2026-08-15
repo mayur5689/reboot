@@ -203,7 +203,7 @@ export const googleReviewsBadge: TrustBadgeItem = {
 }
 
 export const serviceTrustBadges: Record<string, TrustBadgeItem[]> = {
-  'sports-psychology': [
+  'mental-training': [
     googleReviewsBadge,
     {
       icon: 'clock',

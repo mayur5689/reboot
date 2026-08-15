@@ -21,9 +21,16 @@ export type FAQSectionItem = {
   answer: string;
 };
 
+export type FAQMapLocation = {
+  name: string;
+  query: string;
+};
+
 interface FAQSectionProps {
   faqs?: FAQSectionItem[];
   showMap?: boolean;
+  /** Stacked location maps shown in the left column instead of a single map (default layout only) */
+  locations?: FAQMapLocation[];
   /** Centered heading + 2-column FAQ grid (service-page standard) */
   layout?: 'default' | 'grid';
 }
@@ -31,6 +38,7 @@ interface FAQSectionProps {
 export function FAQSection({
   faqs: faqsProp,
   showMap = false,
+  locations,
   layout = 'default',
 }: FAQSectionProps = {}) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -200,13 +208,13 @@ export function FAQSection({
   return (
     <section
       className={`bg-white dark:bg-[#0A0A0A] pt-16 sm:pt-24 px-5 sm:px-6 lg:px-8 transition-colors duration-500 ${
-        showMap ? 'pb-8 sm:pb-10' : 'pb-16 sm:pb-24'
+        showMap || locations?.length ? 'pb-8 sm:pb-10' : 'pb-16 sm:pb-24'
       }`}
     >
       <div className="container mx-auto max-w-[1400px]">
         <div
           className={`grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 ${
-            showMap ? 'items-start' : ''
+            showMap || locations?.length ? 'items-start' : ''
           }`}
         >
           <Reveal variants={fadeLeft} className="lg:col-span-5">
@@ -235,7 +243,25 @@ export function FAQSection({
               .
             </p>
 
-            {showMap && (
+            {locations?.length ? (
+              <div className="flex flex-col gap-5 w-full max-w-xl">
+                {locations.map((loc) => (
+                  <div key={loc.name}>
+                    <p className="text-xs font-bold text-gray-500 dark:text-gray-400 mb-2 ml-1">{loc.name}</p>
+                    <div className="relative rounded-2xl overflow-hidden border border-gray-200 dark:border-white/[0.08] min-h-[220px] sm:min-h-[260px] w-full">
+                      <iframe
+                        src={`https://www.google.com/maps?q=${encodeURIComponent(loc.query)}&z=16&output=embed`}
+                        className="absolute inset-0 w-full h-full grayscale-[0.3] contrast-[1.05]"
+                        style={{ border: 0 }}
+                        loading="lazy"
+                        referrerPolicy="no-referrer-when-downgrade"
+                        title={`R3BOOT ${loc.name} location map`}
+                      />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            ) : showMap ? (
               <div className="relative rounded-3xl overflow-hidden border border-gray-200 dark:border-white/[0.08] min-h-[240px] sm:min-h-[280px] w-full max-w-xl">
                 <iframe
                   src={MAP_EMBED_SRC}
@@ -246,7 +272,7 @@ export function FAQSection({
                   title="R3BOOT Dadar location map"
                 />
               </div>
-            )}
+            ) : null}
           </Reveal>
 
           <Stagger className="lg:col-span-7 flex flex-col gap-3 sm:gap-4">

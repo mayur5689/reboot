@@ -20,7 +20,7 @@ const services = [
   { label: 'Aqua Therapy', href: '/services/aqua-therapy' },
   { label: 'Clinical Pilates', href: '/services/clinical-pilates' },
   { label: 'Sports Massage', href: '/services/sports-massage' },
-  { label: 'Sports Psychology & Counselling', href: '/services/sports-psychology' },
+  { label: 'Mental Training', href: '/services/mental-training' },
 ]
 
 const socialLinks = [

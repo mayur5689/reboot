@@ -14,13 +14,18 @@ const nextConfig = {
                 permanent: true,
             },
             {
+                source: '/services/sports-psychology',
+                destination: '/services/mental-training',
+                permanent: true,
+            },
+            {
                 source: '/services/counselling-%26-mental-training',
-                destination: '/services/sports-psychology',
+                destination: '/services/mental-training',
                 permanent: true,
             },
             {
                 source: '/services/counselling-mental-training',
-                destination: '/services/sports-psychology',
+                destination: '/services/mental-training',
                 permanent: true,
             },
             {
@@ -31,6 +36,11 @@ const nextConfig = {
             {
                 source: '/services/aqua-therapy-mumbai',
                 destination: '/aqua-therapy-mumbai',
+                permanent: true,
+            },
+            {
+                source: '/corporate-wellness',
+                destination: '/employee-wellness',
                 permanent: true,
             },
         ]

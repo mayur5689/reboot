@@ -14,19 +14,12 @@ import { TestimonialsCarousel } from './TestimonialsCarousel'
 import { LocationSection } from './LocationSection'
 import { PainPointsSection } from './PainPointsSection'
 import { ComparisonSection } from './ComparisonSection'
-import { WhoWeHelpSection } from './WhoWeHelpSection'
+import { MethodologySection } from './MethodologySection'
 import {
   ClipboardCheck,
   Target,
   Activity,
   TrendingUp,
-  Brain,
-  HeartHandshake,
-  Clock,
-  User,
-  Shield,
-  Zap,
-  Users,
 } from 'lucide-react'
 
 export const metadata: Metadata = {
@@ -40,10 +33,10 @@ export const metadata: Metadata = {
     'performance anxiety counselling',
     'sports psychologist dadar',
   ],
-  alternates: { canonical: '/services/sports-psychology' },
+  alternates: { canonical: '/services/mental-training' },
 }
 
-const otherServices = services.filter((s) => s.slug !== 'sports-psychology').slice(0, 4)
+const otherServices = services.filter((s) => s.slug !== 'mental-training').slice(0, 4)
 
 const heroSlides = [
   {
@@ -208,7 +201,7 @@ export default function SportsPsychologyPage() {
           </div>
         </div>
 
-        <HeroTrustBadge items={serviceTrustBadges['sports-psychology']} />
+        <HeroTrustBadge items={serviceTrustBadges['mental-training']} />
         </div>
       </section>
 
@@ -233,7 +226,7 @@ export default function SportsPsychologyPage() {
             Performance skills and counselling in one service. Manage pressure, rebuild trust after injury, and train the mental side at R3BOOT Dadar.
           </p>
 
-          <MobileHeroTrust items={serviceTrustBadges['sports-psychology']} />
+          <MobileHeroTrust items={serviceTrustBadges['mental-training']} />
         </div>
       </section>
       {/* ─── WHAT TO EXPECT ─── */}
@@ -305,168 +298,7 @@ export default function SportsPsychologyPage() {
 
       <PainPointsSection />
 
-      <WhoWeHelpSection />
-
-      {/* ─── METHODOLOGY ─── */}
-      <section id="methodology" className="py-16 sm:py-24 lg:py-32 bg-[#F8F9FA] dark:bg-[#0D0D0D]">
-        <div className="container mx-auto px-5 sm:px-6 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
-            <div className="flex items-center justify-center gap-3 mb-4">
-              <span className="w-8 h-px bg-[#513394]/40 dark:bg-[#A78BFA]/40" />
-              <span className="text-[11px] font-black tracking-[0.3em] text-[#513394] dark:text-[#A78BFA] uppercase">METHODOLOGY</span>
-              <span className="w-8 h-px bg-[#513394]/40 dark:bg-[#A78BFA]/40" />
-            </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 dark:text-white tracking-tight mb-4 leading-tight">
-              One plan.{' '}
-              <span className="text-[#513394] dark:text-[#8B5CF6]">Delivered together.</span>
-            </h2>
-            <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed">
-              One plan, whether you are training, recovering from injury, or managing pressure at work.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-24 items-start max-w-7xl mx-auto">
-            <div className="relative rounded-[2rem] sm:rounded-[2.5rem] overflow-hidden aspect-[4/5] w-full shadow-2xl lg:sticky lg:top-28">
-              <Image
-                src="https://res.cloudinary.com/dj7bot2uc/image/upload/v1785886347/METHODOLOGY_image_s0edmh.webp"
-                alt="Sports psychology and counselling at R3BOOT Mumbai"
-                fill
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-black/25" />
-
-              <div className="absolute top-5 left-5 sm:top-6 sm:left-6 flex items-center gap-3 bg-white/95 backdrop-blur-sm rounded-2xl pl-3 pr-4 py-2.5 shadow-lg">
-                <div className="w-9 h-9 rounded-xl bg-[#513394]/10 flex items-center justify-center text-[#513394] shrink-0">
-                  <Brain className="w-4 h-4" strokeWidth={2} />
-                </div>
-                <div>
-                  <p className="text-[9px] font-black tracking-[0.2em] text-[#513394] uppercase leading-none mb-1">Performance + Counselling</p>
-                  <p className="text-gray-900 font-bold text-[13px] leading-none">Mental Performance</p>
-                </div>
-              </div>
-
-              <div className="absolute bottom-6 left-6 right-6 sm:bottom-8 sm:left-8 sm:right-8">
-                <div className="flex flex-col gap-2">
-                  {['Specialist-Led Mental Performance', 'Confidential 50-Min Sessions'].map((point) => (
-                    <div key={point} className="flex items-center gap-2.5">
-                      <div className="w-5 h-5 rounded-full bg-[#513394]/30 border border-[#A78BFA]/50 flex items-center justify-center shrink-0">
-                        <svg className="w-3 h-3 text-[#C4B5FD]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                        </svg>
-                      </div>
-                      <span className="text-white font-bold text-[15px] sm:text-base">{point}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            <div>
-              <div className="grid grid-cols-2 lg:grid-cols-4 rounded-2xl border border-gray-100 dark:border-white/[0.08] bg-white dark:bg-white/[0.03] overflow-hidden mb-8 sm:mb-10">
-                {[
-                  { icon: Clock, value: '50 Min', label: 'Session' },
-                  { icon: User, value: 'Specialist-Led', label: 'Delivered By' },
-                  { icon: Shield, value: 'Confidential', label: 'Private' },
-                  { icon: Users, value: 'Integrated', label: 'Care Format' },
-                ].map((stat, i) => {
-                  const StatIcon = stat.icon
-                  return (
-                    <div
-                      key={stat.label}
-                      className={`flex items-center gap-2.5 px-3.5 sm:px-4 py-4 min-w-0
-                        ${i % 2 === 1 ? 'border-l border-gray-100 dark:border-white/[0.08]' : ''}
-                        ${i >= 2 ? 'border-t border-gray-100 dark:border-white/[0.08] lg:border-t-0' : ''}
-                        ${i > 0 ? 'lg:border-l lg:border-gray-100 dark:lg:border-white/[0.08]' : ''}`}
-                    >
-                      <div className="w-9 h-9 rounded-full bg-[#513394]/8 dark:bg-[#8B5CF6]/15 flex items-center justify-center text-[#513394] dark:text-[#A78BFA] shrink-0">
-                        <StatIcon className="w-4 h-4" strokeWidth={1.8} />
-                      </div>
-                      <div className="min-w-0">
-                        <p className="text-gray-900 dark:text-white font-black text-[13px] leading-tight truncate">{stat.value}</p>
-                        <p className="text-gray-400 dark:text-white/40 text-[10px] font-bold uppercase tracking-wide mt-0.5 truncate">{stat.label}</p>
-                      </div>
-                    </div>
-                  )
-                })}
-              </div>
-
-              <div className="flex flex-col">
-                {[
-                  {
-                    icon: Brain,
-                    title: 'Sports Psychology',
-                    body: 'Build the mental tools that hold under pressure: focus routines, visualisation, self-talk, composure, and competition-day preparation. Practical, future-oriented, and designed for sport.',
-                    light: '#513394', dark: '#A78BFA',
-                    bgLight: 'rgba(81,51,148,0.08)', bgDark: 'rgba(167,139,250,0.14)',
-                    borderLight: 'rgba(81,51,148,0.35)', borderDark: 'rgba(167,139,250,0.45)',
-                  },
-                  {
-                    icon: HeartHandshake,
-                    title: 'Counselling & Mental Training',
-                    body: 'Address the emotional load that training alone cannot fix: injury anxiety, burnout, motivation loss, and learning to trust your body again while physical rehab continues.',
-                    light: '#0D9488', dark: '#2DD4BF',
-                    bgLight: 'rgba(13,148,136,0.08)', bgDark: 'rgba(45,212,191,0.14)',
-                    borderLight: 'rgba(13,148,136,0.35)', borderDark: 'rgba(45,212,191,0.45)',
-                  },
-                  {
-                    icon: Zap,
-                    title: 'Skills you can use the same week',
-                    body: 'Visualisation, focus cues, self-talk, and pre-competition routines are practised, not only discussed. Mental work has to survive the warm-up, not just the consulting room.',
-                    light: '#B45309', dark: '#FBBF24',
-                    bgLight: 'rgba(180,83,9,0.08)', bgDark: 'rgba(251,191,36,0.14)',
-                    borderLight: 'rgba(180,83,9,0.35)', borderDark: 'rgba(251,191,36,0.45)',
-                  },
-                  {
-                    icon: Activity,
-                    title: 'Coordinated with physical rehab',
-                    body: 'If you are recovering from injury, mental sessions sit alongside physiotherapy so you rebuild trust in your body while tissue heals. Same centre. Same plan.',
-                    light: '#0369A1', dark: '#38BDF8',
-                    bgLight: 'rgba(3,105,161,0.08)', bgDark: 'rgba(56,189,248,0.14)',
-                    borderLight: 'rgba(3,105,161,0.35)', borderDark: 'rgba(56,189,248,0.45)',
-                  },
-                ].map((phase, idx, arr) => {
-                  const Icon = phase.icon
-                  const isLast = idx === arr.length - 1
-                  return (
-                    <div
-                      key={phase.title}
-                      className="flex gap-4 sm:gap-6"
-                      style={{
-                        '--pc': phase.light,
-                        '--pcd': phase.dark,
-                        '--pbg': phase.bgLight,
-                        '--pbgd': phase.bgDark,
-                        '--pbd': phase.borderLight,
-                        '--pbdd': phase.borderDark,
-                      } as React.CSSProperties}
-                    >
-                      <div className="flex flex-col items-center shrink-0 w-12 sm:w-16">
-                        <span className="text-[10px] font-black tracking-widest rounded-full px-2 sm:px-2.5 py-1 leading-none mb-2 sm:mb-2.5 bg-[var(--pbg)] dark:bg-[var(--pbgd)] text-[var(--pc)] dark:text-[var(--pcd)]">
-                          {String(idx + 1).padStart(2, '0')}
-                        </span>
-                        <div className="w-11 h-11 sm:w-14 sm:h-14 rounded-full border-[1.5px] flex items-center justify-center shrink-0 border-[var(--pbd)] dark:border-[var(--pbdd)] bg-[var(--pbg)] dark:bg-[var(--pbgd)]">
-                          <Icon className="w-4 h-4 sm:w-5 sm:h-5 text-[var(--pc)] dark:text-[var(--pcd)]" strokeWidth={1.75} />
-                        </div>
-                        {!isLast && (
-                          <div className="w-[1.5px] flex-1 min-h-[20px] my-1 [background:repeating-linear-gradient(to_bottom,rgba(0,0,0,0.15)_0px,rgba(0,0,0,0.15)_3px,transparent_3px,transparent_8px)] dark:[background:repeating-linear-gradient(to_bottom,rgba(255,255,255,0.18)_0px,rgba(255,255,255,0.18)_3px,transparent_3px,transparent_8px)]" />
-                        )}
-                      </div>
-
-                      <div className={`flex-1 min-w-0 ${isLast ? 'pb-0' : 'pb-5 sm:pb-6'}`}>
-                        <div className="p-4 sm:p-6 rounded-2xl bg-white dark:bg-white/[0.04] border border-gray-100 dark:border-white/[0.06] hover:border-[var(--pbd)] dark:hover:border-[var(--pbdd)] transition-all duration-300">
-                          <h3 className="text-[15px] sm:text-base font-bold text-gray-900 dark:text-white mb-1.5 sm:mb-2">{phase.title}</h3>
-                          <p className="text-gray-500 dark:text-gray-400 text-[13px] sm:text-sm leading-relaxed">{phase.body}</p>
-                        </div>
-                      </div>
-                    </div>
-                  )
-                })}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
+      <MethodologySection />
 
       <ComparisonSection />
 
@@ -804,7 +636,7 @@ export default function SportsPsychologyPage() {
       <ServiceSchema
         serviceName="Sports Psychology & Counselling"
         description="Integrated sports psychology and counselling for athletes and high performers in Mumbai. Performance skills, injury psychology, and mental training at R3BOOT Dadar."
-        serviceUrl="https://www.r3boot.in/services/sports-psychology"
+        serviceUrl="https://www.r3boot.in/services/mental-training"
       />
       <FAQSchema faqs={sportsPsychologyFaqs} />
     </main>

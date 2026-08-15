@@ -177,7 +177,7 @@ export const services: Service[] = [
         slug: "sports-massage"
     },
     {
-        title: "Sports Psychology & Counselling",
+        title: "Mental Training",
         tagline: "Stronger Mind, Better Performance",
         category: "MENTAL",
         description: "Integrated sports psychology and counselling for pressure, focus, injury psychology, and mental training — one service for athletes and high performers.",
@@ -196,7 +196,7 @@ export const services: Service[] = [
             { title: "Review & refine", description: "Tracking composure and confidence as pressure or return-to-sport increases." }
         ],
         image: "/images/hero/r3boot-counselling.png",
-        slug: "sports-psychology"
+        slug: "mental-training"
     },
     {
         title: "Athlete Screening",
