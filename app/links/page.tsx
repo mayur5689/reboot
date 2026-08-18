@@ -5,25 +5,46 @@ import { linktreeData } from './data';
 import ProfileHeader from './_components/ProfileHeader';
 import LinkCard from './_components/LinkCard';
 import SocialIcons from './_components/SocialIcons';
+import BrandBanner from './_components/BrandBanner';
 import AppointmentModal from './_components/modals/AppointmentModal';
 import ReviewsModal from './_components/modals/ReviewsModal';
 import LocationModal from './_components/modals/LocationModal';
 import ShareModal from './_components/modals/ShareModal';
 import { linksTokens as t } from './_components/tokens';
+import { Heart } from 'lucide-react';
 
 export default function LinksPage() {
   const [activeModal, setActiveModal] = useState<string | null>(null);
   const [showShareModal, setShowShareModal] = useState(false);
 
   return (
-    <div className="min-h-dvh md:bg-[#C8C8C8]" style={{ backgroundColor: t.bg }}>
-      {/* Top-anchored on all sizes — not vertically centered */}
+    <div className="relative min-h-dvh overflow-hidden" style={{ backgroundColor: t.bg }}>
       <div
-        className="mx-auto flex min-h-dvh w-full flex-col md:px-4 md:pt-10 md:pb-8"
+        aria-hidden
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background: `
+            radial-gradient(ellipse 90% 55% at 50% -8%, rgba(112, 72, 198, 0.16), transparent 55%),
+            radial-gradient(ellipse 70% 40% at 100% 80%, rgba(167, 139, 250, 0.18), transparent 50%),
+            radial-gradient(ellipse 50% 35% at 0% 100%, rgba(112, 72, 198, 0.1), transparent 45%)
+          `,
+        }}
+      />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 top-[42%] h-40 opacity-50"
+        style={{
+          background:
+            'radial-gradient(ellipse 80% 70% at 50% 50%, rgba(196, 181, 253, 0.35), transparent 70%)',
+        }}
+      />
+
+      <div
+        className="relative mx-auto flex min-h-dvh w-full flex-col"
         style={{ maxWidth: t.containerMax }}
       >
         <div
-          className="links-shell-panel flex w-full flex-1 flex-col bg-white md:flex-none md:rounded-[32px]"
+          className="flex w-full flex-1 flex-col"
           style={{
             paddingLeft: t.padX,
             paddingRight: t.padX,
@@ -36,7 +57,7 @@ export default function LinksPage() {
             onShare={() => setShowShareModal(true)}
           />
 
-          <div style={{ marginTop: t.bioToSocial }}>
+          <div style={{ marginTop: t.phoneToSocial }}>
             <SocialIcons socials={linktreeData.socials} />
           </div>
 
@@ -62,56 +83,42 @@ export default function LinksPage() {
             ))}
           </div>
 
-          {/* Luxury: empty space, then CTA */}
-          <div style={{ marginTop: t.linksToCta }}>
-            <button
-              type="button"
-              onClick={() => setShowShareModal(true)}
-              className="w-full bg-white text-[#1A1A1A] transition-[transform,background-color] duration-150 ease-out hover:bg-[#FAFAFA] active:scale-[0.99] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#8B5CF6] motion-reduce:active:scale-100"
-              style={{
-                borderRadius: t.radiusPill,
-                border: '1px solid rgba(0,0,0,0.1)',
-                paddingBlock: 12,
-                fontSize: 13,
-                fontWeight: 600,
-                letterSpacing: '-0.01em',
-                boxShadow: '0 1px 2px rgba(0,0,0,0.04)',
-              }}
+          <div
+            className="opacity-0 motion-reduce:opacity-100"
+            style={{
+              marginTop: t.linksToBanner,
+              animation: 'links-rise 380ms cubic-bezier(0.16, 1, 0.3, 1) forwards',
+              animationDelay: '220ms',
+            }}
+          >
+            <BrandBanner onClick={() => setActiveModal('appointment')} />
+          </div>
+
+          <div className="mt-8 flex flex-col items-center">
+            <div className="flex w-full items-center gap-3" aria-hidden>
+              <span className="h-px flex-1 bg-black/10" />
+              <Heart
+                size={14}
+                strokeWidth={1.75}
+                className="shrink-0"
+                style={{ color: t.accent }}
+                fill="currentColor"
+              />
+              <span className="h-px flex-1 bg-black/10" />
+            </div>
+            <p
+              className="mt-4 text-center leading-relaxed"
+              style={{ fontSize: 11, color: t.inkMuted }}
             >
-              Share Link
-            </button>
+              © R3BOOT · India&apos;s First Integrated Recovery Centre
+            </p>
           </div>
         </div>
-
-        <p
-          className="text-center leading-relaxed"
-          style={{
-            marginTop: 20,
-            paddingInline: 20,
-            paddingBottom: 28,
-            fontSize: 11,
-            color: t.inkMuted,
-          }}
-        >
-          <a
-            href="https://r3boot.in"
-            className="underline-offset-2 transition-colors hover:text-[#1A1A1A] hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#8B5CF6]"
-          >
-            r3boot.in
-          </a>
-          <span aria-hidden> · </span>
-          India&apos;s First Integrated Recovery Centre
-        </p>
       </div>
 
       <style>{`
-        @media (min-width: 768px) {
-          .links-shell-panel {
-            box-shadow: ${t.shadowContainer};
-          }
-        }
         @keyframes links-rise {
-          from { opacity: 0; transform: translateY(6px); }
+          from { opacity: 0; transform: translateY(8px); }
           to { opacity: 1; transform: translateY(0); }
         }
         @media (prefers-reduced-motion: reduce) {
@@ -132,7 +139,7 @@ export default function LinksPage() {
       )}
       {activeModal === 'location' && (
         <LocationModal
-          location={linktreeData.location}
+          locations={linktreeData.locations}
           onClose={() => setActiveModal(null)}
         />
       )}

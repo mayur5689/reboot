@@ -1,3 +1,5 @@
+'use client';
+
 import { X } from 'lucide-react';
 
 interface AppointmentModalProps {
@@ -34,15 +36,24 @@ export default function AppointmentModal({ onClose }: AppointmentModalProps) {
         {/* Content */}
         <div className="p-6 space-y-4">
           <p className="text-sm text-gray-700 leading-relaxed">
-            R3boot is a performance-driven recovery and rehabilitation brand built for people who take movement seriously. We blend clinical expertise with modern sports science to reduce pain, restore mobility, and improve performance. From injury rehab to deep recovery work, every session is structured, purposeful, and results-focused. This is not relaxation therapy, it is intelligent recovery.
+            Book a session at Dadar East or our new Prabhadevi centre. We blend clinical expertise with modern sports science to reduce pain, restore mobility, and improve performance. This is not relaxation therapy, it is intelligent recovery.
           </p>
+
+          <div className="flex gap-2">
+            <span className="rounded-full bg-[#EDE7FA] px-3 py-1 text-[11px] font-semibold text-[#513394]">
+              Dadar East
+            </span>
+            <span className="rounded-full bg-[#EDE7FA] px-3 py-1 text-[11px] font-semibold text-[#513394]">
+              Prabhadevi · New
+            </span>
+          </div>
 
           {/* Call Button */}
           <a
             href="tel:+919702368612"
             className="block w-full bg-black text-white py-2.5 rounded-full font-medium text-center text-sm hover:bg-gray-900 active:bg-black transition-colors"
           >
-            Call us: +919702368612
+            Call us: +91 97023 68612
           </a>
 
           {/* WhatsApp Button */}

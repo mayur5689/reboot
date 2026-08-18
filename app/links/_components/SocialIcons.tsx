@@ -48,8 +48,13 @@ export default function SocialIcons({ socials }: SocialIconsProps) {
           target="_blank"
           rel="noopener noreferrer"
           aria-label={labelMap[social.platform] ?? social.platform}
-          className="inline-flex items-center justify-center rounded-full text-[#1A1A1A] transition-colors duration-150 ease-out hover:bg-black/[0.04] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#8B5CF6]"
-          style={{ width: t.socialHit, height: t.socialHit }}
+          className="inline-flex items-center justify-center rounded-full transition-colors duration-150 ease-out hover:bg-[#7048C6]/8 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#7048C6]"
+          style={{
+            width: t.socialHit,
+            height: t.socialHit,
+            color: t.ink,
+            border: '1.5px solid rgba(26, 26, 46, 0.18)',
+          }}
         >
           {iconMap[social.platform] ?? social.platform}
         </a>

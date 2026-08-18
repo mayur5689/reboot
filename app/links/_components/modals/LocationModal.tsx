@@ -1,60 +1,113 @@
-import { X, MapPin, Phone } from 'lucide-react';
+'use client';
+
+import { useState } from 'react';
+import { X, MapPin, Phone, Navigation } from 'lucide-react';
+import type { Location } from '../../data';
+import { linksTokens as t } from '../tokens';
 
 interface LocationModalProps {
-  location: {
-    address: string;
-    lat: number;
-    lng: number;
-    phone: string;
-  };
+  locations: Location[];
   onClose: () => void;
 }
 
-export default function LocationModal({ location, onClose }: LocationModalProps) {
-  const mapsEmbedUrl = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.7477892123!2d${location.lng}!3d${location.lat}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb4c73b4e3b4e3%3A0x0!2sR3boot!5e0!3m2!1sen!2sin!4v1234567890`;
-  const directionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${location.lat},${location.lng}`;
+export default function LocationModal({ locations, onClose }: LocationModalProps) {
+  const [activeId, setActiveId] = useState(locations[0]?.id);
+  const active = locations.find((loc) => loc.id === activeId) ?? locations[0];
+
+  if (!active) return null;
+
+  const directionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${active.lat},${active.lng}`;
 
   return (
-    <div className="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50">
-      <div className="bg-white rounded-3xl w-full max-w-sm max-h-[90vh] overflow-y-auto shadow-lg">
-        {/* Header */}
-        <div className="sticky top-0 bg-white border-b border-gray-200 px-6 py-4 flex items-center justify-between rounded-t-3xl">
-          <h2 className="text-lg font-bold text-gray-900">Find Us Here</h2>
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center bg-[oklch(0.2_0.02_285/0.45)] p-4 backdrop-blur-[2px]"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="location-modal-title"
+      onClick={onClose}
+    >
+      <div
+        className="max-h-[90vh] w-full max-w-sm overflow-y-auto bg-white shadow-[0_16px_48px_oklch(0_0_0/0.18)]"
+        style={{ borderRadius: 28 }}
+        onClick={(e) => e.stopPropagation()}
+      >
+        <div className="sticky top-0 z-10 flex items-center justify-between border-b border-gray-100 bg-white px-5 py-4" style={{ borderRadius: '28px 28px 0 0' }}>
+          <div>
+            <h2 id="location-modal-title" className="text-base font-bold" style={{ color: t.ink }}>
+              Find Us Here
+            </h2>
+            <p className="text-xs" style={{ color: t.inkSecondary }}>
+              2 centres in Mumbai
+            </p>
+          </div>
           <button
+            type="button"
             onClick={onClose}
-            className="text-gray-500 hover:text-gray-700 p-1"
+            aria-label="Close"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full text-gray-500 transition-colors hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#7048C6]"
           >
-            <X className="w-5 h-5" />
+            <X className="h-5 w-5" />
           </button>
         </div>
 
-        {/* Content */}
-        <div className="p-6 space-y-4">
-          {/* Address */}
-          <div>
-            <div className="flex items-center gap-2 mb-2">
-              <MapPin className="w-4 h-4 text-gray-600" />
-              <p className="text-xs font-semibold text-gray-900">Address</p>
-            </div>
-            <p className="text-xs text-gray-700">{location.address}</p>
+        <div className="space-y-4 p-5">
+          <div className="grid grid-cols-2 gap-2">
+            {locations.map((loc) => {
+              const selected = loc.id === active.id;
+              return (
+                <button
+                  key={loc.id}
+                  type="button"
+                  onClick={() => setActiveId(loc.id)}
+                  className="rounded-2xl px-3 py-3 text-left transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#7048C6]"
+                  style={{
+                    background: selected ? t.accentSoft : '#F8F9FE',
+                    boxShadow: selected ? `inset 0 0 0 1.5px ${t.accent}` : 'inset 0 0 0 1px rgba(0,0,0,0.06)',
+                  }}
+                >
+                  <span
+                    className="block text-[10px] font-bold uppercase tracking-[0.14em]"
+                    style={{ color: t.accent }}
+                  >
+                    {loc.area}
+                  </span>
+                  <span className="mt-1 block text-sm font-bold" style={{ color: t.ink }}>
+                    {loc.name}
+                  </span>
+                </button>
+              );
+            })}
           </div>
 
-          {/* Phone */}
           <div>
-            <div className="flex items-center gap-2 mb-2">
-              <Phone className="w-4 h-4 text-gray-600" />
-              <p className="text-xs font-semibold text-gray-900">Contact</p>
+            <div className="mb-2 flex items-center gap-2">
+              <MapPin className="h-4 w-4" style={{ color: t.accent }} />
+              <p className="text-xs font-semibold" style={{ color: t.ink }}>
+                {active.name}
+              </p>
+            </div>
+            <p className="text-xs leading-relaxed" style={{ color: t.inkSecondary }}>
+              {active.address}
+            </p>
+          </div>
+
+          <div>
+            <div className="mb-2 flex items-center gap-2">
+              <Phone className="h-4 w-4" style={{ color: t.accent }} />
+              <p className="text-xs font-semibold" style={{ color: t.ink }}>
+                Contact
+              </p>
             </div>
             <a
-              href={`tel:${location.phone}`}
-              className="text-xs text-blue-600 hover:underline"
+              href={`tel:${active.phone}`}
+              className="text-xs font-medium hover:underline"
+              style={{ color: t.accentDeep }}
             >
-              {location.phone}
+              {active.phone}
             </a>
           </div>
 
-          {/* Embedded Map */}
-          <div className="rounded-lg overflow-hidden border border-gray-200 h-64">
+          <div className="h-52 overflow-hidden rounded-2xl border border-gray-100">
             <iframe
               width="100%"
               height="100%"
@@ -62,17 +115,22 @@ export default function LocationModal({ location, onClose }: LocationModalProps)
               loading="lazy"
               allowFullScreen
               referrerPolicy="no-referrer-when-downgrade"
-              src={mapsEmbedUrl}
-            ></iframe>
+              title={`Map of R3BOOT ${active.name}`}
+              src={active.mapsEmbedUrl}
+            />
           </div>
 
-          {/* Get Directions Button */}
           <a
             href={directionsUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="block w-full bg-black text-white py-3 rounded-full font-semibold text-center text-sm hover:bg-gray-900 transition"
+            className="flex w-full items-center justify-center gap-2 py-3 text-sm font-semibold text-white transition-colors hover:opacity-95"
+            style={{
+              borderRadius: t.radiusPill,
+              background: t.ink,
+            }}
           >
+            <Navigation className="h-4 w-4" />
             Get Directions
           </a>
         </div>

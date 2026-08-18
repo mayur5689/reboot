@@ -1,12 +1,8 @@
-import { X, Star } from 'lucide-react';
+'use client';
 
-interface Review {
-  id: number;
-  name: string;
-  rating: number;
-  timeAgo: string;
-  text: string;
-}
+import { X, Star } from 'lucide-react';
+import type { Review } from '../../data';
+import { linksTokens as t } from '../tokens';
 
 interface ReviewsModalProps {
   reviews: Review[];
@@ -19,70 +15,91 @@ export default function ReviewsModal({ reviews, onClose }: ReviewsModalProps) {
   ).toFixed(1);
 
   return (
-    <div className="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50">
-      <div className="bg-white rounded-3xl w-full max-w-sm max-h-[90vh] overflow-y-auto shadow-lg">
-        {/* Header */}
-        <div className="sticky top-0 bg-white border-b border-gray-200 px-6 py-4 flex items-center justify-between rounded-t-3xl">
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center bg-[oklch(0.2_0.02_285/0.45)] p-4 backdrop-blur-[2px]"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="reviews-modal-title"
+      onClick={onClose}
+    >
+      <div
+        className="max-h-[90vh] w-full max-w-sm overflow-y-auto bg-white shadow-[0_16px_48px_oklch(0_0_0/0.18)]"
+        style={{ borderRadius: 28 }}
+        onClick={(e) => e.stopPropagation()}
+      >
+        <div className="sticky top-0 z-10 flex items-center justify-between border-b border-gray-100 bg-white px-5 py-4" style={{ borderRadius: '28px 28px 0 0' }}>
           <div>
-            <h2 className="text-lg font-bold text-gray-900">Client Reviews</h2>
-            <p className="text-xs text-gray-600">Google Reviews</p>
+            <h2 id="reviews-modal-title" className="text-base font-bold" style={{ color: t.ink }}>
+              Client Reviews
+            </h2>
+            <p className="text-xs" style={{ color: t.inkSecondary }}>
+              Google Reviews
+            </p>
           </div>
           <button
+            type="button"
             onClick={onClose}
-            className="text-gray-500 hover:text-gray-700 p-1"
+            aria-label="Close"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full text-gray-500 transition-colors hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#7048C6]"
           >
-            <X className="w-5 h-5" />
+            <X className="h-5 w-5" />
           </button>
         </div>
 
-        {/* Average Rating */}
-        <div className="px-6 py-4 border-b border-gray-200 text-center">
-          <div className="flex items-center justify-center gap-1 mb-2">
+        <div className="border-b border-gray-100 px-6 py-4 text-center">
+          <div className="mb-2 flex items-center justify-center gap-1">
             {[...Array(5)].map((_, i) => (
               <Star
                 key={i}
-                className={`w-4 h-4 ${i < Math.round(parseFloat(avgRating)) ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'}`}
+                className={`h-4 w-4 ${i < Math.round(parseFloat(avgRating)) ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'}`}
               />
             ))}
           </div>
-          <p className="text-xs text-gray-600">
-            <span className="font-bold text-gray-900">{avgRating}</span> - {reviews.length} reviews
+          <p className="text-xs" style={{ color: t.inkSecondary }}>
+            <span className="font-bold" style={{ color: t.ink }}>
+              {avgRating}
+            </span>
+            {' · '}
+            {reviews.length} reviews
           </p>
         </div>
 
-        {/* Reviews */}
-        <div className="divide-y divide-gray-200">
+        <div className="divide-y divide-gray-100">
           {reviews.map((review) => (
-            <div key={review.id} className="px-6 py-4 space-y-2">
-              {/* Reviewer Name & Time */}
-              <div className="flex justify-between items-start">
-                <h3 className="font-semibold text-sm text-gray-900">{review.name}</h3>
-                <span className="text-xs text-gray-500">{review.timeAgo}</span>
+            <div key={review.id} className="space-y-2 px-5 py-4">
+              <div className="flex items-start justify-between gap-3">
+                <h3 className="text-sm font-semibold" style={{ color: t.ink }}>
+                  {review.name}
+                </h3>
+                <span className="shrink-0 text-xs" style={{ color: t.inkMuted }}>
+                  {review.timeAgo}
+                </span>
               </div>
-
-              {/* Rating */}
-              <div className="flex gap-1">
+              <div className="flex gap-0.5">
                 {[...Array(5)].map((_, i) => (
                   <Star
                     key={i}
-                    className={`w-3 h-3 ${i < review.rating ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'}`}
+                    className={`h-3 w-3 ${i < review.rating ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'}`}
                   />
                 ))}
               </div>
-
-              {/* Review Text */}
-              <p className="text-xs text-gray-700 leading-relaxed">{review.text}</p>
+              <p className="text-xs leading-relaxed" style={{ color: t.inkSecondary }}>
+                {review.text}
+              </p>
             </div>
           ))}
         </div>
 
-        {/* CTA */}
-        <div className="sticky bottom-0 bg-white border-t border-gray-200 px-6 py-4">
+        <div className="sticky bottom-0 border-t border-gray-100 bg-white px-5 py-4" style={{ borderRadius: '0 0 28px 28px' }}>
           <a
-            href="https://www.google.com/search?q=r3boot+dadar"
+            href="https://www.google.com/search?q=r3boot+integrated+recovery+mumbai"
             target="_blank"
             rel="noopener noreferrer"
-            className="block w-full bg-black text-white py-3 rounded-full font-semibold text-center text-sm hover:bg-gray-900 transition"
+            className="block w-full py-3 text-center text-sm font-semibold text-white transition-colors hover:opacity-95"
+            style={{
+              borderRadius: t.radiusPill,
+              background: t.ink,
+            }}
           >
             View all reviews on Google
           </a>

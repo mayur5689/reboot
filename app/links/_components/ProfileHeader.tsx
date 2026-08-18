@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { Share } from 'lucide-react';
+import { Bell, Share, Phone } from 'lucide-react';
 import { linksTokens as t } from './tokens';
 
 interface ProfileHeaderProps {
@@ -9,15 +9,17 @@ interface ProfileHeaderProps {
     name: string;
     tagline: string;
     phone: string;
-    logo?: string;
+    phoneDisplay?: string;
   };
   onShare?: () => void;
 }
 
 const chromeBtn =
-  'inline-flex items-center justify-center rounded-full bg-white text-[#1A1A1A] transition-[transform,background-color] duration-150 ease-out hover:bg-[#FAFAFA] active:scale-[0.96] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#8B5CF6] motion-reduce:active:scale-100';
+  'inline-flex items-center justify-center rounded-full bg-white text-[#1A1A2E] transition-[transform,background-color] duration-150 ease-out hover:bg-[#FAFAFA] active:scale-[0.96] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#7048C6] motion-reduce:active:scale-100';
 
 export default function ProfileHeader({ profile, onShare }: ProfileHeaderProps) {
+  const phoneDisplay = profile.phoneDisplay ?? profile.phone;
+
   return (
     <header className="relative text-center">
       <div className="absolute inset-x-0 top-0 z-10 flex items-center justify-between">
@@ -27,13 +29,11 @@ export default function ProfileHeader({ profile, onShare }: ProfileHeaderProps) 
             width: t.chromeButton,
             height: t.chromeButton,
             boxShadow: t.shadowChrome,
-            fontSize: 16,
-            fontWeight: 600,
-            lineHeight: 1,
+            color: t.accent,
           }}
           aria-hidden
         >
-          ∗
+          <Bell size={16} strokeWidth={1.75} absoluteStrokeWidth />
         </span>
         {onShare && (
           <button
@@ -52,53 +52,40 @@ export default function ProfileHeader({ profile, onShare }: ProfileHeaderProps) 
         )}
       </div>
 
-      {/* Compact logo with generous surrounding air */}
       <div className="flex flex-col items-center" style={{ paddingTop: 44 }}>
         <div
-          className="relative overflow-hidden rounded-full bg-[#1A1A1A]"
+          className="relative overflow-hidden rounded-full"
           style={{
             width: t.logoSize,
             height: t.logoSize,
             marginBottom: t.logoToTitle,
+            background: '#000',
+            boxShadow: '0 8px 24px rgba(81, 51, 148, 0.18)',
           }}
         >
-          {profile.logo ? (
-            <Image
-              src={profile.logo}
-              alt={`${profile.name} logo`}
-              fill
-              sizes={`${t.logoSize}px`}
-              className="object-cover"
-              priority
-            />
-          ) : (
-            <div className="flex h-full w-full flex-col items-center justify-center px-2.5 text-center">
-              <span className="text-[13px] font-semibold tracking-[0.1em] text-white">
-                R3BOOT
-              </span>
-              <span
-                className="mt-0.5 text-[6px] font-medium tracking-[0.14em]"
-                style={{ color: t.accentLogo }}
-              >
-                RESTORE · RENEW · RELAX
-              </span>
-            </div>
-          )}
+          <Image
+            src="/images/REBOOT FINAL LOGO_1.png"
+            alt="R3BOOT"
+            fill
+            sizes={`${t.logoSize}px`}
+            className="object-contain p-[11px]"
+            priority
+          />
         </div>
 
         <h1
-          className="leading-none text-[#1A1A1A]"
+          className="leading-none"
           style={{
             fontSize: t.titleSize,
             fontWeight: t.titleWeight,
             letterSpacing: t.titleTracking,
+            color: t.ink,
           }}
         >
           {profile.name}
         </h1>
 
         <p
-          className="max-w-[22rem]"
           style={{
             marginTop: t.titleToBio,
             fontSize: t.bioSize,
@@ -107,12 +94,26 @@ export default function ProfileHeader({ profile, onShare }: ProfileHeaderProps) 
             color: t.inkSecondary,
           }}
         >
-          {profile.tagline}.{' '}
-          <span className="whitespace-nowrap" style={{ color: t.inkMuted }}>
-            <span aria-hidden>📞</span>
-            {profile.phone}
-          </span>
+          {profile.tagline}
         </p>
+
+        <a
+          href={`tel:${profile.phone}`}
+          className="inline-flex items-center gap-2 transition-transform duration-150 ease-out hover:scale-[1.02] active:scale-[0.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#7048C6] motion-reduce:transform-none"
+          style={{
+            marginTop: t.bioToPhone,
+            background: t.accentSoft,
+            color: t.accentDeep,
+            borderRadius: t.radiusPill,
+            padding: '10px 18px',
+            fontSize: 14,
+            fontWeight: 600,
+            letterSpacing: '-0.01em',
+          }}
+        >
+          <Phone size={14} strokeWidth={2} absoluteStrokeWidth />
+          {phoneDisplay}
+        </a>
       </div>
     </header>
   );
