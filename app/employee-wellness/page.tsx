@@ -5,8 +5,6 @@ import { motion, AnimatePresence } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
 import {
-  Gift,
-  Percent,
   ArrowRight,
   Loader2,
   CheckCircle2,
@@ -25,41 +23,6 @@ import {
 import { FAQSection } from '@/components/faq-section'
 import { employeeWellnessFaqs } from '@/lib/faqs/employee-wellness'
 import { B2BHero } from '@/components/B2BHero'
-
-const plans = [
-  {
-    id: 'funded',
-    kicker: 'Plan 01',
-    title: 'Employer-paid voucher',
-    priceHint: 'Employee pays ₹0',
-    icon: Gift,
-    summary:
-      'You cover the session cost. The employee arrives with a voucher, avails the service, and leaves without opening their wallet.',
-    example:
-      'A ₹2,000 sports massage or physio session is billed to the company. The voucher is the proof of payment.',
-    points: [
-      'Best for injury support, appraisals, and festive gifting',
-      'You set the denomination and how many vouchers per person',
-      'We redeem at reception and send you a usage summary',
-    ],
-  },
-  {
-    id: 'discount',
-    kicker: 'Plan 02',
-    title: 'Discount voucher card',
-    priceHint: 'Employee pays, with % off',
-    icon: Percent,
-    summary:
-      'You do not fund every visit. Staff still pay at the clinic, but a company voucher or card applies an agreed percentage off.',
-    example:
-      'The employee books contrast therapy, shows the card, and pays the discounted rate. No invoice to HR per session.',
-    points: [
-      'Best as a standing staff perk with low admin',
-      'You choose the discount rate and who is eligible',
-      'Works for people who want extra visits beyond funded sessions',
-    ],
-  },
-]
 
 const journey = [
   {
@@ -223,7 +186,7 @@ export default function EmployeeWellnessPage() {
           position: 'object-[58%_center]',
         }}
         primary={{ href: '#wellness-form', label: 'Get a Plan for Your Team' }}
-        secondary={{ href: '#plans', label: 'See Both Plans' }}
+        secondary={{ href: '#how-it-works', label: 'How It Works' }}
         trustLabel="Built for teams in Mumbai"
         trustItems={[
           { value: '2', label: 'Voucher models' },
@@ -231,56 +194,6 @@ export default function EmployeeWellnessPage() {
           { value: '2', label: 'Clinics' },
         ]}
       />
-
-      <section id="plans" className="py-16 sm:py-20 lg:py-24 bg-[#F8F9FA] dark:bg-[#0D0D0D] border-y border-gray-100 dark:border-white/[0.06]">
-        <div className="container mx-auto px-5 sm:px-6 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-12">
-            <span className="text-[11px] font-black tracking-[0.3em] text-[#513394] dark:text-[#A78BFA] uppercase mb-4 block">
-              TWO WAYS TO RUN IT //
-            </span>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 dark:text-white tracking-tight">
-              Who pays, and{' '}
-              <span className="text-[#513394] dark:text-[#8B5CF6]">how much</span>
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-7 max-w-6xl mx-auto">
-            {plans.map((plan) => (
-              <article
-                key={plan.id}
-                className="relative flex flex-col p-7 sm:p-9 rounded-[1.75rem] bg-white dark:bg-white/[0.04] border border-gray-100 dark:border-white/[0.08] overflow-hidden"
-              >
-                <div className="flex items-start justify-between gap-4 mb-6">
-                  <div className="w-12 h-12 rounded-xl bg-[#513394]/10 dark:bg-[#8B5CF6]/20 flex items-center justify-center text-[#513394] dark:text-[#A78BFA]">
-                    <plan.icon className="w-6 h-6" />
-                  </div>
-                  <span className="text-[10px] font-black tracking-[0.18em] uppercase text-[#513394] dark:text-[#A78BFA] bg-[#513394]/10 dark:bg-[#8B5CF6]/20 px-3 py-1.5 rounded-full">
-                    {plan.priceHint}
-                  </span>
-                </div>
-                <p className="text-[11px] font-black tracking-[0.22em] uppercase text-gray-400 mb-2">{plan.kicker}</p>
-                <h3 className="font-black text-gray-900 dark:text-white text-2xl mb-4 tracking-tight">{plan.title}</h3>
-                <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-4">{plan.summary}</p>
-                <p className="text-sm leading-relaxed text-gray-500 dark:text-gray-400 bg-[#F8F9FA] dark:bg-white/[0.03] rounded-2xl p-4 mb-6">
-                  {plan.example}
-                </p>
-                <ul className="space-y-3 mt-auto">
-                  {plan.points.map((point) => (
-                    <li key={point} className="flex gap-2.5 text-sm text-gray-600 dark:text-gray-300">
-                      <CheckCircle2 className="w-4 h-4 mt-0.5 shrink-0 text-[#513394] dark:text-[#A78BFA]" />
-                      {point}
-                    </li>
-                  ))}
-                </ul>
-              </article>
-            ))}
-          </div>
-
-          <p className="text-center text-sm text-gray-500 dark:text-gray-400 mt-8 max-w-xl mx-auto">
-            Most companies run both: a few fully paid vouchers for moments that matter, plus a standing discount for anyone who wants more sessions.
-          </p>
-        </div>
-      </section>
 
       <section className="py-16 sm:py-20 lg:py-28 bg-white dark:bg-[#0A0A0A]">
         <div className="container mx-auto px-5 sm:px-6 lg:px-8">

@@ -229,7 +229,7 @@ export default function ContactPage() {
                                             Mumbai, Maharashtra 400014
                                         </p>
                                         <p>
-                                            <span className="block text-sm font-bold text-gray-900 dark:text-white mb-1">Prabhadevi</span>
+                                            <span className="block text-sm font-bold text-gray-900 dark:text-white mb-1">Lower Parel</span>
                                             Lodha Signet, A-303, Senapati Bapat Marg, West,<br />
                                             Prabhadevi, Mumbai, Maharashtra 400013
                                         </p>
@@ -319,7 +319,7 @@ export default function ContactPage() {
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, delay: 0.15 }}
                     >
-                        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Prabhadevi</h2>
+                        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Lower Parel</h2>
                         <div className="rounded-[3rem] overflow-hidden shadow-2xl border-4 border-white dark:border-[#1A1A1A] h-[450px] relative">
                             <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3772.65!2d72.8267492!3d19.0031084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7cfd8a9695041%3A0xdbf9dddd1b76b6c!2sR3boot%20%7C%20Integrated%20Recovery%20Center!5e0!3m2!1sen!2sin!4v1736966800001"
@@ -329,7 +329,7 @@ export default function ContactPage() {
                                 allowFullScreen
                                 loading="lazy"
                                 referrerPolicy="no-referrer-when-downgrade"
-                                title="R3BOOT Prabhadevi — Lodha Signet"
+                                title="R3BOOT Lower Parel - Lodha Signet"
                                 className="w-full h-full"
                             ></iframe>
                         </div>

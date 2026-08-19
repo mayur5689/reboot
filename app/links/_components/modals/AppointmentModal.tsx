@@ -36,7 +36,7 @@ export default function AppointmentModal({ onClose }: AppointmentModalProps) {
         {/* Content */}
         <div className="p-6 space-y-4">
           <p className="text-sm text-gray-700 leading-relaxed">
-            Book a session at Dadar East or our new Prabhadevi centre. We blend clinical expertise with modern sports science to reduce pain, restore mobility, and improve performance. This is not relaxation therapy, it is intelligent recovery.
+            Book a session at Dadar East or our new Lower Parel centre. We blend clinical expertise with modern sports science to reduce pain, restore mobility, and improve performance. This is not relaxation therapy, it is intelligent recovery.
           </p>
 
           <div className="flex gap-2">
@@ -44,7 +44,7 @@ export default function AppointmentModal({ onClose }: AppointmentModalProps) {
               Dadar East
             </span>
             <span className="rounded-full bg-[#EDE7FA] px-3 py-1 text-[11px] font-semibold text-[#513394]">
-              Prabhadevi · New
+              Lower Parel · New
             </span>
           </div>
 

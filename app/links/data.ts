@@ -56,7 +56,7 @@ export const linktreeData = {
     {
       id: 'location',
       title: 'Find Us Here',
-      description: '📍  Dadar East · Prabhadevi',
+      description: '📍  Dadar East · Lower Parel',
       action: 'modal',
       modalType: 'location',
     },
@@ -154,8 +154,8 @@ export const linktreeData = {
         'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3772.333831776953!2d72.8433525!3d19.0165524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7cf87519edaa5%3A0x36815ea9da0ca28c!2sR3boot%20%7C%20Integrated%20Recovery%20Center!5e0!3m2!1sen!2sin!4v1736966800000',
     },
     {
-      id: 'prabhadevi',
-      name: 'Prabhadevi',
+      id: 'lower-parel',
+      name: 'Lower Parel',
       area: 'New',
       address:
         'Lodha Signet, A-303, Senapati Bapat Marg, Prabhadevi, Mumbai, Maharashtra 400013',

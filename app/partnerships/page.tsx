@@ -181,7 +181,6 @@ const businessTypes = [
 ]
 
 export default function PartnershipsPage() {
-  const [activeModel, setActiveModel] = useState(0)
   const [activeFacility, setActiveFacility] = useState(0)
   const [formData, setFormData] = useState({
     name: '',
@@ -195,16 +194,9 @@ export default function PartnershipsPage() {
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
   const [statusMessage, setStatusMessage] = useState('')
 
-  const selected = models[activeModel]
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target
     setFormData((prev) => ({ ...prev, [name]: value }))
-  }
-
-  const startWithModel = (index: number) => {
-    setActiveModel(index)
-    setFormData((prev) => ({ ...prev, model: models[index].title }))
   }
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -263,7 +255,7 @@ export default function PartnershipsPage() {
           position: 'object-[62%_center]',
         }}
         primary={{ href: '#partner-form', label: 'Become a Partner' }}
-        secondary={{ href: '#partnership-models', label: 'See the Models' }}
+        secondary={{ href: '#facility-types', label: 'How It Fits You' }}
         trustLabel="Trusted by gyms, clubs & academies"
         trustItems={[
           { value: '15', label: 'Specialists' },
@@ -315,10 +307,10 @@ export default function PartnershipsPage() {
                 India&apos;s first integrated recovery centre — not a spa, not a physio clinic, but both. We run the recovery side. You keep training and community.
               </p>
               <a
-                href="#partnership-models"
+                href="#partner-form"
                 className="inline-flex items-center gap-2.5 text-[#513394] dark:text-[#A78BFA] font-bold hover:gap-3.5 transition-all"
               >
-                Pick a model
+                Become a partner
                 <ArrowRight className="w-4 h-4" />
               </a>
             </div>
@@ -339,120 +331,8 @@ export default function PartnershipsPage() {
         </div>
       </section>
 
-      {/* MODELS — the product. Tabs + one detail panel. */}
-      <section id="partnership-models" className="py-16 sm:py-20 lg:py-28 bg-[#F8F9FA] dark:bg-[#0D0D0D] border-y border-gray-100 dark:border-white/[0.06]">
-        <div className="container mx-auto px-5 sm:px-6 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-10">
-            <span className="text-[11px] font-black tracking-[0.3em] text-[#513394] dark:text-[#A78BFA] uppercase mb-4 block">
-              PARTNERSHIP MODELS //
-            </span>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 dark:text-white tracking-tight mb-4">
-              Four models. <span className="text-[#513394] dark:text-[#8B5CF6]">One tailored fit</span>
-            </h2>
-            <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed">
-              Not one-size-fits-all. Start with a referral code, or go deeper with bundles and events.
-            </p>
-          </div>
-
-          <div className="max-w-6xl mx-auto">
-            <div
-              role="tablist"
-              aria-label="Partnership models"
-              className="grid grid-cols-2 lg:grid-cols-4 gap-2 mb-6"
-            >
-              {models.map((model, i) => {
-                const Icon = model.icon
-                const isActive = activeModel === i
-                return (
-                  <button
-                    key={model.number}
-                    type="button"
-                    role="tab"
-                    aria-selected={isActive}
-                    aria-controls="model-panel"
-                    onClick={() => startWithModel(i)}
-                    className={`text-left rounded-2xl px-4 py-4 transition-all border ${
-                      isActive
-                        ? 'bg-[#513394] text-white border-[#513394] shadow-lg shadow-[#513394]/20'
-                        : 'bg-white dark:bg-white/[0.04] text-gray-900 dark:text-white border-gray-100 dark:border-white/[0.08] hover:border-[#513394]/40'
-                    }`}
-                  >
-                    <div className="flex items-center justify-between gap-2 mb-2">
-                      <span className={`text-[10px] font-black tracking-[0.2em] ${isActive ? 'text-white/70' : 'text-[#513394] dark:text-[#A78BFA]'}`}>
-                        {model.number}
-                      </span>
-                      <Icon className={`w-4 h-4 ${isActive ? 'text-white' : 'text-[#513394] dark:text-[#A78BFA]'}`} />
-                    </div>
-                    <p className="font-black text-sm leading-snug">{model.title}</p>
-                    {model.badge && (
-                      <p className={`text-[10px] font-bold mt-1.5 ${isActive ? 'text-white/80' : 'text-[#513394] dark:text-[#A78BFA]'}`}>
-                        {model.badge}
-                      </p>
-                    )}
-                  </button>
-                )
-              })}
-            </div>
-
-            <div
-              id="model-panel"
-              role="tabpanel"
-              className="rounded-[1.75rem] bg-white dark:bg-white/[0.04] border border-gray-100 dark:border-white/[0.08] p-6 sm:p-8 lg:p-10"
-            >
-              <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-8">
-                <div>
-                  <h3 className="text-2xl sm:text-3xl font-black text-gray-900 dark:text-white tracking-tight mb-2">
-                    {selected.title}
-                  </h3>
-                  <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed max-w-xl">
-                    {selected.tagline}
-                  </p>
-                </div>
-                <p className="text-xs font-bold uppercase tracking-wide text-[#513394] dark:text-[#A78BFA] sm:text-right max-w-xs">
-                  {selected.fit}
-                </p>
-              </div>
-
-              <div className="grid grid-cols-1 lg:grid-cols-[1.15fr_0.85fr] gap-8 lg:gap-12">
-                <div>
-                  <p className="text-[10px] font-black tracking-[0.22em] uppercase text-gray-400 dark:text-gray-500 mb-5">
-                    How it works
-                  </p>
-                  <ol className="space-y-5">
-                    {selected.points.map((point, j) => (
-                      <li key={j} className="flex items-start gap-4">
-                        <span className="w-8 h-8 rounded-lg bg-[#513394]/10 dark:bg-[#8B5CF6]/20 text-[#513394] dark:text-[#A78BFA] font-black text-xs flex items-center justify-center shrink-0">
-                          {String(j + 1).padStart(2, '0')}
-                        </span>
-                        <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed pt-1">{point}</p>
-                      </li>
-                    ))}
-                  </ol>
-                </div>
-
-                <div className="lg:border-l lg:border-gray-100 dark:lg:border-white/[0.08] lg:pl-10">
-                  <div className="rounded-2xl bg-[#F8F9FA] dark:bg-white/[0.04] border border-gray-100 dark:border-white/[0.08] p-5 mb-5">
-                    <p className="text-[10px] font-black tracking-[0.2em] uppercase text-[#513394] dark:text-[#A78BFA] mb-3">
-                      How this is scoped
-                    </p>
-                    <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">{selected.note}</p>
-                  </div>
-                  <a
-                    href="#partner-form"
-                    className="inline-flex items-center justify-center gap-2 w-full bg-[#513394] hover:bg-[#412975] text-white font-bold px-6 py-4 rounded-full transition-all"
-                  >
-                    Start with {selected.title}
-                    <ArrowRight className="w-4 h-4" />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* FACILITY TYPES — one photo, list swaps it */}
-      <section className="py-16 sm:py-20 lg:py-28 bg-white dark:bg-[#0A0A0A]">
+      <section id="facility-types" className="py-16 sm:py-20 lg:py-28 bg-white dark:bg-[#0A0A0A]">
         <div className="container mx-auto px-5 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="mb-10 lg:mb-14 max-w-2xl">
@@ -460,7 +340,7 @@ export default function PartnershipsPage() {
                 BUILT FOR YOUR FACILITY //
               </span>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 dark:text-white tracking-tight">
-                Same four models, <span className="text-[#513394] dark:text-[#8B5CF6]">flexed for you</span>
+One partnership, <span className="text-[#513394] dark:text-[#8B5CF6]">flexed for you</span>
               </h2>
             </div>
 
