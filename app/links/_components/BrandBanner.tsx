@@ -46,7 +46,7 @@ export default function BrandBanner({ onClick }: BrandBannerProps) {
       </span>
       <span>
         <span className="block text-[16px] font-extrabold leading-tight tracking-[-0.02em] text-white">
-          Recover. Rebuild. Rise.
+          Restore. Rebuild. Recover.
         </span>
         <span className="mt-0.5 block text-[13px] font-medium text-white/80">
           Your comeback starts here.

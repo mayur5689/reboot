@@ -8,6 +8,7 @@ interface ProfileHeaderProps {
   profile: {
     name: string;
     tagline: string;
+    taglineLocation?: string;
     phone: string;
     phoneDisplay?: string;
   };
@@ -96,6 +97,19 @@ export default function ProfileHeader({ profile, onShare }: ProfileHeaderProps) 
         >
           {profile.tagline}
         </p>
+        {profile.taglineLocation && (
+          <p
+            style={{
+              marginTop: 2,
+              fontSize: t.bioSize,
+              fontWeight: t.bioWeight,
+              lineHeight: 1.4,
+              color: t.inkSecondary,
+            }}
+          >
+            {profile.taglineLocation}
+          </p>
+        )}
 
         <a
           href={`tel:${profile.phone}`}

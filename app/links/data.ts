@@ -33,7 +33,8 @@ export type Location = {
 export const linktreeData = {
   profile: {
     name: 'R3BOOT',
-    tagline: "India's First Integrated Recovery Centre",
+    tagline: 'Integrated recovery for athletes & active lifestyles.',
+    taglineLocation: '📍 Dadar + Lower Parel | Mumbai',
     phone: '+919702368612',
     phoneDisplay: '+91 97023 68612',
     bio: 'R3boot is a performance-driven recovery and rehabilitation brand built for people who take movement seriously. We blend clinical expertise with modern sports science to reduce pain, restore mobility, and improve performance. From injury rehab to deep recovery work, every session is structured, purposeful, and results-focused. This is not relaxation therapy, it is intelligent recovery.',

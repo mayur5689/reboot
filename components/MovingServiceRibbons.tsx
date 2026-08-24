@@ -3,14 +3,12 @@
 import { Reveal, scaleIn } from '@/components/motion/Reveal'
 
 const services = [
-  "Physiotherapy & Rehab",
-  "Sports Massage Therapy",
+  "Physiotherapy",
   "Contrast Therapy",
   "Aqua Therapy",
-  "Mobility & Recovery",
-  "Performance Optimization",
-  "Injury Prevention",
-  "Breathwork & Nervous System Reset",
+  "Sports Massage",
+  "Mental Training",
+  "Athlete Screening",
 ];
 
 function RibbonTrack({
