@@ -77,7 +77,7 @@ export default function ClinicalPilatesDadarPage() {
                 <p>
                   R3BOOT is at Palai Plaza, 203, Swami Gyan Jivandas Marg, Dadar East, five minutes walk from Dadar
                   Central Line station. Clinical Pilates here is delivered by Dr. Hiral Parikh (BPT, 15+ years) and
-                  Dr. Vaishali Vijay Rauniyar (certified Dry Needling and Aquatic Rehabilitation). Every program starts
+                  Dr. Vaishali Vijay Rauniyar (BPT, 4+ years, certified Dry Needling and Aquatic Rehabilitation). Every program starts
                   with a physiotherapy assessment. Reformer and mat-based sessions available. One-to-one, no classes.
                   Clients from Dadar, Matunga, Sion, Parel, and Shivaji Park walk here because no equivalent
                   physiotherapy-led Pilates exists in the same catchment area.

@@ -152,7 +152,7 @@ export default function PostSurgeryPhysiotherapyMumbaiPage() {
                   from that exact point, whether you are one week post-surgery or one year.
                 </p>
                 <p>
-                  Dr. Hiral Parikh (BPT, 15+ years) and Dr. Vaishali Vijay Rauniyar (certified in Dry Needling
+                  Dr. Hiral Parikh (BPT, 15+ years) and Dr. Vaishali Vijay Rauniyar (BPT, 4+ years, certified in Dry Needling
                   and Aquatic Rehabilitation) lead the physiotherapy team. Aquatic rehabilitation, available
                   on-site at R3BOOT, is particularly effective for post-surgical patients who need low-load
                   early movement before full weight-bearing is safe. No referral needed. First session 60 minutes.
@@ -611,7 +611,7 @@ export default function PostSurgeryPhysiotherapyMumbaiPage() {
 
       <ServiceSchema
         serviceName="Post-Surgery Physiotherapy in Mumbai"
-        description="Post-surgery physiotherapy in Mumbai at R3BOOT, Dadar East. ACL reconstruction, knee replacement, hip replacement, spinal surgery, and shoulder surgery rehabilitation. Phased rehabilitation with aquatic rehab on-site. Led by Dr. Hiral Parikh (BPT, 15+ years) and Dr. Vaishali Vijay Rauniyar."
+        description="Post-surgery physiotherapy in Mumbai at R3BOOT, Dadar East. ACL reconstruction, knee replacement, hip replacement, spinal surgery, and shoulder surgery rehabilitation. Phased rehabilitation with aquatic rehab on-site. Led by Dr. Hiral Parikh (BPT, 15+ years) and Dr. Vaishali Vijay Rauniyar (4+ years)."
         serviceUrl="https://www.r3boot.in/post-surgery-physiotherapy-mumbai"
       />
       <FAQSchema faqs={postSurgeryPhysiotherapyFaqs} />

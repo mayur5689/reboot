@@ -122,7 +122,7 @@ const teamMembers = [
     name: 'Dr. Vaishali Vijay Rauniyar',
     role: 'Physiotherapist',
     credentials: 'Dry Needling and Aquatic Rehab Certified',
-    experience: 'Certified Specialist',
+    experience: '4+ years experience',
     specialties: ['Dry Needling', 'Aquatic Rehabilitation', 'Orthopaedic Rehab'],
     image: '/images/trainer2/Trainers/Dr. Vaishali Vijay Rauniyar.webp',
   },

@@ -89,7 +89,7 @@ export default function PostSurgeryPilatesMumbaiPage() {
                 <p>
                   Clinical Pilates addresses the layer that standard physiotherapy leaves. At R3BOOT in Dadar East,
                   Dr. Hiral Parikh (BPT, 15+ years sports and post-surgical rehabilitation) and Dr. Vaishali Vijay
-                  Rauniyar design your post-surgical Pilates program from your surgical procedure, post-op protocol,
+                  Rauniyar (BPT, 4+ years) design your post-surgical Pilates program from your surgical procedure, post-op protocol,
                   and current functional assessment. The reformer allows graduated loading below bodyweight, critical
                   in early post-surgical phases where full load is not yet appropriate.
                 </p>

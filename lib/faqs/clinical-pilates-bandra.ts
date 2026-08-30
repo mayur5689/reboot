@@ -7,7 +7,7 @@ export const clinicalPilatesBandraFaqs = [
   {
     question: 'Why do Bandra clients choose R3BOOT for clinical Pilates over local options?',
     answer:
-      'R3BOOT offers clinical Pilates delivered by physiotherapists, Dr. Hiral Parikh (BPT, 15+ years) and Dr. Vaishali Vijay Rauniyar (certified in Dry Needling and Aquatic Rehabilitation). The physiotherapy integration means your Pilates program is based on a clinical assessment, not a fitness template. Bandra clients who have seen physiotherapists or sports doctors elsewhere often come to R3BOOT specifically for this physiotherapy-first approach.',
+      'R3BOOT offers clinical Pilates delivered by physiotherapists, Dr. Hiral Parikh (BPT, 15+ years) and Dr. Vaishali Vijay Rauniyar (BPT, 4+ years, certified in Dry Needling and Aquatic Rehabilitation). The physiotherapy integration means your Pilates program is based on a clinical assessment, not a fitness template. Bandra clients who have seen physiotherapists or sports doctors elsewhere often come to R3BOOT specifically for this physiotherapy-first approach.',
   },
   {
     question: 'How do I get to R3BOOT from Bandra?',

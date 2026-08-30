@@ -31,11 +31,11 @@ const members: TeamMember[] = [
     name: 'Dr. Vaishali Rauniyar',
     role: 'Dry Needling & Aquatic Rehab',
     credentials: 'Dry Needling & Aquatic Rehabilitation Certified',
-    experience: 'Certified Specialist',
+    experience: '4+ Years Experience',
     description:
       'When your screening flags a finding that needs hands-on treatment, the same clinical team carries it straight into rehab, no handoff, no repeated history.',
     image: '/images/trainer2/Trainers/Vaishali_rawat.webp',
-    stats: { years: '10+', rating: '5.0 ★' },
+    stats: { years: '4+', rating: '5.0 ★' },
   },
 ]
 

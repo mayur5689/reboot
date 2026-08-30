@@ -102,7 +102,7 @@ const TEAM = [
   {
     name: 'Dr. Vaishali Vijay Rauniyar',
     role: 'Physiotherapist',
-    credentials: ['Dry Needling Certified', 'Aquatic Rehab Certified', 'Sports & Orthopaedic Rehab'],
+    credentials: ['4+ yrs experience', 'Dry Needling Certified', 'Aquatic Rehab Certified', 'Sports & Orthopaedic Rehab'],
     image: '/images/trainer2/Trainers/Dr. Vaishali Vijay Rauniyar.webp',
     bio: 'Dual-certified in Dry Needling and Aquatic Rehabilitation - treatment approaches most Mumbai clinics do not offer.',
   },

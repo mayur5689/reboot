@@ -38,7 +38,7 @@ const coaches: Coach[] = [
     role: "Physiotherapist",
     specialty: "Orthopedic & Aquatic Rehab",
     imageSrc: "https://res.cloudinary.com/dj7bot2uc/image/upload/v1785289088/Vaishali_V3_sntnoe.webp",
-    description: "Clinical experience in sports and orthopedic rehabilitation. Certified in Dry Needling and Aquatic Rehabilitation, she designs personalized plans for efficient recovery."
+    description: "4+ years of clinical experience in sports and orthopedic rehabilitation. Certified in Dry Needling and Aquatic Rehabilitation, she designs personalized plans for efficient recovery."
   },
   {
     id: "diyan",

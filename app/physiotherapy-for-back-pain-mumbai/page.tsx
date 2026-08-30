@@ -147,7 +147,7 @@ export default function PhysiotherapyBackPainMumbaiPage() {
                   and a specific progressive exercise plan built around your daily life and goals.
                 </p>
                 <p>
-                  Dr. Hiral Parikh (BPT, 15+ years) and Dr. Vaishali Vijay Rauniyar (certified in Dry Needling and Aquatic
+                  Dr. Hiral Parikh (BPT, 15+ years) and Dr. Vaishali Vijay Rauniyar (BPT, 4+ years, certified in Dry Needling and Aquatic
                   Rehabilitation) lead the physiotherapy team. No referral needed. First session 60 minutes.
                 </p>
               </div>
@@ -570,7 +570,7 @@ export default function PhysiotherapyBackPainMumbaiPage() {
             </h2>
             <p className="text-lg sm:text-xl text-white/70 mb-4 leading-relaxed font-medium max-w-3xl mx-auto">
               Clinical physiotherapy for back pain at R3BOOT in Dadar, Mumbai. No referral needed.
-              Dr. Hiral Parikh and Dr. Vaishali Rauniyar, 15+ years combined clinical experience.
+              Dr. Hiral Parikh (15+ years) and Dr. Vaishali Vijay Rauniyar (4+ years) clinical experience.
             </p>
             <p className="text-white/40 mb-8 sm:mb-12 text-sm font-bold tracking-widest">
               203, Palai Plaza, Dadar East, Mumbai 400014, 5 min from Dadar station
@@ -597,7 +597,7 @@ export default function PhysiotherapyBackPainMumbaiPage() {
 
       <ServiceSchema
         serviceName="Physiotherapy for Back Pain in Mumbai"
-        description="Clinical physiotherapy for back pain in Mumbai at R3BOOT, Dadar East. Assessment, manual therapy, dry needling, and progressive rehabilitation for disc herniation, sciatica, postural pain, and lumbar injuries. Led by Dr. Hiral Parikh (15+ years, BPT) and Dr. Vaishali Vijay Rauniyar."
+        description="Clinical physiotherapy for back pain in Mumbai at R3BOOT, Dadar East. Assessment, manual therapy, dry needling, and progressive rehabilitation for disc herniation, sciatica, postural pain, and lumbar injuries. Led by Dr. Hiral Parikh (15+ years, BPT) and Dr. Vaishali Vijay Rauniyar (4+ years)."
         serviceUrl="https://www.r3boot.in/physiotherapy-for-back-pain-mumbai"
       />
       <FAQSchema faqs={backPainPhysiotherapyFaqs} />

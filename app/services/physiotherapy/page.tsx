@@ -329,7 +329,7 @@ export default function PhysiotherapyPage() {
                                     Vaishali Vijay Rauniyar · Lead Physiotherapist
                                 </p>
                                 <div className="flex flex-col gap-2">
-                                    {['15+ Years Clinical Experience', 'Root-Cause Assessment First'].map((point, i) => (
+                                    {['4+ Years Clinical Experience', 'Root-Cause Assessment First'].map((point, i) => (
                                         <div key={i} className="flex items-center gap-2.5">
                                             <div className="w-5 h-5 rounded-full bg-[#513394]/30 border border-[#A78BFA]/50 flex items-center justify-center shrink-0">
                                                 <svg className="w-3 h-3 text-[#C4B5FD]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>

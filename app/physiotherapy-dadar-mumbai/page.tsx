@@ -128,7 +128,7 @@ export default function PhysioDadarLanding() {
                 <p>
                   R3BOOT is located in Dadar East, Mumbai, 5 minutes from Dadar railway station. Our physiotherapy
                   team is led by Dr. Hiral Parikh (BPT, D.Y. Patil College, 15+ years clinical experience) and
-                  Dr. Vaishali Vijay Rauniyar (certified in Dry Needling and Aquatic Rehabilitation). Every session
+                  Dr. Vaishali Vijay Rauniyar (BPT, 4+ years, certified in Dry Needling and Aquatic Rehabilitation). Every session
                   begins with a full clinical assessment. We find the structure that is failing and build a progressive
                   plan to fix it.
                 </p>
@@ -615,7 +615,7 @@ export default function PhysioDadarLanding() {
 
       <ServiceSchema
         serviceName="Physiotherapy in Dadar, Mumbai"
-        description="Clinical physiotherapy in Dadar, Mumbai by Dr. Hiral Parikh (15+ years, BPT) and Dr. Vaishali Vijay Rauniyar. Back pain, knee pain, sports injuries, post-surgery rehab at R3BOOT Integrated Recovery Centre, Dadar East."
+        description="Clinical physiotherapy in Dadar, Mumbai by Dr. Hiral Parikh (15+ years, BPT) and Dr. Vaishali Vijay Rauniyar (4+ years). Back pain, knee pain, sports injuries, post-surgery rehab at R3BOOT Integrated Recovery Centre, Dadar East."
         serviceUrl="https://www.r3boot.in/physiotherapy-dadar-mumbai"
       />
       <FAQSchema faqs={physiotherapyFaqs} />

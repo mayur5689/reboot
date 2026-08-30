@@ -2,7 +2,7 @@ export const physiotherapyMumbaiFaqs = [
   {
     question: 'What is the best physiotherapy clinic in Mumbai?',
     answer:
-      'The best physiotherapy clinic in Mumbai is one where your session includes a full clinical assessment, hands-on manual therapy, and a specific rehabilitation plan, not a 15-minute machine therapy appointment. R3BOOT in Dadar East is rated 5.0 on Google and is led by Dr. Hiral Parikh (BPT, 15+ years) and Dr. Vaishali Vijay Rauniyar (certified in Dry Needling and Aquatic Rehabilitation). No referral needed. First session is 60 minutes.',
+      'The best physiotherapy clinic in Mumbai is one where your session includes a full clinical assessment, hands-on manual therapy, and a specific rehabilitation plan, not a 15-minute machine therapy appointment. R3BOOT in Dadar East is rated 5.0 on Google and is led by Dr. Hiral Parikh (BPT, 15+ years) and Dr. Vaishali Vijay Rauniyar (BPT, 4+ years, certified in Dry Needling and Aquatic Rehabilitation). No referral needed. First session is 60 minutes.',
   },
   {
     question: 'How much does physiotherapy cost in Mumbai?',

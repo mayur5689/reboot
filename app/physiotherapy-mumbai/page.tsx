@@ -200,7 +200,7 @@ export default function PhysiotherapyMumbaiPage() {
                 </p>
                 <p>
                   Dr. Hiral Parikh (BPT, D.Y. Patil College, 15+ years clinical experience) and Dr. Vaishali
-                  Vijay Rauniyar (certified in Dry Needling and Aquatic Rehabilitation) see a limited number
+                  Vijay Rauniyar (BPT, 4+ years, certified in Dry Needling and Aquatic Rehabilitation) see a limited number
                   of patients per day. Your 60-minute session is not a 15-minute window between twenty others.
                 </p>
               </div>
@@ -407,7 +407,7 @@ export default function PhysiotherapyMumbaiPage() {
                 {
                   name: 'Dr. Vaishali Vijay Rauniyar',
                   credentials: 'BPT, Certified in Dry Needling & Aquatic Rehabilitation',
-                  experience: 'Sports physiotherapy specialist',
+                  experience: '4+ years clinical experience',
                   specialties: ['Dry needling', 'Aquatic rehabilitation', 'Sports injury rehab', 'Women\'s health physiotherapy'],
                 },
               ].map((doc, idx) => (
@@ -647,7 +647,7 @@ export default function PhysiotherapyMumbaiPage() {
 
       <ServiceSchema
         serviceName="Physiotherapy in Mumbai"
-        description="Clinical physiotherapy in Mumbai at R3BOOT, Dadar East. Back pain, knee pain, neck pain, sports injuries, and post-surgery rehabilitation. Dr. Hiral Parikh (BPT, 15+ years) and Dr. Vaishali Vijay Rauniyar. Dry needling and aquatic rehabilitation available."
+        description="Clinical physiotherapy in Mumbai at R3BOOT, Dadar East. Back pain, knee pain, neck pain, sports injuries, and post-surgery rehabilitation. Dr. Hiral Parikh (BPT, 15+ years) and Dr. Vaishali Vijay Rauniyar (4+ years). Dry needling and aquatic rehabilitation available."
         serviceUrl="https://www.r3boot.in/physiotherapy-mumbai"
       />
       <FAQSchema faqs={physiotherapyMumbaiFaqs} />
