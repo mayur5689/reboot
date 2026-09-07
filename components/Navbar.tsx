@@ -14,6 +14,10 @@ const connectLinks = [
   { href: '/employee-wellness', label: 'Employee Wellness' },
 ]
 
+type MobileNavItem =
+  | { href: string; label: string }
+  | { label: string; children: typeof connectLinks }
+
 export default function Navbar() {
   const pathname = usePathname()
   const [isServicesOpen, setIsServicesOpen] = useState(false)
@@ -227,14 +231,14 @@ export default function Navbar() {
 
           {/* Nav Links */}
           <nav className="flex-1 flex flex-col justify-center px-6">
-            {[
+            {([
               { href: '/', label: 'Home' },
               { href: '/about', label: 'About' },
               { href: '/services', label: 'Services' },
               { label: 'Connect', children: connectLinks },
               { href: '/blog', label: 'Blog' },
-            ].map((item, i) =>
-              'children' in item && item.children ? (
+            ] as MobileNavItem[]).map((item, i) =>
+              'children' in item ? (
                 <div key={item.label} className="border-b border-white/[0.06]">
                   <button
                     type="button"
@@ -267,7 +271,7 @@ export default function Navbar() {
               ) : (
                 <Link
                   key={item.href}
-                  href={item.href!}
+                  href={item.href}
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="group flex items-center gap-4 py-[18px] border-b border-white/[0.06] last:border-0 animate-in fade-in slide-in-from-left-4 fill-mode-both"
                   style={{ animationDelay: `${i * 55}ms`, animationDuration: '350ms' }}

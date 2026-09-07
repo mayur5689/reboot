@@ -18,6 +18,10 @@ const connectLinks = [
   { href: '/employee-wellness', label: 'Employee Wellness' },
 ]
 
+type MobileNavItem =
+  | { href: string; label: string }
+  | { label: string; children: typeof connectLinks }
+
 export default function HomeCopyNavbar() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
@@ -166,12 +170,12 @@ export default function HomeCopyNavbar() {
           <div className="mx-6 h-px bg-white/[0.07]" />
 
           <nav className="flex-1 flex flex-col justify-center px-6">
-            {[
+            {([
               { href: '/', label: 'Home' },
               ...navLinks,
               { label: 'Connect', children: connectLinks },
-            ].map((item, i) =>
-              'children' in item && item.children ? (
+            ] as MobileNavItem[]).map((item, i) =>
+              'children' in item ? (
                 <div key={item.label} className="border-b border-white/[0.06]">
                   <button
                     type="button"
@@ -204,7 +208,7 @@ export default function HomeCopyNavbar() {
               ) : (
                 <Link
                   key={item.href}
-                  href={item.href!}
+                  href={item.href}
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="group flex items-center gap-4 py-[18px] border-b border-white/[0.06] last:border-0 animate-in fade-in slide-in-from-left-4 fill-mode-both"
                   style={{ animationDelay: `${i * 55}ms`, animationDuration: '350ms' }}
