@@ -32,6 +32,6 @@ export const partnershipsFaqs = [
   {
     question: 'How do I get started?',
     answer:
-      'Fill out the partner form on this page with your facility details, or call Diyan Kubadia directly at +91 97029 68622. Our team reviews every application and reaches out within 2 business days to discuss which model fits your facility.',
+      'Fill out the partner form on this page with your facility details, or call Amar Jaiswal directly at +91 84335 43454. Our team reviews every application and reaches out within 2 business days to discuss which model fits your facility.',
   },
 ]

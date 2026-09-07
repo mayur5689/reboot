@@ -420,13 +420,9 @@ export default function EmployeeWellnessPage() {
                   <Phone className="w-4 h-4" />
                 </div>
                 <p className="text-[13px] sm:text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
-                  Prefer to talk it through first? Reach Diyan Kubadia, Co-Founder — Growth & Partnerships, at{' '}
-                  <a href="tel:+919702968622" className="font-bold text-[#513394] dark:text-[#A78BFA]">
-                    +91 97029 68622
-                  </a>
-                  {' '}or{' '}
-                  <a href="mailto:diyan@r3boot.in" className="font-bold text-[#513394] dark:text-[#A78BFA]">
-                    diyan@r3boot.in
+                  Prefer to talk it through first? Reach Amar Jaiswal at{' '}
+                  <a href="tel:+918433543454" className="font-bold text-[#513394] dark:text-[#A78BFA]">
+                    +91 84335 43454
                   </a>
                 </p>
               </div>

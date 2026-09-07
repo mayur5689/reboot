@@ -4,18 +4,25 @@ import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useTheme } from 'next-themes'
-import { Sun, Moon } from 'lucide-react'
+import { Sun, Moon, ChevronDown } from 'lucide-react'
 
 const navLinks = [
   { href: '/about', label: 'About' },
   { href: '/services', label: 'Services' },
   { href: '/blog', label: 'Blog' },
-  { href: '/contact', label: 'Contact' },
+]
+
+const connectLinks = [
+  { href: '/contact', label: 'Contact Us' },
+  { href: '/partnerships', label: 'Affiliate Partnerships' },
+  { href: '/employee-wellness', label: 'Employee Wellness' },
 ]
 
 export default function HomeCopyNavbar() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isConnectOpen, setIsConnectOpen] = useState(false)
+  const [isMobileConnectOpen, setIsMobileConnectOpen] = useState(false)
   const { theme, setTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
 
@@ -26,7 +33,7 @@ export default function HomeCopyNavbar() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const shouldBeSolid = isScrolled
+  const shouldBeSolid = isScrolled || isConnectOpen
 
   return (
     <>
@@ -54,6 +61,39 @@ export default function HomeCopyNavbar() {
                   {link.label}
                 </Link>
               ))}
+
+              <div
+                className="relative"
+                onMouseEnter={() => setIsConnectOpen(true)}
+                onMouseLeave={() => setIsConnectOpen(false)}
+              >
+                <button
+                  type="button"
+                  onClick={() => setIsConnectOpen(true)}
+                  className="flex items-center gap-1.5 hover:opacity-70 transition-opacity"
+                  aria-expanded={isConnectOpen}
+                  aria-haspopup="menu"
+                >
+                  Connect
+                  <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isConnectOpen ? 'rotate-180' : ''}`} />
+                </button>
+
+                {isConnectOpen && (
+                  <div className="absolute top-full left-0 pt-4 z-50">
+                    <div className="min-w-[260px] rounded-2xl bg-white dark:bg-[#1A1A1A] border border-gray-100 dark:border-white/10 shadow-2xl p-2 animate-in fade-in slide-in-from-top-2 duration-200">
+                      {connectLinks.map((link) => (
+                        <Link
+                          key={link.href}
+                          href={link.href}
+                          className="block px-4 py-3 rounded-xl text-[16px] font-semibold text-gray-800 dark:text-white hover:bg-gray-50 dark:hover:bg-white/5 hover:text-[#513394] dark:hover:text-[#A78BFA] transition-colors"
+                        >
+                          {link.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
 
@@ -126,23 +166,59 @@ export default function HomeCopyNavbar() {
           <div className="mx-6 h-px bg-white/[0.07]" />
 
           <nav className="flex-1 flex flex-col justify-center px-6">
-            {[{ href: '/', label: 'Home' }, ...navLinks].map((item, i) => (
-              <Link
-                key={i}
-                href={item.href}
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="group flex items-center gap-4 py-[18px] border-b border-white/[0.06] last:border-0 animate-in fade-in slide-in-from-left-4 fill-mode-both"
-                style={{ animationDelay: `${i * 55}ms`, animationDuration: '350ms' }}
-              >
-                <span className="text-[#513394] text-[10px] font-black tracking-widest w-5 shrink-0">0{i + 1}</span>
-                <span className="text-white text-[1.75rem] font-black tracking-tight leading-none group-active:text-[#A78BFA] transition-colors duration-150">
-                  {item.label}
-                </span>
-                <svg className="w-4 h-4 text-white/15 ml-auto shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
-            ))}
+            {[
+              { href: '/', label: 'Home' },
+              ...navLinks,
+              { label: 'Connect', children: connectLinks },
+            ].map((item, i) =>
+              'children' in item && item.children ? (
+                <div key={item.label} className="border-b border-white/[0.06]">
+                  <button
+                    type="button"
+                    onClick={() => setIsMobileConnectOpen((open) => !open)}
+                    className="group flex items-center gap-4 py-[18px] w-full text-left animate-in fade-in slide-in-from-left-4 fill-mode-both"
+                    style={{ animationDelay: `${i * 55}ms`, animationDuration: '350ms' }}
+                    aria-expanded={isMobileConnectOpen}
+                  >
+                    <span className="text-[#513394] text-[10px] font-black tracking-widest w-5 shrink-0">0{i + 1}</span>
+                    <span className="text-white text-[1.75rem] font-black tracking-tight leading-none group-active:text-[#A78BFA] transition-colors duration-150">
+                      {item.label}
+                    </span>
+                    <ChevronDown className={`w-4 h-4 text-white/15 ml-auto shrink-0 transition-transform duration-200 ${isMobileConnectOpen ? 'rotate-180' : ''}`} />
+                  </button>
+                  {isMobileConnectOpen && (
+                    <div className="pb-4 pl-9 flex flex-col gap-1 animate-in fade-in slide-in-from-top-1 duration-200">
+                      {item.children.map((child) => (
+                        <Link
+                          key={child.href}
+                          href={child.href}
+                          onClick={() => setIsMobileMenuOpen(false)}
+                          className="py-2.5 text-white/70 text-[17px] font-semibold hover:text-[#A78BFA] transition-colors"
+                        >
+                          {child.label}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <Link
+                  key={item.href}
+                  href={item.href!}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="group flex items-center gap-4 py-[18px] border-b border-white/[0.06] last:border-0 animate-in fade-in slide-in-from-left-4 fill-mode-both"
+                  style={{ animationDelay: `${i * 55}ms`, animationDuration: '350ms' }}
+                >
+                  <span className="text-[#513394] text-[10px] font-black tracking-widest w-5 shrink-0">0{i + 1}</span>
+                  <span className="text-white text-[1.75rem] font-black tracking-tight leading-none group-active:text-[#A78BFA] transition-colors duration-150">
+                    {item.label}
+                  </span>
+                  <svg className="w-4 h-4 text-white/15 ml-auto shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+              )
+            )}
           </nav>
 
           <div className="px-6 pb-10 pt-4 space-y-3 animate-in fade-in slide-in-from-bottom-4 fill-mode-both" style={{ animationDelay: '320ms', animationDuration: '350ms' }}>
