@@ -10,9 +10,17 @@ interface ServicePageProps {
 }
 
 const metadataOverrides: Record<string, { title: string; description: string; canonical?: string }> = {
+    'sports-massage': {
+        title: 'Sports Massage Mumbai | Same-Day Booking | R3BOOT Dadar',
+        description: 'Deep tissue sports massage by physiotherapists in Dadar Mumbai. Pre-race, post-workout, and injury recovery. 45-min focused sessions. Walk-ins welcome. WhatsApp to book today.',
+    },
+    'physiotherapy': {
+        title: 'Physiotherapy Mumbai | Sports Injuries, Back Pain & Rehab | R3BOOT Dadar',
+        description: 'Clinical physiotherapy in Dadar Mumbai. ACL rehab, disc herniation, frozen shoulder, chronic pain. Evidence-based treatment by specialist physios. First consult same week.',
+    },
     'aqua-therapy': {
-        title: 'Aqua Therapy for Sports Recovery in Mumbai | R3BOOT Dadar',
-        description: 'Pool-based aqua therapy at R3BOOT Dadar, Mumbai. Supervised by physiotherapists for sports injury rehab, joint recovery, and post-surgery treatment. Book a session.',
+        title: 'Aqua Therapy Mumbai | Underwater Treadmill for Knee & Back Pain | R3BOOT',
+        description: 'Aqua treadmill rehabilitation in Dadar Mumbai. Post-surgery recovery, knee arthritis, back pain – walk pain-free in water. Physio-guided. Insurance-friendly. Book assessment.',
         canonical: '/aqua-therapy-mumbai',
     },
     'clinical-pilates': {
@@ -330,7 +338,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
 
 export async function generateStaticParams() {
     // Exclude slugs that have dedicated page files to prevent build conflicts
-    const dedicatedSlugs = ['physiotherapy', 'contrast-therapy', 'sports-massage', 'clinical-pilates', 'mental-training']
+    const dedicatedSlugs = ['physiotherapy', 'contrast-therapy', 'sports-massage', 'clinical-pilates', 'mental-training', 'aqua-therapy', 'athlete-screening', 'compression-therapy']
     return services
         .filter((service) => !dedicatedSlugs.includes(service.slug))
         .map((service) => ({

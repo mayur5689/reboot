@@ -8,8 +8,8 @@ import { FAQSection } from '@/components/faq-section'
 import { contrastTherapyMumbaiFaqs } from '@/lib/faqs/contrast-therapy-mumbai'
 
 export const metadata: Metadata = {
-    title: 'Contrast Therapy in Mumbai | R3BOOT Dadar – Sauna & Ice Bath',
-    description: 'Contrast therapy at R3BOOT: alternating Infrared Sauna and Ice Bath for recovery, circulation, and stress resilience. Dadar, Mumbai.',
+    title: 'Contrast Therapy Mumbai | Ice Bath + Infrared Sauna | R3BOOT Dadar',
+    description: 'Hot-cold contrast therapy in Dadar Mumbai. Infrared sauna followed by ice bath for recovery, circulation & stress resilience. 45-min sessions. Athletes & beginners welcome.',
     keywords: ['contrast therapy mumbai', 'ice bath mumbai', 'sauna mumbai', 'cold plunge mumbai', 'recovery therapy dadar', 'contrast therapy near me'],
     alternates: { canonical: '/contrast-therapy-mumbai' },
 }

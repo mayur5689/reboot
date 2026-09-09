@@ -10,9 +10,9 @@ import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema'
 import { physiotherapyFaqs } from '@/lib/faqs/physiotherapy'
 
 export const metadata: Metadata = {
-  title: 'Physiotherapy Dadar Mumbai | Dr. Hiral Parikh | R3BOOT',
+  title: 'Physiotherapy Dadar (5.0★ Reviews) | Sports & Spine Clinic | R3BOOT',
   description:
-    'Clinical physiotherapy in Dadar by Dr. Hiral Parikh (15+ yrs). Back pain, knee pain, sports injuries & post-surgery rehab. No referral needed. 5.0 ★ Google. Call or WhatsApp.',
+    'Physiotherapy clinic in Dadar East Mumbai. Back pain, neck pain, sports injuries, post-surgery rehab. Dr. Hiral Parikh & team. Same-week appointments. Walk-in or WhatsApp.',
   alternates: { canonical: '/physiotherapy-dadar-mumbai' },
   keywords: [
     'physiotherapy dadar',
