@@ -1,12 +1,24 @@
 import React from "react";
-import { PortableText } from '@portabletext/react';
 import Image from "next/image";
 import Link from "next/link";
 import { getPostBySlug, client, urlFor } from "@/sanity/lib/client";
 import BlogPostingSchema from "@/components/schema/BlogPostingSchema";
 import FAQSchema from "@/components/schema/FAQSchema";
+import { FAQSection } from "@/components/faq-section";
+import { BlogPortableText } from "@/components/blog/blog-portable-text";
+import { BlogTableOfContents } from "@/components/blog/BlogTableOfContents";
+import { BlogAuthorCard } from "@/components/blog/BlogAuthorCard";
+import { extractH2Headings } from "@/lib/blog/headings";
 
 export const revalidate = 60;
+
+function formatBlogDate(iso: string) {
+  return new Date(iso).toLocaleDateString("en-IN", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  });
+}
 
 // Generate Dynamic Metadata
 export async function generateMetadata(props: { params: Promise<{ slug: string }> }) {
@@ -46,53 +58,6 @@ export async function generateMetadata(props: { params: Promise<{ slug: string }
     };
 }
 
-const components = {
-    types: {
-        image: ({ value }: any) => (
-            <div className="relative w-full aspect-video my-12 rounded-3xl overflow-hidden shadow-2xl">
-                <Image
-                    src={urlFor(value).width(1200).quality(85).url()}
-                    alt={value.alt || 'Blog Image'}
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1280px) 66vw, 800px"
-                    className="object-cover"
-                />
-                {value.alt && (
-                    <div className="absolute bottom-0 left-0 right-0 bg-black/50 backdrop-blur-md text-white px-6 py-3 text-sm font-medium">
-                        {value.alt}
-                    </div>
-                )}
-            </div>
-        ),
-    },
-    block: {
-        h1: ({ children }: any) => <h1 className="text-4xl sm:text-5xl font-black text-gray-900 dark:text-white mb-8 mt-16 tracking-tight leading-tight">{children}</h1>,
-        h2: ({ children }: any) => <h2 className="text-3xl sm:text-4xl font-black text-gray-900 dark:text-white mb-6 mt-12 tracking-tight leading-tight">{children}</h2>,
-        h3: ({ children }: any) => <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-4 mt-10 tracking-tight">{children}</h3>,
-        normal: ({ children }: any) => <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed mb-6 font-medium">{children}</p>,
-        blockquote: ({ children }: any) => (
-            <blockquote className="border-l-8 border-[#513394] dark:border-[#A78BFA] pl-8 py-4 my-12 bg-[#513394]/5 dark:bg-white/5 rounded-r-3xl italic text-2xl font-bold text-gray-800 dark:text-gray-200">
-                &ldquo;{children}&rdquo;
-            </blockquote>
-        ),
-    },
-    list: {
-        bullet: ({ children }: any) => <ul className="list-disc pl-8 mb-8 space-y-4 text-gray-700 dark:text-gray-300 text-lg font-medium">{children}</ul>,
-        number: ({ children }: any) => <ol className="list-decimal pl-8 mb-8 space-y-4 text-gray-700 dark:text-gray-300 text-lg font-medium">{children}</ol>,
-    },
-    marks: {
-        link: ({ children, value }: any) => {
-            const rel = !value.href.startsWith('/') ? 'noreferrer noopener' : undefined;
-            return (
-                <a href={value.href} rel={rel} className="text-[#513394] dark:text-[#A78BFA] underline decoration-2 underline-offset-4 hover:opacity-70 transition-opacity font-bold">
-                    {children}
-                </a>
-            );
-        },
-        strong: ({ children }: any) => <strong className="font-black text-gray-900 dark:text-white">{children}</strong>,
-    },
-};
-
 export default async function BlogPostPage(props: { params: Promise<{ slug: string }> }) {
     const params = await props.params;
     const post = await getPostBySlug(params.slug);
@@ -113,6 +78,12 @@ export default async function BlogPostPage(props: { params: Promise<{ slug: stri
     }
 
     const thumbnailUrl = post.mainImage ? urlFor(post.mainImage).url() : undefined;
+    const tocItems = extractH2Headings(post.body);
+    const displayUpdatedAt = post._updatedAt || post.publishedAt;
+    const authorDetails = post.authorDetails ?? {
+      name: post.author,
+      image: post.authorImage,
+    };
 
     return (
         <article className="min-h-screen dark:bg-[#0A0A0A] overflow-hidden pb-20 lg:pb-0">
@@ -121,6 +92,7 @@ export default async function BlogPostPage(props: { params: Promise<{ slug: stri
                 description={post.metaDescription || post.excerpt || post.title}
                 slug={params.slug}
                 publishedAt={post.publishedAt}
+                dateModified={displayUpdatedAt}
                 authorName={post.author}
                 imageUrl={thumbnailUrl}
             />
@@ -178,7 +150,10 @@ export default async function BlogPostPage(props: { params: Promise<{ slug: stri
                             <div>
                                 <p className="text-white text-sm font-black uppercase tracking-widest">{post.author}</p>
                                 <p className="text-white/60 text-xs font-bold uppercase tracking-widest mt-1">
-                                    {new Date(post.publishedAt).toLocaleDateString("en-IN", { day: 'numeric', month: 'long', year: 'numeric' })}
+                                    Published {formatBlogDate(post.publishedAt)}
+                                    {post._updatedAt && post._updatedAt !== post.publishedAt && (
+                                      <> · Updated {formatBlogDate(post._updatedAt)}</>
+                                    )}
                                 </p>
                             </div>
                         </div>
@@ -191,30 +166,18 @@ export default async function BlogPostPage(props: { params: Promise<{ slug: stri
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
                     {/* Main Content */}
                     <div className="lg:col-span-8">
+                        <BlogTableOfContents items={tocItems} variant="inline" />
                         <div className="prose prose-lg dark:prose-invert max-w-none">
-                            <PortableText value={(post.body ?? []) as Parameters<typeof PortableText>[0]['value']} components={components} />
+                            <BlogPortableText value={post.body ?? []} />
                         </div>
-
-                        {/* FAQs Section */}
-                        {post.faqs && post.faqs.length > 0 && (
-                            <div className="mt-24 pt-16 border-t border-gray-100 dark:border-white/5">
-                                <h2 className="text-3xl font-black text-gray-900 dark:text-white mb-12 tracking-tight">Frequently Asked Questions</h2>
-                                <div className="space-y-8">
-                                    {post.faqs.map((faq: any, i: number) => (
-                                        <div key={i} className="bg-gray-50 dark:bg-white/5 p-8 rounded-3xl border border-gray-100 dark:border-white/10">
-                                            <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-4 leading-tight">{faq.question}</h4>
-                                            <p className="text-gray-600 dark:text-gray-400 font-medium leading-relaxed">{faq.answer}</p>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-                        )}
+                        <BlogAuthorCard author={authorDetails} />
                     </div>
 
                     {/* Sidebar */}
-                    <aside className="lg:col-span-4 space-y-12">
-                        <div className="sticky top-32">
-                            {/* Share Card */}
+                    <aside className="lg:col-span-4 space-y-8">
+                        <div className="sticky top-32 space-y-8">
+                            <BlogTableOfContents items={tocItems} variant="sidebar" />
+
                             <div className="bg-[#513394] p-10 rounded-3xl text-white shadow-2xl shadow-[#513394]/20 relative overflow-hidden group">
                                 <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16 blur-2xl group-hover:bg-white/20 transition-all duration-700" />
                                 <h3 className="text-2xl font-black mb-6 relative z-10 leading-tight">Ready to start your recovery?</h3>
@@ -228,26 +191,11 @@ export default async function BlogPostPage(props: { params: Promise<{ slug: stri
                                     Call to Book
                                 </a>
                             </div>
-
-                            {/* Newsletter/Action */}
-                            <div className="mt-8 p-10 bg-gray-50 dark:bg-white/5 rounded-3xl border border-gray-100 dark:border-white/10 shadow-xl">
-                                <h3 className="text-xl font-black text-gray-900 dark:text-white mb-4">Stay in the loop</h3>
-                                <p className="text-gray-500 dark:text-gray-400 text-sm font-medium mb-8 leading-relaxed">Join our community and get the latest recovery protocols directly in your inbox.</p>
-                                <div className="space-y-4">
-                                    <input
-                                        type="email"
-                                        placeholder="your@email.com"
-                                        className="w-full px-6 py-4 rounded-2xl bg-white dark:bg-[#0A0A0A] border border-gray-200 dark:border-white/10 focus:ring-2 focus:ring-[#513394] outline-none font-medium transition-all"
-                                    />
-                                    <button className="w-full bg-gray-900 dark:bg-white text-white dark:text-gray-900 py-4 rounded-2xl font-black uppercase tracking-widest text-xs hover:opacity-90 transition-all shadow-lg">
-                                        Subscribe
-                                    </button>
-                                </div>
-                            </div>
                         </div>
                     </aside>
                 </div>
             </div>
+            {post.faqs?.length > 0 && <FAQSection faqs={post.faqs} />}
             {/* Mobile Sticky CTA Bar */}
             <div className="fixed bottom-0 left-0 right-0 z-50 lg:hidden bg-white dark:bg-[#0A0A0A] border-t border-gray-200 dark:border-white/10 px-4 py-3 flex gap-3 shadow-2xl">
                 <a

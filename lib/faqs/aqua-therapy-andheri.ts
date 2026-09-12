@@ -2,7 +2,7 @@ export const aquaTherapyAndheriFaqs = [
   {
     question: 'Is there physio-supervised aqua therapy in Andheri?',
     answer:
-      'Andheri has numerous physiotherapy clinics, but none currently operate a temperature-controlled pool with physiotherapists supervising sessions. The closest physio-supervised aqua therapy to Andheri is R3BOOT in Dadar East - approximately 30 to 35 minutes by road or 20 to 25 minutes by Western line train to Dadar station. For conditions that require aqua therapy specifically, R3BOOT is the clinical option serving Andheri patients.',
+      'Andheri has numerous physiotherapy clinics, but none currently operate a temperature-controlled aqua treadmill with physiotherapists supervising sessions. The closest physio-supervised aqua therapy to Andheri is R3BOOT in Dadar East - approximately 30 to 35 minutes by road or 20 to 25 minutes by Western line train to Dadar station. For conditions that require aqua therapy specifically, R3BOOT is the clinical option serving Andheri patients.',
   },
   {
     question: 'How do I get from Andheri to R3BOOT for aqua therapy?',

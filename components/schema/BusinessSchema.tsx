@@ -6,6 +6,7 @@ export default function BusinessSchema() {
     '@type': ['MedicalBusiness', 'PhysicalTherapist', 'HealthClub'],
     '@id': `${SITE_URL}/#organization`,
     name: 'R3boot | Integrated Recovery Center',
+    legalName: 'R3boot Activelife Pvt Ltd',
     alternateName: 'R3BOOT Recovery Center',
     url: SITE_URL,
     logo: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1773062628/R3boot_Logo_za7ymb.png',
@@ -14,7 +15,7 @@ export default function BusinessSchema() {
     email: 'info.r3boot@gmail.com',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: '203, Palai Plaza, Swami Gyan Jivandas Marg, Opp Pritam Hotel',
+      streetAddress: 'Palai Plaza, 203, Swami Gyan Jivandas Marg',
       addressLocality: 'Dadar East',
       addressRegion: 'Maharashtra',
       postalCode: '400014',

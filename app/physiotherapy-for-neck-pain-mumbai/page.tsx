@@ -149,7 +149,7 @@ export default function PhysiotherapyNeckPainMumbaiPage() {
                   it out for four months.
                 </p>
                 <p>
-                  Dr. Hiral Parikh (BPT, 15+ years) and Dr. Vaishali Vijay Rauniyar (certified in Dry Needling
+                  Dr. Hiral Parikh (BPT, 15+ years) and Dr. Vaishali Vijay Rauniyar (BPT, 4+ years, certified in Dry Needling
                   and Aquatic Rehabilitation) lead the physiotherapy team. Dry needling is available at R3BOOT
                   and is particularly effective for the trapezius and suboccipital trigger points that maintain
                   chronic neck pain in desk workers. No referral needed. First session 60 minutes.
@@ -606,7 +606,7 @@ export default function PhysiotherapyNeckPainMumbaiPage() {
 
       <ServiceSchema
         serviceName="Physiotherapy for Neck Pain in Mumbai"
-        description="Clinical physiotherapy for neck pain in Mumbai at R3BOOT, Dadar East. Cervical disc herniation, radiculopathy, spondylosis, postural neck pain, cervicogenic headaches, and whiplash. Dry needling available. Led by Dr. Hiral Parikh (BPT, 15+ years) and Dr. Vaishali Vijay Rauniyar."
+        description="Clinical physiotherapy for neck pain in Mumbai at R3BOOT, Dadar East. Cervical disc herniation, radiculopathy, spondylosis, postural neck pain, cervicogenic headaches, and whiplash. Dry needling available. Led by Dr. Hiral Parikh (BPT, 15+ years) and Dr. Vaishali Vijay Rauniyar (4+ years)."
         serviceUrl="https://www.r3boot.in/physiotherapy-for-neck-pain-mumbai"
       />
       <FAQSchema faqs={neckPainPhysiotherapyFaqs} />

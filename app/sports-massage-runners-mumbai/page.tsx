@@ -163,7 +163,7 @@ const pairedServices = [
   },
   {
     title: 'Sports Psychology',
-    href: '/services/sports-psychology',
+    href: '/services/mental-training',
     desc: 'For runners managing performance anxiety, fear of re-injury, or mental blocks that affect training consistency.',
   },
 ]

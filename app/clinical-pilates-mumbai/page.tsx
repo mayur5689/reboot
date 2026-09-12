@@ -146,7 +146,7 @@ export default function ClinicalPilatesMumbaiPage() {
                 </p>
                 <p>
                   At R3BOOT in Dadar East, Dr. Hiral Parikh (BPT, 15+ years) and Dr. Vaishali Vijay Rauniyar
-                  (certified Dry Needling, Aquatic Rehabilitation) lead clinical Pilates programs that are built
+                  (BPT, 4+ years, certified Dry Needling, Aquatic Rehabilitation) lead clinical Pilates programs that are built
                   from physiotherapy assessments, not adapted from class routines. Reformer and mat-based
                   sessions. Programs for back pain, scoliosis, post-surgical rehabilitation, posture, prenatal,
                   and sports performance. Sessions are 45–60 minutes at Palai Plaza, Swami Gyan Jivandas Marg,
@@ -435,7 +435,7 @@ export default function ClinicalPilatesMumbaiPage() {
                 the therapist modifies within the session. This is the core difference between clinical Pilates and
                 a fitness class: the physiotherapist responds to what your body does on the day, not what the class
                 plan says. Dr. Hiral Parikh and Dr. Vaishali Vijay Rauniyar have managed this spectrum of presentations
-                in Mumbai for over 15 years combined. Sessions are 45–60 minutes, one-to-one, at Palai Plaza, Dadar East.
+                in Mumbai — Dr. Hiral Parikh with 15+ years and Dr. Vaishali Vijay Rauniyar with 4+ years of clinical experience. Sessions are 45–60 minutes, one-to-one, at Palai Plaza, Dadar East.
               </p>
             </div>
           </div>
@@ -557,7 +557,7 @@ export default function ClinicalPilatesMumbaiPage() {
               BPT graduate from Pad. Dr. D.Y. Patil College of Physiotherapy, Navi Mumbai, with over 15 years of clinical experience. At R3BOOT, Dr. Hiral leads physiotherapy services with focused expertise in sports rehabilitation and post-surgical recovery, helping athletes return to performance and patients rebuild function. Her clinical Pilates programs are designed around each patient&apos;s assessment findings, not adapted from a class structure.
             </p>
             <p className="text-gray-600 dark:text-gray-400 text-base leading-relaxed">
-              Clinical Pilates programs at R3BOOT are also designed by <strong className="text-gray-900 dark:text-white">Dr. Vaishali Vijay Rauniyar</strong>, certified in Dry Needling and Aquatic Rehabilitation with deep experience in sports and orthopedic rehabilitation.
+              Clinical Pilates programs at R3BOOT are also designed by <strong className="text-gray-900 dark:text-white">Dr. Vaishali Vijay Rauniyar</strong>, with 4+ years of clinical experience, certified in Dry Needling and Aquatic Rehabilitation with deep expertise in sports and orthopedic rehabilitation.
             </p>
           </div>
         </div>

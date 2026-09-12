@@ -42,6 +42,8 @@
 
 @media (prefers-reduced-motion: reduce) {
   .animate-marquee,
+  .animate-marquee-left,
+  .animate-marquee-right,
   .animate-banner-sweep {
     animation: none;
   }

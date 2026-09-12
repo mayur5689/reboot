@@ -10,9 +10,9 @@ import AquaTherapyLocationInfo from '@/components/AquaTherapyLocationInfo'
 import { aquaTherapyAndheriFaqs } from '@/lib/faqs/aqua-therapy-andheri'
 
 export const metadata: Metadata = {
-  title: 'Aqua Therapy Near Andheri West | Pool Physiotherapy at R3BOOT Dadar',
+  title: 'Aqua Therapy Near Andheri West | Aqua Treadmill Physiotherapy at R3BOOT Dadar',
   description:
-    'Physio-supervised aqua therapy near Andheri West at R3BOOT Dadar - 30 min by road or 20 min by train. No pool in Andheri West. The closest clinical aqua therapy for Andheri patients.',
+    'Physio-supervised aqua therapy near Andheri West at R3BOOT Dadar - 30 min by road or 20 min by train. No aqua treadmill in Andheri West. The closest clinical aqua therapy for Andheri patients.',
   alternates: { canonical: '/aqua-therapy-andheri' },
   keywords: [
     'aqua therapy andheri west',
@@ -56,7 +56,7 @@ export default function AquaTherapyAndheriPage() {
               Aqua Therapy Near Andheri West, Mumbai
             </h1>
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl leading-relaxed font-medium mt-4">
-              R3BOOT in Dadar East - 30 min by road, 20 min by Western line train. Andheri West has dozens of physio clinics. None have a pool. R3BOOT does.
+              R3BOOT in Dadar East - 30 min by road, 20 min by Western line train. Andheri West has dozens of physio clinics. None have an aqua treadmill. R3BOOT does.
             </p>
           </div>
         </div>
@@ -68,13 +68,13 @@ export default function AquaTherapyAndheriPage() {
             <div className="lg:col-span-7">
               <h2 className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white mb-8 tracking-tight">
                 Andheri West Has 40+ Physio Clinics.{' '}
-                <span className="text-[#513394] dark:text-[#8B5CF6]">None Have a Pool. R3BOOT Does.</span>
+                <span className="text-[#513394] dark:text-[#8B5CF6]">None Have an Aqua Treadmill. R3BOOT Does.</span>
               </h2>
               <div className="prose prose-xl text-gray-600 dark:text-gray-400 dark:prose-invert max-w-none leading-relaxed space-y-6">
                 <p>
                   Andheri is Mumbai&apos;s largest suburb by population. The Andheri Sports Complex, dozens of cricket
                   and football grounds, Western Express Highway runners, the gym culture across Andheri West and East -
-                  all generate significant demand for aqua therapy. There is no physio-supervised pool in Andheri.
+                  all generate significant demand for aqua therapy. There is no physio-supervised aqua treadmill in Andheri.
                 </p>
                 <p>
                   R3BOOT in Dadar East is 30 to 35 minutes by road via the Western Express Highway, or approximately
@@ -183,7 +183,7 @@ export default function AquaTherapyAndheriPage() {
       <section className="py-24 bg-[#513394]">
         <div className="container mx-auto px-6 text-center max-w-3xl">
           <h2 className="text-4xl md:text-6xl font-black text-white mb-6">
-            No Pool in Andheri. Ours Is in Dadar.
+            No Aqua Treadmill in Andheri. Ours Is in Dadar.
           </h2>
           <p className="text-white/70 text-lg mb-10">Our physiotherapists will assess your condition and tell you honestly if aqua therapy is the right step - and whether the journey from Andheri is worth it for your specific case.</p>
           <a
@@ -222,7 +222,7 @@ export default function AquaTherapyAndheriPage() {
 
       <ServiceSchema
         serviceName="Aqua Therapy near Andheri West Mumbai"
-        description="Physio-supervised aqua therapy near Andheri West at R3BOOT Dadar. 20 min by Western line train from Andheri. The only clinical pool rehabilitation option serving Andheri West patients."
+        description="Physio-supervised aqua therapy near Andheri West at R3BOOT Dadar. 20 min by Western line train from Andheri. The only clinical aqua treadmill rehabilitation option serving Andheri West patients."
         serviceUrl="https://www.r3boot.in/aqua-therapy-andheri"
         areaServed="Andheri"
       />

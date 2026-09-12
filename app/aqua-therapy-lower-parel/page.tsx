@@ -10,9 +10,9 @@ import AquaTherapyLocationInfo from '@/components/AquaTherapyLocationInfo'
 import { aquaTherapyLowerParelFaqs } from '@/lib/faqs/aqua-therapy-lower-parel'
 
 export const metadata: Metadata = {
-  title: 'Aqua Therapy Lower Parel | Pool Physiotherapy at R3BOOT Dadar',
+  title: 'Aqua Therapy Lower Parel | Aqua Treadmill Physiotherapy at R3BOOT Dadar',
   description:
-    'Aqua therapy near Lower Parel at R3BOOT Dadar - 5 to 10 min away. Physio-supervised pool rehabilitation for gym injuries, post-surgery recovery, and sports rehab.',
+    'Aqua therapy near Lower Parel at R3BOOT Dadar - 5 to 10 min away. Physio-supervised aqua treadmill rehabilitation for gym injuries, post-surgery recovery, and sports rehab.',
   alternates: { canonical: '/aqua-therapy-lower-parel' },
   keywords: [
     'aqua therapy lower parel',
@@ -54,7 +54,7 @@ export default function AquaTherapyLowerParelPage() {
               Aqua Therapy Near Lower Parel, Mumbai
             </h1>
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl leading-relaxed font-medium mt-4">
-              R3BOOT in Dadar East is 5 to 10 minutes from Lower Parel. Physio-supervised pool rehabilitation for gym injuries, corporate athletes, and post-surgery recovery.
+              R3BOOT in Dadar East is 5 to 10 minutes from Lower Parel. Physio-supervised aqua treadmill rehabilitation for gym injuries, corporate athletes, and post-surgery recovery.
             </p>
           </div>
         </div>
@@ -66,19 +66,19 @@ export default function AquaTherapyLowerParelPage() {
             <div className="lg:col-span-7">
               <h2 className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white mb-8 tracking-tight">
                 5 Minutes from Lower Parel.{' '}
-                <span className="text-[#513394] dark:text-[#8B5CF6]">The Pool Your Gym Does Not Have.</span>
+                <span className="text-[#513394] dark:text-[#8B5CF6]">The Aqua Treadmill Your Gym Does Not Have.</span>
               </h2>
               <div className="prose prose-xl text-gray-600 dark:text-gray-400 dark:prose-invert max-w-none leading-relaxed space-y-6">
                 <p>
                   Lower Parel has some of Mumbai&apos;s highest gym density - Gold&apos;s Gym, multiple CrossFit boxes,
                   corporate fitness centres in every major building. High training load plus desk work equals
                   predictable injuries: lower back pain from deadlifts, knee overuse from squatting and running,
-                  shoulder impingement from pressing. None of those gyms have a physiotherapy pool.
+                  shoulder impingement from pressing. None of those gyms have a physiotherapy aqua treadmill.
                 </p>
                 <p>
                   R3BOOT is 5 to 10 minutes from Lower Parel by car, or one station from Lower Parel on the
                   Central line to Dadar. For post-surgical patients, the short distance makes twice-weekly aqua
-                  therapy sessions practical during a 6-to-12-week recovery programme. Combine pool rehabilitation
+                  therapy sessions practical during a 6-to-12-week recovery programme. Combine aqua treadmill rehabilitation
                   with{' '}
                   <Link href="/sports-massage-lower-parel" className="text-[#513394] dark:text-[#A78BFA] font-bold hover:underline">
                     sports massage near Lower Parel
@@ -215,7 +215,7 @@ export default function AquaTherapyLowerParelPage() {
 
       <ServiceSchema
         serviceName="Aqua Therapy near Lower Parel Mumbai"
-        description="Physio-supervised aqua therapy near Lower Parel at R3BOOT Dadar. 5-10 minutes away. Pool rehabilitation for gym injuries, post-surgery recovery, and sports rehab."
+        description="Physio-supervised aqua therapy near Lower Parel at R3BOOT Dadar. 5-10 minutes away. Aqua treadmill rehabilitation for gym injuries, post-surgery recovery, and sports rehab."
         serviceUrl="https://www.r3boot.in/aqua-therapy-lower-parel"
         areaServed="Lower Parel"
       />

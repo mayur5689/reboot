@@ -2,7 +2,7 @@ export const aquaTherapyMumbaiFaqs = [
   {
     question: 'What is aqua therapy and how does it work?',
     answer:
-      'Aqua therapy is physiotherapy performed in a temperature-controlled pool. Water reduces the load on your joints through buoyancy - in chest-deep water, your body bears only 25% of its normal weight. Hydrostatic pressure from the water reduces swelling and improves circulation. Resistance from water movement strengthens muscles without the impact stress of land-based exercise. At R3BOOT, sessions are supervised by our physiotherapy team who guide your movements and adjust intensity based on your recovery stage.',
+      'Aqua therapy is physiotherapy performed on a temperature-controlled aqua treadmill. Water reduces the load on your joints through buoyancy - in chest-deep water, your body bears only 25% of its normal weight. Hydrostatic pressure from the water reduces swelling and improves circulation. Resistance from water movement strengthens muscles without the impact stress of land-based exercise. At R3BOOT, sessions are supervised by our physiotherapy team who guide your movements and adjust intensity based on your recovery stage.',
   },
   {
     question: 'Is aqua therapy the same as hydrotherapy?',
@@ -12,7 +12,7 @@ export const aquaTherapyMumbaiFaqs = [
   {
     question: 'Is aqua therapy safe after surgery?',
     answer:
-      'Yes, aqua therapy is widely used for post-surgical rehabilitation once wound healing is confirmed and your surgeon or physiotherapist clears you for pool-based work. The reduced weight-bearing in water allows movement and strength work that would be too painful or risky on land at the same stage of recovery. Our physiotherapists review your surgical history and post-op timeline before your first session.',
+      'Yes, aqua therapy is widely used for post-surgical rehabilitation once wound healing is confirmed and your surgeon or physiotherapist clears you for aqua treadmill sessions. The reduced weight-bearing in water allows movement and strength work that would be too painful or risky on land at the same stage of recovery. Our physiotherapists review your surgical history and post-op timeline before your first session.',
   },
   {
     question: 'What conditions does aqua therapy help with at R3BOOT?',
@@ -27,7 +27,7 @@ export const aquaTherapyMumbaiFaqs = [
   {
     question: 'Do I need to know how to swim for aqua therapy?',
     answer:
-      'No swimming ability is required. Aqua therapy sessions at R3BOOT are conducted in the shallow end of the pool where you can stand comfortably. Exercises are performed upright, with your physiotherapist in or beside the pool at all times. The goal is therapeutic movement, not swimming.',
+      'No swimming ability is required. Aqua therapy sessions at R3BOOT are conducted on the aqua treadmill where you can stand comfortably. Exercises are performed upright, with your physiotherapist beside the aqua treadmill at all times. The goal is therapeutic movement, not swimming.',
   },
   {
     question: 'How long is a session and how many sessions will I need?',
@@ -77,7 +77,7 @@ export const aquaTherapyMumbaiFaqs = [
   {
     question: 'What aqua therapy exercises help with knee pain?',
     answer:
-      'Aqua therapy exercises for knee pain include straight leg raises, mini squats against water resistance, step-ups on pool stairs, terminal knee extensions, and leg swings in supported standing. The sequence depends on your knee condition - post-replacement, ACL repair, and osteoarthritis each require different progressions and load levels. At R3BOOT, your physiotherapist adjusts exercises and water depth to control how much load goes through your knee at each stage of recovery.',
+      'Aqua therapy exercises for knee pain include straight leg raises, mini squats against water resistance, water walking at variable speeds on the aqua treadmill, terminal knee extensions, and leg swings in supported standing. The sequence depends on your knee condition - post-replacement, ACL repair, and osteoarthritis each require different progressions and load levels. At R3BOOT, your physiotherapist adjusts exercises and treadmill speed to control how much load goes through your knee at each stage of recovery.',
   },
   {
     question: 'Is aqua therapy effective for a herniated disc?',

@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation';
 interface StudioLayoutWrapperProps {
     children: React.ReactNode;
     navbar: React.ReactNode;
-    footer: React.ReactNode;
+    footer: React.ReactNode | null;
     fab: React.ReactNode;
 }
 
@@ -18,9 +18,14 @@ export default function StudioLayoutWrapper({
     const pathname = usePathname();
     // Check if we are in studio
     const isStudio = pathname?.startsWith('/studio');
+    const isServiceLanding = pathname?.startsWith('/services-demo/');
 
     if (isStudio) {
         return <>{children}</>;
+    }
+
+    if (isServiceLanding) {
+        return <>{children}{footer}{fab}</>;
     }
 
     return (

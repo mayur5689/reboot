@@ -8,8 +8,8 @@ import { FAQSection } from '@/components/faq-section'
 import { contrastTherapyMumbaiFaqs } from '@/lib/faqs/contrast-therapy-mumbai'
 
 export const metadata: Metadata = {
-    title: 'Contrast Therapy in Mumbai | R3BOOT Dadar – Sauna & Ice Bath',
-    description: 'Contrast therapy at R3BOOT: alternating Infrared Sauna and Ice Bath for recovery, circulation, and stress resilience. Dadar, Mumbai.',
+    title: 'Contrast Therapy Mumbai | Ice Bath + Infrared Sauna | R3BOOT Dadar',
+    description: 'Hot-cold contrast therapy in Dadar Mumbai. Infrared sauna followed by ice bath for recovery, circulation & stress resilience. 45-min sessions. Athletes & beginners welcome.',
     keywords: ['contrast therapy mumbai', 'ice bath mumbai', 'sauna mumbai', 'cold plunge mumbai', 'recovery therapy dadar', 'contrast therapy near me'],
     alternates: { canonical: '/contrast-therapy-mumbai' },
 }
@@ -21,7 +21,8 @@ export default function ContrastTherapyPage() {
         <main className="min-h-screen bg-white dark:bg-[#0A0A0A]">
 
             {/* ─── HERO ─── */}
-            <section className="relative h-[70vh] flex items-end overflow-hidden">
+            <section className="flex flex-col min-h-[70vh] overflow-hidden pt-20 lg:pt-24">
+                <div className="relative flex flex-1 flex-col justify-end">
                 <Image
                     src="/images/service/Services_image/Contrast_Therepy.webp"
                     alt="Contrast Therapy Mumbai – R3BOOT Sauna & Ice Bath Dadar"
@@ -57,6 +58,7 @@ export default function ContrastTherapyPage() {
                             Alternating Infrared Sauna and Ice Bath for circulation, resilience, and faster recovery at R3BOOT, Dadar – Mumbai.
                         </p>
                     </div>
+                </div>
                 </div>
             </section>
 
@@ -431,7 +433,7 @@ export default function ContrastTherapyPage() {
                 </div>
             </section>
 
-            <FAQSection faqs={contrastTherapyMumbaiFaqs} />
+            <FAQSection faqs={contrastTherapyMumbaiFaqs} layout="grid" />
             <FAQSchema faqs={contrastTherapyMumbaiFaqs} />
             <ServiceSchema
                 serviceName="Contrast Therapy"

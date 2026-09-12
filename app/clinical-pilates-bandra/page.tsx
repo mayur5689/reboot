@@ -79,7 +79,7 @@ export default function ClinicalPilatesBandraPage() {
                 </p>
                 <p>
                   The clinical Pilates at R3BOOT is led by Dr. Hiral Parikh (BPT, 15+ years of sports and
-                  post-surgical rehabilitation) and Dr. Vaishali Vijay Rauniyar (certified in Dry Needling and
+                  post-surgical rehabilitation) and Dr. Vaishali Vijay Rauniyar (BPT, 4+ years, certified in Dry Needling and
                   Aquatic Rehabilitation). Runners from Carter Road and Bandra Fort, gym members from Khar
                   and Santacruz, and BKC office professionals with chronic back and neck pain make the
                   8-minute train journey specifically for the physiotherapy-first approach.

@@ -220,12 +220,20 @@ export default function ContactPage() {
                                     <FaMapMarkerAlt size={24} />
                                 </div>
                                 <div>
-                                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">Our Location</h3>
-                                    <p className="text-gray-500 dark:text-gray-400 leading-relaxed">
-                                        R3boot Activelife Pvt Ltd, Palai Plaza, 203,<br />
-                                        Swami Gyan Jivandas Marg, Dadar East,<br />
-                                        Mumbai, Maharashtra 400014
-                                    </p>
+                                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">Our Locations</h3>
+                                    <div className="text-gray-500 dark:text-gray-400 leading-relaxed space-y-4">
+                                        <p>
+                                            <span className="block text-sm font-bold text-gray-900 dark:text-white mb-1">Dadar East</span>
+                                            R3boot Activelife Pvt Ltd, Palai Plaza, 203,<br />
+                                            Swami Gyan Jivandas Marg, Dadar East,<br />
+                                            Mumbai, Maharashtra 400014
+                                        </p>
+                                        <p>
+                                            <span className="block text-sm font-bold text-gray-900 dark:text-white mb-1">Lower Parel</span>
+                                            Lodha Signet, A-303, Senapati Bapat Marg, West,<br />
+                                            Prabhadevi, Mumbai, Maharashtra 400013
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
 
@@ -282,24 +290,51 @@ export default function ContactPage() {
                 </div>
 
                 {/* Map Section */}
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: 0.4 }}
-                    className="mt-20 rounded-[3rem] overflow-hidden shadow-2xl border-4 border-white dark:border-[#1A1A1A] h-[450px] relative"
-                >
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3772.333831776953!2d72.8433525!3d19.0165524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7cf87519edaa5%3A0x36815ea9da0ca28c!2sR3boot%20%7C%20Integrated%20Recovery%20Center!5e0!3m2!1sen!2sin!4v1736966800000"
-                        width="100%"
-                        height="100%"
-                        style={{ border: 0 }}
-                        allowFullScreen
-                        loading="lazy"
-                        referrerPolicy="no-referrer-when-downgrade"
-                        className="w-full h-full transition-all duration-700"
-                    ></iframe>
-                </motion.div>
+                <div className="mt-20 space-y-10">
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6, delay: 0.4 }}
+                    >
+                        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Dadar East</h2>
+                        <div className="rounded-[3rem] overflow-hidden shadow-2xl border-4 border-white dark:border-[#1A1A1A] h-[450px] relative">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3772.333831776953!2d72.8433525!3d19.0165524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7cf87519edaa5%3A0x36815ea9da0ca28c!2sR3boot%20%7C%20Integrated%20Recovery%20Center!5e0!3m2!1sen!2sin!4v1736966800000"
+                                width="100%"
+                                height="100%"
+                                style={{ border: 0 }}
+                                allowFullScreen
+                                loading="lazy"
+                                referrerPolicy="no-referrer-when-downgrade"
+                                title="R3BOOT Dadar East"
+                                className="w-full h-full"
+                            ></iframe>
+                        </div>
+                    </motion.div>
+
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6, delay: 0.15 }}
+                    >
+                        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Lower Parel</h2>
+                        <div className="rounded-[3rem] overflow-hidden shadow-2xl border-4 border-white dark:border-[#1A1A1A] h-[450px] relative">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3772.65!2d72.8267492!3d19.0031084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7cfd8a9695041%3A0xdbf9dddd1b76b6c!2sR3boot%20%7C%20Integrated%20Recovery%20Center!5e0!3m2!1sen!2sin!4v1736966800001"
+                                width="100%"
+                                height="100%"
+                                style={{ border: 0 }}
+                                allowFullScreen
+                                loading="lazy"
+                                referrerPolicy="no-referrer-when-downgrade"
+                                title="R3BOOT Lower Parel - Lodha Signet"
+                                className="w-full h-full"
+                            ></iframe>
+                        </div>
+                    </motion.div>
+                </div>
             </div>
         </main>
     );

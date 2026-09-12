@@ -10,9 +10,9 @@ import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema'
 import { iceBathMumbaiFaqs } from '@/lib/faqs/ice-bath-mumbai'
 
 export const metadata: Metadata = {
-  title: 'Ice Bath Mumbai | Physio-Supervised Cold Therapy | R3BOOT Dadar',
+  title: 'Ice Bath Mumbai (3°C Cold Plunge) | Guided Sessions | R3BOOT Dadar',
   description:
-    'Ice bath Mumbai at R3BOOT Dadar | physio-supervised cold immersion with health intake & breathing guidance. Not a plunge tank. 5.0 ★ Google. Book via WhatsApp.',
+    'Physio-supervised ice bath in Dadar Mumbai. 3°C cold plunge for inflammation, recovery & mental focus. No prior experience needed. 10-min guided sessions. Book on WhatsApp.',
   alternates: { canonical: '/ice-bath-mumbai' },
   keywords: [
     'ice bath mumbai',

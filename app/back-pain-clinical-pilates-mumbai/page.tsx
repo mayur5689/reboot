@@ -109,7 +109,7 @@ export default function BackPainClinicalPilatesMumbaiPage() {
                   chronic pain, and no amount of stretching or passive treatment rebuilds them. Clinical Pilates does.
                 </p>
                 <p>
-                  At R3BOOT in Dadar East, Dr. Hiral Parikh (BPT, 15+ years) and Dr. Vaishali Vijay Rauniyar (certified
+                  At R3BOOT in Dadar East, Dr. Hiral Parikh (BPT, 15+ years) and Dr. Vaishali Vijay Rauniyar (BPT, 4+ years, certified
                   Dry Needling, Aquatic Rehabilitation) design your program from a physiotherapy assessment of your
                   specific spine pathology. L4-L5 disc, L5-S1 instability, facet joint pain, muscular back pain,
                   post-fusion, each requires a different exercise selection. Generic Pilates classes use the same routine

@@ -3,6 +3,7 @@ type BlogPostingSchemaProps = {
   description: string
   slug: string
   publishedAt: string
+  dateModified?: string
   authorName?: string
   imageUrl?: string
 }
@@ -12,6 +13,7 @@ export default function BlogPostingSchema({
   description,
   slug,
   publishedAt,
+  dateModified,
   authorName,
   imageUrl,
 }: BlogPostingSchemaProps) {
@@ -22,7 +24,7 @@ export default function BlogPostingSchema({
     description,
     url: `https://www.r3boot.in/blog/${slug}`,
     datePublished: publishedAt,
-    dateModified: publishedAt,
+    dateModified: dateModified || publishedAt,
     author: authorName
       ? { '@type': 'Person', name: authorName }
       : { '@type': 'Organization', name: 'R3BOOT' },

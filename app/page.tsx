@@ -1,5 +1,13 @@
 import type { Metadata } from 'next'
+import { Plus_Jakarta_Sans } from 'next/font/google'
 import Hero from '@/components/Hero'
+
+const plusJakarta = Plus_Jakarta_Sans({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800'],
+  variable: '--font-jakarta',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   title: 'Therapy Clinic in Dadar, Mumbai | R3BOOT Recovery Centre',
@@ -8,28 +16,36 @@ export const metadata: Metadata = {
   alternates: { canonical: '/' },
 }
 
-import TrustedByBusiness from '@/components/TrustedByBusiness'
 import HowItWorks from '@/components/HowItWorks'
-import OurServices from '@/components/OurServices'
+import MovingServiceRibbons from '@/components/MovingServiceRibbons'
+import AboutJourney from '@/components/AboutJourney'
+import OurServicesCarousel from '@/components/OurServicesCarousel'
 import ReviewVideo from '@/components/ReviewVideo'
-import Testimonials from '@/components/Testimonials'
-import CoachesSection from '@/components/CoachesSection'
+import { GoogleReviewsSection } from '@/app/services-demo/contrast-therapy/GoogleReviewsSection'
+import TeamCarousel from '@/components/TeamCarousel'
 import HomeBlog from '@/components/HomeBlog'
 import { FAQSection } from '@/components/faq-section'
 
 export default function Home() {
   return (
-    <main className="relative">
-      <Hero />
-      <TrustedByBusiness />
-      <HowItWorks />
-      <OurServices />
-      <ReviewVideo />
-      <Testimonials />
-      <CoachesSection />
-      <HomeBlog />
-      <FAQSection />
-    </main>
+    <div className={plusJakarta.variable}>
+      <style>{`
+        main {
+          font-family: var(--font-jakarta), system-ui, sans-serif;
+        }
+      `}</style>
+      <main className="relative">
+        <Hero />
+        <MovingServiceRibbons />
+        <AboutJourney />
+        <HowItWorks />
+        <OurServicesCarousel />
+        <ReviewVideo />
+        <GoogleReviewsSection />
+        <TeamCarousel />
+        <HomeBlog />
+        <FAQSection showMap />
+      </main>
+    </div>
   )
 }
-

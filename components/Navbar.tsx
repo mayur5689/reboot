@@ -8,16 +8,30 @@ import { services } from '@/lib/services'
 import { useTheme } from 'next-themes'
 import { Sun, Moon } from 'lucide-react'
 
+const connectLinks = [
+  { href: '/contact', label: 'Contact Us' },
+  { href: '/partnerships', label: 'Affiliate Partnerships' },
+  { href: '/employee-wellness', label: 'Employee Wellness' },
+]
+
+type MobileNavItem =
+  | { href: string; label: string }
+  | { label: string; children: typeof connectLinks }
 
 export default function Navbar() {
   const pathname = usePathname()
   const [isServicesOpen, setIsServicesOpen] = useState(false)
+  const [isConnectOpen, setIsConnectOpen] = useState(false)
+  const [isMobileConnectOpen, setIsMobileConnectOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const { theme, setTheme } = useTheme()
+  const { theme, resolvedTheme, setTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
-  const isHome = pathname === '/'
-  const shouldBeSolid = !isHome || isScrolled || isServicesOpen
+  const isDarkHero =
+    pathname === '/' ||
+    pathname === '/partnerships' ||
+    pathname === '/employee-wellness'
+  const shouldBeSolid = !isDarkHero || isScrolled || isServicesOpen || isConnectOpen
 
   useEffect(() => {
     setMounted(true)
@@ -39,11 +53,13 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className={`flex items-center transition-all duration-300 ${shouldBeSolid ? 'py-1.5' : 'py-3'}`}>
             <Image
-              src="/images/REBOOT FINAL LOGO_1.png"
+              src={mounted && shouldBeSolid && resolvedTheme === 'light'
+                ? 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1785934037/R3BOOT_WHITE_LOGO_g4qgbl.svg'
+                : '/images/REBOOT FINAL LOGO_1.png'}
               alt="R3BOOT Logo"
               width={160}
               height={50}
-              className={`h-12 w-auto transition-all duration-300 ${shouldBeSolid && theme === 'light' ? 'brightness-0' : ''}`}
+              className={`h-12 w-auto transition-all duration-300 ${mounted && shouldBeSolid && resolvedTheme === 'light' ? 'brightness-0' : ''}`}
               priority
             />
           </Link>
@@ -86,34 +102,10 @@ export default function Navbar() {
                               {getServiceIcon(service.title)}
                             </div>
                             <div className="pt-1 flex-1">
-                              <div className="flex items-center gap-2">
-                                <h4 className="text-[15px] font-bold text-gray-900 dark:text-white mb-1 group-hover:text-[#513394] dark:group-hover:text-[#A78BFA] transition-colors">{service.title}</h4>
-                                {service.subServices && service.subServices.length > 0 && (
-                                  <ChevronDownIcon className="w-3 h-3 text-gray-400 -rotate-90 group-hover/service:rotate-0 transition-transform duration-300" />
-                                )}
-                              </div>
+                              <h4 className="text-[15px] font-bold text-gray-900 dark:text-white mb-1 group-hover:text-[#513394] dark:group-hover:text-[#A78BFA] transition-colors">{service.title}</h4>
                               <p className="text-[11px] text-gray-500 dark:text-gray-400 leading-tight line-clamp-2">{service.description}</p>
                             </div>
                           </Link>
-
-                          {/* Sub-services dropdown for Physiotherapy */}
-                          {service.subServices && service.subServices.length > 0 && (
-                            <div className="hidden group-hover/service:block absolute left-full top-0 ml-2 w-72 bg-white dark:bg-[#1A1A1A] rounded-2xl shadow-2xl border border-gray-100 dark:border-white/10 p-3 z-50 animate-in fade-in slide-in-from-left-2 duration-200">
-                              <div className="text-[10px] font-bold text-[#513394] dark:text-[#A78BFA] uppercase tracking-widest mb-2 px-3">Specializations</div>
-                              <div className="space-y-1 max-h-[320px] overflow-y-auto">
-                                {service.subServices.map((sub, subIdx) => (
-                                  <Link
-                                    key={subIdx}
-                                    href={`/services/${service.slug}#${sub.slug}`}
-                                    className="block px-3 py-2 rounded-xl hover:bg-[#513394]/10 dark:hover:bg-white/5 transition-all group/sub"
-                                  >
-                                    <h5 className="text-[13px] font-semibold text-gray-800 dark:text-white group-hover/sub:text-[#513394] dark:group-hover/sub:text-[#A78BFA] transition-colors">{sub.title}</h5>
-                                    <p className="text-[10px] text-gray-500 dark:text-gray-400 leading-snug mt-0.5">{sub.description}</p>
-                                  </Link>
-                                ))}
-                              </div>
-                            </div>
-                          )}
                         </div>
                       ))}
                     </div>
@@ -139,9 +131,37 @@ export default function Navbar() {
               )}
             </div>
 
-            <Link href="/contact" className="hover:opacity-70 transition-opacity">
-              Contact
-            </Link>
+            <div
+              className="relative h-full flex items-center"
+              onMouseEnter={() => setIsConnectOpen(true)}
+              onMouseLeave={() => setIsConnectOpen(false)}
+            >
+              <button
+                type="button"
+                onClick={() => setIsConnectOpen(true)}
+                className="flex items-center gap-1.5 hover:opacity-70 transition-opacity py-2"
+                aria-expanded={isConnectOpen}
+                aria-haspopup="menu"
+              >
+                Connect <ChevronDownIcon className={`w-4 h-4 transition-transform duration-300 ${isConnectOpen ? 'rotate-180' : ''}`} />
+              </button>
+
+              {isConnectOpen && (
+                <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3 z-50">
+                  <div className="min-w-[260px] rounded-2xl bg-white dark:bg-[#1A1A1A] border border-gray-100 dark:border-white/10 shadow-2xl p-2 animate-in fade-in slide-in-from-top-2 duration-200">
+                    {connectLinks.map((link) => (
+                      <Link
+                        key={link.href}
+                        href={link.href}
+                        className="block px-4 py-3 rounded-xl text-[15px] font-semibold text-gray-800 dark:text-white hover:bg-gray-50 dark:hover:bg-white/5 hover:text-[#513394] dark:hover:text-[#A78BFA] transition-colors"
+                      >
+                        {link.label}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
             <Link href="/blog" className="hover:opacity-70 transition-opacity">
               Blog
             </Link>
@@ -189,11 +209,11 @@ export default function Navbar() {
           <div className="flex items-center justify-between px-6 py-5">
             <Link href="/" onClick={() => setIsMobileMenuOpen(false)}>
               <Image
-                src="/images/REBOOT FINAL LOGO_1.png"
+                src="https://res.cloudinary.com/dj7bot2uc/image/upload/v1785934037/R3BOOT_WHITE_LOGO_g4qgbl.svg"
                 alt="R3BOOT Logo"
-                width={110}
-                height={36}
-                className="h-9 w-auto brightness-0 invert"
+                width={150}
+                height={49}
+                className="h-12 w-auto"
               />
             </Link>
             <button
@@ -211,32 +231,64 @@ export default function Navbar() {
 
           {/* Nav Links */}
           <nav className="flex-1 flex flex-col justify-center px-6">
-            {[
+            {([
               { href: '/', label: 'Home' },
               { href: '/about', label: 'About' },
               { href: '/services', label: 'Services' },
-              { href: '/contact', label: 'Contact' },
+              { label: 'Connect', children: connectLinks },
               { href: '/blog', label: 'Blog' },
-            ].map((item, i) => (
-              <Link
-                key={i}
-                href={item.href}
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="group flex items-center gap-4 py-[18px] border-b border-white/[0.06] last:border-0 animate-in fade-in slide-in-from-left-4 fill-mode-both"
-                style={{ animationDelay: `${i * 55}ms`, animationDuration: '350ms' }}
-              >
-                <span className="text-[#513394] text-[10px] font-black tracking-widest w-5 shrink-0">0{i + 1}</span>
-                <span className="text-white text-[1.75rem] font-black tracking-tight leading-none group-active:text-[#A78BFA] transition-colors duration-150">
-                  {item.label}
-                </span>
-                <svg
-                  className="w-4 h-4 text-white/15 ml-auto shrink-0"
-                  fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}
+            ] as MobileNavItem[]).map((item, i) =>
+              'children' in item ? (
+                <div key={item.label} className="border-b border-white/[0.06]">
+                  <button
+                    type="button"
+                    onClick={() => setIsMobileConnectOpen((open) => !open)}
+                    className="group flex items-center gap-4 py-[18px] w-full text-left animate-in fade-in slide-in-from-left-4 fill-mode-both"
+                    style={{ animationDelay: `${i * 55}ms`, animationDuration: '350ms' }}
+                    aria-expanded={isMobileConnectOpen}
+                  >
+                    <span className="text-[#513394] text-[10px] font-black tracking-widest w-5 shrink-0">0{i + 1}</span>
+                    <span className="text-white text-[1.75rem] font-black tracking-tight leading-none group-active:text-[#A78BFA] transition-colors duration-150">
+                      {item.label}
+                    </span>
+                    <ChevronDownIcon className={`w-4 h-4 text-white/15 ml-auto shrink-0 transition-transform duration-200 ${isMobileConnectOpen ? 'rotate-180' : ''}`} />
+                  </button>
+                  {isMobileConnectOpen && (
+                    <div className="pb-4 pl-9 flex flex-col gap-1 animate-in fade-in slide-in-from-top-1 duration-200">
+                      {item.children.map((child) => (
+                        <Link
+                          key={child.href}
+                          href={child.href}
+                          onClick={() => setIsMobileMenuOpen(false)}
+                          className="py-2.5 text-white/70 text-[17px] font-semibold hover:text-[#A78BFA] transition-colors"
+                        >
+                          {child.label}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="group flex items-center gap-4 py-[18px] border-b border-white/[0.06] last:border-0 animate-in fade-in slide-in-from-left-4 fill-mode-both"
+                  style={{ animationDelay: `${i * 55}ms`, animationDuration: '350ms' }}
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
-            ))}
+                  <span className="text-[#513394] text-[10px] font-black tracking-widest w-5 shrink-0">0{i + 1}</span>
+                  <span className="text-white text-[1.75rem] font-black tracking-tight leading-none group-active:text-[#A78BFA] transition-colors duration-150">
+                    {item.label}
+                  </span>
+                  <svg
+                    className="w-4 h-4 text-white/15 ml-auto shrink-0"
+                    fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+              )
+            )}
           </nav>
 
           {/* Bottom CTAs */}
@@ -275,8 +327,11 @@ function getServiceIcon(title: string) {
     case "Aqua Therapy": return <WaterIcon />;
     case "Clinical Pilates": return <PilatesIcon />;
     case "Contrast Therapy": return <ContrastIcon />;
+    case "Compression Therapy": return <CompressionIcon />;
     case "Sports Massage": return <MassageIcon />;
+    case "Mental Training": return <BrainIcon />;
     case "Sports Psychology": return <BrainIcon />;
+    case "Sports Psychology & Counselling": return <BrainIcon />;
     case "Counselling & Mental Training": return <MentalIcon />;
     case "Physiotherapy": return <PathologyIcon />;
     default: return <PathologyIcon />;
@@ -315,6 +370,15 @@ function ContrastIcon() {
   return (
     <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
       <path d="M12 2v20M12 2a10 10 0 0 0-10 10c0 5.5 4.5 10 10 10M12 2a10 10 0 0 1 10 10c0 5.5-4.5 10-10 10" />
+    </svg>
+  )
+}
+
+function CompressionIcon() {
+  return (
+    <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+      <path d="M4 8h16M4 12h16M4 16h16" />
+      <path d="M8 5v14M16 5v14" />
     </svg>
   )
 }

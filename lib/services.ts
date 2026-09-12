@@ -42,7 +42,7 @@ export const services: Service[] = [
             { title: "Treatment", description: "Applying targeted manual therapy and exercises." },
             { title: "Management", description: "Ongoing support and strategy for long-term health." }
         ],
-        image: "/images/service/Services_image/Physiotherapy_1.webp",
+        image: "https://res.cloudinary.com/dj7bot2uc/image/upload/v1785287448/physio_zx1oxi.webp",
         slug: "physiotherapy",
         subServices: [
             {
@@ -109,7 +109,7 @@ export const services: Service[] = [
             { title: "Functional sport-specific training", description: "Tailoring movements to your specific athletic or daily needs." },
             { title: "Re-assessment and modification", description: "Continuously refining the program based on your progress." }
         ],
-        image: "/images/service/Services_image/Clinical Pilates-2.webp",
+        image: "https://res.cloudinary.com/dj7bot2uc/image/upload/v1785287449/Pilates_hogzmt.webp",
         slug: "clinical-pilates"
     },
     {
@@ -131,31 +131,31 @@ export const services: Service[] = [
             { title: "Cold Phase, Ice Bath", description: "Ice bath: vasoconstriction phase to reduce inflammation and flush toxins." },
             { title: "Recovery", description: "Allowing the body to return to homeostatic balance." }
         ],
-        image: "/images/service/Services_image/Contrast_Therepy.webp",
+        image: "https://res.cloudinary.com/dj7bot2uc/image/upload/v1785287448/Contrast_bton9w.webp",
         slug: "contrast-therapy"
     },
     {
-        title: "Counselling & Mental Training",
-        tagline: "Stronger Mind, Better You",
-        category: "MENTAL",
-        description: "Sports performance is not driven by physical strength alone. Our Sports Counselling and Mental Training program is designed to help athletes manage pressure and perform at their best.",
-        fullDescription: "Our integrated approach ensures close coordination between sports physiotherapy, rehabilitation, and mental training. This holistic model supports faster recovery, improved adherence to rehab programs, and a smoother transition from injury to full performance. Athletes learn not only how to heal their bodies, but also how to trust them again.",
+        title: "Compression Therapy",
+        tagline: "Pulse. Flush. Recover.",
+        category: "THERAPY",
+        description: "Normatec 3 Full Body dynamic air compression for legs, hips, and arms. Flush fatigue, boost circulation, and recover faster at R3BOOT Dadar.",
+        fullDescription: "Compression Therapy at R3BOOT uses the Normatec 3 Full Body system: sequential air compression across legs, hips, and arms. Patented Pulse technology inflates overlapping zones distal to proximal, helping increase circulation, revive muscles, and reduce swelling. Sessions are screened and guided on site, typically 20 to 60 minutes.",
         benefits: [
-            "Performance enhancement",
-            "Injury and rehabilitation support",
-            "Behaviour and habit building",
-            "Mind body connection",
-            "Emotional resilience"
+            "Temporarily increase circulation",
+            "Relieve muscle aches and stiffness",
+            "Reduce tension and swelling",
+            "Faster warm-up and post-training recovery",
+            "Full-body coverage: legs, hips, and arms",
+            "7 compression levels (40–110 mmHg)"
         ],
         process: [
-            { title: "Goal setting and mindset alignment", description: "Defining objectives and aligning your mental state with recovery." },
-            { title: "Stimulation and practice", description: "Applying mental techniques in various scenarios." },
-            { title: "Performance Evaluation", description: "Assessing the effectiveness of mental strategies." },
-            { title: "Integration with physical rehabilitation", description: "Coordinating mental work with physical recovery protocols." },
-            { title: "Progress review and ongoing support", description: "Continuous monitoring and adjustment of the program." }
+            { title: "Screening & fit", description: "Health intake, contraindications check, and attachment sizing." },
+            { title: "Protocol", description: "Time, pressure level, and zones set for pre-session warm-up or post-session recovery." },
+            { title: "Pulse compression", description: "Sequential, overlapping zones flush from the extremities toward the core." },
+            { title: "Check-in", description: "Short review of how you responded and how to pair the next session with training." }
         ],
-        image: "/images/service/Services_image/Counselling & Mental Training-1.webp",
-        slug: "counselling-mental-training"
+        image: "/images/hero/compression-therapy-training.jpg",
+        slug: "compression-therapy"
     },
     {
         title: "Aqua Therapy",
@@ -175,7 +175,7 @@ export const services: Service[] = [
             { title: "Active Recovery", description: "Guided movements and exercises performed in the water." },
             { title: "Cool Down", description: "Gentle stretches and relaxation to finish the session." }
         ],
-        image: "/images/service/Services_image/Hydrotherapy_!.webp",
+        image: "https://res.cloudinary.com/dj7bot2uc/image/upload/v1785287448/Aqua_twpd5v.webp",
         slug: "aqua-therapy"
     },
     {
@@ -196,28 +196,52 @@ export const services: Service[] = [
             { title: "Release", description: "Techniques to break down adhesions and improve muscle fiber alignment." },
             { title: "Flush", description: "Effleurage to finish and promote lymphatic drainage." }
         ],
-        image: "/images/service/Services_image/Sports Massage_1.webp",
+        image: "https://res.cloudinary.com/dj7bot2uc/image/upload/v1785287448/massage_r0f3jo.webp",
         slug: "sports-massage"
     },
     {
-        title: "Sports Psychology",
+        title: "Mental Training",
+        tagline: "Stronger Mind, Better Performance",
         category: "MENTAL",
-        description: "Sports performance is not driven by physical strength alone. Our Sports Psychology program is designed to help athletes manage pressure and perform at their best.",
-        fullDescription: "Sports psychology focuses on the mental aspects of athletic performance. Our expert psychologists help you develop mental resilience, focus, and confidence to perform at your best when it matters most. Overcome performance anxiety, build winning habits, and unlock your full potential.",
+        description: "Integrated sports psychology and counselling for pressure, focus, injury psychology, and mental training — one service for athletes and high performers.",
+        fullDescription: "Sports performance is not physical alone. At R3BOOT, sports psychology and counselling run as one mental performance service. Build focus, composure, and competition routines while also addressing injury anxiety, burnout, motivation, and learning to trust your body again — coordinated with physiotherapy when rehab is involved.",
         benefits: [
-            "Enhanced mental focus",
+            "Enhanced mental focus under pressure",
             "Performance anxiety management",
-            "Goal setting strategies",
-            "Confidence building",
-            "Mental resilience training"
+            "Injury psychology & return-to-sport trust",
+            "Confidence and habit building",
+            "Emotional resilience alongside physical rehab"
         ],
         process: [
-            { title: "Analysis", description: "Identifying mental blocks and performance triggers." },
-            { title: "Strategy", description: "Developing mental tools like imagery and self-talk." },
-            { title: "Practice", description: "Applying mental strategies during training sessions." },
-            { title: "Competition", description: "Executing mental skills under high-pressure scenarios." }
+            { title: "Assessment & goal setting", description: "Identifying mental blocks, emotional load, and performance triggers." },
+            { title: "Skill building & practice", description: "Imagery, focus, self-talk, and emotional regulation practised for real scenarios." },
+            { title: "Integration with training / rehab", description: "Carrying tools into practice, competition, or physiotherapy." },
+            { title: "Review & refine", description: "Tracking composure and confidence as pressure or return-to-sport increases." }
         ],
-        image: "/images/service/Services_image/Sports_Pyscology.webp",
-        slug: "sports-psychology"
+        image: "/images/hero/r3boot-counselling.png",
+        slug: "mental-training"
+    },
+    {
+        title: "Athlete Screening",
+        tagline: "Know Your Body. Own Your Game.",
+        category: "ASSESSMENT",
+        description: "A full-body, evidence-based screening that maps your injury risk and performance ceiling before either one catches you off guard.",
+        fullDescription: "Athlete Screening at R3BOOT is a structured, evidence-based assessment that reads your body the way a coach reads game film. We take your sports history, injury history, and goals, then run you through a full musculoskeletal exam, gait analysis, special tests, and a coordination battery. You walk out with a clear performance report and a plan: what to fix before it becomes an injury, and what to load before it becomes a limiter.",
+        benefits: [
+            "Full injury risk profile before it becomes an injury",
+            "Gait analysis, mobility, and stability mapped in one session",
+            "Personalised Recovery & Performance Plan",
+            "Sport-specific evaluation, not a generic checklist",
+            "Baseline benchmarks to track progress over time",
+            "Direct line into R3BOOT's recovery and training programs"
+        ],
+        process: [
+            { title: "History & Goals", description: "Sports background, training load, injury history, and where you want to be." },
+            { title: "MSK & Movement Exam", description: "Range of motion, flexibility, and gait analysed joint by joint." },
+            { title: "Special Tests", description: "Balance, strength, and sport-specific tests that expose what you can't feel yet." },
+            { title: "Risk Summary & Plan", description: "A clinician-built report on your risk factors, with a program to close the gaps." }
+        ],
+        image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&q=80&w=800",
+        slug: "athlete-screening"
     },
 ];

@@ -149,7 +149,7 @@ export default function PhysiotherapyKneePainMumbaiPage() {
                   below. Then we treat it directly.
                 </p>
                 <p>
-                  Dr. Hiral Parikh (BPT, 15+ years) and Dr. Vaishali Vijay Rauniyar (certified in Dry Needling
+                  Dr. Hiral Parikh (BPT, 15+ years) and Dr. Vaishali Vijay Rauniyar (BPT, 4+ years, certified in Dry Needling
                   and Aquatic Rehabilitation) lead the physiotherapy team. No referral needed. First session
                   is 60 minutes.
                 </p>
@@ -543,6 +543,7 @@ export default function PhysiotherapyKneePainMumbaiPage() {
               { label: 'Physiotherapy for Back Pain', href: '/physiotherapy-for-back-pain-mumbai' },
               { label: 'Sports Injury Physiotherapy Dadar', href: '/sports-injury-physiotherapy-dadar-mumbai' },
               { label: 'Knee Pain Sports Massage', href: '/knee-pain-sports-massage-mumbai' },
+              { label: 'Aqua Therapy for Knee Pain', href: '/aqua-therapy-for-knee-pain-mumbai' },
               { label: 'Contrast Therapy Mumbai', href: '/contrast-therapy-mumbai' },
               { label: 'Clinical Pilates Mumbai', href: '/clinical-pilates-mumbai' },
             ].map((link) => (
@@ -600,7 +601,7 @@ export default function PhysiotherapyKneePainMumbaiPage() {
 
       <ServiceSchema
         serviceName="Physiotherapy for Knee Pain in Mumbai"
-        description="Clinical physiotherapy for knee pain in Mumbai at R3BOOT, Dadar East. Runner's knee, osteoarthritis, meniscus tears, ACL rehabilitation, patellar tendinopathy, and post-surgery knee recovery. Led by Dr. Hiral Parikh (BPT, 15+ years) and Dr. Vaishali Vijay Rauniyar."
+        description="Clinical physiotherapy for knee pain in Mumbai at R3BOOT, Dadar East. Runner's knee, osteoarthritis, meniscus tears, ACL rehabilitation, patellar tendinopathy, and post-surgery knee recovery. Led by Dr. Hiral Parikh (BPT, 15+ years) and Dr. Vaishali Vijay Rauniyar (4+ years)."
         serviceUrl="https://www.r3boot.in/physiotherapy-for-knee-pain-mumbai"
       />
       <FAQSchema faqs={kneePainPhysiotherapyFaqs} />

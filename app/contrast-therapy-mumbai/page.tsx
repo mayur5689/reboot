@@ -1,13 +1,22 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { Metadata } from 'next'
+import type { Metadata } from 'next'
 import { services } from '@/lib/services'
 import { FAQSection } from '@/components/faq-section'
-import PhysiotherapyTeam from '@/components/PhysiotherapyTeam'
 import ServiceSchema from '@/components/schema/ServiceSchema'
 import FAQSchema from '@/components/schema/FAQSchema'
 import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema'
 import { contrastTherapyMumbaiFaqs } from '@/lib/faqs/contrast-therapy-mumbai'
+import { PainPointsSection } from './PainPointsSection'
+import { WhyMumbaiAthletesSection } from './WhyMumbaiAthletesSection'
+import { HowItWorksSection } from './HowItWorksSection'
+import { ComparisonSection } from './ComparisonSection'
+import { HygieneSection } from './HygieneSection'
+import { TeamSectionDemo } from '@/app/services-demo/contrast-therapy/TeamSectionDemo'
+import { TestimonialsCarousel } from './TestimonialsCarousel'
+import { LocationSection } from './LocationSection'
+import { HeroTrustBadge, serviceTrustBadges } from '@/components/HeroTrustBadge'
+import { MobileHeroTrust } from '@/components/MobileHeroTrust'
 
 export const metadata: Metadata = {
   title: 'Contrast Therapy Mumbai | Ice Bath & Infrared Sauna | R3BOOT',
@@ -27,654 +36,453 @@ export const metadata: Metadata = {
 
 const otherServices = services.filter((s) => s.slug !== 'contrast-therapy').slice(0, 4)
 
+// ─── DATA ─────────────────────────────────────────────────────────────────────
 
-const whatItHelps = [
+const heroImage = {
+  src: '/images/contrast-therapy-mumbai_service_page/contrast-therapy-mumbai_Hero_section.webp',
+  alt: 'Contrast therapy session at R3BOOT Mumbai',
+}
+
+const processSteps = [
   {
-    title: 'Post-training muscle recovery',
-    description:
-      'Athletes who train 4+ times a week use contrast therapy to reduce DOMS and maintain training volume. Applicable to runners, gym-goers, CrossFit athletes, cricketers, and swimmers.',
+    number: '01',
+    title: 'Health Assessment',
+    body: 'Short intake covering your training background, injury history, and any health conditions. Your physiotherapist confirms contrast therapy is right for you right now.',
   },
   {
-    title: 'Muscle soreness between sessions',
-    description:
-      'If you have training or competition within 24–48 hours, contrast therapy helps you recover faster than passive rest alone.',
+    number: '02',
+    title: 'Breathing Prep and Supervised Protocol',
+    body: 'We walk you through controlled breathing before immersion. Then sauna (68°C) and ice bath (6-10°C) in structured sequence under team guidance.',
   },
   {
-    title: 'Sub-acute soft tissue injuries',
-    description:
-      'Once the acute phase has passed, contrast therapy supports tissue recovery by improving circulation to the injured area.',
+    number: '03',
+    title: 'Post-Session Check-in',
+    body: 'We review how your body responded. Most clients feel reduced soreness and improved clarity within 30-60 minutes. We advise light movement for the remainder of the day.',
   },
   {
-    title: 'Chronic inflammation management',
-    description:
-      'The cold phase directly reduces inflammatory markers in muscle tissue from repeated training stress.',
+    number: '04',
+    title: 'Clinical Hygiene Standards',
+    body: 'Sauna, ice bath, and changing areas are cleaned and sanitised between every session. Fresh towels, filtered water, and single-use disposables where needed — held to clinical standards throughout.',
   },
 ]
 
-const whatToExpect = [
+const testimonials = [
   {
-    title: 'Intake and health review',
-    body: 'Complete a brief form covering your training background, injury history, and health conditions. Our physiotherapist confirms contrast therapy is appropriate for you.',
+    name: 'Chandrakant Chande',
+    meta: 'Local Guide · 24 reviews',
+    ago: '2 months ago',
+    avatar: '/images/Customer_Review/Namrata Doshi.png',
+    quote: 'Reboot team was wonderful. Navigated me through the entire contrast therapy experience with great insights. My body also feels lighter and better. Would definitely recommend this place for someone looking for good recovery.',
   },
   {
-    title: 'Breathing guidance before cold',
-    body: 'We teach you a controlled breathing technique before your first ice bath immersion | this makes the cold phase manageable for most first-time clients.',
+    name: 'Dharmesh Thakkar',
+    meta: 'Google User · 8 reviews',
+    ago: '3 months ago',
+    avatar: '/images/Customer_Review/Sonal Malik.png',
+    quote: 'The deep tissue massage, cupping therapy, and ice water treatment helped relieve my body stiffness tremendously, while the sauna session left me feeling completely rejuvenated. Professional and well-equipped.',
   },
   {
-    title: 'Supervised protocol',
-    body: 'You move between infrared sauna (68°C) and ice bath (6–10°C) under team guidance. Most first-time clients find the cold phase challenging for the first 60 seconds, then manageable.',
+    name: 'Namrata Doshi',
+    meta: 'Local Guide · 12 reviews',
+    ago: '1 month ago',
+    avatar: '/images/Customer_Review/Namrata Doshi.png',
+    quote: 'The team is highly professional, knowledgeable, and genuinely caring. From the initial assessment to the recovery plan, everything was clearly explained and tailored to my needs. Highly recommend R3BOOT.',
   },
   {
-    title: 'Post-session check-in',
-    body: 'Most clients feel improved muscle looseness and mental clarity within 30–60 minutes. We advise light movement (walking, gentle stretching) for the remainder of the day.',
+    name: 'Sonal Malik',
+    meta: 'Google User · 6 reviews',
+    ago: '4 months ago',
+    avatar: '/images/Customer_Review/Sonal Malik.png',
+    quote: 'The Pilates sessions were highly personalized, with clear focus on alignment and core strength. I have already noticed better posture and reduced stiffness. Highly recommend for anyone serious about long-term physical wellness.',
+  },
+  {
+    name: 'JugalKishore Shah',
+    meta: 'Google User · 3 reviews',
+    ago: '5 months ago',
+    avatar: '/images/Customer_Review/JugalKishore Shah.png',
+    quote: 'Excellent idea brought into reality. People will love to take benefit of it. Very professionally done. Keep it up and maintain high standard of services.',
+  },
+  {
+    name: 'Arjun',
+    meta: 'Google User · 5 reviews',
+    ago: '1 month ago',
+    avatar: '/images/Customer_Review/Arjun.png',
+    quote: 'Wonderful experience. It is one of those places you actually wait to visit again because the first time was so amazing. Highly recommended!',
   },
 ]
+
+// ─── PHONE SVG ────────────────────────────────────────────────────────────────
+
+function PhoneIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+    </svg>
+  )
+}
+
+// ─── PAGE ─────────────────────────────────────────────────────────────────────
 
 export default function ContrastTherapyMumbaiPage() {
   return (
-    <main className="min-h-screen bg-white dark:bg-[#0A0A0A]">
+    <main className="ct-page min-h-screen bg-white dark:bg-[#0A0A0A]">
 
-      {/* ─── HERO ─── */}
-      <section className="relative h-[70vh] flex items-end overflow-hidden">
-        <Image
-          src="/images/contrast-therapy-mumbai_service_page/contrast-therapy-mumbai_Hero_section.webp"
-          alt="Contrast Therapy Mumbai, Ice Bath and Infrared Sauna at R3BOOT"
-          fill
-          className="object-cover"
-          priority
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
-
-        <div className="container mx-auto px-6 lg:px-8 relative z-10 pb-20">
-          <Link
-            href="/services"
-            className="inline-flex items-center gap-2 text-white/70 hover:text-white transition-all mb-8 group"
-          >
-            <div className="w-8 h-8 rounded-full border border-white/30 flex items-center justify-center group-hover:bg-white group-hover:text-[#513394] transition-all">
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-              </svg>
-            </div>
-            <span className="font-bold tracking-wider text-sm">BACK TO SERVICES</span>
-          </Link>
-
-          <div className="max-w-4xl">
-            <div className="flex items-center gap-3 text-white/70 mb-4">
-              <div className="w-1.5 h-1.5 rounded-full bg-white/50" />
-              <span className="text-[11px] font-black tracking-[0.3em] uppercase">RECOVERY // MUMBAI</span>
-              <div className="w-1.5 h-1.5 rounded-full bg-white/50" />
-            </div>
-            <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black text-white mb-2 tracking-tighter leading-[1.05]">
-              Contrast Therapy in Mumbai | R3BOOT Ice Bath & Infrared Sauna
-            </h1>
-            <p className="text-lg sm:text-xl md:text-2xl text-white/80 max-w-3xl leading-relaxed font-medium mt-4">
-              Clinically structured hot-cold recovery protocol for athletes and active adults. Supervised by physiotherapists.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* ─── OPENING SECTION (12-col grid) ─── */}
-      <section className="py-12 sm:py-16 lg:py-24 xl:py-32">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 md:gap-12 lg:gap-24 items-start">
-
-            <div className="lg:col-span-7">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 dark:text-white mb-6 sm:mb-8 tracking-tight">
-                Your Muscles Don&apos;t Recover During Rest.{' '}
-                <span className="text-[#513394] dark:text-[#8B5CF6]">They Recover During Circulation.</span>
-              </h2>
-              <div className="prose prose-base sm:prose-lg md:prose-xl text-gray-600 dark:text-gray-400 dark:prose-invert max-w-none leading-relaxed space-y-6">
-                <p>
-                  Research published in the International Journal of Sports Physiology and Performance found that contrast
-                  therapy, alternating heat and cold in a structured sequence, reduces perceived muscle soreness and
-                  restores muscle function significantly faster than passive recovery alone. The mechanism is vascular:
-                  heat dilates blood vessels, cold constricts them, and the alternation creates a pumping action that
-                  clears inflammatory waste from muscle tissue.
-                </p>
-                <p>
-                  At R3BOOT, our contrast therapy protocol combines a infrared sauna (68°C) and ice bath (6–10°C) in a clinically
-                  structured hot-cold sequence. Sessions are supervised by our physiotherapy team. We run Day Cycles, ending cold to
-                  energise, and Night Cycles, ending hot for deep recovery and sleep.
-                </p>
-              </div>
-
-              <div className="mt-10 sm:mt-14 md:mt-20">
-                <h3 className="text-xl sm:text-2xl font-black text-gray-900 dark:text-white mb-6 sm:mb-8 md:mb-10 flex items-center gap-4">
-                  <span className="w-12 h-[2px] bg-[#513394] dark:bg-[#8B5CF6]" />
-                  WHAT IT HELPS WITH
-                </h3>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
-                  {whatItHelps.map((item, idx) => (
-                    <div
-                      key={idx}
-                      className="bg-white dark:bg-white/5 p-5 sm:p-6 md:p-8 rounded-2xl sm:rounded-[2.5rem] border border-gray-100 dark:border-white/5 shadow-sm hover:shadow-xl group transition-all duration-500 relative overflow-hidden"
-                    >
-                      <div className="absolute -top-4 -right-4 text-8xl font-black text-gray-50 dark:text-white/5 group-hover:text-[#513394]/5 dark:group-hover:text-[#8B5CF6]/5 transition-colors">
-                        {idx + 1}
-                      </div>
-                      <div className="relative z-10">
-                        <div className="w-12 h-12 rounded-2xl bg-[#513394]/10 dark:bg-[#8B5CF6]/20 flex items-center justify-center text-[#513394] dark:text-[#A78BFA] font-black mb-6 group-hover:bg-[#513394] dark:group-hover:bg-[#8B5CF6] group-hover:text-white transition-all">
-                          0{idx + 1}
-                        </div>
-                        <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-3">{item.title}</h4>
-                        <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">{item.description}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            {/* Right sticky card */}
-            <div className="lg:col-span-4 lg:sticky lg:top-32">
-              <div className="bg-[#1A1A1A] p-6 sm:p-8 md:p-10 rounded-2xl sm:rounded-[2.5rem] md:rounded-[3rem] text-white shadow-2xl relative overflow-hidden group">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-[#513394]/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
-                <h3 className="text-2xl font-black mb-8 tracking-wide flex items-center gap-3">
-                  <div className="w-2 h-8 bg-[#513394]" />
-                  IDEAL FOR //
-                </h3>
-                <ul className="space-y-6 mb-12">
-                  {[
-                    'Competitive and recreational athletes',
-                    'Runners, cyclists, CrossFit athletes',
-                    'Cricket and football players',
-                    'Gym-goers managing training load',
-                    'Sub-acute injury recovery',
-                    'High-performance professionals',
-                  ].map((item, idx) => (
-                    <li key={idx} className="flex items-start gap-4 group/item">
-                      <div className="w-6 h-6 rounded-full bg-[#513394] flex items-center justify-center shrink-0 mt-1 group-hover/item:scale-110 transition-transform">
-                        <svg className="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
-                          <path d="M5 13l4 4L19 7" />
-                        </svg>
-                      </div>
-                      <span className="text-white/80 font-medium leading-snug group-hover/item:text-white transition-colors">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-                <a
-                  href="tel:+919702368612"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block text-center bg-[#513394] text-white font-black px-8 py-5 rounded-2xl transition-all hover:scale-[1.02] shadow-xl text-lg group-hover:bg-[#603eb0]"
-                >
-                  Call to Book
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ─── HOW CONTRAST THERAPY WORKS (alt bg, two-col) ─── */}
-      <section className="py-24 lg:py-32 bg-[#F8F9FA] dark:bg-[#0D0D0D]">
-        <div className="container mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center max-w-7xl mx-auto">
-            <div className="relative rounded-[2.5rem] overflow-hidden aspect-[4/5] w-full shadow-2xl">
-              <Image
-                src="/images/contrast-therapy-mumbai_service_page/contrast-therapy-mumbai_ice_bath.webp"
-                alt="Ice bath cold immersion contrast therapy Mumbai R3BOOT"
-                fill
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-              <div className="absolute bottom-8 left-8 right-8">
-                <span className="text-[10px] font-black tracking-[0.3em] text-white/60 uppercase block mb-2">
-                  VASCULAR SCIENCE //
-                </span>
-                <p className="text-white text-xl font-black tracking-tight leading-tight">
-                  Heat dilates. Cold constricts. The alternation does the work.
-                </p>
-              </div>
-            </div>
-
-            <div>
-              <span className="text-[11px] font-black tracking-[0.3em] text-[#513394] dark:text-[#A78BFA] uppercase mb-4 block">
-                HOW IT WORKS //
-              </span>
-              <h2 className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white tracking-tight mb-4 leading-tight">
-                What Contrast Therapy Does{' '}
-                <span className="text-[#513394] dark:text-[#8B5CF6]">to Your Body</span>
-              </h2>
-              <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed mb-10">
-                When you alternate between heat and cold, your body responds at a vascular level. Repeating this cycle two to three
-                times in a single session creates a pumping action that clears metabolic waste at a rate passive rest cannot match.
-              </p>
-              <div className="space-y-6">
-                {[
-                  { title: 'During the heat phase (Infrared Sauna, 68°C)', body: 'Blood vessels dilate. Blood flow to muscles increases. Oxygen and nutrients reach damaged tissue. Muscle tension decreases.' },
-                  { title: 'During the cold phase (Ice Bath, 6–10°C)', body: 'Blood vessels constrict rapidly. Blood and metabolic waste (lactic acid, inflammatory cytokines) are forced away from muscles. Swelling reduces.' },
-                  { title: 'The alternation effect', body: 'Repeating the cycle creates a vascular pumping action. Research shows contrast therapy significantly reduces perceived muscle soreness compared to cold-water immersion alone.' },
-                  { title: 'Day Cycle vs Night Cycle', body: 'Day Cycle ends cold, stimulates the nervous system, improves alertness, no post-session fatigue. Night Cycle ends hot, promotes parasympathetic activation, supports deep recovery and sleep.' },
-                ].map((item, idx) => (
-                  <div key={idx} className="flex gap-5 group">
-                    <div className="w-10 h-10 rounded-2xl bg-[#513394]/10 dark:bg-[#8B5CF6]/20 flex items-center justify-center text-[#513394] dark:text-[#A78BFA] font-black shrink-0 text-sm group-hover:bg-[#513394] group-hover:text-white transition-all duration-300">
-                      0{idx + 1}
-                    </div>
-                    <div>
-                      <h3 className="text-base font-bold text-gray-900 dark:text-white mb-1">{item.title}</h3>
-                      <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">{item.body}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ─── PROTOCOL (image only, full-width) ─── */}
-      <section className="py-24 lg:py-32">
-        <div className="container mx-auto px-6 lg:px-8">
-          <div className="max-w-5xl mx-auto mb-14 text-center">
-            <span className="text-[11px] font-black tracking-[0.3em] text-[#513394] dark:text-[#A78BFA] uppercase mb-4 block">
-              THE PROTOCOL //
-            </span>
-            <h2 className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white tracking-tight mb-4 leading-tight">
-              The R3BOOT Contrast Therapy{' '}
-              <span className="text-[#513394] dark:text-[#8B5CF6]">Protocol</span>
-            </h2>
-            <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed max-w-2xl mx-auto">
-              Built on structured Day and Night Cycle protocols. Half Cycle (30 min) or Full Cycle (60 min, same protocol twice).
-              Infrared Sauna at 68°C. Ice Bath at 6–10°C. Adjusted by your physiotherapist based on training load and recovery goals.
-            </p>
-          </div>
-
-          <div className="relative rounded-[2.5rem] overflow-hidden w-full shadow-2xl max-w-6xl mx-auto aspect-[16/9]">
+      {/* ─────────────────────────────────────────────
+          DESKTOP HERO (md+): full-bleed bg images, text overlaid left
+      ───────────────────────────────────────────── */}
+      <section className="hidden md:flex flex-col bg-black overflow-hidden pt-20 lg:pt-24" style={{ minHeight: '92vh' }}>
+        <div className="relative flex flex-1 flex-col">
+          <div className="absolute inset-0">
             <Image
-              src="/images/contrast-therapy-mumbai_service_page/contrast-therapy-mumbai_R3BOOT_PROTOCOL.webp"
-              alt="R3BOOT contrast therapy protocol, ice bath and infrared sauna Mumbai"
+              src="/images/R3BOOT_CONTRAST_THERAPY_IMAGE (2).webp"
+              alt="Contrast Therapy Mumbai, Ice Bath and Infrared Sauna at R3BOOT"
               fill
               className="object-cover"
+              style={{ objectPosition: '40% center' }}
+              priority
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
-            <div className="absolute bottom-8 left-8 right-8 flex items-end justify-between">
-              <div>
-                <span className="text-[10px] font-black tracking-[0.3em] text-white/60 uppercase block mb-2">
-                  R3BOOT PROTOCOL //
-                </span>
-                <p className="text-white text-2xl font-black tracking-tight leading-tight">
-                  Day Cycle ends cold. Night Cycle ends hot. Your physio decides.
-                </p>
-              </div>
-              <span className="hidden sm:block text-white/40 font-black tracking-widest text-xs uppercase">
-                Evidence-based
-              </span>
-            </div>
           </div>
 
-          <p className="text-gray-400 dark:text-gray-500 text-sm mt-6 italic text-center">
-            Day Cycle ends cold to lock in the anti-inflammatory effect and keep you energised. Night Cycle ends hot to down-regulate the nervous system and support recovery and sleep.
-          </p>
-        </div>
-      </section>
+          <div
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              background:
+                'linear-gradient(to right, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.78) 18%, rgba(0,0,0,0.45) 38%, rgba(0,0,0,0.15) 55%, transparent 68%)',
+            }}
+          />
+          <div
+            className="absolute inset-x-0 bottom-0 h-[34%] pointer-events-none"
+            style={{ background: 'linear-gradient(to top, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.18) 50%, transparent 100%)' }}
+          />
 
-      {/* ─── ICE BATH vs CONTRAST THERAPY COMPARISON (alt bg) ─── */}
-      <section className="py-24 lg:py-32 bg-[#F8F9FA] dark:bg-[#0D0D0D]">
-        <div className="container mx-auto px-6 lg:px-8">
-          <div className="max-w-5xl mx-auto">
-            <div className="mb-14">
-              <span className="text-[11px] font-black tracking-[0.3em] text-[#513394] dark:text-[#A78BFA] uppercase mb-4 block">
-                COMPARISON //
-              </span>
-              <h2 className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white tracking-tight mb-6 leading-tight">
-                Contrast Therapy vs{' '}
-                <span className="text-[#513394] dark:text-[#8B5CF6]">Ice Bath Alone</span>
-              </h2>
-              <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed max-w-3xl">
-                Many athletes in Mumbai are already using ice baths. Here is why contrast therapy produces different results, and
-                when each approach is the right choice.
-              </p>
-            </div>
-
-            <div className="overflow-hidden rounded-[2rem] shadow-2xl border border-gray-100 dark:border-white/5">
-              <table className="w-full text-left border-collapse">
-                <thead>
-                  <tr className="bg-[#513394]">
-                    <th className="px-6 py-5 text-white font-black text-sm tracking-wider uppercase">Factor</th>
-                    <th className="px-6 py-5 text-white font-black text-sm tracking-wider uppercase">Ice Bath Only</th>
-                    <th className="px-6 py-5 text-white font-black text-sm tracking-wider uppercase">Contrast Therapy</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {[
-                    ['Mechanism', 'Cold vasoconstriction only', 'Vascular pumping (dilate + constrict)'],
-                    ['Waste removal', 'Moderate', 'Higher, pumping clears more metabolic waste'],
-                    ['Muscle soreness', 'Good', 'Stronger, especially for DOMS'],
-                    ['Mental effect', 'High adrenaline response', 'Balanced: stimulating then calming'],
-                    ['Next-day performance', 'Moderate', 'Better recovery of muscle function'],
-                    ['Session experience', 'Intense, no warm phase', 'More manageable with hot phases'],
-                    ['Best for', 'Acute inflammation, competition day', 'Sub-acute recovery, high training loads'],
-                  ].map(([factor, iceBath, contrast], idx) => (
-                    <tr
-                      key={idx}
-                      className={idx % 2 === 0
-                        ? 'bg-white dark:bg-white/5'
-                        : 'bg-[#F8F9FA] dark:bg-white/[0.02]'
-                      }
-                    >
-                      <td className="px-6 py-4 font-bold text-gray-900 dark:text-white text-sm">{factor}</td>
-                      <td className="px-6 py-4 text-gray-500 dark:text-gray-400 text-sm">{iceBath}</td>
-                      <td className="px-6 py-4 text-[#513394] dark:text-[#A78BFA] font-medium text-sm">{contrast}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-
-            <p className="text-gray-500 dark:text-gray-400 text-sm mt-8 leading-relaxed text-center">
-              Our physiotherapists will tell you which is right for your situation. We also offer{' '}
-              <Link href="/services/aqua-therapy" className="text-[#513394] dark:text-[#A78BFA] font-bold hover:underline underline-offset-4">
-                aqua therapy
-              </Link>{' '}
-              and can combine treatment approaches based on your recovery stage.
+          <div className="relative z-10 flex flex-1 flex-col justify-center px-12 lg:px-16 xl:px-20 max-w-[54%]">
+            <p className="text-[#A78BFA] text-[11px] font-black tracking-[0.25em] uppercase mb-4">
+              Clinically Structured&nbsp;&nbsp;•&nbsp;&nbsp;Safe&nbsp;&nbsp;•&nbsp;&nbsp;Supervised
             </p>
-          </div>
-        </div>
-      </section>
 
-      {/* ─── WHAT TO EXPECT AT R3BOOT (two-col, sauna image right) ─── */}
-      <section className="py-24 lg:py-32">
-        <div className="container mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center max-w-7xl mx-auto">
-            <div>
-              <span className="text-[11px] font-black tracking-[0.3em] text-[#513394] dark:text-[#A78BFA] uppercase mb-4 block">
-                YOUR SESSION //
-              </span>
-              <h2 className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white tracking-tight mb-4 leading-tight">
-                What to Expect{' '}
-                <span className="text-[#513394] dark:text-[#8B5CF6]">at R3BOOT</span>
-              </h2>
-              <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed mb-10">
-                A full contrast therapy session takes approximately 45–60 minutes including intake, the protocol, and a post-session
-                check-in. Our physiotherapy team is with you through the session, guiding your breathing, monitoring your response,
-                and adjusting the protocol if needed.
-              </p>
-              <div className="space-y-6">
-                {whatToExpect.map((item, idx) => (
-                  <div key={idx} className="flex gap-5 group">
-                    <div className="w-10 h-10 rounded-2xl bg-[#513394]/10 dark:bg-[#8B5CF6]/20 flex items-center justify-center text-[#513394] dark:text-[#A78BFA] font-black shrink-0 text-sm group-hover:bg-[#513394] group-hover:text-white transition-all duration-300">
-                      0{idx + 1}
-                    </div>
-                    <div>
-                      <h3 className="text-base font-bold text-gray-900 dark:text-white mb-1">{item.title}</h3>
-                      <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">{item.body}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
+            <h1 className="text-5xl lg:text-6xl xl:text-[4.25rem] font-black text-white tracking-tight leading-[1.04] mb-4">
+              Contrast Therapy<br />
+              in <span className="text-[#A78BFA]">Mumbai</span>
+            </h1>
 
-            <div className="relative rounded-[2.5rem] overflow-hidden aspect-[4/5] w-full shadow-2xl">
-              <Image
-                src="/images/contrast-therapy-mumbai_service_page/contrast-therapy-mumbai_sauna.webp"
-                alt="Infrared sauna contrast therapy session R3BOOT Mumbai"
-                fill
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-              <div className="absolute bottom-8 left-8 right-8">
-                <span className="text-[10px] font-black tracking-[0.3em] text-white/60 uppercase block mb-2">
-                  SUPERVISED //
-                </span>
-                <p className="text-white text-xl font-black tracking-tight leading-tight">
-                  Physiotherapy team present through every phase
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ─── HOW OFTEN (alt bg, step cards) ─── */}
-      <section className="py-24 lg:py-32 bg-[#F8F9FA] dark:bg-[#0D0D0D]">
-        <div className="container mx-auto px-6 lg:px-8">
-          <div className="max-w-5xl mx-auto">
-            <div className="mb-14">
-              <span className="text-[11px] font-black tracking-[0.3em] text-[#513394] dark:text-[#A78BFA] uppercase mb-4 block">
-                FREQUENCY //
-              </span>
-              <h2 className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white tracking-tight mb-6 leading-tight">
-                How Often Should You Do{' '}
-                <span className="text-[#513394] dark:text-[#8B5CF6]">Contrast Therapy?</span>
-              </h2>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              {[
-                { title: 'Training 4–6 days per week', description: 'One to two sessions per week is effective for ongoing recovery management.' },
-                { title: 'Competition preparation', description: 'A session 2–3 days before a major competition supports performance. Avoid within 24 hours of competing.' },
-                { title: 'General recovery', description: 'Even one session per week produces measurable improvements in soreness reduction and mobility over time.' },
-                { title: 'After an intense training block', description: 'A session within 48–72 hours of the event (once the acute phase has passed) accelerates return to training.' },
-              ].map((step, idx) => (
-                <div
-                  key={idx}
-                  className="bg-white dark:bg-white/5 p-8 rounded-[2.5rem] border border-gray-100 dark:border-white/5 shadow-sm hover:shadow-xl group transition-all duration-500 relative overflow-hidden"
-                >
-                  <div className="absolute -top-4 -right-4 text-8xl font-black text-gray-50 dark:text-white/5 group-hover:text-[#513394]/5 dark:group-hover:text-[#8B5CF6]/5 transition-colors">
-                    {idx + 1}
-                  </div>
-                  <div className="relative z-10">
-                    <div className="w-12 h-12 rounded-2xl bg-[#513394]/10 dark:bg-[#8B5CF6]/20 flex items-center justify-center text-[#513394] dark:text-[#A78BFA] font-black mb-6 group-hover:bg-[#513394] dark:group-hover:bg-[#8B5CF6] group-hover:text-white transition-all">
-                      0{idx + 1}
-                    </div>
-                    <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-3">{step.title}</h4>
-                    <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">{step.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ─── MUMBAI LOCAL RELEVANCE (two-col: text left, images right) ─── */}
-      <section className="py-24 lg:py-32">
-        <div className="container mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center max-w-7xl mx-auto">
-
-            {/* Left: text content */}
-            <div>
-              <span className="text-[11px] font-black tracking-[0.3em] text-[#513394] dark:text-[#A78BFA] uppercase mb-4 block">
-                MUMBAI //
-              </span>
-              <h2 className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white tracking-tight mb-6 leading-tight">
-                Why Mumbai Athletes Are Choosing{' '}
-                <span className="text-[#513394] dark:text-[#8B5CF6]">Contrast Therapy</span>
-              </h2>
-              <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed mb-8">
-                Mumbai&apos;s heat and humidity make post-training recovery harder. Your body is already under thermal stress before you
-                add training load. Contrast therapy addresses this directly by resetting your vascular system and reducing the
-                inflammation that Mumbai&apos;s climate accelerates.
-              </p>
-              <div className="flex flex-wrap gap-3 mb-10">
-                {[
-                  'Mumbai Marathon runners',
-                  'CrossFit athletes',
-                  'Cricket players',
-                  'Gym athletes',
-                  'Swimmers',
-                  'Cyclists',
-                  'Weekend warriors',
-                ].map((item, idx) => (
-                  <span
-                    key={idx}
-                    className="bg-[#513394]/10 dark:bg-[#8B5CF6]/20 text-[#513394] dark:text-[#A78BFA] font-bold px-5 py-2.5 rounded-full text-sm"
-                  >
-                    {item}
-                  </span>
-                ))}
-              </div>
-              <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                Our integrated approach means contrast therapy does not exist in isolation. We combine it with{' '}
-                <Link href="/services/sports-massage" className="text-[#513394] dark:text-[#A78BFA] font-bold hover:underline underline-offset-4">
-                  sports massage
-                </Link>{' '}
-                for deeper muscle recovery,{' '}
-                <Link href="/services/physiotherapy" className="text-[#513394] dark:text-[#A78BFA] font-bold hover:underline underline-offset-4">
-                  physiotherapy
-                </Link>{' '}
-                for injury management, and{' '}
-                <Link href="/services/sports-psychology" className="text-[#513394] dark:text-[#A78BFA] font-bold hover:underline underline-offset-4">
-                  sports psychology
-                </Link>{' '}
-                when your recovery needs require more than one modality.
-              </p>
-            </div>
-
-            {/* Right: 2-image stacked grid */}
-            <div className="grid grid-cols-2 gap-4">
-              <div className="relative rounded-[2rem] overflow-hidden aspect-[3/4] shadow-xl">
-                <Image
-                  src="/images/contrast-therapy-mumbai_service_page/contrast-therapy-mumbai_ice_bath.webp"
-                  alt="Ice bath recovery for Mumbai athletes at R3BOOT"
-                  fill
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
-                <div className="absolute bottom-4 left-4 right-4">
-                  <p className="text-white text-xs font-black tracking-tight leading-tight">Ice Bath</p>
-                </div>
-              </div>
-              <div className="grid grid-rows-2 gap-4">
-                <div className="relative rounded-[2rem] overflow-hidden shadow-xl">
-                  <Image
-                    src="/images/contrast-therapy-mumbai_service_page/contrast-therapy-mumbai_sauna.webp"
-                    alt="Infrared sauna for Mumbai athletes at R3BOOT"
-                    fill
-                    className="object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
-                  <div className="absolute bottom-3 left-3 right-3">
-                    <p className="text-white text-xs font-black tracking-tight leading-tight">Infrared Sauna</p>
-                  </div>
-                </div>
-                <div className="relative rounded-[2rem] overflow-hidden shadow-xl">
-                  <Image
-                    src="/images/contrast-therapy-mumbai_service_page/contrast-therapy-mumbai_ice_bath_lady.webp"
-                    alt="Contrast therapy session R3BOOT Mumbai"
-                    fill
-                    className="object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
-                  <div className="absolute bottom-3 left-3 right-3">
-                    <p className="text-white text-xs font-black tracking-tight leading-tight">Recovery Session</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ─── ICE BATH LADY two-col (image left, text right) ─── */}
-      <section className="py-24 lg:py-32 bg-[#F8F9FA] dark:bg-[#0D0D0D]">
-        <div className="container mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center max-w-7xl mx-auto">
-            <div className="relative rounded-[2.5rem] overflow-hidden aspect-[4/5] w-full shadow-2xl">
-              <Image
-                src="/images/contrast-therapy-mumbai_service_page/contrast-therapy-mumbai_ice_bath_lady.webp"
-                alt="Contrast therapy ice bath session R3BOOT Mumbai athlete recovery"
-                fill
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-              <div className="absolute bottom-8 left-8 right-8">
-                <span className="text-[10px] font-black tracking-[0.3em] text-white/60 uppercase block mb-2">
-                  FIRST SESSION //
-                </span>
-                <p className="text-white text-xl font-black tracking-tight leading-tight">
-                  Cold enough to work. Guided enough to complete.
-                </p>
-              </div>
-            </div>
-
-            <div>
-              <span className="text-[11px] font-black tracking-[0.3em] text-[#513394] dark:text-[#A78BFA] uppercase mb-4 block">
-                GETTING STARTED //
-              </span>
-              <h2 className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white tracking-tight mb-4 leading-tight">
-                Your First Session at{' '}
-                <span className="text-[#513394] dark:text-[#8B5CF6]">R3BOOT</span>
-              </h2>
-              <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed mb-10">
-                When clients come to us for contrast therapy, the first question they ask is: how cold is the ice bath really?
-                The honest answer: cold enough to work, managed enough that you can complete the full protocol.
-              </p>
-              <div className="space-y-6">
-                {[
-                  { title: 'What to bring', body: 'Swimwear or athletic shorts comfortable in both sauna and ice bath. A towel. Arrive hydrated. Avoid a heavy meal within 90 minutes.' },
-                  { title: 'The first 60 seconds', body: 'Most first-time clients find the cold phase challenging for the first minute. After that, controlled breathing makes it entirely manageable.' },
-                  { title: 'After your session', body: 'Most clients feel a notable improvement in muscle looseness and mental clarity within 30–60 minutes of finishing.' },
-                ].map((item, idx) => (
-                  <div key={idx} className="flex gap-5 group">
-                    <div className="w-10 h-10 rounded-2xl bg-[#513394]/10 dark:bg-[#8B5CF6]/20 flex items-center justify-center text-[#513394] dark:text-[#A78BFA] font-black shrink-0 text-sm group-hover:bg-[#513394] group-hover:text-white transition-all duration-300">
-                      0{idx + 1}
-                    </div>
-                    <div>
-                      <h3 className="text-base font-bold text-gray-900 dark:text-white mb-1">{item.title}</h3>
-                      <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">{item.body}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ─── TEAM ─── */}
-      <PhysiotherapyTeam />
-
-      {/* ─── FAQ ─── */}
-      <FAQSection faqs={contrastTherapyMumbaiFaqs} />
-
-      {/* ─── CTA BANNER ─── */}
-      <section className="py-24 lg:py-32 bg-[#513394] relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-white/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2" />
-        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-white/5 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/2" />
-        <div className="container mx-auto px-6 lg:px-8 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-6xl font-black text-white mb-8 tracking-tight">
-              Book a Contrast Therapy Session in{' '}
-              <span className="text-white/50">Mumbai</span>
-            </h2>
-            <p className="text-xl text-white/70 mb-12 leading-relaxed font-medium max-w-3xl mx-auto">
-              R3BOOT is located in Mumbai. Sessions available Monday to Saturday by appointment.
-              Our physiotherapists will tell you honestly whether contrast therapy is the right starting point for your recovery goals.
+            <p className="text-[16px] text-white/55 max-w-md leading-relaxed mb-7">
+              Ice bath and infrared sauna using advanced protocols to help you recover, reset and perform at your best.
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+
+            <div className="flex items-center gap-4">
               <a
                 href="tel:+919702368612"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full sm:w-auto bg-white text-[#513394] font-black px-10 py-5 rounded-full transition-all hover:scale-105 shadow-2xl text-lg tracking-wide"
+                className="inline-flex items-center gap-2.5 bg-[#513394] hover:bg-[#603eb0] text-white font-black px-7 py-3.5 rounded-full transition-all hover:scale-[1.02] text-[14px] tracking-wide shadow-lg shadow-[#513394]/30"
               >
-                Call to Book
+                <PhoneIcon className="w-4 h-4" />
+                Book Your Session
               </a>
               <a
                 href="https://wa.me/919702368612"
                 target="_blank"
                 rel="nofollow noopener noreferrer"
-                className="w-full sm:w-auto border-2 border-white/30 text-white font-bold px-10 py-5 rounded-full transition-all hover:bg-white/10 text-lg tracking-wide"
+                className="inline-flex items-center gap-2.5 border border-white/20 text-white hover:bg-white/[0.07] font-bold px-7 py-3.5 rounded-full transition-all text-[14px] tracking-wide"
               >
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+                  <path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.118 1.524 5.855L0 24l6.335-1.502A11.942 11.942 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.013-1.38l-.36-.214-3.732.885.916-3.629-.235-.373A9.818 9.818 0 1112 21.818z"/>
+                </svg>
                 WhatsApp Us
               </a>
             </div>
-            <p className="text-white/40 mt-8 font-bold tracking-widest text-sm">MUMBAI</p>
+          </div>
+
+          <HeroTrustBadge items={serviceTrustBadges['contrast-therapy']} />
+        </div>
+      </section>
+
+      {/* ─────────────────────────────────────────────
+          MOBILE HERO (<md): text-first layout
+          H1 → subtext → CTAs → image slider → 3 pointers
+      ───────────────────────────────────────────── */}
+      <section className="md:hidden pt-20 pb-0 bg-white dark:bg-[#0A0A0A]">
+        <div className="container mx-auto px-5">
+
+          {/* Hero image - FIRST */}
+          <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-xl mt-2">
+            <Image
+              src={heroImage.src}
+              alt={heroImage.alt}
+              fill
+              className="object-cover object-top"
+              priority
+            />
+          </div>
+
+          {/* Label chip */}
+          <div className="inline-flex items-center gap-2 bg-[#513394]/10 dark:bg-[#513394]/20 rounded-full px-4 py-2 mt-5 mb-4">
+            <div className="w-1.5 h-1.5 rounded-full bg-[#513394] dark:bg-[#A78BFA]" />
+            <span className="text-[#513394] dark:text-[#A78BFA] text-[11px] font-black tracking-[0.3em] uppercase">Recovery Service</span>
+          </div>
+
+          {/* H1 */}
+          <h1 className="text-[2rem] font-black text-gray-900 dark:text-white tracking-tight leading-[1.1] mb-3">
+            Contrast Therapy in{' '}
+            <span className="text-[#513394] dark:text-[#A78BFA]">Mumbai</span>
+          </h1>
+
+          {/* Subtext */}
+          <p className="text-base text-gray-500 dark:text-gray-400 leading-relaxed mb-6">
+            Ice bath and infrared sauna in a clinically structured protocol. Day and Night Cycle. Supervised by physiotherapists at R3BOOT Dadar.
+          </p>
+
+          <MobileHeroTrust items={serviceTrustBadges['contrast-therapy']} />
+
+        </div>
+      </section>
+      {/* ─────────────────────────────────────────────
+          SECTION 4: YOUR SESSION (moved from PROCESS section below)
+      ───────────────────────────────────────────── */}
+      <section id="benefits" className="py-16 sm:py-20 lg:py-28 bg-white dark:bg-[#0A0A0A]">
+        <div className="container mx-auto px-5 sm:px-6 lg:px-8">
+
+          <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-14">
+            <span className="text-[11px] font-black tracking-[0.3em] text-[#513394] dark:text-[#A78BFA] uppercase mb-4 block">
+              YOUR SESSION //
+            </span>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 dark:text-white tracking-tight mb-4">
+              What to expect at{' '}
+              <span className="text-[#513394] dark:text-[#8B5CF6]">R3BOOT</span>
+            </h2>
+            <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed">
+              A full session takes 45–60 minutes including intake, supervised protocol, and post-session check-in.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5 lg:gap-6 max-w-7xl mx-auto">
+            {processSteps.map((step, i) => (
+              <div
+                key={i}
+                className="relative flex flex-col sm:aspect-square p-5 sm:p-6 lg:p-7 rounded-2xl bg-[#F8F9FA] dark:bg-white/[0.04] border border-gray-100 dark:border-white/[0.08] group hover:border-[#513394]/30 hover:shadow-lg dark:hover:shadow-none transition-all duration-300 overflow-hidden"
+              >
+                <div className="absolute -top-4 -right-2 text-[5.5rem] lg:text-[6rem] font-black text-gray-100 dark:text-white/[0.035] leading-none select-none pointer-events-none">
+                  {step.number}
+                </div>
+                <div className="relative z-10 flex flex-col h-full">
+                  <div className="w-11 h-11 rounded-xl bg-[#513394]/10 dark:bg-[#8B5CF6]/20 flex items-center justify-center text-[#513394] dark:text-[#A78BFA] font-black text-sm mb-5 group-hover:bg-[#513394] group-hover:text-white transition-all duration-300">
+                    {step.number}
+                  </div>
+                  <h3 className="font-black text-gray-900 dark:text-white text-base lg:text-[17px] mb-3 leading-snug">{step.title}</h3>
+                  <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">{step.body}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+        </div>
+      </section>
+
+
+      {/* ─────────────────────────────────────────────
+          SECTION 3: PAIN POINTS — accordion + image crossfade
+      ───────────────────────────────────────────── */}
+      <PainPointsSection />
+
+      {/* ─────────────────────────────────────────────
+          SECTION 5: HOW IT WORKS — color-coded phase cards
+      ───────────────────────────────────────────── */}
+      <HowItWorksSection />
+
+      {/* ─────────────────────────────────────────────
+          SECTION 5B: COMPARISON — ice bath vs contrast therapy
+      ───────────────────────────────────────────── */}
+      <ComparisonSection />
+
+      {/* ─────────────────────────────────────────────
+          SECTION 5C: HYGIENE — filtered water, sanitised setup
+      ───────────────────────────────────────────── */}
+      <HygieneSection />
+
+      {/* ─────────────────────────────────────────────
+          SECTION 5D: WHY MUMBAI ATHLETES CHOOSE CONTRAST THERAPY
+      ───────────────────────────────────────────── */}
+      <WhyMumbaiAthletesSection />
+
+      {/* SECTION 7: TEAM */}
+      <TeamSectionDemo />
+
+      {/* MOBILE: Google Review cards */}
+      <section className="md:hidden py-10 bg-white dark:bg-[#0A0A0A]">
+        <div className="px-5 mb-6">
+          <span className="text-[11px] font-black tracking-[0.3em] text-[#513394] dark:text-[#A78BFA] uppercase block mb-2">Patient Stories</span>
+          <h2 className="text-[26px] font-extrabold text-gray-900 dark:text-white leading-tight">What clients say</h2>
+        </div>
+        <div className="flex gap-4 overflow-x-auto px-5 pb-2 snap-x snap-mandatory scrollbar-hide">
+          {testimonials.map((r, i) => (
+            <figure key={i} className="flex-shrink-0 w-[85vw] snap-start bg-white dark:bg-[#161616] border border-gray-100 dark:border-white/[0.07] shadow-sm dark:shadow-none rounded-3xl p-5 flex flex-col">
+              {/* Top row: Google logo + rating pill */}
+              <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center gap-2.5">
+                  <svg className="w-7 h-7 flex-shrink-0" viewBox="0 0 48 48">
+                    <path fill="#4285F4" d="M44.5 20H24v8.5h11.8C34.7 33.9 30 37 24 37c-7.2 0-13-5.8-13-13s5.8-13 13-13c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 4.1 29.6 2 24 2 11.8 2 2 11.8 2 24s9.8 22 22 22c11 0 21-8 21-22 0-1.3-.2-2.7-.5-4z"/>
+                    <path fill="#34A853" d="M6.3 14.7l7 5.1C15 16.1 19.1 13 24 13c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 4.1 29.6 2 24 2 16.3 2 9.6 7.3 6.3 14.7z"/>
+                    <path fill="#FBBC05" d="M24 46c5.6 0 10.5-1.9 14.4-5l-6.7-5.5C29.6 37 26.9 38 24 38c-5.9 0-10.9-4-12.7-9.5l-7 5.4C7.5 41.8 15.2 46 24 46z"/>
+                    <path fill="#EA4335" d="M44.5 20H24v8.5h11.8c-.8 2.4-2.3 4.4-4.3 5.8l6.7 5.5C42.1 36.4 45 30.7 45 24c0-1.3-.2-2.7-.5-4z"/>
+                  </svg>
+                  <span className="text-gray-900 dark:text-white font-bold text-[15px]">Google Review</span>
+                </div>
+                <div className="flex items-center gap-1.5 bg-gray-100 dark:bg-[#222] rounded-full px-3 py-1.5">
+                  {[...Array(5)].map((_, j) => (
+                    <svg key={j} className="w-3.5 h-3.5 fill-yellow-400" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+                  <span className="text-gray-900 dark:text-white font-bold text-[13px] ml-0.5">5.0</span>
+                </div>
+              </div>
+
+              <div className="h-px bg-gray-100 dark:bg-white/[0.07] mb-4" />
+
+              <div className="flex items-center gap-3 mb-3">
+                <div className="relative w-11 h-11 rounded-full overflow-hidden flex-shrink-0">
+                  <Image src={r.avatar} alt={r.name} fill className="object-cover" />
+                </div>
+                <div>
+                  <p className="text-gray-900 dark:text-white font-bold text-[15px] leading-tight">{r.name}</p>
+                  <p className="text-gray-400 dark:text-white/40 text-[12px]">{r.meta}</p>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-1.5 mb-4">
+                <svg className="w-3.5 h-3.5 text-gray-400 dark:text-white/30 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                <span className="text-gray-400 dark:text-white/35 text-[12px]">{r.ago}</span>
+              </div>
+
+              <blockquote className="text-gray-600 dark:text-white/80 text-[15px] leading-relaxed italic flex-grow mb-5">
+                &ldquo;{r.quote}&rdquo;
+              </blockquote>
+
+              <div className="flex items-center gap-2 pt-4 border-t border-gray-100 dark:border-white/[0.06]">
+                <svg className="w-4 h-4 text-green-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+                <span className="text-gray-400 dark:text-white/35 text-[12px]">Verified Google Review</span>
+              </div>
+            </figure>
+          ))}
+        </div>
+      </section>
+
+      {/* DESKTOP: continuously moving testimonials marquee */}
+      <section className="hidden md:block py-20 lg:py-28 bg-white dark:bg-[#0A0A0A]">
+        <div className="container mx-auto px-5 sm:px-6 lg:px-8">
+          <div className="text-center max-w-xl mx-auto mb-10 sm:mb-14">
+            <span className="text-[11px] font-black tracking-[0.3em] text-[#513394] dark:text-[#A78BFA] uppercase mb-4 block">PATIENT STORIES //</span>
+            <h2 className="text-3xl sm:text-4xl font-black text-gray-900 dark:text-white tracking-tight">What clients say</h2>
+          </div>
+          <TestimonialsCarousel testimonials={testimonials} />
+        </div>
+      </section>
+
+      {/* ─────────────────────────────────────────────
+          SECTION 8B: LOCATION — address, hours, map embed
+      ───────────────────────────────────────────── */}
+      <LocationSection />
+
+      {/* ─────────────────────────────────────────────
+          SECTION 9: FAQ
+      ───────────────────────────────────────────── */}
+      <FAQSection faqs={contrastTherapyMumbaiFaqs} layout="grid" />
+
+      {/* ─────────────────────────────────────────────
+          SECTION 10: CTA BANNER
+      ───────────────────────────────────────────── */}
+      {/* MOBILE CTA CARD */}
+      <section className="md:hidden bg-white dark:bg-[#0A0A0A] pt-10 pb-28">
+        <div className="px-4">
+          <div
+            className="relative rounded-3xl overflow-hidden px-6 pt-7 pb-6"
+            style={{ background: 'linear-gradient(135deg, #2a0d6e 0%, #1a0850 55%, #110638 100%)' }}
+          >
+            <div className="absolute top-0 right-0 w-48 h-48 rounded-full blur-[60px] opacity-30 pointer-events-none" style={{ background: '#7c3aed' }} />
+            <div className="absolute bottom-0 left-0 w-40 h-40 rounded-full blur-[50px] opacity-20 pointer-events-none" style={{ background: '#1e0a5e' }} />
+            <div className="relative">
+              <h2 className="text-[26px] font-black text-white leading-tight tracking-tight mb-2">
+                Book a session{' '}
+                <span className="text-[#A78BFA]">in Mumbai</span>
+              </h2>
+              <p className="text-white/55 text-[13px] leading-relaxed mb-5">
+                R3BOOT, Dadar. Open Monday to Saturday. Our physiotherapists will tell you honestly if this is the right starting point for your recovery.
+              </p>
+              <div className="flex flex-col gap-3">
+                <a
+                  href="tel:+919702368612"
+                  className="flex items-center justify-center gap-2 bg-white text-[#513394] font-black rounded-full py-3.5 text-[15px] tracking-wide"
+                >
+                  <PhoneIcon className="w-4 h-4" />
+                  Call to Book
+                </a>
+                <a
+                  href="https://wa.me/919702368612"
+                  target="_blank"
+                  rel="nofollow noopener noreferrer"
+                  className="flex items-center justify-center gap-2 border border-white/25 text-white font-bold rounded-full py-3.5 text-[15px] tracking-wide"
+                >
+                  <PhoneIcon className="w-4 h-4" />
+                  WhatsApp
+                </a>
+              </div>
+              <p className="text-center text-white/30 text-[10px] tracking-[0.2em] uppercase mt-4">
+                Dadar, Mumbai
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* ─── CONTRAST THERAPY CLUSTER ─── */}
-      <section className="py-24 lg:py-32 border-t border-gray-100 dark:border-white/5">
-        <div className="container mx-auto px-6 lg:px-8">
+      {/* DESKTOP CTA */}
+      <section className="hidden md:block py-16 lg:py-20 bg-[#513394] relative overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-white/[0.07] rounded-full blur-[100px] -translate-y-1/2 translate-x-1/4" />
+          <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-black/20 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/4" />
+        </div>
+        <div className="container mx-auto px-6 lg:px-8 relative z-10 text-center">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tight mb-5 max-w-3xl mx-auto leading-tight">
+            Book a session in{' '}
+            <span className="text-white/45">Mumbai</span>
+          </h2>
+          <p className="text-lg text-white/65 mb-10 max-w-xl mx-auto leading-relaxed">
+            R3BOOT, Dadar. Open Monday to Saturday. Our physiotherapists will tell you honestly if this is the right starting point for your recovery.
+          </p>
+          <div className="flex flex-row gap-4 justify-center">
+            <a
+              href="tel:+919702368612"
+              className="inline-flex items-center justify-center gap-2.5 bg-white text-[#513394] font-black px-10 py-5 rounded-full hover:scale-105 transition-all shadow-2xl text-base tracking-wide"
+            >
+              <PhoneIcon className="w-4 h-4" />
+              Call to Book
+            </a>
+            <a
+              href="https://wa.me/919702368612"
+              target="_blank"
+              rel="nofollow noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2.5 border-2 border-white/30 text-white font-bold px-10 py-5 rounded-full hover:bg-white/10 transition-all text-base tracking-wide"
+            >
+              WhatsApp
+            </a>
+          </div>
+          <p className="text-white/35 mt-8 font-bold tracking-widest text-xs uppercase">Dadar, Mumbai</p>
+        </div>
+      </section>
+
+      {/* ─────────────────────────────────────────────
+          SECTION 11: CONTRAST THERAPY CLUSTER — internal links
+      ───────────────────────────────────────────── */}
+      <section className="py-16 sm:py-20 lg:py-28 bg-[#F8F9FA] dark:bg-[#0D0D0D] border-t border-gray-100 dark:border-white/[0.06]">
+        <div className="container mx-auto px-5 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <span className="text-[11px] font-black tracking-[0.3em] text-[#513394] dark:text-[#A78BFA] uppercase mb-4 block">
               RECOVERY SERVICES //
             </span>
             <h2 className="text-3xl md:text-5xl font-black text-gray-900 dark:text-white tracking-tight">
-              Ice Bath, Sauna &amp; <span className="text-[#513394] dark:text-[#8B5CF6]">Locations</span>
+              Ice Bath, Sauna &amp; <span className="text-[#7B5FCA]">Locations</span>
             </h2>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
@@ -691,7 +499,7 @@ export default function ContrastTherapyMumbaiPage() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-center px-4 py-4 rounded-2xl border border-gray-100 dark:border-white/10 bg-white dark:bg-white/5 text-sm font-bold text-gray-900 dark:text-white hover:border-[#513394]/40 hover:text-[#513394] dark:hover:text-[#A78BFA] transition-all"
+                className="text-center px-4 py-4 rounded-2xl border border-gray-200 dark:border-white/[0.08] bg-white dark:bg-white/[0.03] text-sm font-bold text-gray-900 dark:text-white hover:border-[#513394]/40 dark:hover:border-[#A78BFA]/40 hover:text-[#513394] dark:hover:text-[#A78BFA] transition-all"
               >
                 {link.label}
               </Link>
@@ -700,15 +508,17 @@ export default function ContrastTherapyMumbaiPage() {
         </div>
       </section>
 
-      {/* ─── OTHER SERVICES ─── */}
-      <section className="py-24 lg:py-32 bg-[#F8F9FA] dark:bg-[#0D0D0D]">
-        <div className="container mx-auto px-6 lg:px-8">
+      {/* ─────────────────────────────────────────────
+          SECTION 12: OTHER SERVICES
+      ───────────────────────────────────────────── */}
+      <section className="py-16 sm:py-20 lg:py-28 bg-white dark:bg-[#0A0A0A]">
+        <div className="container mx-auto px-5 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <span className="text-[11px] font-black tracking-[0.3em] text-[#513394] dark:text-[#A78BFA] uppercase mb-4 block">
               KEEP EXPLORING //
             </span>
             <h2 className="text-4xl md:text-6xl font-black text-gray-900 dark:text-white tracking-tight">
-              Other Ways to <span className="text-[#513394] dark:text-[#8B5CF6]">Recover</span>
+              Other Ways to <span className="text-[#7B5FCA]">Recover</span>
             </h2>
           </div>
 
@@ -717,9 +527,9 @@ export default function ContrastTherapyMumbaiPage() {
               <Link
                 key={idx}
                 href={`/services/${service.slug}`}
-                className="group bg-white dark:bg-white/5 p-4 rounded-[2.5rem] shadow-sm hover:shadow-xl border border-transparent dark:border-white/5 transition-all duration-300 transform hover:-translate-y-2 flex flex-col h-full"
+                className="group bg-white dark:bg-white/[0.03] p-4 rounded-[2.5rem] border border-gray-100 dark:border-white/[0.08] shadow-sm dark:shadow-none hover:shadow-xl dark:hover:shadow-none hover:border-transparent dark:hover:border-[#A78BFA]/30 transition-all duration-300 transform hover:-translate-y-2 flex flex-col h-full"
               >
-                <div className="relative h-48 w-full shrink-0 overflow-hidden rounded-[2rem] mb-6 shadow-sm">
+                <div className="relative h-48 w-full shrink-0 overflow-hidden rounded-[2rem] mb-6">
                   <Image
                     src={service.image}
                     alt={service.title}
@@ -732,11 +542,11 @@ export default function ContrastTherapyMumbaiPage() {
                   <h3 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-[#513394] dark:group-hover:text-[#A78BFA] transition-colors mb-3">
                     {service.title}
                   </h3>
-                  <p className="text-sm text-gray-500 dark:text-gray-400 line-clamp-2 leading-relaxed mb-6">
+                  <p className="text-sm text-gray-500 dark:text-white/45 line-clamp-2 leading-relaxed mb-6">
                     {service.description}
                   </p>
                   <div className="mt-auto">
-                    <div className="flex items-center justify-between w-full bg-[#513394]/10 group-hover:bg-[#513394] text-[#513394] group-hover:text-white rounded-full p-1 transition-all duration-300">
+                    <div className="flex items-center justify-between w-full bg-[#513394]/10 dark:bg-[#513394]/15 group-hover:bg-[#513394] text-[#513394] dark:text-[#A78BFA] group-hover:text-white rounded-full p-1 transition-all duration-300">
                       <span className="text-[13px] font-black pl-5">EXPLORE</span>
                       <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-sm">
                         <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
@@ -751,6 +561,31 @@ export default function ContrastTherapyMumbaiPage() {
           </div>
         </div>
       </section>
+
+      {/* ─────────────────────────────────────────────
+          STICKY MOBILE CTA
+      ───────────────────────────────────────────── */}
+      <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden">
+        <div className="bg-white/95 dark:bg-[#0A0A0A]/95 backdrop-blur-md border-t border-gray-200 dark:border-white/[0.09] px-4 pt-3 pb-5">
+          <div className="flex gap-3">
+            <a
+              href="tel:+919702368612"
+              className="flex-1 flex items-center justify-center gap-2 bg-[#513394] hover:bg-[#603eb0] text-white font-black rounded-xl py-3.5 text-[14px] tracking-wide transition-colors"
+            >
+              <PhoneIcon className="w-4 h-4" />
+              Call
+            </a>
+            <a
+              href="https://wa.me/919702368612"
+              target="_blank"
+              rel="nofollow noopener noreferrer"
+              className="flex-1 flex items-center justify-center gap-2 border border-gray-300 dark:border-white/20 text-gray-900 dark:text-white font-bold rounded-xl py-3.5 text-[14px] tracking-wide hover:bg-gray-100 dark:hover:bg-white/[0.07] transition-colors"
+            >
+              WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
 
       <ServiceSchema
         serviceName="Contrast Therapy in Mumbai"

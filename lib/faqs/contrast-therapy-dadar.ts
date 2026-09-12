@@ -10,11 +10,6 @@ export const contrastTherapyDadarFaqs = [
       'R3BOOT is a short walk or auto ride from Dadar station (Central and Western Lines). Call +91 97023 68612 or WhatsApp us to book. Sessions are by appointment Monday–Saturday, with Sunday hours 2:00 PM–9:00 PM.',
   },
   {
-    question: 'How much does contrast therapy cost at R3BOOT Dadar?',
-    answer:
-      'Half Cycle (30 minutes): ₹2,500. Full Cycle (60 minutes): ₹3,500. Full Cycle repeats the same Half Cycle protocol twice, same sequence, no changes. Both include infrared sauna and supervised ice bath with the physiotherapy team present throughout.',
-  },
-  {
     question: 'Can I combine contrast therapy with sports massage at R3BOOT?',
     answer:
       'Yes. Many Dadar athletes stack sports massage and contrast therapy in one visit, soft tissue work followed by hot-cold recovery. Ask when booking and we will schedule both services back to back.',
@@ -23,5 +18,15 @@ export const contrastTherapyDadarFaqs = [
     question: 'Is R3BOOT different from spa saunas in Dadar?',
     answer:
       'Yes. R3BOOT is a clinical recovery centre, not a spa. Contrast therapy is supervised by physiotherapists with health intake, breathing guidance, and structured protocol, not a relaxation sauna experience.',
+  },
+  {
+    question: 'What are the benefits of contrast therapy?',
+    answer:
+      'Alternating heat and cold creates a vascular pumping action, blood vessels dilate in the sauna and constrict in the ice bath, clearing metabolic waste faster than passive rest or cold alone. Clients typically notice reduced muscle soreness, improved mobility, and better next-day training performance.',
+  },
+  {
+    question: 'How do you maintain hygiene for the ice bath and sauna at Dadar?',
+    answer:
+      'We use filtered water for the ice bath, and it is screened and cleaned thoroughly after every single session, not just at the end of the day. The infrared sauna is cleaned and sanitised between every session too. Fresh towels and single-use disposables are provided so each client starts on a clean setup.',
   },
 ]

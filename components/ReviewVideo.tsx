@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect, useCallback } from "react";
 import { Play, X } from "lucide-react";
 import Image from 'next/image';
+import { Reveal } from '@/components/motion/Reveal';
 
 interface VideoCard {
   id: number;
@@ -20,88 +21,69 @@ interface VideoCard {
 const videos: VideoCard[] = [
   {
     id: 1,
-    title: "REJUVENATING EXPERIENCE",
-    subtitle: "R3boot Client, Mumbai",
-    description: "Experience the incredible benefits of sauna and ice bath contrast therapy.",
-    videoUrl: "https://res.cloudinary.com/dj7bot2uc/video/upload/v1770146418/New_Testimonial_1_1_w7kd2v_ozcnrm.webm",
+    title: "FULLY RELEASED",
+    subtitle: "Massage + Contrast Therapy",
+    description: "Massage, sauna, and ice bath — knots released, body fully relaxed.",
+    videoUrl: "https://res.cloudinary.com/dj7bot2uc/video/upload/v1785287652/TEST_1_V3_rzqttr.mov",
     thumbnailUrl: "",
     timestamp: "0:30",
-    transcript: "I had an amazing experience at R3boot. The sauna followed by the ice bath was incredibly rejuvenating. Even at 11°C, it felt manageable and energizing. I felt more focused, refreshed, and ready for my workouts and work week. There are very few places in Mumbai offering this kind of ice bath experience, and R3boot is doing a fantastic job. Highly recommend trying it.",
+    transcript:
+      "Massage was really good — he released all my knots. And then after that, the sauna also really made me feel great and relaxing. And then after that the ice bath also. I feel fully released now. It was a good massage.",
     reviewerName: "R3boot Client",
-    rating: 5
+    rating: 5,
   },
   {
     id: 2,
-    title: "PROFESSIONAL & REJUVENATING",
-    subtitle: "Sports Enthusiast",
-    description: "First visit experience featuring deep tissue massage, cupping, and contrast therapy.",
-    videoUrl: "https://res.cloudinary.com/dj7bot2uc/video/upload/v1770182033/New_Testimonal_2_1_h4ni4r_wxcttu.webm",
+    title: "SOLID CONTRAST THERAPY",
+    subtitle: "Recovery Enthusiast",
+    description: "Tried many recovery methods — contrast therapy at R3BOOT felt different.",
+    videoUrl: "https://res.cloudinary.com/dj7bot2uc/video/upload/v1785287687/TEST_5_V2_ugfhth.mov",
     thumbnailUrl: "",
-    timestamp: "0:30",
-    transcript: "This was my first visit to R3boot and I absolutely loved the experience. From the sports massage with deep muscle work and cupping to the sauna and ice bath, everything felt professional and rejuvenating. It’s a beautiful, well-designed facility, and a real blessing for sports enthusiasts. I’m already looking forward to my next visit.",
-    reviewerName: "Aditya",
-    rating: 5
+    timestamp: "0:35",
+    transcript:
+      "So honestly, I'm someone who's literally tried out a lot of recovery methods, and contrast therapy is something I've also tried, but I haven't done it regularly. And having said that, I've tried it today and it's been solid. The body really feels a lot of difference. And I've done it at R3BOOT today — it's an amazing experience, and I'd recommend for everybody who is really living a consistent life in terms of your movement and fitness. It's definitely recommended.",
+    reviewerName: "R3boot Client",
+    rating: 5,
   },
   {
     id: 3,
-    title: "FULLY RECHARGED",
-    subtitle: "R3boot Client, Mumbai",
-    description: "The rarest combination of therapeutic massage and contrast therapy in India.",
-    videoUrl: "https://res.cloudinary.com/dj7bot2uc/video/upload/v1769068761/Testimonial_3_1_fc1zyc.mp4",
+    title: "PERFECT TO THE POINTS",
+    subtitle: "Physiotherapy Client",
+    description: "Targeted work on exact pain points — warmth and blood flow returning.",
+    videoUrl: "https://res.cloudinary.com/dj7bot2uc/video/upload/v1785287711/TEST_3_4_xscxvb.mov",
     thumbnailUrl: "",
-    timestamp: "0:30",
-    transcript: "This was a fantastic experience. I honestly didn’t expect I’d be able to stay in the ice bath for long, but I surprised myself and completed it comfortably. The contrast therapy was excellent and left me feeling fully recharged. The massage was outstanding, not the kind where you’re just lying down and relaxing, but a proper therapeutic massage that works on all the right pressure points. Experiences like this are rare in India.",
+    timestamp: "0:35",
+    transcript:
+      "Perfect to the points. I'm known to tell where exactly what is paining, and exactly those points around that they were working. And I can feel the difference — when I came before and right now as I'm seated, I know there is blood flowing already. And these exercises which were stretching my back, the curvatures — I can feel the warmth because the blood is now flowing. So I understand how much stiff I have been.",
     reviewerName: "R3boot Client",
-    rating: 5
+    rating: 5,
   },
   {
     id: 4,
-    title: "AMAZING CONTRAST THERAPY",
-    subtitle: "Mumbai Member",
-    description: "Overcoming the challenge of the ice bath followed by deep relaxation.",
-    videoUrl: "https://res.cloudinary.com/dj7bot2uc/video/upload/v1770182045/New_Testimonial_4_wjnw0l_lnt24h.webm",
+    title: "MORE MOBILITY, MORE EASE",
+    subtitle: "Dr. Charu",
+    description: "Physio session with Dr. Nimble — joints opened, more space to move.",
+    videoUrl: "https://res.cloudinary.com/dj7bot2uc/video/upload/v1785287722/test_2_v2_vrkdhf.mov",
     thumbnailUrl: "",
-    timestamp: "0:30",
-    transcript: "I tried contrast therapy at R3boot and it was an amazing experience. The ice bath was challenging, but the sauna afterward was deeply relaxing. I’d definitely recommend everyone to come and try it.",
-    reviewerName: "Aditya",
-    rating: 5
+    timestamp: "0:35",
+    transcript:
+      "Hi, I'm Doctor Charu. I just took a session from Doctor Nimble in R3BOOT — a physio session — and I thought I didn't have any issues. But when he started cracking, opening my joints, I found that so many joints were stiff. And he did a full chiropractic session with me, and I have so much more mobility and so much more ease in my body, and more space that I can do a lot of exercises now.",
+    reviewerName: "Dr. Charu",
+    rating: 5,
   },
   {
     id: 5,
-    title: "LOVED THE EXPERIENCE",
-    subtitle: "Mumbai Member",
-    description: "Trying out Infrared Sauna combined with cold exposure.",
-    videoUrl: "https://res.cloudinary.com/dj7bot2uc/video/upload/v1770182044/New_Testimonial_5_mhymut_gkt6gw.webm",
+    title: "RESTORE. REBUILD. RECOVER.",
+    subtitle: "Kinita Kadakia Patel",
+    description: "Metabolic Reset & Body Transformation specialist on why R3BOOT matters.",
+    videoUrl: "https://res.cloudinary.com/dj7bot2uc/video/upload/v1785287919/Test_5_v3_suk1z2.mov",
     thumbnailUrl: "",
-    timestamp: "0:30",
-    transcript: "I had a great experience at R3boot. I tried the contrast therapy with red light and the ice bath, and absolutely loved it. I’d definitely recommend giving it a try.",
-    reviewerName: "Anuj",
-    rating: 5
+    timestamp: "0:40",
+    transcript:
+      "Hi, I'm Kinita Kadakia Patel. I am a Metabolic Reset and a Body Transformation specialist, and today I'm here at R3BOOT, which is a fantastic space of restore, rebuild and recover. This is that one element in the process of sports and recovery which is usually underrated. So I'm very excited for and for starting this space called R3BOOT. Please come if you are going through any kind of sports injuries, rehab, recovery, conditioning — this is the place where you want to come.",
+    reviewerName: "Kinita Kadakia Patel",
+    rating: 5,
   },
-  {
-    id: 6,
-    title: "REWARDING EXPERIENCE",
-    subtitle: "Early Member, Mumbai",
-    description: "A thorough and structured approach to total wellness and recovery.",
-    videoUrl: "https://res.cloudinary.com/dj7bot2uc/video/upload/v1770182067/new_Testimonial_6_1_oxfs01_c2fbpb.webm",
-    thumbnailUrl: "",
-    timestamp: "0:30",
-    transcript: "This was my first experience at R3boot, and it was excellent from start to finish. I received a warm welcome and a clear explanation of how the therapy works and how it helps. The massage, sauna, infrared session, and ice bath were all very well structured and professionally executed. Overall, it was a thorough and genuinely rewarding experience. I’m happy to be an early member and I wish the team great success as they expand.",
-    reviewerName: "R3boot Client",
-    rating: 5
-  },
-  {
-    id: 7,
-    title: "GENUINE LEADERSHIP TRANSFORMATION",
-    subtitle: "Leadership Coaching Client",
-    description: "Powerful leadership coaching rooted in real business experience and deep understanding of teams.",
-    videoUrl: "https://res.cloudinary.com/dj7bot2uc/video/upload/v1780844487/R3BOOT_TESTIMONIAL_45_ymsbgb.mov",
-    thumbnailUrl: "https://res.cloudinary.com/dj7bot2uc/video/upload/so_0,w_600,h_900,c_fill,q_auto,f_jpg/v1780844487/R3BOOT_TESTIMONIAL_45_ymsbgb.jpg",
-    timestamp: "0:45",
-    transcript: "Leadership coaching becomes powerful when it’s real, practical, and rooted in experience. And that’s exactly what Alkesh Khubaria brings. As a seasoned businessman himself, he truly understands teams, personalities, priorities, and what it takes to truly bond and grow. His coaching cuts through the noise and creates genuine leadership transformation.",
-    reviewerName: "R3boot Client",
-    rating: 5
-  }
 ];
 
 // Helper function to generate Cloudinary thumbnail URL from video URL
@@ -361,7 +343,7 @@ export default function ReviewVideo() {
 
         <div className="w-full relative z-10">
           {/* Section Heading */}
-          <div className="text-center mb-16">
+          <Reveal className="text-center mb-16">
             <div className="inline-flex items-center justify-center gap-3 text-[#513394] dark:text-[#A78BFA] mb-4">
               <div className="w-1.5 h-1.5 rounded-full bg-[#513394] dark:bg-[#A78BFA]"></div>
               <span className="text-[13px] font-bold tracking-[0.3em] uppercase">Testimonials</span>
@@ -373,7 +355,7 @@ export default function ReviewVideo() {
             <p className="text-gray-500 dark:text-gray-400 text-sm md:text-lg leading-relaxed max-w-2xl mx-auto mt-4">
               Experience the transformation through the words of our members.
             </p>
-          </div>
+          </Reveal>
           {/* Scrolling Video Container */}
           <div
             className="mt-12 overflow-hidden relative"
@@ -387,6 +369,9 @@ export default function ReviewVideo() {
             onMouseUp={handlePointerUp}
             onWheel={handleWheel}
           >
+            <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-gradient-to-r from-white to-transparent dark:from-[#0A0A0A] sm:w-40 lg:w-44" />
+            <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-gradient-to-l from-white to-transparent dark:from-[#0A0A0A] sm:w-40 lg:w-44" />
+
             <div
               ref={containerRef}
               className="flex w-max will-change-transform cursor-grab active:cursor-grabbing gap-6"

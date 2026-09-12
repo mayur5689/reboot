@@ -36,6 +36,10 @@ next-env.d.ts
 
 
 .mcp.json
+.cursor/mcp.json
+
+# local MCP servers — dev-only, never deploy
+facebook-ads-library-mcp/
 
 # internal tooling — never commit
 .agents/
@@ -46,3 +50,20 @@ reddit-universal-scraper/
 CREATIVE-AUDIT-REPORT.md
 components/Untitled
 skills-lock.json
+.env*
+
+# marketing / build / research — local only, never commit
+research/ai-search-content-topics.md
+MARKETING_CAROUSEL/
+/dist/
+.sanity/
+brand/
+R3BOOT_SEO DATAA.txt
+Hook.md
+personal-brand-discovery-questionnaire.html
+personal-brand-discovery-questionnaire.pdf
+scripts/data/mcp-args/
+scripts/data/output/
+public/video/Achilles......-preview.mp4
+
+.local/

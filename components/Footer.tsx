@@ -55,6 +55,7 @@ const Footer: React.FC = () => {
                 <li><Link href="/contrast-therapy-mumbai" className="hover:text-[#A78BFA] transition-colors">Contrast Therapy Mumbai</Link></li>
                 <li><Link href="/ice-bath-mumbai" className="hover:text-[#A78BFA] transition-colors">Ice Bath Mumbai</Link></li>
                 <li><Link href="/cold-plunge-mumbai" className="hover:text-[#A78BFA] transition-colors">Cold Plunge Mumbai</Link></li>
+                <li><Link href="/services/compression-therapy" className="hover:text-[#A78BFA] transition-colors">Compression Therapy</Link></li>
                 <li><Link href="/services/aqua-therapy" className="hover:text-[#A78BFA] transition-colors">Aqua Therapy</Link></li>
                 <li><Link href="/services/sports-massage" className="hover:text-[#A78BFA] transition-colors">Percussive Therapy</Link></li>
                 <li><Link href="/services/clinical-pilates" className="hover:text-[#A78BFA] transition-colors">Clinical Pilates</Link></li>
@@ -73,8 +74,7 @@ const Footer: React.FC = () => {
                 <li><Link href="/contrast-therapy-lower-parel" className="hover:text-[#A78BFA] transition-colors">Contrast Therapy Lower Parel</Link></li>
                 <li><Link href="/contrast-therapy-andheri" className="hover:text-[#A78BFA] transition-colors">Contrast Therapy Andheri</Link></li>
                 <li><Link href="/contrast-therapy-worli" className="hover:text-[#A78BFA] transition-colors">Contrast Therapy Worli</Link></li>
-                <li><Link href="/services/sports-psychology" className="hover:text-[#A78BFA] transition-colors">Sports Psychology</Link></li>
-                <li><Link href="/services/counselling-mental-training" className="hover:text-[#A78BFA] transition-colors">Counselling & Mental Training</Link></li>
+                <li><Link href="/services/mental-training" className="hover:text-[#A78BFA] transition-colors">Mental Training</Link></li>
               </ul>
             </div>
 
@@ -83,6 +83,8 @@ const Footer: React.FC = () => {
               <ul className="grid grid-cols-2 md:block gap-4 md:space-y-4 text-[13px] md:text-base font-semibold text-white/90">
                 <li><Link href="/" className="hover:text-[#A78BFA] transition-colors">Home</Link></li>
                 <li><Link href="/about" className="hover:text-[#A78BFA] transition-colors">About</Link></li>
+                <li><Link href="/partnerships" className="hover:text-[#A78BFA] transition-colors">Affiliate Partnerships</Link></li>
+                <li><Link href="/employee-wellness" className="hover:text-[#A78BFA] transition-colors">Employee Wellness</Link></li>
                 <li><Link href="/contact" className="hover:text-[#A78BFA] transition-colors">Contact</Link></li>
                 <li><Link href="/blog" className="hover:text-[#A78BFA] transition-colors">Blog</Link></li>
               </ul>

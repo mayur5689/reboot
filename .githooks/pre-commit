@@ -1,0 +1,21 @@
+#!/bin/sh
+# Block accidental commits of local MCP config, tokens, or dev-only tooling.
+
+blocked_patterns='\.mcp\.json$|facebook-ads-library-mcp|FACEBOOK_ACCESS_TOKEN'
+
+if git diff --cached --name-only | grep -Eiq "$blocked_patterns"; then
+  echo ""
+  echo "Commit blocked: local MCP / Facebook Ads dev tooling must not be committed."
+  echo "These files are for Cursor on your machine only — not for production."
+  echo ""
+  exit 1
+fi
+
+if git diff --cached | grep -Eiq 'FACEBOOK_ACCESS_TOKEN\s*=\s*[^y][^o][^u]'; then
+  echo ""
+  echo "Commit blocked: possible FACEBOOK_ACCESS_TOKEN secret in staged changes."
+  echo ""
+  exit 1
+fi
+
+exit 0

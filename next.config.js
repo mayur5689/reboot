@@ -13,9 +13,42 @@ const nextConfig = {
                 destination: '/services/aqua-therapy',
                 permanent: true,
             },
+            {
+                source: '/services/sports-psychology',
+                destination: '/services/mental-training',
+                permanent: true,
+            },
+            {
+                source: '/services/counselling-%26-mental-training',
+                destination: '/services/mental-training',
+                permanent: true,
+            },
+            {
+                source: '/services/counselling-mental-training',
+                destination: '/services/mental-training',
+                permanent: true,
+            },
+            {
+                source: '/services-demo/aqua-therapy',
+                destination: '/aqua-therapy-mumbai',
+                permanent: true,
+            },
+            {
+                source: '/services/aqua-therapy-mumbai',
+                destination: '/aqua-therapy-mumbai',
+                permanent: true,
+            },
+            {
+                source: '/corporate-wellness',
+                destination: '/employee-wellness',
+                permanent: true,
+            },
         ]
     },
     images: {
+        dangerouslyAllowSVG: true,
+        contentDispositionType: 'attachment',
+        contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
         remotePatterns: [
             {
                 protocol: 'https',

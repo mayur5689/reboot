@@ -8,9 +8,9 @@ import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema'
 import { infraredSaunaMumbaiFaqs } from '@/lib/faqs/infrared-sauna-mumbai'
 
 export const metadata: Metadata = {
-  title: 'Infrared Sauna Mumbai | Physio-Supervised Heat Therapy | R3BOOT Dadar',
+  title: 'Infrared Sauna Mumbai | Private Solo Sessions | R3BOOT Dadar',
   description:
-    'Infrared sauna Mumbai at R3BOOT Dadar | clinical contrast therapy, not spa sauna. Paired with supervised ice bath. Sauna near me for Dadar, Bandra & Lower Parel. 5.0 ★ Google.',
+    'Private infrared sauna sessions in Dadar Mumbai. Deep heat for muscle recovery, detox, and sleep. 30-min solo sessions. No shared space. Walk-in or book on WhatsApp.',
   alternates: { canonical: '/infrared-sauna-mumbai' },
   keywords: [
     'infrared sauna mumbai',

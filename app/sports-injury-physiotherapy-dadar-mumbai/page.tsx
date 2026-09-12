@@ -143,7 +143,7 @@ export default function SportsInjuryPhysiotherapyDadarPage() {
                 </p>
                 <p>
                   At R3BOOT in Dadar East, our physiotherapy team understands sport-specific demands. Dr. Hiral
-                  Parikh (BPT, 15+ years) and Dr. Vaishali Vijay Rauniyar (certified in Dry Needling and Aquatic
+                  Parikh (BPT, 15+ years) and Dr. Vaishali Vijay Rauniyar (BPT, 4+ years, certified in Dry Needling and Aquatic
                   Rehabilitation) have worked with runners, gym athletes, cricketers, and weekend warriors across
                   all injury types. Every case gets a clear return-to-sport timeline after the first session, not
                   a generic estimate.
@@ -599,7 +599,7 @@ export default function SportsInjuryPhysiotherapyDadarPage() {
 
       <ServiceSchema
         serviceName="Sports Injury Physiotherapy in Dadar, Mumbai"
-        description="Sports injury physiotherapy in Dadar, Mumbai at R3BOOT. ACL rehabilitation, hamstring tears, rotator cuff injuries, ankle sprains, ITB syndrome, and return-to-sport programmes. Led by Dr. Hiral Parikh (BPT, 15+ years) and Dr. Vaishali Vijay Rauniyar. Near Shivaji Park."
+        description="Sports injury physiotherapy in Dadar, Mumbai at R3BOOT. ACL rehabilitation, hamstring tears, rotator cuff injuries, ankle sprains, ITB syndrome, and return-to-sport programmes. Led by Dr. Hiral Parikh (BPT, 15+ years) and Dr. Vaishali Vijay Rauniyar (4+ years). Near Shivaji Park."
         serviceUrl="https://www.r3boot.in/sports-injury-physiotherapy-dadar-mumbai"
       />
       <FAQSchema faqs={sportsInjuryPhysiotherapyFaqs} />
