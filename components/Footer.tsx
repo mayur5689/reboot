@@ -55,6 +55,7 @@ const Footer: React.FC = () => {
                 <li><Link href="/contrast-therapy-mumbai" className="hover:text-[#A78BFA] transition-colors">Contrast Therapy Mumbai</Link></li>
                 <li><Link href="/ice-bath-mumbai" className="hover:text-[#A78BFA] transition-colors">Ice Bath Mumbai</Link></li>
                 <li><Link href="/cold-plunge-mumbai" className="hover:text-[#A78BFA] transition-colors">Cold Plunge Mumbai</Link></li>
+                <li><Link href="/services/compression-therapy" className="hover:text-[#A78BFA] transition-colors">Compression Therapy</Link></li>
                 <li><Link href="/services/aqua-therapy" className="hover:text-[#A78BFA] transition-colors">Aqua Therapy</Link></li>
                 <li><Link href="/services/sports-massage" className="hover:text-[#A78BFA] transition-colors">Percussive Therapy</Link></li>
                 <li><Link href="/services/clinical-pilates" className="hover:text-[#A78BFA] transition-colors">Clinical Pilates</Link></li>

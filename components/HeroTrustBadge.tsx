@@ -308,6 +308,27 @@ export const serviceTrustBadges: Record<string, TrustBadgeItem[]> = {
       description: 'Built around your assessment.',
     },
   ],
+  'compression-therapy': [
+    googleReviewsBadge,
+    {
+      icon: 'clock',
+      value: '20–60 Min',
+      label: 'Session Length',
+      description: 'Typical recovery block is 20–30 minutes.',
+    },
+    {
+      icon: 'user',
+      value: 'Full Body',
+      label: 'Legs, Hips, Arms',
+      description: 'Normatec 3 attachments, not legs-only.',
+    },
+    {
+      icon: 'target',
+      value: '7 Levels',
+      label: '40–110 mmHg',
+      description: 'Pulse compression with ZoneBoost.',
+    },
+  ],
   'contrast-therapy': [
     googleReviewsBadge,
     {

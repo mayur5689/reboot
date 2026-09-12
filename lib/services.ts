@@ -135,6 +135,29 @@ export const services: Service[] = [
         slug: "contrast-therapy"
     },
     {
+        title: "Compression Therapy",
+        tagline: "Pulse. Flush. Recover.",
+        category: "THERAPY",
+        description: "Normatec 3 Full Body dynamic air compression for legs, hips, and arms. Flush fatigue, boost circulation, and recover faster at R3BOOT Dadar.",
+        fullDescription: "Compression Therapy at R3BOOT uses the Normatec 3 Full Body system: sequential air compression across legs, hips, and arms. Patented Pulse technology inflates overlapping zones distal to proximal, helping increase circulation, revive muscles, and reduce swelling. Sessions are screened and guided on site, typically 20 to 60 minutes.",
+        benefits: [
+            "Temporarily increase circulation",
+            "Relieve muscle aches and stiffness",
+            "Reduce tension and swelling",
+            "Faster warm-up and post-training recovery",
+            "Full-body coverage: legs, hips, and arms",
+            "7 compression levels (40–110 mmHg)"
+        ],
+        process: [
+            { title: "Screening & fit", description: "Health intake, contraindications check, and attachment sizing." },
+            { title: "Protocol", description: "Time, pressure level, and zones set for pre-session warm-up or post-session recovery." },
+            { title: "Pulse compression", description: "Sequential, overlapping zones flush from the extremities toward the core." },
+            { title: "Check-in", description: "Short review of how you responded and how to pair the next session with training." }
+        ],
+        image: "/images/hero/compression-therapy-training.jpg",
+        slug: "compression-therapy"
+    },
+    {
         title: "Aqua Therapy",
         category: "THERAPY",
         description: "Recovery through the therapeutic power of water.",
