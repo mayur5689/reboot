@@ -173,7 +173,7 @@ export default function SportsMassageLowerParelPage() {
                 <div className="border-t border-white/10 pt-6 mb-8">
                   <p className="text-xs font-black tracking-[0.25em] text-white/40 uppercase mb-3">ADDRESS</p>
                   <p className="text-white/80 font-medium text-sm leading-relaxed">Palai Plaza, 203<br />Swami Gyan Jivandas Marg<br />Dadar East – 400 014</p>
-                  <p className="text-white/50 text-xs mt-3">Mon–Sat: 7:00 AM – 8:00 PM</p>
+                  <p className="text-white/50 text-xs mt-3">Mon–Sat: 8:00 AM – 9:00 PM (Wed till 4:00 PM) · Sun: 1:00 PM – 9:00 PM</p>
                 </div>
                 <a href="tel:+919702368612" className="block text-center bg-[#513394] text-white font-black px-8 py-5 rounded-2xl transition-all hover:scale-[1.02] shadow-xl text-lg mb-3">
                   Call to Book

@@ -36,7 +36,7 @@ export default function BusinessSchema() {
     openingHoursSpecification: [
       { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday', 'Tuesday', 'Thursday', 'Friday', 'Saturday'], opens: '08:00', closes: '21:00' },
       { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Wednesday'], opens: '08:00', closes: '16:00' },
-      { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Sunday'], opens: '14:00', closes: '21:00' },
+      { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Sunday'], opens: '13:00', closes: '21:00' },
     ],
     areaServed: [
       { '@type': 'Place', name: 'Dadar' },

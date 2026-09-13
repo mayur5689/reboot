@@ -5,6 +5,7 @@ import './globals.css'
 import { ThemeProvider } from '@/components/ThemeProvider'
 import LayoutWrapper from '@/components/LayoutWrapper'
 import BusinessSchema from '@/components/schema/BusinessSchema'
+import LowerParelBusinessSchema from '@/components/schema/LowerParelBusinessSchema'
 
 const gaId = process.env.NEXT_PUBLIC_GA_ID
 const gtmId = process.env.NEXT_PUBLIC_GTM_ID ?? 'GTM-PQ4GT4DX'
@@ -75,6 +76,7 @@ export default function RootLayout({
           </noscript>
         ) : null}
         <BusinessSchema />
+        <LowerParelBusinessSchema />
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
