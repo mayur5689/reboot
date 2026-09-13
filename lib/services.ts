@@ -139,7 +139,7 @@ export const services: Service[] = [
         tagline: "Pulse. Flush. Recover.",
         category: "THERAPY",
         description: "Normatec 3 Full Body dynamic air compression for legs, hips, and arms. Flush fatigue, boost circulation, and recover faster at R3BOOT Dadar.",
-        fullDescription: "Compression Therapy at R3BOOT uses the Normatec 3 Full Body system: sequential air compression across legs, hips, and arms. Patented Pulse technology inflates overlapping zones distal to proximal, helping increase circulation, revive muscles, and reduce swelling. Sessions are screened and guided on site, typically 20 to 60 minutes.",
+        fullDescription: "Compression Therapy at R3BOOT uses the Normatec 3 Full Body system: sequential air compression across legs, hips, and arms. Patented Pulse technology inflates overlapping zones distal to proximal, helping increase circulation, revive muscles, and reduce swelling. Sessions are screened and guided on site — a standalone 45-minute Recovery session (₹1,500) or a 15-minute Activation add-on (₹500) booked alongside Contrast Therapy, Hydro Active Recovery, or Physiotherapy.",
         benefits: [
             "Temporarily increase circulation",
             "Relieve muscle aches and stiffness",
