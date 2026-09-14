@@ -77,7 +77,7 @@ const processSteps = [
   {
     number: '03',
     title: 'Pulse session',
-    body: 'You sit or lie down while sequential compression runs. Most people read, breathe, or simply rest. Typical duration is 20 to 30 minutes; up to 60 when the load calls for it. Boots deflate for 5–10 seconds at the end before unzipping — normal, not a fault.',
+    body: 'You sit or lie down while sequential compression runs. Most people read, breathe, or simply rest. A full Recovery session runs 45 minutes: 15 minutes upper limbs, 15 minutes hips, 15 minutes lower limbs. Boots deflate for 5–10 seconds at the end before unzipping — normal, not a fault.',
   },
   {
     number: '04',
@@ -370,7 +370,7 @@ export default function CompressionTherapyPage() {
               <span className="text-[#513394] dark:text-[#8B5CF6]">R3BOOT</span>
             </h2>
             <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed">
-              A typical block is 20–30 minutes of sequential compression. First visits include fit, screening, and a pressure check.
+              A standalone Recovery session runs 45 minutes; the Activation add-on runs 15. First visits include fit, screening, and a pressure check.
             </p>
           </div>
 
@@ -506,33 +506,33 @@ export default function CompressionTherapyPage() {
                 TIMING //
               </span>
               <h2 className="text-4xl md:text-6xl font-black text-gray-900 dark:text-white tracking-tight">
-                Same System.{' '}
-                <span className="text-[#513394] dark:text-[#8B5CF6]">Different Job Before and After Training.</span>
+                Two Formats.{' '}
+                <span className="text-[#513394] dark:text-[#8B5CF6]">One System.</span>
               </h2>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-              <div className="bg-[#513394] text-white p-8 rounded-[2.5rem]">
-                <div className="text-xs font-black tracking-[0.25em] uppercase text-white/60 mb-4">BEFORE TRAINING</div>
-                <h3 className="text-2xl font-black mb-4">15–20 minutes. Medium intensity.</h3>
+              <div className="bg-[#1A1A1A] text-white p-8 rounded-[2.5rem]">
+                <div className="text-xs font-black tracking-[0.25em] uppercase text-white/60 mb-4">ACTIVATION — ADD-ON ONLY</div>
+                <h3 className="text-2xl font-black mb-4">15 minutes. ₹750 additional.</h3>
                 <p className="text-white/80 text-sm leading-relaxed mb-4">
-                  A shorter pulse to increase circulation and take stiffness out of tissue before you load it.
-                  Useful on days when calves, hips, or arms feel heavy before a session.
+                  5 minutes per limb, a short pulse to lift circulation before you load tissue. Not sold as a standalone
+                  Normatec session — booked only as an add-on to Contrast Therapy, Hydro Active Recovery, or Physiotherapy.
                 </p>
                 <div className="bg-white/10 rounded-xl p-3">
-                  <p className="text-white/70 text-xs font-bold">Goal: warm-up and range, not a full recovery dump immediately before hard work.</p>
+                  <p className="text-white/70 text-xs font-bold">Goal: quick warm-up stacked onto a session already on the books, not a full recovery dump.</p>
                 </div>
               </div>
 
-              <div className="bg-[#1A1A1A] text-white p-8 rounded-[2.5rem]">
-                <div className="text-xs font-black tracking-[0.25em] uppercase text-white/60 mb-4">AFTER TRAINING</div>
-                <h3 className="text-2xl font-black mb-4">20–60 minutes. Medium to high intensity.</h3>
+              <div className="bg-[#513394] text-white p-8 rounded-[2.5rem]">
+                <div className="text-xs font-black tracking-[0.25em] uppercase text-white/60 mb-4">RECOVERY — STANDALONE</div>
+                <h3 className="text-2xl font-black mb-4">45 minutes. ₹1,500 per session.</h3>
                 <p className="text-white/80 text-sm leading-relaxed mb-4">
-                  A longer flush after racing, heavy lifting, or a high-volume week. Helps circulation, eases aches,
-                  and reduces the swollen, heavy-leg feeling that follows hard sessions.
+                  Full-body sequential flush: 15 minutes upper limbs, 15 minutes hips, 15 minutes lower limbs.
+                  Books on its own, or paired with physio, massage, or contrast therapy.
                 </p>
                 <div className="bg-white/10 rounded-xl p-3">
-                  <p className="text-white/70 text-xs font-bold">Goal: recover between sessions. Pair with massage or contrast therapy when the plan calls for it.</p>
+                  <p className="text-white/70 text-xs font-bold">Goal: recover between sessions with a complete flush, not just one region.</p>
                 </div>
               </div>
             </div>

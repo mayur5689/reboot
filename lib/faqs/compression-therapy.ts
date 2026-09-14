@@ -12,7 +12,7 @@ export const compressionTherapyFaqs = [
   {
     question: 'How much does a Normatec compression session cost in Mumbai at R3BOOT?',
     answer:
-      'Fees depend on session length and whether compression is booked alone or stacked with physiotherapy or sports massage. For current pricing at R3BOOT Dadar, call or WhatsApp +91 97023 68612.',
+      'A standalone Recovery session is ₹1,500 for 45 minutes: 15 minutes upper limbs, 15 minutes hips, 15 minutes lower limbs. Activation is a 15-minute add-on at ₹750 additional, 5 minutes per limb, and is only available alongside Contrast Therapy, Hydro Active Recovery, or Physiotherapy, not as a standalone session. Call or WhatsApp +91 97023 68612 to book.',
   },
   {
     question: 'How do I book a compression therapy session at R3BOOT Dadar?',
@@ -27,12 +27,12 @@ export const compressionTherapyFaqs = [
   {
     question: 'How long should a Normatec session last?',
     answer:
-      'Most sessions run 20 to 60 minutes. A typical recovery block is 20 to 30 minutes. As little as 15 to 20 minutes at medium intensity can increase circulation and ease stiffness, especially before training. After a hard session, 20 to 60 minutes at medium to high intensity is more common.',
+      'A standalone Recovery session runs 45 minutes: 15 minutes upper limbs, 15 minutes hips, 15 minutes lower limbs. The Activation add-on runs 15 minutes, 5 minutes per limb, and is booked only alongside Contrast Therapy, Hydro Active Recovery, or Physiotherapy.',
   },
   {
     question: 'When should I use Normatec, before or after training?',
     answer:
-      'Both. Before training, 15 to 20 minutes at medium intensity can increase circulation and reduce stiffness. After training, 20 to 60 minutes at medium to high intensity supports recovery by improving circulation and helping flush metabolic load. Your R3BOOT team sets time and pressure to match that day.',
+      'Both, in different formats. Before training, the 15-minute Activation add-on (₹750, 5 minutes per limb) lifts circulation and eases stiffness — it is only booked alongside Contrast Therapy, Hydro Active Recovery, or Physiotherapy, not on its own. After training, the standalone 45-minute Recovery session (₹1,500) runs the full sequence: 15 minutes upper limbs, 15 minutes hips, 15 minutes lower limbs.',
   },
   {
     question: 'What does the Normatec 3 Full Body system include?',

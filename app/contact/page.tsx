@@ -263,14 +263,28 @@ export default function ContactPage() {
                                 </div>
                                 <div>
                                     <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">Working Hours</h3>
-                                    <div className="text-gray-500 dark:text-gray-400 space-y-1 text-sm">
-                                        <p>Mon &nbsp; 8:00 am – 9:00 pm</p>
-                                        <p>Tue &nbsp; 8:00 am – 9:00 pm</p>
-                                        <p>Wed &nbsp; 8:00 am – 4:00 pm</p>
-                                        <p>Thu &nbsp; 8:00 am – 9:00 pm</p>
-                                        <p>Fri &nbsp; 8:00 am – 9:00 pm</p>
-                                        <p>Sat &nbsp; 8:00 am – 9:00 pm</p>
-                                        <p>Sun &nbsp; 2:00 pm – 9:00 pm</p>
+                                    <div className="text-gray-500 dark:text-gray-400 space-y-4 text-sm">
+                                        <div>
+                                            <span className="block text-sm font-bold text-gray-900 dark:text-white mb-1">Dadar East</span>
+                                            <p>Mon &nbsp; 8:00 am – 9:00 pm</p>
+                                            <p>Tue &nbsp; 8:00 am – 9:00 pm</p>
+                                            <p>Wed &nbsp; 8:00 am – 4:00 pm</p>
+                                            <p>Thu &nbsp; 8:00 am – 9:00 pm</p>
+                                            <p>Fri &nbsp; 8:00 am – 9:00 pm</p>
+                                            <p>Sat &nbsp; 8:00 am – 9:00 pm</p>
+                                            <p>Sun &nbsp; 1:00 pm – 9:00 pm</p>
+                                        </div>
+                                        <div>
+                                            <span className="block text-sm font-bold text-gray-900 dark:text-white mb-1">Lower Parel</span>
+                                            <p>Mon &nbsp; 7:15 am – 9:00 pm</p>
+                                            <p>Tue &nbsp; 7:15 am – 9:00 pm</p>
+                                            <p>Wed &nbsp; 7:15 am – 3:30 pm</p>
+                                            <p>Thu &nbsp; 7:15 am – 9:00 pm</p>
+                                            <p>Fri &nbsp; 7:15 am – 9:00 pm</p>
+                                            <p>Sat &nbsp; 7:15 am – 9:00 pm</p>
+                                            <p>Sun &nbsp; 3:30 pm – 9:00 pm (appointment only)</p>
+                                            <p className="text-xs mt-2 text-gray-400 dark:text-gray-500">Physio available 7:15 am – 3:30 pm only. Contrast therapy, massage, counselling & Pilates by appointment 3:30 pm – 9:00 pm (Mon–Sun, except Wed).</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
