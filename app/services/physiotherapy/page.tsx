@@ -38,7 +38,7 @@ export const metadata: Metadata = {
         'physiotherapy for knee pain mumbai',
         'physiotherapy near me mumbai',
     ],
-    alternates: { canonical: '/services/physiotherapy' },
+    alternates: { canonical: '/physiotherapy-dadar-mumbai' },
 }
 
 const otherServices = services.filter((s) => s.slug !== 'physiotherapy').slice(0, 4)
@@ -826,7 +826,7 @@ export default function PhysiotherapyPage() {
             <ServiceSchema
                 serviceName="Physiotherapy in Mumbai"
                 description="Clinical physiotherapy in Mumbai by certified specialists. Back pain, knee pain, sports injuries, post-surgery rehab. Dadar location, accessible from Andheri, Thane & Bandra."
-                serviceUrl="https://r3boot.in/services/physiotherapy"
+                serviceUrl="https://www.r3boot.in/physiotherapy-dadar-mumbai"
             />
             <FAQSchema faqs={physiotherapyFaqs} />
         </main>

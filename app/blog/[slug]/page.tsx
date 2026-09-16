@@ -20,6 +20,12 @@ function formatBlogDate(iso: string) {
   });
 }
 
+function isPhysioClusterPost(categories?: string[]) {
+  return (categories ?? []).some((category) =>
+    /physio|back pain|rehab/i.test(category)
+  )
+}
+
 // Generate Dynamic Metadata
 export async function generateMetadata(props: { params: Promise<{ slug: string }> }) {
     const params = await props.params;
@@ -170,6 +176,25 @@ export default async function BlogPostPage(props: { params: Promise<{ slug: stri
                         <div className="prose prose-lg dark:prose-invert max-w-none">
                             <BlogPortableText value={post.body ?? []} />
                         </div>
+                        {isPhysioClusterPost(post.categories) && (
+                          <div className="mt-12 mb-4 rounded-3xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/[0.03] p-8 sm:p-10">
+                            <p className="text-[10px] font-black uppercase tracking-widest text-[#513394] dark:text-[#A78BFA] mb-3">
+                              Physiotherapy in Dadar
+                            </p>
+                            <h2 className="text-2xl sm:text-3xl font-black text-gray-900 dark:text-white tracking-tight leading-tight mb-4">
+                              Book the assessment, not another stretch routine
+                            </h2>
+                            <p className="text-gray-600 dark:text-gray-400 text-base leading-relaxed font-medium mb-6">
+                              If this is changing how you walk, train, or sit at a desk, it belongs with a physiotherapist. R3BOOT is in Dadar East, 5 minutes from the station.
+                            </p>
+                            <Link
+                              href="/physiotherapy-dadar-mumbai"
+                              className="inline-block bg-[#513394] text-white px-8 py-4 rounded-full font-black uppercase tracking-widest text-xs hover:opacity-90 transition-all"
+                            >
+                              Physiotherapy at R3BOOT Dadar
+                            </Link>
+                          </div>
+                        )}
                         <BlogAuthorCard author={authorDetails} />
                     </div>
 
@@ -180,16 +205,33 @@ export default async function BlogPostPage(props: { params: Promise<{ slug: stri
 
                             <div className="bg-[#513394] p-10 rounded-3xl text-white shadow-2xl shadow-[#513394]/20 relative overflow-hidden group">
                                 <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16 blur-2xl group-hover:bg-white/20 transition-all duration-700" />
-                                <h3 className="text-2xl font-black mb-6 relative z-10 leading-tight">Ready to start your recovery?</h3>
-                                <p className="text-white/80 font-medium mb-8 relative z-10">Expertly guided sessions designed for your peak performance.</p>
-                                <a
+                                <h3 className="text-2xl font-black mb-6 relative z-10 leading-tight">
+                                  {isPhysioClusterPost(post.categories)
+                                    ? 'Need physiotherapy in Dadar?'
+                                    : 'Ready to start your recovery?'}
+                                </h3>
+                                <p className="text-white/80 font-medium mb-8 relative z-10">
+                                  {isPhysioClusterPost(post.categories)
+                                    ? 'Assessment first. Then a plan for back pain, sports injuries, or post-surgery rehab.'
+                                    : 'Expertly guided sessions designed for your peak performance.'}
+                                </p>
+                                {isPhysioClusterPost(post.categories) ? (
+                                  <Link
+                                    href="/physiotherapy-dadar-mumbai"
+                                    className="inline-block bg-white text-[#513394] px-8 py-4 rounded-full font-black uppercase tracking-widest text-xs hover:bg-gray-100 transition-all relative z-10 shadow-lg"
+                                  >
+                                    Book physiotherapy
+                                  </Link>
+                                ) : (
+                                  <a
                                     href="tel:+919702368612"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="inline-block bg-white text-[#513394] px-8 py-4 rounded-full font-black uppercase tracking-widest text-xs hover:bg-gray-100 transition-all relative z-10 shadow-lg"
-                                >
+                                  >
                                     Call to Book
-                                </a>
+                                  </a>
+                                )}
                             </div>
                         </div>
                     </aside>

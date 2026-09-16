@@ -15,7 +15,7 @@ const quickLinks = [
 ]
 
 const services = [
-  { label: 'Physiotherapy', href: '/services/physiotherapy' },
+  { label: 'Physiotherapy', href: '/physiotherapy-dadar-mumbai' },
   { label: 'Contrast Therapy', href: '/services/contrast-therapy' },
   { label: 'Compression Therapy', href: '/services/compression-therapy' },
   { label: 'Aqua Therapy', href: '/services/aqua-therapy' },
