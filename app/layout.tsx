@@ -20,7 +20,7 @@ const branding = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.r3boot.in'),
   title: 'R3BOOT Dadar | Physiotherapy, Clinical Pilates & Recovery Mumbai',
-  description: 'Physiotherapy, clinical Pilates, sports massage & contrast therapy in Dadar, Mumbai. Expert physio team at R3BOOT, 5.0 stars. Open 7 days. Book via WhatsApp.',
+  description: 'R3BOOT (pronounced Reboot): physiotherapy, clinical Pilates, sports massage and contrast therapy in Dadar and Lower Parel, Mumbai. 5.0 stars. Open 7 days. Book via WhatsApp.',
   icons: {
     icon: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1773062628/R3boot_Logo_za7ymb.png',
     apple: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1773062628/R3boot_Logo_za7ymb.png',

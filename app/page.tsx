@@ -11,8 +11,8 @@ const plusJakarta = Plus_Jakarta_Sans({
 
 export const metadata: Metadata = {
   title: 'Therapy Clinic in Dadar, Mumbai | R3BOOT Recovery Centre',
-  description: 'Expert therapy clinic in Dadar, Mumbai. Physiotherapy, contrast therapy, aqua therapy & sports massage. Certified specialists, 7-day availability. Book today.',
-  keywords: ['therapy dadar', 'therapy clinic dadar', 'recovery clinic mumbai', 'physiotherapy dadar', 'sports recovery mumbai', 'R3BOOT'],
+  description: 'R3BOOT (pronounced Reboot) is Dadar and Lower Parel’s recovery clinic. Physiotherapy, contrast therapy, aqua therapy and sports massage. Open 7 days.',
+  keywords: ['R3BOOT', 'reboot dadar', 'reboot clinic mumbai', 'reboot physiotherapy dadar', 'therapy clinic dadar', 'recovery clinic mumbai', 'physiotherapy dadar'],
   alternates: { canonical: '/' },
 }
 
@@ -25,6 +25,8 @@ import { GoogleReviewsSection } from '@/app/services-demo/contrast-therapy/Googl
 import TeamCarousel from '@/components/TeamCarousel'
 import HomeBlog from '@/components/HomeBlog'
 import { FAQSection } from '@/components/faq-section'
+import FAQSchema from '@/components/schema/FAQSchema'
+import { homepageFaqs } from '@/lib/faqs/homepage'
 
 export default function Home() {
   return (
@@ -35,6 +37,7 @@ export default function Home() {
         }
       `}</style>
       <main className="relative">
+        <FAQSchema faqs={homepageFaqs} />
         <Hero />
         <MovingServiceRibbons />
         <AboutJourney />
@@ -44,7 +47,7 @@ export default function Home() {
         <GoogleReviewsSection />
         <TeamCarousel />
         <HomeBlog />
-        <FAQSection showMap />
+        <FAQSection faqs={homepageFaqs} showMap />
       </main>
     </div>
   )

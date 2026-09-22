@@ -1,3 +1,5 @@
+import { LOWER_PAREL_ALTERNATE_NAMES } from '@/lib/brand'
+
 const SITE_URL = 'https://www.r3boot.in'
 
 export default function LowerParelBusinessSchema() {
@@ -7,7 +9,7 @@ export default function LowerParelBusinessSchema() {
     '@id': `${SITE_URL}/#organization-lower-parel`,
     name: 'R3boot | Integrated Recovery Center - Lower Parel',
     legalName: 'R3boot Activelife Pvt Ltd',
-    alternateName: 'R3BOOT Recovery Center Lower Parel',
+    alternateName: LOWER_PAREL_ALTERNATE_NAMES,
     url: SITE_URL,
     logo: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1773062628/R3boot_Logo_za7ymb.png',
     description: 'R3boot Lower Parel. Clinical physiotherapy, contrast therapy (ice bath + infrared sauna), sports massage, clinical Pilates, and counselling in Lower Parel, Mumbai.',

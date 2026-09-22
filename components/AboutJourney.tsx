@@ -62,9 +62,9 @@ export default function AboutJourney({
           </h2>
 
           <p className="max-w-2xl text-base leading-relaxed text-white/65 sm:text-lg">
-            At R3BOOT, we help you rebuild strength with clinical precision —
-            physiotherapy, contrast therapy, and performance coaching under one roof in Dadar.
-            Expert clinicians. Clear plans. Real progress.
+            R3BOOT is pronounced Reboot. We help you rebuild strength with clinical precision —
+            physiotherapy, contrast therapy, and performance coaching under one roof in Dadar East
+            and Lower Parel. Expert clinicians. Clear plans. Real progress.
           </p>
         </Reveal>
 
