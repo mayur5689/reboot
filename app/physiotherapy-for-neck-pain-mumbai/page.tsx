@@ -547,6 +547,7 @@ export default function PhysiotherapyNeckPainMumbaiPage() {
             {[
               { label: 'Physiotherapy Dadar Mumbai', href: '/physiotherapy-dadar-mumbai' },
               { label: 'Physiotherapy for Back Pain', href: '/physiotherapy-for-back-pain-mumbai' },
+              { label: 'Physiotherapy for Shoulder Pain', href: '/physiotherapy-for-shoulder-pain-mumbai' },
               { label: 'Neck & Shoulder Sports Massage', href: '/neck-shoulder-pain-sports-massage-mumbai' },
               { label: 'Sports Injury Physiotherapy Dadar', href: '/sports-injury-physiotherapy-dadar-mumbai' },
               { label: 'Contrast Therapy Mumbai', href: '/contrast-therapy-mumbai' },

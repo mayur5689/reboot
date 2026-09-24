@@ -46,6 +46,12 @@ const conditionPages = [
     label: 'Neck Pain Physiotherapy →',
   },
   {
+    title: 'Shoulder Pain',
+    desc: 'Frozen shoulder, rotator cuff overload, impingement, AC joint pain, desk posture, and gym or overhead sport load.',
+    href: '/physiotherapy-for-shoulder-pain-mumbai',
+    label: 'Shoulder Pain Physiotherapy →',
+  },
+  {
     title: 'Sports Injuries',
     desc: 'ACL tears, hamstring injuries, rotator cuff, ankle sprains, shin splints, ITB syndrome, and return-to-sport programmes.',
     href: '/sports-injury-physiotherapy-dadar-mumbai',
@@ -588,6 +594,7 @@ export default function PhysiotherapyMumbaiPage() {
               { label: 'Physiotherapy for Back Pain', href: '/physiotherapy-for-back-pain-mumbai' },
               { label: 'Physiotherapy for Knee Pain', href: '/physiotherapy-for-knee-pain-mumbai' },
               { label: 'Physiotherapy for Neck Pain', href: '/physiotherapy-for-neck-pain-mumbai' },
+              { label: 'Physiotherapy for Shoulder Pain', href: '/physiotherapy-for-shoulder-pain-mumbai' },
               { label: 'Sports Injury Physiotherapy', href: '/sports-injury-physiotherapy-dadar-mumbai' },
               { label: 'Post-Surgery Physiotherapy', href: '/post-surgery-physiotherapy-mumbai' },
               { label: 'Sports Massage Mumbai', href: '/sports-massage-mumbai' },

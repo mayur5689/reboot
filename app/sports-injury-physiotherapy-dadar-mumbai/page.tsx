@@ -539,6 +539,7 @@ export default function SportsInjuryPhysiotherapyDadarPage() {
           <div className="flex flex-wrap gap-3 sm:gap-4">
             {[
               { label: 'Physiotherapy Dadar Mumbai', href: '/physiotherapy-dadar-mumbai' },
+              { label: 'Physiotherapy for Shoulder Pain Mumbai', href: '/physiotherapy-for-shoulder-pain-mumbai' },
               { label: 'Physiotherapy for Back Pain Mumbai', href: '/physiotherapy-for-back-pain-mumbai' },
               { label: 'Sports Massage for Runners', href: '/sports-massage-runners-mumbai' },
               { label: 'Contrast Therapy Mumbai', href: '/contrast-therapy-mumbai' },

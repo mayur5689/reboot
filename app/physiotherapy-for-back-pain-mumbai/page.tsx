@@ -539,6 +539,7 @@ export default function PhysiotherapyBackPainMumbaiPage() {
             {[
               { label: 'Physiotherapy Dadar Mumbai', href: '/physiotherapy-dadar-mumbai' },
               { label: 'Back Pain Sports Massage', href: '/back-pain-sports-massage-mumbai' },
+              { label: 'Physiotherapy for Shoulder Pain', href: '/physiotherapy-for-shoulder-pain-mumbai' },
               { label: 'Clinical Pilates Mumbai', href: '/clinical-pilates-mumbai' },
               { label: 'Contrast Therapy Mumbai', href: '/contrast-therapy-mumbai' },
               { label: 'Ice Bath Mumbai', href: '/ice-bath-mumbai' },
