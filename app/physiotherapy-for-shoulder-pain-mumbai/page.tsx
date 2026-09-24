@@ -740,6 +740,7 @@ export default function PhysiotherapyShoulderPainMumbaiPage() {
           <div className="flex flex-wrap gap-3 sm:gap-4">
             {[
               { label: 'Physiotherapy Dadar Mumbai', href: '/physiotherapy-dadar-mumbai' },
+              { label: 'Physiotherapy Lower Parel', href: '/physiotherapy-lower-parel' },
               { label: 'Physiotherapy for Neck Pain', href: '/physiotherapy-for-neck-pain-mumbai' },
               { label: 'Sports Injury Physiotherapy', href: '/sports-injury-physiotherapy-dadar-mumbai' },
               { label: 'Post-Surgery Physiotherapy', href: '/post-surgery-physiotherapy-mumbai' },

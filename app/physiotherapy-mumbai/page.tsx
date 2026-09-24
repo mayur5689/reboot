@@ -458,7 +458,7 @@ export default function PhysiotherapyMumbaiPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {[
                 {
                   title: 'Sports Massage',
@@ -477,8 +477,13 @@ export default function PhysiotherapyMumbaiPage() {
                 },
                 {
                   title: 'Physiotherapy Dadar',
-                  desc: 'Full condition-specific physiotherapy at R3BOOT Dadar East | the most central physiotherapy location in Mumbai.',
+                  desc: 'Flagship clinic at Palai Plaza with aqua therapy on-site | central for Dadar, Matunga, Sion, and Shivaji Park.',
                   href: '/physiotherapy-dadar-mumbai',
+                },
+                {
+                  title: 'Physiotherapy Lower Parel',
+                  desc: 'Lodha Signet studio for Lower Parel, Prabhadevi, Worli, Kamala Mills, and BKC | physio from 7:15 am.',
+                  href: '/physiotherapy-lower-parel',
                 },
               ].map((item, idx) => (
                 <Link
@@ -526,15 +531,42 @@ export default function PhysiotherapyMumbaiPage() {
               </p>
 
               <div className="flex flex-wrap gap-3 mb-8">
-                {['Dadar', 'Shivaji Park', 'Lower Parel', 'Worli', 'BKC', 'Bandra', 'Sion', 'Matunga', 'Parel', 'Wadala'].map((area, idx) => (
-                  <span
-                    key={idx}
-                    className="bg-[#513394]/10 dark:bg-[#8B5CF6]/20 text-[#513394] dark:text-[#A78BFA] font-bold px-4 py-2 rounded-full text-sm"
-                  >
-                    {area}
-                  </span>
-                ))}
+                {[
+                  { label: 'Dadar', href: '/physiotherapy-dadar-mumbai' },
+                  { label: 'Lower Parel', href: '/physiotherapy-lower-parel' },
+                  { label: 'Shivaji Park' },
+                  { label: 'Worli' },
+                  { label: 'BKC' },
+                  { label: 'Bandra' },
+                  { label: 'Sion' },
+                  { label: 'Matunga' },
+                  { label: 'Parel' },
+                  { label: 'Wadala' },
+                ].map((area, idx) =>
+                  area.href ? (
+                    <Link
+                      key={idx}
+                      href={area.href}
+                      className="bg-[#513394]/10 dark:bg-[#8B5CF6]/20 text-[#513394] dark:text-[#A78BFA] font-bold px-4 py-2 rounded-full text-sm hover:bg-[#513394] hover:text-white transition-all"
+                    >
+                      {area.label}
+                    </Link>
+                  ) : (
+                    <span
+                      key={idx}
+                      className="bg-[#513394]/10 dark:bg-[#8B5CF6]/20 text-[#513394] dark:text-[#A78BFA] font-bold px-4 py-2 rounded-full text-sm"
+                    >
+                      {area.label}
+                    </span>
+                  )
+                )}
               </div>
+              <p className="text-sm text-gray-500 dark:text-gray-400 mb-8">
+                Prefer Lodha Signet / Prabhadevi?{' '}
+                <Link href="/physiotherapy-lower-parel" className="font-bold text-[#513394] dark:text-[#A78BFA] hover:underline">
+                  Physiotherapy Lower Parel →
+                </Link>
+              </p>
 
               <div className="space-y-3 text-sm text-gray-600 dark:text-gray-400">
                 <div className="flex items-start gap-3">
@@ -591,6 +623,7 @@ export default function PhysiotherapyMumbaiPage() {
           <div className="flex flex-wrap gap-3 sm:gap-4">
             {[
               { label: 'Physiotherapy Dadar Mumbai', href: '/physiotherapy-dadar-mumbai' },
+              { label: 'Physiotherapy Lower Parel', href: '/physiotherapy-lower-parel' },
               { label: 'Physiotherapy for Back Pain', href: '/physiotherapy-for-back-pain-mumbai' },
               { label: 'Physiotherapy for Knee Pain', href: '/physiotherapy-for-knee-pain-mumbai' },
               { label: 'Physiotherapy for Neck Pain', href: '/physiotherapy-for-neck-pain-mumbai' },

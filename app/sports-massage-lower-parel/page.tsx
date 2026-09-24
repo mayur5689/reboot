@@ -136,7 +136,7 @@ export default function SportsMassageLowerParelPage() {
                   {[
                     { label: 'Ice Bath', href: '/ice-bath-mumbai' },
                     { label: 'Contrast Therapy', href: '/contrast-therapy-mumbai' },
-                    { label: 'Physiotherapy', href: '/physiotherapy-dadar-mumbai' },
+                    { label: 'Physiotherapy', href: '/physiotherapy-lower-parel' },
                   ].map((item) => (
                     <Link key={item.href} href={item.href} className="bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 text-gray-700 dark:text-gray-300 font-bold px-5 py-2.5 rounded-full text-sm hover:bg-[#513394] hover:text-white hover:border-transparent transition-all">
                       {item.label} →

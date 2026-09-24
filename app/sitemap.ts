@@ -235,6 +235,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: 'monthly',
       priority: 0.9,
     },
+    {
+      url: `${BASE_URL}/physiotherapy-lower-parel`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
     // Pain + sports massage landing pages
     {
       url: `${BASE_URL}/back-pain-sports-massage-mumbai`,

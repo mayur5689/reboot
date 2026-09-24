@@ -414,16 +414,17 @@ export default function PhysioDadarLanding() {
               </span>
               <h2 className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white tracking-tight mb-6 leading-tight">
                 Serving Patients from Dadar,{' '}
-                <span className="text-[#513394] dark:text-[#8B5CF6]">Worli, Lower Parel & Beyond</span>
+                <span className="text-[#513394] dark:text-[#8B5CF6]">Matunga, Sion & Beyond</span>
               </h2>
               <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed mb-8">
-                Patients travel from Matunga, Sion, Bandra, Lower Parel, and BKC for the clinical team and
-                integrated recovery environment at R3BOOT. Our location in Dadar East puts us within 15–20
-                minutes of most central and south Mumbai neighbourhoods by road or train.
+                Dadar East is the flagship for aqua therapy and full-day physio slots. Patients from Matunga,
+                Sion, Shivaji Park, and Bandra book here for the clinical team and integrated recovery
+                environment. If you live or work in Lower Parel, Prabhadevi, Worli, or BKC, our Lodha Signet
+                studio may be closer — same clinical standard, shorter commute.
               </p>
 
-              <div className="flex flex-wrap gap-3 mb-10">
-                {['Dadar', 'Matunga', 'Sion', 'Worli', 'Lower Parel', 'Bandra', 'Parel', 'Shivaji Park', 'Wadala'].map((area, idx) => (
+              <div className="flex flex-wrap gap-3 mb-6">
+                {['Dadar', 'Matunga', 'Sion', 'Shivaji Park', 'Bandra', 'Parel', 'Wadala', 'Worli'].map((area, idx) => (
                   <span
                     key={idx}
                     className="bg-[#513394]/10 dark:bg-[#8B5CF6]/20 text-[#513394] dark:text-[#A78BFA] font-bold px-5 py-2.5 rounded-full text-sm"
@@ -432,6 +433,12 @@ export default function PhysioDadarLanding() {
                   </span>
                 ))}
               </div>
+              <p className="text-sm text-gray-500 dark:text-gray-400 mb-10">
+                Looking for Lodha Signet?{' '}
+                <Link href="/physiotherapy-lower-parel" className="font-bold text-[#513394] dark:text-[#A78BFA] hover:underline">
+                  Physiotherapy Lower Parel →
+                </Link>
+              </p>
 
               <div className="space-y-3 text-sm text-gray-600 dark:text-gray-400">
                 <div className="flex items-start gap-3">
