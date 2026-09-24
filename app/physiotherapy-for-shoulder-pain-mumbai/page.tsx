@@ -731,6 +731,44 @@ export default function PhysiotherapyShoulderPainMumbaiPage() {
       {/* ─── LOCATION ─── */}
       <LocationSection />
 
+      {/* ─── GUIDES ─── */}
+      <section className="py-10 sm:py-14 bg-[#F8F9FA] dark:bg-[#0D0D0D]">
+        <div className="container mx-auto px-5 sm:px-6 lg:px-8 max-w-5xl">
+          <p className="text-xs font-black tracking-[0.3em] text-[#513394] dark:text-[#A78BFA] uppercase mb-5 sm:mb-6">
+            GUIDES //
+          </p>
+          <h2 className="text-2xl sm:text-3xl font-black text-gray-900 dark:text-white tracking-tight mb-6 sm:mb-8">
+            Shoulder pain decisions,{' '}
+            <span className="text-[#513394] dark:text-[#8B5CF6]">explained</span>
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
+            {[
+              {
+                href: '/blog/shoulder-pain-sleeping-left-side-frozen-gym-faq',
+                label: 'Shoulder Pain FAQ',
+                desc: 'Sleeping pain, left-side pain, frozen shoulder, and gym overload — answered.',
+              },
+              {
+                href: '/blog/physiotherapist-guide-shoulder-joint-pain-relief',
+                label: 'Physiotherapist Guide to Shoulder Relief',
+                desc: 'How clinical physio assesses and treats shoulder joint pain, step by step.',
+              },
+            ].map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="group p-5 sm:p-6 rounded-2xl bg-white dark:bg-white/[0.04] border border-gray-100 dark:border-white/[0.08] hover:border-[#513394]/40 hover:shadow-lg dark:hover:shadow-none transition-all"
+              >
+                <p className="font-black text-gray-900 dark:text-white text-base mb-2 group-hover:text-[#513394] dark:group-hover:text-[#A78BFA] transition-colors">
+                  {item.label} →
+                </p>
+                <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">{item.desc}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ─── RELATED LINKS ─── */}
       <section className="py-10 sm:py-14 bg-white dark:bg-[#0A0A0A]">
         <div className="container mx-auto px-5 sm:px-6 lg:px-8 max-w-5xl">
@@ -746,6 +784,8 @@ export default function PhysiotherapyShoulderPainMumbaiPage() {
               { label: 'Post-Surgery Physiotherapy', href: '/post-surgery-physiotherapy-mumbai' },
               { label: 'Neck & Shoulder Sports Massage', href: '/neck-shoulder-pain-sports-massage-mumbai' },
               { label: 'Physiotherapy Mumbai', href: '/physiotherapy-mumbai' },
+              { label: 'Shoulder Pain FAQ Blog', href: '/blog/shoulder-pain-sleeping-left-side-frozen-gym-faq' },
+              { label: 'Shoulder Joint Pain Guide', href: '/blog/physiotherapist-guide-shoulder-joint-pain-relief' },
             ].map((link) => (
               <Link
                 key={link.href}
