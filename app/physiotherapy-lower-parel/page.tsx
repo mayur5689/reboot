@@ -737,6 +737,8 @@ export default function PhysiotherapyLowerParelPage() {
               { label: 'Physiotherapy Mumbai', href: '/physiotherapy-mumbai' },
               { label: 'Sports Massage Lower Parel', href: '/sports-massage-lower-parel' },
               { label: 'Contrast Therapy Lower Parel', href: '/contrast-therapy-lower-parel' },
+              { label: 'Pilates Lower Parel', href: '/pilates-lower-parel' },
+              { label: 'Reformer Pilates Lower Parel', href: '/reformer-pilates-lower-parel' },
               { label: 'Shoulder Pain Physiotherapy', href: '/physiotherapy-for-shoulder-pain-mumbai' },
               { label: 'Contact & Hours', href: '/contact' },
             ].map((link) => (

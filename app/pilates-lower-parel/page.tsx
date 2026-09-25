@@ -1,0 +1,879 @@
+import Image from 'next/image'
+import Link from 'next/link'
+import { Metadata } from 'next'
+import { services } from '@/lib/services'
+import { FAQSection } from '@/components/faq-section'
+import ServiceSchema from '@/components/schema/ServiceSchema'
+import FAQSchema from '@/components/schema/FAQSchema'
+import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema'
+import { pilatesLowerParelFaqs } from '@/lib/faqs/pilates-lower-parel'
+import { HeroTrustBadge, googleReviewsBadge, type TrustBadgeItem } from '@/components/HeroTrustBadge'
+import { MobileHeroTrust } from '@/components/MobileHeroTrust'
+import { HeroSlider } from '@/app/services-demo/contrast-therapy/HeroSlider'
+import { TeamSectionDemo } from '@/app/services-demo/contrast-therapy/TeamSectionDemo'
+import { TestimonialsCarousel } from '@/app/services/clinical-pilates/TestimonialsCarousel'
+import { LowerParelLocationSection } from '@/components/locations/LowerParelLocationSection'
+import { PainPointsSection } from '@/app/services/clinical-pilates/PainPointsSection'
+import { ComparisonSection } from '@/app/services/clinical-pilates/ComparisonSection'
+import {
+  ClipboardCheck,
+  Target,
+  Dumbbell,
+  Stethoscope,
+  TrendingUp,
+  Activity,
+  Zap,
+  Trophy,
+  Clock,
+  User,
+  Users,
+  ClipboardList,
+  ShieldCheck,
+} from 'lucide-react'
+
+export const metadata: Metadata = {
+  title: 'Pilates Lower Parel & Prabhadevi | Physio-Led | R3BOOT',
+  description:
+    'Pilates in Lower Parel at R3BOOT Lodha Signet | physiotherapist-led, 1:1 reformer & mat. Near Worli, Kamala Mills & BKC. Not a group class. Book via WhatsApp.',
+  alternates: { canonical: '/pilates-lower-parel' },
+  keywords: [
+    'pilates lower parel',
+    'pilates prabhadevi',
+    'pilates near kamala mills',
+    'pilates worli',
+    'pilates near bkc',
+    'pilates studio lower parel',
+    'reformer pilates lower parel',
+    'pilates for beginners lower parel',
+    'physiotherapist led pilates lower parel',
+    'private pilates lower parel',
+  ],
+}
+
+const otherServices = services.filter((s) => s.slug !== 'clinical-pilates').slice(0, 4)
+
+const heroSlides = [
+  {
+    src: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1785290132/hero_image_lxzfvf.png',
+    alt: 'R3BOOT Pilates studio, clients on reformer machines at Lower Parel · Lodha Signet',
+  },
+  {
+    src: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1777793759/Clinical_Pillates_Image_4_rluyr1.png',
+    alt: 'Reformer Pilates session at R3BOOT Mumbai',
+  },
+  {
+    src: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1777793697/Clinical_Pillates_Image_3_pil8g7.jpg',
+    alt: 'Mat-based Pilates session at R3BOOT Mumbai',
+  },
+]
+
+const testimonials = [
+  {
+    name: 'Sonal Malik',
+    meta: 'Google User · 6 reviews',
+    ago: '4 months ago',
+    avatar: '/images/Customer_Review/Sonal Malik.png',
+    quote:
+      'The Pilates sessions were highly personalized, with clear focus on alignment and core strength. I have already noticed better posture and reduced stiffness. Highly recommend for anyone serious about long-term physical wellness.',
+  },
+  {
+    name: 'Namrata Doshi',
+    meta: 'Local Guide · 12 reviews',
+    ago: '1 month ago',
+    avatar: '/images/Customer_Review/Namrata Doshi.png',
+    quote:
+      'The team is highly professional, knowledgeable, and genuinely caring. From the initial assessment to the recovery plan, everything was clearly explained and tailored to my needs. Highly recommend R3BOOT.',
+  },
+  {
+    name: 'Chandrakant Chande',
+    meta: 'Local Guide · 24 reviews',
+    ago: '2 months ago',
+    avatar: '/images/Customer_Review/Namrata Doshi.png',
+    quote:
+      'Reboot team was wonderful. Navigated me through the entire experience with great insights. My body also feels lighter and better. Would definitely recommend this place for someone looking for good recovery.',
+  },
+  {
+    name: 'Dharmesh Thakkar',
+    meta: 'Google User · 8 reviews',
+    ago: '3 months ago',
+    avatar: '/images/Customer_Review/Sonal Malik.png',
+    quote:
+      'The deep tissue massage, cupping therapy, and ice water treatment helped relieve my body stiffness tremendously, while the sauna session left me feeling completely rejuvenated. Professional and well-equipped.',
+  },
+  {
+    name: 'JugalKishore Shah',
+    meta: 'Google User · 3 reviews',
+    ago: '5 months ago',
+    avatar: '/images/Customer_Review/JugalKishore Shah.png',
+    quote:
+      'Excellent idea brought into reality. People will love to take benefit of it. Very professionally done. Keep it up and maintain high standard of services.',
+  },
+  {
+    name: 'Arjun',
+    meta: 'Google User · 5 reviews',
+    ago: '1 month ago',
+    avatar: '/images/Customer_Review/Arjun.png',
+    quote:
+      'Wonderful experience. It is one of those places you actually wait to visit again because the first time was so amazing. Highly recommended!',
+  },
+]
+
+const pilatesTrustBadges: TrustBadgeItem[] = [
+  googleReviewsBadge,
+  {
+    icon: 'clock',
+    value: '45–60 Min',
+    label: 'Session Length',
+    description: 'Private, progressive sessions.',
+  },
+  {
+    icon: 'user',
+    value: 'Physio-Led',
+    label: 'Private Pilates',
+    description: '1:1, not a group class.',
+  },
+  {
+    icon: 'target',
+    value: 'Reformer + Mat',
+    label: 'Your Format',
+    description: 'Chosen after assessment.',
+  },
+]
+
+const commercialPainPoints = [
+  {
+    title: 'Group classes feel too crowded',
+    description: 'You want cueing on your form, not a shared playlist. Private sessions give space to learn reformer or mat properly.',
+    image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1785801667/image4_ehqwxv.webp',
+  },
+  {
+    title: 'Desk stiffness after long workdays',
+    description: 'Neck and lower back tighten by evening. Stretching helps for an hour, then it is back. You need a plan that sticks through the week.',
+    image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1785801667/image5_oxc1oq.webp',
+  },
+  {
+    title: 'Beginner and unsure where to start',
+    description: 'You searched Pilates in Lower Parel but do not want to be dropped into an advanced class. Assessment-first sessions match your level.',
+    image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1785801666/image2_it1wlb.webp',
+  },
+  {
+    title: 'Training hard, core still feels weak',
+    description: 'Gym and sport load is high, but trunk control is the missing piece. Pilates here supports how you train, not a separate fitness silo.',
+    image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1785801667/image6_edhxb4.webp',
+  },
+  {
+    title: 'Tried studios, still comparing options',
+    description: 'Studios near Worli and Kamala Mills are everywhere. You want private, physiotherapist-led Pilates at Lodha Signet.',
+    image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1785801665/image1_ofga37.webp',
+  },
+  {
+    title: 'Want reformer without a packed class',
+    description: 'Reformer looks great until you share it with ten people. At R3BOOT Lower Parel, springs are set for you in a one-to-one session.',
+    image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1785801666/image3_wfixnu.webp',
+  },
+]
+
+const commercialComparisonRows = [
+  {
+    icon: Users,
+    label: 'Who leads it',
+    groupClass: 'Fitness instructor, group class',
+    right: 'Physiotherapist, private session',
+  },
+  {
+    icon: ClipboardList,
+    label: 'Starting point',
+    groupClass: 'Class level or package',
+    right: 'Individual assessment first',
+  },
+  {
+    icon: Target,
+    label: 'Exercise selection',
+    groupClass: 'Same routine for the room',
+    right: 'Matched to your body and goals',
+  },
+  {
+    icon: Activity,
+    label: 'Progression',
+    groupClass: 'Class calendar difficulty',
+    right: 'Advances with how you respond',
+  },
+  {
+    icon: ShieldCheck,
+    label: 'Format',
+    groupClass: 'Shared mat or reformer class',
+    right: 'One-to-one reformer or mat',
+  },
+  {
+    icon: TrendingUp,
+    label: 'Best for',
+    groupClass: 'Fitness, social studio vibe',
+    right: 'Beginners, desk posture, athletes',
+  },
+]
+
+const clusterLinks = [
+  { label: 'Pilates Mumbai', href: '/pilates-mumbai', eyebrow: 'City head page' },
+  { label: 'Reformer Pilates Lower Parel', href: '/reformer-pilates-lower-parel', eyebrow: 'Equipment' },
+  { label: 'Physiotherapy Lower Parel', href: '/physiotherapy-lower-parel', eyebrow: 'Same studio' },
+  { label: 'Sports Massage Lower Parel', href: '/sports-massage-lower-parel', eyebrow: 'Recovery' },
+  { label: 'Contrast Therapy Lower Parel', href: '/contrast-therapy-lower-parel', eyebrow: 'Recovery' },
+  { label: 'Clinical Pilates Mumbai', href: '/clinical-pilates-mumbai', eyebrow: 'Injury programs' },
+]
+
+function PhoneIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"
+      />
+    </svg>
+  )
+}
+
+export default function PilatesLowerParelPage() {
+  return (
+    <main className="min-h-screen bg-white dark:bg-[#0A0A0A]">
+      {/* DESKTOP HERO */}
+      <section className="hidden md:flex flex-col bg-black overflow-hidden pt-20 lg:pt-24" style={{ minHeight: '92vh' }}>
+        <div className="relative flex flex-1 flex-col">
+          <div className="absolute inset-0">
+            <Image
+              src="https://res.cloudinary.com/dj7bot2uc/image/upload/v1785290132/hero_image_lxzfvf.png"
+              alt="Pilates Lower Parel, R3BOOT Lodha Signet"
+              fill
+              className="object-cover"
+              style={{ objectPosition: '40% center' }}
+              priority
+            />
+          </div>
+          <div
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              background:
+                'linear-gradient(to right, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.78) 18%, rgba(0,0,0,0.45) 38%, rgba(0,0,0,0.15) 55%, transparent 68%)',
+            }}
+          />
+          <div
+            className="absolute inset-x-0 bottom-0 h-[34%] pointer-events-none"
+            style={{ background: 'linear-gradient(to top, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.18) 50%, transparent 100%)' }}
+          />
+
+          <div className="relative z-10 flex flex-1 flex-col justify-center px-12 lg:px-16 xl:px-20 max-w-[54%]">
+            <p className="text-[#A78BFA] text-[11px] font-black tracking-[0.25em] uppercase mb-4">
+              Lower Parel&nbsp;&nbsp;•&nbsp;&nbsp;Lodha Signet&nbsp;&nbsp;•&nbsp;&nbsp;1:1
+            </p>
+            <h1 className="text-5xl lg:text-6xl xl:text-[4.25rem] font-black text-white tracking-tight leading-[1.04] mb-4">
+              Pilates
+              <br />
+              in <span className="text-[#A78BFA]">Lower Parel</span>
+            </h1>
+            <p className="text-[16px] text-white/55 max-w-md leading-relaxed mb-7">
+              One-to-one Pilates at Lodha Signet for desk pros, gym athletes, and beginners near Worli, Kamala Mills, and BKC. Assessment first. Not a group class.
+            </p>
+            <div className="flex items-center gap-4">
+              <a
+                href="tel:+919702368612"
+                className="inline-flex items-center gap-2.5 bg-[#513394] hover:bg-[#603eb0] text-white font-black px-7 py-3.5 rounded-full transition-all hover:scale-[1.02] text-[14px] tracking-wide shadow-lg shadow-[#513394]/30"
+              >
+                <PhoneIcon className="w-4 h-4" />
+                Book Your Session
+              </a>
+              <a
+                href="https://wa.me/919702368612"
+                target="_blank"
+                rel="nofollow noopener noreferrer"
+                className="inline-flex items-center gap-2.5 border border-white/20 text-white hover:bg-white/[0.07] font-bold px-7 py-3.5 rounded-full transition-all text-[14px] tracking-wide"
+              >
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                  <path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.118 1.524 5.855L0 24l6.335-1.502A11.942 11.942 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.013-1.38l-.36-.214-3.732.885.916-3.629-.235-.373A9.818 9.818 0 1112 21.818z" />
+                </svg>
+                WhatsApp Us
+              </a>
+            </div>
+          </div>
+
+          <HeroTrustBadge items={pilatesTrustBadges} />
+        </div>
+      </section>
+
+      {/* MOBILE HERO */}
+      <section className="md:hidden pt-20 pb-0 bg-white dark:bg-[#0A0A0A]">
+        <div className="container mx-auto px-5">
+          <HeroSlider slides={heroSlides} />
+          <div className="inline-flex items-center gap-2 bg-[#513394]/10 dark:bg-[#513394]/20 rounded-full px-4 py-2 mt-5 mb-4">
+            <div className="w-1.5 h-1.5 rounded-full bg-[#513394] dark:bg-[#A78BFA]" />
+            <span className="text-[#513394] dark:text-[#A78BFA] text-[11px] font-black tracking-[0.3em] uppercase">
+              Pilates // Lower Parel
+            </span>
+          </div>
+          <h1 className="text-[2rem] font-black text-gray-900 dark:text-white tracking-tight leading-[1.1] mb-3">
+            Pilates in <span className="text-[#513394] dark:text-[#A78BFA]">Lower Parel</span>
+          </h1>
+          <p className="text-base text-gray-500 dark:text-gray-400 leading-relaxed mb-6">
+            One-to-one, physiotherapist-led Pilates at R3BOOT Lodha Signet. Reformer and mat. Near Worli, Kamala Mills, and BKC.
+          </p>
+          <MobileHeroTrust items={pilatesTrustBadges} />
+        </div>
+      </section>
+
+      {/* WHAT TO EXPECT */}
+      <section id="session" className="py-16 sm:py-20 lg:py-28 bg-white dark:bg-[#0A0A0A]">
+        <div className="container mx-auto px-5 sm:px-6 lg:px-8">
+          <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-14">
+            <span className="text-[11px] font-black tracking-[0.3em] text-[#513394] dark:text-[#A78BFA] uppercase mb-4 block">
+              YOUR SESSION //
+            </span>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 dark:text-white tracking-tight mb-4">
+              What to expect at <span className="text-[#513394] dark:text-[#8B5CF6]">Lower Parel</span>
+            </h2>
+            <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed">
+              A full session takes 45–60 minutes including assessment, guided practice, and a progression check.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5 lg:gap-6 max-w-7xl mx-auto">
+            {[
+              {
+                icon: ClipboardCheck,
+                number: '01',
+                title: 'Assessment & Goal Setting',
+                body: 'Your physiotherapist evaluates posture, movement, strength, and any tightness or discomfort before a single exercise is set.',
+              },
+              {
+                icon: Target,
+                number: '02',
+                title: 'Program Prescription',
+                body: 'Exercises and equipment — reformer or mat — are chosen for your body and goals, not adapted from a class template.',
+              },
+              {
+                icon: Stethoscope,
+                number: '03',
+                title: 'Integrated Care',
+                body: 'Pilates, dry needling, and manual therapy can run in the same session when your body needs it.',
+              },
+              {
+                icon: TrendingUp,
+                number: '04',
+                title: 'Re-Assessment & Progression',
+                body: 'Your program advances based on how you respond in sessions, not how the class calendar says you should feel.',
+              },
+            ].map((step, i) => {
+              const Icon = step.icon
+              return (
+                <div
+                  key={i}
+                  className="relative flex flex-col sm:aspect-square p-5 sm:p-6 lg:p-7 rounded-2xl bg-[#F8F9FA] dark:bg-white/[0.04] border border-gray-100 dark:border-white/[0.08] group hover:border-[#513394]/30 hover:shadow-lg dark:hover:shadow-none transition-all duration-300 overflow-hidden"
+                >
+                  <div className="absolute -top-4 -right-2 text-[5.5rem] lg:text-[6rem] font-black text-gray-100 dark:text-white/[0.035] leading-none select-none pointer-events-none">
+                    {step.number}
+                  </div>
+                  <div className="relative z-10 flex flex-col h-full">
+                    <div className="w-11 h-11 rounded-xl bg-[#513394]/10 dark:bg-[#8B5CF6]/20 flex items-center justify-center text-[#513394] dark:text-[#A78BFA] mb-5 group-hover:bg-[#513394] group-hover:text-white transition-all duration-300">
+                      <Icon className="w-5 h-5" strokeWidth={1.75} />
+                    </div>
+                    <h3 className="font-black text-gray-900 dark:text-white text-base lg:text-[17px] mb-3 leading-snug">{step.title}</h3>
+                    <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">{step.body}</p>
+                  </div>
+                </div>
+              )
+            })}
+          </div>
+        </div>
+      </section>
+
+      <PainPointsSection
+        intro="If any of these feel like your week, a private assessment — not another packed class — is the missing step."
+        captionTitle="Pilates isn't one-size-fits-all."
+        captionBody="It's built around your assessment and goals."
+        points={commercialPainPoints}
+      />
+
+      {/* METHODOLOGY */}
+      <section id="methodology" className="py-16 sm:py-24 lg:py-32 bg-[#F8F9FA] dark:bg-[#0D0D0D]">
+        <div className="container mx-auto px-5 sm:px-6 lg:px-8">
+          <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
+            <div className="flex items-center justify-center gap-3 mb-4">
+              <span className="w-8 h-px bg-[#513394]/40 dark:bg-[#A78BFA]/40" />
+              <span className="text-[11px] font-black tracking-[0.3em] text-[#513394] dark:text-[#A78BFA] uppercase">METHODOLOGY</span>
+              <span className="w-8 h-px bg-[#513394]/40 dark:bg-[#A78BFA]/40" />
+            </div>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 dark:text-white tracking-tight mb-4 leading-tight">
+              How We Deliver <span className="text-[#513394] dark:text-[#8B5CF6]">Pilates at Lower Parel</span>
+            </h2>
+            <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed">
+              Reformer and mat Pilates, chosen for your body — not a class timetable.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-24 items-start max-w-7xl mx-auto">
+            <div className="relative rounded-[2rem] sm:rounded-[2.5rem] overflow-hidden aspect-[4/5] w-full shadow-2xl lg:sticky lg:top-28">
+              <Image
+                src="https://res.cloudinary.com/dj7bot2uc/image/upload/v1777793759/Clinical_Pillates_Image_4_rluyr1.png"
+                alt="Reformer Pilates Lower Parel – R3BOOT Lodha Signet"
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-black/25" />
+              <div className="absolute top-5 left-5 sm:top-6 sm:left-6 flex items-center gap-3 bg-white/95 backdrop-blur-sm rounded-2xl pl-3 pr-4 py-2.5 shadow-lg">
+                <div className="w-9 h-9 rounded-xl bg-[#513394]/10 flex items-center justify-center text-[#513394] shrink-0">
+                  <Dumbbell className="w-4 h-4" strokeWidth={2} />
+                </div>
+                <div>
+                  <p className="text-[9px] font-black tracking-[0.2em] text-[#513394] uppercase leading-none mb-1">Reformer + Mat</p>
+                  <p className="text-gray-900 font-bold text-[13px] leading-none">Pilates Studio</p>
+                </div>
+              </div>
+              <div className="absolute bottom-6 left-6 right-6 sm:bottom-8 sm:left-8 sm:right-8">
+                <div className="flex flex-col gap-2">
+                  {['Physiotherapist-Led Pilates', 'One-to-One Sessions'].map((point, i) => (
+                    <div key={i} className="flex items-center gap-2.5">
+                      <div className="w-5 h-5 rounded-full bg-[#513394]/30 border border-[#A78BFA]/50 flex items-center justify-center shrink-0">
+                        <svg className="w-3 h-3 text-[#C4B5FD]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                        </svg>
+                      </div>
+                      <span className="text-white font-bold text-[15px] sm:text-base">{point}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div className="grid grid-cols-2 sm:grid-cols-4 rounded-2xl border border-gray-100 dark:border-white/[0.08] bg-white dark:bg-white/[0.03] overflow-hidden mb-8 sm:mb-10">
+                {[
+                  { icon: Clock, value: '45–60 Min', label: 'Session Length' },
+                  { icon: User, value: 'Physio-Led', label: 'Delivered By' },
+                  { icon: Target, value: 'Assessment', label: 'Program Design' },
+                  { icon: ClipboardCheck, value: '1:1', label: 'Session Format' },
+                ].map((stat, i) => {
+                  const StatIcon = stat.icon
+                  return (
+                    <div
+                      key={i}
+                      className={`flex items-center gap-2.5 px-3.5 sm:px-4 py-4 min-w-0
+                        ${i % 2 === 1 ? 'border-l border-gray-100 dark:border-white/[0.08]' : ''}
+                        ${i >= 2 ? 'border-t border-gray-100 dark:border-white/[0.08] sm:border-t-0' : ''}
+                        ${i > 0 ? 'sm:border-l sm:border-gray-100 dark:sm:border-white/[0.08]' : ''}`}
+                    >
+                      <div className="w-9 h-9 rounded-full bg-[#513394]/8 dark:bg-[#8B5CF6]/15 flex items-center justify-center text-[#513394] dark:text-[#A78BFA] shrink-0">
+                        <StatIcon className="w-4 h-4" strokeWidth={1.8} />
+                      </div>
+                      <div className="min-w-0">
+                        <p className="text-gray-900 dark:text-white font-black text-[13px] leading-tight truncate">{stat.value}</p>
+                        <p className="text-gray-400 dark:text-white/40 text-[10px] font-bold uppercase tracking-wide mt-0.5 truncate">{stat.label}</p>
+                      </div>
+                    </div>
+                  )
+                })}
+              </div>
+
+              <div className="flex flex-col">
+                {[
+                  {
+                    icon: Dumbbell,
+                    title: 'Reformer Pilates',
+                    body: 'Spring resistance for precise loading. Ideal for beginners who need support and athletes who need controlled strength. See our dedicated Reformer Pilates Lower Parel page.',
+                    light: '#513394',
+                    dark: '#A78BFA',
+                    bgLight: 'rgba(81,51,148,0.08)',
+                    bgDark: 'rgba(167,139,250,0.14)',
+                    borderLight: 'rgba(81,51,148,0.35)',
+                    borderDark: 'rgba(167,139,250,0.45)',
+                  },
+                  {
+                    icon: Activity,
+                    title: 'Mat-Based Pilates',
+                    body: 'Bodyweight precision work for deep spinal and pelvic stabilisers. Core to desk posture, back pain, and home practice between visits.',
+                    light: '#0D9488',
+                    dark: '#2DD4BF',
+                    bgLight: 'rgba(13,148,136,0.08)',
+                    bgDark: 'rgba(45,212,191,0.14)',
+                    borderLight: 'rgba(13,148,136,0.35)',
+                    borderDark: 'rgba(45,212,191,0.45)',
+                  },
+                  {
+                    icon: Zap,
+                    title: 'Dry Needling Integration',
+                    body: 'Where trigger points block correct activation, dry needling restores function before Pilates loading. Our physio team is certified.',
+                    light: '#B45309',
+                    dark: '#FBBF24',
+                    bgLight: 'rgba(180,83,9,0.08)',
+                    bgDark: 'rgba(251,191,36,0.14)',
+                    borderLight: 'rgba(180,83,9,0.35)',
+                    borderDark: 'rgba(251,191,36,0.45)',
+                  },
+                  {
+                    icon: Trophy,
+                    title: 'Sport & Desk Performance',
+                    body: 'Programs for gym, HYROX, running, and long office days — movement quality that transfers to how you train and work.',
+                    light: '#0369A1',
+                    dark: '#38BDF8',
+                    bgLight: 'rgba(3,105,161,0.08)',
+                    bgDark: 'rgba(56,189,248,0.14)',
+                    borderLight: 'rgba(3,105,161,0.35)',
+                    borderDark: 'rgba(56,189,248,0.45)',
+                  },
+                ].map((phase, idx, arr) => {
+                  const Icon = phase.icon
+                  const isLast = idx === arr.length - 1
+                  return (
+                    <div
+                      key={idx}
+                      className="flex gap-4 sm:gap-6"
+                      style={
+                        {
+                          '--pc': phase.light,
+                          '--pcd': phase.dark,
+                          '--pbg': phase.bgLight,
+                          '--pbgd': phase.bgDark,
+                          '--pbd': phase.borderLight,
+                          '--pbdd': phase.borderDark,
+                        } as React.CSSProperties
+                      }
+                    >
+                      <div className="flex flex-col items-center shrink-0 w-12 sm:w-16">
+                        <span className="text-[10px] font-black tracking-widest rounded-full px-2 sm:px-2.5 py-1 leading-none mb-2 sm:mb-2.5 bg-[var(--pbg)] dark:bg-[var(--pbgd)] text-[var(--pc)] dark:text-[var(--pcd)]">
+                          {String(idx + 1).padStart(2, '0')}
+                        </span>
+                        <div className="w-11 h-11 sm:w-14 sm:h-14 rounded-full border-[1.5px] flex items-center justify-center shrink-0 border-[var(--pbd)] dark:border-[var(--pbdd)] bg-[var(--pbg)] dark:bg-[var(--pbgd)]">
+                          <Icon className="w-4 h-4 sm:w-5 sm:h-5 text-[var(--pc)] dark:text-[var(--pcd)]" strokeWidth={1.75} />
+                        </div>
+                        {!isLast && (
+                          <div className="w-[1.5px] flex-1 min-h-[20px] my-1 [background:repeating-linear-gradient(to_bottom,rgba(0,0,0,0.15)_0px,rgba(0,0,0,0.15)_3px,transparent_3px,transparent_8px)] dark:[background:repeating-linear-gradient(to_bottom,rgba(255,255,255,0.18)_0px,rgba(255,255,255,0.18)_3px,transparent_3px,transparent_8px)]" />
+                        )}
+                      </div>
+                      <div className={`flex-1 min-w-0 ${isLast ? 'pb-0' : 'pb-5 sm:pb-6'}`}>
+                        <div className="p-4 sm:p-6 rounded-2xl bg-white dark:bg-white/[0.04] border border-gray-100 dark:border-white/[0.06] hover:border-[var(--pbd)] dark:hover:border-[var(--pbdd)] transition-all duration-300">
+                          <h3 className="text-[15px] sm:text-base font-bold text-gray-900 dark:text-white mb-1.5 sm:mb-2">{phase.title}</h3>
+                          <p className="text-gray-500 dark:text-gray-400 text-[13px] sm:text-sm leading-relaxed">{phase.body}</p>
+                        </div>
+                      </div>
+                    </div>
+                  )
+                })}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <ComparisonSection
+        title={
+          <>
+            Private Pilates is more than <span className="text-[#7B5FCA]">a group class.</span>
+          </>
+        }
+        subtitle="A group class follows a fixed sequence for everyone in the room. At R3BOOT Lower Parel, Pilates starts with your assessment and progresses one-to-one with a physiotherapist."
+        leftColumnLabel="Group Pilates Studio"
+        rightColumnLabel="R3BOOT Lower Parel"
+        rightColumnMobileLabel="R3BOOT"
+        rows={commercialComparisonRows}
+      />
+
+      {/* WHO IS IT FOR */}
+      <section className="py-12 sm:py-24 lg:py-32">
+        <div className="container mx-auto px-5 sm:px-6 lg:px-8">
+          <div className="text-center mb-8 sm:mb-16">
+            <span className="text-[11px] font-black tracking-[0.3em] text-[#513394] dark:text-[#A78BFA] uppercase mb-4 block">
+              WHO IT FITS //
+            </span>
+            <h2 className="text-3xl sm:text-4xl md:text-6xl font-black text-gray-900 dark:text-white tracking-tight">
+              Built for <span className="text-[#513394] dark:text-[#8B5CF6]">Lower Parel Life</span>
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-6">
+            {[
+              {
+                label: 'Beginners Starting Pilates',
+                tag: 'BEGINNER //',
+                description: 'First session is assessment. You are not dropped into a hard group routine built for someone else’s body.',
+                image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1785802981/CONDITION-SPECIFIC-WOMENS-HEALTH_taeoe1.webp',
+                points: ['Assessment first', '1:1 cueing', 'Safe progression'],
+              },
+              {
+                label: 'Desk Posture & Back Pain',
+                tag: 'DESK //',
+                description: 'Neck, upper back, and lower back stiffness from long office days — programmed to your pattern, not generic core circuits.',
+                image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1785802981/CONDITION-SPECIFIC-SPINE_pp2m5e.webp',
+                points: ['Posture correction', 'Lower back control', 'Desk load'],
+              },
+              {
+                label: 'Gym, Sport & Recovery',
+                tag: 'SPORT //',
+                description: 'Core and hip control between training blocks, with massage and recovery modalities in the same centre when you need them.',
+                image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1785802981/CONDITION-SPECIFIC-SPORTS_x9c2c6.webp',
+                points: ['Gym & HYROX', 'Running control', 'Recovery support'],
+              },
+              {
+                label: 'Returning After Time Off',
+                tag: 'RETURN //',
+                description: 'Easing back onto reformer or mat after a break near work. Injury pathways hand off to our Clinical Pilates programs.',
+                image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1785802981/CONDITION-SPECIFIC-POST-SURGERY_ytzaon.webp',
+                points: ['Gradual loading', 'Clear next steps', 'Injury handoff'],
+              },
+            ].map((item, idx) => (
+              <div
+                key={idx}
+                className="group relative rounded-[1.5rem] sm:rounded-[2.5rem] overflow-hidden aspect-square sm:aspect-[16/10] shadow-xl hover:shadow-2xl transition-all duration-500"
+              >
+                <Image src={item.image} alt={item.label} fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-black/10 sm:from-black/90 sm:via-black/40" />
+                <div className="absolute inset-0 bg-[#513394]/0 group-hover:bg-[#513394]/30 transition-all duration-500" />
+                <div className="absolute inset-0 flex flex-col justify-end p-4 sm:p-8 md:p-10">
+                  <span className="hidden sm:block text-[10px] font-black tracking-[0.3em] text-white/50 uppercase mb-2">{item.tag}</span>
+                  <h3 className="text-xl sm:text-3xl md:text-4xl font-black text-white mb-1.5 sm:mb-3 tracking-tight leading-tight">{item.label}</h3>
+                  <p className="text-white/70 text-[13px] sm:text-sm leading-relaxed mb-3 sm:mb-5 max-w-lg line-clamp-2 sm:line-clamp-none block sm:hidden sm:group-hover:block transition-all">
+                    {item.description}
+                  </p>
+                  <div className="flex flex-wrap gap-1.5 sm:gap-2">
+                    {item.points.map((pt, i) => (
+                      <span key={i} className="bg-white/15 backdrop-blur-sm text-white text-[11px] sm:text-xs font-bold px-3 py-1 sm:px-4 sm:py-1.5 rounded-full border border-white/20">
+                        {pt}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <TeamSectionDemo />
+
+      {/* MOBILE testimonials */}
+      <section className="md:hidden py-10 bg-white dark:bg-[#0A0A0A]">
+        <div className="px-5 mb-6">
+          <span className="text-[11px] font-black tracking-[0.3em] text-[#513394] dark:text-[#A78BFA] uppercase block mb-2">Patient Stories</span>
+          <h2 className="text-[26px] font-extrabold text-gray-900 dark:text-white leading-tight">What clients say</h2>
+        </div>
+        <div className="flex gap-4 overflow-x-auto px-5 pb-2 snap-x snap-mandatory scrollbar-hide">
+          {testimonials.map((r, i) => (
+            <figure
+              key={i}
+              className="flex-shrink-0 w-[85vw] snap-start bg-white dark:bg-[#161616] border border-gray-100 dark:border-white/[0.07] shadow-sm dark:shadow-none rounded-3xl p-5 flex flex-col"
+            >
+              <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center gap-2.5">
+                  <svg className="w-7 h-7 flex-shrink-0" viewBox="0 0 48 48">
+                    <path fill="#4285F4" d="M44.5 20H24v8.5h11.8C34.7 33.9 30 37 24 37c-7.2 0-13-5.8-13-13s5.8-13 13-13c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 4.1 29.6 2 24 2 11.8 2 2 11.8 2 24s9.8 22 22 22c11 0 21-8 21-22 0-1.3-.2-2.7-.5-4z" />
+                    <path fill="#34A853" d="M6.3 14.7l7 5.1C15 16.1 19.1 13 24 13c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 4.1 29.6 2 24 2 16.3 2 9.6 7.3 6.3 14.7z" />
+                    <path fill="#FBBC05" d="M24 46c5.6 0 10.5-1.9 14.4-5l-6.7-5.5C29.6 37 26.9 38 24 38c-5.9 0-10.9-4-12.7-9.5l-7 5.4C7.5 41.8 15.2 46 24 46z" />
+                    <path fill="#EA4335" d="M44.5 20H24v8.5h11.8c-.8 2.4-2.3 4.4-4.3 5.8l6.7 5.5C42.1 36.4 45 30.7 45 24c0-1.3-.2-2.7-.5-4z" />
+                  </svg>
+                  <span className="text-gray-900 dark:text-white font-bold text-[15px]">Google Review</span>
+                </div>
+                <div className="flex items-center gap-1.5 bg-gray-100 dark:bg-[#222] rounded-full px-3 py-1.5">
+                  {[...Array(5)].map((_, j) => (
+                    <svg key={j} className="w-3.5 h-3.5 fill-yellow-400" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+                  <span className="text-gray-900 dark:text-white font-bold text-[13px] ml-0.5">5.0</span>
+                </div>
+              </div>
+              <div className="h-px bg-gray-100 dark:bg-white/[0.07] mb-4" />
+              <div className="flex items-center gap-3 mb-3">
+                <div className="relative w-11 h-11 rounded-full overflow-hidden flex-shrink-0">
+                  <Image src={r.avatar} alt={r.name} fill className="object-cover" />
+                </div>
+                <div>
+                  <p className="text-gray-900 dark:text-white font-bold text-[15px] leading-tight">{r.name}</p>
+                  <p className="text-gray-400 dark:text-white/40 text-[12px]">{r.meta}</p>
+                </div>
+              </div>
+              <blockquote className="text-gray-600 dark:text-white/80 text-[15px] leading-relaxed italic flex-grow mb-5">
+                &ldquo;{r.quote}&rdquo;
+              </blockquote>
+            </figure>
+          ))}
+        </div>
+      </section>
+
+      <section className="hidden md:block py-20 lg:py-28 bg-white dark:bg-[#0A0A0A]">
+        <div className="container mx-auto px-5 sm:px-6 lg:px-8">
+          <div className="text-center max-w-xl mx-auto mb-10 sm:mb-14">
+            <span className="text-[11px] font-black tracking-[0.3em] text-[#513394] dark:text-[#A78BFA] uppercase mb-4 block">PATIENT STORIES //</span>
+            <h2 className="text-3xl sm:text-4xl font-black text-gray-900 dark:text-white tracking-tight">What clients say</h2>
+          </div>
+          <TestimonialsCarousel testimonials={testimonials} />
+        </div>
+      </section>
+
+      <LowerParelLocationSection />
+
+      <FAQSection faqs={pilatesLowerParelFaqs} layout="grid" />
+
+      {/* CTA mobile */}
+      <section className="md:hidden bg-white dark:bg-[#0A0A0A] pt-10 pb-28">
+        <div className="px-4">
+          <div
+            className="relative rounded-3xl overflow-hidden px-6 pt-7 pb-6"
+            style={{ background: 'linear-gradient(135deg, #2a0d6e 0%, #1a0850 55%, #110638 100%)' }}
+          >
+            <div className="absolute top-0 right-0 w-48 h-48 rounded-full blur-[60px] opacity-30 pointer-events-none" style={{ background: '#7c3aed' }} />
+            <div className="relative">
+              <h2 className="text-[26px] font-black text-white leading-tight tracking-tight mb-2">
+                Book Pilates in <span className="text-[#A78BFA]">Lower Parel</span>
+              </h2>
+              <p className="text-white/55 text-[13px] leading-relaxed mb-5">
+                Assessment first. One-to-one. Physio-led reformer and mat at Lodha Signet. Say Lower Parel when you book.
+              </p>
+              <div className="flex flex-col gap-3">
+                <a href="tel:+919702368612" className="flex items-center justify-center gap-2 bg-white text-[#513394] font-black rounded-full py-3.5 text-[15px] tracking-wide">
+                  <PhoneIcon className="w-4 h-4" />
+                  Call to Book
+                </a>
+                <a
+                  href="https://wa.me/919702368612"
+                  target="_blank"
+                  rel="nofollow noopener noreferrer"
+                  className="flex items-center justify-center gap-2 border border-white/25 text-white font-bold rounded-full py-3.5 text-[15px] tracking-wide"
+                >
+                  WhatsApp
+                </a>
+              </div>
+              <p className="text-center text-white/30 text-[10px] tracking-[0.2em] uppercase mt-4">Lower Parel · Lodha Signet</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA desktop */}
+      <section className="hidden md:block py-16 lg:py-20 bg-[#513394] relative overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-white/[0.07] rounded-full blur-[100px] -translate-y-1/2 translate-x-1/4" />
+        </div>
+        <div className="container mx-auto px-6 lg:px-8 relative z-10 text-center">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tight mb-5 max-w-3xl mx-auto leading-tight">
+            Book Pilates in <span className="text-white/45">Lower Parel</span>
+          </h2>
+          <p className="text-lg text-white/65 mb-10 max-w-xl mx-auto leading-relaxed">
+            R3BOOT Lodha Signet, Lower Parel / Prabhadevi. One-to-one, physiotherapist-led. First session includes an assessment.
+          </p>
+          <div className="flex flex-row gap-4 justify-center">
+            <a
+              href="tel:+919702368612"
+              className="inline-flex items-center justify-center gap-2.5 bg-white text-[#513394] font-black px-10 py-5 rounded-full hover:scale-105 transition-all shadow-2xl text-base tracking-wide"
+            >
+              <PhoneIcon className="w-4 h-4" />
+              Call to Book
+            </a>
+            <a
+              href="https://wa.me/919702368612"
+              target="_blank"
+              rel="nofollow noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2.5 border-2 border-white/30 text-white font-bold px-10 py-5 rounded-full hover:bg-white/10 transition-all text-base tracking-wide"
+            >
+              WhatsApp
+            </a>
+          </div>
+          <p className="text-white/35 mt-8 font-bold tracking-widest text-xs uppercase">Lower Parel · Lodha Signet</p>
+        </div>
+      </section>
+
+      {/* OTHER SERVICES */}
+      <section className="py-24 lg:py-32 bg-[#F8F9FA] dark:bg-[#0D0D0D]">
+        <div className="container mx-auto px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <span className="text-[11px] font-black tracking-[0.3em] text-[#513394] dark:text-[#A78BFA] uppercase mb-4 block">KEEP EXPLORING //</span>
+            <h2 className="text-4xl md:text-6xl font-black text-gray-900 dark:text-white tracking-tight">
+              Other Ways to <span className="text-[#513394] dark:text-[#8B5CF6]">Recover</span>
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {otherServices.map((service, idx) => (
+              <Link
+                key={idx}
+                href={`/services/${service.slug}`}
+                className="group bg-white dark:bg-white/5 p-4 rounded-[2.5rem] shadow-sm hover:shadow-xl border border-transparent dark:border-white/5 transition-all duration-300 transform hover:-translate-y-2 flex flex-col h-full"
+              >
+                <div className="relative h-48 w-full shrink-0 overflow-hidden rounded-[2rem] mb-6 shadow-sm">
+                  <Image src={service.image} alt={service.title} fill className="object-cover group-hover:scale-110 transition-transform duration-500" />
+                </div>
+                <div className="px-2 pb-2 flex flex-col flex-grow">
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-[#513394] dark:group-hover:text-[#A78BFA] transition-colors mb-3">{service.title}</h3>
+                  <p className="text-sm text-gray-500 dark:text-gray-400 line-clamp-2 leading-relaxed mb-6">{service.description}</p>
+                  <div className="mt-auto">
+                    <div className="flex items-center justify-between w-full bg-[#513394]/10 group-hover:bg-[#513394] text-[#513394] group-hover:text-white rounded-full p-1 transition-all duration-300">
+                      <span className="text-[13px] font-black pl-5">EXPLORE</span>
+                      <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-sm">
+                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                          <path d="M9 18l6-6-6-6" />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CLUSTER LINKS */}
+      <section className="py-16 bg-white dark:bg-[#0A0A0A]">
+        <div className="container mx-auto px-6 lg:px-8 max-w-4xl space-y-4">
+          {clusterLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="group flex items-center justify-between p-6 bg-gray-50 dark:bg-white/5 rounded-[2rem] border border-gray-100 dark:border-white/10 hover:border-[#513394]/40 transition-all"
+            >
+              <div>
+                <p className="text-xs font-black tracking-widest text-[#513394] uppercase mb-1">{link.eyebrow}</p>
+                <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-[#513394] transition-colors">{link.label}</h3>
+              </div>
+              <svg className="w-6 h-6 text-[#513394] opacity-0 group-hover:opacity-100 transition-opacity shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                <path d="M9 18l6-6-6-6" />
+              </svg>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* Sticky mobile CTA */}
+      <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden">
+        <div className="bg-white/95 dark:bg-[#0A0A0A]/95 backdrop-blur-md border-t border-gray-200 dark:border-white/[0.09] px-4 pt-3 pb-5">
+          <div className="flex gap-3">
+            <a
+              href="tel:+919702368612"
+              className="flex-1 flex items-center justify-center gap-2 bg-[#513394] hover:bg-[#603eb0] text-white font-black rounded-xl py-3.5 text-[14px] tracking-wide transition-colors"
+            >
+              <PhoneIcon className="w-4 h-4" />
+              Call
+            </a>
+            <a
+              href="https://wa.me/919702368612"
+              target="_blank"
+              rel="nofollow noopener noreferrer"
+              className="flex-1 flex items-center justify-center gap-2 border border-gray-300 dark:border-white/20 text-gray-900 dark:text-white font-bold rounded-xl py-3.5 text-[14px] tracking-wide hover:bg-gray-100 dark:hover:bg-white/[0.07] transition-colors"
+            >
+              WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <ServiceSchema
+        serviceName="Pilates in Lower Parel Mumbai"
+        description="Physiotherapist-led Pilates at R3BOOT Lower Parel / Prabhadevi, Lodha Signet. One-to-one reformer and mat for beginners, desk posture, and athletes near Worli, Kamala Mills, and BKC."
+        serviceUrl="https://www.r3boot.in/pilates-lower-parel"
+      />
+      <FAQSchema faqs={pilatesLowerParelFaqs} />
+      <BreadcrumbSchema
+        items={[
+          { name: 'Home', url: '/' },
+          { name: 'Pilates Mumbai', url: '/pilates-mumbai' },
+          { name: 'Pilates Lower Parel', url: '/pilates-lower-parel' },
+        ]}
+      />
+    </main>
+  )
+}

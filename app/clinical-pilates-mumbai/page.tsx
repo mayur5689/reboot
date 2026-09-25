@@ -150,7 +150,11 @@ export default function ClinicalPilatesMumbaiPage() {
                   from physiotherapy assessments, not adapted from class routines. Reformer and mat-based
                   sessions. Programs for back pain, scoliosis, post-surgical rehabilitation, posture, prenatal,
                   and sports performance. Sessions are 45–60 minutes at Palai Plaza, Swami Gyan Jivandas Marg,
-                  Dadar East, Mumbai, 5 minutes from Dadar Central Line station.
+                  Dadar East, Mumbai, 5 minutes from Dadar Central Line station. Comparing general{' '}
+                  <Link href="/pilates-mumbai" className="text-[#513394] dark:text-[#A78BFA] font-bold hover:underline underline-offset-4">
+                    Pilates in Mumbai
+                  </Link>{' '}
+                  options first? Start there, then return here for condition-specific clinical pathways.
                 </p>
               </div>
 
@@ -371,7 +375,11 @@ export default function ClinicalPilatesMumbaiPage() {
                 <span className="text-[#513394] dark:text-[#8B5CF6]">Clinical Pilates</span>
               </h2>
               <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed mb-10">
-                R3BOOT offers both reformer-based and mat-based clinical Pilates. The decision is clinical, not preferential. Your physiotherapist will determine the appropriate format after assessment.
+                R3BOOT offers both reformer-based and mat-based clinical Pilates. The decision is clinical, not preferential. Your physiotherapist will determine the appropriate format after assessment. For the dedicated equipment page, see{' '}
+                <Link href="/reformer-pilates-mumbai" className="text-[#513394] dark:text-[#A78BFA] font-bold hover:underline underline-offset-4">
+                  Reformer Pilates Mumbai
+                </Link>
+                .
               </p>
               <div className="space-y-6">
                 {[
