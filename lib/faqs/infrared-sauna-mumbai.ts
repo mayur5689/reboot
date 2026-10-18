@@ -2,7 +2,7 @@ export const infraredSaunaMumbaiFaqs = [
   {
     question: 'Where can I find an infrared sauna in Mumbai?',
     answer:
-      'R3BOOT in Dadar East offers infrared sauna as part of a physiotherapy-supervised contrast therapy protocol, not a standalone spa sauna. Sessions pair infrared heat with supervised ice bath in a structured 3:1 hot-to-cold sequence. Address: 203, Palai Plaza, Swami Gyan Jivandas Marg, Dadar East, Mumbai 400014.',
+      'R3BOOT in Dadar East offers infrared sauna as part of a physiotherapy-supervised contrast therapy protocol, not a standalone spa sauna. Sessions pair Red Light Sauna at 70°C with supervised ice bath at 6–8°C in a structured Day or Night Cycle. Address: 203, Palai Plaza, Swami Gyan Jivandas Marg, Dadar East, Mumbai 400014.',
   },
   {
     question: 'Is there a sauna near me in Dadar or central Mumbai?',
@@ -17,7 +17,7 @@ export const infraredSaunaMumbaiFaqs = [
   {
     question: 'How long do you stay in the infrared sauna at R3BOOT?',
     answer:
-      'Sauna duration is adjusted to your session type and tolerance. In a Half Cycle (30 minutes), you complete two rounds of alternating sauna and ice bath. In a Full Cycle (60 minutes), you complete three to four rounds. Our physiotherapy team monitors your response and adjusts timing throughout.',
+      'Sauna and ice phases follow the fixed Day or Night Half Cycle (30 minutes) or Full Cycle (60 minutes). Full Cycle is a separate longer protocol with longer heat phases and an extra round, not Half run twice. Our physiotherapy team monitors your response; temperatures may be reduced on request but are not increased above the clinical standard.',
   },
   {
     question: 'Can I book infrared sauna without the ice bath?',

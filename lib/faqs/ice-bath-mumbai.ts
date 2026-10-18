@@ -7,7 +7,7 @@ export const iceBathMumbaiFaqs = [
   {
     question: 'Is ice bath available in Dadar?',
     answer:
-      'Yes. R3BOOT in Dadar East offers ice bath as part of a physiotherapy-supervised contrast therapy session. The cold immersion is paired with an infrared sauna in a structured 3:1 hot-to-cold protocol. Sessions are available Monday to Saturday by appointment. Call +91 97023 68612 to book.',
+      'Yes. R3BOOT in Dadar East offers ice bath as part of a physiotherapy-supervised contrast therapy session. The cold immersion is paired with Red Light Sauna at 70°C in a structured Day or Night Cycle (Half 30 min, Full 60 min). Sessions are available Monday to Saturday by appointment. Call +91 97023 68612 to book.',
   },
   {
     question: 'How cold is the ice bath at R3BOOT?',
@@ -27,7 +27,7 @@ export const iceBathMumbaiFaqs = [
   {
     question: 'How much does an ice bath session cost at R3BOOT?',
     answer:
-      'Contrast therapy (which includes ice bath) at R3BOOT costs ₹2,500 for a Half Cycle (30 minutes) or ₹3,500 for a Full Cycle (60 minutes). The Half Cycle covers two rounds of alternating infrared sauna and ice bath. The Full Cycle includes three to four rounds for deeper recovery. Both sessions are supervised by our physiotherapy team.',
+      'Contrast therapy (which includes ice bath) at R3BOOT costs ₹2,500 for a Half Cycle (30 minutes) or ₹3,500 for a Full Cycle (60 minutes). Half is a shorter Day or Night sequence; Full is a separate 60-minute protocol with longer heat phases and an extra round. Both sessions are supervised by our physiotherapy team.',
   },
   {
     question: 'Can beginners do an ice bath at R3BOOT?',

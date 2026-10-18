@@ -41,9 +41,9 @@ export const CONTRAST_BLOG_QA_UPDATES = [
     title:
       'Contrast Bath Therapy in Dadar, Mumbai: Benefits, Protocol & When to Use It',
     excerpt:
-      'Contrast bath therapy at R3BOOT Dadar speeds recovery, reduces soreness, and improves circulation. This guide covers the benefits, supervised 68°C sauna + 6–10°C ice bath protocol, and when to book.',
+      'Contrast bath therapy at R3BOOT Dadar speeds recovery, reduces soreness, and improves circulation. This guide covers the benefits, supervised 70°C sauna + 6–8°C ice bath protocol, and when to book.',
     metaDescription:
-      'Contrast bath therapy in Dadar, Mumbai: benefits, 68°C sauna + 6–10°C ice bath protocol, who should avoid it, and when to book. Supervised at R3BOOT.',
+      'Contrast bath therapy in Dadar, Mumbai: benefits, 70°C sauna + 6–8°C ice bath protocol, who should avoid it, and when to book. Supervised at R3BOOT.',
     faqs: [
       faq(
         'What is contrast bath therapy?',
@@ -63,11 +63,11 @@ export const CONTRAST_BLOG_QA_UPDATES = [
       ),
       faq(
         'How long should contrast bath therapy last?',
-        'At R3BOOT: Half Cycle is 30 minutes (one complete hot–cold sequence). Full Cycle is 60 minutes (the same Half Cycle repeated twice). Book 24–72 hours after heavy training for best results, not immediately post-session.'
+        'At R3BOOT: Half Cycle is 30 minutes (one complete hot–cold sequence). Full Cycle is 60 minutes: a separate longer protocol with longer heat phases and an extra round, not Half run twice. Book 24–72 hours after heavy training for best results, not immediately post-session.'
       ),
       faq(
         'What is the water temperature for contrast bath therapy?',
-        'At R3BOOT Dadar: Red Light Sauna at 68°C and Ice Bath at 6–10°C. General water-based contrast baths elsewhere often use 38–42°C warm and 10–15°C cold. Our wider temperature gap produces a stronger vascular pump per cycle.'
+        'At R3BOOT Dadar: Red Light Sauna at 70°C and Ice Bath at 6–8°C. General water-based contrast baths elsewhere often use 38–42°C warm and 10–15°C cold. Our wider temperature gap produces a stronger vascular pump per cycle.'
       ),
     ],
     body: buildBody([
@@ -91,7 +91,7 @@ export const CONTRAST_BLOG_QA_UPDATES = [
         snippet:
           'Contrast bath therapy alternates structured heat and cold full-body immersion. Heat causes vasodilation, which increases blood flow to muscle. Cold causes vasoconstriction, which supports waste clearance and swelling control. Repeating the cycle creates a vascular pump that speeds recovery beyond passive rest.',
         paragraphs: [
-          'Most people confuse contrast bath therapy with alternating hot and cold showers at home. Showers can help circulation, but they do not match the temperature range or full immersion of a clinical setup. At R3BOOT, sessions use a Red Light Sauna at 68°C and an Ice Bath at 6–10°C, supervised and not self-guided.',
+          'Most people confuse contrast bath therapy with alternating hot and cold showers at home. Showers can help circulation, but they do not match the temperature range or full immersion of a clinical setup. At R3BOOT, sessions use a Red Light Sauna at 70°C and an Ice Bath at 6–8°C, supervised and not self-guided.',
           'Research in the Journal of Strength and Conditioning Research found contrast therapy outperformed cold water immersion alone for perceived recovery and mobility in the 48-hour window after intense exercise. That is the window most Mumbai athletes actually need help with.',
         ],
       },
@@ -122,7 +122,7 @@ export const CONTRAST_BLOG_QA_UPDATES = [
           'Contrast bath therapy works through alternating vasodilation and vasoconstriction. Heat dilates vessels, bringing blood, oxygen, and nutrients into muscle tissue. Cold constricts vessels, pushing metabolic waste and inflammatory fluid out. The repeated switch acts like a pump for faster clearance.',
         paragraphs: [
           'Think of it as flushing fatigued tissue rather than just numbing it. Sustained cold alone suppresses inflammation quickly but can blunt adaptation if overused after lifting. Contrast therapy uses shorter cold phases inside a heat cycle, enough to clear waste without shutting down the recovery signals your body still needs during a training block.',
-          'At R3BOOT, the Red Light Sauna adds near-infrared photobiomodulation on top of heat-driven vasodilation, supporting mitochondrial function in muscle tissue. Combined with a 6–10°C ice bath (wider than typical 12–15°C gym tubs), each cycle produces a stronger thermal contrast than home setups can replicate.',
+          'At R3BOOT, the Red Light Sauna adds near-infrared photobiomodulation on top of heat-driven vasodilation, supporting mitochondrial function in muscle tissue. Combined with a 6–8°C ice bath (wider than typical 12–15°C gym tubs), each cycle produces a stronger thermal contrast than home setups can replicate.',
         ],
       },
       {
@@ -131,7 +131,7 @@ export const CONTRAST_BLOG_QA_UPDATES = [
         snippet:
           'Contrast therapy should end on cold for a Day Cycle (before training or work) to stay alert and activated. It should end on hot for a Night Cycle (after your day is done) to down-regulate the nervous system and support sleep. The wrong finish reverses the intended effect.',
         paragraphs: [
-          'Day Cycle always finishes in the Ice Bath at 6–10°C. You leave switched on, not drowsy. Night Cycle always finishes in the Red Light Sauna at 68°C. You leave calm and recovery-ready. These are not interchangeable based on personal preference; they are selected at intake based on what your schedule demands next.',
+          'Day Cycle always finishes in the Ice Bath at 6–8°C. You leave switched on, not drowsy. Night Cycle always finishes in the Red Light Sauna at 70°C. You leave calm and recovery-ready. These are not interchangeable based on personal preference; they are selected at intake based on what your schedule demands next.',
           'Ending a Night Cycle on cold spikes sympathetic tone when you need the opposite. Ending a Day Cycle on heat reduces the pre-session activation athletes and professionals often book for. Your R3BOOT physiotherapist selects the cycle type at every intake.',
         ],
       },
@@ -140,10 +140,10 @@ export const CONTRAST_BLOG_QA_UPDATES = [
         caption: 'Day Cycle vs Night Cycle at R3BOOT',
         headers: ['', 'Day Cycle', 'Night Cycle'],
         rows: [
-          ['Always ends on', 'Ice Bath (6–10°C)', 'Red Light Sauna (68°C)'],
+          ['Always ends on', 'Ice Bath (6–8°C)', 'Red Light Sauna (70°C)'],
           ['Best for', 'Before training, work, or competition', 'After your day; sleep and deep recovery'],
           ['Nervous-system effect', 'Alert and energised (sympathetic)', 'Calm and recovery-ready (parasympathetic)'],
-          ['Example Half Cycle (30 min)', 'Cold 10 min → Sauna 10 min → Cold 10 min', 'Sauna 10 min → Cold 10 min → Sauna 10 min'],
+          ['Example Half Cycle (30 min)', 'Sauna 10 → Ice 3 → Rest 3 → Sauna 10 → Ice 3 (ends cold)', 'Sauna 8 → Ice 3 → Rest 3 → Sauna 8 → Ice 3 → Rest 1 → Sauna 4 (ends heat)'],
           ['When to book', 'Morning or before an evening session', 'Evening, when physical work is done'],
         ],
       },
@@ -179,9 +179,9 @@ export const CONTRAST_BLOG_QA_UPDATES = [
         type: 'snippet',
         question: 'What is the contrast bath therapy protocol at R3BOOT Dadar?',
         snippet:
-          'At R3BOOT Dadar, every contrast bath therapy session starts with health intake and a blood pressure check, then alternates Red Light Sauna (68°C) and Ice Bath (6–10°C) in a Day or Night Cycle. Half Cycle runs 30 minutes; Full Cycle runs 60 minutes.',
+          'At R3BOOT Dadar, every contrast bath therapy session starts with health intake and a blood pressure check, then alternates Red Light Sauna (70°C) and Ice Bath (6–8°C) in a Day or Night Cycle. Half Cycle runs 30 minutes; Full Cycle runs 60 minutes.',
         paragraphs: [
-          'Half Cycle is one complete hot–cold sequence, enough for most training-week recovery days. Full Cycle repeats the same Half Cycle twice at the same temperatures and same cycle type, recommended after competition weeks or when a single round feels insufficient. We do not mix Day and Night in one session.',
+          'Half Cycle is one complete hot–cold sequence, enough for most training-week recovery days. Full Cycle is a separate 60-minute protocol with longer heat phases and an extra round (not Half run twice), recommended after competition weeks or when more volume is needed. We do not mix Day and Night in one session.',
           'Before your first cold phase, a physiotherapist coaches breathing to manage cold shock in the opening 60 seconds. Staff stay present for the full protocol. Between phases, gentle mobility is encouraged because it improves transitions and reduces stiffness going into the next immersion.',
         ],
       },
@@ -191,8 +191,8 @@ export const CONTRAST_BLOG_QA_UPDATES = [
         headers: ['', 'Half Cycle', 'Full Cycle'],
         rows: [
           ['Duration', '30 minutes', '60 minutes'],
-          ['What you get', 'One complete Day or Night sequence', 'The same Half Cycle repeated twice'],
-          ['Temperatures', 'Sauna 68°C · Ice Bath 6–10°C', 'Same as Half Cycle (no change mid-session)'],
+          ['What you get', 'One complete Day or Night sequence', 'Separate longer protocol (longer heat + extra round)'],
+          ['Temperatures', 'Sauna 70°C · Ice Bath 6–8°C', 'Same temps; Day ends cold, Night ends heat'],
           ['Best for', 'Regular training-week recovery; first-time clients', 'Post-competition weeks; heavy training blocks'],
           ['Cycle type', 'Day or Night (one only per session)', 'Same Day or Night type throughout; never mixed'],
         ],
@@ -245,7 +245,7 @@ export const CONTRAST_BLOG_QA_UPDATES = [
       ),
       faq(
         'How cold should an ice bath be?',
-        'At R3BOOT: 6–10°C under physiotherapy supervision. For unsupervised home use: 10–15°C for 2–10 minutes. Colder is not better; it increases cold-shock risk without added recovery benefit.'
+        'At R3BOOT: 6–8°C under physiotherapy supervision. For unsupervised home use: 10–15°C for 2–10 minutes. Colder is not better; it increases cold-shock risk without added recovery benefit.'
       ),
       faq(
         'Is contrast therapy safe to do at home?',
@@ -278,7 +278,7 @@ export const CONTRAST_BLOG_QA_UPDATES = [
           'An ice bath drives vasoconstriction, reduces nerve conduction, and suppresses local inflammation. You feel less sore in the 24–72 hour window after intense exercise. The trade-off is that the same inflammatory signal partly drives muscle adaptation after lifting.',
         paragraphs: [
           'Cochrane reviews confirm cold water immersion outperforms passive rest for DOMS and perceived fatigue. The benefit is real but mostly short-term and perceptual, not faster structural adaptation.',
-          'At R3BOOT, ice baths run at 6–10°C under physiotherapist supervision with health intake and breathing guidance for the first 60 seconds of cold exposure. That matters in Mumbai, where jumping into cold without coaching increases cold-shock risk.',
+          'At R3BOOT, ice baths run at 6–8°C under physiotherapist supervision with health intake and breathing guidance for the first 60 seconds of cold exposure. That matters in Mumbai, where jumping into cold without coaching increases cold-shock risk.',
         ],
       },
       {
@@ -297,7 +297,7 @@ export const CONTRAST_BLOG_QA_UPDATES = [
         snippet:
           'Contrast therapy alternates heat and cold immersion to create a vascular pumping effect. Heat dilates vessels; cold constricts them. Repeated cycles drive metabolite clearance and restore mobility with shorter cold phases, so less complete suppression of adaptation signalling than a sustained ice bath.',
         paragraphs: [
-          'At R3BOOT, contrast therapy pairs a Red Light Sauna at 68°C with an Ice Bath at 6–10°C. Sessions follow a Day Cycle (ends cold, for alertness before training or work) or Night Cycle (ends hot, for recovery and sleep). Your physiotherapist selects the cycle at intake.',
+          'At R3BOOT, contrast therapy pairs a Red Light Sauna at 70°C with an Ice Bath at 6–8°C. Sessions follow a Day Cycle (ends cold, for alertness before training or work) or Night Cycle (ends hot, for recovery and sleep). Your physiotherapist selects the cycle at intake.',
         ],
       },
       {
@@ -313,7 +313,7 @@ export const CONTRAST_BLOG_QA_UPDATES = [
         caption: 'Ice Bath vs Contrast Therapy at R3BOOT',
         headers: ['', 'Ice Bath', 'Contrast Therapy'],
         rows: [
-          ['Method', 'Sustained cold immersion (6–10°C)', 'Alternating 68°C sauna + 6–10°C ice bath'],
+          ['Method', 'Sustained cold immersion (6–8°C)', 'Alternating 70°C sauna + 6–8°C ice bath'],
           ['Primary effect', 'Fast soreness suppression', 'Vascular pump: waste clearance + mobility'],
           ['Best for', 'Post-race, post-match, between tournament days', 'Active training blocks, 24–72 hrs after heavy sessions'],
           ['Strength training risk', 'Can blunt gains if used after every lift', 'Lower adaptation suppression vs daily ice'],
@@ -324,7 +324,7 @@ export const CONTRAST_BLOG_QA_UPDATES = [
         type: 'snippet',
         question: 'What is the best contrast therapy protocol?',
         snippet:
-          'The best contrast therapy protocol alternates structured heat and cold phases in a fixed sequence. At R3BOOT, a Half Cycle runs 30 minutes with health intake, BP check, and mobility between phases. Day Cycle ends cold; Night Cycle ends hot. Temperatures stay at 68°C sauna and 6–10°C ice bath throughout.',
+          'The best contrast therapy protocol alternates structured heat and cold phases in a fixed sequence. At R3BOOT, a Half Cycle runs 30 minutes with health intake, BP check, and mobility between phases. Day Cycle ends cold; Night Cycle ends hot. Temperatures stay at 70°C sauna and 6–8°C ice bath throughout.',
         paragraphs: [
           'Home approximation uses 2–3 minutes warm shower and 30–60 seconds cold shower for 3–4 rounds. That can help circulation but does not replicate full immersion or clinical temperature control.',
           'First-time users and anyone with cardiovascular history should start supervised. Imprecise home temperatures and no blood pressure screen before cold exposure are the main safety gaps.',
@@ -368,7 +368,7 @@ export const CONTRAST_BLOG_QA_UPDATES = [
         type: 'snippet',
         question: 'How cold should an ice bath be?',
         snippet:
-          'At R3BOOT, ice baths run at 6–10°C with physiotherapy supervision, health intake, and breathing guidance. For unsupervised home use, 10–15°C for 2–10 minutes is safer. Below 8°C at home adds cold-shock risk without meaningful extra recovery benefit for most users.',
+          'At R3BOOT, ice baths run at 6–8°C with physiotherapy supervision, health intake, and breathing guidance. For unsupervised home use, 10–15°C for 2–10 minutes is safer. Below 8°C at home adds cold-shock risk without meaningful extra recovery benefit for most users.',
         paragraphs: [
           'Colder is not better. The goal is controlled vasoconstriction and nervous-system regulation, not proving tolerance. Athletes who drop temperature without coaching often hyperventilate in the first minute and cut sessions short before any recovery benefit kicks in.',
         ],
@@ -380,7 +380,7 @@ export const CONTRAST_BLOG_QA_UPDATES = [
           'You can approximate contrast therapy at home with alternating warm and cold showers, but temperature precision, blood pressure screening, and coached breathing for cold shock are limited. New users and anyone with cardiovascular conditions should start with a supervised session in Mumbai.',
         paragraphs: [
           'A typical home pattern is 2–3 minutes warm shower, 30–60 seconds cold, repeated 3–4 times. Stop immediately if you feel chest pain, dizziness, numbness, or difficulty breathing.',
-          'Clinical contrast at R3BOOT includes intake before immersion, precise 68°C and 6–10°C phases, and a physiotherapist present throughout. That gap is why athletes using contrast systematically often get more reliable results in-clinic than with showers alone.',
+          'Clinical contrast at R3BOOT includes intake before immersion, precise 70°C and 6–8°C phases, and a physiotherapist present throughout. That gap is why athletes using contrast systematically often get more reliable results in-clinic than with showers alone.',
         ],
       },
       {
@@ -415,7 +415,7 @@ export const CONTRAST_BLOG_QA_UPDATES = [
 
   // ─── 3. Draft: ice bath vs contrast therapy ───
   {
-    documentId: 'drafts.155e7c78-4523-4795-959f-a0a634e00e9d',
+    documentId: '155e7c78-4523-4795-959f-a0a634e00e9d',
     title: 'Ice Bath vs Contrast Therapy: Which Recovery Protocol Should You Choose?',
     excerpt:
       'Ice bath and contrast therapy use cold differently. The wrong protocol at the wrong time blunts training gains or slows real recovery. A practical decision guide from R3BOOT.',
@@ -460,7 +460,7 @@ export const CONTRAST_BLOG_QA_UPDATES = [
         snippet:
           'Ice bath is continuous cold immersion that drives sustained vasoconstriction and the strongest DOMS reduction. Contrast therapy alternates heat and cold to create a vascular pump, clearing waste faster with less complete inflammation suppression. Contrast preserves more anabolic signalling during active training blocks.',
         paragraphs: [
-          'At R3BOOT, ice baths run at 6–10°C. Contrast therapy pairs a Red Light Sauna at 68°C with the same ice bath in structured cycles, with Day Cycle ending cold and Night Cycle ending hot.',
+          'At R3BOOT, ice baths run at 6–8°C. Contrast therapy pairs a Red Light Sauna at 70°C with the same ice bath in structured cycles, with Day Cycle ending cold and Night Cycle ending hot.',
         ],
       },
       {
@@ -528,7 +528,7 @@ export const CONTRAST_BLOG_QA_UPDATES = [
         type: 'snippet',
         question: 'How do you do an ice bath correctly?',
         snippet:
-          'At R3BOOT, ice baths run at 6–10°C for 10–15 minutes with lower limbs and torso submerged to shoulder level where possible. At home, use 10–15°C for 2–10 minutes and breathe slowly through the first 60 seconds while cold shock settles. Timing matters: within 2 hours post-endurance for soreness; wait or skip after heavy lifting.',
+          'At R3BOOT, ice baths run at 6–8°C for 10–15 minutes with lower limbs and torso submerged to shoulder level where possible. At home, use 10–15°C for 2–10 minutes and breathe slowly through the first 60 seconds while cold shock settles. Timing matters: within 2 hours post-endurance for soreness; wait or skip after heavy lifting.',
         paragraphs: [
           'Health intake and breathing coaching before the first cold minute are not optional extras at R3BOOT. They reduce panic breathing and help you stay in long enough for vasoconstriction to do its job.',
           'Colder water at home does not mean better recovery. Below 8°C unsupervised increases cold-shock risk without meaningful extra benefit for most users.',
@@ -538,7 +538,7 @@ export const CONTRAST_BLOG_QA_UPDATES = [
         type: 'snippet',
         question: 'How do you do contrast therapy correctly?',
         snippet:
-          'At R3BOOT, contrast therapy pairs a Red Light Sauna at 68°C with an Ice Bath at 6–10°C. A physiotherapist selects Day Cycle (ends cold, energise) or Night Cycle (ends hot, recovery and sleep). Half Cycle runs 30 minutes; Full Cycle runs 60 minutes with the same protocol repeated. At home, alternate 3–4 min hot and 1 min cold for 3–5 rounds with gentle mobility between cycles.',
+          'At R3BOOT, contrast therapy pairs a Red Light Sauna at 70°C with an Ice Bath at 6–8°C. A physiotherapist selects Day Cycle (ends cold, energise) or Night Cycle (ends hot, recovery and sleep). Half Cycle runs 30 minutes; Full Cycle is a separate 60-minute protocol with longer heat phases and an extra round. At home, alternate 3–4 min hot and 1 min cold for 3–5 rounds with gentle mobility between cycles.',
         paragraphs: [
           'Day and Night cycles are not interchangeable based on preference. The finish temperature sets your nervous-system state walking out. Wrong finish reverses the intended effect.',
           'Between phases at R3BOOT, gentle mobility is encouraged. It reduces stiffness going into the next immersion and improves transitions between heat and cold.',
@@ -588,12 +588,12 @@ export const CONTRAST_BLOG_QA_UPDATES = [
 
   // ─── 4. Draft: Day Cycle / Night Cycle protocol ───
   {
-    documentId: 'drafts.contrast-therapy-3-1-protocol-explained',
+    documentId: 'contrast-therapy-3-1-protocol-explained',
     title: 'Contrast Therapy Day Cycle vs Night Cycle: R3BOOT Protocol Explained (2026)',
     excerpt:
       'Day Cycle ends cold for alertness before training. Night Cycle ends hot for sleep and recovery. How R3BOOT selects your cycle, runs a Half or Full session, and sets exact sauna and ice bath temperatures.',
     metaDescription:
-      'Day Cycle vs Night Cycle contrast therapy at R3BOOT Dadar: session flow, Half vs Full Cycle, 68°C sauna + 6–10°C ice bath, and who needs medical clearance.',
+      'Day Cycle vs Night Cycle contrast therapy at R3BOOT Dadar: session flow, Half vs Full Cycle, 70°C sauna + 6–8°C ice bath, and who needs medical clearance.',
     faqs: [
       faq(
         'What is the best way to do contrast therapy?',
@@ -605,15 +605,15 @@ export const CONTRAST_BLOG_QA_UPDATES = [
       ),
       faq(
         'What is a Day Cycle in contrast therapy at R3BOOT?',
-        'A 30- or 60-minute sequence that always finishes in the Ice Bath at 6–10°C. Used when training, work, or competition follows the session so you leave energised, not drowsy.'
+        'A 30- or 60-minute sequence that always finishes in the Ice Bath at 6–8°C. Used when training, work, or competition follows the session so you leave energised, not drowsy.'
       ),
       faq(
         'What is a Night Cycle in contrast therapy at R3BOOT?',
-        'A 30- or 60-minute sequence that always finishes in the Red Light Sauna at 68°C. Used when your physical day is done and deep recovery or sleep is the goal.'
+        'A 30- or 60-minute sequence that always finishes in the Red Light Sauna at 70°C. Used when your physical day is done and deep recovery or sleep is the goal.'
       ),
       faq(
         'What is the difference between Half Cycle and Full Cycle?',
-        'Half Cycle (30 min) is one complete Day or Night sequence. Full Cycle (60 min) repeats the same Half Cycle twice at the same temperatures and same cycle type. Full Cycle suits post-competition weeks or heavy training blocks.'
+        'Half Cycle (30 min) is one complete Day or Night sequence. Full Cycle (60 min) is a separate longer protocol with longer heat phases and an extra round, not Half run twice. Full Cycle suits post-competition weeks or heavy training blocks.'
       ),
     ],
     body: buildBody([
@@ -635,7 +635,7 @@ export const CONTRAST_BLOG_QA_UPDATES = [
       },
       ...snippetIntro(
         [
-          'Equipment at R3BOOT is fixed: Red Light Sauna at 68°C and Ice Bath at 6–10°C. What changes session to session is cycle type (Day or Night) and length (Half or Full). You never mix Day and Night in one booking.',
+          'Equipment at R3BOOT is fixed: Red Light Sauna at 70°C and Ice Bath at 6–8°C. What changes session to session is cycle type (Day or Night) and length (Half or Full). You never mix Day and Night in one booking.',
         ],
         'The best way to do contrast therapy is to match your finish temperature to what happens next in your day. Day Cycle always ends on cold for alertness before training or work. Night Cycle always ends on hot for recovery and sleep. Your physiotherapist selects the cycle at intake, not from preference alone.'
       ),
@@ -653,9 +653,9 @@ export const CONTRAST_BLOG_QA_UPDATES = [
         type: 'snippet',
         question: 'What is a Day Cycle in contrast therapy at R3BOOT?',
         snippet:
-          'A Day Cycle is a contrast therapy sequence that always finishes in the Ice Bath at 6–10°C. You book it when training, work, competition, or significant activity follows the session. The cold finish keeps norepinephrine elevated so you leave switched on, not drowsy.',
+          'A Day Cycle is a contrast therapy sequence that always finishes in the Ice Bath at 6–8°C. You book it when training, work, competition, or significant activity follows the session. The cold finish keeps norepinephrine elevated so you leave switched on, not drowsy.',
         paragraphs: [
-          'A typical 30-minute Day Cycle Half runs Cold 10 minutes, Sauna 10 minutes, Cold 10 minutes. An alternative Half structure is Sauna 20 minutes then Cold 10 minutes. Your physiotherapist sets the sequence at intake based on cold tolerance and schedule.',
+          'The R3BOOT Day Cycle Half (30 min) runs: infrared sauna 10 minutes, ice bath 3 minutes, rest and hydrate 3 minutes, sauna 10 minutes, ice bath 3 minutes, then rest, hydrate and shower, always ending on cold. Day Full (60 min) is a separate protocol: sauna 15, ice 3, rest 3, sauna 15, ice 5, rest 3, sauna 12, ice 3, rest 1, still ending on cold.',
           'Day Cycle is not for late evening if sleep is the priority. Ending on cold spikes sympathetic tone, which is useful before activity but counterproductive when you need to wind down.',
         ],
       },
@@ -663,9 +663,9 @@ export const CONTRAST_BLOG_QA_UPDATES = [
         type: 'snippet',
         question: 'What is a Night Cycle in contrast therapy at R3BOOT?',
         snippet:
-          'A Night Cycle is a contrast therapy sequence that always finishes in the Red Light Sauna at 68°C. You book it when physical work is done and deep recovery, stress relief, or sleep is the goal. The hot finish promotes parasympathetic activation.',
+          'A Night Cycle is a contrast therapy sequence that always finishes in the Red Light Sauna at 70°C. You book it when physical work is done and deep recovery, stress relief, or sleep is the goal. The hot finish promotes parasympathetic activation.',
         paragraphs: [
-          'A typical 30-minute Night Cycle Half runs Sauna 10 minutes, Cold 10 minutes, Sauna 10 minutes. An alternative is Cold 10 minutes then Sauna 20 minutes. Both finish on heat so cortisol drops and muscle tension releases before you leave.',
+          'The R3BOOT Night Cycle Half (30 min) runs: sauna 8 minutes, ice bath 3 minutes, rest 3 minutes, sauna 8 minutes, ice bath 3 minutes, rest 1 minute, sauna 4 minutes, always ending on heat. This cycle is used before sports massage when both are booked. Night Full (60 min) is a separate protocol: sauna 12, ice 3, rest 3, sauna 12, ice 5, rest 3, sauna 10, ice 3, rest 3, sauna 6, still ending on heat.',
           'Ending a Night Cycle on cold would spike alertness when you need the opposite. That is why cycle type is fixed at booking and never swapped mid-session based on how you feel in the sauna.',
         ],
       },
@@ -674,8 +674,8 @@ export const CONTRAST_BLOG_QA_UPDATES = [
         caption: 'Day Cycle vs Night Cycle: session structure at R3BOOT',
         headers: ['', 'Day Cycle', 'Night Cycle'],
         rows: [
-          ['Always finishes on', 'Ice Bath (6–10°C)', 'Red Light Sauna (68°C)'],
-          ['Typical Half Cycle (30 min)', 'Cold 10 → Sauna 10 → Cold 10', 'Sauna 10 → Cold 10 → Sauna 10'],
+          ['Always finishes on', 'Ice Bath (6–8°C)', 'Red Light Sauna (70°C)'],
+          ['Typical Half Cycle (30 min)', 'Sauna 10 → Ice 3 → Rest 3 → Sauna 10 → Ice 3 (ends cold)', 'Sauna 8 → Ice 3 → Rest 3 → Sauna 8 → Ice 3 → Rest 1 → Sauna 4 (ends heat)'],
           ['Walk-out state', 'Alert, energised', 'Calm, recovery-ready'],
           ['Book when', 'Training, work, or competition follows', 'Your physical day is done'],
           ['Avoid booking when', 'You need sleep within 2 hours', 'You have an evening session ahead'],
@@ -695,9 +695,9 @@ export const CONTRAST_BLOG_QA_UPDATES = [
         type: 'snippet',
         question: 'Half Cycle vs Full Cycle: which should you book?',
         snippet:
-          'Book a Half Cycle (30 minutes) for regular training-week recovery, first-time cold exposure, or maintenance between sessions. Book a Full Cycle (60 minutes) when the same Half Cycle is repeated once more at identical temperatures and the same Day or Night type, typically after competition weeks or heavy training blocks.',
+          'Book a Half Cycle (30 minutes) for regular training-week recovery, first-time cold exposure, or maintenance between sessions. Book a Full Cycle (60 minutes) when you need the longer Day or Night protocol (longer heat phases and an extra round), typically after competition weeks or heavy training blocks.',
         paragraphs: [
-          'Full Cycle is not a longer random mix of heat and cold. It is the exact Half Cycle protocol run twice. We never combine Day and Night in one session.',
+          'Full Cycle is not Half run twice. It is its own 60-minute sequence with different phase lengths. Day still ends cold; Night still ends heat. We never combine Day and Night in one session.',
           'First-time clients almost always start with a Half Cycle to build cold tolerance and learn breathing through the opening minute. Full Cycle comes once Half feels manageable and load demands it.',
         ],
       },
@@ -706,7 +706,7 @@ export const CONTRAST_BLOG_QA_UPDATES = [
         caption: 'When to book Half Cycle vs Full Cycle',
         headers: ['', 'Half Cycle (30 min)', 'Full Cycle (60 min)'],
         rows: [
-          ['What you get', 'One complete Day or Night sequence', 'Same Half Cycle repeated twice'],
+          ['What you get', 'One complete Day or Night sequence', 'Separate longer protocol (longer heat + extra round)'],
           ['Best for', 'Weekly training recovery; first visits', 'Post-competition; peak training weeks'],
           ['Cold tolerance', 'Ideal entry point for new clients', 'After Half Cycle feels manageable'],
           ['Cycle rule', 'Day or Night only (never mixed)', 'Same Day or Night type throughout'],
@@ -717,16 +717,16 @@ export const CONTRAST_BLOG_QA_UPDATES = [
         type: 'snippet',
         question: 'What temperature is the ice bath at R3BOOT?',
         snippet:
-          'The R3BOOT ice bath is maintained at 6–10°C, colder than most gym cold tubs at 12–15°C for more complete vasoconstriction. Temperature can be reduced on client request but is never increased above the clinical standard. Coached breathing supports the first 60 seconds of cold shock.',
+          'The R3BOOT ice bath is maintained at 6–8°C, colder than most gym cold tubs at 12–15°C for more complete vasoconstriction. Temperature can be reduced on client request but is never increased above the clinical standard. Coached breathing supports the first 60 seconds of cold shock.',
         paragraphs: [
-          'Precise temperature matters because contrast therapy relies on a wide gap between 68°C sauna and 6–10°C ice. Home showers cannot replicate that range or full-body immersion depth.',
+          'Precise temperature matters because contrast therapy relies on a wide gap between 70°C sauna and 6–8°C ice. Home showers cannot replicate that range or full-body immersion depth.',
         ],
       },
       {
         type: 'snippet',
         question: 'What temperature is the Red Light Sauna at R3BOOT?',
         snippet:
-          'The R3BOOT Red Light Sauna operates at 68°C, producing stronger vasodilation than warm water pools at 38–42°C. Near-infrared light adds photobiomodulation for mitochondrial support alongside heat-driven blood flow. Temperature can be reduced on request; the default is 68°C.',
+          'The R3BOOT Red Light Sauna operates at 70°C, producing stronger vasodilation than warm water pools at 38–42°C. Near-infrared light adds photobiomodulation for mitochondrial support alongside heat-driven blood flow. Temperature can be reduced on request; the default is 70°C.',
         paragraphs: [
           'Heat phase length within a Half Cycle is set by your physiotherapist, not self-selected. Longer sauna phases suit clients building heat tolerance before a Night Cycle finish.',
         ],
@@ -763,7 +763,7 @@ export const CONTRAST_BLOG_QA_UPDATES = [
 
   // ─── 5. Draft: when to ice bath after workout ───
   {
-    documentId: 'drafts.when-to-ice-bath-after-workout',
+    documentId: 'when-to-ice-bath-after-workout',
     title: 'When to Ice Bath After a Workout (and When to Skip It)',
     excerpt:
       'Ice bath timing depends on training type. Endurance and race days: within 1–2 hours. Heavy lifting: wait or skip same-day ice. Dr Vaishali explains the windows that protect gains and speed recovery.',
@@ -812,7 +812,7 @@ export const CONTRAST_BLOG_QA_UPDATES = [
       },
       ...snippetIntro(
         [
-          'At R3BOOT Dadar, ice baths run at 6–10°C under supervision. Home use is typically 10–15°C for 2–10 minutes. Timing rules are the same whether you plunge at our centre or at home; only the safety margin changes.',
+          'At R3BOOT Dadar, ice baths run at 6–8°C under supervision. Home use is typically 10–15°C for 2–10 minutes. Timing rules are the same whether you plunge at our centre or at home; only the safety margin changes.',
         ],
         'Ice bath after endurance or a race: within 1–2 hours post-finish is reasonable. Ice bath after heavy lifting or hypertrophy: wait 3–6 hours or skip same-day immersion entirely. Easy recovery sessions rarely need ice at all.'
       ),

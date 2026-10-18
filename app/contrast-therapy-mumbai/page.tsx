@@ -10,6 +10,8 @@ import { contrastTherapyMumbaiFaqs } from '@/lib/faqs/contrast-therapy-mumbai'
 import { PainPointsSection } from './PainPointsSection'
 import { WhyMumbaiAthletesSection } from './WhyMumbaiAthletesSection'
 import { HowItWorksSection } from './HowItWorksSection'
+import { ProtocolCyclesSection } from './ProtocolCyclesSection'
+import { CONTRAST_ICE_BATH_TEMP_RANGE, CONTRAST_SAUNA_TEMP_LABEL } from '@/lib/contrast-therapy/protocol'
 import { ComparisonSection } from './ComparisonSection'
 import { HygieneSection } from './HygieneSection'
 import { TeamSectionDemo } from '@/app/services-demo/contrast-therapy/TeamSectionDemo'
@@ -47,12 +49,12 @@ const processSteps = [
   {
     number: '01',
     title: 'Health Assessment',
-    body: 'Short intake covering your training background, injury history, and any health conditions. Your physiotherapist confirms contrast therapy is right for you right now.',
+    body: 'Short intake covering your training background, injury history, and any health conditions, plus a blood pressure check. Your physiotherapist confirms contrast therapy is right for you and selects Day or Night Cycle based on your schedule.',
   },
   {
     number: '02',
     title: 'Breathing Prep and Supervised Protocol',
-    body: 'We walk you through controlled breathing before immersion. Then sauna (68°C) and ice bath (6-10°C) in structured sequence under team guidance.',
+    body: `Compulsory shower, then controlled breathing before cold. Sauna (${CONTRAST_SAUNA_TEMP_LABEL}) and ice bath (${CONTRAST_ICE_BATH_TEMP_RANGE}) in your Day or Night Half or Full Cycle under team guidance.`,
   },
   {
     number: '03',
@@ -250,7 +252,7 @@ export default function ContrastTherapyMumbaiPage() {
               <span className="text-[#513394] dark:text-[#8B5CF6]">R3BOOT</span>
             </h2>
             <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed">
-              A full session takes 45–60 minutes including intake, supervised protocol, and post-session check-in.
+              Half Cycle is 30 minutes; Full Cycle is 60 minutes, plus intake and post-session check-in.
             </p>
           </div>
 
@@ -287,6 +289,8 @@ export default function ContrastTherapyMumbaiPage() {
           SECTION 5: HOW IT WORKS — color-coded phase cards
       ───────────────────────────────────────────── */}
       <HowItWorksSection />
+
+      <ProtocolCyclesSection />
 
       {/* ─────────────────────────────────────────────
           SECTION 5B: COMPARISON — ice bath vs contrast therapy
@@ -589,7 +593,7 @@ export default function ContrastTherapyMumbaiPage() {
 
       <ServiceSchema
         serviceName="Contrast Therapy in Mumbai"
-        description="Clinically structured hot-cold recovery protocol using infrared sauna (68°C) and ice bath (6–10°C). Day &amp; Night Cycle protocols supervised by physiotherapists at R3BOOT, Mumbai."
+        description={`Clinically structured hot-cold recovery protocol using infrared sauna (${CONTRAST_SAUNA_TEMP_LABEL}) and ice bath (${CONTRAST_ICE_BATH_TEMP_RANGE}). Day & Night Cycle protocols supervised by physiotherapists at R3BOOT, Mumbai.`}
         serviceUrl="https://www.r3boot.in/contrast-therapy-mumbai"
       />
       <FAQSchema faqs={contrastTherapyMumbaiFaqs} />
