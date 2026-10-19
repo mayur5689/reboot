@@ -10,7 +10,7 @@ const plusJakarta = Plus_Jakarta_Sans({
 })
 
 export const metadata: Metadata = {
-  title: 'Therapy Clinic in Dadar, Mumbai | R3BOOT Recovery Centre',
+  title: 'Performance and Recovery Centre in Mumbai | R3BOOT',
   description: 'R3BOOT (pronounced Reboot) is Dadar and Lower Parel’s recovery clinic. Physiotherapy, contrast therapy, aqua therapy and sports massage. Open 7 days.',
   keywords: ['R3BOOT', 'reboot dadar', 'reboot clinic mumbai', 'reboot physiotherapy dadar', 'therapy clinic dadar', 'recovery clinic mumbai', 'physiotherapy dadar'],
   alternates: { canonical: '/' },
