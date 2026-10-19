@@ -8,6 +8,18 @@ export const metadata: Metadata = {
   description: 'Physiotherapy, contrast therapy, compression therapy, aqua therapy, sports massage & sports psychology in Dadar, Mumbai. Book your session at R3BOOT, open 7 days.',
   keywords: ['therapy dadar', 'therapy services dadar', 'recovery services dadar', 'physiotherapy mumbai', 'contrast therapy dadar', 'sports clinic mumbai'],
   alternates: { canonical: '/services' },
+  openGraph: {
+    title: 'Performance and Recovery Centre in Mumbai',
+    description: 'Physiotherapy, contrast therapy, compression therapy, aqua therapy, sports massage & sports psychology in Dadar, Mumbai. Book your session at R3BOOT, open 7 days.',
+    url: 'https://www.r3boot.in/services',
+    type: 'website',
+    siteName: 'R3BOOT',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Performance and Recovery Centre in Mumbai',
+    description: 'Physiotherapy, contrast therapy, compression therapy, aqua therapy, sports massage & sports psychology in Dadar, Mumbai. Book your session at R3BOOT, open 7 days.',
+  },
 }
 
 export default function ServicesPage() {
