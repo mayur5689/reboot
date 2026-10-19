@@ -1,10 +1,22 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Book a Session | R3BOOT Recovery Clinic Dadar Mumbai',
+  title: 'Performance and Recovery Centre in Mumbai | R3BOOT',
   description: 'Book your session at R3BOOT, Dadar, Mumbai. Physiotherapy, contrast therapy, aqua therapy, sports massage and more. Open 7 days. Call, WhatsApp or visit us in Dadar.',
   keywords: ['book physiotherapy mumbai', 'contact R3BOOT', 'recovery clinic dadar contact', 'book sports massage mumbai'],
   alternates: { canonical: '/contact' },
+  openGraph: {
+    title: 'Performance and Recovery Centre in Mumbai',
+    description: 'Book your session at R3BOOT, Dadar, Mumbai. Physiotherapy, contrast therapy, aqua therapy, sports massage and more. Open 7 days. Call, WhatsApp or visit us in Dadar.',
+    url: 'https://www.r3boot.in/contact',
+    type: 'website',
+    siteName: 'R3BOOT',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Performance and Recovery Centre in Mumbai',
+    description: 'Book your session at R3BOOT, Dadar, Mumbai. Physiotherapy, contrast therapy, aqua therapy, sports massage and more. Open 7 days. Call, WhatsApp or visit us in Dadar.',
+  },
 }
 
 export default function ContactLayout({ children }: { children: React.ReactNode }) {

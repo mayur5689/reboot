@@ -14,6 +14,18 @@ export const metadata: Metadata = {
   description: 'R3BOOT (pronounced Reboot) is Dadar and Lower Parel’s recovery clinic. Physiotherapy, contrast therapy, aqua therapy and sports massage. Open 7 days.',
   keywords: ['R3BOOT', 'reboot dadar', 'reboot clinic mumbai', 'reboot physiotherapy dadar', 'therapy clinic dadar', 'recovery clinic mumbai', 'physiotherapy dadar'],
   alternates: { canonical: '/' },
+  openGraph: {
+    title: 'Performance and Recovery Centre in Mumbai',
+    description: 'R3BOOT (pronounced Reboot) is Dadar and Lower Parel’s recovery clinic. Physiotherapy, contrast therapy, aqua therapy and sports massage. Open 7 days.',
+    url: 'https://www.r3boot.in/',
+    type: 'website',
+    siteName: 'R3BOOT',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Performance and Recovery Centre in Mumbai',
+    description: 'R3BOOT (pronounced Reboot) is Dadar and Lower Parel’s recovery clinic. Physiotherapy, contrast therapy, aqua therapy and sports massage. Open 7 days.',
+  },
 }
 
 import HowItWorks from '@/components/HowItWorks'
