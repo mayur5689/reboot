@@ -463,7 +463,7 @@ export default function PhysiotherapyMumbaiPage() {
                 {
                   title: 'Sports Massage',
                   desc: 'Deep tissue, trigger point, cupping, and myofascial release | often combined with physio on the same visit.',
-                  href: '/sports-massage-mumbai',
+                  href: '/services/sports-massage',
                 },
                 {
                   title: 'Contrast Therapy',
@@ -629,8 +629,10 @@ export default function PhysiotherapyMumbaiPage() {
               { label: 'Physiotherapy for Neck Pain', href: '/physiotherapy-for-neck-pain-mumbai' },
               { label: 'Physiotherapy for Shoulder Pain', href: '/physiotherapy-for-shoulder-pain-mumbai' },
               { label: 'Sports Injury Physiotherapy', href: '/sports-injury-physiotherapy-dadar-mumbai' },
+              { label: 'Athlete Screening Mumbai', href: '/athlete-screening-mumbai' },
+              { label: 'Aqua Therapy for Knee Pain', href: '/aqua-therapy-for-knee-pain-mumbai' },
               { label: 'Post-Surgery Physiotherapy', href: '/post-surgery-physiotherapy-mumbai' },
-              { label: 'Sports Massage Mumbai', href: '/sports-massage-mumbai' },
+              { label: 'Sports Massage Mumbai', href: '/services/sports-massage' },
               { label: 'Contrast Therapy Mumbai', href: '/contrast-therapy-mumbai' },
             ].map((link) => (
               <Link

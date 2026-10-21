@@ -161,10 +161,10 @@ export default function ContrastTherapyDadarPage() {
             <div className="w-1.5 h-1.5 rounded-full bg-[#513394] dark:bg-[#A78BFA]" />
             <span className="text-[#513394] dark:text-[#A78BFA] text-[11px] font-black tracking-[0.3em] uppercase">Dadar East</span>
           </div>
-          <h1 className="text-[2rem] font-black text-gray-900 dark:text-white tracking-tight leading-[1.1] mb-3">
+          <h2 className="text-[2rem] font-black text-gray-900 dark:text-white tracking-tight leading-[1.1] mb-3">
             Contrast Therapy in{' '}
             <span className="text-[#513394] dark:text-[#A78BFA]">Dadar</span>
-          </h1>
+          </h2>
           <p className="text-base text-gray-500 dark:text-gray-400 leading-relaxed mb-6">
             R3BOOT sits on Swami Gyan Jivandas Marg, minutes from Dadar station. Infrared sauna, supervised ice bath, physio-led recovery on your doorstep.
           </p>
@@ -324,7 +324,7 @@ export default function ContrastTherapyDadarPage() {
 
       <ServiceSchema
         serviceName="Contrast Therapy Dadar Mumbai"
-        description="Physio-supervised contrast therapy in Dadar East, infrared sauna (68°C) and ice bath (6–10°C) at R3BOOT, Palai Plaza."
+        description="Physio-supervised contrast therapy in Dadar East, infrared sauna (70°C) and ice bath (6–8°C) at R3BOOT, Palai Plaza."
         serviceUrl="https://www.r3boot.in/contrast-therapy-dadar"
       />
       <FAQSchema faqs={contrastTherapyDadarFaqs} />

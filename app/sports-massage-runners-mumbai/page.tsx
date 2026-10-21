@@ -157,6 +157,11 @@ const pairedServices = [
     desc: 'Aquatic therapy for runners returning from injury who need low-impact loading before returning to road running.',
   },
   {
+    title: 'Sports Massage Before and After a Marathon',
+    href: '/blog/sports-massage-before-after-marathon',
+    desc: 'When to book before race week, and when Day 2 after the marathon is the better window.',
+  },
+  {
     title: 'Physiotherapy',
     href: '/services/physiotherapy',
     desc: 'If your niggle has progressed beyond soft tissue restriction into a structural or biomechanical issue, our physiotherapy team builds a return-to-run protocol.',
@@ -744,7 +749,7 @@ export default function SportsMassageRunnersMumbaiPage() {
       <FAQSchema faqs={sportsMassageRunnersMumbaiFaqs} />
       <BreadcrumbSchema items={[
         { name: 'Home', url: '/' },
-        { name: 'Sports Massage Mumbai', url: '/sports-massage-mumbai' },
+        { name: 'Sports Massage Mumbai', url: '/services/sports-massage' },
         { name: 'Runners Mumbai', url: '/sports-massage-runners-mumbai' },
       ]} />
     </main>

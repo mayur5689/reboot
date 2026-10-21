@@ -13,7 +13,7 @@ export { urlFor } from './image'
 
 export async function getAllPosts() {
   return client.fetch(
-    `*[_type == "post"] | order(publishedAt desc) {
+    `*[_type == "post" && defined(slug.current)] | order(publishedAt desc) {
       _id,
       title,
       "slug": slug.current,
@@ -56,6 +56,6 @@ export async function getPostBySlug(slug: string) {
 
 export async function getPostSlugs(): Promise<{ slug: string }[]> {
   return client.fetch(
-    `*[_type == "post"] { "slug": slug.current }`
+    `*[_type == "post" && defined(slug.current)] { "slug": slug.current }`
   )
 }

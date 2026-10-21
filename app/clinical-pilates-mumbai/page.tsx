@@ -34,51 +34,53 @@ const conditions = [
   {
     title: 'Lower Back Pain',
     description:
-      'The most common reason clients come to R3BOOT for clinical Pilates. Core stabilisation and segmental spinal control work targets the muscular deficits that drive recurring back pain | providing lasting relief rather than temporary symptom management.',
+      'The most common reason people book clinical Pilates here. We train deep core and spinal control so the pain stays down, instead of only easing it for a week.',
   },
   {
     title: 'Scoliosis Management',
+    href: '/scoliosis-pilates-mumbai',
     description:
-      'Clinical Pilates is a first-line physiotherapy approach for managing scoliosis in adolescents and adults. Exercises target asymmetric weakness patterns and train postural awareness specific to your curve pattern.',
+      'A first-line physio option for teens and adults. Exercises target the weaker side and match your curve, not a generic posture class.',
   },
   {
     title: 'Post-Surgery Rehabilitation',
     description:
-      'Following spinal surgery, ACL reconstruction, hip or knee replacement, or abdominal surgery, clinical Pilates provides a graduated, physiotherapy-supervised return to movement and function.',
+      'After spine, ACL, hip, knee, or abdominal surgery, we return you to movement in steps. A physiotherapist supervises every stage.',
   },
   {
     title: 'Posture Correction',
+    href: '/blog/posture-workout-better-alignment',
     description:
-      'For desk workers, athletes, and individuals with postural pain, clinical Pilates addresses the specific muscle imbalances causing your posture problem | not just the symptoms.',
+      'For desk workers and athletes with postural pain. We treat the muscle imbalance that causes the slump, not only the sore spots.',
   },
   {
     title: 'Prenatal & Postnatal Recovery',
     description:
-      'Supervised clinical Pilates is safe and effective during pregnancy for managing pelvic girdle pain and maintaining core function. Postnatal programs address diastasis recti and pelvic floor recovery.',
+      'Supervised sessions can help pelvic girdle pain in pregnancy and keep core function. After birth, we work on diastasis and pelvic floor.',
   },
   {
     title: 'Sports Performance',
     description:
-      'Used by professional and recreational athletes to build the foundational core stability and movement quality that reduces injury risk and improves athletic output. Integrated with physiotherapy and sports massage at R3BOOT.',
+      'Athletes use it to build core control, cut injury risk, and move better. We can pair it with physiotherapy and sports massage at R3BOOT.',
   },
 ]
 
 const whatToExpect = [
   {
     title: 'Initial physiotherapy assessment',
-    body: 'Your first appointment is an assessment | not a class. Your physiotherapist evaluates your posture, movement patterns, strength deficits, and pain triggers. This takes 30–45 minutes and forms the clinical basis for your program.',
+    body: 'Visit one is an assessment, not a class. We check posture, movement, strength gaps, and pain triggers. It takes 30 to 45 minutes. That exam writes your program.',
   },
   {
     title: 'Prescribed exercise program',
-    body: 'Based on your assessment, your physiotherapist prescribes a set of specific exercises, mat-based, reformer-based, or both. These are not generic class exercises. Every movement has a clinical reason.',
+    body: 'You get specific mat or reformer work, or both. These are not class drills. Every move has a clinical reason.',
   },
   {
     title: 'Progressive loading',
-    body: 'Your program advances as your strength, control, and function improve. Exercises become more demanding over time, matching your clinical progress | not a fixed weekly schedule.',
+    body: 'Work gets harder as you get stronger. Progress follows your body, not a fixed weekly class plan.',
   },
   {
     title: 'Integration with other treatment',
-    body: 'Where appropriate, clinical Pilates is combined with physiotherapy manual therapy, dry needling, or sports massage within the same R3BOOT session, reducing your appointment load while addressing multiple clinical goals.',
+    body: 'When needed, we add hands-on physio, dry needling, or sports massage in the same visit. Fewer extra bookings. More of the plan done in one trip.',
   },
 ]
 
@@ -120,7 +122,7 @@ export default function ClinicalPilatesMumbaiPage() {
               Clinical Pilates in Mumbai | Physiotherapist-Led at R3BOOT
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl text-white/80 max-w-3xl leading-relaxed font-medium mt-4">
-              Prescribed movement programs for back pain, scoliosis, post-surgery rehab, and sports performance. Not a fitness class, a clinical intervention.
+              Prescribed movement for back pain, scoliosis, post-surgery rehab, and sport. Not a fitness class.
             </p>
           </div>
         </div>
@@ -138,23 +140,29 @@ export default function ClinicalPilatesMumbaiPage() {
               </h2>
               <div className="prose prose-base sm:prose-lg md:prose-xl text-gray-600 dark:text-gray-400 dark:prose-invert max-w-none leading-relaxed space-y-6">
                 <p>
-                  Mumbai has dozens of Pilates studios. YKBI, Namrata Purohit's studio, Moushu's, Activ8, Healthspace.
-                  They are run by Pilates instructors, some excellent. But if you have a disc injury at L4-L5, are recovering
-                  from ACL surgery, managing scoliosis, or have chronic lower back pain that hasn't responded to stretching, a fitness class is not what you need. Clinical Pilates is physiotherapy applied through movement: every
-                  exercise prescribed from your specific diagnosis, assessed and supervised by a physiotherapist, progressed
-                  based on your clinical response.
+                  Mumbai has many Pilates studios. Some instructors are excellent. A fitness class still is not the right tool if you have any of this:
+                </p>
+                <ul>
+                  <li>L4-L5 disc injury</li>
+                  <li>ACL surgery recovery</li>
+                  <li>Scoliosis</li>
+                  <li>Chronic lower back pain that stretching did not fix</li>
+                </ul>
+                <p>
+                  Clinical Pilates is physiotherapy through movement. A physiotherapist chooses each exercise from your diagnosis, watches you do it, and raises the load when you respond.
                 </p>
                 <p>
-                  At R3BOOT in Dadar East, Dr. Hiral Parikh (BPT, 15+ years) and Dr. Vaishali Vijay Rauniyar
-                  (BPT, 4+ years, certified Dry Needling, Aquatic Rehabilitation) lead clinical Pilates programs that are built
-                  from physiotherapy assessments, not adapted from class routines. Reformer and mat-based
-                  sessions. Programs for back pain, scoliosis, post-surgical rehabilitation, posture, prenatal,
-                  and sports performance. Sessions are 45–60 minutes at Palai Plaza, Swami Gyan Jivandas Marg,
-                  Dadar East, Mumbai, 5 minutes from Dadar Central Line station. Comparing general{' '}
+                  At R3BOOT Dadar East, Dr. Hiral Parikh (BPT, 15+ years) and Dr. Vaishali Vijay Rauniyar (BPT, 4+ years) build programs from a physio assessment, not a class plan.
+                </p>
+                <p>
+                  Sessions use reformer, mat, or both. They last 45 to 60 minutes at Palai Plaza, Dadar East. Five minutes from Dadar Central Line station.
+                </p>
+                <p>
+                  Comparing general{' '}
                   <Link href="/pilates-mumbai" className="text-[#513394] dark:text-[#A78BFA] font-bold hover:underline underline-offset-4">
                     Pilates in Mumbai
                   </Link>{' '}
-                  options first? Start there, then return here for condition-specific clinical pathways.
+                  first? Start there. Come back here for condition-specific clinical work.
                 </p>
               </div>
 
@@ -176,7 +184,15 @@ export default function ClinicalPilatesMumbaiPage() {
                         <div className="w-12 h-12 rounded-2xl bg-[#513394]/10 dark:bg-[#8B5CF6]/20 flex items-center justify-center text-[#513394] dark:text-[#A78BFA] font-black mb-6 group-hover:bg-[#513394] dark:group-hover:bg-[#8B5CF6] group-hover:text-white transition-all">
                           0{idx + 1}
                         </div>
-                        <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-3">{item.title}</h4>
+                        {'href' in item && item.href ? (
+                          <Link href={item.href} className="block">
+                            <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-[#513394] dark:group-hover:text-[#A78BFA] transition-colors">
+                              {item.title}
+                            </h4>
+                          </Link>
+                        ) : (
+                          <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-3">{item.title}</h4>
+                        )}
                         <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">{item.description}</p>
                       </div>
                     </div>
@@ -246,7 +262,7 @@ export default function ClinicalPilatesMumbaiPage() {
                 <span className="text-[#513394] dark:text-[#8B5CF6]">Regular Pilates</span>
               </h2>
               <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed max-w-3xl">
-                Many Mumbai clients have tried regular Pilates studios before coming to R3BOOT. Here is why the clinical approach produces different results, and why it matters for injury, pain, and rehabilitation.
+                Many people try a regular studio first. Clinical work is different. That difference matters if you have pain, injury, or post-surgery rehab.
               </p>
             </div>
 
@@ -306,7 +322,7 @@ export default function ClinicalPilatesMumbaiPage() {
                 <span className="text-[#513394] dark:text-[#8B5CF6]">at R3BOOT</span>
               </h2>
               <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed mb-10">
-                Clinical Pilates at R3BOOT is not a drop-in class. It begins with a formal physiotherapy assessment and every session follows a clinically supervised structure. Sessions are 45–60 minutes.
+                This is not a drop-in class. Visit one is a physio assessment. Every later session is supervised. Sessions last 45 to 60 minutes.
               </p>
               <div className="space-y-6">
                 {whatToExpect.map((item, idx) => (

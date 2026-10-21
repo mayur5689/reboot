@@ -198,10 +198,10 @@ export default function PhysiotherapyPage() {
                         </span>
                     </div>
 
-                    <h1 className="text-[2rem] font-black text-gray-900 dark:text-white tracking-tight leading-[1.1] mb-3">
+                    <h2 className="text-[2rem] font-black text-gray-900 dark:text-white tracking-tight leading-[1.1] mb-3">
                         Physiotherapy in{' '}
                         <span className="text-[#513394] dark:text-[#A78BFA]">Mumbai</span>
-                    </h1>
+                    </h2>
 
                     <p className="text-base text-gray-500 dark:text-gray-400 leading-relaxed mb-6">
                         Clinical care by certified specialists. Root cause treatment, not symptom management, at R3BOOT Dadar.

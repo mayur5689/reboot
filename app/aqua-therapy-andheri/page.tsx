@@ -10,7 +10,7 @@ import AquaTherapyLocationInfo from '@/components/AquaTherapyLocationInfo'
 import { aquaTherapyAndheriFaqs } from '@/lib/faqs/aqua-therapy-andheri'
 
 export const metadata: Metadata = {
-  title: 'Aqua Therapy Near Andheri West | Aqua Treadmill Physiotherapy at R3BOOT Dadar',
+  title: 'Aqua Therapy Near Andheri West | Aqua Treadmill | R3BOOT',
   description:
     'Physio-supervised aqua therapy near Andheri West at R3BOOT Dadar - 30 min by road or 20 min by train. No aqua treadmill in Andheri West. The closest clinical aqua therapy for Andheri patients.',
   alternates: { canonical: '/aqua-therapy-andheri' },
@@ -86,7 +86,7 @@ export default function AquaTherapyAndheriPage() {
                     physiotherapy
                   </Link>{' '}
                   or{' '}
-                  <Link href="/sports-massage-mumbai" className="text-[#513394] dark:text-[#A78BFA] font-bold hover:underline">
+                  <Link href="/services/sports-massage" className="text-[#513394] dark:text-[#A78BFA] font-bold hover:underline">
                     sports massage
                   </Link>{' '}
                   in one trip to Dadar.

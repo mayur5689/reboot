@@ -540,6 +540,7 @@ export default function SportsInjuryPhysiotherapyDadarPage() {
             {[
               { label: 'Physiotherapy Dadar Mumbai', href: '/physiotherapy-dadar-mumbai' },
               { label: 'Physiotherapy for Shoulder Pain Mumbai', href: '/physiotherapy-for-shoulder-pain-mumbai' },
+              { label: 'IPL Cricket Elbow & Shoulder Recovery', href: '/blog/ipl-cricket-elbow-shoulder-pain-recovery' },
               { label: 'Physiotherapy for Back Pain Mumbai', href: '/physiotherapy-for-back-pain-mumbai' },
               { label: 'Sports Massage for Runners', href: '/sports-massage-runners-mumbai' },
               { label: 'Contrast Therapy Mumbai', href: '/contrast-therapy-mumbai' },

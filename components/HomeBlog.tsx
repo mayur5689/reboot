@@ -13,7 +13,6 @@ const HomeBlog = () => {
         const fetchBlogs = async () => {
             try {
                 const posts = await getAllPosts();
-                // Only show top 3 blogs on homepage
                 setBlogs(posts.slice(0, 3));
             } catch (error) {
                 console.error("Error fetching blogs for home:", error);
@@ -21,7 +20,6 @@ const HomeBlog = () => {
                 setLoading(false);
             }
         };
-
         fetchBlogs();
     }, []);
 
@@ -29,12 +27,10 @@ const HomeBlog = () => {
 
     return (
         <section className="py-12 sm:py-16 lg:py-24 dark:bg-[#0A0A0A] bg-white relative overflow-hidden transition-colors duration-500">
-            {/* Background elements */}
             <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-[#513394]/5 blur-[120px] rounded-full -z-10" />
             <div className="absolute bottom-0 left-0 w-1/4 h-1/4 bg-[#513394]/5 blur-[100px] rounded-full -z-10" />
 
             <div className="container mx-auto px-4 sm:px-6 lg:px-12">
-                {/* Header */}
                 <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 sm:gap-8 mb-8 sm:mb-12 lg:mb-16">
                     <motion.div
                         initial={{ opacity: 0, y: 24 }}
@@ -71,7 +67,6 @@ const HomeBlog = () => {
                     </motion.div>
                 </div>
 
-                {/* Loading State */}
                 {loading ? (
                     <div className="flex justify-center items-center py-20">
                         <div className="w-12 h-12 border-4 border-[#513394] border-t-transparent rounded-full animate-spin"></div>
@@ -90,7 +85,6 @@ const HomeBlog = () => {
                                     href={`/blog/${blog.slug}`}
                                     className="group block bg-white dark:bg-white/5 border border-gray-100 dark:border-white/10 rounded-[2.5rem] shadow-xl hover:shadow-[#513394]/20 transition-all duration-500 overflow-hidden h-full flex flex-col"
                                 >
-                                    {/* Blog Image */}
                                     <div className="relative aspect-video overflow-hidden">
                                         {blog.mainImage?.asset ? (
                                             <Image
@@ -105,17 +99,17 @@ const HomeBlog = () => {
                                                 <span className="text-gray-400 font-bold uppercase tracking-widest text-xs">No Image</span>
                                             </div>
                                         )}
-                                        {/* Date Badge */}
-                                        <div className="absolute top-6 left-6 px-4 py-2 bg-white/90 dark:bg-[#0A0A0A]/90 backdrop-blur-md text-gray-900 dark:text-white text-[11px] font-black rounded-xl">
-                                            {new Date(blog.publishedAt).toLocaleDateString("en-IN", {
-                                                day: 'numeric',
-                                                month: 'short',
-                                                year: 'numeric'
-                                            })}
-                                        </div>
+                                        {blog.publishedAt ? (
+                                            <div className="absolute top-6 left-6 px-4 py-2 bg-white/90 dark:bg-[#0A0A0A]/90 backdrop-blur-md text-gray-900 dark:text-white text-[11px] font-black rounded-xl">
+                                                {new Date(blog.publishedAt).toLocaleDateString("en-IN", {
+                                                    day: "numeric",
+                                                    month: "short",
+                                                    year: "numeric",
+                                                })}
+                                            </div>
+                                        ) : null}
                                     </div>
 
-                                    {/* Blog Content */}
                                     <div className="p-8 flex flex-col flex-grow">
                                         <h3 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-[#513394] dark:group-hover:text-[#A78BFA] transition-colors duration-300 leading-tight mb-4 line-clamp-2">
                                             {blog.title}
@@ -130,9 +124,11 @@ const HomeBlog = () => {
                                         <div className="mt-auto flex items-center justify-between pt-6 border-t border-gray-100 dark:border-white/5">
                                             <div className="flex items-center gap-3">
                                                 <div className="w-8 h-8 rounded-full bg-[#513394]/10 flex items-center justify-center text-[#513394] font-black text-xs">
-                                                    {blog.author?.charAt(0) || 'R'}
+                                                    {blog.author?.charAt(0) || "R"}
                                                 </div>
-                                                <span className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-widest leading-none">{blog.author || 'REBOOT TEAM'}</span>
+                                                <span className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-widest leading-none">
+                                                    {blog.author || "REBOOT TEAM"}
+                                                </span>
                                             </div>
 
                                             <div className="w-10 h-10 rounded-full border border-[#513394]/20 flex items-center justify-center text-[#513394] group-hover:bg-[#513394] group-hover:text-white transition-all duration-300">

@@ -43,6 +43,22 @@ const nextConfig = {
                 destination: '/employee-wellness',
                 permanent: true,
             },
+            {
+                // Consolidate sports massage head term onto the winning GSC URL
+                source: '/sports-massage-mumbai',
+                destination: '/services/sports-massage',
+                permanent: true,
+            },
+            {
+                source: '/team',
+                destination: '/about',
+                permanent: true,
+            },
+            {
+                source: '/team/',
+                destination: '/about',
+                permanent: true,
+            },
         ]
     },
     images: {

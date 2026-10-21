@@ -248,10 +248,10 @@ export default function L4L5DiscBulgeMumbaiPage() {
             <div className="w-1.5 h-1.5 rounded-full bg-[#513394] dark:bg-[#A78BFA]" />
             <span className="text-[#513394] dark:text-[#A78BFA] text-[11px] font-black tracking-[0.3em] uppercase">Disc Bulge Recovery</span>
           </div>
-          <h1 className="text-[2rem] font-black text-gray-900 dark:text-white tracking-tight leading-[1.1] mb-3">
+          <h2 className="text-[2rem] font-black text-gray-900 dark:text-white tracking-tight leading-[1.1] mb-3">
             L4–L5 Disc Bulge Recovery in{' '}
             <span className="text-[#513394] dark:text-[#A78BFA]">Mumbai</span>
-          </h1>
+          </h2>
           <p className="text-base text-gray-500 dark:text-gray-400 leading-relaxed mb-6">
             Back pain, leg pain, or sciatica from a disc bulge at L4–L5? Physiotherapy-led rehab at R3BOOT Dadar. Most people improve without surgery.
           </p>

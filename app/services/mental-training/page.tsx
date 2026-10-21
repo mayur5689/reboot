@@ -6,6 +6,7 @@ import { FAQSection } from '@/components/faq-section'
 import ServiceSchema from '@/components/schema/ServiceSchema'
 import FAQSchema from '@/components/schema/FAQSchema'
 import { sportsPsychologyFaqs } from '@/lib/faqs/sports-psychology'
+import { client } from '@/sanity/lib/client'
 import { HeroTrustBadge, serviceTrustBadges } from '@/components/HeroTrustBadge'
 import { MobileHeroTrust } from '@/components/MobileHeroTrust'
 import { HeroSlider } from '@/app/services-demo/contrast-therapy/HeroSlider'
@@ -36,7 +37,30 @@ export const metadata: Metadata = {
   alternates: { canonical: '/services/mental-training' },
 }
 
+export const revalidate = 3600
+
 const otherServices = services.filter((s) => s.slug !== 'mental-training').slice(0, 4)
+
+const mentalTrainingGuides: { slug: string; tag: string; title: string }[] = [
+  { slug: 'what-is-sports-psychology-meaning-importance', tag: 'Sports Psychology', title: 'What Is Sports Psychology? Meaning, Importance and How It Helps Athletes' },
+  { slug: 'competition-anxiety-choking-under-pressure-athletes', tag: 'Competition Anxiety', title: 'Competition Anxiety in Sport: Why Athletes Choke and How to Stay Composed' },
+  { slug: 'psychology-of-sports-injury-return-to-sport', tag: 'Injury', title: 'The Mental Side of Injury: Rebuilding Confidence to Return to Sport' },
+  { slug: 'sports-psychologist-vs-counsellor-mumbai', tag: 'Before You Book', title: 'Sports Psychologist or Counsellor? Choosing the Right Mental Support in Mumbai' },
+  { slug: 'burnout-athletes-high-performers-counselling', tag: 'Burnout', title: 'Burnout in Athletes and High Performers: Signs, Causes and Recovery' },
+  { slug: 'counselling-for-student-athletes-exams-training', tag: 'Student Athletes', title: 'Counselling for Student Athletes: Balancing Exams, Training and Pressure' },
+]
+
+async function getPublishedGuides() {
+  try {
+    const published: string[] = await client.fetch(
+      `*[_type == "post" && !(_id in path("drafts.**")) && slug.current in $slugs].slug.current`,
+      { slugs: mentalTrainingGuides.map((g) => g.slug) },
+    )
+    return mentalTrainingGuides.filter((g) => published.includes(g.slug))
+  } catch {
+    return []
+  }
+}
 
 const heroSlides = [
   {
@@ -62,7 +86,30 @@ const teamMembers: TeamMember[] = [
     description:
       'Specialises in athlete mental health and mindset training. Helps athletes build mental resilience, emotional regulation, and focus under pressure, across competition prep and return-from-injury work.',
     image: '/images/trainer2/Trainers/Parinaaz Irani.webp',
+    profileSlug: 'parinaaz-irani',
     stats: { years: 'Mental', rating: '5.0 ★', yearsLabel: 'Focus', ratingLabel: 'Rating' },
+  },
+  {
+    name: 'Anshita Shetty',
+    role: 'Sports Psychology Consultant',
+    credentials: 'MSc Sports & Exercise Psychology',
+    experience: 'InnerPeak · Athlete programmes',
+    description:
+      'Translates sport psychology into practical tools for athletes and teams. MSc from the University of Essex with experience across programme development and athlete-centred education.',
+    image: '/images/team/photo-placeholder.svg',
+    profileSlug: 'anshita-shetty',
+    stats: { years: 'MSc', rating: '5.0 ★', yearsLabel: 'Training', ratingLabel: 'Rating' },
+  },
+  {
+    name: 'Sakshi Kadam',
+    role: 'Sports Psychologist',
+    credentials: 'MSc Sports Psychology',
+    experience: 'Team psychologist · Cricket & hockey',
+    description:
+      'Supports teams and athletes with competitive anxiety, confidence, and wellbeing — backed by camp experience and a competitive sport background.',
+    image: '/images/team/photo-placeholder.svg',
+    profileSlug: 'sakshi-kadam',
+    stats: { years: 'Team', rating: '5.0 ★', yearsLabel: 'Focus', ratingLabel: 'Rating' },
   },
   {
     name: 'Alkesh Kubadia',
@@ -72,6 +119,7 @@ const teamMembers: TeamMember[] = [
     description:
       'Brings psychology training and decades of entrepreneurial experience to R3BOOT. Oversees strategy, operations, and ethical client experience across mental and physical recovery services.',
     image: '/images/trainer2/Trainers/Alkesh Kubadia (Behavioral Therapist).webp',
+    profileSlug: 'alkesh-kubadia',
     stats: { years: 'Psych', rating: '5.0 ★', yearsLabel: 'Background', ratingLabel: 'Rating' },
   },
 ]
@@ -135,7 +183,9 @@ function PhoneIcon({ className }: { className?: string }) {
   )
 }
 
-export default function SportsPsychologyPage() {
+export default async function SportsPsychologyPage() {
+  const guides = await getPublishedGuides()
+
   return (
     <main className="psych-page min-h-screen bg-white dark:bg-[#0A0A0A]">
 
@@ -217,10 +267,10 @@ export default function SportsPsychologyPage() {
             </span>
           </div>
 
-          <h1 className="text-[2rem] font-black text-gray-900 dark:text-white tracking-tight leading-[1.1] mb-3">
+          <h2 className="text-[2rem] font-black text-gray-900 dark:text-white tracking-tight leading-[1.1] mb-3">
             Mental Training in{' '}
             <span className="text-[#513394] dark:text-[#A78BFA]">Mumbai</span>
-          </h1>
+          </h2>
 
           <p className="text-base text-gray-500 dark:text-gray-400 leading-relaxed mb-6">
             Performance skills and counselling in one service. Manage pressure, rebuild trust after injury, and train the mental side at R3BOOT Dadar.
@@ -481,6 +531,42 @@ export default function SportsPsychologyPage() {
       </section>
 
       <LocationSection />
+
+      {/* ─── MENTAL TRAINING GUIDES ─── */}
+      {guides.length > 0 && (
+        <section className="py-16 sm:py-20 bg-white dark:bg-[#0A0A0A]">
+          <div className="container mx-auto px-5 sm:px-6 lg:px-8 max-w-6xl">
+            <div className="mb-10">
+              <span className="text-[11px] font-black tracking-[0.3em] text-[#513394] dark:text-[#A78BFA] uppercase mb-3 block">
+                GUIDES //
+              </span>
+              <h2 className="text-3xl sm:text-4xl font-black text-gray-900 dark:text-white tracking-tight">
+                Sports Psychology &amp; Counselling <span className="text-[#513394] dark:text-[#8B5CF6]">Guides</span>
+              </h2>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+              {guides.map((guide) => (
+                <Link
+                  key={guide.slug}
+                  href={`/blog/${guide.slug}`}
+                  className="group flex flex-col p-6 bg-gray-50 dark:bg-white/5 rounded-[2rem] border border-gray-100 dark:border-white/10 hover:border-[#513394]/40 transition-all"
+                >
+                  <p className="text-xs font-black tracking-widest text-[#513394] dark:text-[#A78BFA] uppercase mb-2">
+                    {guide.tag}
+                  </p>
+                  <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-[#513394] dark:group-hover:text-[#A78BFA] transition-colors">
+                    {guide.title}
+                  </h3>
+                  <span className="text-sm text-gray-500 dark:text-gray-400 mt-auto pt-3 inline-block">
+                    Read guide →
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       <FAQSection faqs={sportsPsychologyFaqs} layout="grid" />
 
       {/* ─── CTA: MOBILE ─── */}

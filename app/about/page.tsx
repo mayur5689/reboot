@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import HomeBlog from "@/components/HomeBlog";
 
 import Link from "next/link";
+import { TeamKnowMoreLink } from "@/components/team/TeamKnowMoreLink";
 
 export default function AboutPage() {
     const content = (
@@ -59,12 +60,12 @@ export default function AboutPage() {
                                 Recovery, Rehabilitation & Performance
                             </div>
 
-                            <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-gray-900 dark:text-white leading-[1.05]">
+                            <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold text-gray-900 dark:text-white leading-[1.05]">
                                 Rebuild. Restore. <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#513394] to-[#8B5CF6]">R3BOOT.</span>
-                            </h1>
+                            </h2>
 
                             <p className="text-xl text-gray-600 dark:text-gray-400 leading-relaxed max-w-xl">
-                                At R3BOOT, we specialize in high-end recovery, physiotherapy, and performance wellness. Our mission is to bridge the gap between clinical rehabilitation and elite performance.
+                                R3BOOT is pronounced Reboot. We specialise in high-end recovery, physiotherapy, and performance wellness at Dadar East and Lower Parel. Our mission is to bridge the gap between clinical rehabilitation and elite performance.
                             </p>
 
                             <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -152,13 +153,29 @@ export default function AboutPage() {
                                 name: "Alkesh Kubadia",
                                 role: "Co-Founder | Strategy, Psychology & Business Lead",
                                 image: "/images/trainer2/Trainers/Alkesh Kubadia (Behavioral Therapist).webp",
-                                bio: "Alkesh Kubadia holds a Master's degree in Psychology and brings decades of entrepreneurial experience. At r3boot, he oversees strategy, operations, and client experience, ensuring systems-driven execution and ethical practices."
+                                bio: "Alkesh Kubadia holds a Master's degree in Psychology and brings decades of entrepreneurial experience. At r3boot, he oversees strategy, operations, and client experience, ensuring systems-driven execution and ethical practices.",
+                                profileSlug: "alkesh-kubadia",
                             },
                             {
                                 name: "Parinaaz Irani",
                                 role: "Sports Counselling & Mental Performance",
                                 image: "/images/trainer2/Trainers/Parinaaz Irani.webp",
-                                bio: "Sport and performance psychologist specializing in athlete mental health and mindset training. Her work helps athletes develop mental resilience, emotional regulation, and focus under pressure."
+                                bio: "Sport and performance psychologist specializing in athlete mental health and mindset training. Her work helps athletes develop mental resilience, emotional regulation, and focus under pressure.",
+                                profileSlug: "parinaaz-irani",
+                            },
+                            {
+                                name: "Anshita Shetty",
+                                role: "Sports Psychology Consultant",
+                                image: "/images/team/photo-placeholder.svg",
+                                bio: "MSc Sports and Exercise Psychology (University of Essex). Supports athlete-centred programmes at InnerPeak and brings research-backed mental performance education to training environments.",
+                                profileSlug: "anshita-shetty",
+                            },
+                            {
+                                name: "Sakshi Kadam",
+                                role: "Sports Psychologist",
+                                image: "/images/team/photo-placeholder.svg",
+                                bio: "MSc Sports Psychology with team experience across cricket and hockey camps. Competitive athlete background in boxing and martial arts. Focused on anxiety, confidence, and team dynamics.",
+                                profileSlug: "sakshi-kadam",
                             },
                             {
                                 name: "Diyan Kubadia",
@@ -218,13 +235,16 @@ export default function AboutPage() {
                                         </p>
                                     </div>
                                 </div>
-                                <div className="space-y-1">
+                                <div className="space-y-2">
                                     <p className="text-gray-900 dark:text-white text-[10px] font-bold uppercase tracking-widest opacity-80">
                                         {member.role.split('|')[0]}
                                     </p>
                                     <h3 className="text-2xl font-bold text-gray-900 dark:text-white transition-colors">
                                         {member.name}
                                     </h3>
+                                    {"profileSlug" in member && member.profileSlug ? (
+                                        <TeamKnowMoreLink slug={member.profileSlug} />
+                                    ) : null}
                                 </div>
                             </motion.div>
                         ))}

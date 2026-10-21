@@ -68,8 +68,8 @@ export default function ContrastTherapyLowerParelPage() {
               <div className="prose prose-xl text-gray-600 dark:text-gray-400 dark:prose-invert max-w-none leading-relaxed space-y-6">
                 <p>
                   Premium gyms in the Kamala Mills and Phoenix Mills corridor often add cold plunge tanks with no health screening and no
-                  supervision. R3BOOT is 10–15 minutes away in Dadar East. Contrast therapy here means infrared sauna (68°C) paired with
-                  physio-supervised ice bath (6–10°C), not a solo dip after leg day.
+                  supervision. R3BOOT is 10–15 minutes away in Dadar East. Contrast therapy here means infrared sauna (70°C) paired with
+                  physio-supervised ice bath (6–8°C) in a Day or Night Cycle, not a solo dip after leg day.
                 </p>
                 <p>
                   BKC desk workers, Worli runners, and Parel weekend athletes use R3BOOT to recover faster. Combine with{' '}

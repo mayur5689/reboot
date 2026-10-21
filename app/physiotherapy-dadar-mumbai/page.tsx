@@ -486,7 +486,7 @@ export default function PhysioDadarLanding() {
               {[
                 {
                   title: 'Contrast Therapy',
-                  desc: 'Ice bath and infrared sauna in a clinically structured 3:1 protocol | reduces inflammation and accelerates muscle recovery after your physio session.',
+                  desc: 'Ice bath and infrared sauna in a clinically structured Day or Night Cycle | reduces inflammation and accelerates muscle recovery after your physio session.',
                   href: '/contrast-therapy-mumbai',
                 },
                 {

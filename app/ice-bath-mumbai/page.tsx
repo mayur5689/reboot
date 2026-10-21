@@ -135,7 +135,7 @@ export default function IceBathMumbaiPage() {
                   At R3BOOT in Dadar, cold immersion is a clinical intervention. Every session begins with a
                   health intake review. Our physiotherapy team teaches you controlled breathing before the cold
                   phase, supervises your immersion, and monitors your response. The cold is paired with an
-                  infrared sauna in a structured 3:1 hot-to-cold protocol, producing a vascular pumping action
+                  infrared sauna in a structured Day or Night Cycle contrast protocol, producing a vascular pumping action
                   that research shows clears metabolic waste faster than cold alone.
                 </p>
                 <p>
@@ -261,7 +261,7 @@ export default function IceBathMumbaiPage() {
                 {[
                   { label: 'Water temperature', value: '10–15°C (evidence-based range)' },
                   { label: 'Session duration', value: '3–10 minutes cold immersion per cycle' },
-                  { label: 'Protocol ratio', value: '3:1 hot-to-cold when combined with sauna' },
+                  { label: 'With sauna', value: 'Day or Night Cycle contrast (Half 30 min · Full 60 min)' },
                   { label: 'Frequency', value: '1–2 times per week for active athletes' },
                 ].map((stat, idx) => (
                   <div key={idx} className="flex items-center gap-5 p-4 bg-white dark:bg-white/5 rounded-2xl border border-gray-100 dark:border-white/5">
@@ -617,7 +617,7 @@ export default function IceBathMumbaiPage() {
 
       <ServiceSchema
         serviceName="Ice Bath in Mumbai, Supervised Cold Therapy"
-        description="Physiotherapist-supervised cold immersion as part of a clinical contrast therapy protocol at R3BOOT, Dadar East, Mumbai. Infrared sauna and ice bath in a structured 3:1 hot-to-cold sequence."
+        description="Physiotherapist-supervised cold immersion as part of a clinical contrast therapy protocol at R3BOOT, Dadar East, Mumbai. Infrared sauna (70°C) and ice bath (6–8°C) in Day and Night Cycle sequences."
         serviceUrl="https://www.r3boot.in/ice-bath-mumbai"
       />
       <FAQSchema faqs={iceBathMumbaiFaqs} />

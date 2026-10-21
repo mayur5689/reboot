@@ -26,9 +26,9 @@ import {
 } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Sports Massage in Mumbai | R3BOOT Dadar',
+  title: 'Sports Massage Mumbai | Physio-Led Recovery | R3BOOT Dadar',
   description:
-    'Clinical sports massage in Mumbai by certified specialists. Serving athletes in Dadar, Andheri, Thane & Bandra. Book at R3BOOT Recovery Center.',
+    'Sports massage in Mumbai at R3BOOT Dadar | physio-led, not a spa. Deep tissue, cupping & mobility for athletes and gym recovery. From ₹2,500. Book via WhatsApp.',
   keywords: [
     'sports massage mumbai',
     'sports massage dadar',
@@ -36,8 +36,16 @@ export const metadata: Metadata = {
     'sports massage therapist mumbai',
     'sports recovery massage',
     'sports massage near me mumbai',
+    'sports massage near me',
   ],
   alternates: { canonical: '/services/sports-massage' },
+  openGraph: {
+    title: 'Sports Massage Mumbai | Physio-Led Recovery | R3BOOT Dadar',
+    description:
+      'Physio-led sports massage at R3BOOT Dadar. Clinical recovery for athletes and gym-goers, not spa relaxation. Book via WhatsApp.',
+    url: 'https://www.r3boot.in/services/sports-massage',
+    type: 'website',
+  },
 }
 
 const otherServices = services.filter((s) => s.slug !== 'sports-massage').slice(0, 4)
@@ -74,6 +82,21 @@ const sportsMassageTeam: TeamMember[] = [
       'https://res.cloudinary.com/dj7bot2uc/image/upload/v1771404920/aanya-rao-womens-sports-massage-specialist-mumbai_agreyq.avif',
     stats: { years: 'L1&2', yearsLabel: 'Cupping Certified', rating: '5.0 ★' },
   },
+]
+
+const sportsMassageGuides: { href: string; tag: string; title: string; cta?: string }[] = [
+  { href: '/blog/how-much-does-sports-massage-cost-in-mumbai', tag: 'Cost', title: 'How Much Does a Sports Massage Cost in Mumbai?' },
+  { href: '/blog/sports-massage-vs-spa-massage', tag: 'Compare', title: 'Sports Massage vs Spa Massage: Which Do You Need?' },
+  { href: '/blog/how-to-choose-sports-massage-therapist-mumbai', tag: 'Before You Book', title: 'How to Choose a Sports Massage Therapist in Mumbai' },
+  { href: '/blog/womens-sports-massage-mumbai-female-therapist', tag: 'Women', title: 'Sports Massage for Women: Booking a Female Therapist' },
+  { href: '/blog/cupping-therapy-sports-massage-mumbai', tag: 'Cupping', title: 'Cupping Therapy with Sports Massage: What the Research Shows' },
+  { href: '/blog/sports-massage-vs-deep-tissue', tag: 'Compare', title: 'Sports Massage vs Deep Tissue Massage' },
+  { href: '/blog/how-often-sports-massage', tag: 'Frequency', title: 'How Often Should You Get a Sports Massage?' },
+  { href: '/blog/4-types-of-sports-massage-when-to-use', tag: 'Types', title: 'The 4 Types of Sports Massage and When to Use Each' },
+  { href: '/blog/sports-massage-techniques-mumbai', tag: 'Techniques', title: '5 Sports Massage Techniques: Which One Do You Need?' },
+  { href: '/blog/sports-massage-before-after-marathon', tag: 'Running', title: 'Sports Massage Before and After a Marathon' },
+  { href: '/blog/post-workout-muscle-soreness-recovery-mumbai', tag: 'Recovery', title: 'Post-Workout Muscle Soreness: Sports Massage Guide' },
+  { href: '/sports-massage-runners-mumbai', tag: "Runner's Guide", title: 'Sports Massage for Runners in Mumbai', cta: 'See specialist page →' },
 ]
 
 const heroSlides = [
@@ -182,7 +205,7 @@ export default function SportsMassagePage() {
 
         <div className="relative z-10 flex flex-1 flex-col justify-center px-12 lg:px-16 xl:px-20 max-w-[54%]">
           <p className="text-[#A78BFA] text-[11px] font-black tracking-[0.25em] uppercase mb-4">
-            Clinical Recovery&nbsp;&nbsp;•&nbsp;&nbsp;Certified Specialists&nbsp;&nbsp;•&nbsp;&nbsp;Performance-Driven
+            Physio-Led&nbsp;&nbsp;•&nbsp;&nbsp;Dadar, Mumbai&nbsp;&nbsp;•&nbsp;&nbsp;Not a Spa
           </p>
 
           <h1 className="text-5xl lg:text-6xl xl:text-[4.25rem] font-black text-white tracking-tight leading-[1.04] mb-4">
@@ -192,7 +215,7 @@ export default function SportsMassagePage() {
           </h1>
 
           <p className="text-[16px] text-white/55 max-w-md leading-relaxed mb-7">
-            Performance-driven massage by certified specialists at R3BOOT Dadar. Clinical recovery, not spa relaxation.
+            Clinical sports massage at R3BOOT Dadar for athletes and gym recovery. Deep tissue, cupping, and mobility work by certified specialists.
           </p>
 
           <div className="flex items-center gap-4">
@@ -230,21 +253,75 @@ export default function SportsMassagePage() {
           <div className="inline-flex items-center gap-2 bg-[#513394]/10 dark:bg-[#513394]/20 rounded-full px-4 py-2 mt-5 mb-4">
             <div className="w-1.5 h-1.5 rounded-full bg-[#513394] dark:bg-[#A78BFA]" />
             <span className="text-[#513394] dark:text-[#A78BFA] text-[11px] font-black tracking-[0.3em] uppercase">
-              Clinical Recovery
+              Physio-Led · Dadar · Not a Spa
             </span>
           </div>
 
-          <h1 className="text-[2rem] font-black text-gray-900 dark:text-white tracking-tight leading-[1.1] mb-3">
+          <h2 className="text-[2rem] font-black text-gray-900 dark:text-white tracking-tight leading-[1.1] mb-3">
             Sports Massage in <span className="text-[#513394] dark:text-[#A78BFA]">Mumbai</span>
-          </h1>
+          </h2>
 
           <p className="text-base text-gray-500 dark:text-gray-400 leading-relaxed mb-6">
-            Performance-driven massage by certified specialists at R3BOOT, Dadar. Clinical recovery, not spa relaxation.
+            Clinical sports massage at R3BOOT Dadar for athletes and gym recovery. Deep tissue, cupping, and mobility work by certified specialists.
           </p>
 
           <MobileHeroTrust items={serviceTrustBadges['sports-massage']} />
         </div>
       </section>
+
+      {/* ─── SESSION FACTS (SERP / ChatGPT answer block) ─── */}
+      <section className="border-y border-gray-100 dark:border-white/[0.08] bg-[#F8F9FA] dark:bg-[#0D0D0D]">
+        <div className="container mx-auto px-5 sm:px-6 lg:px-8 py-8 sm:py-10">
+          <dl className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 max-w-5xl mx-auto">
+            <div>
+              <dt className="text-[11px] font-black tracking-[0.2em] uppercase text-[#513394] dark:text-[#A78BFA] mb-1.5">
+                Location
+              </dt>
+              <dd className="text-sm sm:text-base font-bold text-gray-900 dark:text-white leading-snug">
+                R3BOOT Dadar, Mumbai
+              </dd>
+            </div>
+            <div>
+              <dt className="text-[11px] font-black tracking-[0.2em] uppercase text-[#513394] dark:text-[#A78BFA] mb-1.5">
+                Session from
+              </dt>
+              <dd className="text-sm sm:text-base font-bold text-gray-900 dark:text-white leading-snug">
+                ₹2,500 women · ₹3,500 men
+                <Link
+                  href="/blog/how-much-does-sports-massage-cost-in-mumbai"
+                  className="block mt-1 text-xs font-semibold text-[#513394] dark:text-[#A78BFA] hover:underline underline-offset-4"
+                >
+                  Mumbai price guide →
+                </Link>
+              </dd>
+            </div>
+            <div>
+              <dt className="text-[11px] font-black tracking-[0.2em] uppercase text-[#513394] dark:text-[#A78BFA] mb-1.5">
+                Approach
+              </dt>
+              <dd className="text-sm sm:text-base font-bold text-gray-900 dark:text-white leading-snug">
+                Physio-led, not spa
+              </dd>
+            </div>
+            <div>
+              <dt className="text-[11px] font-black tracking-[0.2em] uppercase text-[#513394] dark:text-[#A78BFA] mb-1.5">
+                Book
+              </dt>
+              <dd className="text-sm sm:text-base font-bold text-gray-900 dark:text-white leading-snug">
+                <a
+                  href="https://wa.me/919702368612"
+                  target="_blank"
+                  rel="nofollow noopener noreferrer"
+                  className="underline underline-offset-4 decoration-[#513394]/40 hover:decoration-[#513394] dark:decoration-[#A78BFA]/40 dark:hover:decoration-[#A78BFA]"
+                >
+                  WhatsApp +91 97023 68612
+                </a>
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
       {/* ─── WHAT TO EXPECT ─── */}
       <section id="session" className="py-16 sm:py-20 lg:py-28 bg-white dark:bg-[#0A0A0A]">
         <div className="container mx-auto px-5 sm:px-6 lg:px-8">
@@ -422,6 +499,7 @@ export default function SportsMassagePage() {
                     icon: CircleDot,
                     title: 'Cupping Therapy (Level 1 & 2)',
                     body: 'Used for fascia decompression, stubborn tight areas like the IT band and upper back, and improving blood flow to chronically compressed tissue.',
+                    link: { href: '/blog/cupping-therapy-sports-massage-mumbai', label: 'Does cupping work? What the research shows →' },
                     light: '#0369A1',
                     dark: '#38BDF8',
                     bgLight: 'rgba(3,105,161,0.08)',
@@ -467,6 +545,14 @@ export default function SportsMassagePage() {
                           <p className="text-gray-500 dark:text-gray-400 text-[13px] sm:text-sm leading-relaxed">
                             {phase.body}
                           </p>
+                          {phase.link && (
+                            <Link
+                              href={phase.link.href}
+                              className="inline-block mt-3 text-[13px] sm:text-sm font-bold text-[var(--pc)] dark:text-[var(--pcd)] hover:underline underline-offset-4"
+                            >
+                              {phase.link.label}
+                            </Link>
+                          )}
                         </div>
                       </div>
                     </div>
@@ -496,9 +582,15 @@ export default function SportsMassagePage() {
               <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed mb-4">
                 Most sports massage in Mumbai is not adapted for female physiology. Pressure, technique selection, and recovery protocols built around male athletes do not automatically translate to women.
               </p>
-              <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed mb-10">
+              <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed mb-4">
                 At R3BOOT, female clients are treated by Vaishali Sonar — cupping certified Level 1 & 2 — with hands-on experience across competitive players and the general population.
               </p>
+              <Link
+                href="/blog/womens-sports-massage-mumbai-female-therapist"
+                className="inline-block mb-10 text-sm font-bold text-[#513394] dark:text-[#A78BFA] hover:underline underline-offset-4"
+              >
+                What to wear, periods, pregnancy: the women&apos;s sports massage guide →
+              </Link>
 
               <div className="space-y-5">
                 {[
@@ -868,31 +960,35 @@ export default function SportsMassagePage() {
         </div>
       </section>
 
-      {/* From Our Blog + Related Guides */}
-      <section className="py-16 bg-white dark:bg-[#0A0A0A]">
-        <div className="container mx-auto px-6 lg:px-8 max-w-4xl">
-          <h2 className="text-2xl font-black text-gray-900 dark:text-white mb-8">From Our Blog</h2>
-          <div className="flex flex-wrap gap-6">
-            <Link
-              href="/blog/sports-massage-before-after-marathon"
-              className="group p-6 bg-gray-50 dark:bg-white/5 rounded-[2rem] border border-gray-100 dark:border-white/10 hover:border-[#513394]/40 transition-all flex-1 min-w-[240px] max-w-md"
-            >
-              <p className="text-xs font-black tracking-widest text-[#513394] uppercase mb-2">Sports Massage</p>
-              <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-[#513394] transition-colors">
-                Sports Massage Before & After a Marathon
-              </h3>
-              <span className="text-sm text-gray-500 dark:text-gray-400 mt-2 inline-block">Read article →</span>
-            </Link>
-            <Link
-              href="/sports-massage-runners-mumbai"
-              className="group p-6 bg-gray-50 dark:bg-white/5 rounded-[2rem] border border-gray-100 dark:border-white/10 hover:border-[#513394]/40 transition-all flex-1 min-w-[240px] max-w-md"
-            >
-              <p className="text-xs font-black tracking-widest text-[#513394] uppercase mb-2">Runner&apos;s Guide</p>
-              <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-[#513394] transition-colors">
-                Sports Massage for Runners in Mumbai
-              </h3>
-              <span className="text-sm text-gray-500 dark:text-gray-400 mt-2 inline-block">See specialist page →</span>
-            </Link>
+      {/* ─── SPORTS MASSAGE GUIDES ─── */}
+      <section className="py-16 sm:py-20 bg-white dark:bg-[#0A0A0A]">
+        <div className="container mx-auto px-5 sm:px-6 lg:px-8 max-w-6xl">
+          <div className="mb-10">
+            <span className="text-[11px] font-black tracking-[0.3em] text-[#513394] dark:text-[#A78BFA] uppercase mb-3 block">
+              GUIDES //
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-black text-gray-900 dark:text-white tracking-tight">
+              Sports Massage <span className="text-[#513394] dark:text-[#8B5CF6]">Guides</span>
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {sportsMassageGuides.map((guide) => (
+              <Link
+                key={guide.href}
+                href={guide.href}
+                className="group flex flex-col p-6 bg-gray-50 dark:bg-white/5 rounded-[2rem] border border-gray-100 dark:border-white/10 hover:border-[#513394]/40 transition-all"
+              >
+                <p className="text-xs font-black tracking-widest text-[#513394] dark:text-[#A78BFA] uppercase mb-2">
+                  {guide.tag}
+                </p>
+                <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-[#513394] dark:group-hover:text-[#A78BFA] transition-colors">
+                  {guide.title}
+                </h3>
+                <span className="text-sm text-gray-500 dark:text-gray-400 mt-auto pt-3 inline-block">
+                  {guide.cta ?? 'Read guide →'}
+                </span>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
@@ -921,16 +1017,16 @@ export default function SportsMassagePage() {
       </div>
 
       <ServiceSchema
-        serviceName="Sports Massage in Mumbai"
-        description="Clinical sports massage in Mumbai by certified specialists. Serving athletes in Dadar, Andheri, Thane & Bandra. Book at R3BOOT Recovery Center."
-        serviceUrl="https://r3boot.in/services/sports-massage"
+        serviceName="Sports Massage Mumbai"
+        description="Physio-led sports massage in Mumbai at R3BOOT Dadar. Clinical deep tissue, cupping and mobility for athletes and gym recovery. Not a spa. Book via WhatsApp."
+        serviceUrl="https://www.r3boot.in/services/sports-massage"
       />
       <FAQSchema faqs={sportsMassageFaqs} />
       <BreadcrumbSchema
         items={[
           { name: 'Home', url: '/' },
           { name: 'Services', url: '/services' },
-          { name: 'Sports Massage', url: '/services/sports-massage' },
+          { name: 'Sports Massage Mumbai', url: '/services/sports-massage' },
         ]}
       />
     </main>

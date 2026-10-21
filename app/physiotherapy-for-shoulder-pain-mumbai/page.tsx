@@ -248,10 +248,10 @@ export default function PhysiotherapyShoulderPainMumbaiPage() {
             </span>
           </div>
 
-          <h1 className="text-[2rem] font-black text-gray-900 dark:text-white tracking-tight leading-[1.1] mb-3">
+          <h2 className="text-[2rem] font-black text-gray-900 dark:text-white tracking-tight leading-[1.1] mb-3">
             Physiotherapy for Shoulder Pain in{' '}
             <span className="text-[#513394] dark:text-[#A78BFA]">Mumbai</span>
-          </h1>
+          </h2>
 
           <p className="text-base text-gray-500 dark:text-gray-400 leading-relaxed mb-6">
             Frozen shoulder, rotator cuff, impingement, desk and gym overload at R3BOOT Dadar.
@@ -741,7 +741,7 @@ export default function PhysiotherapyShoulderPainMumbaiPage() {
             Shoulder pain decisions,{' '}
             <span className="text-[#513394] dark:text-[#8B5CF6]">explained</span>
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
             {[
               {
                 href: '/blog/shoulder-pain-sleeping-left-side-frozen-gym-faq',
@@ -752,6 +752,16 @@ export default function PhysiotherapyShoulderPainMumbaiPage() {
                 href: '/blog/physiotherapist-guide-shoulder-joint-pain-relief',
                 label: 'Physiotherapist Guide to Shoulder Relief',
                 desc: 'How clinical physio assesses and treats shoulder joint pain, step by step.',
+              },
+              {
+                href: '/blog/frozen-shoulder-stages-dry-needling',
+                label: 'Frozen Shoulder Stages & Dry Needling',
+                desc: 'Freezing, frozen, thawing: what helps at each phase, and when needling helps.',
+              },
+              {
+                href: '/blog/ipl-cricket-elbow-shoulder-pain-recovery',
+                label: 'IPL Cricket Elbow & Shoulder Recovery',
+                desc: 'Throwing load, tennis elbow, and shoulder pain in cricket. How physio at R3BOOT treats it.',
               },
             ].map((item) => (
               <Link
@@ -786,6 +796,7 @@ export default function PhysiotherapyShoulderPainMumbaiPage() {
               { label: 'Physiotherapy Mumbai', href: '/physiotherapy-mumbai' },
               { label: 'Shoulder Pain FAQ Blog', href: '/blog/shoulder-pain-sleeping-left-side-frozen-gym-faq' },
               { label: 'Shoulder Joint Pain Guide', href: '/blog/physiotherapist-guide-shoulder-joint-pain-relief' },
+              { label: 'Frozen Shoulder Stages', href: '/blog/frozen-shoulder-stages-dry-needling' },
             ].map((link) => (
               <Link
                 key={link.href}

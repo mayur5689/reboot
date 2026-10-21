@@ -308,10 +308,10 @@ export default function PhysiotherapyLowerParelPage() {
             </span>
           </div>
 
-          <h1 className="text-[2rem] font-black text-gray-900 dark:text-white tracking-tight leading-[1.1] mb-3">
+          <h2 className="text-[2rem] font-black text-gray-900 dark:text-white tracking-tight leading-[1.1] mb-3">
             Physiotherapy in Lower Parel,{' '}
             <span className="text-[#513394] dark:text-[#A78BFA]">Mumbai</span>
-          </h1>
+          </h2>
 
           <p className="text-base text-gray-500 dark:text-gray-400 leading-relaxed mb-6">
             Lodha Signet, Prabhadevi. Clinical physio for desk, gym, and sports pain near Kamala Mills, Worli, and BKC.

@@ -223,10 +223,10 @@ export default function ContrastTherapyMumbaiPage() {
           </div>
 
           {/* H1 */}
-          <h1 className="text-[2rem] font-black text-gray-900 dark:text-white tracking-tight leading-[1.1] mb-3">
+          <h2 className="text-[2rem] font-black text-gray-900 dark:text-white tracking-tight leading-[1.1] mb-3">
             Contrast Therapy in{' '}
             <span className="text-[#513394] dark:text-[#A78BFA]">Mumbai</span>
-          </h1>
+          </h2>
 
           {/* Subtext */}
           <p className="text-base text-gray-500 dark:text-gray-400 leading-relaxed mb-6">

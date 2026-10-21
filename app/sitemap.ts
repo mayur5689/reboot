@@ -7,12 +7,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   let blogPages: MetadataRoute.Sitemap = []
   try {
     const postSlugs = await getPostSlugs()
-    blogPages = postSlugs.map(({ slug }) => ({
-      url: `${BASE_URL}/blog/${slug}`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.6,
-    }))
+    blogPages = postSlugs
+      .filter((post): post is { slug: string } => Boolean(post?.slug))
+      .map(({ slug }) => ({
+        url: `${BASE_URL}/blog/${slug}`,
+        lastModified: new Date(),
+        changeFrequency: 'monthly' as const,
+        priority: 0.6,
+      }))
   } catch {
     // Sanity unavailable at build time; blog posts omitted from sitemap
   }
@@ -20,7 +22,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   return [
     // Homepage
     {
-      url: BASE_URL,
+      url: `${BASE_URL}/`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 1.0,
@@ -76,21 +78,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.1,
     },
 
-    // Service pages (core)
-    {
-      url: `${BASE_URL}/services/physiotherapy`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.3,
-    },
+    // Service pages (core). Physio and clinical pilates live on their landing URLs.
     {
       url: `${BASE_URL}/services/sports-massage`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
-    {
-      url: `${BASE_URL}/services/clinical-pilates`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.9,
@@ -114,12 +104,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.9,
     },
     // SEO landing pages (dedicated transactional pages)
-    {
-      url: `${BASE_URL}/sports-massage-mumbai`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
+    // /sports-massage-mumbai 301s → /services/sports-massage (primary money URL)
     {
       url: `${BASE_URL}/contrast-therapy-mumbai`,
       lastModified: new Date(),

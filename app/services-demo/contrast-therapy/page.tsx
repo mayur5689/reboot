@@ -82,7 +82,7 @@ const rebootReachPoints = [
   {
     step: '04',
     title: 'Temperatures held precisely, not approximately',
-    body: 'Infrared sauna at 68°C. Ice bath at 6-10°C. These are the evidence-based ranges. We maintain them. Contrast therapy only works when temperatures are far enough apart to trigger vascular response.',
+    body: 'Infrared sauna at 70°C. Ice bath at 6-8°C. These are our clinical standards (reducible on request). Contrast therapy only works when temperatures are far enough apart to trigger vascular response.',
   },
 ]
 
@@ -95,7 +95,7 @@ const processSteps = [
   {
     number: '02',
     title: 'Breathing Prep and Supervised Protocol',
-    body: 'We walk you through controlled breathing before immersion. Then sauna (68°C) and ice bath (6-10°C) in structured sequence under team guidance.',
+    body: 'Compulsory shower, breathing prep, then sauna (70°C) and ice bath (6-8°C) in your Day or Night Half or Full Cycle under team guidance.',
   },
   {
     number: '03',
@@ -284,10 +284,10 @@ export default function ContrastTherapyServiceDemo() {
           </div>
 
           {/* H1 */}
-          <h1 className="text-[2rem] font-black text-gray-900 dark:text-white tracking-tight leading-[1.1] mb-3">
+          <h2 className="text-[2rem] font-black text-gray-900 dark:text-white tracking-tight leading-[1.1] mb-3">
             Contrast Therapy in{' '}
             <span className="text-[#513394] dark:text-[#A78BFA]">Mumbai</span>
-          </h1>
+          </h2>
 
           {/* Subtext */}
           <p className="text-base text-gray-500 dark:text-gray-400 leading-relaxed mb-6">

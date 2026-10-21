@@ -211,7 +211,7 @@ function TeamDesktopCarousel() {
           </div>
 
           <a
-            href="/team"
+            href="/about#team-section"
             className="inline-flex items-center gap-3 rounded-2xl px-6 py-3.5 transition-opacity hover:opacity-90"
             style={{ background: 'linear-gradient(90deg, #513394 0%, #2a1060 100%)' }}
           >
@@ -305,7 +305,7 @@ function TeamMobileSection() {
 
         {/* CTA - purple gradient matching reference */}
         <a
-          href="/team"
+          href="/about#team-section"
           className="mt-5 flex items-center justify-between rounded-2xl px-5 py-4"
           style={{ background: 'linear-gradient(90deg, #513394 0%, #2a1060 100%)' }}
         >

@@ -310,9 +310,9 @@ export default function PilatesLowerParelPage() {
               Pilates // Lower Parel
             </span>
           </div>
-          <h1 className="text-[2rem] font-black text-gray-900 dark:text-white tracking-tight leading-[1.1] mb-3">
+          <h2 className="text-[2rem] font-black text-gray-900 dark:text-white tracking-tight leading-[1.1] mb-3">
             Pilates in <span className="text-[#513394] dark:text-[#A78BFA]">Lower Parel</span>
-          </h1>
+          </h2>
           <p className="text-base text-gray-500 dark:text-gray-400 leading-relaxed mb-6">
             One-to-one, physiotherapist-led Pilates at R3BOOT Lodha Signet. Reformer and mat. Near Worli, Kamala Mills, and BKC.
           </p>

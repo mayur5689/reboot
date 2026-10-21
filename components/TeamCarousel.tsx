@@ -13,6 +13,7 @@ type Coach = {
   specialty: string
   imageSrc: string
   description: string
+  profileSlug?: string
 }
 
 const coaches: Coach[] = [
@@ -22,7 +23,8 @@ const coaches: Coach[] = [
     role: "Strategy & Psychology",
     specialty: "Behavioral Therapy",
     imageSrc: "https://res.cloudinary.com/dj7bot2uc/image/upload/v1785289076/Alkesh_V2_rdjes4.webp",
-    description: "Master's in Psychology with decades of entrepreneurial experience. Oversees strategy and client experience."
+    description: "Master's in Psychology with decades of entrepreneurial experience. Oversees strategy and client experience.",
+    profileSlug: "alkesh-kubadia",
   },
   {
     id: "hiral",
@@ -123,11 +125,11 @@ function TeamCard({
             {coach.specialty}
           </span>
           <Link
-            href="/about#team-section"
+            href={coach.profileSlug ? `/team/${coach.profileSlug}` : '/about#team-section'}
             onClick={(e) => e.stopPropagation()}
             className="inline-flex items-center gap-1.5 rounded-full bg-[#1A1A1A] dark:bg-white text-white dark:text-[#1A1A1A] px-3 py-1.5 text-[9px] sm:text-[10px] font-bold hover:opacity-85 transition-opacity shrink-0"
           >
-            View Profile
+            Know more
           </Link>
         </div>
       </div>

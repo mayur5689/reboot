@@ -72,7 +72,8 @@ const Footer: React.FC = () => {
             <div className="space-y-4 md:border-l border-white/20 md:pl-8">
               <ul className="space-y-3 text-[13px] md:text-base font-semibold text-white/90">
                 <li><Link href="/infrared-sauna-mumbai" className="hover:text-[#A78BFA] transition-colors">Infrared Sauna Mumbai</Link></li>
-                <li><Link href="/sports-massage-mumbai" className="hover:text-[#A78BFA] transition-colors">Sports Massage Mumbai</Link></li>
+                <li><Link href="/services/sports-massage" className="hover:text-[#A78BFA] transition-colors">Sports Massage Mumbai</Link></li>
+                <li><Link href="/sports-massage-dadar" className="hover:text-[#A78BFA] transition-colors">Sports Massage Dadar</Link></li>
                 <li><Link href="/physiotherapy-dadar-mumbai" className="hover:text-[#A78BFA] transition-colors">Physiotherapy Dadar Mumbai</Link></li>
                 <li><Link href="/contrast-therapy-dadar" className="hover:text-[#A78BFA] transition-colors">Contrast Therapy Dadar</Link></li>
                 <li><Link href="/contrast-therapy-bandra" className="hover:text-[#A78BFA] transition-colors">Contrast Therapy Bandra</Link></li>
@@ -80,6 +81,7 @@ const Footer: React.FC = () => {
                 <li><Link href="/contrast-therapy-andheri" className="hover:text-[#A78BFA] transition-colors">Contrast Therapy Andheri</Link></li>
                 <li><Link href="/contrast-therapy-worli" className="hover:text-[#A78BFA] transition-colors">Contrast Therapy Worli</Link></li>
                 <li><Link href="/services/mental-training" className="hover:text-[#A78BFA] transition-colors">Mental Training</Link></li>
+                <li><Link href="/athlete-screening-mumbai" className="hover:text-[#A78BFA] transition-colors">Athlete Screening Mumbai</Link></li>
               </ul>
             </div>
 

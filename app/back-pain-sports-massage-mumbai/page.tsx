@@ -64,7 +64,7 @@ export default function BackPainSportsMassageMumbaiPage() {
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
         <div className="container mx-auto px-6 lg:px-8 relative z-10 pb-20">
           <Link
-            href="/sports-massage-mumbai"
+            href="/services/sports-massage"
             className="inline-flex items-center gap-2 text-white/70 hover:text-white transition-all mb-8 group"
           >
             <div className="w-8 h-8 rounded-full border border-white/30 flex items-center justify-center group-hover:bg-white group-hover:text-[#513394] transition-all">
@@ -280,7 +280,7 @@ export default function BackPainSportsMassageMumbaiPage() {
           <p className="text-xs font-black tracking-[0.3em] text-[#513394] dark:text-[#A78BFA] uppercase mb-6">ALSO AT R3BOOT //</p>
           <div className="flex flex-wrap gap-4">
             {[
-              { label: 'Sports Massage Mumbai', href: '/sports-massage-mumbai' },
+              { label: 'Sports Massage Mumbai', href: '/services/sports-massage' },
               { label: 'Physiotherapy Dadar', href: '/physiotherapy-dadar-mumbai' },
               { label: 'Ice Bath Mumbai', href: '/ice-bath-mumbai' },
               { label: 'Contrast Therapy Mumbai', href: '/contrast-therapy-mumbai' },
@@ -333,7 +333,7 @@ export default function BackPainSportsMassageMumbaiPage() {
       <FAQSchema faqs={backPainSportsMassageFaqs} />
       <BreadcrumbSchema items={[
         { name: 'Home', url: '/' },
-        { name: 'Sports Massage Mumbai', url: '/sports-massage-mumbai' },
+        { name: 'Sports Massage Mumbai', url: '/services/sports-massage' },
         { name: 'Back Pain', url: '/back-pain-sports-massage-mumbai' },
       ]} />
     </main>

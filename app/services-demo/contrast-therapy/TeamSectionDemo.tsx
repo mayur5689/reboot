@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export type TeamMember = {
   name: string
@@ -10,6 +11,7 @@ export type TeamMember = {
   experience: string
   description: string
   image: string
+  profileSlug?: string
   stats: {
     years: string
     rating: string
@@ -99,7 +101,18 @@ function TeamSlide({ member }: { member: TeamMember }) {
           {member.description}
         </p>
 
-        <div className="flex gap-3">
+        <div className="flex flex-wrap items-center gap-3">
+          {member.profileSlug ? (
+            <Link
+              href={`/team/${member.profileSlug}`}
+              className="inline-flex items-center gap-2 rounded-xl border border-white/20 px-4 py-2.5 text-white font-bold text-sm hover:bg-white/10 transition-colors"
+            >
+              Know more
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </Link>
+          ) : null}
           <StatCard
             icon={
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -217,7 +230,7 @@ function TeamDesktopCarousel({ members }: { members: TeamMember[] }) {
           </div>
 
           <a
-            href="/team"
+            href="/about#team-section"
             className="inline-flex items-center gap-3 rounded-2xl px-6 py-3.5 transition-opacity hover:opacity-90"
             style={{ background: 'linear-gradient(90deg, #513394 0%, #2a1060 100%)' }}
           >
@@ -297,6 +310,18 @@ function TeamMobileSection({ members }: { members: TeamMember[] }) {
           </div>
         </div>
 
+        {member.profileSlug ? (
+          <Link
+            href={`/team/${member.profileSlug}`}
+            className="mt-4 inline-flex items-center gap-2 text-[#A78BFA] font-bold text-sm"
+          >
+            Know more
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </Link>
+        ) : null}
+
         {/* Avatar tabs */}
         <div className="flex items-center gap-3 mt-4">
           {members.map((m, i) => (
@@ -317,7 +342,7 @@ function TeamMobileSection({ members }: { members: TeamMember[] }) {
 
         {/* CTA - purple gradient matching reference */}
         <a
-          href="/team"
+          href="/about#team-section"
           className="mt-5 flex items-center justify-between rounded-2xl px-5 py-4"
           style={{ background: 'linear-gradient(90deg, #513394 0%, #2a1060 100%)' }}
         >

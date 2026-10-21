@@ -541,6 +541,9 @@ export default function PhysiotherapyBackPainMumbaiPage() {
               { label: 'Back Pain Sports Massage', href: '/back-pain-sports-massage-mumbai' },
               { label: 'Physiotherapy for Shoulder Pain', href: '/physiotherapy-for-shoulder-pain-mumbai' },
               { label: 'Clinical Pilates Mumbai', href: '/clinical-pilates-mumbai' },
+              { label: 'Scoliosis Pilates Mumbai', href: '/scoliosis-pilates-mumbai' },
+              { label: 'Cat Cow Stretch for Back Pain', href: '/blog/cat-cow-stretch-back-pain-relief' },
+              { label: '15-Minute Posture Workout', href: '/blog/posture-workout-better-alignment' },
               { label: 'Contrast Therapy Mumbai', href: '/contrast-therapy-mumbai' },
               { label: 'Ice Bath Mumbai', href: '/ice-bath-mumbai' },
             ].map((link) => (

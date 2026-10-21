@@ -18,7 +18,7 @@ import { ComparisonSection } from './ComparisonSection'
 import { ClipboardList, Activity, Target, ClipboardCheck, Footprints, Zap, Stethoscope } from 'lucide-react'
 
 export const metadata: Metadata = {
-    title: 'Athlete Screening in Mumbai | R3BOOT Dadar – Full Body & Performance Assessment',
+    title: 'Athlete Screening in Mumbai | Full Body Assessment | R3BOOT',
     description: 'A structured, evidence-based athlete screening at R3BOOT: injury history, MSK exam, gait analysis, and a personalised Recovery & Performance Plan. Dadar, Mumbai.',
     keywords: ['athlete screening mumbai', 'gait analysis mumbai', 'sports assessment dadar', 'injury risk screening', 'performance assessment mumbai', 'movement screening near me'],
     alternates: { canonical: '/services/athlete-screening' },
@@ -187,10 +187,10 @@ export default function AthleteScreeningPage() {
                         <span className="text-[#513394] dark:text-[#A78BFA] text-[11px] font-black tracking-[0.3em] uppercase">Performance // Prevention</span>
                     </div>
 
-                    <h1 className="text-[2rem] font-black text-gray-900 dark:text-white tracking-tight leading-[1.1] mb-3">
+                    <h2 className="text-[2rem] font-black text-gray-900 dark:text-white tracking-tight leading-[1.1] mb-3">
                         Athlete Screening in{' '}
                         <span className="text-[#513394] dark:text-[#A78BFA]">Mumbai</span>
-                    </h1>
+                    </h2>
 
                     <p className="text-base text-gray-500 dark:text-gray-400 leading-relaxed mb-6">
                         A full-body MSK exam, gait analysis, and sport-specific special tests - supervised by physiotherapists at R3BOOT Dadar.
