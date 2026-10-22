@@ -46,9 +46,13 @@ export async function generateMetadata(props: { params: Promise<{ slug: string }
         return { title: "Blog | R3BOOT", description: "This blog post does not exist." };
     }
 
-    const titleTag = post.title.length > 50
-        ? `${post.title.slice(0, 47)}... | R3BOOT`
-        : `${post.title} | R3BOOT`
+    const suffix = ' | R3BOOT'
+    const titleTag =
+        post.title.includes('|')
+            ? post.title
+            : post.title.length + suffix.length <= 60
+                ? `${post.title}${suffix}`
+                : post.title
     return {
         title: titleTag,
         description: post.metaDescription || post.excerpt || "Read this article on our blog.",
