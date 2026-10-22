@@ -9,6 +9,7 @@ import { BlogPortableText } from "@/components/blog/blog-portable-text";
 import { BlogTableOfContents } from "@/components/blog/BlogTableOfContents";
 import { BlogAuthorCard } from "@/components/blog/BlogAuthorCard";
 import { extractH2Headings } from "@/lib/blog/headings";
+import { blogHeadline, blogTitleTag } from "@/lib/blog/title-tag";
 
 export const revalidate = 60;
 
@@ -46,19 +47,13 @@ export async function generateMetadata(props: { params: Promise<{ slug: string }
         return { title: "Blog | R3BOOT", description: "This blog post does not exist." };
     }
 
-    const suffix = ' | R3BOOT'
-    const titleTag =
-        post.title.includes('|')
-            ? post.title
-            : post.title.length + suffix.length <= 60
-                ? `${post.title}${suffix}`
-                : post.title
+    const headline = blogHeadline(post.title)
     return {
-        title: titleTag,
+        title: blogTitleTag(post.title),
         description: post.metaDescription || post.excerpt || "Read this article on our blog.",
         alternates: { canonical: `/blog/${slug}` },
         openGraph: {
-            title: post.title,
+            title: headline,
             description: post.metaDescription || post.excerpt,
             images: [post.thumbnail].filter(Boolean),
             type: 'article',
@@ -98,7 +93,7 @@ export default async function BlogPostPage(props: { params: Promise<{ slug: stri
     return (
         <article className="min-h-screen dark:bg-[#0A0A0A] overflow-hidden pb-20 lg:pb-0">
             <BlogPostingSchema
-                title={post.title}
+                title={blogHeadline(post.title)}
                 description={post.metaDescription || post.excerpt || post.title}
                 slug={params.slug}
                 publishedAt={post.publishedAt}
@@ -141,7 +136,7 @@ export default async function BlogPostPage(props: { params: Promise<{ slug: stri
                     </div>
 
                     <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black text-white mb-8 tracking-tighter leading-none max-w-4xl">
-                        {post.title}
+                        {blogHeadline(post.title)}
                     </h1>
 
                     <div className="flex items-center gap-6">
