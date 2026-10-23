@@ -26,9 +26,9 @@ import {
 } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Sports Massage Mumbai | Physio-Led Recovery | R3BOOT Dadar',
+  title: 'Sports Massage Mumbai | Deep Tissue & Gym | R3BOOT',
   description:
-    'Sports massage in Mumbai at R3BOOT Dadar | physio-led, not a spa. Deep tissue, cupping & mobility for athletes and gym recovery. From ₹2,500. Book via WhatsApp.',
+    'Sports massage near you in Dadar. Physio-led deep tissue and gym recovery, not a spa. From ₹2,500. Evening slots after training. Book on WhatsApp today.',
   keywords: [
     'sports massage mumbai',
     'sports massage dadar',
@@ -37,12 +37,15 @@ export const metadata: Metadata = {
     'sports recovery massage',
     'sports massage near me mumbai',
     'sports massage near me',
+    'gym massage',
+    'gym massage near me',
+    'deep tissue massage mumbai',
   ],
   alternates: { canonical: '/services/sports-massage' },
   openGraph: {
-    title: 'Sports Massage Mumbai | Physio-Led Recovery | R3BOOT Dadar',
+    title: 'Sports Massage Mumbai | Deep Tissue & Gym | R3BOOT',
     description:
-      'Physio-led sports massage at R3BOOT Dadar. Clinical recovery for athletes and gym-goers, not spa relaxation. Book via WhatsApp.',
+      'Physio-led sports massage at R3BOOT Dadar. Deep tissue and gym recovery, not spa relaxation. Book via WhatsApp.',
     url: 'https://www.r3boot.in/services/sports-massage',
     type: 'website',
   },
@@ -211,11 +214,11 @@ export default function SportsMassagePage() {
           <h1 className="text-5xl lg:text-6xl xl:text-[4.25rem] font-black text-white tracking-tight leading-[1.04] mb-4">
             Sports Massage
             <br />
-            in <span className="text-[#A78BFA]">Mumbai</span>
+            and Gym Recovery in <span className="text-[#A78BFA]">Mumbai</span>
           </h1>
 
           <p className="text-[16px] text-white/55 max-w-md leading-relaxed mb-7">
-            Clinical sports massage at R3BOOT Dadar for athletes and gym recovery. Deep tissue, cupping, and mobility work by certified specialists.
+            Physio-led sports massage in Dadar for gym load, deep tissue tightness, and race recovery. Not a spa.
           </p>
 
           <div className="flex items-center gap-4">
@@ -258,11 +261,11 @@ export default function SportsMassagePage() {
           </div>
 
           <h2 className="text-[2rem] font-black text-gray-900 dark:text-white tracking-tight leading-[1.1] mb-3">
-            Sports Massage in <span className="text-[#513394] dark:text-[#A78BFA]">Mumbai</span>
+            Sports Massage and Gym Recovery in <span className="text-[#513394] dark:text-[#A78BFA]">Mumbai</span>
           </h2>
 
           <p className="text-base text-gray-500 dark:text-gray-400 leading-relaxed mb-6">
-            Clinical sports massage at R3BOOT Dadar for athletes and gym recovery. Deep tissue, cupping, and mobility work by certified specialists.
+            Physio-led sports massage in Dadar for gym load, deep tissue tightness, and race recovery. Not a spa.
           </p>
 
           <MobileHeroTrust items={serviceTrustBadges['sports-massage']} />
@@ -319,6 +322,46 @@ export default function SportsMassagePage() {
               </dd>
             </div>
           </dl>
+        </div>
+      </section>
+
+      {/* ─── GYM RECOVERY (query: gym massage) ─── */}
+      <section className="py-16 sm:py-20 bg-white dark:bg-[#0A0A0A]">
+        <div className="container mx-auto px-5 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center mb-10">
+            <h2 className="text-3xl sm:text-4xl font-black text-gray-900 dark:text-white tracking-tight mb-4">
+              Gym massage in Mumbai, without the spa routine
+            </h2>
+            <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed">
+              Searching gym massage usually means you lifted, your shoulders or hips are stuck, and you want
+              function back before the next session. At R3BOOT Dadar that is sports massage: assessment first,
+              then deep tissue where the load actually sat.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-5xl mx-auto">
+            {[
+              {
+                title: 'After heavy lower body',
+                body: 'Glutes, hamstrings, and calves that stay tight into the next squat or run day. Pressure is set to the tissue, not to a menu.',
+              },
+              {
+                title: 'Desk-to-gym shoulders',
+                body: 'Pressing and pulling on top of laptop hours. We treat the neck, pecs, and rotator cuff pattern, not only the sore deltoid.',
+              },
+              {
+                title: 'Same-week training',
+                body: 'Book 24 to 48 hours after a hard session when you can. Tell us your next training day so the pressure matches that window.',
+              },
+            ].map((item) => (
+              <div
+                key={item.title}
+                className="rounded-2xl border border-gray-100 dark:border-white/[0.08] bg-[#F8F9FA] dark:bg-white/[0.04] p-6"
+              >
+                <h3 className="font-black text-gray-900 dark:text-white text-lg mb-3">{item.title}</h3>
+                <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">{item.body}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

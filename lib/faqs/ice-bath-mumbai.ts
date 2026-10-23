@@ -12,7 +12,7 @@ export const iceBathMumbaiFaqs = [
   {
     question: 'How cold is the ice bath at R3BOOT?',
     answer:
-      'Our ice bath is maintained between 10 and 15 degrees Celsius, within the evidence-based range for therapeutic cold immersion. Cold enough to produce the vascular constriction effect, managed enough to complete the full protocol with proper breathing guidance. Our physiotherapy team teaches you a controlled breathing technique before your first cold immersion.',
+      'The ice bath is held at 6-8°C, the clinical range used in our contrast therapy protocol. Cold enough for vasoconstriction, managed enough to finish the round with guided breathing. Duration is adjusted to your response, not to a social-media timer.',
   },
   {
     question: 'Is ice bath safe without supervision?',
@@ -33,6 +33,11 @@ export const iceBathMumbaiFaqs = [
     question: 'Can beginners do an ice bath at R3BOOT?',
     answer:
       'Yes. Most first-time clients find the cold phase challenging for the first 60 seconds and then manageable with proper breathing. Our team teaches you a controlled breathing technique before your first immersion. We start with a full health intake review to confirm cold therapy is appropriate for you. We adjust duration and temperature for first-time clients.',
+  },
+  {
+    question: 'Is there an ice bath near me if I live in Navi Mumbai?',
+    answer:
+      'R3BOOT is in Dadar East, about 5 minutes from Dadar station. Clients from Navi Mumbai typically come by train or car into Dadar rather than hunting for an unsupervised plunge locally. Book ahead so the ice bath and sauna are set for your slot. Call or WhatsApp +91 97023 68612.',
   },
   {
     question: 'Do I need to book in advance for an ice bath in Mumbai?',

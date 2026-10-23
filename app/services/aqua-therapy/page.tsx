@@ -15,9 +15,9 @@ import { TestimonialsCarousel } from './TestimonialsCarousel'
 import { LocationSection } from './LocationSection'
 
 export const metadata: Metadata = {
-  title: 'Aqua Therapy Mumbai | Aqua Treadmill Rehabilitation at R3BOOT Dadar',
+  title: 'Water Treadmill Mumbai | Knee & Back Rehab | R3BOOT',
   description:
-    'Physio-supervised aqua treadmill rehabilitation at R3BOOT Dadar. Post-surgery, sports injuries, arthritis, knee pain, and back pain. Adjustable water level, temperature, and speed. Book today.',
+    'Water treadmill near you in Dadar. Aqua therapy for knee, back, and post-surgery rehab. A physiotherapist is in the water with you. Book an assessment today.',
   alternates: { canonical: '/services/aqua-therapy' },
   keywords: [
     'aqua therapy mumbai',
@@ -25,6 +25,8 @@ export const metadata: Metadata = {
     'hydrotherapy mumbai',
     'aqua treadmill therapy',
     'underwater treadmill physiotherapy',
+    'water treadmill near me',
+    'water treadmill mumbai',
     'aqua therapy post surgery mumbai',
     'aqua therapy knee pain mumbai',
     'aqua therapy arthritis mumbai',
@@ -254,12 +256,12 @@ export default function AquaTherapyPage() {
           </p>
 
           <h1 className="text-5xl lg:text-6xl xl:text-[4.25rem] font-black text-white tracking-tight leading-[1.04] mb-4">
-            Aqua Therapy<br />
-            in <span className="text-[#A78BFA]">Mumbai</span>
+            Water Treadmill<br />
+            Aqua Therapy in <span className="text-[#A78BFA]">Mumbai</span>
           </h1>
 
           <p className="text-[16px] text-white/55 max-w-md leading-relaxed mb-7">
-            Physio-supervised aqua treadmill rehabilitation at R3BOOT Dadar. Recover earlier, load less, move better.
+            Private underwater treadmill at R3BOOT Dadar. Knee, back, and post-surgery loading with a physiotherapist in the water.
           </p>
 
           <div className="flex items-center gap-4">
@@ -307,13 +309,13 @@ export default function AquaTherapyPage() {
 
           {/* H1 */}
           <h2 className="text-[2rem] font-black text-gray-900 dark:text-white tracking-tight leading-[1.1] mb-3">
-            Aqua Therapy in{' '}
+            Water Treadmill Aqua Therapy in{' '}
             <span className="text-[#513394] dark:text-[#A78BFA]">Mumbai</span>
           </h2>
 
           {/* Subtext */}
           <p className="text-base text-gray-500 dark:text-gray-400 leading-relaxed mb-6">
-            Physio-supervised aqua treadmill rehabilitation. Post-surgery, sports injuries, arthritis. Private chamber. R3BOOT Dadar.
+            Private underwater treadmill at R3BOOT Dadar. Knee, back, post-surgery. A physiotherapist stays in the water with you.
           </p>
 
           <MobileHeroTrust items={serviceTrustBadges['aqua-therapy']} />
@@ -332,7 +334,7 @@ export default function AquaTherapyPage() {
                 SCREENING //
               </span>
               <h2 className="text-4xl md:text-6xl font-black text-gray-900 dark:text-white tracking-tight">
-                Who Aqua Therapy Is For.{' '}
+                Who the Water Treadmill Is For.{' '}
                 <span className="text-[#513394] dark:text-[#8B5CF6]">And Who It Is Not.</span>
               </h2>
             </div>

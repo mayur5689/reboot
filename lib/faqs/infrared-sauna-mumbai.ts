@@ -7,7 +7,7 @@ export const infraredSaunaMumbaiFaqs = [
   {
     question: 'Is there a sauna near me in Dadar or central Mumbai?',
     answer:
-      'Yes. R3BOOT in Dadar East is central Mumbai\'s clinical recovery centre with infrared sauna and ice bath under one roof. If you search "sauna near me" from Dadar, Parel, Lower Parel, or Bandra, we are typically 10–20 minutes away. Call +91 97023 68612 to book.',
+      'Yes. R3BOOT in Dadar East is a clinical recovery centre with private infrared sauna and ice bath under one roof. From Dadar, Parel, Lower Parel, or Bandra you are typically 10 to 20 minutes away. Call +91 97023 68612 to book.',
   },
   {
     question: 'What is the difference between infrared sauna and a regular sauna?',

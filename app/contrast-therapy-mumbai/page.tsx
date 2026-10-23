@@ -23,7 +23,7 @@ import { MobileHeroTrust } from '@/components/MobileHeroTrust'
 export const metadata: Metadata = {
   title: 'Contrast Therapy Mumbai | Ice Bath & Infrared Sauna | R3BOOT',
   description:
-    'Contrast therapy Mumbai at R3BOOT | ice bath + infrared sauna, physio-supervised. Day & Night Cycle protocols for athletes in Dadar. 5.0 ★ Google. Book via WhatsApp.',
+    'Contrast therapy in Mumbai: ice bath plus infrared sauna, physio-supervised. Day and Night Cycle protocols in Dadar. 5.0 ★ Google. Book via WhatsApp.',
   alternates: { canonical: '/contrast-therapy-mumbai' },
   keywords: [
     'contrast therapy Mumbai',
