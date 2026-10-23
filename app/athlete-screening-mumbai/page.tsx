@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   title: 'Athlete Screening Mumbai | Full Body & Performance Assessment | R3BOOT',
   description:
     'Athlete screening Mumbai at R3BOOT | injury history, MSK exam, gait analysis, physio-supervised. Personalised Recovery & Performance Plan for athletes in Dadar. 5.0 ★ Google. Book via WhatsApp.',
-  alternates: { canonical: '/athlete-screening-mumbai' },
+  alternates: { canonical: '/services/athlete-screening' },
   keywords: [
     'athlete screening Mumbai',
     'sports assessment Mumbai',
@@ -761,12 +761,12 @@ export default function AthleteScreeningMumbaiPage() {
       <ServiceSchema
         serviceName="Athlete Screening in Mumbai"
         description="Structured, evidence-based athlete screening: injury history, MSK exam, gait analysis, and special tests, supervised by physiotherapists at R3BOOT, Mumbai."
-        serviceUrl="https://www.r3boot.in/athlete-screening-mumbai"
+        serviceUrl="https://www.r3boot.in/services/athlete-screening"
       />
       <FAQSchema faqs={athleteScreeningFaqs} />
       <BreadcrumbSchema items={[
         { name: 'Home', url: '/' },
-        { name: 'Athlete Screening Mumbai', url: '/athlete-screening-mumbai' },
+        { name: 'Athlete Screening Mumbai', url: '/services/athlete-screening' },
       ]} />
     </main>
   )

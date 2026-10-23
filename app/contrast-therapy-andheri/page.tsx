@@ -35,7 +35,7 @@ export default function ContrastTherapyAndheriPage() {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
         <div className="container mx-auto px-6 lg:px-8 relative z-10 pb-20">
-          <Link href="/contrast-therapy-mumbai" className="inline-flex items-center gap-2 text-white/70 hover:text-white transition-all mb-8 group">
+          <Link href="/services/contrast-therapy" className="inline-flex items-center gap-2 text-white/70 hover:text-white transition-all mb-8 group">
             <div className="w-8 h-8 rounded-full border border-white/30 flex items-center justify-center group-hover:bg-white group-hover:text-[#513394] transition-all">
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -129,7 +129,7 @@ export default function ContrastTherapyAndheriPage() {
       <FAQSchema faqs={contrastTherapyAndheriFaqs} />
       <BreadcrumbSchema items={[
         { name: 'Home', url: '/' },
-        { name: 'Contrast Therapy Mumbai', url: '/contrast-therapy-mumbai' },
+        { name: 'Contrast Therapy Mumbai', url: '/services/contrast-therapy' },
         { name: 'Andheri', url: '/contrast-therapy-andheri' },
       ]} />
     </main>

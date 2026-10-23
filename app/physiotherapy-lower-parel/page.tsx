@@ -248,7 +248,7 @@ export default function PhysiotherapyLowerParelPage() {
 
           <div className="relative z-10 flex flex-1 flex-col justify-center px-12 lg:px-16 xl:px-20 max-w-[56%]">
             <Link
-              href="/physiotherapy-mumbai"
+              href="/services/physiotherapy"
               className="inline-flex items-center gap-2 text-white/50 hover:text-white transition-all mb-5 group w-fit"
             >
               <div className="w-7 h-7 rounded-full border border-white/25 flex items-center justify-center group-hover:bg-white group-hover:text-[#513394] transition-all">
@@ -734,7 +734,7 @@ export default function PhysiotherapyLowerParelPage() {
           <div className="flex flex-wrap gap-3 sm:gap-4">
             {[
               { label: 'Physiotherapy Dadar Mumbai', href: '/physiotherapy-dadar-mumbai' },
-              { label: 'Physiotherapy Mumbai', href: '/physiotherapy-mumbai' },
+              { label: 'Physiotherapy Mumbai', href: '/services/physiotherapy' },
               { label: 'Sports Massage Lower Parel', href: '/sports-massage-lower-parel' },
               { label: 'Contrast Therapy Lower Parel', href: '/contrast-therapy-lower-parel' },
               { label: 'Pilates Lower Parel', href: '/pilates-lower-parel' },
@@ -802,7 +802,7 @@ export default function PhysiotherapyLowerParelPage() {
       <BreadcrumbSchema
         items={[
           { name: 'Home', url: '/' },
-          { name: 'Physiotherapy Mumbai', url: '/physiotherapy-mumbai' },
+          { name: 'Physiotherapy Mumbai', url: '/services/physiotherapy' },
           { name: 'Physiotherapy Lower Parel', url: '/physiotherapy-lower-parel' },
         ]}
       />

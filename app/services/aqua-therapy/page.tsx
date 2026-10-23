@@ -197,7 +197,6 @@ const contraindications = [
 ]
 
 const locationPages = [
-  { label: 'Aqua Therapy Mumbai', href: '/aqua-therapy-mumbai' },
   { label: 'Aqua Therapy Dadar', href: '/aqua-therapy-dadar' },
   { label: 'Near Bandra', href: '/aqua-therapy-bandra' },
   { label: 'Near Worli', href: '/aqua-therapy-worli' },

@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   title: 'Contrast Therapy Mumbai | Ice Bath & Infrared Sauna | R3BOOT',
   description:
     'Contrast therapy in Mumbai: ice bath plus infrared sauna, physio-supervised. Day and Night Cycle protocols in Dadar. 5.0 ★ Google. Book via WhatsApp.',
-  alternates: { canonical: '/contrast-therapy-mumbai' },
+  alternates: { canonical: '/services/contrast-therapy' },
   keywords: [
     'contrast therapy Mumbai',
     'contrast bath therapy Mumbai',
@@ -594,12 +594,12 @@ export default function ContrastTherapyMumbaiPage() {
       <ServiceSchema
         serviceName="Contrast Therapy in Mumbai"
         description={`Clinically structured hot-cold recovery protocol using infrared sauna (${CONTRAST_SAUNA_TEMP_LABEL}) and ice bath (${CONTRAST_ICE_BATH_TEMP_RANGE}). Day & Night Cycle protocols supervised by physiotherapists at R3BOOT, Mumbai.`}
-        serviceUrl="https://www.r3boot.in/contrast-therapy-mumbai"
+        serviceUrl="https://www.r3boot.in/services/contrast-therapy"
       />
       <FAQSchema faqs={contrastTherapyMumbaiFaqs} />
       <BreadcrumbSchema items={[
         { name: 'Home', url: '/' },
-        { name: 'Contrast Therapy Mumbai', url: '/contrast-therapy-mumbai' },
+        { name: 'Contrast Therapy', url: '/services/contrast-therapy' },
       ]} />
     </main>
   )

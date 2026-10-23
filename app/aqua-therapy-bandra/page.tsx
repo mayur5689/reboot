@@ -37,7 +37,7 @@ export default function AquaTherapyBandraPage() {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
         <div className="container mx-auto px-6 lg:px-8 relative z-10 pb-20">
-          <Link href="/aqua-therapy-mumbai" className="inline-flex items-center gap-2 text-white/70 hover:text-white transition-all mb-8 group">
+          <Link href="/services/aqua-therapy" className="inline-flex items-center gap-2 text-white/70 hover:text-white transition-all mb-8 group">
             <div className="w-8 h-8 rounded-full border border-white/30 flex items-center justify-center group-hover:bg-white group-hover:text-[#513394] transition-all">
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -195,7 +195,7 @@ export default function AquaTherapyBandraPage() {
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-5 gap-4 max-w-4xl mx-auto">
             {[
-              { label: 'Aqua Therapy Mumbai', href: '/aqua-therapy-mumbai' },
+              { label: 'Aqua Therapy Mumbai', href: '/services/aqua-therapy' },
               { label: 'Dadar (On-Site)', href: '/aqua-therapy-dadar' },
               { label: 'Near Andheri', href: '/aqua-therapy-andheri' },
               { label: 'Lower Parel', href: '/aqua-therapy-lower-parel' },
@@ -222,7 +222,7 @@ export default function AquaTherapyBandraPage() {
       <FAQSchema faqs={aquaTherapyBandraFaqs} />
       <BreadcrumbSchema items={[
         { name: 'Home', url: '/' },
-        { name: 'Aqua Therapy Mumbai', url: '/aqua-therapy-mumbai' },
+        { name: 'Aqua Therapy Mumbai', url: '/services/aqua-therapy' },
         { name: 'Near Bandra', url: '/aqua-therapy-bandra' },
       ]} />
     </main>

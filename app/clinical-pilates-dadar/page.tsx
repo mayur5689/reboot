@@ -36,7 +36,7 @@ export default function ClinicalPilatesDadarPage() {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
         <div className="container mx-auto px-6 lg:px-8 relative z-10 pb-20">
-          <Link href="/clinical-pilates-mumbai" className="inline-flex items-center gap-2 text-white/70 hover:text-white transition-all mb-8 group">
+          <Link href="/services/clinical-pilates" className="inline-flex items-center gap-2 text-white/70 hover:text-white transition-all mb-8 group">
             <div className="w-8 h-8 rounded-full border border-white/30 flex items-center justify-center group-hover:bg-white group-hover:text-[#513394] transition-all">
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -94,7 +94,7 @@ export default function ClinicalPilatesDadarPage() {
                     { title: 'Lower Back Pain & Disc Problems', desc: 'L4-L5 disc, lumbar instability, facet joint pain, programs built from your MRI and physiotherapy assessment.', href: '/back-pain-clinical-pilates-mumbai' },
                     { title: 'Scoliosis Management', desc: 'Curve-specific exercises and rotational breathing for adolescent and adult scoliosis.', href: '/scoliosis-pilates-mumbai' },
                     { title: 'Post-Surgical Rehabilitation', desc: 'ACL, spinal surgery, hip/knee replacement | graded reformer loading from week 6.', href: '/post-surgery-pilates-mumbai' },
-                    { title: 'Sports Performance', desc: 'Core stability and movement quality for runners, gym-goers, and athletes based in Dadar.', href: '/clinical-pilates-mumbai' },
+                    { title: 'Sports Performance', desc: 'Core stability and movement quality for runners, gym-goers, and athletes based in Dadar.', href: '/services/clinical-pilates' },
                   ].map((item, idx) => (
                     <Link key={idx} href={item.href} className="bg-white dark:bg-white/5 p-8 rounded-[2.5rem] border border-gray-100 dark:border-white/5 shadow-sm hover:shadow-xl hover:border-[#513394]/20 group transition-all duration-300">
                       <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-3 group-hover:text-[#513394] dark:group-hover:text-[#A78BFA] transition-colors">{item.title}</h4>
@@ -192,7 +192,7 @@ export default function ClinicalPilatesDadarPage() {
       <FAQSchema faqs={clinicalPilatesDadarFaqs} />
       <BreadcrumbSchema items={[
         { name: 'Home', url: '/' },
-        { name: 'Clinical Pilates Mumbai', url: '/clinical-pilates-mumbai' },
+        { name: 'Clinical Pilates Mumbai', url: '/services/clinical-pilates' },
         { name: 'Dadar', url: '/clinical-pilates-dadar' },
       ]} />
     </main>

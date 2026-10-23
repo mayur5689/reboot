@@ -148,7 +148,7 @@ const therapists = [
 const pairedServices = [
   {
     title: 'Contrast Therapy',
-    href: '/contrast-therapy-mumbai',
+    href: '/services/contrast-therapy',
     desc: 'Alternating infrared sauna and ice bath to accelerate vascular clearance post-run. Many runners use contrast therapy the day after a long run and sports massage mid-week.',
   },
   {

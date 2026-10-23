@@ -38,7 +38,7 @@ export const metadata: Metadata = {
         'physiotherapy for knee pain mumbai',
         'physiotherapy near me mumbai',
     ],
-    alternates: { canonical: '/physiotherapy-dadar-mumbai' },
+    alternates: { canonical: '/services/physiotherapy' },
 }
 
 const otherServices = services.filter((s) => s.slug !== 'physiotherapy').slice(0, 4)
@@ -760,15 +760,15 @@ export default function PhysiotherapyPage() {
             <section className="py-16 bg-white dark:bg-[#0A0A0A]">
                 <div className="container mx-auto px-6 lg:px-8 max-w-4xl space-y-6">
                     <Link
-                        href="/physiotherapy-mumbai"
+                        href="/physiotherapy-dadar-mumbai"
                         className="group flex items-center justify-between p-6 bg-gray-50 dark:bg-white/5 rounded-[2rem] border border-gray-100 dark:border-white/10 hover:border-[#513394]/40 transition-all"
                     >
                         <div>
-                            <p className="text-xs font-black tracking-widest text-[#513394] uppercase mb-1">Mumbai Guide</p>
+                            <p className="text-xs font-black tracking-widest text-[#513394] uppercase mb-1">Dadar Clinic</p>
                             <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-[#513394] transition-colors">
-                                Physiotherapy in Mumbai: What to Expect & How to Choose
+                                Physiotherapy in Dadar: Clinic Hours, Access and Booking
                             </h3>
-                            <span className="text-sm text-gray-500 dark:text-gray-400 mt-1 inline-block">Full local guide →</span>
+                            <span className="text-sm text-gray-500 dark:text-gray-400 mt-1 inline-block">Dadar East location page →</span>
                         </div>
                         <svg className="w-6 h-6 text-[#513394] opacity-0 group-hover:opacity-100 transition-opacity shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                             <path d="M9 18l6-6-6-6" />
@@ -826,7 +826,7 @@ export default function PhysiotherapyPage() {
             <ServiceSchema
                 serviceName="Physiotherapy in Mumbai"
                 description="Clinical physiotherapy in Mumbai by certified specialists. Back pain, knee pain, sports injuries, post-surgery rehab. Dadar location, accessible from Andheri, Thane & Bandra."
-                serviceUrl="https://www.r3boot.in/physiotherapy-dadar-mumbai"
+                serviceUrl="https://www.r3boot.in/services/physiotherapy"
             />
             <FAQSchema faqs={physiotherapyFaqs} />
         </main>

@@ -169,7 +169,7 @@ export default function SportsMassageDadarPage() {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
               {[
                 { title: 'Ice Bath', desc: 'Cold immersion reduces systemic inflammation and accelerates recovery post-massage.', href: '/ice-bath-mumbai' },
-                { title: 'Contrast Therapy', desc: 'Alternating hot/cold boosts circulation and recovery speed. Combines powerfully with soft tissue work.', href: '/contrast-therapy-mumbai' },
+                { title: 'Contrast Therapy', desc: 'Alternating hot/cold boosts circulation and recovery speed. Combines powerfully with soft tissue work.', href: '/services/contrast-therapy' },
                 { title: 'Physiotherapy', desc: 'For structural issues, nerve involvement, or when strength and movement rehab is needed alongside massage.', href: '/physiotherapy-dadar-mumbai' },
               ].map((item, idx) => (
                 <Link key={idx} href={item.href} className="bg-white dark:bg-white/5 p-8 rounded-[2.5rem] border border-gray-100 dark:border-white/5 shadow-sm hover:shadow-xl hover:border-[#513394]/20 group transition-all duration-300">

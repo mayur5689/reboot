@@ -69,7 +69,7 @@ export default function BackPainClinicalPilatesMumbaiPage() {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
         <div className="container mx-auto px-6 lg:px-8 relative z-10 pb-20">
-          <Link href="/clinical-pilates-mumbai" className="inline-flex items-center gap-2 text-white/70 hover:text-white transition-all mb-8 group">
+          <Link href="/services/clinical-pilates" className="inline-flex items-center gap-2 text-white/70 hover:text-white transition-all mb-8 group">
             <div className="w-8 h-8 rounded-full border border-white/30 flex items-center justify-center group-hover:bg-white group-hover:text-[#513394] transition-all">
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -290,7 +290,7 @@ export default function BackPainClinicalPilatesMumbaiPage() {
           <p className="text-xs font-black tracking-[0.3em] text-[#513394] dark:text-[#A78BFA] uppercase mb-6">ALSO AT R3BOOT //</p>
           <div className="flex flex-wrap gap-4">
             {[
-              { label: 'Clinical Pilates Mumbai', href: '/clinical-pilates-mumbai' },
+              { label: 'Clinical Pilates Mumbai', href: '/services/clinical-pilates' },
               { label: 'Physiotherapy Dadar', href: '/physiotherapy-dadar-mumbai' },
               { label: 'Sports Massage for Back Pain', href: '/back-pain-sports-massage-mumbai' },
               { label: 'Scoliosis Pilates Mumbai', href: '/scoliosis-pilates-mumbai' },
@@ -332,7 +332,7 @@ export default function BackPainClinicalPilatesMumbaiPage() {
       <FAQSchema faqs={backPainClinicalPilatesFaqs} />
       <BreadcrumbSchema items={[
         { name: 'Home', url: '/' },
-        { name: 'Clinical Pilates Mumbai', url: '/clinical-pilates-mumbai' },
+        { name: 'Clinical Pilates Mumbai', url: '/services/clinical-pilates' },
         { name: 'Back Pain', url: '/back-pain-clinical-pilates-mumbai' },
       ]} />
     </main>

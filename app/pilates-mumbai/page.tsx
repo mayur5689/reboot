@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   title: 'Pilates Mumbai | Physio-Led Reformer & Mat | R3BOOT Dadar',
   description:
     'Pilates in Mumbai at R3BOOT Dadar | physiotherapist-led, 1:1 reformer & mat. For beginners, desk posture, back pain & athletes. Not a group fitness class. Book via WhatsApp.',
-  alternates: { canonical: '/pilates-mumbai' },
+  alternates: { canonical: '/services/clinical-pilates' },
   keywords: [
     'pilates mumbai',
     'pilates in mumbai',
@@ -214,9 +214,9 @@ const commercialComparisonRows = [
 
 const clusterLinks = [
   { label: 'Pilates Lower Parel', href: '/pilates-lower-parel', eyebrow: 'Lower Parel studio' },
-  { label: 'Reformer Pilates Mumbai', href: '/reformer-pilates-mumbai', eyebrow: 'Equipment' },
+  { label: 'Reformer Pilates Mumbai', href: '/services/clinical-pilates', eyebrow: 'Equipment' },
   { label: 'Reformer Pilates Lower Parel', href: '/reformer-pilates-lower-parel', eyebrow: 'Equipment · LP' },
-  { label: 'Clinical Pilates Mumbai', href: '/clinical-pilates-mumbai', eyebrow: 'Injury programs' },
+  { label: 'Clinical Pilates Mumbai', href: '/services/clinical-pilates', eyebrow: 'Injury programs' },
   { label: 'Pilates for Back Pain', href: '/back-pain-clinical-pilates-mumbai', eyebrow: 'Condition' },
   { label: 'Physiotherapy Dadar', href: '/physiotherapy-dadar-mumbai', eyebrow: 'Related care' },
 ]
@@ -864,13 +864,13 @@ export default function PilatesMumbaiPage() {
       <ServiceSchema
         serviceName="Pilates in Mumbai"
         description="Physiotherapist-led Pilates in Mumbai at R3BOOT Dadar. One-to-one reformer and mat sessions for beginners, desk posture, and athletes. Assessment-first, not a group fitness class."
-        serviceUrl="https://www.r3boot.in/pilates-mumbai"
+        serviceUrl="https://www.r3boot.in/services/clinical-pilates"
       />
       <FAQSchema faqs={pilatesMumbaiFaqs} />
       <BreadcrumbSchema
         items={[
           { name: 'Home', url: '/' },
-          { name: 'Pilates Mumbai', url: '/pilates-mumbai' },
+          { name: 'Pilates Mumbai', url: '/services/clinical-pilates' },
         ]}
       />
     </main>

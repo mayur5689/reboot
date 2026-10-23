@@ -432,7 +432,7 @@ export default function IceBathMumbaiPage() {
 
             <p className="text-gray-500 dark:text-gray-400 text-sm mt-8 leading-relaxed text-center">
               At R3BOOT, we offer ice bath as part of our{' '}
-              <Link href="/contrast-therapy-mumbai" className="text-[#513394] dark:text-[#A78BFA] font-bold hover:underline underline-offset-4">
+              <Link href="/services/contrast-therapy" className="text-[#513394] dark:text-[#A78BFA] font-bold hover:underline underline-offset-4">
                 contrast therapy protocol
               </Link>
               {' '},  never a standalone cold plunge without the warm phase. Also see{' '}

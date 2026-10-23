@@ -52,17 +52,16 @@ const Footer: React.FC = () => {
             {/* Column 1: Services 1 */}
             <div className="space-y-4 md:border-l border-white/20 md:pl-8">
               <ul className="space-y-3 text-[13px] md:text-base font-semibold text-white/90">
-                <li><Link href="/contrast-therapy-mumbai" className="hover:text-[#A78BFA] transition-colors">Contrast Therapy Mumbai</Link></li>
+                <li><Link href="/services/contrast-therapy" className="hover:text-[#A78BFA] transition-colors">Contrast Therapy Mumbai</Link></li>
                 <li><Link href="/ice-bath-mumbai" className="hover:text-[#A78BFA] transition-colors">Ice Bath Mumbai</Link></li>
                 <li><Link href="/cold-plunge-mumbai" className="hover:text-[#A78BFA] transition-colors">Cold Plunge Mumbai</Link></li>
                 <li><Link href="/services/compression-therapy" className="hover:text-[#A78BFA] transition-colors">Compression Therapy</Link></li>
                 <li><Link href="/services/aqua-therapy" className="hover:text-[#A78BFA] transition-colors">Aqua Therapy</Link></li>
                 <li><Link href="/services/sports-massage" className="hover:text-[#A78BFA] transition-colors">Percussive Therapy</Link></li>
-                <li><Link href="/pilates-mumbai" className="hover:text-[#A78BFA] transition-colors">Pilates Mumbai</Link></li>
-                <li><Link href="/pilates-lower-parel" className="hover:text-[#A78BFA] transition-colors">Pilates Lower Parel</Link></li>
-                <li><Link href="/reformer-pilates-mumbai" className="hover:text-[#A78BFA] transition-colors">Reformer Pilates Mumbai</Link></li>
-                <li><Link href="/reformer-pilates-lower-parel" className="hover:text-[#A78BFA] transition-colors">Reformer Pilates Lower Parel</Link></li>
                 <li><Link href="/services/clinical-pilates" className="hover:text-[#A78BFA] transition-colors">Clinical Pilates</Link></li>
+                <li><Link href="/pilates-lower-parel" className="hover:text-[#A78BFA] transition-colors">Pilates Lower Parel</Link></li>
+                <li><Link href="/reformer-pilates-lower-parel" className="hover:text-[#A78BFA] transition-colors">Reformer Pilates Lower Parel</Link></li>
+                <li><Link href="/services/physiotherapy" className="hover:text-[#A78BFA] transition-colors">Physiotherapy Mumbai</Link></li>
                 <li><Link href="/physiotherapy-dadar-mumbai" className="hover:text-[#A78BFA] transition-colors">Physiotherapy Dadar</Link></li>
                 <li><Link href="/physiotherapy-lower-parel" className="hover:text-[#A78BFA] transition-colors">Physiotherapy Lower Parel</Link></li>
               </ul>
@@ -81,7 +80,7 @@ const Footer: React.FC = () => {
                 <li><Link href="/contrast-therapy-andheri" className="hover:text-[#A78BFA] transition-colors">Contrast Therapy Andheri</Link></li>
                 <li><Link href="/contrast-therapy-worli" className="hover:text-[#A78BFA] transition-colors">Contrast Therapy Worli</Link></li>
                 <li><Link href="/services/mental-training" className="hover:text-[#A78BFA] transition-colors">Mental Training</Link></li>
-                <li><Link href="/athlete-screening-mumbai" className="hover:text-[#A78BFA] transition-colors">Athlete Screening Mumbai</Link></li>
+                <li><Link href="/services/athlete-screening" className="hover:text-[#A78BFA] transition-colors">Athlete Screening Mumbai</Link></li>
               </ul>
             </div>
 

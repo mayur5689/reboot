@@ -504,7 +504,7 @@ export default function PostSurgeryPhysiotherapyMumbaiPage() {
                 {
                   title: 'Contrast Therapy',
                   desc: 'Ice bath and infrared sauna protocol for reducing post-surgical joint swelling and accelerating tissue repair in Phase 2 and 3 recovery. Particularly effective for knee and hip replacements.',
-                  href: '/contrast-therapy-mumbai',
+                  href: '/services/contrast-therapy',
                 },
                 {
                   title: 'Clinical Pilates',
@@ -555,7 +555,7 @@ export default function PostSurgeryPhysiotherapyMumbaiPage() {
               { label: 'Physiotherapy for Shoulder Pain', href: '/physiotherapy-for-shoulder-pain-mumbai' },
               { label: 'Sports Injury Physiotherapy Dadar', href: '/sports-injury-physiotherapy-dadar-mumbai' },
               { label: 'Post-Surgery Clinical Pilates', href: '/post-surgery-pilates-mumbai' },
-              { label: 'Contrast Therapy Mumbai', href: '/contrast-therapy-mumbai' },
+              { label: 'Contrast Therapy Mumbai', href: '/services/contrast-therapy' },
               { label: 'Physiotherapy for Back Pain', href: '/physiotherapy-for-back-pain-mumbai' },
             ].map((link) => (
               <Link

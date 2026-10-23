@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   title: 'Reformer Pilates Mumbai | Physio-Led 1:1 | R3BOOT Dadar',
   description:
     'Reformer Pilates in Mumbai at R3BOOT Dadar | physiotherapist-led, one-to-one. Spring-loaded rehab & strength for beginners, back pain & athletes. Book via WhatsApp.',
-  alternates: { canonical: '/reformer-pilates-mumbai' },
+  alternates: { canonical: '/services/clinical-pilates' },
   keywords: [
     'reformer pilates mumbai',
     'reformer pilates near me mumbai',
@@ -211,9 +211,9 @@ const reformerComparisonRows = [
 ]
 
 const clusterLinks = [
-  { label: 'Pilates Mumbai', href: '/pilates-mumbai', eyebrow: 'City head page' },
+  { label: 'Pilates Mumbai', href: '/services/clinical-pilates', eyebrow: 'City head page' },
   { label: 'Reformer Pilates Lower Parel', href: '/reformer-pilates-lower-parel', eyebrow: 'Lower Parel studio' },
-  { label: 'Clinical Pilates Mumbai', href: '/clinical-pilates-mumbai', eyebrow: 'Injury programs' },
+  { label: 'Clinical Pilates Mumbai', href: '/services/clinical-pilates', eyebrow: 'Injury programs' },
   { label: 'Pilates for Back Pain', href: '/back-pain-clinical-pilates-mumbai', eyebrow: 'Condition' },
   { label: 'Post-Surgery Pilates', href: '/post-surgery-pilates-mumbai', eyebrow: 'Rehab handoff' },
   { label: 'Physiotherapy Dadar', href: '/physiotherapy-dadar-mumbai', eyebrow: 'Related care' },
@@ -832,14 +832,14 @@ export default function ReformerPilatesMumbaiPage() {
       <ServiceSchema
         serviceName="Reformer Pilates in Mumbai"
         description="Physiotherapist-led reformer Pilates in Mumbai at R3BOOT Dadar. One-to-one spring-loaded sessions for beginners, desk posture, and athletes. Assessment-first, not a group reformer class."
-        serviceUrl="https://www.r3boot.in/reformer-pilates-mumbai"
+        serviceUrl="https://www.r3boot.in/services/clinical-pilates"
       />
       <FAQSchema faqs={reformerPilatesMumbaiFaqs} />
       <BreadcrumbSchema
         items={[
           { name: 'Home', url: '/' },
-          { name: 'Pilates Mumbai', url: '/pilates-mumbai' },
-          { name: 'Reformer Pilates Mumbai', url: '/reformer-pilates-mumbai' },
+          { name: 'Pilates Mumbai', url: '/services/clinical-pilates' },
+          { name: 'Reformer Pilates Mumbai', url: '/services/clinical-pilates' },
         ]}
       />
     </main>

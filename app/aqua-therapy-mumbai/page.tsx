@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title: 'Aqua Therapy Mumbai | Aqua Treadmill Physiotherapy at R3BOOT Dadar',
   description:
     'Aqua therapy in Mumbai at R3BOOT | physio-supervised aqua treadmill rehabilitation for sports injuries, post-surgery recovery, knee pain, and arthritis. Dadar, Mumbai. Call to book.',
-  alternates: { canonical: '/aqua-therapy-mumbai' },
+  alternates: { canonical: '/services/aqua-therapy' },
   keywords: [
     'aqua therapy Mumbai',
     'aquatic therapy Mumbai',
@@ -270,14 +270,14 @@ export default function AquaTherapyMumbaiPage() {
       <ServiceSchema
         serviceName="Aqua Therapy in Mumbai"
         description="Aqua treadmill physiotherapy for sports injury rehabilitation, post-surgical recovery, knee pain, arthritis, and lower back pain. Supervised by physiotherapists at R3BOOT, Dadar, Mumbai."
-        serviceUrl="https://www.r3boot.in/aqua-therapy-mumbai"
+        serviceUrl="https://www.r3boot.in/services/aqua-therapy"
         areaServed="Mumbai"
       />
       <FAQSchema faqs={aquaTherapyMumbaiFaqs} />
       <BreadcrumbSchema
         items={[
           { name: 'Home', url: '/' },
-          { name: 'Aqua Therapy Mumbai', url: '/aqua-therapy-mumbai' },
+          { name: 'Aqua Therapy Mumbai', url: '/services/aqua-therapy' },
         ]}
       />
     </main>

@@ -504,7 +504,7 @@ export default function PhysiotherapyNeckPainMumbaiPage() {
                 {
                   title: 'Contrast Therapy',
                   desc: 'Ice bath and infrared sauna in a structured protocol. Reduces systemic inflammation and muscle tension, effective for desk workers with chronic upper body tension alongside physiotherapy.',
-                  href: '/contrast-therapy-mumbai',
+                  href: '/services/contrast-therapy',
                 },
                 {
                   title: 'Physiotherapy for Back Pain',
@@ -550,8 +550,8 @@ export default function PhysiotherapyNeckPainMumbaiPage() {
               { label: 'Physiotherapy for Shoulder Pain', href: '/physiotherapy-for-shoulder-pain-mumbai' },
               { label: 'Neck & Shoulder Sports Massage', href: '/neck-shoulder-pain-sports-massage-mumbai' },
               { label: 'Sports Injury Physiotherapy Dadar', href: '/sports-injury-physiotherapy-dadar-mumbai' },
-              { label: 'Contrast Therapy Mumbai', href: '/contrast-therapy-mumbai' },
-              { label: 'Clinical Pilates Mumbai', href: '/clinical-pilates-mumbai' },
+              { label: 'Contrast Therapy Mumbai', href: '/services/contrast-therapy' },
+              { label: 'Clinical Pilates Mumbai', href: '/services/clinical-pilates' },
             ].map((link) => (
               <Link
                 key={link.href}

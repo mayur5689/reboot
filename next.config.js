@@ -4,11 +4,6 @@ const nextConfig = {
     async redirects() {
         return [
             {
-                source: '/services/contrast-therapy',
-                destination: '/contrast-therapy-mumbai',
-                permanent: true,
-            },
-            {
                 source: '/services/hydrotherapy',
                 destination: '/services/aqua-therapy',
                 permanent: true,
@@ -30,12 +25,12 @@ const nextConfig = {
             },
             {
                 source: '/services-demo/aqua-therapy',
-                destination: '/aqua-therapy-mumbai',
+                destination: '/services/aqua-therapy',
                 permanent: true,
             },
             {
                 source: '/services/aqua-therapy-mumbai',
-                destination: '/aqua-therapy-mumbai',
+                destination: '/services/aqua-therapy',
                 permanent: true,
             },
             {
@@ -43,10 +38,45 @@ const nextConfig = {
                 destination: '/employee-wellness',
                 permanent: true,
             },
+            // City-wide service hubs live at /services/{slug}. Duplicate landings 301 here.
             {
-                // Consolidate sports massage head term onto the winning GSC URL
                 source: '/sports-massage-mumbai',
                 destination: '/services/sports-massage',
+                permanent: true,
+            },
+            {
+                source: '/physiotherapy-mumbai',
+                destination: '/services/physiotherapy',
+                permanent: true,
+            },
+            {
+                source: '/clinical-pilates-mumbai',
+                destination: '/services/clinical-pilates',
+                permanent: true,
+            },
+            {
+                source: '/pilates-mumbai',
+                destination: '/services/clinical-pilates',
+                permanent: true,
+            },
+            {
+                source: '/reformer-pilates-mumbai',
+                destination: '/services/clinical-pilates',
+                permanent: true,
+            },
+            {
+                source: '/aqua-therapy-mumbai',
+                destination: '/services/aqua-therapy',
+                permanent: true,
+            },
+            {
+                source: '/athlete-screening-mumbai',
+                destination: '/services/athlete-screening',
+                permanent: true,
+            },
+            {
+                source: '/contrast-therapy-mumbai',
+                destination: '/services/contrast-therapy',
                 permanent: true,
             },
             {

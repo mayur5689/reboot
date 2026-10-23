@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title: 'Physiotherapy Mumbai | Clinical Physiotherapist | R3BOOT Dadar',
   description:
     'Clinical physiotherapy in Mumbai at R3BOOT Dadar East. Back pain, knee pain, neck pain, sports injuries & post-surgery rehab. Dr. Hiral Parikh, 15+ yrs. 5.0 ★ Google. WhatsApp to book.',
-  alternates: { canonical: '/physiotherapy-mumbai' },
+  alternates: { canonical: '/services/physiotherapy' },
   keywords: [
     'physiotherapy mumbai',
     'physiotherapist mumbai',
@@ -468,12 +468,12 @@ export default function PhysiotherapyMumbaiPage() {
                 {
                   title: 'Contrast Therapy',
                   desc: 'Ice bath and infrared sauna in a structured recovery protocol | reduces inflammation and accelerates tissue repair.',
-                  href: '/contrast-therapy-mumbai',
+                  href: '/services/contrast-therapy',
                 },
                 {
                   title: 'Clinical Pilates',
                   desc: 'Supervised reformer Pilates built around your specific injury or condition, not a generic fitness class.',
-                  href: '/clinical-pilates-mumbai',
+                  href: '/services/clinical-pilates',
                 },
                 {
                   title: 'Physiotherapy Dadar',
@@ -629,11 +629,11 @@ export default function PhysiotherapyMumbaiPage() {
               { label: 'Physiotherapy for Neck Pain', href: '/physiotherapy-for-neck-pain-mumbai' },
               { label: 'Physiotherapy for Shoulder Pain', href: '/physiotherapy-for-shoulder-pain-mumbai' },
               { label: 'Sports Injury Physiotherapy', href: '/sports-injury-physiotherapy-dadar-mumbai' },
-              { label: 'Athlete Screening Mumbai', href: '/athlete-screening-mumbai' },
+              { label: 'Athlete Screening Mumbai', href: '/services/athlete-screening' },
               { label: 'Aqua Therapy for Knee Pain', href: '/aqua-therapy-for-knee-pain-mumbai' },
               { label: 'Post-Surgery Physiotherapy', href: '/post-surgery-physiotherapy-mumbai' },
               { label: 'Sports Massage Mumbai', href: '/services/sports-massage' },
-              { label: 'Contrast Therapy Mumbai', href: '/contrast-therapy-mumbai' },
+              { label: 'Contrast Therapy Mumbai', href: '/services/contrast-therapy' },
             ].map((link) => (
               <Link
                 key={link.href}
@@ -690,12 +690,12 @@ export default function PhysiotherapyMumbaiPage() {
       <ServiceSchema
         serviceName="Physiotherapy in Mumbai"
         description="Clinical physiotherapy in Mumbai at R3BOOT, Dadar East. Back pain, knee pain, neck pain, sports injuries, and post-surgery rehabilitation. Dr. Hiral Parikh (BPT, 15+ years) and Dr. Vaishali Vijay Rauniyar (4+ years). Dry needling and aquatic rehabilitation available."
-        serviceUrl="https://www.r3boot.in/physiotherapy-mumbai"
+        serviceUrl="https://www.r3boot.in/services/physiotherapy"
       />
       <FAQSchema faqs={physiotherapyMumbaiFaqs} />
       <BreadcrumbSchema items={[
         { name: 'Home', url: '/' },
-        { name: 'Physiotherapy Mumbai', url: '/physiotherapy-mumbai' },
+        { name: 'Physiotherapy Mumbai', url: '/services/physiotherapy' },
       ]} />
     </main>
   )

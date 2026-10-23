@@ -499,7 +499,7 @@ export default function AquaTherapyKneePainMumbaiPage() {
                 {
                   title: 'Contrast Therapy',
                   desc: 'Ice bath and infrared sauna sessions help calm a swollen, hot, or flared-up knee between aqua therapy sessions, especially useful for arthritis flare-ups.',
-                  href: '/contrast-therapy-mumbai',
+                  href: '/services/contrast-therapy',
                 },
               ].map((item, idx) => (
                 <Link
@@ -535,11 +535,11 @@ export default function AquaTherapyKneePainMumbaiPage() {
           </p>
           <div className="flex flex-wrap gap-3 sm:gap-4">
             {[
-              { label: 'Aqua Therapy Mumbai', href: '/aqua-therapy-mumbai' },
+              { label: 'Aqua Therapy Mumbai', href: '/services/aqua-therapy' },
               { label: 'Aqua Therapy Service Hub', href: '/services/aqua-therapy' },
               { label: 'Physiotherapy for Knee Pain', href: '/physiotherapy-for-knee-pain-mumbai' },
               { label: 'Knee Pain Sports Massage', href: '/knee-pain-sports-massage-mumbai' },
-              { label: 'Contrast Therapy Mumbai', href: '/contrast-therapy-mumbai' },
+              { label: 'Contrast Therapy Mumbai', href: '/services/contrast-therapy' },
               { label: 'Physiotherapy Dadar Mumbai', href: '/physiotherapy-dadar-mumbai' },
             ].map((link) => (
               <Link

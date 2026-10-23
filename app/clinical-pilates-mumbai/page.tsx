@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title: 'Clinical Pilates Mumbai | Physiotherapist-Led | R3BOOT Dadar',
   description:
     'Physiotherapist-led Clinical Pilates in Mumbai. Back pain, scoliosis, post-surgery rehab | assessment-first at R3BOOT Dadar. 5.0 ★ Google. Book via WhatsApp today.',
-  alternates: { canonical: '/clinical-pilates-mumbai' },
+  alternates: { canonical: '/services/clinical-pilates' },
   keywords: [
     'clinical pilates mumbai',
     'clinical pilates dadar',
@@ -159,7 +159,7 @@ export default function ClinicalPilatesMumbaiPage() {
                 </p>
                 <p>
                   Comparing general{' '}
-                  <Link href="/pilates-mumbai" className="text-[#513394] dark:text-[#A78BFA] font-bold hover:underline underline-offset-4">
+                  <Link href="/services/clinical-pilates" className="text-[#513394] dark:text-[#A78BFA] font-bold hover:underline underline-offset-4">
                     Pilates in Mumbai
                   </Link>{' '}
                   first? Start there. Come back here for condition-specific clinical work.
@@ -392,7 +392,7 @@ export default function ClinicalPilatesMumbaiPage() {
               </h2>
               <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed mb-10">
                 R3BOOT offers both reformer-based and mat-based clinical Pilates. The decision is clinical, not preferential. Your physiotherapist will determine the appropriate format after assessment. For the dedicated equipment page, see{' '}
-                <Link href="/reformer-pilates-mumbai" className="text-[#513394] dark:text-[#A78BFA] font-bold hover:underline underline-offset-4">
+                <Link href="/services/clinical-pilates" className="text-[#513394] dark:text-[#A78BFA] font-bold hover:underline underline-offset-4">
                   Reformer Pilates Mumbai
                 </Link>
                 .
@@ -681,12 +681,12 @@ export default function ClinicalPilatesMumbaiPage() {
       <ServiceSchema
         serviceName="Clinical Pilates in Mumbai"
         description="Physiotherapist-led clinical Pilates in Mumbai at R3BOOT Dadar. Programs for back pain, scoliosis, post-surgery rehab, posture, and sports performance. Reformer and mat-based sessions available."
-        serviceUrl="https://www.r3boot.in/clinical-pilates-mumbai"
+        serviceUrl="https://www.r3boot.in/services/clinical-pilates"
       />
       <FAQSchema faqs={clinicalPilatesMumbaiFaqs} />
       <BreadcrumbSchema items={[
         { name: 'Home', url: '/' },
-        { name: 'Clinical Pilates Mumbai', url: '/clinical-pilates-mumbai' },
+        { name: 'Clinical Pilates Mumbai', url: '/services/clinical-pilates' },
       ]} />
     </main>
   )

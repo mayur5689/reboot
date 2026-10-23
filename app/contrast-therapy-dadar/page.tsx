@@ -112,7 +112,7 @@ export default function ContrastTherapyDadarPage() {
           />
           <div className="relative z-10 flex flex-1 flex-col justify-center px-12 lg:px-16 xl:px-20 max-w-[58%]">
           <Link
-            href="/contrast-therapy-mumbai"
+            href="/services/contrast-therapy"
             className="inline-flex items-center gap-2 text-white/60 hover:text-white transition-all mb-6 group w-fit"
           >
             <div className="w-7 h-7 rounded-full border border-white/30 flex items-center justify-center group-hover:bg-white group-hover:text-[#513394] transition-all">
@@ -330,7 +330,7 @@ export default function ContrastTherapyDadarPage() {
       <FAQSchema faqs={contrastTherapyDadarFaqs} />
       <BreadcrumbSchema items={[
         { name: 'Home', url: '/' },
-        { name: 'Contrast Therapy Mumbai', url: '/contrast-therapy-mumbai' },
+        { name: 'Contrast Therapy Mumbai', url: '/services/contrast-therapy' },
         { name: 'Dadar', url: '/contrast-therapy-dadar' },
       ]} />
     </main>

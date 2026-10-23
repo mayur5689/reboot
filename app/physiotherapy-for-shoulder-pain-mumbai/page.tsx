@@ -793,7 +793,7 @@ export default function PhysiotherapyShoulderPainMumbaiPage() {
               { label: 'Sports Injury Physiotherapy', href: '/sports-injury-physiotherapy-dadar-mumbai' },
               { label: 'Post-Surgery Physiotherapy', href: '/post-surgery-physiotherapy-mumbai' },
               { label: 'Neck & Shoulder Sports Massage', href: '/neck-shoulder-pain-sports-massage-mumbai' },
-              { label: 'Physiotherapy Mumbai', href: '/physiotherapy-mumbai' },
+              { label: 'Physiotherapy Mumbai', href: '/services/physiotherapy' },
               { label: 'Shoulder Pain FAQ Blog', href: '/blog/shoulder-pain-sleeping-left-side-frozen-gym-faq' },
               { label: 'Shoulder Joint Pain Guide', href: '/blog/physiotherapist-guide-shoulder-joint-pain-relief' },
               { label: 'Frozen Shoulder Stages', href: '/blog/frozen-shoulder-stages-dry-needling' },

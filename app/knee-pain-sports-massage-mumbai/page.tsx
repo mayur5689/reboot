@@ -242,7 +242,7 @@ export default function KneePainSportsMassageMumbaiPage() {
               { label: 'Sports Massage Mumbai', href: '/services/sports-massage' },
               { label: 'Sports Massage for Runners', href: '/sports-massage-runners-mumbai' },
               { label: 'Physiotherapy Dadar', href: '/physiotherapy-dadar-mumbai' },
-              { label: 'Contrast Therapy Mumbai', href: '/contrast-therapy-mumbai' },
+              { label: 'Contrast Therapy Mumbai', href: '/services/contrast-therapy' },
             ].map((link) => (
               <Link key={link.href} href={link.href} className="bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 text-gray-700 dark:text-gray-300 font-bold px-6 py-3 rounded-full text-sm hover:bg-[#513394] hover:text-white hover:border-transparent transition-all">
                 {link.label}

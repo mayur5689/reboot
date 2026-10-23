@@ -446,7 +446,7 @@ export default async function SportsPsychologyPage() {
               physiotherapy
             </Link>{' '}
             and{' '}
-            <Link href="/contrast-therapy-mumbai" className="text-[#513394] dark:text-[#C4B5FD] font-bold hover:underline underline-offset-4">
+            <Link href="/services/contrast-therapy" className="text-[#513394] dark:text-[#C4B5FD] font-bold hover:underline underline-offset-4">
               contrast therapy
             </Link>{' '}
             for stage-wise return to performance.

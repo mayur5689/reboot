@@ -212,11 +212,11 @@ const reformerComparisonRows = [
 
 const clusterLinks = [
   { label: 'Pilates Lower Parel', href: '/pilates-lower-parel', eyebrow: 'Location head' },
-  { label: 'Reformer Pilates Mumbai', href: '/reformer-pilates-mumbai', eyebrow: 'City head page' },
+  { label: 'Reformer Pilates Mumbai', href: '/services/clinical-pilates', eyebrow: 'City head page' },
   { label: 'Physiotherapy Lower Parel', href: '/physiotherapy-lower-parel', eyebrow: 'Same studio' },
   { label: 'Sports Massage Lower Parel', href: '/sports-massage-lower-parel', eyebrow: 'Recovery' },
   { label: 'Contrast Therapy Lower Parel', href: '/contrast-therapy-lower-parel', eyebrow: 'Recovery' },
-  { label: 'Clinical Pilates Mumbai', href: '/clinical-pilates-mumbai', eyebrow: 'Injury programs' },
+  { label: 'Clinical Pilates Mumbai', href: '/services/clinical-pilates', eyebrow: 'Injury programs' },
 ]
 
 function PhoneIcon({ className }: { className?: string }) {
@@ -838,7 +838,7 @@ export default function ReformerPilatesLowerParelPage() {
       <BreadcrumbSchema
         items={[
           { name: 'Home', url: '/' },
-          { name: 'Reformer Pilates Mumbai', url: '/reformer-pilates-mumbai' },
+          { name: 'Reformer Pilates Mumbai', url: '/services/clinical-pilates' },
           { name: 'Reformer Pilates Lower Parel', url: '/reformer-pilates-lower-parel' },
         ]}
       />

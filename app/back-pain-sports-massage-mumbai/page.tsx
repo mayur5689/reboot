@@ -283,7 +283,7 @@ export default function BackPainSportsMassageMumbaiPage() {
               { label: 'Sports Massage Mumbai', href: '/services/sports-massage' },
               { label: 'Physiotherapy Dadar', href: '/physiotherapy-dadar-mumbai' },
               { label: 'Ice Bath Mumbai', href: '/ice-bath-mumbai' },
-              { label: 'Contrast Therapy Mumbai', href: '/contrast-therapy-mumbai' },
+              { label: 'Contrast Therapy Mumbai', href: '/services/contrast-therapy' },
             ].map((link) => (
               <Link
                 key={link.href}

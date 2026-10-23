@@ -497,7 +497,7 @@ export default function SportsInjuryPhysiotherapyDadarPage() {
                 {
                   title: 'Contrast Therapy',
                   desc: 'Ice bath and infrared sauna in a structured protocol. Reduces acute inflammation and accelerates tissue repair after sports injury and intensive physiotherapy sessions.',
-                  href: '/contrast-therapy-mumbai',
+                  href: '/services/contrast-therapy',
                 },
                 {
                   title: 'Physiotherapy Dadar Hub',
@@ -543,9 +543,9 @@ export default function SportsInjuryPhysiotherapyDadarPage() {
               { label: 'IPL Cricket Elbow & Shoulder Recovery', href: '/blog/ipl-cricket-elbow-shoulder-pain-recovery' },
               { label: 'Physiotherapy for Back Pain Mumbai', href: '/physiotherapy-for-back-pain-mumbai' },
               { label: 'Sports Massage for Runners', href: '/sports-massage-runners-mumbai' },
-              { label: 'Contrast Therapy Mumbai', href: '/contrast-therapy-mumbai' },
+              { label: 'Contrast Therapy Mumbai', href: '/services/contrast-therapy' },
               { label: 'Ice Bath Mumbai', href: '/ice-bath-mumbai' },
-              { label: 'Clinical Pilates Mumbai', href: '/clinical-pilates-mumbai' },
+              { label: 'Clinical Pilates Mumbai', href: '/services/clinical-pilates' },
             ].map((link) => (
               <Link
                 key={link.href}

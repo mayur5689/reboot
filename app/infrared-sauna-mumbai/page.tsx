@@ -59,7 +59,7 @@ export default function InfraredSaunaMumbaiPage() {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
         <div className="container mx-auto px-6 lg:px-8 relative z-10 pb-20">
-          <Link href="/contrast-therapy-mumbai" className="inline-flex items-center gap-2 text-white/70 hover:text-white transition-all mb-8 group">
+          <Link href="/services/contrast-therapy" className="inline-flex items-center gap-2 text-white/70 hover:text-white transition-all mb-8 group">
             <div className="w-8 h-8 rounded-full border border-white/30 flex items-center justify-center group-hover:bg-white group-hover:text-[#513394] transition-all">
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -103,7 +103,7 @@ export default function InfraredSaunaMumbaiPage() {
                 </p>
                 <p>
                   Related:{' '}
-                  <Link href="/contrast-therapy-mumbai" className="text-[#513394] dark:text-[#A78BFA] font-bold hover:underline">
+                  <Link href="/services/contrast-therapy" className="text-[#513394] dark:text-[#A78BFA] font-bold hover:underline">
                     contrast therapy Mumbai
                   </Link>
                   ,{' '}
@@ -176,7 +176,7 @@ export default function InfraredSaunaMumbaiPage() {
             <a href="tel:+919702368612" className="bg-white text-[#513394] font-black px-10 py-5 rounded-full hover:scale-105 transition-all">
               Call to Book
             </a>
-            <Link href="/contrast-therapy-mumbai" className="border-2 border-white/30 text-white font-bold px-10 py-5 rounded-full hover:bg-white/10">
+            <Link href="/services/contrast-therapy" className="border-2 border-white/30 text-white font-bold px-10 py-5 rounded-full hover:bg-white/10">
               Full Contrast Therapy Guide
             </Link>
           </div>
@@ -193,7 +193,7 @@ export default function InfraredSaunaMumbaiPage() {
       <FAQSchema faqs={infraredSaunaMumbaiFaqs} />
       <BreadcrumbSchema items={[
         { name: 'Home', url: '/' },
-        { name: 'Contrast Therapy Mumbai', url: '/contrast-therapy-mumbai' },
+        { name: 'Contrast Therapy Mumbai', url: '/services/contrast-therapy' },
         { name: 'Infrared Sauna Mumbai', url: '/infrared-sauna-mumbai' },
       ]} />
     </main>
