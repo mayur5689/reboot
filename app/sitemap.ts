@@ -303,37 +303,37 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
     // Physiotherapy condition pages
     {
-      url: `${BASE_URL}/physiotherapy-for-back-pain-mumbai`,
+      url: `${BASE_URL}/services/physiotherapy/back-pain`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.9,
     },
     {
-      url: `${BASE_URL}/sports-injury-physiotherapy-dadar-mumbai`,
+      url: `${BASE_URL}/services/physiotherapy/knee-pain`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.9,
     },
     {
-      url: `${BASE_URL}/physiotherapy-for-knee-pain-mumbai`,
+      url: `${BASE_URL}/services/physiotherapy/neck-pain`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.9,
     },
     {
-      url: `${BASE_URL}/post-surgery-physiotherapy-mumbai`,
+      url: `${BASE_URL}/services/physiotherapy/shoulder-pain`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.9,
     },
     {
-      url: `${BASE_URL}/physiotherapy-for-neck-pain-mumbai`,
+      url: `${BASE_URL}/services/physiotherapy/sports-injuries`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.9,
     },
     {
-      url: `${BASE_URL}/physiotherapy-for-shoulder-pain-mumbai`,
+      url: `${BASE_URL}/services/physiotherapy/post-surgery`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.9,

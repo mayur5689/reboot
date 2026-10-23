@@ -705,6 +705,39 @@ export default function PhysiotherapyPage() {
                 </div>
             </section>
 
+            {/* ─── CONDITION PAGES ─── */}
+            <section className="py-16 bg-white dark:bg-[#0A0A0A]">
+                <div className="container mx-auto px-6 lg:px-8 max-w-4xl">
+                    <p className="text-[11px] font-black tracking-[0.3em] text-[#513394] dark:text-[#A78BFA] uppercase mb-4">
+                        Conditions
+                    </p>
+                    <h2 className="text-3xl md:text-4xl font-black text-gray-900 dark:text-white tracking-tight mb-8">
+                        Physiotherapy by condition
+                    </h2>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        {[
+                            { href: '/services/physiotherapy/back-pain', label: 'Back Pain' },
+                            { href: '/services/physiotherapy/knee-pain', label: 'Knee Pain' },
+                            { href: '/services/physiotherapy/neck-pain', label: 'Neck Pain' },
+                            { href: '/services/physiotherapy/shoulder-pain', label: 'Shoulder Pain' },
+                            { href: '/services/physiotherapy/sports-injuries', label: 'Sports Injuries' },
+                            { href: '/services/physiotherapy/post-surgery', label: 'Post-Surgery' },
+                        ].map((item) => (
+                            <Link
+                                key={item.href}
+                                href={item.href}
+                                className="group flex items-center justify-between p-5 bg-gray-50 dark:bg-white/5 rounded-[1.5rem] border border-gray-100 dark:border-white/10 hover:border-[#513394]/40 transition-all"
+                            >
+                                <span className="font-bold text-gray-900 dark:text-white group-hover:text-[#513394] transition-colors">
+                                    {item.label}
+                                </span>
+                                <span className="text-sm text-gray-500">→</span>
+                            </Link>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
             {/* ─── OTHER SERVICES ─── */}
             <section className="py-24 lg:py-32 bg-[#F8F9FA] dark:bg-[#0D0D0D]">
                 <div className="container mx-auto px-6 lg:px-8">

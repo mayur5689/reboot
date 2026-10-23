@@ -80,6 +80,36 @@ const nextConfig = {
                 permanent: true,
             },
             {
+                source: '/physiotherapy-for-back-pain-mumbai',
+                destination: '/services/physiotherapy/back-pain',
+                permanent: true,
+            },
+            {
+                source: '/physiotherapy-for-knee-pain-mumbai',
+                destination: '/services/physiotherapy/knee-pain',
+                permanent: true,
+            },
+            {
+                source: '/physiotherapy-for-neck-pain-mumbai',
+                destination: '/services/physiotherapy/neck-pain',
+                permanent: true,
+            },
+            {
+                source: '/physiotherapy-for-shoulder-pain-mumbai',
+                destination: '/services/physiotherapy/shoulder-pain',
+                permanent: true,
+            },
+            {
+                source: '/sports-injury-physiotherapy-dadar-mumbai',
+                destination: '/services/physiotherapy/sports-injuries',
+                permanent: true,
+            },
+            {
+                source: '/post-surgery-physiotherapy-mumbai',
+                destination: '/services/physiotherapy/post-surgery',
+                permanent: true,
+            },
+            {
                 source: '/team',
                 destination: '/about',
                 permanent: true,

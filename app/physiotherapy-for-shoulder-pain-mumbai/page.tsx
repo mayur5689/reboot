@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   title: 'Physiotherapy for Shoulder Pain Mumbai | Frozen Shoulder & Cuff | R3BOOT',
   description:
     'Clinical physiotherapy for shoulder pain in Mumbai at R3BOOT Dadar. Frozen shoulder, rotator cuff, impingement, gym & desk overload. Dry needling available. 5.0 ★ Google. WhatsApp to book.',
-  alternates: { canonical: '/physiotherapy-for-shoulder-pain-mumbai' },
+  alternates: { canonical: '/services/physiotherapy/shoulder-pain' },
   keywords: [
     'physiotherapy for shoulder pain mumbai',
     'shoulder pain physiotherapy mumbai',
@@ -789,9 +789,9 @@ export default function PhysiotherapyShoulderPainMumbaiPage() {
             {[
               { label: 'Physiotherapy Dadar Mumbai', href: '/physiotherapy-dadar-mumbai' },
               { label: 'Physiotherapy Lower Parel', href: '/physiotherapy-lower-parel' },
-              { label: 'Physiotherapy for Neck Pain', href: '/physiotherapy-for-neck-pain-mumbai' },
-              { label: 'Sports Injury Physiotherapy', href: '/sports-injury-physiotherapy-dadar-mumbai' },
-              { label: 'Post-Surgery Physiotherapy', href: '/post-surgery-physiotherapy-mumbai' },
+              { label: 'Physiotherapy for Neck Pain', href: '/services/physiotherapy/neck-pain' },
+              { label: 'Sports Injury Physiotherapy', href: '/services/physiotherapy/sports-injuries' },
+              { label: 'Post-Surgery Physiotherapy', href: '/services/physiotherapy/post-surgery' },
               { label: 'Neck & Shoulder Sports Massage', href: '/neck-shoulder-pain-sports-massage-mumbai' },
               { label: 'Physiotherapy Mumbai', href: '/services/physiotherapy' },
               { label: 'Shoulder Pain FAQ Blog', href: '/blog/shoulder-pain-sleeping-left-side-frozen-gym-faq' },
@@ -854,14 +854,14 @@ export default function PhysiotherapyShoulderPainMumbaiPage() {
       <ServiceSchema
         serviceName="Physiotherapy for Shoulder Pain in Mumbai"
         description="Clinical physiotherapy for shoulder pain in Mumbai at R3BOOT, Dadar East. Assessment, manual therapy, dry needling, and progressive rehabilitation for frozen shoulder, rotator cuff overload, shoulder impingement, AC joint pain, desk posture, and gym or sport overload. Led by Dr. Hiral Parikh (15+ years, BPT) and Dr. Vaishali Vijay Rauniyar (4+ years)."
-        serviceUrl="https://www.r3boot.in/physiotherapy-for-shoulder-pain-mumbai"
+        serviceUrl="https://www.r3boot.in/services/physiotherapy/shoulder-pain"
       />
       <FAQSchema faqs={shoulderPainPhysiotherapyFaqs} />
       <BreadcrumbSchema
         items={[
           { name: 'Home', url: '/' },
-          { name: 'Physiotherapy Dadar Mumbai', url: '/physiotherapy-dadar-mumbai' },
-          { name: 'Physiotherapy for Shoulder Pain Mumbai', url: '/physiotherapy-for-shoulder-pain-mumbai' },
+          { name: 'Physiotherapy', url: '/services/physiotherapy' },
+          { name: 'Shoulder Pain', url: '/services/physiotherapy/shoulder-pain' },
         ]}
       />
     </main>

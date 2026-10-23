@@ -8,10 +8,10 @@ import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema'
 import { postSurgeryPhysiotherapyFaqs } from '@/lib/faqs/post-surgery-physiotherapy-mumbai'
 
 export const metadata: Metadata = {
-  title: 'Post-Surgery Physiotherapy Mumbai | Surgical Rehab | R3BOOT Dadar',
+  title: 'Post-Surgery Physiotherapy in Mumbai | R3BOOT',
   description:
     'Post-surgery physiotherapy in Mumbai at R3BOOT Dadar. ACL reconstruction, knee & hip replacement, spinal surgery & shoulder rehab. Aquatic rehab available. 5.0 ★ Google. WhatsApp to book.',
-  alternates: { canonical: '/post-surgery-physiotherapy-mumbai' },
+  alternates: { canonical: '/services/physiotherapy/post-surgery' },
   keywords: [
     'post surgery physiotherapy mumbai',
     'post operative physiotherapy mumbai',
@@ -121,7 +121,7 @@ export default function PostSurgeryPhysiotherapyMumbaiPage() {
               Post-Surgery Physiotherapy in Mumbai
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl text-white/80 max-w-3xl leading-relaxed font-medium mt-4">
-              Phased surgical rehabilitation, ACL, knee replacement, hip replacement, spine, and shoulder surgery, at R3BOOT, Dadar East.
+              Post-surgery physiotherapy at R3BOOT, with treatments and appointments at Dadar and Lower Parel.
             </p>
           </div>
         </div>
@@ -514,7 +514,7 @@ export default function PostSurgeryPhysiotherapyMumbaiPage() {
                 {
                   title: 'Sports Injury Physiotherapy',
                   desc: 'ACL reconstruction and shoulder surgery rehabilitation that includes full return-to-sport programming, milestone testing, sport-specific loading, and clearance criteria for athletes.',
-                  href: '/sports-injury-physiotherapy-dadar-mumbai',
+                  href: '/services/physiotherapy/sports-injuries',
                 },
               ].map((item, idx) => (
                 <Link
@@ -551,12 +551,12 @@ export default function PostSurgeryPhysiotherapyMumbaiPage() {
           <div className="flex flex-wrap gap-3 sm:gap-4">
             {[
               { label: 'Physiotherapy Dadar Mumbai', href: '/physiotherapy-dadar-mumbai' },
-              { label: 'Physiotherapy for Knee Pain', href: '/physiotherapy-for-knee-pain-mumbai' },
-              { label: 'Physiotherapy for Shoulder Pain', href: '/physiotherapy-for-shoulder-pain-mumbai' },
-              { label: 'Sports Injury Physiotherapy Dadar', href: '/sports-injury-physiotherapy-dadar-mumbai' },
+              { label: 'Physiotherapy for Knee Pain', href: '/services/physiotherapy/knee-pain' },
+              { label: 'Physiotherapy for Shoulder Pain', href: '/services/physiotherapy/shoulder-pain' },
+              { label: 'Sports Injury Physiotherapy Dadar', href: '/services/physiotherapy/sports-injuries' },
               { label: 'Post-Surgery Clinical Pilates', href: '/post-surgery-pilates-mumbai' },
               { label: 'Contrast Therapy Mumbai', href: '/services/contrast-therapy' },
-              { label: 'Physiotherapy for Back Pain', href: '/physiotherapy-for-back-pain-mumbai' },
+              { label: 'Physiotherapy for Back Pain', href: '/services/physiotherapy/back-pain' },
             ].map((link) => (
               <Link
                 key={link.href}
@@ -613,13 +613,13 @@ export default function PostSurgeryPhysiotherapyMumbaiPage() {
       <ServiceSchema
         serviceName="Post-Surgery Physiotherapy in Mumbai"
         description="Post-surgery physiotherapy in Mumbai at R3BOOT, Dadar East. ACL reconstruction, knee replacement, hip replacement, spinal surgery, and shoulder surgery rehabilitation. Phased rehabilitation with aquatic rehab on-site. Led by Dr. Hiral Parikh (BPT, 15+ years) and Dr. Vaishali Vijay Rauniyar (4+ years)."
-        serviceUrl="https://www.r3boot.in/post-surgery-physiotherapy-mumbai"
+        serviceUrl="https://www.r3boot.in/services/physiotherapy/post-surgery"
       />
       <FAQSchema faqs={postSurgeryPhysiotherapyFaqs} />
       <BreadcrumbSchema items={[
         { name: 'Home', url: '/' },
-        { name: 'Physiotherapy Dadar Mumbai', url: '/physiotherapy-dadar-mumbai' },
-        { name: 'Post-Surgery Physiotherapy Mumbai', url: '/post-surgery-physiotherapy-mumbai' },
+        { name: 'Physiotherapy', url: '/services/physiotherapy' },
+        { name: 'Post-Surgery', url: '/services/physiotherapy/post-surgery' },
       ]} />
     </main>
   )

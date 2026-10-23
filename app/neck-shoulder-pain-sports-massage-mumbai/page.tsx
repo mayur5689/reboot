@@ -220,7 +220,7 @@ export default function NeckShoulderPainSportsMassageMumbaiPage() {
           </p>
           <div className="flex flex-wrap gap-3 sm:gap-4">
             {[
-              { label: 'Physiotherapy for Shoulder Pain', href: '/physiotherapy-for-shoulder-pain-mumbai' },
+              { label: 'Physiotherapy for Shoulder Pain', href: '/services/physiotherapy/shoulder-pain' },
               { label: 'Shoulder Pain FAQ', href: '/blog/shoulder-pain-sleeping-left-side-frozen-gym-faq' },
               { label: 'Sports Massage Mumbai', href: '/services/sports-massage' },
               { label: 'Sports Massage Dadar', href: '/sports-massage-dadar' },

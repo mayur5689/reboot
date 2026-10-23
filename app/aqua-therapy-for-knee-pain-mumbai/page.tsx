@@ -489,7 +489,7 @@ export default function AquaTherapyKneePainMumbaiPage() {
                 {
                   title: 'Physiotherapy for Knee Pain',
                   desc: 'Once your knee feels stronger and moves more freely in water, your physiotherapist moves you onto land-based strengthening and movement retraining, so the improvement lasts outside the chamber too.',
-                  href: '/physiotherapy-for-knee-pain-mumbai',
+                  href: '/services/physiotherapy/knee-pain',
                 },
                 {
                   title: 'Aqua Therapy Service Hub',
@@ -537,7 +537,7 @@ export default function AquaTherapyKneePainMumbaiPage() {
             {[
               { label: 'Aqua Therapy Mumbai', href: '/services/aqua-therapy' },
               { label: 'Aqua Therapy Service Hub', href: '/services/aqua-therapy' },
-              { label: 'Physiotherapy for Knee Pain', href: '/physiotherapy-for-knee-pain-mumbai' },
+              { label: 'Physiotherapy for Knee Pain', href: '/services/physiotherapy/knee-pain' },
               { label: 'Knee Pain Sports Massage', href: '/knee-pain-sports-massage-mumbai' },
               { label: 'Contrast Therapy Mumbai', href: '/services/contrast-therapy' },
               { label: 'Physiotherapy Dadar Mumbai', href: '/physiotherapy-dadar-mumbai' },

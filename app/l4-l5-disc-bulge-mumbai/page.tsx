@@ -548,8 +548,9 @@ export default function L4L5DiscBulgeMumbaiPage() {
       <BreadcrumbSchema
         items={[
           { name: 'Home', url: '/' },
-          { name: 'Physiotherapy for Back Pain Mumbai', url: '/physiotherapy-for-back-pain-mumbai' },
-          { name: 'L4 L5 Disc Bulge Mumbai', url: '/l4-l5-disc-bulge-mumbai' },
+          { name: 'Physiotherapy', url: '/services/physiotherapy' },
+          { name: 'Back Pain', url: '/services/physiotherapy/back-pain' },
+          { name: 'L4 L5 Disc Bulge', url: '/l4-l5-disc-bulge-mumbai' },
         ]}
       />
     </main>

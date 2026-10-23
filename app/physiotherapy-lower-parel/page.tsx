@@ -181,12 +181,12 @@ const expertise = [
 ]
 
 const conditionLinks = [
-  { label: 'Back Pain', href: '/physiotherapy-for-back-pain-mumbai' },
-  { label: 'Knee Pain', href: '/physiotherapy-for-knee-pain-mumbai' },
-  { label: 'Neck Pain', href: '/physiotherapy-for-neck-pain-mumbai' },
-  { label: 'Shoulder Pain', href: '/physiotherapy-for-shoulder-pain-mumbai' },
-  { label: 'Sports Injuries', href: '/sports-injury-physiotherapy-dadar-mumbai' },
-  { label: 'Post-Surgery Rehab', href: '/post-surgery-physiotherapy-mumbai' },
+  { label: 'Back Pain', href: '/services/physiotherapy/back-pain' },
+  { label: 'Knee Pain', href: '/services/physiotherapy/knee-pain' },
+  { label: 'Neck Pain', href: '/services/physiotherapy/neck-pain' },
+  { label: 'Shoulder Pain', href: '/services/physiotherapy/shoulder-pain' },
+  { label: 'Sports Injuries', href: '/services/physiotherapy/sports-injuries' },
+  { label: 'Post-Surgery Rehab', href: '/services/physiotherapy/post-surgery' },
 ]
 
 const HOURS = [
@@ -739,7 +739,7 @@ export default function PhysiotherapyLowerParelPage() {
               { label: 'Contrast Therapy Lower Parel', href: '/contrast-therapy-lower-parel' },
               { label: 'Pilates Lower Parel', href: '/pilates-lower-parel' },
               { label: 'Reformer Pilates Lower Parel', href: '/reformer-pilates-lower-parel' },
-              { label: 'Shoulder Pain Physiotherapy', href: '/physiotherapy-for-shoulder-pain-mumbai' },
+              { label: 'Shoulder Pain Physiotherapy', href: '/services/physiotherapy/shoulder-pain' },
               { label: 'Contact & Hours', href: '/contact' },
             ].map((link) => (
               <Link

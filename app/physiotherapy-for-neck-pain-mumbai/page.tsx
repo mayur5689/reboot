@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title: 'Physiotherapy for Neck Pain Mumbai | Cervical Rehab | R3BOOT Dadar',
   description:
     'Clinical physiotherapy for neck pain in Mumbai at R3BOOT Dadar. Cervical disc, radiculopathy, spondylosis, desk pain & cervicogenic headaches. Dry needling available. 5.0 ★ Google. WhatsApp to book.',
-  alternates: { canonical: '/physiotherapy-for-neck-pain-mumbai' },
+  alternates: { canonical: '/services/physiotherapy/neck-pain' },
   keywords: [
     'physiotherapy for neck pain mumbai',
     'neck pain physiotherapy mumbai',
@@ -509,7 +509,7 @@ export default function PhysiotherapyNeckPainMumbaiPage() {
                 {
                   title: 'Physiotherapy for Back Pain',
                   desc: 'Neck pain rarely exists in isolation | thoracic stiffness and lumbar patterns frequently drive cervical compensations. Combined assessment and treatment for the full spine is often the most efficient approach.',
-                  href: '/physiotherapy-for-back-pain-mumbai',
+                  href: '/services/physiotherapy/back-pain',
                 },
               ].map((item, idx) => (
                 <Link
@@ -546,10 +546,10 @@ export default function PhysiotherapyNeckPainMumbaiPage() {
           <div className="flex flex-wrap gap-3 sm:gap-4">
             {[
               { label: 'Physiotherapy Dadar Mumbai', href: '/physiotherapy-dadar-mumbai' },
-              { label: 'Physiotherapy for Back Pain', href: '/physiotherapy-for-back-pain-mumbai' },
-              { label: 'Physiotherapy for Shoulder Pain', href: '/physiotherapy-for-shoulder-pain-mumbai' },
+              { label: 'Physiotherapy for Back Pain', href: '/services/physiotherapy/back-pain' },
+              { label: 'Physiotherapy for Shoulder Pain', href: '/services/physiotherapy/shoulder-pain' },
               { label: 'Neck & Shoulder Sports Massage', href: '/neck-shoulder-pain-sports-massage-mumbai' },
-              { label: 'Sports Injury Physiotherapy Dadar', href: '/sports-injury-physiotherapy-dadar-mumbai' },
+              { label: 'Sports Injury Physiotherapy Dadar', href: '/services/physiotherapy/sports-injuries' },
               { label: 'Contrast Therapy Mumbai', href: '/services/contrast-therapy' },
               { label: 'Clinical Pilates Mumbai', href: '/services/clinical-pilates' },
             ].map((link) => (
@@ -608,13 +608,13 @@ export default function PhysiotherapyNeckPainMumbaiPage() {
       <ServiceSchema
         serviceName="Physiotherapy for Neck Pain in Mumbai"
         description="Clinical physiotherapy for neck pain in Mumbai at R3BOOT, Dadar East. Cervical disc herniation, radiculopathy, spondylosis, postural neck pain, cervicogenic headaches, and whiplash. Dry needling available. Led by Dr. Hiral Parikh (BPT, 15+ years) and Dr. Vaishali Vijay Rauniyar (4+ years)."
-        serviceUrl="https://www.r3boot.in/physiotherapy-for-neck-pain-mumbai"
+        serviceUrl="https://www.r3boot.in/services/physiotherapy/neck-pain"
       />
       <FAQSchema faqs={neckPainPhysiotherapyFaqs} />
       <BreadcrumbSchema items={[
         { name: 'Home', url: '/' },
-        { name: 'Physiotherapy Dadar Mumbai', url: '/physiotherapy-dadar-mumbai' },
-        { name: 'Physiotherapy for Neck Pain Mumbai', url: '/physiotherapy-for-neck-pain-mumbai' },
+        { name: 'Physiotherapy', url: '/services/physiotherapy' },
+        { name: 'Neck Pain', url: '/services/physiotherapy/neck-pain' },
       ]} />
     </main>
   )
