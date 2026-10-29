@@ -2,7 +2,7 @@ export const contrastTherapyDadarFaqs = [
   {
     question: 'Is contrast therapy available in Dadar?',
     answer:
-      'Yes. R3BOOT is located in Dadar East at Palai Plaza, 203, Swami Gyan Jivandas Marg, Mumbai\'s physio-supervised contrast therapy centre. Sessions alternate infrared sauna (68°C) and supervised ice bath (6–10°C) in a structured Day or Night Cycle protocol. Call +91 97023 68612 to book.',
+      'Yes. R3BOOT is located in Dadar East at Palai Plaza, 203, Swami Gyan Jivandas Marg, Mumbai\'s physio-supervised contrast therapy centre. Sessions alternate infrared sauna (70°C) and supervised ice bath (6–8°C) in a structured Day or Night Cycle protocol. Call +91 97023 68612 to book.',
   },
   {
     question: 'How do I book contrast therapy near Dadar station?',
@@ -12,7 +12,7 @@ export const contrastTherapyDadarFaqs = [
   {
     question: 'Can I combine contrast therapy with sports massage at R3BOOT?',
     answer:
-      'Yes. Many Dadar athletes stack sports massage and contrast therapy in one visit, soft tissue work followed by hot-cold recovery. Ask when booking and we will schedule both services back to back.',
+      'Yes. Many Dadar athletes stack sports massage and contrast therapy in one visit. Night Cycle (ending in sauna) is the usual contrast protocol before massage. Ask when booking and we will schedule both services in the right order.',
   },
   {
     question: 'Is R3BOOT different from spa saunas in Dadar?',

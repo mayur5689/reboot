@@ -148,13 +148,18 @@ const therapists = [
 const pairedServices = [
   {
     title: 'Contrast Therapy',
-    href: '/contrast-therapy-mumbai',
+    href: '/services/contrast-therapy',
     desc: 'Alternating infrared sauna and ice bath to accelerate vascular clearance post-run. Many runners use contrast therapy the day after a long run and sports massage mid-week.',
   },
   {
     title: 'Aqua Therapy',
     href: '/services/aqua-therapy',
     desc: 'Aquatic therapy for runners returning from injury who need low-impact loading before returning to road running.',
+  },
+  {
+    title: 'Sports Massage Before and After a Marathon',
+    href: '/blog/sports-massage-before-after-marathon',
+    desc: 'When to book before race week, and when Day 2 after the marathon is the better window.',
   },
   {
     title: 'Physiotherapy',
@@ -744,7 +749,7 @@ export default function SportsMassageRunnersMumbaiPage() {
       <FAQSchema faqs={sportsMassageRunnersMumbaiFaqs} />
       <BreadcrumbSchema items={[
         { name: 'Home', url: '/' },
-        { name: 'Sports Massage Mumbai', url: '/sports-massage-mumbai' },
+        { name: 'Sports Massage Mumbai', url: '/services/sports-massage' },
         { name: 'Runners Mumbai', url: '/sports-massage-runners-mumbai' },
       ]} />
     </main>

@@ -15,9 +15,9 @@ import { TestimonialsCarousel } from './TestimonialsCarousel'
 import { LocationSection } from './LocationSection'
 
 export const metadata: Metadata = {
-  title: 'Aqua Therapy Mumbai | Aqua Treadmill Rehabilitation at R3BOOT Dadar',
+  title: 'Water Treadmill Mumbai | Knee & Back Rehab | R3BOOT',
   description:
-    'Physio-supervised aqua treadmill rehabilitation at R3BOOT Dadar. Post-surgery, sports injuries, arthritis, knee pain, and back pain. Adjustable water level, temperature, and speed. Book today.',
+    'Water treadmill near you in Dadar. Aqua therapy for knee, back, and post-surgery rehab. A physiotherapist is in the water with you. Book an assessment today.',
   alternates: { canonical: '/services/aqua-therapy' },
   keywords: [
     'aqua therapy mumbai',
@@ -25,6 +25,8 @@ export const metadata: Metadata = {
     'hydrotherapy mumbai',
     'aqua treadmill therapy',
     'underwater treadmill physiotherapy',
+    'water treadmill near me',
+    'water treadmill mumbai',
     'aqua therapy post surgery mumbai',
     'aqua therapy knee pain mumbai',
     'aqua therapy arthritis mumbai',
@@ -195,12 +197,12 @@ const contraindications = [
 ]
 
 const locationPages = [
-  { label: 'Aqua Therapy Mumbai', href: '/aqua-therapy-mumbai' },
   { label: 'Aqua Therapy Dadar', href: '/aqua-therapy-dadar' },
   { label: 'Near Bandra', href: '/aqua-therapy-bandra' },
   { label: 'Near Worli', href: '/aqua-therapy-worli' },
   { label: 'Near Lower Parel', href: '/aqua-therapy-lower-parel' },
   { label: 'Near Andheri', href: '/aqua-therapy-andheri' },
+  { label: 'Aqua Therapy for Knee Pain', href: '/aqua-therapy-for-knee-pain-mumbai' },
 ]
 
 // ─── PHONE SVG ────────────────────────────────────────────────────────────────
@@ -253,12 +255,12 @@ export default function AquaTherapyPage() {
           </p>
 
           <h1 className="text-5xl lg:text-6xl xl:text-[4.25rem] font-black text-white tracking-tight leading-[1.04] mb-4">
-            Aqua Therapy<br />
-            in <span className="text-[#A78BFA]">Mumbai</span>
+            Water Treadmill<br />
+            Aqua Therapy in <span className="text-[#A78BFA]">Mumbai</span>
           </h1>
 
           <p className="text-[16px] text-white/55 max-w-md leading-relaxed mb-7">
-            Physio-supervised aqua treadmill rehabilitation at R3BOOT Dadar. Recover earlier, load less, move better.
+            Private underwater treadmill at R3BOOT Dadar. Knee, back, and post-surgery loading with a physiotherapist in the water.
           </p>
 
           <div className="flex items-center gap-4">
@@ -305,14 +307,14 @@ export default function AquaTherapyPage() {
           </div>
 
           {/* H1 */}
-          <h1 className="text-[2rem] font-black text-gray-900 dark:text-white tracking-tight leading-[1.1] mb-3">
-            Aqua Therapy in{' '}
+          <h2 className="text-[2rem] font-black text-gray-900 dark:text-white tracking-tight leading-[1.1] mb-3">
+            Water Treadmill Aqua Therapy in{' '}
             <span className="text-[#513394] dark:text-[#A78BFA]">Mumbai</span>
-          </h1>
+          </h2>
 
           {/* Subtext */}
           <p className="text-base text-gray-500 dark:text-gray-400 leading-relaxed mb-6">
-            Physio-supervised aqua treadmill rehabilitation. Post-surgery, sports injuries, arthritis. Private chamber. R3BOOT Dadar.
+            Private underwater treadmill at R3BOOT Dadar. Knee, back, post-surgery. A physiotherapist stays in the water with you.
           </p>
 
           <MobileHeroTrust items={serviceTrustBadges['aqua-therapy']} />
@@ -331,7 +333,7 @@ export default function AquaTherapyPage() {
                 SCREENING //
               </span>
               <h2 className="text-4xl md:text-6xl font-black text-gray-900 dark:text-white tracking-tight">
-                Who Aqua Therapy Is For.{' '}
+                Who the Water Treadmill Is For.{' '}
                 <span className="text-[#513394] dark:text-[#8B5CF6]">And Who It Is Not.</span>
               </h2>
             </div>
@@ -836,27 +838,6 @@ export default function AquaTherapyPage() {
       {/* ─────────────────────────────────────────────
           STICKY MOBILE CTA
       ───────────────────────────────────────────── */}
-      <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden">
-        <div className="bg-white/95 dark:bg-[#0A0A0A]/95 backdrop-blur-md border-t border-gray-200 dark:border-white/[0.09] px-4 pt-3 pb-5">
-          <div className="flex gap-3">
-            <a
-              href="tel:+919702368612"
-              className="flex-1 flex items-center justify-center gap-2 bg-[#513394] hover:bg-[#603eb0] text-white font-black rounded-xl py-3.5 text-[14px] tracking-wide transition-colors"
-            >
-              <PhoneIcon className="w-4 h-4" />
-              Call
-            </a>
-            <a
-              href="https://wa.me/919702368612"
-              target="_blank"
-              rel="nofollow noopener noreferrer"
-              className="flex-1 flex items-center justify-center gap-2 border border-gray-300 dark:border-white/20 text-gray-900 dark:text-white font-bold rounded-xl py-3.5 text-[14px] tracking-wide hover:bg-gray-100 dark:hover:bg-white/[0.07] transition-colors"
-            >
-              WhatsApp
-            </a>
-          </div>
-        </div>
-      </div>
 
       <ServiceSchema
         serviceName="Aqua Therapy Mumbai"

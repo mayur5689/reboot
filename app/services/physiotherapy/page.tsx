@@ -198,10 +198,10 @@ export default function PhysiotherapyPage() {
                         </span>
                     </div>
 
-                    <h1 className="text-[2rem] font-black text-gray-900 dark:text-white tracking-tight leading-[1.1] mb-3">
+                    <h2 className="text-[2rem] font-black text-gray-900 dark:text-white tracking-tight leading-[1.1] mb-3">
                         Physiotherapy in{' '}
                         <span className="text-[#513394] dark:text-[#A78BFA]">Mumbai</span>
-                    </h1>
+                    </h2>
 
                     <p className="text-base text-gray-500 dark:text-gray-400 leading-relaxed mb-6">
                         Clinical care by certified specialists. Root cause treatment, not symptom management, at R3BOOT Dadar.
@@ -705,6 +705,39 @@ export default function PhysiotherapyPage() {
                 </div>
             </section>
 
+            {/* ─── CONDITION PAGES ─── */}
+            <section className="py-16 bg-white dark:bg-[#0A0A0A]">
+                <div className="container mx-auto px-6 lg:px-8 max-w-4xl">
+                    <p className="text-[11px] font-black tracking-[0.3em] text-[#513394] dark:text-[#A78BFA] uppercase mb-4">
+                        Conditions
+                    </p>
+                    <h2 className="text-3xl md:text-4xl font-black text-gray-900 dark:text-white tracking-tight mb-8">
+                        Physiotherapy by condition
+                    </h2>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        {[
+                            { href: '/services/physiotherapy/back-pain', label: 'Back Pain' },
+                            { href: '/services/physiotherapy/knee-pain', label: 'Knee Pain' },
+                            { href: '/services/physiotherapy/neck-pain', label: 'Neck Pain' },
+                            { href: '/services/physiotherapy/shoulder-pain', label: 'Shoulder Pain' },
+                            { href: '/services/physiotherapy/sports-injuries', label: 'Sports Injuries' },
+                            { href: '/services/physiotherapy/post-surgery', label: 'Post-Surgery' },
+                        ].map((item) => (
+                            <Link
+                                key={item.href}
+                                href={item.href}
+                                className="group flex items-center justify-between p-5 bg-gray-50 dark:bg-white/5 rounded-[1.5rem] border border-gray-100 dark:border-white/10 hover:border-[#513394]/40 transition-all"
+                            >
+                                <span className="font-bold text-gray-900 dark:text-white group-hover:text-[#513394] transition-colors">
+                                    {item.label}
+                                </span>
+                                <span className="text-sm text-gray-500">→</span>
+                            </Link>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
             {/* ─── OTHER SERVICES ─── */}
             <section className="py-24 lg:py-32 bg-[#F8F9FA] dark:bg-[#0D0D0D]">
                 <div className="container mx-auto px-6 lg:px-8">
@@ -760,15 +793,15 @@ export default function PhysiotherapyPage() {
             <section className="py-16 bg-white dark:bg-[#0A0A0A]">
                 <div className="container mx-auto px-6 lg:px-8 max-w-4xl space-y-6">
                     <Link
-                        href="/physiotherapy-mumbai"
+                        href="/physiotherapy-dadar-mumbai"
                         className="group flex items-center justify-between p-6 bg-gray-50 dark:bg-white/5 rounded-[2rem] border border-gray-100 dark:border-white/10 hover:border-[#513394]/40 transition-all"
                     >
                         <div>
-                            <p className="text-xs font-black tracking-widest text-[#513394] uppercase mb-1">Mumbai Guide</p>
+                            <p className="text-xs font-black tracking-widest text-[#513394] uppercase mb-1">Dadar Clinic</p>
                             <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-[#513394] transition-colors">
-                                Physiotherapy in Mumbai: What to Expect & How to Choose
+                                Physiotherapy in Dadar: Clinic Hours, Access and Booking
                             </h3>
-                            <span className="text-sm text-gray-500 dark:text-gray-400 mt-1 inline-block">Full local guide →</span>
+                            <span className="text-sm text-gray-500 dark:text-gray-400 mt-1 inline-block">Dadar East location page →</span>
                         </div>
                         <svg className="w-6 h-6 text-[#513394] opacity-0 group-hover:opacity-100 transition-opacity shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                             <path d="M9 18l6-6-6-6" />
@@ -800,33 +833,10 @@ export default function PhysiotherapyPage() {
                 </div>
             </section>
 
-            {/* Sticky mobile CTA */}
-            <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden">
-                <div className="bg-white/95 dark:bg-[#0A0A0A]/95 backdrop-blur-md border-t border-gray-200 dark:border-white/[0.09] px-4 pt-3 pb-5">
-                    <div className="flex gap-3">
-                        <a
-                            href="tel:+919702368612"
-                            className="flex-1 flex items-center justify-center gap-2 bg-[#513394] hover:bg-[#603eb0] text-white font-black rounded-xl py-3.5 text-[14px] tracking-wide transition-colors"
-                        >
-                            <PhoneIcon className="w-4 h-4" />
-                            Call
-                        </a>
-                        <a
-                            href="https://wa.me/919702368612"
-                            target="_blank"
-                            rel="nofollow noopener noreferrer"
-                            className="flex-1 flex items-center justify-center gap-2 border border-gray-300 dark:border-white/20 text-gray-900 dark:text-white font-bold rounded-xl py-3.5 text-[14px] tracking-wide hover:bg-gray-100 dark:hover:bg-white/[0.07] transition-colors"
-                        >
-                            WhatsApp
-                        </a>
-                    </div>
-                </div>
-            </div>
-
             <ServiceSchema
                 serviceName="Physiotherapy in Mumbai"
                 description="Clinical physiotherapy in Mumbai by certified specialists. Back pain, knee pain, sports injuries, post-surgery rehab. Dadar location, accessible from Andheri, Thane & Bandra."
-                serviceUrl="https://r3boot.in/services/physiotherapy"
+                serviceUrl="https://www.r3boot.in/services/physiotherapy"
             />
             <FAQSchema faqs={physiotherapyFaqs} />
         </main>

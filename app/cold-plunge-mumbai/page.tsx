@@ -27,7 +27,7 @@ const gymVsR3boot = [
   { factor: 'Health screening', gym: 'None', r3boot: 'Physio intake before every session' },
   { factor: 'Supervision', gym: 'Unsupervised tank', r3boot: 'Physiotherapist present throughout' },
   { factor: 'Breathing guidance', gym: 'Self-managed', r3boot: 'Taught before first immersion' },
-  { factor: 'Protocol', gym: 'Cold only', r3boot: 'Infrared sauna + cold plunge (3:1 contrast)' },
+  { factor: 'Protocol', gym: 'Cold only', r3boot: 'Day or Night Cycle contrast (sauna + cold plunge)' },
   { factor: 'Integration', gym: 'Standalone', r3boot: 'Sports massage + physio under one roof' },
 ]
 
@@ -44,7 +44,7 @@ export default function ColdPlungeMumbaiPage() {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
         <div className="container mx-auto px-6 lg:px-8 relative z-10 pb-20">
-          <Link href="/contrast-therapy-mumbai" className="inline-flex items-center gap-2 text-white/70 hover:text-white transition-all mb-8 group">
+          <Link href="/services/contrast-therapy" className="inline-flex items-center gap-2 text-white/70 hover:text-white transition-all mb-8 group">
             <div className="w-8 h-8 rounded-full border border-white/30 flex items-center justify-center group-hover:bg-white group-hover:text-[#513394] transition-all">
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -112,8 +112,8 @@ export default function ColdPlungeMumbaiPage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {[
-              { label: 'Half Cycle', price: '₹2,500', detail: '30 min · 2 rounds' },
-              { label: 'Full Cycle', price: '₹3,500', detail: '60 min · 3–4 rounds' },
+              { label: 'Half Cycle', price: '₹2,500', detail: '30 min sequence' },
+              { label: 'Full Cycle', price: '₹3,500', detail: '60 min longer protocol' },
               { label: 'Location', price: 'Dadar East', detail: 'Palai Plaza, 203' },
             ].map((item) => (
               <div key={item.label} className="bg-[#F8F9FA] dark:bg-white/5 p-8 rounded-[2rem] text-center">
@@ -150,7 +150,7 @@ export default function ColdPlungeMumbaiPage() {
       <FAQSchema faqs={coldPlungeMumbaiFaqs} />
       <BreadcrumbSchema items={[
         { name: 'Home', url: '/' },
-        { name: 'Contrast Therapy Mumbai', url: '/contrast-therapy-mumbai' },
+        { name: 'Contrast Therapy Mumbai', url: '/services/contrast-therapy' },
         { name: 'Cold Plunge Mumbai', url: '/cold-plunge-mumbai' },
       ]} />
     </main>

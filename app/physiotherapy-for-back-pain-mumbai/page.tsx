@@ -8,10 +8,10 @@ import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema'
 import { backPainPhysiotherapyFaqs } from '@/lib/faqs/physiotherapy-back-pain-mumbai'
 
 export const metadata: Metadata = {
-  title: 'Physiotherapy for Back Pain Mumbai | Clinical Treatment | R3BOOT',
+  title: 'Back Pain Physiotherapy in Mumbai | R3BOOT',
   description:
     'Clinical physiotherapy for back pain in Mumbai at R3BOOT Dadar. Assessment, manual therapy & dry needling for disc pain, sciatica & postural pain. 5.0 ★ Google. Book via WhatsApp.',
-  alternates: { canonical: '/physiotherapy-for-back-pain-mumbai' },
+  alternates: { canonical: '/services/physiotherapy/back-pain' },
   keywords: [
     'physiotherapy for back pain mumbai',
     'back pain physiotherapy mumbai',
@@ -117,7 +117,7 @@ export default function PhysiotherapyBackPainMumbaiPage() {
               Physiotherapy for Back Pain in Mumbai
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl text-white/80 max-w-3xl leading-relaxed font-medium mt-4">
-              Clinical assessment, manual therapy, dry needling, and progressive rehabilitation, at R3BOOT, Dadar East.
+              Physiotherapy for back pain at R3BOOT, with treatments and appointments at Dadar and Lower Parel.
             </p>
           </div>
         </div>
@@ -496,7 +496,7 @@ export default function PhysiotherapyBackPainMumbaiPage() {
                 {
                   title: 'Contrast Therapy',
                   desc: 'Ice bath and infrared sauna in a structured protocol reduces systemic inflammation and muscle soreness after intensive physiotherapy. Particularly effective during acute flare-ups.',
-                  href: '/contrast-therapy-mumbai',
+                  href: '/services/contrast-therapy',
                 },
                 {
                   title: 'Clinical Pilates',
@@ -539,8 +539,13 @@ export default function PhysiotherapyBackPainMumbaiPage() {
             {[
               { label: 'Physiotherapy Dadar Mumbai', href: '/physiotherapy-dadar-mumbai' },
               { label: 'Back Pain Sports Massage', href: '/back-pain-sports-massage-mumbai' },
-              { label: 'Clinical Pilates Mumbai', href: '/clinical-pilates-mumbai' },
-              { label: 'Contrast Therapy Mumbai', href: '/contrast-therapy-mumbai' },
+              { label: 'Physiotherapy for Shoulder Pain', href: '/services/physiotherapy/shoulder-pain' },
+              { label: 'Clinical Pilates Mumbai', href: '/services/clinical-pilates' },
+              { label: 'Scoliosis Pilates Mumbai', href: '/scoliosis-pilates-mumbai' },
+              { label: 'Tight Hamstrings and Back Pain', href: '/blog/tight-hamstrings-lower-back-pain-mumbai' },
+              { label: 'Cat Cow Stretch for Back Pain', href: '/blog/cat-cow-stretch-back-pain-relief' },
+              { label: '15-Minute Posture Workout', href: '/blog/posture-workout-better-alignment' },
+              { label: 'Contrast Therapy Mumbai', href: '/services/contrast-therapy' },
               { label: 'Ice Bath Mumbai', href: '/ice-bath-mumbai' },
             ].map((link) => (
               <Link
@@ -598,13 +603,13 @@ export default function PhysiotherapyBackPainMumbaiPage() {
       <ServiceSchema
         serviceName="Physiotherapy for Back Pain in Mumbai"
         description="Clinical physiotherapy for back pain in Mumbai at R3BOOT, Dadar East. Assessment, manual therapy, dry needling, and progressive rehabilitation for disc herniation, sciatica, postural pain, and lumbar injuries. Led by Dr. Hiral Parikh (15+ years, BPT) and Dr. Vaishali Vijay Rauniyar (4+ years)."
-        serviceUrl="https://www.r3boot.in/physiotherapy-for-back-pain-mumbai"
+        serviceUrl="https://www.r3boot.in/services/physiotherapy/back-pain"
       />
       <FAQSchema faqs={backPainPhysiotherapyFaqs} />
       <BreadcrumbSchema items={[
         { name: 'Home', url: '/' },
-        { name: 'Physiotherapy Dadar Mumbai', url: '/physiotherapy-dadar-mumbai' },
-        { name: 'Physiotherapy for Back Pain Mumbai', url: '/physiotherapy-for-back-pain-mumbai' },
+        { name: 'Physiotherapy', url: '/services/physiotherapy' },
+        { name: 'Back Pain', url: '/services/physiotherapy/back-pain' },
       ]} />
     </main>
   )

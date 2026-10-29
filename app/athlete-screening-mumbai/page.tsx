@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   title: 'Athlete Screening Mumbai | Full Body & Performance Assessment | R3BOOT',
   description:
     'Athlete screening Mumbai at R3BOOT | injury history, MSK exam, gait analysis, physio-supervised. Personalised Recovery & Performance Plan for athletes in Dadar. 5.0 ★ Google. Book via WhatsApp.',
-  alternates: { canonical: '/athlete-screening-mumbai' },
+  alternates: { canonical: '/services/athlete-screening' },
   keywords: [
     'athlete screening Mumbai',
     'sports assessment Mumbai',
@@ -298,10 +298,10 @@ export default function AthleteScreeningMumbaiPage() {
           </div>
 
           {/* H1 */}
-          <h1 className="text-[2rem] font-black text-gray-900 dark:text-white tracking-tight leading-[1.1] mb-3">
+          <h2 className="text-[2rem] font-black text-gray-900 dark:text-white tracking-tight leading-[1.1] mb-3">
             Athlete Screening in{' '}
             <span className="text-[#513394] dark:text-[#A78BFA]">Mumbai</span>
-          </h1>
+          </h2>
 
           {/* Subtext */}
           <p className="text-base text-gray-500 dark:text-gray-400 leading-relaxed mb-6">
@@ -736,37 +736,16 @@ export default function AthleteScreeningMumbaiPage() {
       {/* ─────────────────────────────────────────────
           STICKY MOBILE CTA
       ───────────────────────────────────────────── */}
-      <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden">
-        <div className="bg-[#0A0A0A]/95 backdrop-blur-md border-t border-white/[0.09] px-4 pt-3 pb-5">
-          <div className="flex gap-3">
-            <a
-              href="tel:+919702368612"
-              className="flex-1 flex items-center justify-center gap-2 bg-[#513394] hover:bg-[#603eb0] text-white font-black rounded-xl py-3.5 text-[14px] tracking-wide transition-colors"
-            >
-              <PhoneIcon className="w-4 h-4" />
-              Call
-            </a>
-            <a
-              href="https://wa.me/919702368612"
-              target="_blank"
-              rel="nofollow noopener noreferrer"
-              className="flex-1 flex items-center justify-center gap-2 border border-white/20 text-white font-bold rounded-xl py-3.5 text-[14px] tracking-wide hover:bg-white/[0.07] transition-colors"
-            >
-              WhatsApp
-            </a>
-          </div>
-        </div>
-      </div>
 
       <ServiceSchema
         serviceName="Athlete Screening in Mumbai"
         description="Structured, evidence-based athlete screening: injury history, MSK exam, gait analysis, and special tests, supervised by physiotherapists at R3BOOT, Mumbai."
-        serviceUrl="https://www.r3boot.in/athlete-screening-mumbai"
+        serviceUrl="https://www.r3boot.in/services/athlete-screening"
       />
       <FAQSchema faqs={athleteScreeningFaqs} />
       <BreadcrumbSchema items={[
         { name: 'Home', url: '/' },
-        { name: 'Athlete Screening Mumbai', url: '/athlete-screening-mumbai' },
+        { name: 'Athlete Screening Mumbai', url: '/services/athlete-screening' },
       ]} />
     </main>
   )

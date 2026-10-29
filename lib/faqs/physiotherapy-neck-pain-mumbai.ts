@@ -27,7 +27,7 @@ export const neckPainPhysiotherapyFaqs = [
   {
     question: 'How much does neck pain physiotherapy cost in Mumbai?',
     answer:
-      'Physiotherapy at specialist clinics in Mumbai ranges from ₹800 to ₹3,000+ per session. At R3BOOT, call or WhatsApp +91 97023 68612 for current session fees, we give you a clear number with no hidden charges.',
+      'A 45-minute physiotherapy session at R3BOOT is ₹2,000. Call or WhatsApp +91 97023 68612 to book.',
   },
   {
     question: 'Do I need an MRI or doctor referral before booking?',

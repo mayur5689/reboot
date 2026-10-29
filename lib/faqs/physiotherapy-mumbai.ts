@@ -7,7 +7,7 @@ export const physiotherapyMumbaiFaqs = [
   {
     question: 'How much does physiotherapy cost in Mumbai?',
     answer:
-      'Physiotherapy in Mumbai ranges from ₹400–₹600 at hospital outpatient departments (15–20 minutes per session, mostly machine therapy) to ₹800–₹3,000+ at specialist clinics offering full assessment and hands-on treatment. At R3BOOT, sessions are 45–60 minutes. Call or WhatsApp +91 97023 68612 for current fees, we give you a clear number with no hidden charges.',
+      'Physiotherapy in Mumbai ranges from ₹400 to ₹600 at hospital outpatient departments (15 to 20 minutes, mostly machine therapy) to ₹800 to ₹3,000+ at specialist clinics. At R3BOOT a 45-minute session is ₹2,000. Call or WhatsApp +91 97023 68612 to book.',
   },
   {
     question: 'Do I need a referral or prescription for physiotherapy in Mumbai?',

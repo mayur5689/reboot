@@ -7,12 +7,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   let blogPages: MetadataRoute.Sitemap = []
   try {
     const postSlugs = await getPostSlugs()
-    blogPages = postSlugs.map(({ slug }) => ({
-      url: `${BASE_URL}/blog/${slug}`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.6,
-    }))
+    blogPages = postSlugs
+      .filter((post): post is { slug: string } => Boolean(post?.slug))
+      .map(({ slug }) => ({
+        url: `${BASE_URL}/blog/${slug}`,
+        lastModified: new Date(),
+        changeFrequency: 'monthly' as const,
+        priority: 0.6,
+      }))
   } catch {
     // Sanity unavailable at build time; blog posts omitted from sitemap
   }
@@ -20,7 +22,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   return [
     // Homepage
     {
-      url: BASE_URL,
+      url: `${BASE_URL}/`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 1.0,
@@ -76,9 +78,21 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.1,
     },
 
-    // Service pages (core)
+    // City-wide service hubs. Duplicate landings 301 to these URLs.
     {
       url: `${BASE_URL}/services/physiotherapy`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.95,
+    },
+    {
+      url: `${BASE_URL}/services/clinical-pilates`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.95,
+    },
+    {
+      url: `${BASE_URL}/services/contrast-therapy`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.9,
@@ -90,16 +104,16 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.9,
     },
     {
-      url: `${BASE_URL}/services/clinical-pilates`,
+      url: `${BASE_URL}/services/aqua-therapy`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.9,
     },
     {
-      url: `${BASE_URL}/services/aqua-therapy`,
+      url: `${BASE_URL}/services/athlete-screening`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
-      priority: 0.9,
+      priority: 0.85,
     },
     {
       url: `${BASE_URL}/services/mental-training`,
@@ -113,25 +127,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: 'monthly',
       priority: 0.9,
     },
-    // SEO landing pages (dedicated transactional pages)
-    {
-      url: `${BASE_URL}/sports-massage-mumbai`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
-    {
-      url: `${BASE_URL}/contrast-therapy-mumbai`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
-    {
-      url: `${BASE_URL}/aqua-therapy-mumbai`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
+    // Neighbourhood and condition landings (not city-wide service hubs)
     {
       url: `${BASE_URL}/aqua-therapy-dadar`,
       lastModified: new Date(),
@@ -176,7 +172,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.9,
     },
     {
-      url: `${BASE_URL}/clinical-pilates-mumbai`,
+      url: `${BASE_URL}/pilates-lower-parel`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
+      url: `${BASE_URL}/reformer-pilates-lower-parel`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.9,
@@ -231,6 +233,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
     {
       url: `${BASE_URL}/physiotherapy-dadar-mumbai`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
+      url: `${BASE_URL}/physiotherapy-lower-parel`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.9,
@@ -295,42 +303,41 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
     // Physiotherapy condition pages
     {
-      url: `${BASE_URL}/physiotherapy-for-back-pain-mumbai`,
+      url: `${BASE_URL}/services/physiotherapy/back-pain`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.9,
     },
     {
-      url: `${BASE_URL}/sports-injury-physiotherapy-dadar-mumbai`,
+      url: `${BASE_URL}/services/physiotherapy/knee-pain`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.9,
     },
     {
-      url: `${BASE_URL}/physiotherapy-for-knee-pain-mumbai`,
+      url: `${BASE_URL}/services/physiotherapy/neck-pain`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.9,
     },
     {
-      url: `${BASE_URL}/post-surgery-physiotherapy-mumbai`,
+      url: `${BASE_URL}/services/physiotherapy/shoulder-pain`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.9,
     },
     {
-      url: `${BASE_URL}/physiotherapy-for-neck-pain-mumbai`,
+      url: `${BASE_URL}/services/physiotherapy/sports-injuries`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.9,
     },
     {
-      url: `${BASE_URL}/physiotherapy-mumbai`,
+      url: `${BASE_URL}/services/physiotherapy/post-surgery`,
       lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.95,
+      changeFrequency: 'monthly',
+      priority: 0.9,
     },
-
     // Clinical Pilates location pages
     {
       url: `${BASE_URL}/clinical-pilates-dadar`,

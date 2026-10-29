@@ -8,9 +8,9 @@ import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema'
 import { infraredSaunaMumbaiFaqs } from '@/lib/faqs/infrared-sauna-mumbai'
 
 export const metadata: Metadata = {
-  title: 'Infrared Sauna Mumbai | Private Solo Sessions | R3BOOT Dadar',
+  title: 'Sauna Near Me in Mumbai | Private Infrared | R3BOOT',
   description:
-    'Private infrared sauna sessions in Dadar Mumbai. Deep heat for muscle recovery, detox, and sleep. 30-min solo sessions. No shared space. Walk-in or book on WhatsApp.',
+    'Private sauna near you in Dadar, not a gym add-on. Infrared heat, then ice bath. Muscle recovery and sleep. 30-min solo sessions. WhatsApp to book today.',
   alternates: { canonical: '/infrared-sauna-mumbai' },
   keywords: [
     'infrared sauna mumbai',
@@ -59,7 +59,7 @@ export default function InfraredSaunaMumbaiPage() {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
         <div className="container mx-auto px-6 lg:px-8 relative z-10 pb-20">
-          <Link href="/contrast-therapy-mumbai" className="inline-flex items-center gap-2 text-white/70 hover:text-white transition-all mb-8 group">
+          <Link href="/services/contrast-therapy" className="inline-flex items-center gap-2 text-white/70 hover:text-white transition-all mb-8 group">
             <div className="w-8 h-8 rounded-full border border-white/30 flex items-center justify-center group-hover:bg-white group-hover:text-[#513394] transition-all">
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -74,10 +74,10 @@ export default function InfraredSaunaMumbaiPage() {
               <div className="w-1.5 h-1.5 rounded-full bg-white/50" />
             </div>
             <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black text-white mb-2 tracking-tighter leading-[1.05]">
-              Infrared Sauna in Mumbai | Clinical Heat Therapy at R3BOOT, Dadar
+              Sauna Near Me in Mumbai. Private Infrared in Dadar.
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl text-white/80 max-w-3xl leading-relaxed font-medium mt-4">
-              Physio-supervised infrared sauna as the hot phase of contrast therapy, paired with ice bath, not a standalone spa session.
+              Solo infrared sauna, then ice bath, under a physiotherapist. Not a shared gym sauna or spa booth.
             </p>
           </div>
         </div>
@@ -103,7 +103,7 @@ export default function InfraredSaunaMumbaiPage() {
                 </p>
                 <p>
                   Related:{' '}
-                  <Link href="/contrast-therapy-mumbai" className="text-[#513394] dark:text-[#A78BFA] font-bold hover:underline">
+                  <Link href="/services/contrast-therapy" className="text-[#513394] dark:text-[#A78BFA] font-bold hover:underline">
                     contrast therapy Mumbai
                   </Link>
                   ,{' '}
@@ -176,7 +176,7 @@ export default function InfraredSaunaMumbaiPage() {
             <a href="tel:+919702368612" className="bg-white text-[#513394] font-black px-10 py-5 rounded-full hover:scale-105 transition-all">
               Call to Book
             </a>
-            <Link href="/contrast-therapy-mumbai" className="border-2 border-white/30 text-white font-bold px-10 py-5 rounded-full hover:bg-white/10">
+            <Link href="/services/contrast-therapy" className="border-2 border-white/30 text-white font-bold px-10 py-5 rounded-full hover:bg-white/10">
               Full Contrast Therapy Guide
             </Link>
           </div>
@@ -193,7 +193,7 @@ export default function InfraredSaunaMumbaiPage() {
       <FAQSchema faqs={infraredSaunaMumbaiFaqs} />
       <BreadcrumbSchema items={[
         { name: 'Home', url: '/' },
-        { name: 'Contrast Therapy Mumbai', url: '/contrast-therapy-mumbai' },
+        { name: 'Contrast Therapy Mumbai', url: '/services/contrast-therapy' },
         { name: 'Infrared Sauna Mumbai', url: '/infrared-sauna-mumbai' },
       ]} />
     </main>

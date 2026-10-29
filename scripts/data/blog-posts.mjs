@@ -26,125 +26,403 @@ export const DRAFT_POSTS = [
     baseId: 'hyrox-mumbai-2026-recovery-guide',
     title: 'HYROX Mumbai 2026 Recovery Guide: What to Do Before and After Race Day',
     metaDescription:
-      'HYROX Mumbai 2026 recovery plan, station-by-station muscle load, race-week timing, and what actually helps sore legs in Mumbai heat. Physio-backed guide from R3BOOT.',
+      'HYROX Mumbai 2026 recovery plan for 17–20 Sep at Hall 6, NESCO. Race-week taper, hours 0–6, and days 1–4. Physio protocol from R3BOOT.',
     excerpt:
-      'HYROX Mumbai lands 18–20 September 2026 at NESCO Goregaon. Here is a practical recovery timeline, what to do in the final week, race day, and the four days after, without guessing.',
-    author: AUTHORS.diyan,
-    categories: [CATS.sportsMassage, CATS.physio],
-    publishedAt: '2026-05-19T10:00:00.000Z',
+      'Masters’ Union HYROX Mumbai runs 17–20 September 2026 at Hall 6, NESCO Goregaon East. You are four weeks out. Here is the physio protocol for the final week, race day, and the four days after.',
+    author: AUTHORS.hiral,
+    categories: [CATS.sportsMassage, CATS.physio, CATS.contrast],
+    publishedAt: '2026-08-21T10:00:00.000Z',
     faqs: [
       faq(
         'When is HYROX Mumbai 2026?',
-        'HYROX Mumbai 2026 runs 18–20 September at NESCO Centre, Goregaon. Registration opened May 2026. If you are racing, build recovery into your plan now, not the week after tickets sell out.'
+        'Masters’ Union HYROX Mumbai runs 17–20 September 2026 at Hall 6, NESCO Centre, Goregaon East. Racing starts Thursday 17 September. Check hyrox.com for current ticket availability and your wave time.'
       ),
       faq(
         'How sore will I be after HYROX?',
-        'Most first-timers feel peak soreness 48–72 hours post-race, especially quads from sled work, lats from ski erg, and shoulders from wall balls. Expect 4–5 days of meaningful DOMS if you race hard.'
+        'Most first-timers feel peak soreness 48–72 hours post-race, especially quads and glutes from sled work and sandbag lunges, then lats from SkiErg and shoulders from wall balls. Expect 4–5 days of meaningful DOMS if you race hard.'
       ),
       faq(
         'Should I ice bath right after HYROX?',
-        'A cold immersion within 2 hours can blunt acute soreness and swelling. If your goal is purely recovery (not muscle gain that week), contrast therapy or a supervised ice bath helps. Wait at least 3–4 hours if you also did heavy strength work in the same week.'
+        'No clinical Full Cycle on race day. If you finish in the morning or afternoon, a home contrast shower (2 minutes warm, 1 minute cold, three cycles) in the 2–6 hour window is a holding intervention. Book supervised contrast therapy for Day 2 or Day 3, when DOMS is highest. If you finish after 6pm, skip the shower and protect sleep.'
       ),
       faq(
         'Can I train the week before HYROX Mumbai?',
-        'Yes, but taper. Cut volume by 40–50%, keep short movement sessions, and stop heavy sled or wall ball work 5 days out. Your legs should feel springy, not trashed, at the start line.'
+        'Yes, but taper. Last heavy sled or wall ball session is T-7 to T-5, with sets cut by 30 percent. No heavy station loading inside 5 days. T-4 to T-3 is easy run and mobility only. T-1 is rest. Your legs should feel springy at the start line, not trashed.'
       ),
       faq(
         'Where can HYROX athletes recover in Mumbai?',
-        'R3BOOT in Dadar East runs physio-supervised contrast therapy and sports massage for athletes across Mumbai. Many Goregaon racers drive in post-event for a Full Cycle session or targeted leg work. Book via WhatsApp: +91 97023 68612.'
+        'R3BOOT runs physio-supervised contrast therapy and sports massage at Dadar East (Palai Plaza) and Lower Parel / Prabhadevi (Lodha Signet). Goregaon racers sit on the Western line, so Prabhadevi is often the simpler drop. Pre-book Day 2 sports massage and Day 2–3 Full Cycle now. WhatsApp +91 97023 68612.'
+      ),
+      faq(
+        'When should I start my HYROX recovery protocol?',
+        'Four weeks out. That window is now for Mumbai 2026. Schedule station-specific sports massage every 10–14 days, take a first cold exposure before race week, and book your post-race Day 2 and Day 3 slots before the weekend fills.'
+      ),
+      faq(
+        'Is contrast therapy safe the day of HYROX?',
+        'Not as a clinical Full Cycle. Race-day inflammation is still doing repair work. Use electrolytes, walking, and food on race day. A home contrast shower is optional if you finish early. Supervised contrast belongs on Day 2 or Day 3.'
+      ),
+      faq(
+        'How long does HYROX recovery take?',
+        'Most athletes feel functional by day 4–5. Full tissue recovery from sled work and sandbag lunges takes 7–10 days. Eccentric-exercise research shows DOMS typically peaks at 48–72 hours. Return to loaded training only when soreness is below 3 out of 10 at rest.'
+      ),
+      faq(
+        'What should I eat immediately after HYROX?',
+        'Within 30 minutes: carbohydrates and electrolytes. A banana plus an electrolyte drink is enough as the first hit. Within 2 hours: a meal with carbohydrate and 20–40 g protein, plus at least 1.5 litres of fluid with sodium, or 150 percent of any body-weight lost if you can weigh yourself.'
+      ),
+      faq(
+        'Can I train the day after HYROX?',
+        'No loaded training on Day 1. Walk 20–30 minutes and foam roll calves and quads gently. Day 2 is typically peak soreness. Easy spin, swim, or a short walk on Day 4. Doubles and Relay use the same tissues at lower volume, so you may feel ready a day earlier. Red flags still apply.'
       ),
     ],
     body: buildBody([
       {
         type: 'p',
-        text: 'HYROX Mumbai 2026 is set for 18–20 September at NESCO Centre, Goregaon. If you are training for it, or eyeing a Delhi or Pune race first, recovery is not something you figure out after you cannot walk downstairs. This guide maps what actually gets sore, when to pull back, and what helps in Mumbai heat and humidity.',
+        text: 'Masters’ Union HYROX Mumbai 2026 runs 17 to 20 September at Hall 6, NESCO Centre, Goregaon East. Racing starts Thursday 17 September. If you are on the start list, you are in the four-week window now. Recovery is not something you improvise after you cannot walk downstairs on Monday morning. It is something you schedule in this build, execute in the hours after you finish, and follow for four days after.',
       },
       {
         type: 'p',
-        text: 'We work with hybrid athletes at R3BOOT Dadar every week. This is the protocol we use when someone has a multi-station race on the calendar, not generic “rest and stretch” advice.',
+        text: 'This is the protocol we use with HYROX athletes at R3BOOT. It is not generic rest advice. Written by Dr. Hiral Parikh, physiotherapist at R3BOOT. Last updated August 2026.',
       },
-      { type: 'h2', text: 'What HYROX does to your body' },
+      { type: 'h2', text: 'What HYROX actually does to your body' },
       {
         type: 'p',
-        text: 'HYROX is eight 1 km runs broken up by functional stations. The load is repetitive and full-body, but certain muscles take a disproportionate hit:',
+        text: 'HYROX is eight 1 km runs separated by eight functional stations, in a fixed order. The format creates a specific soreness profile that differs from a pure running event or a strength session.',
       },
       {
-        type: 'ul',
-        items: [
-          'Ski erg, lats, triceps, core bracing; grip fatigue shows up late in the race',
-          'Sled push / pull, quads, glutes, calves; eccentric load on push, posterior chain on pull',
-          'Burpee broad jumps, chest, hip flexors, quads; heart rate spikes here',
-          'Rowing, hamstrings, mid-back, grip again',
-          'Farmers carry, traps, forearms, obliques; posture matters more than people expect',
-          'Sandbag lunges, quads and glutes under load; knee tracking breaks down when tired',
-          'Wall balls, shoulders, quads, cardiovascular peak; where races are often won or lost',
-        ],
-      },
-      {
-        type: 'p',
-        text: 'Research on mixed-modal racing shows DOMS peaks 48–72 hours after unfamiliar eccentric work, sled and lunges qualify for most people. Plan your week accordingly.',
-      },
-      { type: 'h2', text: '4 weeks out: build capacity, not fatigue' },
-      {
-        type: 'ul',
-        items: [
-          'Run one full simulation (or half-distance station practice) every 7–10 days max',
-          'Keep one easy run day between hard station sessions, Mumbai humidity makes back-to-back hard days costly',
-          'Add sports massage every 10–14 days focused on quads, calves, and lats, not a spa-style full body',
-          'Practice nasal breathing and cold exposure if you plan contrast therapy post-race; first ice bath on race week is a bad idea',
-        ],
-      },
-      { type: 'h2', text: 'Race week: taper rules' },
-      {
-        type: 'ul',
-        items: [
-          'T-7 to T-5: last heavy sled or wall ball session; cut sets by 30%',
-          'T-4 to T-3: 20–30 min easy run + mobility only',
-          'T-2: walk, light spin, or rest; hydrate aggressively, you lose more fluid in Mumbai than you feel',
-          'T-1: no training. Pack race kit, prep nutrition, sleep 7+ hours',
-          'Race morning: dynamic warm-up only, leg swings, band work, 5 min row; skip static stretching',
-        ],
-      },
-      { type: 'h2', text: 'Race day recovery (hour 0–6)' },
-      {
-        type: 'ul',
-        items: [
-          '0–30 min: walk 10 min, do not sit immediately; electrolytes + carbs within 30 min',
-          '30–120 min: light food, compression socks optional, elevate legs 15 min if swollen',
-          '2–6 hours: contrast shower at home (2 min warm / 1 min cool × 3) if no clinic visit; avoid deep tissue massage same day',
-        ],
-      },
-      { type: 'h2', text: 'Days 1–4 after HYROX' },
-      {
-        type: 'ul',
-        items: [
-          'Day 1: walk 20–30 min, foam roll calves and quads, gentle only',
-          'Day 2: peak soreness for many athletes; sports massage or physio assessment if limping',
-          'Day 3: contrast therapy or supervised ice bath, vascular flush helps when DOMS is highest',
-          'Day 4: easy spin or swim; reintroduce movement before loading again',
+        type: 'rich',
+        parts: [
+          { t: 'SkiErg:', strong: true },
+          {
+            t: ' Lat, tricep, and core bracing fatigue. Grip fatigue starts here and compounds at every station. The lats rarely get worked this way in standard training, which is why upper-body soreness after HYROX often surprises first-timers. Scapular stability work during the build matters as much as the pull itself. See our ',
+          },
+          {
+            t: 'HYROX injury-prevention guide',
+            link: 'https://www.r3boot.in/blog/hyrox-training-injury-prevention',
+          },
+          { t: ' for the shoulder pattern.' },
         ],
       },
       {
         type: 'rich',
         parts: [
-          { t: 'For a supervised session in Mumbai, see our ' },
-          { t: 'contrast therapy page', link: 'https://www.r3boot.in/contrast-therapy-mumbai' },
-          { t: ' (Full Cycle recommended post-race) or ' },
-          { t: 'sports massage for athletes', link: 'https://www.r3boot.in/sports-massage-mumbai' },
-          { t: ' for station-specific leg work.' },
+          { t: 'Sled push and pull:', strong: true },
+          {
+            t: ' The sled push is the highest producer of quad and glute fatigue in the race. Eccentric load on the quads during the push, posterior chain demand during the pull. Most athletes underestimate how much this degrades running mechanics in the final three stations.',
+          },
         ],
-      },
-      { type: 'h2', text: 'When to see a physiotherapist' },
-      {
-        type: 'p',
-        text: 'Normal post-HYROX soreness is diffuse and bilateral. Book a physio assessment if you have sharp single-joint pain, swelling that does not settle in 48 hours, numbness, or pain that changes your gait after day 4. Early intervention beats training through a stress fracture or rotator cuff flare.',
       },
       {
         type: 'rich',
         parts: [
-          { t: 'Last updated May 2026. Written with input from the R3BOOT physio team. ' },
-          { t: 'Book recovery', link: 'https://wa.me/919702368612' },
-          { t: ' or call +91 97023 68612.' },
+          { t: 'Burpee broad jumps:', strong: true },
+          {
+            t: ' Hip flexor and quad load with a heart-rate spike. The hip flexor contribution is often missed. Post-race hip flexor tightness and lower-back stiffness commonly trace back to this station.',
+          },
+        ],
+      },
+      {
+        type: 'rich',
+        parts: [
+          { t: 'Rowing:', strong: true },
+          { t: ' Hamstring and mid-back loading, plus another hit to grip.' },
+        ],
+      },
+      {
+        type: 'rich',
+        parts: [
+          { t: 'Farmers carry:', strong: true },
+          {
+            t: ' Traps, forearms, and obliques. Posture under fatigue matters more than people expect.',
+          },
+        ],
+      },
+      {
+        type: 'rich',
+        parts: [
+          { t: 'Sandbag lunges:', strong: true },
+          {
+            t: ' This is the station that causes the most post-race DOMS. Loaded eccentric quad and glute work, repeated under cumulative fatigue. Eccentric-exercise research shows delayed-onset muscle soreness typically peaks 48 to 72 hours after novel or high-volume eccentric loading. Sandbag lunges qualify for virtually every HYROX competitor.',
+          },
+        ],
+      },
+      {
+        type: 'rich',
+        parts: [
+          { t: 'Wall balls:', strong: true },
+          {
+            t: ' Shoulders and quads at cardiovascular peak, where races are often decided. The overhead volume loads an already-fatigued upper body and can leave significant deltoid and rotator cuff soreness if you are undertrained for it.',
+          },
+        ],
+      },
+      {
+        type: 'p',
+        text: 'Doubles and Relay load the same tissues at lower volume. Use the same recovery timeline. You may feel ready to train a day earlier. The red flags in the physiotherapy section still apply.',
+      },
+      { type: 'h2', text: 'Four weeks out: build recovery into training' },
+      {
+        type: 'p',
+        text: 'The biggest mistake HYROX athletes make is treating recovery as something that happens after training. In this four-week window, recovery needs to be scheduled like sessions. That includes booking the clinic days you will need after the race, before Goregaon weekend traffic fills the diary.',
+      },
+      {
+        type: 'ul',
+        items: [
+          'One full simulation, or half-distance station practice, every 7 to 10 days at most',
+          'One easy run day between hard station sessions. Mumbai humidity makes back-to-back hard days expensive in ways cooler-climate plans do not account for',
+          'Sports massage every 10 to 14 days, targeting quads, calves, and lats, not a general full-body session',
+          'If you plan contrast therapy or a supervised ice bath after the race, take your first cold exposure in this window. A first-time cold plunge the morning after HYROX is a bad experience for no clinical gain',
+          'Pre-book sports massage for Day 2 after your race date, and a Full Cycle contrast session for Day 2 or Day 3',
+        ],
+      },
+      {
+        type: 'rich',
+        parts: [
+          {
+            t: 'If you are carrying a niggle into this window, ramping station volume for the first time, or returning after a previous injury, book a ',
+          },
+          { t: 'physiotherapy assessment', link: 'https://www.r3boot.in/physiotherapy-mumbai' },
+          {
+            t: ' now. Correcting a weak point in training is cheaper than managing the injury it causes on race day.',
+          },
+        ],
+      },
+      { type: 'h2', text: 'Race week: the taper protocol' },
+      {
+        type: 'rich',
+        parts: [
+          { t: 'T minus 7 to T minus 5:', strong: true },
+          {
+            t: ' Last heavy sled or wall ball session. Cut sets by 30 percent. Keep intensity, reduce volume. No heavy sled or wall balls inside 5 days of your wave.',
+          },
+        ],
+      },
+      {
+        type: 'rich',
+        parts: [
+          { t: 'T minus 4 to T minus 3:', strong: true },
+          { t: ' 20 to 30 minutes easy run and mobility only. No station loading.' },
+        ],
+      },
+      {
+        type: 'rich',
+        parts: [
+          { t: 'T minus 2:', strong: true },
+          {
+            t: ' Walk, light spin, or complete rest. Hydrate aggressively. Training and commuting in Mumbai humidity cost more fluid than temperate-climate plans assume. Arrive at race day already hydrated.',
+          },
+        ],
+      },
+      {
+        type: 'rich',
+        parts: [
+          { t: 'T minus 1:', strong: true },
+          {
+            t: ' No training. Pack race kit, prepare race nutrition, sleep at least seven hours. This is a performance input, not optional rest.',
+          },
+        ],
+      },
+      {
+        type: 'rich',
+        parts: [
+          { t: 'Race morning:', strong: true },
+          {
+            t: ' Dynamic warm-up only. Leg swings, band work, 5 minutes on the SkiErg or rower. No static stretching. Static stretching before a high-intensity event that demands explosive output is counterproductive to performance.',
+          },
+        ],
+      },
+      { type: 'h2', text: 'Race day: hours 0 to 6' },
+      {
+        type: 'p',
+        text: 'The decisions you make in the six hours after crossing the finish line determine most of your Day 2 and Day 3 soreness outcome. Check your wave time. Several Saturday and Sunday divisions finish after 18:00, including Doubles, Pro, and Relay waves through 20:10.',
+      },
+      {
+        type: 'rich',
+        parts: [
+          { t: '0 to 30 minutes:', strong: true },
+          {
+            t: ' Walk for 10 minutes. Do not sit immediately. Blood is pooled in your legs from eight rounds of running and loading. Sitting stops venous return and speeds the fluid accumulation that leaves lower limbs swollen and heavy. Take electrolytes and carbohydrates within 30 minutes. A banana plus an electrolyte drink is enough as the first hit.',
+          },
+        ],
+      },
+      {
+        type: 'rich',
+        parts: [
+          { t: '30 to 120 minutes:', strong: true },
+          {
+            t: ' A meal with carbohydrate and 20 to 40 g protein. Compression socks help if your legs are visibly swollen. Elevate legs for 15 minutes if swelling is present. Target at least 1.5 litres of fluid with sodium in the first two hours, or about 150 percent of body-weight lost if you can weigh yourself before and after. One litre is a floor, not a finish line.',
+          },
+        ],
+      },
+      {
+        type: 'rich',
+        parts: [
+          { t: '2 to 6 hours, morning or afternoon finish:', strong: true },
+          {
+            t: ' If you are not coming to clinic on race day, a contrast shower at home: two minutes warm, one minute cold, three cycles. This is a holding intervention, not a Full Cycle. Avoid deep tissue massage on race day. The acute inflammatory response is doing repair work. Aggressive manual work into that response typically worsens Day 2 soreness. Skip high-dose ibuprofen or other NSAIDs while you are still dehydrated. They stress the kidneys and do not speed tissue repair.',
+          },
+        ],
+      },
+      {
+        type: 'rich',
+        parts: [
+          { t: 'Evening finish after 6pm:', strong: true },
+          {
+            t: ' Walk, electrolytes, and a proper meal still matter. Skip the contrast shower if it costs you sleep. Getting from Goregaon East to Dadar or Prabhadevi at 10pm, then sitting in a shower cycle, is a poor trade for a shortened night. Sleep is the higher-leverage input. Book Day 2 massage and Day 2–3 contrast instead.',
+          },
+        ],
+      },
+      { type: 'h2', text: 'Days 1 to 4 after HYROX' },
+      {
+        type: 'table',
+        caption: 'Post-race recovery timeline at R3BOOT',
+        headers: ['When', 'What to do', 'What to skip'],
+        rows: [
+          [
+            'Race day',
+            'Walk, electrolytes, carbs then protein, sleep',
+            'Deep tissue, Full Cycle contrast, NSAIDs while dehydrated',
+          ],
+          [
+            'Day 1',
+            '20–30 min walk, gentle foam roll on calves and quads',
+            'Loaded training',
+          ],
+          [
+            'Day 2',
+            'Sports massage if gait changes; peak DOMS window',
+            'Pushing through a limp',
+          ],
+          [
+            'Day 2–3',
+            'Supervised contrast, Full Cycle (60 min) preferred',
+            'First-ever ice bath',
+          ],
+          [
+            'Day 4',
+            'Easy spin, swim, or 20-min walk',
+            'Sled, lunges, wall balls',
+          ],
+          [
+            'Day 7–10',
+            'Return to load when soreness is below 3/10 at rest',
+            'Training through sharp or one-sided pain',
+          ],
+        ],
+      },
+      {
+        type: 'rich',
+        parts: [
+          { t: 'Day 1:', strong: true },
+          {
+            t: ' Easy walk 20 to 30 minutes. Gentle foam rolling on calves and quads only. No loaded training. Sleep is the main recovery tool on this day. The tissue is in an acute recovery state and does not benefit from a loading stimulus.',
+          },
+        ],
+      },
+      {
+        type: 'rich',
+        parts: [
+          { t: 'Day 2:', strong: true },
+          {
+            t: ' Peak soreness for most athletes. This is when the eccentric damage from sled and sandbag lunges fully shows. Book a ',
+          },
+          {
+            t: 'sports massage',
+            link: 'https://www.r3boot.in/sports-massage-mumbai',
+          },
+          {
+            t: ' or physiotherapy assessment if you are visibly altering your gait. Station-specific leg work: quads, glutes, calves in that order. Forty-five minutes is enough. If you cannot get in on Day 2, Day 3 is still effective.',
+          },
+        ],
+      },
+      {
+        type: 'rich',
+        parts: [
+          { t: 'Day 2 to 3:', strong: true },
+          {
+            t: ' Contrast therapy or supervised ice bath. Prefer Day 3 if you are still very swollen on Day 2. The vascular pump from alternating heat and cold at clinical temperatures helps clear waste from fatigued muscle when DOMS is highest. At R3BOOT, Full Cycle (60 minutes) is the post-race recommendation. Do not use a clinical Full Cycle on race day itself. Detail on timing is on our ',
+          },
+          {
+            t: 'contrast therapy page',
+            link: 'https://www.r3boot.in/contrast-therapy-mumbai',
+          },
+          { t: '.' },
+        ],
+      },
+      {
+        type: 'rich',
+        parts: [
+          { t: 'Day 4:', strong: true },
+          {
+            t: ' Easy spin, swim, or a 20-minute walk. Reintroduce movement before loaded training. Full tissue recovery from sled work and sandbag lunges takes 7 to 10 days.',
+          },
+        ],
+      },
+      { type: 'h2', text: 'Mumbai humidity, not a hot race floor' },
+      {
+        type: 'p',
+        text: 'Hall 6 at NESCO is an indoor, air-conditioned exhibition hall. The race floor will not feel like outdoor September heat. That does not mean heat and humidity are irrelevant.',
+      },
+      {
+        type: 'p',
+        text: 'You still train in Mumbai humidity in these four weeks, queue and warm up around the venue, and commute on the Western Express Highway in late-monsoon weather. Those hours add fluid loss and delay how fast you get food, sleep, and a clinic slot. Rain can slow the Goregaon-to-Dadar or Goregaon-to-Prabhadevi trip, which is another reason to pre-book Day 2 and Day 3 rather than hoping for a walk-in.',
+      },
+      {
+        type: 'p',
+        text: 'Two practical consequences. First, rehydration takes more fluid and more sodium than temperate-climate race write-ups suggest. Be more aggressive in the first two hours than you think is necessary. Second, a humid training block plus a long indoor race still leaves a large eccentric load. Expect Day 2 and Day 3 soreness to be real. Build that into the timeline rather than treating it as a surprise.',
+      },
+      { type: 'h2', text: 'When to see a physiotherapist, before and after' },
+      {
+        type: 'rich',
+        parts: [
+          { t: 'Before the race:', strong: true },
+          {
+            t: ' Physiotherapy is a build-phase tool, not only a post-race one. The most useful contact is four to six weeks out. A single screen catches load-tolerance gaps, old niggles, and movement faults that sled, lunges, and wall balls will expose under fatigue. Book a pre-race assessment if you are carrying any niggle into this window, ramping station volume for the first time, or returning to HYROX after a previous injury.',
+          },
+        ],
+      },
+      {
+        type: 'rich',
+        parts: [
+          { t: 'After the race:', strong: true },
+          {
+            t: ' Normal post-HYROX soreness is diffuse, bilateral, and gradually improving from Day 3 onward. Book an assessment if you have sharp single-joint pain that does not improve from Day 1 to Day 2, swelling in one joint that is clearly worse than the other side, numbness or tingling in a limb, pain that changes your gait beyond Day 4, or shoulder pain that does not follow the expected DOMS pattern.',
+          },
+        ],
+      },
+      {
+        type: 'p',
+        text: 'Early intervention for post-race stress reactions or overuse injuries consistently beats training through them. One assessment on Day 2 or 3 is far less disruptive to the next training block than six weeks of managed injury. Return to loaded training only when soreness is below 3 out of 10 at rest.',
+      },
+      {
+        type: 'related',
+        title: 'Related reading',
+        links: [
+          {
+            t: 'HYROX training injury prevention',
+            link: 'https://www.r3boot.in/blog/hyrox-training-injury-prevention',
+          },
+          {
+            t: 'When to ice bath after a workout',
+            link: 'https://www.r3boot.in/blog/when-to-ice-bath-after-workout',
+          },
+          {
+            t: 'Contrast therapy in Mumbai',
+            link: 'https://www.r3boot.in/contrast-therapy-mumbai',
+          },
+        ],
+      },
+      { type: 'h2', text: 'Book recovery in Mumbai' },
+      {
+        type: 'p',
+        text: 'Dadar East is the flagship: Palai Plaza, 203, Swami Gyan Jivandas Marg, Dadar East. Lower Parel / Prabhadevi is at Lodha Signet, A-303, Senapati Bapat Marg, on the Western line from Goregaon. Both sites run physiotherapy, sports massage, and contrast therapy. Aqua therapy is Dadar only.',
+      },
+      {
+        type: 'rich',
+        parts: [
+          { t: 'WhatsApp ', },
+          { t: '+91 97023 68612', link: 'https://wa.me/919702368612' },
+          {
+            t: ' to lock Day 2 sports massage and Day 2–3 Full Cycle against your wave date. Written by Dr. Hiral Parikh, physiotherapist at R3BOOT Recovery Centre. Last updated August 2026.',
+          },
         ],
       },
     ]),
@@ -179,7 +457,7 @@ export const DRAFT_POSTS = [
       ),
       faq(
         'Should I sauna before or after the ice bath?',
-        'Heat first, then cold, always end on cold. That is the basis of contrast therapy. At R3BOOT we use a 3:1 hot-to-cold time ratio. See our contrast therapy service for supervised sessions in Dadar.',
+        'At R3BOOT, contrast therapy uses Day Cycle (always ends on ice bath) or Night Cycle (always ends on infrared sauna), selected from your schedule. See our contrast therapy service for supervised sessions in Dadar.',
       ),
     ],
     body: buildBody([
@@ -261,98 +539,104 @@ export const DRAFT_POSTS = [
 
   {
     baseId: 'contrast-therapy-3-1-protocol-explained',
-    title: 'Contrast Therapy Explained: The 3:1 Protocol We Use at R3BOOT',
+    title: 'Contrast Therapy Day Cycle vs Night Cycle: R3BOOT Protocol Explained (2026)',
     metaDescription:
-      'What contrast therapy 3:1 means, 3 minutes infrared heat, 1 minute cold, always end on cold. How many rounds, who it suits, and how it differs from ice alone. R3BOOT Mumbai.',
+      'Day Cycle ends cold for alertness; Night Cycle ends hot for recovery and sleep. Half vs Full Cycle, 70°C sauna + 6–8°C ice bath, and who needs medical clearance. R3BOOT Mumbai.',
     excerpt:
-      '3:1 means three minutes of heat for every one minute of cold, and you always finish cold. Here is why that ratio works, how a full session is structured, and who should modify it.',
+      'Day Cycle always ends on ice bath; Night Cycle always ends on infrared sauna. Here is how R3BOOT selects your cycle, runs a 30- or 60-minute session, and sets exact temperatures.',
     author: AUTHORS.hiral,
     categories: [CATS.contrast],
     publishedAt: '2026-05-19T12:00:00.000Z',
     faqs: [
       faq(
-        'What does 3:1 mean in contrast therapy?',
-        'Three minutes in infrared heat for every one minute in cold immersion. Heat dilates vessels; cold constricts them. The alternation creates a pumping effect that moves fluid through muscle tissue faster than heat or cold alone.'
+        'Should contrast therapy end on hot or cold?',
+        'Day Cycle always ends on cold (ice bath) for alertness before training or work. Night Cycle always ends on hot (infrared sauna) for recovery and sleep. Your physiotherapist selects the cycle at intake.'
       ),
       faq(
-        'Why always end on cold?',
-        'Finishing cold leaves vessels constricted and inflammation suppressed, the state you want walking out of a recovery session. Ending on heat re-opens vessels and can bring swelling back.'
+        'What is the difference between Half Cycle and Full Cycle?',
+        'Half Cycle (30 min) is one complete Day or Night sequence. Full Cycle (60 min) is a separate longer protocol with longer heat phases and an extra round, not Half run twice. Same Day or Night type throughout.'
       ),
       faq(
-        'How many rounds in a Half vs Full Cycle?',
-        'Half Cycle (30 min): two full rounds of heat-cold alternation. Full Cycle (60 min): three to four rounds. First-timers usually start Half; post-competition or heavy training weeks suit Full.'
+        'What is a Day Cycle in contrast therapy at R3BOOT?',
+        'A 30- or 60-minute sequence that always finishes in the ice bath at 6–8°C. Used when training, work, or competition follows the session.'
       ),
       faq(
-        'Is 3:1 the same as a Finnish sauna protocol?',
-        'No. Traditional sauna protocols often use longer heat blocks and shorter cold dips with different ratios. Our 3:1 uses infrared heat at lower air temperature with physiotherapist supervision, built for athletes, not spa relaxation.'
+        'What is a Night Cycle in contrast therapy at R3BOOT?',
+        'A 30- or 60-minute sequence that always finishes in the Red Light Sauna at 70°C. Used for deep recovery, stress relief, or sleep — often before sports massage when both are booked.'
       ),
       faq(
-        'Can I do 3:1 contrast therapy at home?',
-        'You can approximate with hot shower / cold shower alternation, but temperature control and breathing supervision matter for the ice phase. First cold exposure should be guided, that is why we run intake before any immersion at R3BOOT.'
+        'What temperatures does R3BOOT use for contrast therapy?',
+        'Red Light Sauna at 70°C and ice bath at 6–8°C. Temperatures may only be reduced on client request after staff confirm comfort at intake.'
       ),
     ],
     body: buildBody([
       {
         type: 'p',
-        text: 'Contrast therapy is alternating heat and cold to flush fatigued muscle. At R3BOOT we run a specific 3:1 protocol, three minutes of infrared heat for every one minute of supervised cold immersion. This post explains the ratio, the round structure, and who should tweak it. For ice bath vs contrast debates, see our separate comparison article.',
+        text: 'At R3BOOT, contrast therapy is not one generic hot-cold loop. Day Cycle and Night Cycle use the same sauna and ice bath equipment but different sequences and finishes, matched to what your schedule demands next. This post explains how we select and run each cycle.',
       },
-      { type: 'h2', text: 'What happens in each phase' },
-      { type: 'h3', text: 'Heat phase (infrared sauna)' },
+      { type: 'h2', text: 'Day Cycle vs Night Cycle' },
       {
         type: 'ul',
         items: [
-          'Vessels dilate; blood flow to skin and muscle increases',
-          'Muscle tissue warms, makes the upcoming cold phase tolerable',
-          'Parasympathetic tone rises; many athletes report mental calm here',
-          'Typical duration in our protocol: ~3 minutes per round',
+          'Day Cycle → always ends on ice bath → stay energised for work or training',
+          'Night Cycle → always ends on infrared sauna → down-regulate for recovery and sleep',
+          'Half Cycle = 30 minutes (one complete sequence)',
+          'Full Cycle = 60 minutes (a separate longer protocol, not Half run twice)',
         ],
       },
-      { type: 'h3', text: 'Cold phase (ice bath)' },
+      { type: 'h2', text: 'Half Cycle structure (30 min)' },
+      { type: 'h3', text: 'Day Cycle Half' },
       {
         type: 'ul',
         items: [
-          'Vessels constrict rapidly; inflammation markers drop locally',
-          'Nerve conduction slows, soreness perception drops within hours',
-          'Breathing control is coached in the first 60 seconds',
-          'Typical duration: ~1 minute per round at 10–15°C',
+          'Infrared sauna 10 min → ice bath 3 min → rest & hydrate 3 min',
+          'Sauna 10 min → ice bath 3 min → rest, hydrate & shower (ends cold)',
         ],
       },
-      { type: 'h2', text: 'Why 3:1 and not 1:1' },
+      { type: 'h3', text: 'Night Cycle Half' },
+      {
+        type: 'ul',
+        items: [
+          'Sauna 8 min → ice bath 3 min → rest 3 min → sauna 8 min → ice bath 3 min',
+          'Rest 1 min → sauna 4 min → hydrate and shower (ends heat)',
+          'Often used before sports massage when both services are booked the same day',
+        ],
+      },
+      { type: 'h2', text: 'Full Cycle structure (60 min)' },
       {
         type: 'p',
-        text: 'Equal time heat and cold works for some spa traditions. For athletes arriving with already-fatigued muscle, longer heat primes tissue and makes cold manageable without shortening the cold enough to lose the constrictive benefit. Shorter cold bursts repeated across rounds beat one long miserable plunge.',
+        text: 'Full Cycle is its own protocol: longer heat phases and an extra round. Day still ends cold; Night still ends heat.',
       },
-      {
-        type: 'p',
-        text: 'Your physiotherapist may adjust toward 2:1 if you are new to cold or toward 4:1 during deload weeks, but the default at R3BOOT is 3:1, always ending on cold.',
-      },
-      { type: 'h2', text: 'Sample Full Cycle structure (60 min)' },
+      { type: 'h3', text: 'Day Cycle Full' },
       {
         type: 'ul',
         items: [
-          'Intake + health screen, 5 min',
-          'Breathing briefing before first cold, 3 min',
-          'Round 1: 3 min heat → 1 min cold',
-          'Round 2: 3 min heat → 1 min cold',
-          'Round 3: 3 min heat → 1 min cold',
-          'Optional Round 4 for heavy training load, 3 min heat → 1 min cold',
-          'Rewarm, hydrate, post-session check-in, 5 min',
+          'Sauna 15 min → ice bath 3 min → rest 3 min → sauna 15 min → ice bath 5 min → rest 3 min',
+          'Sauna 12 min → ice bath 3 min → rest 1 min (ends cold)',
         ],
       },
-      { type: 'h2', text: 'Who should modify the protocol' },
+      { type: 'h3', text: 'Night Cycle Full' },
       {
         type: 'ul',
         items: [
-          'First cold exposure: shorter cold (30–45 sec) with team present',
-          'Uncontrolled blood pressure or Raynaud\'s: medical clearance first',
-          'Acute injury (first 72 hr): rest and ice only, not full contrast',
-          'Pregnancy: not recommended without obstetric clearance',
+          'Sauna 12 min → ice bath 3 min → rest 3 min → sauna 12 min → ice bath 5 min → rest 3 min',
+          'Sauna 10 min → ice bath 3 min → rest 3 min → sauna 6 min (ends heat)',
         ],
       },
-      { type: 'h2', text: 'How this differs from our service pages' },
+      { type: 'h2', text: 'Temperature standards' },
       {
         type: 'p',
-        text: 'Our Mumbai service pages cover booking, pricing, and location. This article is the protocol logic, so you know what you are walking into before you book.',
+        text: 'Red Light Sauna at 70°C. Ice bath at 6–8°C. Staff may reduce temperatures only on your request. Shower before the session is required; hydrate with water and electrolytes (avoid caffeine beforehand).',
+      },
+      { type: 'h2', text: 'Who should not do contrast therapy without clearance' },
+      {
+        type: 'ul',
+        items: [
+          'Uncontrolled cardiac conditions or hypertension',
+          'Raynaud\'s phenomenon or severe cold intolerance',
+          'Open wounds, skin infections, fever, or acute illness',
+          'Acute injury in the first 72 hours — rest and local ice only',
+        ],
       },
       {
         type: 'rich',
@@ -365,7 +649,7 @@ export const DRAFT_POSTS = [
       },
       {
         type: 'p',
-        text: 'Dr Hiral Parikh is a physiotherapist at R3BOOT Dadar. Last updated May 2026.',
+        text: 'Dr Hiral Parikh is a physiotherapist at R3BOOT Dadar. Last updated October 2026.',
       },
     ]),
   },

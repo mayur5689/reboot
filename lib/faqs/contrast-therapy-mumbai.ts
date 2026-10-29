@@ -12,12 +12,17 @@ export const contrastTherapyMumbaiFaqs = [
   {
     question: 'How much does an ice bath, sauna, or contrast therapy session cost in Mumbai at R3BOOT?',
     answer:
-      'Contrast therapy at R3BOOT includes infrared sauna and ice bath: ₹2,500 for a Half Cycle (30 minutes) or ₹3,500 for a Full Cycle (60 minutes). Both are physio-supervised. Call or WhatsApp +91 97023 68612 to confirm current pricing and book.',
+      'Sauna and ice bath are included in every contrast session. Price is by cycle length, and Day Cycle and Night Cycle cost the same. 30-minute Half Cycle: ₹2,500. 60-minute Full Cycle: ₹3,500. Day Cycle always ends on ice bath. Night Cycle always ends on sauna. Full Cycle is a longer protocol with extra rounds, not Half run twice. Both are physio-supervised. Call or WhatsApp +91 97023 68612 to book.',
+  },
+  {
+    question: 'What is the price for Day Cycle and Night Cycle, 30 minutes and 60 minutes?',
+    answer:
+      'Day Cycle, 30 minutes (Half): ₹2,500, ends on ice bath. Day Cycle, 60 minutes (Full): ₹3,500, ends on ice bath. Night Cycle, 30 minutes (Half): ₹2,500, ends on sauna. Night Cycle, 60 minutes (Full): ₹3,500, ends on sauna. Choose Day when you still have training or work ahead. Choose Night when the goal is recovery, sleep, or a session before sports massage.',
   },
   {
     question: 'What is infrared sauna therapy, and how is it different from a steam bath?',
     answer:
-      'Infrared sauna heats the body with infrared light at a controlled temperature. At R3BOOT the heat phase runs at about 68°C. A steam bath is humid heat in a wet steam room. Infrared sauna at R3BOOT is used inside a structured contrast protocol with ice bath, not as a standalone spa steam experience.',
+      'Infrared sauna heats the body with infrared light at a controlled temperature. At R3BOOT the Red Light Sauna runs at 70°C. A steam bath is humid heat in a wet steam room. Infrared sauna at R3BOOT is used inside a structured Day or Night Cycle contrast protocol with ice bath, not as a standalone spa steam experience.',
   },
   {
     question: 'What are the benefits of infrared sauna as part of contrast therapy in Mumbai?',
@@ -37,7 +42,7 @@ export const contrastTherapyMumbaiFaqs = [
   {
     question: 'How cold is the ice bath, and how long do sessions last for beginners?',
     answer:
-      'Our ice bath is maintained between 6 and 10 degrees Celsius. A Half Cycle runs 30 minutes and a Full Cycle runs 60 minutes within the full contrast protocol. First-time clients get breathing guidance before immersion, and duration is adjusted to your response.',
+      'Our ice bath is maintained between 6 and 8 degrees Celsius. A Half Cycle (30 minutes) is one complete Day or Night sequence. A Full Cycle (60 minutes) is a separate longer protocol with longer heat phases and an extra round (not Half run twice). First-time clients get breathing guidance before immersion. Temperature may be reduced on request.',
   },
   {
     question: 'Is infrared sauna and ice bath safe for first-time users?',
@@ -57,7 +62,7 @@ export const contrastTherapyMumbaiFaqs = [
   {
     question: 'Can I combine sauna and ice bath with physiotherapy or sports massage at R3BOOT?',
     answer:
-      'Yes. R3BOOT integrates contrast therapy with physiotherapy, sports massage, and other recovery services under one roof. Many clients book sauna and ice bath with massage or physio on the same visit. Mention this when booking so sessions can be sequenced correctly.',
+      'Yes. R3BOOT integrates contrast therapy with physiotherapy, sports massage, and other recovery services under one roof. Night Cycle (ending in sauna) is often used before massage when booked together. Mention this when booking so sessions can be sequenced correctly.',
   },
   {
     question: 'What should I bring, and how do I prepare for a sauna and ice bath session?',

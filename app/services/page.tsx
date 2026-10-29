@@ -4,10 +4,22 @@ import Link from 'next/link'
 import { services } from '@/lib/services'
 
 export const metadata: Metadata = {
-  title: 'Therapy & Recovery Services in Dadar Mumbai | R3BOOT',
-  description: 'Physiotherapy, contrast therapy, compression therapy, aqua therapy, sports massage & sports psychology in Dadar, Mumbai. Book your session at R3BOOT, open 7 days.',
+  title: 'Physiotherapy & Recovery Services in Mumbai | R3BOOT',
+  description: 'Physiotherapy, contrast therapy, compression therapy, aqua therapy, sports massage and sports psychology in Dadar, Mumbai. Book your session at R3BOOT, open 7 days.',
   keywords: ['therapy dadar', 'therapy services dadar', 'recovery services dadar', 'physiotherapy mumbai', 'contrast therapy dadar', 'sports clinic mumbai'],
   alternates: { canonical: '/services' },
+  openGraph: {
+    title: 'Physiotherapy & Recovery Services in Mumbai | R3BOOT',
+    description: 'Physiotherapy, contrast therapy, compression therapy, aqua therapy, sports massage and sports psychology in Dadar, Mumbai. Book your session at R3BOOT, open 7 days.',
+    url: 'https://www.r3boot.in/services',
+    type: 'website',
+    siteName: 'R3BOOT',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Physiotherapy & Recovery Services in Mumbai | R3BOOT',
+    description: 'Physiotherapy, contrast therapy, compression therapy, aqua therapy, sports massage and sports psychology in Dadar, Mumbai. Book your session at R3BOOT, open 7 days.',
+  },
 }
 
 export default function ServicesPage() {

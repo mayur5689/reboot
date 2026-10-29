@@ -22,6 +22,6 @@ export const clinicalPilatesDadarFaqs = [
   {
     question: 'How do I find out the session fee for clinical Pilates in Dadar at R3BOOT?',
     answer:
-      'Call +91 97023 68612 or WhatsApp R3BOOT for current session fees and package options. Sessions are available Monday–Saturday, 7:00 AM–8:00 PM, and by appointment on Sundays. All sessions are physiotherapist-led.',
+      'A 45-minute clinical Pilates session at R3BOOT is ₹2,000. Sessions run Monday to Saturday, 7:00 AM to 8:00 PM, and by appointment on Sundays. All sessions are physiotherapist-led. Call or WhatsApp +91 97023 68612 to book.',
   },
 ]

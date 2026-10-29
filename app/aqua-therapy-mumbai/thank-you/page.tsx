@@ -44,7 +44,7 @@ export default function AquaTherapyThankYouPage() {
 
           <p className="mt-6">
             <Link
-              href="/aqua-therapy-mumbai"
+              href="/services/aqua-therapy"
               className="text-[14px] font-bold text-[#513394] dark:text-[#A78BFA] hover:underline underline-offset-4"
             >
               Back to Aqua Therapy

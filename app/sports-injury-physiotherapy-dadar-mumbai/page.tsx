@@ -8,10 +8,10 @@ import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema'
 import { sportsInjuryPhysiotherapyFaqs } from '@/lib/faqs/sports-injury-physiotherapy-dadar-mumbai'
 
 export const metadata: Metadata = {
-  title: 'Sports Injury Physiotherapy Dadar Mumbai | Athlete Rehab | R3BOOT',
+  title: 'Sports Injury Physiotherapy in Mumbai | R3BOOT',
   description:
-    'Sports injury physiotherapy in Dadar, Mumbai at R3BOOT. ACL rehab, hamstring tears, rotator cuff, ankle sprains & return-to-sport programmes. Near Shivaji Park. 5.0 ★ Google. WhatsApp to book.',
-  alternates: { canonical: '/sports-injury-physiotherapy-dadar-mumbai' },
+    'Sports injury physiotherapy in Mumbai at R3BOOT. ACL rehab, hamstring tears, rotator cuff, ankle sprains and return-to-sport programmes. Sessions at Dadar and Lower Parel. 5.0 ★ Google. WhatsApp to book.',
+  alternates: { canonical: '/services/physiotherapy/sports-injuries' },
   keywords: [
     'sports injury physiotherapy dadar mumbai',
     'sports physiotherapy dadar',
@@ -111,14 +111,14 @@ export default function SportsInjuryPhysiotherapyDadarPage() {
           <div className="max-w-4xl">
             <div className="flex items-center gap-3 text-white/70 mb-4">
               <div className="w-1.5 h-1.5 rounded-full bg-white/50" />
-              <span className="text-[11px] font-black tracking-[0.3em] uppercase">SPORTS INJURY // ATHLETE REHAB // DADAR MUMBAI</span>
+              <span className="text-[11px] font-black tracking-[0.3em] uppercase">SPORTS INJURY // ATHLETE REHAB // MUMBAI</span>
               <div className="w-1.5 h-1.5 rounded-full bg-white/50" />
             </div>
             <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white mb-2 tracking-tighter leading-[1.05]">
-              Sports Injury Physiotherapy in Dadar, Mumbai
+              Sports Injury Physiotherapy in Mumbai
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl text-white/80 max-w-3xl leading-relaxed font-medium mt-4">
-              Injury assessment, load management, and return-to-sport rehabilitation, at R3BOOT, 5 minutes from Shivaji Park.
+              Sports injury physiotherapy at R3BOOT, with treatments and appointments at Dadar and Lower Parel.
             </p>
           </div>
         </div>
@@ -497,7 +497,7 @@ export default function SportsInjuryPhysiotherapyDadarPage() {
                 {
                   title: 'Contrast Therapy',
                   desc: 'Ice bath and infrared sauna in a structured protocol. Reduces acute inflammation and accelerates tissue repair after sports injury and intensive physiotherapy sessions.',
-                  href: '/contrast-therapy-mumbai',
+                  href: '/services/contrast-therapy',
                 },
                 {
                   title: 'Physiotherapy Dadar Hub',
@@ -539,11 +539,13 @@ export default function SportsInjuryPhysiotherapyDadarPage() {
           <div className="flex flex-wrap gap-3 sm:gap-4">
             {[
               { label: 'Physiotherapy Dadar Mumbai', href: '/physiotherapy-dadar-mumbai' },
-              { label: 'Physiotherapy for Back Pain Mumbai', href: '/physiotherapy-for-back-pain-mumbai' },
+              { label: 'Physiotherapy for Shoulder Pain Mumbai', href: '/services/physiotherapy/shoulder-pain' },
+              { label: 'IPL Cricket Elbow & Shoulder Recovery', href: '/blog/ipl-cricket-elbow-shoulder-pain-recovery' },
+              { label: 'Physiotherapy for Back Pain Mumbai', href: '/services/physiotherapy/back-pain' },
               { label: 'Sports Massage for Runners', href: '/sports-massage-runners-mumbai' },
-              { label: 'Contrast Therapy Mumbai', href: '/contrast-therapy-mumbai' },
+              { label: 'Contrast Therapy Mumbai', href: '/services/contrast-therapy' },
               { label: 'Ice Bath Mumbai', href: '/ice-bath-mumbai' },
-              { label: 'Clinical Pilates Mumbai', href: '/clinical-pilates-mumbai' },
+              { label: 'Clinical Pilates Mumbai', href: '/services/clinical-pilates' },
             ].map((link) => (
               <Link
                 key={link.href}
@@ -598,15 +600,15 @@ export default function SportsInjuryPhysiotherapyDadarPage() {
       </section>
 
       <ServiceSchema
-        serviceName="Sports Injury Physiotherapy in Dadar, Mumbai"
+        serviceName="Sports Injury Physiotherapy in Mumbai"
         description="Sports injury physiotherapy in Dadar, Mumbai at R3BOOT. ACL rehabilitation, hamstring tears, rotator cuff injuries, ankle sprains, ITB syndrome, and return-to-sport programmes. Led by Dr. Hiral Parikh (BPT, 15+ years) and Dr. Vaishali Vijay Rauniyar (4+ years). Near Shivaji Park."
-        serviceUrl="https://www.r3boot.in/sports-injury-physiotherapy-dadar-mumbai"
+        serviceUrl="https://www.r3boot.in/services/physiotherapy/sports-injuries"
       />
       <FAQSchema faqs={sportsInjuryPhysiotherapyFaqs} />
       <BreadcrumbSchema items={[
         { name: 'Home', url: '/' },
-        { name: 'Physiotherapy Dadar Mumbai', url: '/physiotherapy-dadar-mumbai' },
-        { name: 'Sports Injury Physiotherapy Dadar Mumbai', url: '/sports-injury-physiotherapy-dadar-mumbai' },
+        { name: 'Physiotherapy', url: '/services/physiotherapy' },
+        { name: 'Sports Injuries', url: '/services/physiotherapy/sports-injuries' },
       ]} />
     </main>
   )

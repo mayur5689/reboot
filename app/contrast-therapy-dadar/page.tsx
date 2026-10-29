@@ -112,7 +112,7 @@ export default function ContrastTherapyDadarPage() {
           />
           <div className="relative z-10 flex flex-1 flex-col justify-center px-12 lg:px-16 xl:px-20 max-w-[58%]">
           <Link
-            href="/contrast-therapy-mumbai"
+            href="/services/contrast-therapy"
             className="inline-flex items-center gap-2 text-white/60 hover:text-white transition-all mb-6 group w-fit"
           >
             <div className="w-7 h-7 rounded-full border border-white/30 flex items-center justify-center group-hover:bg-white group-hover:text-[#513394] transition-all">
@@ -161,10 +161,10 @@ export default function ContrastTherapyDadarPage() {
             <div className="w-1.5 h-1.5 rounded-full bg-[#513394] dark:bg-[#A78BFA]" />
             <span className="text-[#513394] dark:text-[#A78BFA] text-[11px] font-black tracking-[0.3em] uppercase">Dadar East</span>
           </div>
-          <h1 className="text-[2rem] font-black text-gray-900 dark:text-white tracking-tight leading-[1.1] mb-3">
+          <h2 className="text-[2rem] font-black text-gray-900 dark:text-white tracking-tight leading-[1.1] mb-3">
             Contrast Therapy in{' '}
             <span className="text-[#513394] dark:text-[#A78BFA]">Dadar</span>
-          </h1>
+          </h2>
           <p className="text-base text-gray-500 dark:text-gray-400 leading-relaxed mb-6">
             R3BOOT sits on Swami Gyan Jivandas Marg, minutes from Dadar station. Infrared sauna, supervised ice bath, physio-led recovery on your doorstep.
           </p>
@@ -299,38 +299,15 @@ export default function ContrastTherapyDadarPage() {
         </div>
       </section>
 
-      {/* ─── STICKY MOBILE CTA ─── */}
-      <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden">
-        <div className="bg-[#0A0A0A]/95 backdrop-blur-md border-t border-white/[0.09] px-4 pt-3 pb-5">
-          <div className="flex gap-3">
-            <a
-              href="tel:+919702368612"
-              className="flex-1 flex items-center justify-center gap-2 bg-[#513394] hover:bg-[#603eb0] text-white font-black rounded-xl py-3.5 text-[14px] tracking-wide transition-colors"
-            >
-              <PhoneIcon className="w-4 h-4" />
-              Call
-            </a>
-            <a
-              href="https://wa.me/919702368612"
-              target="_blank"
-              rel="nofollow noopener noreferrer"
-              className="flex-1 flex items-center justify-center gap-2 border border-white/20 text-white font-bold rounded-xl py-3.5 text-[14px] tracking-wide hover:bg-white/[0.07] transition-colors"
-            >
-              WhatsApp
-            </a>
-          </div>
-        </div>
-      </div>
-
       <ServiceSchema
         serviceName="Contrast Therapy Dadar Mumbai"
-        description="Physio-supervised contrast therapy in Dadar East, infrared sauna (68°C) and ice bath (6–10°C) at R3BOOT, Palai Plaza."
+        description="Physio-supervised contrast therapy in Dadar East, infrared sauna (70°C) and ice bath (6–8°C) at R3BOOT, Palai Plaza."
         serviceUrl="https://www.r3boot.in/contrast-therapy-dadar"
       />
       <FAQSchema faqs={contrastTherapyDadarFaqs} />
       <BreadcrumbSchema items={[
         { name: 'Home', url: '/' },
-        { name: 'Contrast Therapy Mumbai', url: '/contrast-therapy-mumbai' },
+        { name: 'Contrast Therapy Mumbai', url: '/services/contrast-therapy' },
         { name: 'Dadar', url: '/contrast-therapy-dadar' },
       ]} />
     </main>

@@ -9,10 +9,10 @@ type BlogPost = {
   _id: string
   title: string
   slug: string
-  mainImage?: any
-  excerpt?: string
-  publishedAt?: string
-  author?: string
+  mainImage?: { asset?: { _ref?: string } } | null
+  excerpt?: string | null
+  publishedAt?: string | null
+  author?: string | null
 }
 
 function formatDate(dateStr?: string) {
@@ -26,7 +26,7 @@ export function BlogSection() {
 
   useEffect(() => {
     getAllPosts()
-      .then((all: BlogPost[]) => setPosts((all || []).slice(0, 3)))
+      .then((all) => setPosts((all || []).slice(0, 3)))
       .catch(() => setPosts([]))
       .finally(() => setLoading(false))
   }, [])
@@ -87,7 +87,7 @@ export function BlogSection() {
                 <div className="p-5 lg:p-6">
                   {(post.publishedAt || post.author) && (
                     <p className="text-white/35 text-[12px] font-bold mb-2.5">
-                      {formatDate(post.publishedAt)}{post.author ? ` · ${post.author}` : ''}
+                      {formatDate(post.publishedAt ?? undefined)}{post.author ? ` · ${post.author}` : ''}
                     </p>
                   )}
                   <h3 className="text-white font-black text-[17px] leading-snug mb-3 group-hover:text-[#A78BFA] transition-colors">

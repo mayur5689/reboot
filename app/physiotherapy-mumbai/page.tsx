@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title: 'Physiotherapy Mumbai | Clinical Physiotherapist | R3BOOT Dadar',
   description:
     'Clinical physiotherapy in Mumbai at R3BOOT Dadar East. Back pain, knee pain, neck pain, sports injuries & post-surgery rehab. Dr. Hiral Parikh, 15+ yrs. 5.0 ★ Google. WhatsApp to book.',
-  alternates: { canonical: '/physiotherapy-mumbai' },
+  alternates: { canonical: '/services/physiotherapy' },
   keywords: [
     'physiotherapy mumbai',
     'physiotherapist mumbai',
@@ -30,31 +30,37 @@ const conditionPages = [
   {
     title: 'Back Pain',
     desc: 'Disc herniation, sciatica, facet joint pain, postural and desk-related back pain, spondylosis, and lumbar muscle strain.',
-    href: '/physiotherapy-for-back-pain-mumbai',
+    href: '/services/physiotherapy/back-pain',
     label: 'Back Pain Physiotherapy →',
   },
   {
     title: 'Knee Pain',
     desc: 'Runner\'s knee, osteoarthritis, meniscus tears, patellar tendinopathy, ITB syndrome, and post-ACL rehabilitation.',
-    href: '/physiotherapy-for-knee-pain-mumbai',
+    href: '/services/physiotherapy/knee-pain',
     label: 'Knee Pain Physiotherapy →',
   },
   {
     title: 'Neck Pain',
     desc: 'Cervical disc herniation, radiculopathy, spondylosis, postural neck pain, cervicogenic headaches, and whiplash.',
-    href: '/physiotherapy-for-neck-pain-mumbai',
+    href: '/services/physiotherapy/neck-pain',
     label: 'Neck Pain Physiotherapy →',
+  },
+  {
+    title: 'Shoulder Pain',
+    desc: 'Frozen shoulder, rotator cuff overload, impingement, AC joint pain, desk posture, and gym or overhead sport load.',
+    href: '/services/physiotherapy/shoulder-pain',
+    label: 'Shoulder Pain Physiotherapy →',
   },
   {
     title: 'Sports Injuries',
     desc: 'ACL tears, hamstring injuries, rotator cuff, ankle sprains, shin splints, ITB syndrome, and return-to-sport programmes.',
-    href: '/sports-injury-physiotherapy-dadar-mumbai',
+    href: '/services/physiotherapy/sports-injuries',
     label: 'Sports Injury Physiotherapy →',
   },
   {
     title: 'Post-Surgery Rehab',
     desc: 'ACL reconstruction, knee and hip replacement, spinal surgery, shoulder surgery, and Caesarean recovery.',
-    href: '/post-surgery-physiotherapy-mumbai',
+    href: '/services/physiotherapy/post-surgery',
     label: 'Post-Surgery Physiotherapy →',
   },
   {
@@ -452,27 +458,32 @@ export default function PhysiotherapyMumbaiPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {[
                 {
                   title: 'Sports Massage',
                   desc: 'Deep tissue, trigger point, cupping, and myofascial release | often combined with physio on the same visit.',
-                  href: '/sports-massage-mumbai',
+                  href: '/services/sports-massage',
                 },
                 {
                   title: 'Contrast Therapy',
                   desc: 'Ice bath and infrared sauna in a structured recovery protocol | reduces inflammation and accelerates tissue repair.',
-                  href: '/contrast-therapy-mumbai',
+                  href: '/services/contrast-therapy',
                 },
                 {
                   title: 'Clinical Pilates',
                   desc: 'Supervised reformer Pilates built around your specific injury or condition, not a generic fitness class.',
-                  href: '/clinical-pilates-mumbai',
+                  href: '/services/clinical-pilates',
                 },
                 {
                   title: 'Physiotherapy Dadar',
-                  desc: 'Full condition-specific physiotherapy at R3BOOT Dadar East | the most central physiotherapy location in Mumbai.',
+                  desc: 'Flagship clinic at Palai Plaza with aqua therapy on-site | central for Dadar, Matunga, Sion, and Shivaji Park.',
                   href: '/physiotherapy-dadar-mumbai',
+                },
+                {
+                  title: 'Physiotherapy Lower Parel',
+                  desc: 'Lodha Signet studio for Lower Parel, Prabhadevi, Worli, Kamala Mills, and BKC | physio from 7:15 am.',
+                  href: '/physiotherapy-lower-parel',
                 },
               ].map((item, idx) => (
                 <Link
@@ -520,15 +531,42 @@ export default function PhysiotherapyMumbaiPage() {
               </p>
 
               <div className="flex flex-wrap gap-3 mb-8">
-                {['Dadar', 'Shivaji Park', 'Lower Parel', 'Worli', 'BKC', 'Bandra', 'Sion', 'Matunga', 'Parel', 'Wadala'].map((area, idx) => (
-                  <span
-                    key={idx}
-                    className="bg-[#513394]/10 dark:bg-[#8B5CF6]/20 text-[#513394] dark:text-[#A78BFA] font-bold px-4 py-2 rounded-full text-sm"
-                  >
-                    {area}
-                  </span>
-                ))}
+                {[
+                  { label: 'Dadar', href: '/physiotherapy-dadar-mumbai' },
+                  { label: 'Lower Parel', href: '/physiotherapy-lower-parel' },
+                  { label: 'Shivaji Park' },
+                  { label: 'Worli' },
+                  { label: 'BKC' },
+                  { label: 'Bandra' },
+                  { label: 'Sion' },
+                  { label: 'Matunga' },
+                  { label: 'Parel' },
+                  { label: 'Wadala' },
+                ].map((area, idx) =>
+                  area.href ? (
+                    <Link
+                      key={idx}
+                      href={area.href}
+                      className="bg-[#513394]/10 dark:bg-[#8B5CF6]/20 text-[#513394] dark:text-[#A78BFA] font-bold px-4 py-2 rounded-full text-sm hover:bg-[#513394] hover:text-white transition-all"
+                    >
+                      {area.label}
+                    </Link>
+                  ) : (
+                    <span
+                      key={idx}
+                      className="bg-[#513394]/10 dark:bg-[#8B5CF6]/20 text-[#513394] dark:text-[#A78BFA] font-bold px-4 py-2 rounded-full text-sm"
+                    >
+                      {area.label}
+                    </span>
+                  )
+                )}
               </div>
+              <p className="text-sm text-gray-500 dark:text-gray-400 mb-8">
+                Prefer Lodha Signet / Prabhadevi?{' '}
+                <Link href="/physiotherapy-lower-parel" className="font-bold text-[#513394] dark:text-[#A78BFA] hover:underline">
+                  Physiotherapy Lower Parel →
+                </Link>
+              </p>
 
               <div className="space-y-3 text-sm text-gray-600 dark:text-gray-400">
                 <div className="flex items-start gap-3">
@@ -585,13 +623,17 @@ export default function PhysiotherapyMumbaiPage() {
           <div className="flex flex-wrap gap-3 sm:gap-4">
             {[
               { label: 'Physiotherapy Dadar Mumbai', href: '/physiotherapy-dadar-mumbai' },
-              { label: 'Physiotherapy for Back Pain', href: '/physiotherapy-for-back-pain-mumbai' },
-              { label: 'Physiotherapy for Knee Pain', href: '/physiotherapy-for-knee-pain-mumbai' },
-              { label: 'Physiotherapy for Neck Pain', href: '/physiotherapy-for-neck-pain-mumbai' },
-              { label: 'Sports Injury Physiotherapy', href: '/sports-injury-physiotherapy-dadar-mumbai' },
-              { label: 'Post-Surgery Physiotherapy', href: '/post-surgery-physiotherapy-mumbai' },
-              { label: 'Sports Massage Mumbai', href: '/sports-massage-mumbai' },
-              { label: 'Contrast Therapy Mumbai', href: '/contrast-therapy-mumbai' },
+              { label: 'Physiotherapy Lower Parel', href: '/physiotherapy-lower-parel' },
+              { label: 'Physiotherapy for Back Pain', href: '/services/physiotherapy/back-pain' },
+              { label: 'Physiotherapy for Knee Pain', href: '/services/physiotherapy/knee-pain' },
+              { label: 'Physiotherapy for Neck Pain', href: '/services/physiotherapy/neck-pain' },
+              { label: 'Physiotherapy for Shoulder Pain', href: '/services/physiotherapy/shoulder-pain' },
+              { label: 'Sports Injury Physiotherapy', href: '/services/physiotherapy/sports-injuries' },
+              { label: 'Athlete Screening Mumbai', href: '/services/athlete-screening' },
+              { label: 'Aqua Therapy for Knee Pain', href: '/aqua-therapy-for-knee-pain-mumbai' },
+              { label: 'Post-Surgery Physiotherapy', href: '/services/physiotherapy/post-surgery' },
+              { label: 'Sports Massage Mumbai', href: '/services/sports-massage' },
+              { label: 'Contrast Therapy Mumbai', href: '/services/contrast-therapy' },
             ].map((link) => (
               <Link
                 key={link.href}
@@ -648,12 +690,12 @@ export default function PhysiotherapyMumbaiPage() {
       <ServiceSchema
         serviceName="Physiotherapy in Mumbai"
         description="Clinical physiotherapy in Mumbai at R3BOOT, Dadar East. Back pain, knee pain, neck pain, sports injuries, and post-surgery rehabilitation. Dr. Hiral Parikh (BPT, 15+ years) and Dr. Vaishali Vijay Rauniyar (4+ years). Dry needling and aquatic rehabilitation available."
-        serviceUrl="https://www.r3boot.in/physiotherapy-mumbai"
+        serviceUrl="https://www.r3boot.in/services/physiotherapy"
       />
       <FAQSchema faqs={physiotherapyMumbaiFaqs} />
       <BreadcrumbSchema items={[
         { name: 'Home', url: '/' },
-        { name: 'Physiotherapy Mumbai', url: '/physiotherapy-mumbai' },
+        { name: 'Physiotherapy Mumbai', url: '/services/physiotherapy' },
       ]} />
     </main>
   )

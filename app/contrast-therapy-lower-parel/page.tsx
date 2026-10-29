@@ -35,7 +35,7 @@ export default function ContrastTherapyLowerParelPage() {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
         <div className="container mx-auto px-6 lg:px-8 relative z-10 pb-20">
-          <Link href="/contrast-therapy-mumbai" className="inline-flex items-center gap-2 text-white/70 hover:text-white transition-all mb-8 group">
+          <Link href="/services/contrast-therapy" className="inline-flex items-center gap-2 text-white/70 hover:text-white transition-all mb-8 group">
             <div className="w-8 h-8 rounded-full border border-white/30 flex items-center justify-center group-hover:bg-white group-hover:text-[#513394] transition-all">
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -68,8 +68,8 @@ export default function ContrastTherapyLowerParelPage() {
               <div className="prose prose-xl text-gray-600 dark:text-gray-400 dark:prose-invert max-w-none leading-relaxed space-y-6">
                 <p>
                   Premium gyms in the Kamala Mills and Phoenix Mills corridor often add cold plunge tanks with no health screening and no
-                  supervision. R3BOOT is 10–15 minutes away in Dadar East. Contrast therapy here means infrared sauna (68°C) paired with
-                  physio-supervised ice bath (6–10°C), not a solo dip after leg day.
+                  supervision. R3BOOT is 10–15 minutes away in Dadar East. Contrast therapy here means infrared sauna (70°C) paired with
+                  physio-supervised ice bath (6–8°C) in a Day or Night Cycle, not a solo dip after leg day.
                 </p>
                 <p>
                   BKC desk workers, Worli runners, and Parel weekend athletes use R3BOOT to recover faster. Combine with{' '}
@@ -123,7 +123,7 @@ export default function ContrastTherapyLowerParelPage() {
       <FAQSchema faqs={contrastTherapyLowerParelFaqs} />
       <BreadcrumbSchema items={[
         { name: 'Home', url: '/' },
-        { name: 'Contrast Therapy Mumbai', url: '/contrast-therapy-mumbai' },
+        { name: 'Contrast Therapy Mumbai', url: '/services/contrast-therapy' },
         { name: 'Lower Parel', url: '/contrast-therapy-lower-parel' },
       ]} />
     </main>

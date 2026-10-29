@@ -1,5 +1,10 @@
 export const aquaTherapyFaqs = [
   {
+    question: 'Where can I find a water treadmill near me in Mumbai?',
+    answer:
+      'R3BOOT in Dadar East has a private underwater treadmill chamber, not a shared pool. You walk with a physiotherapist beside you. Water depth, speed, and jets are set to your knee, back, or post-surgery stage. Palai Plaza, about 5 minutes from Dadar station. WhatsApp +91 97023 68612 to book an assessment.',
+  },
+  {
     question: 'What are the best aqua therapy centres in Mumbai for clinical rehab?',
     answer:
       'Look for physiotherapist-led aquatic rehab with adjustable water depth, private access, and a clear screening process, not only aqua fitness classes. R3BOOT in Dadar East offers aqua treadmill therapy in a private chamber for post-surgery rehab, sports injuries, arthritis, and back pain. Sessions are one-to-one and supervised by physiotherapists.',
@@ -12,7 +17,7 @@ export const aquaTherapyFaqs = [
   {
     question: 'How much does an aqua therapy session cost in Mumbai at R3BOOT?',
     answer:
-      'Fees depend on your assessment and rehab plan. For current aqua therapy session pricing at R3BOOT Dadar, call or WhatsApp +91 97023 68612. After your first assessment, you get a clear session estimate based on your condition, not a generic package push.',
+      'A 45-minute aqua therapy session at R3BOOT is ₹2,000. Call or WhatsApp +91 97023 68612 to book.',
   },
   {
     question: 'How do I book an aqua therapy session at R3BOOT Dadar?',

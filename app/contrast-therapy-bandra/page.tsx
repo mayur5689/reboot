@@ -35,7 +35,7 @@ export default function ContrastTherapyBandraPage() {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
         <div className="container mx-auto px-6 lg:px-8 relative z-10 pb-20">
-          <Link href="/contrast-therapy-mumbai" className="inline-flex items-center gap-2 text-white/70 hover:text-white transition-all mb-8 group">
+          <Link href="/services/contrast-therapy" className="inline-flex items-center gap-2 text-white/70 hover:text-white transition-all mb-8 group">
             <div className="w-8 h-8 rounded-full border border-white/30 flex items-center justify-center group-hover:bg-white group-hover:text-[#513394] transition-all">
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -84,7 +84,7 @@ export default function ContrastTherapyBandraPage() {
                 {[
                   { title: 'Clinical assessment first', body: 'Health intake confirms contrast therapy is safe for you.' },
                   { title: 'Breathing coaching', body: 'Controlled technique taught before cold immersion.' },
-                  { title: 'Full contrast protocol', body: 'Infrared sauna (68°C) + ice bath (6–10°C). Day or Night Cycle based on your schedule.' },
+                  { title: 'Full contrast protocol', body: 'Infrared sauna (70°C) + ice bath (6–8°C). Day or Night Cycle based on your schedule.' },
                   { title: 'Integrated recovery', body: 'Massage, physio, pilates available same visit.' },
                 ].map((item, idx) => (
                   <div key={idx} className="bg-white dark:bg-white/5 p-8 rounded-[2.5rem] border border-gray-100 dark:border-white/5 shadow-sm">
@@ -127,7 +127,7 @@ export default function ContrastTherapyBandraPage() {
       <FAQSchema faqs={contrastTherapyBandraFaqs} />
       <BreadcrumbSchema items={[
         { name: 'Home', url: '/' },
-        { name: 'Contrast Therapy Mumbai', url: '/contrast-therapy-mumbai' },
+        { name: 'Contrast Therapy Mumbai', url: '/services/contrast-therapy' },
         { name: 'Bandra', url: '/contrast-therapy-bandra' },
       ]} />
     </main>

@@ -4,11 +4,6 @@ const nextConfig = {
     async redirects() {
         return [
             {
-                source: '/services/contrast-therapy',
-                destination: '/contrast-therapy-mumbai',
-                permanent: true,
-            },
-            {
                 source: '/services/hydrotherapy',
                 destination: '/services/aqua-therapy',
                 permanent: true,
@@ -30,17 +25,98 @@ const nextConfig = {
             },
             {
                 source: '/services-demo/aqua-therapy',
-                destination: '/aqua-therapy-mumbai',
+                destination: '/services/aqua-therapy',
                 permanent: true,
             },
             {
                 source: '/services/aqua-therapy-mumbai',
-                destination: '/aqua-therapy-mumbai',
+                destination: '/services/aqua-therapy',
                 permanent: true,
             },
             {
                 source: '/corporate-wellness',
                 destination: '/employee-wellness',
+                permanent: true,
+            },
+            // City-wide service hubs live at /services/{slug}. Duplicate landings 301 here.
+            {
+                source: '/sports-massage-mumbai',
+                destination: '/services/sports-massage',
+                permanent: true,
+            },
+            {
+                source: '/physiotherapy-mumbai',
+                destination: '/services/physiotherapy',
+                permanent: true,
+            },
+            {
+                source: '/clinical-pilates-mumbai',
+                destination: '/services/clinical-pilates',
+                permanent: true,
+            },
+            {
+                source: '/pilates-mumbai',
+                destination: '/services/clinical-pilates',
+                permanent: true,
+            },
+            {
+                source: '/reformer-pilates-mumbai',
+                destination: '/services/clinical-pilates',
+                permanent: true,
+            },
+            {
+                source: '/aqua-therapy-mumbai',
+                destination: '/services/aqua-therapy',
+                permanent: true,
+            },
+            {
+                source: '/athlete-screening-mumbai',
+                destination: '/services/athlete-screening',
+                permanent: true,
+            },
+            {
+                source: '/contrast-therapy-mumbai',
+                destination: '/services/contrast-therapy',
+                permanent: true,
+            },
+            {
+                source: '/physiotherapy-for-back-pain-mumbai',
+                destination: '/services/physiotherapy/back-pain',
+                permanent: true,
+            },
+            {
+                source: '/physiotherapy-for-knee-pain-mumbai',
+                destination: '/services/physiotherapy/knee-pain',
+                permanent: true,
+            },
+            {
+                source: '/physiotherapy-for-neck-pain-mumbai',
+                destination: '/services/physiotherapy/neck-pain',
+                permanent: true,
+            },
+            {
+                source: '/physiotherapy-for-shoulder-pain-mumbai',
+                destination: '/services/physiotherapy/shoulder-pain',
+                permanent: true,
+            },
+            {
+                source: '/sports-injury-physiotherapy-dadar-mumbai',
+                destination: '/services/physiotherapy/sports-injuries',
+                permanent: true,
+            },
+            {
+                source: '/post-surgery-physiotherapy-mumbai',
+                destination: '/services/physiotherapy/post-surgery',
+                permanent: true,
+            },
+            {
+                source: '/team',
+                destination: '/about',
+                permanent: true,
+            },
+            {
+                source: '/team/',
+                destination: '/about',
                 permanent: true,
             },
         ]

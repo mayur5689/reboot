@@ -127,7 +127,7 @@ export default function HomeCopyNavbar() {
             <a
               href={`https://wa.me/919702368612?text=${encodeURIComponent('Hi R3BOOT, I want to book a session.')}`}
               target="_blank"
-              rel="noopener noreferrer"
+              rel="nofollow noopener noreferrer"
             >
               <button
                 className="flex items-center gap-1 sm:gap-2 whitespace-nowrap text-white font-semibold px-3.5 py-2 text-[12px] sm:px-7 sm:py-3.5 sm:text-[17px] rounded-full transition-all hover:opacity-90"

@@ -248,10 +248,10 @@ export default function L4L5DiscBulgeMumbaiPage() {
             <div className="w-1.5 h-1.5 rounded-full bg-[#513394] dark:bg-[#A78BFA]" />
             <span className="text-[#513394] dark:text-[#A78BFA] text-[11px] font-black tracking-[0.3em] uppercase">Disc Bulge Recovery</span>
           </div>
-          <h1 className="text-[2rem] font-black text-gray-900 dark:text-white tracking-tight leading-[1.1] mb-3">
+          <h2 className="text-[2rem] font-black text-gray-900 dark:text-white tracking-tight leading-[1.1] mb-3">
             L4–L5 Disc Bulge Recovery in{' '}
             <span className="text-[#513394] dark:text-[#A78BFA]">Mumbai</span>
-          </h1>
+          </h2>
           <p className="text-base text-gray-500 dark:text-gray-400 leading-relaxed mb-6">
             Back pain, leg pain, or sciatica from a disc bulge at L4–L5? Physiotherapy-led rehab at R3BOOT Dadar. Most people improve without surgery.
           </p>
@@ -524,21 +524,6 @@ export default function L4L5DiscBulgeMumbaiPage() {
         </div>
       </section>
 
-      {/* STICKY MOBILE CTA */}
-      <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden">
-        <div className="bg-[#0A0A0A]/95 backdrop-blur-md border-t border-white/[0.09] px-4 pt-3 pb-5">
-          <div className="flex gap-3">
-            <a href="tel:+919702368612" className="flex-1 flex items-center justify-center gap-2 bg-[#513394] text-white font-black rounded-xl py-3.5 text-[14px]">
-              <PhoneIcon className="w-4 h-4" />
-              Call
-            </a>
-            <a href="https://wa.me/919702368612" target="_blank" rel="nofollow noopener noreferrer" className="flex-1 flex items-center justify-center gap-2 border border-white/20 text-white font-bold rounded-xl py-3.5 text-[14px]">
-              WhatsApp
-            </a>
-          </div>
-        </div>
-      </div>
-
       <ServiceSchema
         serviceName="L4 L5 Disc Bulge Rehabilitation in Mumbai"
         description="Non-surgical physiotherapy-led rehabilitation for L4–L5 disc bulge, sciatica, and lower back pain at R3BOOT Dadar, Mumbai. Assessment, manual therapy, aqua therapy, and clinical Pilates under one team."
@@ -548,8 +533,9 @@ export default function L4L5DiscBulgeMumbaiPage() {
       <BreadcrumbSchema
         items={[
           { name: 'Home', url: '/' },
-          { name: 'Physiotherapy for Back Pain Mumbai', url: '/physiotherapy-for-back-pain-mumbai' },
-          { name: 'L4 L5 Disc Bulge Mumbai', url: '/l4-l5-disc-bulge-mumbai' },
+          { name: 'Physiotherapy', url: '/services/physiotherapy' },
+          { name: 'Back Pain', url: '/services/physiotherapy/back-pain' },
+          { name: 'L4 L5 Disc Bulge', url: '/l4-l5-disc-bulge-mumbai' },
         ]}
       />
     </main>

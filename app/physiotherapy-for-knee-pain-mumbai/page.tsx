@@ -8,10 +8,10 @@ import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema'
 import { kneePainPhysiotherapyFaqs } from '@/lib/faqs/physiotherapy-knee-pain-mumbai'
 
 export const metadata: Metadata = {
-  title: 'Physiotherapy for Knee Pain Mumbai | Clinical Knee Rehab | R3BOOT',
+  title: 'Knee Pain Physiotherapy in Mumbai | R3BOOT',
   description:
     'Clinical physiotherapy for knee pain in Mumbai at R3BOOT Dadar. Runner\'s knee, osteoarthritis, meniscus, ACL rehab & post-surgery recovery. 5.0 ★ Google. WhatsApp to book.',
-  alternates: { canonical: '/physiotherapy-for-knee-pain-mumbai' },
+  alternates: { canonical: '/services/physiotherapy/knee-pain' },
   keywords: [
     'physiotherapy for knee pain mumbai',
     'knee pain physiotherapy mumbai',
@@ -118,7 +118,7 @@ export default function PhysiotherapyKneePainMumbaiPage() {
               Physiotherapy for Knee Pain in Mumbai
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl text-white/80 max-w-3xl leading-relaxed font-medium mt-4">
-              Clinical assessment, manual therapy, and progressive rehabilitation for knee pain, at R3BOOT, Dadar East.
+              Physiotherapy for knee pain at R3BOOT, with treatments and appointments at Dadar and Lower Parel.
             </p>
           </div>
         </div>
@@ -498,12 +498,12 @@ export default function PhysiotherapyKneePainMumbaiPage() {
                 {
                   title: 'Contrast Therapy',
                   desc: 'Ice bath and infrared sauna protocol reduces knee joint inflammation and accelerates recovery after intensive physiotherapy sessions. Especially useful post-surgery and during acute flare-ups.',
-                  href: '/contrast-therapy-mumbai',
+                  href: '/services/contrast-therapy',
                 },
                 {
                   title: 'Sports Injury Physiotherapy',
                   desc: 'ACL reconstruction, meniscus tears, and ligament injuries require sport-specific return-to-play rehabilitation, not just pain management. See our dedicated sports injury programme.',
-                  href: '/sports-injury-physiotherapy-dadar-mumbai',
+                  href: '/services/physiotherapy/sports-injuries',
                 },
               ].map((item, idx) => (
                 <Link
@@ -540,12 +540,12 @@ export default function PhysiotherapyKneePainMumbaiPage() {
           <div className="flex flex-wrap gap-3 sm:gap-4">
             {[
               { label: 'Physiotherapy Dadar Mumbai', href: '/physiotherapy-dadar-mumbai' },
-              { label: 'Physiotherapy for Back Pain', href: '/physiotherapy-for-back-pain-mumbai' },
-              { label: 'Sports Injury Physiotherapy Dadar', href: '/sports-injury-physiotherapy-dadar-mumbai' },
+              { label: 'Physiotherapy for Back Pain', href: '/services/physiotherapy/back-pain' },
+              { label: 'Sports Injury Physiotherapy Dadar', href: '/services/physiotherapy/sports-injuries' },
               { label: 'Knee Pain Sports Massage', href: '/knee-pain-sports-massage-mumbai' },
               { label: 'Aqua Therapy for Knee Pain', href: '/aqua-therapy-for-knee-pain-mumbai' },
-              { label: 'Contrast Therapy Mumbai', href: '/contrast-therapy-mumbai' },
-              { label: 'Clinical Pilates Mumbai', href: '/clinical-pilates-mumbai' },
+              { label: 'Contrast Therapy Mumbai', href: '/services/contrast-therapy' },
+              { label: 'Clinical Pilates Mumbai', href: '/services/clinical-pilates' },
             ].map((link) => (
               <Link
                 key={link.href}
@@ -602,13 +602,13 @@ export default function PhysiotherapyKneePainMumbaiPage() {
       <ServiceSchema
         serviceName="Physiotherapy for Knee Pain in Mumbai"
         description="Clinical physiotherapy for knee pain in Mumbai at R3BOOT, Dadar East. Runner's knee, osteoarthritis, meniscus tears, ACL rehabilitation, patellar tendinopathy, and post-surgery knee recovery. Led by Dr. Hiral Parikh (BPT, 15+ years) and Dr. Vaishali Vijay Rauniyar (4+ years)."
-        serviceUrl="https://www.r3boot.in/physiotherapy-for-knee-pain-mumbai"
+        serviceUrl="https://www.r3boot.in/services/physiotherapy/knee-pain"
       />
       <FAQSchema faqs={kneePainPhysiotherapyFaqs} />
       <BreadcrumbSchema items={[
         { name: 'Home', url: '/' },
-        { name: 'Physiotherapy Dadar Mumbai', url: '/physiotherapy-dadar-mumbai' },
-        { name: 'Physiotherapy for Knee Pain Mumbai', url: '/physiotherapy-for-knee-pain-mumbai' },
+        { name: 'Physiotherapy', url: '/services/physiotherapy' },
+        { name: 'Knee Pain', url: '/services/physiotherapy/knee-pain' },
       ]} />
     </main>
   )

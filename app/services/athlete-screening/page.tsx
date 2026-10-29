@@ -18,7 +18,7 @@ import { ComparisonSection } from './ComparisonSection'
 import { ClipboardList, Activity, Target, ClipboardCheck, Footprints, Zap, Stethoscope } from 'lucide-react'
 
 export const metadata: Metadata = {
-    title: 'Athlete Screening in Mumbai | R3BOOT Dadar – Full Body & Performance Assessment',
+    title: 'Athlete Screening in Mumbai | Full Body Assessment | R3BOOT',
     description: 'A structured, evidence-based athlete screening at R3BOOT: injury history, MSK exam, gait analysis, and a personalised Recovery & Performance Plan. Dadar, Mumbai.',
     keywords: ['athlete screening mumbai', 'gait analysis mumbai', 'sports assessment dadar', 'injury risk screening', 'performance assessment mumbai', 'movement screening near me'],
     alternates: { canonical: '/services/athlete-screening' },
@@ -187,10 +187,10 @@ export default function AthleteScreeningPage() {
                         <span className="text-[#513394] dark:text-[#A78BFA] text-[11px] font-black tracking-[0.3em] uppercase">Performance // Prevention</span>
                     </div>
 
-                    <h1 className="text-[2rem] font-black text-gray-900 dark:text-white tracking-tight leading-[1.1] mb-3">
+                    <h2 className="text-[2rem] font-black text-gray-900 dark:text-white tracking-tight leading-[1.1] mb-3">
                         Athlete Screening in{' '}
                         <span className="text-[#513394] dark:text-[#A78BFA]">Mumbai</span>
-                    </h1>
+                    </h2>
 
                     <p className="text-base text-gray-500 dark:text-gray-400 leading-relaxed mb-6">
                         A full-body MSK exam, gait analysis, and sport-specific special tests - supervised by physiotherapists at R3BOOT Dadar.
@@ -687,51 +687,9 @@ export default function AthleteScreeningPage() {
                 </div>
             </section>
 
-            {/* ─── LOCAL GUIDE ─── */}
-            <section className="py-16 bg-white dark:bg-[#0A0A0A]">
-                <div className="container mx-auto px-6 lg:px-8 max-w-4xl">
-                    <Link
-                        href="/athlete-screening-mumbai"
-                        className="group flex items-center justify-between p-6 bg-gray-50 dark:bg-white/5 rounded-[2rem] border border-gray-100 dark:border-white/10 hover:border-[#513394]/40 transition-all"
-                    >
-                        <div>
-                            <p className="text-xs font-black tracking-widest text-[#513394] uppercase mb-1">Mumbai Guide</p>
-                            <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-[#513394] transition-colors">
-                                Athlete Screening in Mumbai - What to Expect & How to Book
-                            </h3>
-                            <span className="text-sm text-gray-500 dark:text-gray-400 mt-1 inline-block">Full local guide →</span>
-                        </div>
-                        <svg className="w-6 h-6 text-[#513394] opacity-0 group-hover:opacity-100 transition-opacity shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                            <path d="M9 18l6-6-6-6" />
-                        </svg>
-                    </Link>
-                </div>
-            </section>
-
             {/* ─────────────────────────────────────────────
                 STICKY MOBILE CTA
             ───────────────────────────────────────────── */}
-            <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden">
-                <div className="bg-white/95 dark:bg-[#0A0A0A]/95 backdrop-blur-md border-t border-gray-200 dark:border-white/[0.09] px-4 pt-3 pb-5">
-                    <div className="flex gap-3">
-                        <a
-                            href="tel:+919702368612"
-                            className="flex-1 flex items-center justify-center gap-2 bg-[#513394] hover:bg-[#603eb0] text-white font-black rounded-xl py-3.5 text-[14px] tracking-wide transition-colors"
-                        >
-                            <PhoneIcon className="w-4 h-4" />
-                            Call
-                        </a>
-                        <a
-                            href="https://wa.me/919702368612"
-                            target="_blank"
-                            rel="nofollow noopener noreferrer"
-                            className="flex-1 flex items-center justify-center gap-2 border border-gray-300 dark:border-white/20 text-gray-900 dark:text-white font-bold rounded-xl py-3.5 text-[14px] tracking-wide hover:bg-gray-100 dark:hover:bg-white/[0.07] transition-colors"
-                        >
-                            WhatsApp
-                        </a>
-                    </div>
-                </div>
-            </div>
 
             <ServiceSchema
                 serviceName="Athlete Screening"

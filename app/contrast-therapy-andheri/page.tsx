@@ -35,7 +35,7 @@ export default function ContrastTherapyAndheriPage() {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
         <div className="container mx-auto px-6 lg:px-8 relative z-10 pb-20">
-          <Link href="/contrast-therapy-mumbai" className="inline-flex items-center gap-2 text-white/70 hover:text-white transition-all mb-8 group">
+          <Link href="/services/contrast-therapy" className="inline-flex items-center gap-2 text-white/70 hover:text-white transition-all mb-8 group">
             <div className="w-8 h-8 rounded-full border border-white/30 flex items-center justify-center group-hover:bg-white group-hover:text-[#513394] transition-all">
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -68,13 +68,13 @@ export default function ContrastTherapyAndheriPage() {
               <div className="prose prose-xl text-gray-600 dark:text-gray-400 dark:prose-invert max-w-none leading-relaxed space-y-6">
                 <p>
                   Ice bath options in Andheri and Lokhandwala often mean gym add-ons or standalone wellness sessions with no clinical
-                  screening. R3BOOT in Dadar East runs contrast therapy as a structured protocol: infrared sauna (68°C), then supervised cold
-                  immersion (6–10°C), with a physiotherapist present from intake through exit.
+                  screening. R3BOOT in Dadar East runs contrast therapy as a structured Day or Night Cycle: infrared sauna (70°C) and supervised ice bath
+                  (6–8°C), with a physiotherapist present from intake through exit.
                 </p>
                 <p>
                   Andheri gym members, weekend football players, and runners who want recovery that fits a training plan, not just a
                   social cold dip, make the trip to Dadar. Stack with{' '}
-                  <Link href="/sports-massage-mumbai" className="text-[#513394] dark:text-[#A78BFA] font-bold hover:underline">
+                  <Link href="/services/sports-massage" className="text-[#513394] dark:text-[#A78BFA] font-bold hover:underline">
                     sports massage
                   </Link>{' '}
                   or{' '}
@@ -123,13 +123,13 @@ export default function ContrastTherapyAndheriPage() {
 
       <ServiceSchema
         serviceName="Contrast Therapy near Andheri Mumbai"
-        description="Physio-supervised contrast therapy near Andheri at R3BOOT Dadar East. Infrared sauna (68°C) and ice bath (6–10°C) for Andheri athletes."
+        description="Physio-supervised contrast therapy near Andheri at R3BOOT Dadar East. Infrared sauna (70°C) and ice bath (6–8°C) for Andheri athletes."
         serviceUrl="https://www.r3boot.in/contrast-therapy-andheri"
       />
       <FAQSchema faqs={contrastTherapyAndheriFaqs} />
       <BreadcrumbSchema items={[
         { name: 'Home', url: '/' },
-        { name: 'Contrast Therapy Mumbai', url: '/contrast-therapy-mumbai' },
+        { name: 'Contrast Therapy Mumbai', url: '/services/contrast-therapy' },
         { name: 'Andheri', url: '/contrast-therapy-andheri' },
       ]} />
     </main>

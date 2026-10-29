@@ -35,7 +35,7 @@ const otherServices = services.filter((s) => s.slug !== 'compression-therapy').s
 
 const heroSlides = [
   {
-    src: '/images/hero/compression-therapy-training.jpg',
+    src: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1793248434/com_sn89tq.webp',
     alt: 'Compression therapy recovery session at R3BOOT Mumbai',
   },
 ]
@@ -199,7 +199,7 @@ export default function CompressionTherapyPage() {
         <div className="relative flex flex-1 flex-col">
         <div className="absolute inset-0">
           <Image
-            src="/images/hero/compression-therapy-training.jpg"
+            src="https://res.cloudinary.com/dj7bot2uc/image/upload/v1793248434/com_sn89tq.webp"
             alt="Compression Therapy Mumbai – Normatec 3 Full Body at R3BOOT Dadar"
             fill
             className="object-cover"
@@ -273,10 +273,10 @@ export default function CompressionTherapyPage() {
             <span className="text-[#513394] dark:text-[#A78BFA] text-[11px] font-black tracking-[0.3em] uppercase">Normatec 3 Full Body</span>
           </div>
 
-          <h1 className="text-[2rem] font-black text-gray-900 dark:text-white tracking-tight leading-[1.1] mb-3">
+          <h2 className="text-[2rem] font-black text-gray-900 dark:text-white tracking-tight leading-[1.1] mb-3">
             Compression Therapy in{' '}
             <span className="text-[#513394] dark:text-[#A78BFA]">Mumbai</span>
-          </h1>
+          </h2>
 
           <p className="text-base text-gray-500 dark:text-gray-400 leading-relaxed mb-6">
             Dynamic air compression for legs, hips, and arms. Pulse fatigue out of tissue after training. R3BOOT Dadar.
@@ -514,7 +514,7 @@ export default function CompressionTherapyPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               <div className="bg-[#1A1A1A] text-white p-8 rounded-[2.5rem]">
                 <div className="text-xs font-black tracking-[0.25em] uppercase text-white/60 mb-4">ACTIVATION — ADD-ON ONLY</div>
-                <h3 className="text-2xl font-black mb-4">15 minutes. ₹750 additional.</h3>
+                <h3 className="text-2xl font-black mb-4">15 minutes. ₹500 additional.</h3>
                 <p className="text-white/80 text-sm leading-relaxed mb-4">
                   5 minutes per limb, a short pulse to lift circulation before you load tissue. Not sold as a standalone
                   Normatec session — booked only as an add-on to Contrast Therapy, Hydro Active Recovery, or Physiotherapy.
@@ -620,7 +620,7 @@ export default function CompressionTherapyPage() {
       <FAQSection faqs={compressionTherapyFaqs} layout="grid" />
 
       {/* MOBILE CTA CARD */}
-      <section className="md:hidden bg-white dark:bg-[#0A0A0A] pt-10 pb-28">
+      <section className="md:hidden bg-white dark:bg-[#0A0A0A] pt-10 pb-44">
         <div className="px-4">
           <div
             className="relative rounded-3xl overflow-hidden px-6 pt-7 pb-6"
@@ -749,27 +749,6 @@ export default function CompressionTherapyPage() {
         </div>
       </section>
 
-      <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden">
-        <div className="bg-white/95 dark:bg-[#0A0A0A]/95 backdrop-blur-md border-t border-gray-200 dark:border-white/[0.09] px-4 pt-3 pb-5">
-          <div className="flex gap-3">
-            <a
-              href="tel:+919702368612"
-              className="flex-1 flex items-center justify-center gap-2 bg-[#513394] hover:bg-[#603eb0] text-white font-black rounded-xl py-3.5 text-[14px] tracking-wide transition-colors"
-            >
-              <PhoneIcon className="w-4 h-4" />
-              Call
-            </a>
-            <a
-              href="https://wa.me/919702368612"
-              target="_blank"
-              rel="nofollow noopener noreferrer"
-              className="flex-1 flex items-center justify-center gap-2 border border-gray-300 dark:border-white/20 text-gray-900 dark:text-white font-bold rounded-xl py-3.5 text-[14px] tracking-wide hover:bg-gray-100 dark:hover:bg-white/[0.07] transition-colors"
-            >
-              WhatsApp
-            </a>
-          </div>
-        </div>
-      </div>
 
       <ServiceSchema
         serviceName="Compression Therapy Mumbai"

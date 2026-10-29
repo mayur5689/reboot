@@ -55,7 +55,7 @@ export default function SportsMassageLowerParelPage() {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
         <div className="container mx-auto px-6 lg:px-8 relative z-10 pb-20">
-          <Link href="/sports-massage-mumbai" className="inline-flex items-center gap-2 text-white/70 hover:text-white transition-all mb-8 group">
+          <Link href="/services/sports-massage" className="inline-flex items-center gap-2 text-white/70 hover:text-white transition-all mb-8 group">
             <div className="w-8 h-8 rounded-full border border-white/30 flex items-center justify-center group-hover:bg-white group-hover:text-[#513394] transition-all">
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -135,8 +135,8 @@ export default function SportsMassageLowerParelPage() {
                 <div className="flex flex-wrap gap-3">
                   {[
                     { label: 'Ice Bath', href: '/ice-bath-mumbai' },
-                    { label: 'Contrast Therapy', href: '/contrast-therapy-mumbai' },
-                    { label: 'Physiotherapy', href: '/physiotherapy-dadar-mumbai' },
+                    { label: 'Contrast Therapy', href: '/services/contrast-therapy' },
+                    { label: 'Physiotherapy', href: '/physiotherapy-lower-parel' },
                   ].map((item) => (
                     <Link key={item.href} href={item.href} className="bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 text-gray-700 dark:text-gray-300 font-bold px-5 py-2.5 rounded-full text-sm hover:bg-[#513394] hover:text-white hover:border-transparent transition-all">
                       {item.label} →
@@ -222,7 +222,7 @@ export default function SportsMassageLowerParelPage() {
       <FAQSchema faqs={sportsMassageLowerParelFaqs} />
       <BreadcrumbSchema items={[
         { name: 'Home', url: '/' },
-        { name: 'Sports Massage Mumbai', url: '/sports-massage-mumbai' },
+        { name: 'Sports Massage Mumbai', url: '/services/sports-massage' },
         { name: 'Lower Parel', url: '/sports-massage-lower-parel' },
       ]} />
     </main>

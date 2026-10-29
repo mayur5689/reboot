@@ -21,7 +21,7 @@ const metadataOverrides: Record<string, { title: string; description: string; ca
     'aqua-therapy': {
         title: 'Aqua Therapy Mumbai | Underwater Treadmill for Knee & Back Pain | R3BOOT',
         description: 'Aqua treadmill rehabilitation in Dadar Mumbai. Post-surgery recovery, knee arthritis, back pain – walk pain-free in water. Physio-guided. Insurance-friendly. Book assessment.',
-        canonical: '/aqua-therapy-mumbai',
+        canonical: '/services/aqua-therapy',
     },
     'clinical-pilates': {
         title: 'Clinical Pilates in Mumbai | Spine & Core Rehab at R3BOOT Dadar',

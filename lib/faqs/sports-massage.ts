@@ -55,6 +55,11 @@ export const sportsMassageFaqs = [
       'Yes. R3BOOT integrates sports massage with physiotherapy, clinical Pilates, aqua therapy, and contrast therapy under one roof. Many clients book massage with ice bath or physio on the same visit. Mention this when booking so sessions can be sequenced correctly.',
   },
   {
+    question: 'Is gym massage the same as sports massage at R3BOOT?',
+    answer:
+      'Yes, if gym massage means recovery after lifting, not a relaxation spa. We assess where the last block of training sat (legs, shoulders, back), then use deep tissue, trigger points, and cupping where indicated. Sessions start from ₹2,500. Book on WhatsApp +91 97023 68612.',
+  },
+  {
     question: 'How often should I get a sports massage?',
     answer:
       'It depends on your training load, desk load, and recovery goals. Active athletes often book 1 to 2 times a week during heavy blocks. Many desk professionals book weekly or biweekly for neck and back stiffness. After your first session, your therapist can suggest a practical frequency.',

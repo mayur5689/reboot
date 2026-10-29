@@ -69,7 +69,7 @@ export default function NeckShoulderPainSportsMassageMumbaiPage() {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
         <div className="container mx-auto px-6 lg:px-8 relative z-10 pb-20">
-          <Link href="/sports-massage-mumbai" className="inline-flex items-center gap-2 text-white/70 hover:text-white transition-all mb-8 group">
+          <Link href="/services/sports-massage" className="inline-flex items-center gap-2 text-white/70 hover:text-white transition-all mb-8 group">
             <div className="w-8 h-8 rounded-full border border-white/30 flex items-center justify-center group-hover:bg-white group-hover:text-[#513394] transition-all">
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -213,6 +213,30 @@ export default function NeckShoulderPainSportsMassageMumbaiPage() {
         </div>
       </section>
 
+      <section className="py-10 sm:py-16">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
+          <p className="text-xs font-black tracking-[0.3em] text-[#513394] dark:text-[#A78BFA] uppercase mb-5 sm:mb-6">
+            ALSO AT R3BOOT //
+          </p>
+          <div className="flex flex-wrap gap-3 sm:gap-4">
+            {[
+              { label: 'Physiotherapy for Shoulder Pain', href: '/services/physiotherapy/shoulder-pain' },
+              { label: 'Shoulder Pain FAQ', href: '/blog/shoulder-pain-sleeping-left-side-frozen-gym-faq' },
+              { label: 'Sports Massage Mumbai', href: '/services/sports-massage' },
+              { label: 'Sports Massage Dadar', href: '/sports-massage-dadar' },
+            ].map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 text-gray-700 dark:text-gray-300 font-bold px-5 sm:px-6 py-2.5 sm:py-3 rounded-full text-sm hover:bg-[#513394] hover:text-white hover:border-transparent transition-all"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ─── FAQ ─── */}
       <FAQSection faqs={neckShoulderPainSportsMassageFaqs} />
 
@@ -248,7 +272,7 @@ export default function NeckShoulderPainSportsMassageMumbaiPage() {
       <FAQSchema faqs={neckShoulderPainSportsMassageFaqs} />
       <BreadcrumbSchema items={[
         { name: 'Home', url: '/' },
-        { name: 'Sports Massage Mumbai', url: '/sports-massage-mumbai' },
+        { name: 'Sports Massage Mumbai', url: '/services/sports-massage' },
         { name: 'Neck & Shoulder Pain', url: '/neck-shoulder-pain-sports-massage-mumbai' },
       ]} />
     </main>

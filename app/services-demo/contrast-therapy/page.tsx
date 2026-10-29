@@ -82,7 +82,7 @@ const rebootReachPoints = [
   {
     step: '04',
     title: 'Temperatures held precisely, not approximately',
-    body: 'Infrared sauna at 68°C. Ice bath at 6-10°C. These are the evidence-based ranges. We maintain them. Contrast therapy only works when temperatures are far enough apart to trigger vascular response.',
+    body: 'Infrared sauna at 70°C. Ice bath at 6-8°C. These are our clinical standards (reducible on request). Contrast therapy only works when temperatures are far enough apart to trigger vascular response.',
   },
 ]
 
@@ -95,7 +95,7 @@ const processSteps = [
   {
     number: '02',
     title: 'Breathing Prep and Supervised Protocol',
-    body: 'We walk you through controlled breathing before immersion. Then sauna (68°C) and ice bath (6-10°C) in structured sequence under team guidance.',
+    body: 'Compulsory shower, breathing prep, then sauna (70°C) and ice bath (6-8°C) in your Day or Night Half or Full Cycle under team guidance.',
   },
   {
     number: '03',
@@ -284,10 +284,10 @@ export default function ContrastTherapyServiceDemo() {
           </div>
 
           {/* H1 */}
-          <h1 className="text-[2rem] font-black text-gray-900 dark:text-white tracking-tight leading-[1.1] mb-3">
+          <h2 className="text-[2rem] font-black text-gray-900 dark:text-white tracking-tight leading-[1.1] mb-3">
             Contrast Therapy in{' '}
             <span className="text-[#513394] dark:text-[#A78BFA]">Mumbai</span>
-          </h1>
+          </h2>
 
           {/* Subtext */}
           <p className="text-base text-gray-500 dark:text-gray-400 leading-relaxed mb-6">
@@ -607,27 +607,6 @@ export default function ContrastTherapyServiceDemo() {
           Fixed bottom bar - mobile only (md:hidden)
           Always visible as user scrolls
       ───────────────────────────────────────────── */}
-      <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden">
-        <div className="bg-[#0A0A0A]/95 backdrop-blur-md border-t border-white/[0.09] px-4 pt-3 pb-5">
-          <div className="flex gap-3">
-            <a
-              href="tel:+919702368612"
-              className="flex-1 flex items-center justify-center gap-2 bg-[#513394] hover:bg-[#603eb0] text-white font-black rounded-xl py-3.5 text-[14px] tracking-wide transition-colors"
-            >
-              <PhoneIcon className="w-4 h-4" />
-              Call
-            </a>
-            <a
-              href="https://wa.me/919702368612"
-              target="_blank"
-              rel="nofollow noopener noreferrer"
-              className="flex-1 flex items-center justify-center gap-2 border border-white/20 text-white font-bold rounded-xl py-3.5 text-[14px] tracking-wide hover:bg-white/[0.07] transition-colors"
-            >
-              WhatsApp
-            </a>
-          </div>
-        </div>
-      </div>
 
     </main>
   )

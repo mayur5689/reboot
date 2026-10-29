@@ -11,9 +11,20 @@ export const client = createClient({
 
 export { urlFor } from './image'
 
-export async function getAllPosts() {
+export type BlogListPost = {
+  _id: string
+  title: string
+  slug: string
+  mainImage?: { asset?: { _ref?: string } } | null
+  excerpt?: string | null
+  publishedAt?: string | null
+  author?: string | null
+  categories?: string[] | null
+}
+
+export async function getAllPosts(): Promise<BlogListPost[]> {
   return client.fetch(
-    `*[_type == "post"] | order(publishedAt desc) {
+    `*[_type == "post" && defined(slug.current)] | order(publishedAt desc) {
       _id,
       title,
       "slug": slug.current,
@@ -56,6 +67,6 @@ export async function getPostBySlug(slug: string) {
 
 export async function getPostSlugs(): Promise<{ slug: string }[]> {
   return client.fetch(
-    `*[_type == "post"] { "slug": slug.current }`
+    `*[_type == "post" && defined(slug.current)] { "slug": slug.current }`
   )
 }

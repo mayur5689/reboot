@@ -10,7 +10,7 @@ import AquaTherapyLocationInfo from '@/components/AquaTherapyLocationInfo'
 import { aquaTherapyAndheriFaqs } from '@/lib/faqs/aqua-therapy-andheri'
 
 export const metadata: Metadata = {
-  title: 'Aqua Therapy Near Andheri West | Aqua Treadmill Physiotherapy at R3BOOT Dadar',
+  title: 'Aqua Therapy Near Andheri West | Aqua Treadmill | R3BOOT',
   description:
     'Physio-supervised aqua therapy near Andheri West at R3BOOT Dadar - 30 min by road or 20 min by train. No aqua treadmill in Andheri West. The closest clinical aqua therapy for Andheri patients.',
   alternates: { canonical: '/aqua-therapy-andheri' },
@@ -39,7 +39,7 @@ export default function AquaTherapyAndheriPage() {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
         <div className="container mx-auto px-6 lg:px-8 relative z-10 pb-20">
-          <Link href="/aqua-therapy-mumbai" className="inline-flex items-center gap-2 text-white/70 hover:text-white transition-all mb-8 group">
+          <Link href="/services/aqua-therapy" className="inline-flex items-center gap-2 text-white/70 hover:text-white transition-all mb-8 group">
             <div className="w-8 h-8 rounded-full border border-white/30 flex items-center justify-center group-hover:bg-white group-hover:text-[#513394] transition-all">
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -82,11 +82,11 @@ export default function AquaTherapyAndheriPage() {
                   therapy produces meaningfully better outcomes than land-based physio - post-ACL surgery, knee
                   osteoarthritis, post-knee replacement, chronic lower back pain - Andheri patients make the trip
                   because no local alternative exists. Combine the session with{' '}
-                  <Link href="/physiotherapy-mumbai" className="text-[#513394] dark:text-[#A78BFA] font-bold hover:underline">
+                  <Link href="/services/physiotherapy" className="text-[#513394] dark:text-[#A78BFA] font-bold hover:underline">
                     physiotherapy
                   </Link>{' '}
                   or{' '}
-                  <Link href="/sports-massage-mumbai" className="text-[#513394] dark:text-[#A78BFA] font-bold hover:underline">
+                  <Link href="/services/sports-massage" className="text-[#513394] dark:text-[#A78BFA] font-bold hover:underline">
                     sports massage
                   </Link>{' '}
                   in one trip to Dadar.
@@ -202,7 +202,7 @@ export default function AquaTherapyAndheriPage() {
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-5 gap-4 max-w-4xl mx-auto">
             {[
-              { label: 'Aqua Therapy Mumbai', href: '/aqua-therapy-mumbai' },
+              { label: 'Aqua Therapy Mumbai', href: '/services/aqua-therapy' },
               { label: 'Dadar (On-Site)', href: '/aqua-therapy-dadar' },
               { label: 'Near Bandra', href: '/aqua-therapy-bandra' },
               { label: 'Lower Parel', href: '/aqua-therapy-lower-parel' },
@@ -229,7 +229,7 @@ export default function AquaTherapyAndheriPage() {
       <FAQSchema faqs={aquaTherapyAndheriFaqs} />
       <BreadcrumbSchema items={[
         { name: 'Home', url: '/' },
-        { name: 'Aqua Therapy Mumbai', url: '/aqua-therapy-mumbai' },
+        { name: 'Aqua Therapy Mumbai', url: '/services/aqua-therapy' },
         { name: 'Near Andheri', url: '/aqua-therapy-andheri' },
       ]} />
     </main>

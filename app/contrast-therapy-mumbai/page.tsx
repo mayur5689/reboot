@@ -10,6 +10,9 @@ import { contrastTherapyMumbaiFaqs } from '@/lib/faqs/contrast-therapy-mumbai'
 import { PainPointsSection } from './PainPointsSection'
 import { WhyMumbaiAthletesSection } from './WhyMumbaiAthletesSection'
 import { HowItWorksSection } from './HowItWorksSection'
+import { HeatColdBenefitsSection } from './HeatColdBenefitsSection'
+import { ProtocolCyclesSection } from './ProtocolCyclesSection'
+import { CONTRAST_ICE_BATH_TEMP_RANGE, CONTRAST_SAUNA_TEMP_LABEL } from '@/lib/contrast-therapy/protocol'
 import { ComparisonSection } from './ComparisonSection'
 import { HygieneSection } from './HygieneSection'
 import { TeamSectionDemo } from '@/app/services-demo/contrast-therapy/TeamSectionDemo'
@@ -21,8 +24,8 @@ import { MobileHeroTrust } from '@/components/MobileHeroTrust'
 export const metadata: Metadata = {
   title: 'Contrast Therapy Mumbai | Ice Bath & Infrared Sauna | R3BOOT',
   description:
-    'Contrast therapy Mumbai at R3BOOT | ice bath + infrared sauna, physio-supervised. Day & Night Cycle protocols for athletes in Dadar. 5.0 ★ Google. Book via WhatsApp.',
-  alternates: { canonical: '/contrast-therapy-mumbai' },
+    'Contrast therapy in Mumbai: ice bath plus infrared sauna, physio-supervised. Day and Night Cycle protocols in Dadar. 5.0 ★ Google. Book via WhatsApp.',
+  alternates: { canonical: '/services/contrast-therapy' },
   keywords: [
     'contrast therapy Mumbai',
     'contrast bath therapy Mumbai',
@@ -47,12 +50,12 @@ const processSteps = [
   {
     number: '01',
     title: 'Health Assessment',
-    body: 'Short intake covering your training background, injury history, and any health conditions. Your physiotherapist confirms contrast therapy is right for you right now.',
+    body: 'Short intake covering your training background, injury history, and any health conditions, plus a blood pressure check. Your physiotherapist confirms contrast therapy is right for you and selects Day or Night Cycle based on your schedule.',
   },
   {
     number: '02',
     title: 'Breathing Prep and Supervised Protocol',
-    body: 'We walk you through controlled breathing before immersion. Then sauna (68°C) and ice bath (6-10°C) in structured sequence under team guidance.',
+    body: `Compulsory shower, then controlled breathing before cold. Sauna (${CONTRAST_SAUNA_TEMP_LABEL}) and ice bath (${CONTRAST_ICE_BATH_TEMP_RANGE}) in your Day or Night Half or Full Cycle under team guidance.`,
   },
   {
     number: '03',
@@ -221,20 +224,35 @@ export default function ContrastTherapyMumbaiPage() {
           </div>
 
           {/* H1 */}
-          <h1 className="text-[2rem] font-black text-gray-900 dark:text-white tracking-tight leading-[1.1] mb-3">
+          <h2 className="text-[2rem] font-black text-gray-900 dark:text-white tracking-tight leading-[1.1] mb-3">
             Contrast Therapy in{' '}
             <span className="text-[#513394] dark:text-[#A78BFA]">Mumbai</span>
-          </h1>
+          </h2>
 
           {/* Subtext */}
           <p className="text-base text-gray-500 dark:text-gray-400 leading-relaxed mb-6">
             Ice bath and infrared sauna in a clinically structured protocol. Day and Night Cycle. Supervised by physiotherapists at R3BOOT Dadar.
           </p>
 
-          <MobileHeroTrust items={serviceTrustBadges['contrast-therapy']} />
-
         </div>
       </section>
+
+      {/* ─────────────────────────────────────────────
+          HOW IT WORKS: moved up so the protocol is the first educational block
+      ───────────────────────────────────────────── */}
+      <HowItWorksSection />
+
+      <HeatColdBenefitsSection />
+
+      <ProtocolCyclesSection />
+
+      {/* Recognition: Google reviews + trust badges, below protocol (mobile) */}
+      <section className="md:hidden py-10 bg-white dark:bg-[#0A0A0A]">
+        <div className="container mx-auto px-5">
+          <MobileHeroTrust items={serviceTrustBadges['contrast-therapy']} />
+        </div>
+      </section>
+
       {/* ─────────────────────────────────────────────
           SECTION 4: YOUR SESSION (moved from PROCESS section below)
       ───────────────────────────────────────────── */}
@@ -250,7 +268,7 @@ export default function ContrastTherapyMumbaiPage() {
               <span className="text-[#513394] dark:text-[#8B5CF6]">R3BOOT</span>
             </h2>
             <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed">
-              A full session takes 45–60 minutes including intake, supervised protocol, and post-session check-in.
+              Half Cycle is 30 minutes; Full Cycle is 60 minutes, plus intake and post-session check-in.
             </p>
           </div>
 
@@ -282,11 +300,6 @@ export default function ContrastTherapyMumbaiPage() {
           SECTION 3: PAIN POINTS — accordion + image crossfade
       ───────────────────────────────────────────── */}
       <PainPointsSection />
-
-      {/* ─────────────────────────────────────────────
-          SECTION 5: HOW IT WORKS — color-coded phase cards
-      ───────────────────────────────────────────── */}
-      <HowItWorksSection />
 
       {/* ─────────────────────────────────────────────
           SECTION 5B: COMPARISON — ice bath vs contrast therapy
@@ -395,7 +408,7 @@ export default function ContrastTherapyMumbaiPage() {
           SECTION 10: CTA BANNER
       ───────────────────────────────────────────── */}
       {/* MOBILE CTA CARD */}
-      <section className="md:hidden bg-white dark:bg-[#0A0A0A] pt-10 pb-28">
+      <section className="md:hidden bg-white dark:bg-[#0A0A0A] pt-10 pb-44">
         <div className="px-4">
           <div
             className="relative rounded-3xl overflow-hidden px-6 pt-7 pb-6"
@@ -562,40 +575,16 @@ export default function ContrastTherapyMumbaiPage() {
         </div>
       </section>
 
-      {/* ─────────────────────────────────────────────
-          STICKY MOBILE CTA
-      ───────────────────────────────────────────── */}
-      <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden">
-        <div className="bg-white/95 dark:bg-[#0A0A0A]/95 backdrop-blur-md border-t border-gray-200 dark:border-white/[0.09] px-4 pt-3 pb-5">
-          <div className="flex gap-3">
-            <a
-              href="tel:+919702368612"
-              className="flex-1 flex items-center justify-center gap-2 bg-[#513394] hover:bg-[#603eb0] text-white font-black rounded-xl py-3.5 text-[14px] tracking-wide transition-colors"
-            >
-              <PhoneIcon className="w-4 h-4" />
-              Call
-            </a>
-            <a
-              href="https://wa.me/919702368612"
-              target="_blank"
-              rel="nofollow noopener noreferrer"
-              className="flex-1 flex items-center justify-center gap-2 border border-gray-300 dark:border-white/20 text-gray-900 dark:text-white font-bold rounded-xl py-3.5 text-[14px] tracking-wide hover:bg-gray-100 dark:hover:bg-white/[0.07] transition-colors"
-            >
-              WhatsApp
-            </a>
-          </div>
-        </div>
-      </div>
 
       <ServiceSchema
         serviceName="Contrast Therapy in Mumbai"
-        description="Clinically structured hot-cold recovery protocol using infrared sauna (68°C) and ice bath (6–10°C). Day &amp; Night Cycle protocols supervised by physiotherapists at R3BOOT, Mumbai."
-        serviceUrl="https://www.r3boot.in/contrast-therapy-mumbai"
+        description={`Clinically structured hot-cold recovery protocol using infrared sauna (${CONTRAST_SAUNA_TEMP_LABEL}) and ice bath (${CONTRAST_ICE_BATH_TEMP_RANGE}). Day & Night Cycle protocols supervised by physiotherapists at R3BOOT, Mumbai.`}
+        serviceUrl="https://www.r3boot.in/services/contrast-therapy"
       />
       <FAQSchema faqs={contrastTherapyMumbaiFaqs} />
       <BreadcrumbSchema items={[
         { name: 'Home', url: '/' },
-        { name: 'Contrast Therapy Mumbai', url: '/contrast-therapy-mumbai' },
+        { name: 'Contrast Therapy', url: '/services/contrast-therapy' },
       ]} />
     </main>
   )

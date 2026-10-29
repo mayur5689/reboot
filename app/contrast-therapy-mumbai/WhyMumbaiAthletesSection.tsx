@@ -47,7 +47,7 @@ const IMAGE_CARDS = [
   {
     num: '03',
     label: 'RECOVERY SESSION',
-    src: '/images/contrast-therapy-mumbai_service_page/contrast-therapy-mumbai_ice_bath_lady.webp',
+    src: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1793249623/Screenshot_2026-10-29_at_10.21.51_AM_rfg3ip.webp',
     alt: 'Recovery session at R3BOOT Mumbai',
     caption: 'Promotes recovery, restores balance, enhances performance.',
     iconPath: CYCLE_PATH,

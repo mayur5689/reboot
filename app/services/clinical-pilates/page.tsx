@@ -28,7 +28,7 @@ export const metadata: Metadata = {
         'pilates for back pain mumbai',
         'clinical pilates rehabilitation',
     ],
-    alternates: { canonical: '/clinical-pilates-mumbai' },
+    alternates: { canonical: '/services/clinical-pilates' },
 }
 
 const otherServices = services.filter(s => s.slug !== 'clinical-pilates').slice(0, 4)
@@ -191,10 +191,10 @@ export default function ClinicalPilatesPage() {
                     </div>
 
                     {/* H1 */}
-                    <h1 className="text-[2rem] font-black text-gray-900 dark:text-white tracking-tight leading-[1.1] mb-3">
+                    <h2 className="text-[2rem] font-black text-gray-900 dark:text-white tracking-tight leading-[1.1] mb-3">
                         Clinical Pilates in{' '}
                         <span className="text-[#513394] dark:text-[#A78BFA]">Mumbai</span>
-                    </h1>
+                    </h2>
 
                     {/* Subtext */}
                     <p className="text-base text-gray-500 dark:text-gray-400 leading-relaxed mb-6">
@@ -741,14 +741,34 @@ export default function ClinicalPilatesPage() {
                 </div>
             </section>
 
-            {/* ─── LOCAL GUIDE LINK ─── */}
+            {/* ─── LOCATION PAGES ─── */}
             <section className="py-16 bg-white dark:bg-[#0A0A0A]">
-                <div className="container mx-auto px-6 lg:px-8 max-w-4xl">
-                    <Link href="/clinical-pilates-mumbai" className="group flex items-center justify-between p-6 bg-gray-50 dark:bg-white/5 rounded-[2rem] border border-gray-100 dark:border-white/10 hover:border-[#513394]/40 transition-all">
+                <div className="container mx-auto px-6 lg:px-8 max-w-4xl space-y-4">
+                    <Link href="/clinical-pilates-dadar" className="group flex items-center justify-between p-6 bg-gray-50 dark:bg-white/5 rounded-[2rem] border border-gray-100 dark:border-white/10 hover:border-[#513394]/40 transition-all">
                         <div>
-                            <p className="text-xs font-black tracking-widest text-[#513394] uppercase mb-1">Mumbai Guide</p>
-                            <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-[#513394] transition-colors">Clinical Pilates in Mumbai, Pricing, Reformer & What to Expect</h3>
-                            <span className="text-sm text-gray-500 dark:text-gray-400 mt-1 inline-block">Full local guide with session fees →</span>
+                            <p className="text-xs font-black tracking-widest text-[#513394] uppercase mb-1">Dadar</p>
+                            <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-[#513394] transition-colors">Clinical Pilates in Dadar</h3>
+                            <span className="text-sm text-gray-500 dark:text-gray-400 mt-1 inline-block">Studio sessions at R3BOOT Dadar East →</span>
+                        </div>
+                        <svg className="w-6 h-6 text-[#513394] opacity-0 group-hover:opacity-100 transition-opacity shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                            <path d="M9 18l6-6-6-6" />
+                        </svg>
+                    </Link>
+                    <Link href="/pilates-lower-parel" className="group flex items-center justify-between p-6 bg-gray-50 dark:bg-white/5 rounded-[2rem] border border-gray-100 dark:border-white/10 hover:border-[#513394]/40 transition-all">
+                        <div>
+                            <p className="text-xs font-black tracking-widest text-[#513394] uppercase mb-1">Lower Parel</p>
+                            <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-[#513394] transition-colors">Pilates near Lower Parel</h3>
+                            <span className="text-sm text-gray-500 dark:text-gray-400 mt-1 inline-block">Physio-led reformer and mat, short hop from Lower Parel →</span>
+                        </div>
+                        <svg className="w-6 h-6 text-[#513394] opacity-0 group-hover:opacity-100 transition-opacity shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                            <path d="M9 18l6-6-6-6" />
+                        </svg>
+                    </Link>
+                    <Link href="/clinical-pilates-bandra" className="group flex items-center justify-between p-6 bg-gray-50 dark:bg-white/5 rounded-[2rem] border border-gray-100 dark:border-white/10 hover:border-[#513394]/40 transition-all">
+                        <div>
+                            <p className="text-xs font-black tracking-widest text-[#513394] uppercase mb-1">Bandra</p>
+                            <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-[#513394] transition-colors">Clinical Pilates near Bandra</h3>
+                            <span className="text-sm text-gray-500 dark:text-gray-400 mt-1 inline-block">Assessment-first sessions for Bandra and Khar →</span>
                         </div>
                         <svg className="w-6 h-6 text-[#513394] opacity-0 group-hover:opacity-100 transition-opacity shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                             <path d="M9 18l6-6-6-6" />
@@ -760,27 +780,6 @@ export default function ClinicalPilatesPage() {
             {/* ─────────────────────────────────────────────
                 STICKY MOBILE CTA
             ───────────────────────────────────────────── */}
-            <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden">
-                <div className="bg-white/95 dark:bg-[#0A0A0A]/95 backdrop-blur-md border-t border-gray-200 dark:border-white/[0.09] px-4 pt-3 pb-5">
-                    <div className="flex gap-3">
-                        <a
-                            href="tel:+919702368612"
-                            className="flex-1 flex items-center justify-center gap-2 bg-[#513394] hover:bg-[#603eb0] text-white font-black rounded-xl py-3.5 text-[14px] tracking-wide transition-colors"
-                        >
-                            <PhoneIcon className="w-4 h-4" />
-                            Call
-                        </a>
-                        <a
-                            href="https://wa.me/919702368612"
-                            target="_blank"
-                            rel="nofollow noopener noreferrer"
-                            className="flex-1 flex items-center justify-center gap-2 border border-gray-300 dark:border-white/20 text-gray-900 dark:text-white font-bold rounded-xl py-3.5 text-[14px] tracking-wide hover:bg-gray-100 dark:hover:bg-white/[0.07] transition-colors"
-                        >
-                            WhatsApp
-                        </a>
-                    </div>
-                </div>
-            </div>
 
             <ServiceSchema
                 serviceName="Clinical Pilates in Mumbai"
