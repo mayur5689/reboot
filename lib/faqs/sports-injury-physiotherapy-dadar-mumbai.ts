@@ -22,7 +22,7 @@ export const sportsInjuryPhysiotherapyFaqs = [
   {
     question: 'How much does sports physiotherapy cost in Mumbai?',
     answer:
-      'Sports physiotherapy at specialist clinics in Mumbai ranges from ₹800 to ₹3,000+ per session depending on session length, the expertise of the physiotherapist, and what the session includes. At R3BOOT, call or WhatsApp +91 97023 68612 for current session fees, we give you a clear number with no hidden charges.',
+      'A 45-minute physiotherapy session at R3BOOT is ₹2,000. Call or WhatsApp +91 97023 68612 to book.',
   },
   {
     question: 'Do I need a doctor referral or MRI before booking sports physiotherapy?',

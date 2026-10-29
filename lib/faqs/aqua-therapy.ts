@@ -17,7 +17,7 @@ export const aquaTherapyFaqs = [
   {
     question: 'How much does an aqua therapy session cost in Mumbai at R3BOOT?',
     answer:
-      'Fees depend on your assessment and rehab plan. For current aqua therapy session pricing at R3BOOT Dadar, call or WhatsApp +91 97023 68612. After your first assessment, you get a clear session estimate based on your condition, not a generic package push.',
+      'A 45-minute aqua therapy session at R3BOOT is ₹2,000. Call or WhatsApp +91 97023 68612 to book.',
   },
   {
     question: 'How do I book an aqua therapy session at R3BOOT Dadar?',

@@ -10,6 +10,7 @@ import { contrastTherapyMumbaiFaqs } from '@/lib/faqs/contrast-therapy-mumbai'
 import { PainPointsSection } from './PainPointsSection'
 import { WhyMumbaiAthletesSection } from './WhyMumbaiAthletesSection'
 import { HowItWorksSection } from './HowItWorksSection'
+import { HeatColdBenefitsSection } from './HeatColdBenefitsSection'
 import { ProtocolCyclesSection } from './ProtocolCyclesSection'
 import { CONTRAST_ICE_BATH_TEMP_RANGE, CONTRAST_SAUNA_TEMP_LABEL } from '@/lib/contrast-therapy/protocol'
 import { ComparisonSection } from './ComparisonSection'
@@ -233,10 +234,25 @@ export default function ContrastTherapyMumbaiPage() {
             Ice bath and infrared sauna in a clinically structured protocol. Day and Night Cycle. Supervised by physiotherapists at R3BOOT Dadar.
           </p>
 
-          <MobileHeroTrust items={serviceTrustBadges['contrast-therapy']} />
-
         </div>
       </section>
+
+      {/* ─────────────────────────────────────────────
+          HOW IT WORKS: moved up so the protocol is the first educational block
+      ───────────────────────────────────────────── */}
+      <HowItWorksSection />
+
+      <HeatColdBenefitsSection />
+
+      <ProtocolCyclesSection />
+
+      {/* Recognition: Google reviews + trust badges, below protocol (mobile) */}
+      <section className="md:hidden py-10 bg-white dark:bg-[#0A0A0A]">
+        <div className="container mx-auto px-5">
+          <MobileHeroTrust items={serviceTrustBadges['contrast-therapy']} />
+        </div>
+      </section>
+
       {/* ─────────────────────────────────────────────
           SECTION 4: YOUR SESSION (moved from PROCESS section below)
       ───────────────────────────────────────────── */}
@@ -284,13 +300,6 @@ export default function ContrastTherapyMumbaiPage() {
           SECTION 3: PAIN POINTS — accordion + image crossfade
       ───────────────────────────────────────────── */}
       <PainPointsSection />
-
-      {/* ─────────────────────────────────────────────
-          SECTION 5: HOW IT WORKS — color-coded phase cards
-      ───────────────────────────────────────────── */}
-      <HowItWorksSection />
-
-      <ProtocolCyclesSection />
 
       {/* ─────────────────────────────────────────────
           SECTION 5B: COMPARISON — ice bath vs contrast therapy
@@ -399,7 +408,7 @@ export default function ContrastTherapyMumbaiPage() {
           SECTION 10: CTA BANNER
       ───────────────────────────────────────────── */}
       {/* MOBILE CTA CARD */}
-      <section className="md:hidden bg-white dark:bg-[#0A0A0A] pt-10 pb-28">
+      <section className="md:hidden bg-white dark:bg-[#0A0A0A] pt-10 pb-44">
         <div className="px-4">
           <div
             className="relative rounded-3xl overflow-hidden px-6 pt-7 pb-6"
@@ -566,30 +575,6 @@ export default function ContrastTherapyMumbaiPage() {
         </div>
       </section>
 
-      {/* ─────────────────────────────────────────────
-          STICKY MOBILE CTA
-      ───────────────────────────────────────────── */}
-      <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden">
-        <div className="bg-white/95 dark:bg-[#0A0A0A]/95 backdrop-blur-md border-t border-gray-200 dark:border-white/[0.09] px-4 pt-3 pb-5">
-          <div className="flex gap-3">
-            <a
-              href="tel:+919702368612"
-              className="flex-1 flex items-center justify-center gap-2 bg-[#513394] hover:bg-[#603eb0] text-white font-black rounded-xl py-3.5 text-[14px] tracking-wide transition-colors"
-            >
-              <PhoneIcon className="w-4 h-4" />
-              Call
-            </a>
-            <a
-              href="https://wa.me/919702368612"
-              target="_blank"
-              rel="nofollow noopener noreferrer"
-              className="flex-1 flex items-center justify-center gap-2 border border-gray-300 dark:border-white/20 text-gray-900 dark:text-white font-bold rounded-xl py-3.5 text-[14px] tracking-wide hover:bg-gray-100 dark:hover:bg-white/[0.07] transition-colors"
-            >
-              WhatsApp
-            </a>
-          </div>
-        </div>
-      </div>
 
       <ServiceSchema
         serviceName="Contrast Therapy in Mumbai"

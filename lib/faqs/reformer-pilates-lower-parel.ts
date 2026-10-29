@@ -22,7 +22,7 @@ export const reformerPilatesLowerParelFaqs = [
   {
     question: 'How much does reformer Pilates cost at Lower Parel?',
     answer:
-      'Fees depend on your assessment and program. For current reformer pricing at R3BOOT Lower Parel, call or WhatsApp +91 97023 68612.',
+      'A 45-minute reformer Pilates session at R3BOOT is ₹2,000. One-to-one and physiotherapist-led. Call or WhatsApp +91 97023 68612 to book.',
   },
   {
     question: 'What are reformer Pilates hours at Lower Parel?',

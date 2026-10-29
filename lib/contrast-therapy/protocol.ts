@@ -28,3 +28,7 @@ export const FULL_CYCLE_RULE =
 
 export const HALF_CYCLE_DURATION_MIN = 30
 export const FULL_CYCLE_DURATION_MIN = 60
+
+/** Same fee for Day Cycle and Night Cycle. Priced by session length. */
+export const HALF_CYCLE_PRICE_LABEL = '₹2,500'
+export const FULL_CYCLE_PRICE_LABEL = '₹3,500'

@@ -2,7 +2,7 @@ export const backPainPhysiotherapyFaqs = [
   {
     question: 'How much does physiotherapy for back pain cost in Mumbai?',
     answer:
-      'At R3BOOT, physiotherapy sessions are priced based on session type and duration. Initial assessment sessions (60 minutes) include full movement testing and your first treatment. Follow-up sessions are 45–60 minutes. Call or WhatsApp us on +91 97023 68612 for current session fees, we will give you a clear number, no hidden charges.',
+      'A 45-minute physiotherapy session at R3BOOT is ₹2,000. Call or WhatsApp +91 97023 68612 to book.',
   },
   {
     question: 'How many physiotherapy sessions will I need for back pain?',

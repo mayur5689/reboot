@@ -57,7 +57,7 @@ export const aquaTherapyMumbaiFaqs = [
   {
     question: 'How much does aqua therapy cost at R3BOOT Mumbai?',
     answer:
-      'Please contact R3BOOT directly for current pricing and package options. Sessions can be booked individually or as part of a structured rehabilitation package. Call or WhatsApp us at +91 97023 68612 and our team will advise on the right program for your condition and budget.',
+      'A 45-minute aqua therapy session at R3BOOT is ₹2,000. Call or WhatsApp +91 97023 68612 to book.',
   },
   {
     question: 'Is aqua therapy good for back pain?',

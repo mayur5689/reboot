@@ -838,29 +838,6 @@ export default function PilatesMumbaiPage() {
         </div>
       </section>
 
-      {/* Sticky mobile CTA */}
-      <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden">
-        <div className="bg-white/95 dark:bg-[#0A0A0A]/95 backdrop-blur-md border-t border-gray-200 dark:border-white/[0.09] px-4 pt-3 pb-5">
-          <div className="flex gap-3">
-            <a
-              href="tel:+919702368612"
-              className="flex-1 flex items-center justify-center gap-2 bg-[#513394] hover:bg-[#603eb0] text-white font-black rounded-xl py-3.5 text-[14px] tracking-wide transition-colors"
-            >
-              <PhoneIcon className="w-4 h-4" />
-              Call
-            </a>
-            <a
-              href="https://wa.me/919702368612"
-              target="_blank"
-              rel="nofollow noopener noreferrer"
-              className="flex-1 flex items-center justify-center gap-2 border border-gray-300 dark:border-white/20 text-gray-900 dark:text-white font-bold rounded-xl py-3.5 text-[14px] tracking-wide hover:bg-gray-100 dark:hover:bg-white/[0.07] transition-colors"
-            >
-              WhatsApp
-            </a>
-          </div>
-        </div>
-      </div>
-
       <ServiceSchema
         serviceName="Pilates in Mumbai"
         description="Physiotherapist-led Pilates in Mumbai at R3BOOT Dadar. One-to-one reformer and mat sessions for beginners, desk posture, and athletes. Assessment-first, not a group fitness class."

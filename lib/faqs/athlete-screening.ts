@@ -25,9 +25,14 @@ export const athleteScreeningFaqs = [
       'A personalised Recovery & Performance Plan built off your report, covering your risk factors, the interventions we recommend, and any program modifications for your training. If physiotherapy, pilates, or recovery work is needed, we coordinate that directly since everything runs under one roof at R3BOOT.',
   },
   {
+    question: 'How much does athlete screening cost at R3BOOT?',
+    answer:
+      'Athlete screening at R3BOOT is ₹3,000 for a 90-minute session. That covers history, the movement and gait exam, special tests, and your plan before you leave. Call or WhatsApp +91 97023 68612 to book.',
+  },
+  {
     question: 'How long does the screening take?',
     answer:
-      'The full assessment runs about 90 minutes. That covers your history intake, the hands-on movement and gait exam, special tests, and a walkthrough of your results and plan before you leave.',
+      'The full assessment runs 90 minutes. That covers your history intake, the hands-on movement and gait exam, special tests, and a walkthrough of your results and plan before you leave.',
   },
   {
     question: 'Will this help my performance, or is it just injury prevention?',

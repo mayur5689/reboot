@@ -32,6 +32,6 @@ export const aquaTherapyKneePainFaqs = [
   {
     question: 'Where is R3BOOT and how much does aqua therapy cost?',
     answer:
-      'R3BOOT is at Palai Plaza, 203, Swami Gyan Jivandas Marg, Dadar East, Mumbai 400014 - 5 minutes from Dadar railway station (East exit). For current session fees, call or WhatsApp +91 97023 68612. We give you a clear number, no hidden charges.',
+      'R3BOOT is at Palai Plaza, 203, Swami Gyan Jivandas Marg, Dadar East, Mumbai 400014, 5 minutes from Dadar station East exit. A 45-minute aqua therapy session is ₹2,000. Call or WhatsApp +91 97023 68612 to book.',
   },
 ]

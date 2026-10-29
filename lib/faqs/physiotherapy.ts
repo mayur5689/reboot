@@ -12,7 +12,7 @@ export const physiotherapyFaqs = [
   {
     question: 'How much does a physiotherapy session cost in Mumbai at R3BOOT?',
     answer:
-      'Fees depend on assessment needs and the treatment plan. For current physiotherapy session pricing at R3BOOT Dadar, call or WhatsApp +91 97023 68612. After your first assessment, you get a clear session plan and estimate based on your condition, not a generic package push.',
+      'A 45-minute physiotherapy session at R3BOOT is ₹2,000. Call or WhatsApp +91 97023 68612 to book.',
   },
   {
     question: 'How do I book a physiotherapy appointment at R3BOOT Dadar?',

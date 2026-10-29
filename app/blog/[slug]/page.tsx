@@ -237,23 +237,7 @@ export default async function BlogPostPage(props: { params: Promise<{ slug: stri
                 </div>
             </div>
             {post.faqs?.length > 0 && <FAQSection faqs={post.faqs} />}
-            {/* Mobile Sticky CTA Bar */}
-            <div className="fixed bottom-0 left-0 right-0 z-50 lg:hidden bg-white dark:bg-[#0A0A0A] border-t border-gray-200 dark:border-white/10 px-4 py-3 flex gap-3 shadow-2xl">
-                <a
-                    href="tel:+919702368612"
-                    className="flex-1 bg-[#513394] text-white text-center py-3 rounded-full font-black uppercase tracking-widest text-xs hover:opacity-90 transition-all"
-                >
-                    Call to Book
-                </a>
-                <a
-                    href="https://wa.me/919702368612"
-                    target="_blank"
-                    rel="nofollow noopener noreferrer"
-                    className="flex-1 bg-gray-100 dark:bg-white/10 text-gray-900 dark:text-white text-center py-3 rounded-full font-black uppercase tracking-widest text-xs hover:opacity-80 transition-all"
-                >
-                    WhatsApp
-                </a>
-            </div>
+
         </article>
     );
 }

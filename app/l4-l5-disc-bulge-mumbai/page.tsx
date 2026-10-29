@@ -524,21 +524,6 @@ export default function L4L5DiscBulgeMumbaiPage() {
         </div>
       </section>
 
-      {/* STICKY MOBILE CTA */}
-      <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden">
-        <div className="bg-[#0A0A0A]/95 backdrop-blur-md border-t border-white/[0.09] px-4 pt-3 pb-5">
-          <div className="flex gap-3">
-            <a href="tel:+919702368612" className="flex-1 flex items-center justify-center gap-2 bg-[#513394] text-white font-black rounded-xl py-3.5 text-[14px]">
-              <PhoneIcon className="w-4 h-4" />
-              Call
-            </a>
-            <a href="https://wa.me/919702368612" target="_blank" rel="nofollow noopener noreferrer" className="flex-1 flex items-center justify-center gap-2 border border-white/20 text-white font-bold rounded-xl py-3.5 text-[14px]">
-              WhatsApp
-            </a>
-          </div>
-        </div>
-      </div>
-
       <ServiceSchema
         serviceName="L4 L5 Disc Bulge Rehabilitation in Mumbai"
         description="Non-surgical physiotherapy-led rehabilitation for L4–L5 disc bulge, sciatica, and lower back pain at R3BOOT Dadar, Mumbai. Assessment, manual therapy, aqua therapy, and clinical Pilates under one team."

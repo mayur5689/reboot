@@ -3,7 +3,9 @@ import {
   CONTRAST_SAUNA_TEMP_LABEL,
   DAY_FULL_CYCLE_SUMMARY,
   DAY_HALF_CYCLE_SUMMARY,
+  FULL_CYCLE_PRICE_LABEL,
   FULL_CYCLE_RULE,
+  HALF_CYCLE_PRICE_LABEL,
   NIGHT_FULL_CYCLE_SUMMARY,
   NIGHT_HALF_CYCLE_SUMMARY,
 } from '@/lib/contrast-therapy/protocol'
@@ -56,9 +58,29 @@ export function ProtocolCyclesSection() {
               </p>
               <h3 className="text-xl font-black text-gray-900 dark:text-white mb-3">{cycle.name}</h3>
               <p className="text-sm text-gray-500 dark:text-white/45 mb-4 leading-relaxed">{cycle.when}</p>
-              <p className="text-sm text-gray-900 dark:text-white/90 mb-3">
+              <p className="text-sm text-gray-900 dark:text-white/90 mb-4">
                 <span className="font-bold">Always finishes on:</span> {cycle.finish}
               </p>
+              <div className="grid grid-cols-2 gap-2.5 mb-4">
+                <div className="rounded-xl border border-gray-200 dark:border-white/[0.08] bg-[#F8F9FA] dark:bg-white/[0.04] px-3 py-3">
+                  <p className="text-[10px] font-black uppercase tracking-[0.16em] text-gray-500 dark:text-white/40 mb-1">
+                    30 min
+                  </p>
+                  <p className="text-lg font-black text-gray-900 dark:text-white leading-none">
+                    {HALF_CYCLE_PRICE_LABEL}
+                  </p>
+                  <p className="text-[11px] text-gray-500 dark:text-white/40 mt-1">Half Cycle</p>
+                </div>
+                <div className="rounded-xl border border-[#513394]/25 dark:border-[#A78BFA]/30 bg-[#513394]/8 dark:bg-[#513394]/15 px-3 py-3">
+                  <p className="text-[10px] font-black uppercase tracking-[0.16em] text-[#513394] dark:text-[#A78BFA] mb-1">
+                    60 min
+                  </p>
+                  <p className="text-lg font-black text-gray-900 dark:text-white leading-none">
+                    {FULL_CYCLE_PRICE_LABEL}
+                  </p>
+                  <p className="text-[11px] text-gray-500 dark:text-white/40 mt-1">Full Cycle</p>
+                </div>
+              </div>
               <p className="text-xs text-gray-500 dark:text-white/40 leading-relaxed mb-3">
                 <span className="font-bold text-gray-600 dark:text-white/55">Half Cycle (30 min):</span> {cycle.half}
               </p>

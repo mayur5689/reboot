@@ -92,7 +92,7 @@ export const l4L5DiscBulgeFaqs = [
   {
     question: 'How much does physiotherapy for L4–L5 disc bulge cost at R3BOOT?',
     answer:
-      'R3BOOT is at Palai Plaza, 203, Swami Gyan Jivandas Marg, Dadar East, Mumbai 400014 — 5 minutes from Dadar station. For current session fees, call or WhatsApp +91 97023 68612. After your first assessment, your physiotherapist gives you a realistic session estimate based on your condition.',
+      'A 45-minute physiotherapy session at R3BOOT is ₹2,000. Palai Plaza, Dadar East, 5 minutes from Dadar station. Call or WhatsApp +91 97023 68612 to book.'
   },
   {
     question: 'Where can I get physiotherapy for L4–L5 disc bulge in Mumbai?',

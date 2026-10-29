@@ -2,7 +2,7 @@ export const shoulderPainPhysiotherapyFaqs = [
   {
     question: 'How much does physiotherapy for shoulder pain cost in Mumbai?',
     answer:
-      'Specialist physiotherapy in Mumbai typically ranges from ₹800 to ₹3,000+ per session depending on length and clinical depth. At R3BOOT, initial shoulder assessments are 60 minutes and include full movement testing plus your first treatment. Call or WhatsApp +91 97023 68612 for current session fees. We give you a clear number with no hidden charges.',
+      'A 45-minute physiotherapy session at R3BOOT is ₹2,000. Call or WhatsApp +91 97023 68612 to book.',
   },
   {
     question: 'How many physiotherapy sessions will I need for shoulder pain?',

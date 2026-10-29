@@ -12,7 +12,7 @@ export const pilatesMumbaiFaqs = [
   {
     question: 'How much do Pilates sessions cost in Mumbai at R3BOOT?',
     answer:
-      'Fees depend on your assessment and program. For current Pilates and reformer session pricing at R3BOOT Dadar, call or WhatsApp +91 97023 68612. After the first assessment you get a clear session estimate based on your goals, not a generic membership push.',
+      'A 45-minute Pilates session at R3BOOT is ₹2,000. One-to-one and physiotherapist-led. Call or WhatsApp +91 97023 68612 to book.',
   },
   {
     question: 'Is R3BOOT Pilates a group class or private session?',

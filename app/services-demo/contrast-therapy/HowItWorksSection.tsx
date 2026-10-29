@@ -1,4 +1,5 @@
 import React from 'react'
+import { CONTRAST_ICE_BATH_TEMP_RANGE, CONTRAST_SAUNA_TEMP_LABEL } from '@/lib/contrast-therapy/protocol'
 
 const ICON_PATHS: Record<string, string> = {
   heat: 'M20.5,24c-.042,0-.086-.005-.129-.017-.267-.071-.426-.345-.354-.612,.114-.428,.243-.826,.369-1.218,.315-.98,.614-1.906,.614-3.16,0-2.766-1.029-4.801-1.927-6.265-.965-1.576-2.073-3.771-2.073-6.788,0-1.884,.772-4.482,1.294-5.646,.113-.252,.409-.365,.661-.251,.252,.113,.364,.409,.251,.661-.421,.938-1.206,3.436-1.206,5.236,0,2.766,1.029,4.801,1.927,6.265,.965,1.576,2.073,3.771,2.073,6.788,0,1.411-.337,2.456-.663,3.467-.121,.375-.244,.758-.354,1.168-.06,.224-.262,.371-.483,.371Zm-7,0c-.042,0-.086-.005-.129-.017-.267-.071-.426-.345-.354-.612,.114-.428,.243-.826,.369-1.218,.315-.98,.614-1.906,.614-3.16,0-2.766-1.029-4.801-1.927-6.265-.965-1.576-2.073-3.771-2.073-6.788,0-1.884,.772-4.482,1.294-5.646,.112-.252,.409-.365,.661-.251,.252,.113,.364,.409,.251,.661-.421,.938-1.206,3.436-1.206,5.236,0,2.766,1.029,4.801,1.927,6.265,.965,1.576,2.073,3.771,2.073,6.788,0,1.411-.337,2.456-.663,3.467-.121,.375-.244,.758-.354,1.168-.06,.224-.262,.371-.483,.371Zm-7,0c-.042,0-.086-.005-.129-.017-.267-.071-.426-.345-.354-.612,.114-.428,.243-.826,.369-1.218,.315-.98,.614-1.906,.614-3.16,0-2.766-1.029-4.801-1.927-6.265-.965-1.576-2.073-3.771-2.073-6.788,0-1.884,.772-4.482,1.294-5.646,.112-.252,.41-.365,.661-.251,.252,.113,.364,.409,.251,.661-.421,.938-1.206,3.436-1.206,5.236,0,2.766,1.029,4.801,1.927,6.265,.965,1.576,2.073,3.771,2.073,6.788,0,1.411-.337,2.456-.663,3.467-.121,.375-.244,.758-.354,1.168-.06,.224-.262,.371-.483,.371Z',
@@ -17,7 +18,7 @@ function PhaseIcon({ icon, color, className }: { icon: string; color: string; cl
 const PHASES = [
   {
     num: '01',
-    title: 'Heat phase at 68°C',
+    title: `Heat phase at ${CONTRAST_SAUNA_TEMP_LABEL}`,
     body: 'Blood vessels dilate. Blood flow to muscles increases. Oxygen and nutrients reach damaged tissue. Muscle tension decreases.',
     borderStop1: 'rgba(255,115,64,0.45)',
     borderStop2: 'rgba(192,39,26,0.15)',
@@ -29,7 +30,7 @@ const PHASES = [
   },
   {
     num: '02',
-    title: 'Cold phase at 6–10°C',
+    title: `Cold phase at ${CONTRAST_ICE_BATH_TEMP_RANGE}`,
     body: 'Blood vessels constrict. Blood and metabolic waste - lactic acid, inflammatory cytokines - are forced away from muscles. Swelling reduces.',
     borderStop1: 'rgba(125,216,248,0.40)',
     borderStop2: 'rgba(30,110,219,0.12)',
@@ -77,12 +78,12 @@ export function HowItWorksSection() {
             <div className="mt-8 flex items-center gap-4">
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 rounded-full bg-[#FF7340]" />
-                <span className="text-white/35 text-[12px] font-bold tracking-wide">68°C</span>
+                <span className="text-white/35 text-[12px] font-bold tracking-wide">{CONTRAST_SAUNA_TEMP_LABEL}</span>
               </div>
               <div className="w-6 h-px bg-white/10" />
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 rounded-full bg-[#7DD8F8]" />
-                <span className="text-white/35 text-[12px] font-bold tracking-wide">6–10°C</span>
+                <span className="text-white/35 text-[12px] font-bold tracking-wide">{CONTRAST_ICE_BATH_TEMP_RANGE}</span>
               </div>
               <div className="w-6 h-px bg-white/10" />
               <div className="flex items-center gap-2">

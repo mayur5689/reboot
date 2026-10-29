@@ -27,7 +27,7 @@ export const postSurgeryPhysiotherapyFaqs = [
   {
     question: 'How much does post-surgery physiotherapy cost in Mumbai?',
     answer:
-      'At specialist clinics in Mumbai, post-surgical physiotherapy sessions range from ₹800 to ₹3,000+ depending on session length and expertise. At R3BOOT, call or WhatsApp +91 97023 68612 for current fees. We will give you a clear number with no hidden charges.',
+      'A 45-minute physiotherapy session at R3BOOT is ₹2,000. Call or WhatsApp +91 97023 68612 to book.',
   },
   {
     question: 'Do I need to bring surgical notes or a doctor referral to book?',

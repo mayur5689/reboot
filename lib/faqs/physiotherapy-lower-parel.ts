@@ -27,7 +27,7 @@ export const physiotherapyLowerParelFaqs = [
   {
     question: 'How much does physiotherapy cost at Lower Parel?',
     answer:
-      'Session fees match R3BOOT clinical pricing across locations. Call or WhatsApp +91 97023 68612 for current rates. We give a clear number with no hidden charges.',
+      'A 45-minute physiotherapy session at R3BOOT is ₹2,000. Call or WhatsApp +91 97023 68612 to book.',
   },
   {
     question: 'Is aqua therapy available at Lower Parel?',

@@ -12,7 +12,12 @@ export const contrastTherapyMumbaiFaqs = [
   {
     question: 'How much does an ice bath, sauna, or contrast therapy session cost in Mumbai at R3BOOT?',
     answer:
-      'Contrast therapy at R3BOOT includes infrared sauna and ice bath: ₹2,500 for a Half Cycle (30 minutes) or ₹3,500 for a Full Cycle (60 minutes). Both are physio-supervised. Call or WhatsApp +91 97023 68612 to confirm current pricing and book.',
+      'Sauna and ice bath are included in every contrast session. Price is by cycle length, and Day Cycle and Night Cycle cost the same. 30-minute Half Cycle: ₹2,500. 60-minute Full Cycle: ₹3,500. Day Cycle always ends on ice bath. Night Cycle always ends on sauna. Full Cycle is a longer protocol with extra rounds, not Half run twice. Both are physio-supervised. Call or WhatsApp +91 97023 68612 to book.',
+  },
+  {
+    question: 'What is the price for Day Cycle and Night Cycle, 30 minutes and 60 minutes?',
+    answer:
+      'Day Cycle, 30 minutes (Half): ₹2,500, ends on ice bath. Day Cycle, 60 minutes (Full): ₹3,500, ends on ice bath. Night Cycle, 30 minutes (Half): ₹2,500, ends on sauna. Night Cycle, 60 minutes (Full): ₹3,500, ends on sauna. Choose Day when you still have training or work ahead. Choose Night when the goal is recovery, sleep, or a session before sports massage.',
   },
   {
     question: 'What is infrared sauna therapy, and how is it different from a steam bath?',

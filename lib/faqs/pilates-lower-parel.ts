@@ -22,7 +22,7 @@ export const pilatesLowerParelFaqs = [
   {
     question: 'How much do Pilates sessions cost at Lower Parel?',
     answer:
-      'Fees depend on your assessment and program. For current pricing at R3BOOT Lower Parel, call or WhatsApp +91 97023 68612. After the first assessment you get a clear session estimate.',
+      'A 45-minute Pilates session at R3BOOT is ₹2,000. One-to-one and physiotherapist-led. Call or WhatsApp +91 97023 68612 to book.',
   },
   {
     question: 'What are Pilates hours at R3BOOT Lower Parel?',

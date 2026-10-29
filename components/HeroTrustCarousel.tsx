@@ -34,13 +34,13 @@ export function HeroTrustCarousel({ items }: { items: TrustBadgeItem[] }) {
     <div className="mt-3">
       <div
         ref={trackRef}
-        className="flex gap-3 overflow-x-auto snap-x snap-mandatory scrollbar-hide -mx-5 px-5 pb-1"
+        className="flex gap-3 overflow-x-auto snap-x snap-mandatory scrollbar-hide overscroll-x-contain pb-1"
       >
         {items.map((item, i) => (
           <div
             key={`${item.label}-${item.value}`}
             ref={(el) => { cardRefs.current[i] = el }}
-            className={`shrink-0 w-[58%] snap-start rounded-xl border p-3 transition-colors duration-200 ${
+            className={`shrink-0 w-[calc(50%-0.375rem)] snap-start rounded-xl border p-3 transition-colors duration-200 ${
               i === active
                 ? 'border-[#513394] bg-white dark:bg-[#1A1A1A] shadow-sm dark:shadow-none'
                 : 'border-gray-200 dark:border-white/[0.08] bg-[#F8F9FA] dark:bg-[#141414]'
@@ -66,6 +66,18 @@ export function HeroTrustCarousel({ items }: { items: TrustBadgeItem[] }) {
           </div>
         ))}
       </div>
+      {items.length > 2 ? (
+        <div className="flex justify-center gap-1.5 mt-2.5" aria-hidden>
+          {items.map((item, i) => (
+            <span
+              key={`${item.label}-${item.value}-dot`}
+              className={`h-1.5 rounded-full transition-all ${
+                i === active ? 'w-4 bg-[#513394]' : 'w-1.5 bg-gray-300 dark:bg-white/20'
+              }`}
+            />
+          ))}
+        </div>
+      ) : null}
     </div>
   )
 }
