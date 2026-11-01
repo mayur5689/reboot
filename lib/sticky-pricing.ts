@@ -16,7 +16,7 @@ export const STICKY_PRESETS = {
   },
   compression: {
     tiers: [
-      { label: '15 min add-on', price: '₹500' },
+      { label: '15 min add-on', price: '₹750' },
       { label: '45 min Recovery', price: '₹1,500', featured: true },
     ],
     note: 'Recovery is standalone. Activation only with another session.',

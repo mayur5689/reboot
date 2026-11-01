@@ -514,7 +514,7 @@ export default function CompressionTherapyPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               <div className="bg-[#1A1A1A] text-white p-8 rounded-[2.5rem]">
                 <div className="text-xs font-black tracking-[0.25em] uppercase text-white/60 mb-4">ACTIVATION — ADD-ON ONLY</div>
-                <h3 className="text-2xl font-black mb-4">15 minutes. ₹500 additional.</h3>
+                <h3 className="text-2xl font-black mb-4">15 minutes. ₹750 additional.</h3>
                 <p className="text-white/80 text-sm leading-relaxed mb-4">
                   5 minutes per limb, a short pulse to lift circulation before you load tissue. Not sold as a standalone
                   Normatec session — booked only as an add-on to Contrast Therapy, Hydro Active Recovery, or Physiotherapy.
