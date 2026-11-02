@@ -24,7 +24,7 @@ const ROWS = [
     icon: Clock,
     label: 'Session format',
     generic: 'Open-ended traditional therapy',
-    clinical: '50 minutes, private, structured, time-bound',
+    clinical: '60 minutes, private, structured, time-bound',
   },
   {
     icon: MessageCircle,

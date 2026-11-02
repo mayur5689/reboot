@@ -26,10 +26,10 @@ export const STICKY_PRESETS = {
       { label: 'Women', price: '₹2,500' },
       { label: 'Men', price: '₹3,500', featured: true },
     ],
-    note: '60 to 90 min. Cupping included when indicated.',
+    note: '60 min session. Certified therapists. Cupping when indicated.',
   },
   mental: {
-    tiers: [{ label: '50 min session', price: '₹2,200', featured: true }],
+    tiers: [{ label: '60 min session', price: '₹2,200', featured: true }],
     note: 'Sports psychology and counselling.',
   },
   physiotherapy: {

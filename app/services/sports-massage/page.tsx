@@ -28,7 +28,7 @@ import {
 export const metadata: Metadata = {
   title: 'Sports Massage Mumbai | Deep Tissue & Gym | R3BOOT',
   description:
-    'Sports massage near you in Dadar. Physio-led deep tissue and gym recovery, not a spa. From ₹2,500. Evening slots after training. Book on WhatsApp today.',
+    'Sports massage near you in Dadar. Certified sports massage therapists for deep tissue and gym recovery, not a spa. From ₹2,500. Evening slots after training. Book on WhatsApp today.',
   keywords: [
     'sports massage mumbai',
     'sports massage dadar',
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Sports Massage Mumbai | Deep Tissue & Gym | R3BOOT',
     description:
-      'Physio-led sports massage at R3BOOT Dadar. Deep tissue and gym recovery, not spa relaxation. Book via WhatsApp.',
+      'Certified sports massage at R3BOOT Dadar. Deep tissue and gym recovery, not spa relaxation. Book via WhatsApp.',
     url: 'https://www.r3boot.in/services/sports-massage',
     type: 'website',
   },
@@ -208,7 +208,7 @@ export default function SportsMassagePage() {
 
         <div className="relative z-10 flex flex-1 flex-col justify-center px-12 lg:px-16 xl:px-20 max-w-[54%]">
           <p className="text-[#A78BFA] text-[11px] font-black tracking-[0.25em] uppercase mb-4">
-            Physio-Led&nbsp;&nbsp;•&nbsp;&nbsp;Dadar, Mumbai&nbsp;&nbsp;•&nbsp;&nbsp;Not a Spa
+            Certified&nbsp;&nbsp;•&nbsp;&nbsp;Dadar, Mumbai&nbsp;&nbsp;•&nbsp;&nbsp;Not a Spa
           </p>
 
           <h1 className="text-5xl lg:text-6xl xl:text-[4.25rem] font-black text-white tracking-tight leading-[1.04] mb-4">
@@ -218,7 +218,7 @@ export default function SportsMassagePage() {
           </h1>
 
           <p className="text-[16px] text-white/55 max-w-md leading-relaxed mb-7">
-            Physio-led sports massage in Dadar for gym load, deep tissue tightness, and race recovery. Not a spa.
+            Certified sports massage in Dadar for gym load, deep tissue tightness, and race recovery. Not a spa.
           </p>
 
           <div className="flex items-center gap-4">
@@ -256,7 +256,7 @@ export default function SportsMassagePage() {
           <div className="inline-flex items-center gap-2 bg-[#513394]/10 dark:bg-[#513394]/20 rounded-full px-4 py-2 mt-5 mb-4">
             <div className="w-1.5 h-1.5 rounded-full bg-[#513394] dark:bg-[#A78BFA]" />
             <span className="text-[#513394] dark:text-[#A78BFA] text-[11px] font-black tracking-[0.3em] uppercase">
-              Physio-Led · Dadar · Not a Spa
+              Certified · Dadar · Not a Spa
             </span>
           </div>
 
@@ -265,7 +265,7 @@ export default function SportsMassagePage() {
           </h2>
 
           <p className="text-base text-gray-500 dark:text-gray-400 leading-relaxed mb-6">
-            Physio-led sports massage in Dadar for gym load, deep tissue tightness, and race recovery. Not a spa.
+            Certified sports massage in Dadar for gym load, deep tissue tightness, and race recovery. Not a spa.
           </p>
 
           <MobileHeroTrust items={serviceTrustBadges['sports-massage']} />
@@ -290,6 +290,9 @@ export default function SportsMassagePage() {
               </dt>
               <dd className="text-sm sm:text-base font-bold text-gray-900 dark:text-white leading-snug">
                 ₹2,500 women · ₹3,500 men
+                <span className="block mt-1 text-xs font-semibold text-gray-600 dark:text-white/70">
+                  60-minute session
+                </span>
                 <Link
                   href="/blog/how-much-does-sports-massage-cost-in-mumbai"
                   className="block mt-1 text-xs font-semibold text-[#513394] dark:text-[#A78BFA] hover:underline underline-offset-4"
@@ -303,7 +306,7 @@ export default function SportsMassagePage() {
                 Approach
               </dt>
               <dd className="text-sm sm:text-base font-bold text-gray-900 dark:text-white leading-snug">
-                Physio-led, not spa
+                Certified masseuses, not spa
               </dd>
             </div>
             <div>
@@ -1038,7 +1041,7 @@ export default function SportsMassagePage() {
 
       <ServiceSchema
         serviceName="Sports Massage Mumbai"
-        description="Physio-led sports massage in Mumbai at R3BOOT Dadar. Clinical deep tissue, cupping and mobility for athletes and gym recovery. Not a spa. Book via WhatsApp."
+        description="Certified sports massage in Mumbai at R3BOOT Dadar. Deep tissue, cupping and mobility for athletes and gym recovery. Not a spa. 60-minute sessions. Book via WhatsApp."
         serviceUrl="https://www.r3boot.in/services/sports-massage"
       />
       <FAQSchema faqs={sportsMassageFaqs} />

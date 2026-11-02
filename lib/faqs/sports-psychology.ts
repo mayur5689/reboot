@@ -22,7 +22,7 @@ export const sportsPsychologyFaqs = [
   {
     question: 'What does a session look like?',
     answer:
-      'A typical session is about 50 minutes. It combines structured conversation with practical mental skills work: visualisation, focus techniques, self-talk, and goal setting. It is performance-focused and confidential, not open-ended traditional therapy.',
+      'A typical session is 60 minutes. It combines structured conversation with practical mental skills work: visualisation, focus techniques, self-talk, and goal setting. It is performance-focused and confidential, not open-ended traditional therapy.',
   },
   {
     question: 'How many sessions will I need?',

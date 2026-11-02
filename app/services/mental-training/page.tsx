@@ -291,7 +291,7 @@ export default async function SportsPsychologyPage() {
               <span className="text-[#513394] dark:text-[#8B5CF6]">R3BOOT</span>
             </h2>
             <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed">
-              A typical session is 50 minutes. Most programs run 4–8 sessions; deeper return-to-sport or performance blocks often extend to 8–12.
+              A typical session is 60 minutes. Most programs run 4–8 sessions; deeper return-to-sport or performance blocks often extend to 8–12.
             </p>
           </div>
 
