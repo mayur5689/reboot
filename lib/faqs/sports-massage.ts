@@ -12,7 +12,7 @@ export const sportsMassageFaqs = [
   {
     question: 'How much does a sports massage session cost in Mumbai at R3BOOT?',
     answer:
-      'Sports massage at R3BOOT Dadar is ₹3,500 for men and ₹2,500 for women. Sessions typically run 60 to 90 minutes and can include cupping and mobility work where indicated. Call or WhatsApp +91 97023 68612 to confirm current pricing and book.',
+      'Sports massage at R3BOOT Dadar is ₹3,500 for men and ₹2,500 for women. Sessions are 60 minutes and can include cupping and mobility work where indicated. Call or WhatsApp +91 97023 68612 to confirm current pricing and book.',
   },
   {
     question: 'How do I book a sports massage at R3BOOT Dadar?',
@@ -32,7 +32,7 @@ export const sportsMassageFaqs = [
   {
     question: 'What should I expect in my first sports massage session at R3BOOT?',
     answer:
-      'Your therapist reviews pain points, recent training or desk load, and does a quick movement screen. Treatment then targets what the assessment finds. Sessions typically last 60 to 90 minutes. You leave with a stiffness report on where tension is holding and what to prioritise next.',
+      'Your therapist reviews pain points, recent training or desk load, and does a quick movement screen. Treatment then targets what the assessment finds. Sessions are 60 minutes. You leave with a stiffness report on where tension is holding and what to prioritise next.',
   },
   {
     question: 'Is sports massage good for runners, gym goers, and desk-related stiffness?',

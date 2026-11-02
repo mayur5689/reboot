@@ -207,7 +207,7 @@ export const serviceTrustBadges: Record<string, TrustBadgeItem[]> = {
     googleReviewsBadge,
     {
       icon: 'clock',
-      value: '50 Min',
+      value: '60 Min',
       label: 'Focused Sessions',
       description: 'Quality time. Real results.',
     },
