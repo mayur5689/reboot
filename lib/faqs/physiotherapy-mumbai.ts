@@ -32,7 +32,7 @@ export const physiotherapyMumbaiFaqs = [
   {
     question: 'Can I combine physiotherapy with other treatments at R3BOOT?',
     answer:
-      'Yes. R3BOOT is an integrated recovery centre, physiotherapy, sports massage, clinical Pilates, and contrast therapy (ice bath and infrared sauna) are all available in the same building. Your physiotherapist can combine your session with sports massage or contrast therapy on the same visit for faster recovery. Many clients use this combination, particularly those with sports injuries and post-surgical cases.',
+      'Yes. R3BOOT is an integrated recovery centre, physiotherapy, sports massage, Pilates, and contrast therapy (ice bath and infrared sauna) are all available in the same building. Your physiotherapist can combine your session with sports massage or contrast therapy on the same visit for faster recovery. Many clients use this combination, particularly those with sports injuries and post-surgical cases.',
   },
   {
     question: 'Where is R3BOOT physiotherapy clinic in Mumbai?',

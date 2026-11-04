@@ -282,7 +282,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.85,
     },
 
-    // Clinical Pilates pain pages
+    // Pilates pain pages
     {
       url: `${BASE_URL}/back-pain-clinical-pilates-mumbai`,
       lastModified: new Date(),
@@ -338,7 +338,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: 'monthly',
       priority: 0.9,
     },
-    // Clinical Pilates location pages
+    // Pilates location pages
     {
       url: `${BASE_URL}/clinical-pilates-dadar`,
       lastModified: new Date(),

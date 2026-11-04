@@ -12,7 +12,7 @@ export default function LowerParelBusinessSchema() {
     alternateName: LOWER_PAREL_ALTERNATE_NAMES,
     url: SITE_URL,
     logo: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1773062628/R3boot_Logo_za7ymb.png',
-    description: 'R3boot Lower Parel. Clinical physiotherapy, contrast therapy (ice bath + infrared sauna), sports massage, clinical Pilates, and counselling in Lower Parel, Mumbai.',
+    description: 'R3boot Lower Parel. Clinical physiotherapy, contrast therapy (ice bath + infrared sauna), sports massage, Pilates, and counselling in Lower Parel, Mumbai.',
     telephone: '+919702368612',
     email: 'info.r3boot@gmail.com',
     address: {

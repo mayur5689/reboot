@@ -8,13 +8,13 @@ import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema'
 import { scoliosisPilatesFaqs } from '@/lib/faqs/scoliosis-pilates-mumbai'
 
 export const metadata: Metadata = {
-  title: 'Clinical Pilates Scoliosis Mumbai | Curve-Specific | R3BOOT Dadar',
+  title: 'Pilates Scoliosis Mumbai | Curve-Specific | R3BOOT Dadar',
   description:
-    'Clinical Pilates for scoliosis in Mumbai at R3BOOT Dadar. Curve-specific exercises, rotational breathing & postural retraining, physio-led. 5.0 ★ Google. Book via WhatsApp.',
+    'Pilates for scoliosis in Mumbai at R3BOOT Dadar. Curve-specific exercises, rotational breathing & postural retraining, physio-led. 5.0 ★ Google. Book via WhatsApp.',
   alternates: { canonical: '/scoliosis-pilates-mumbai' },
   keywords: [
     'pilates for scoliosis mumbai',
-    'clinical pilates scoliosis mumbai',
+    'pilates scoliosis mumbai',
     'scoliosis physiotherapy mumbai',
     'scoliosis exercises mumbai',
     'pilates scoliosis dadar',
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 const facts = [
   {
     title: 'Pilates does not correct structural scoliosis',
-    body: 'No exercise corrects a structural spinal curve. Anyone claiming this is wrong. What clinical Pilates does: reduces scoliosis-related pain, improves functional posture, trains asymmetric weakness patterns, and slows progression in curves where muscle imbalance is a contributing factor.',
+    body: 'No exercise corrects a structural spinal curve. Anyone claiming this is wrong. What Pilates does: reduces scoliosis-related pain, improves functional posture, trains asymmetric weakness patterns, and slows progression in curves where muscle imbalance is a contributing factor.',
   },
   {
     title: 'The exercise program must match your curve pattern',
@@ -37,7 +37,7 @@ const facts = [
   },
   {
     title: 'Adolescent scoliosis needs monitoring during growth',
-    body: 'Curves in adolescents are dynamic | growth spurts can cause rapid progression. Clinical Pilates during adolescence is a supported intervention while curves are being monitored, often alongside orthopaedic review.',
+    body: 'Curves in adolescents are dynamic | growth spurts can cause rapid progression. Pilates during adolescence is a supported intervention while curves are being monitored, often alongside orthopaedic review.',
   },
   {
     title: 'Adult scoliosis is about pain and function | not curve reduction',
@@ -52,7 +52,7 @@ export default function ScoliosisPilatesMumbaiPage() {
       <section className="relative h-[70vh] flex items-end overflow-hidden">
         <Image
           src="https://res.cloudinary.com/dj7bot2uc/image/upload/v1777793697/Clinical_Pillates_Image_3_pil8g7.jpg"
-          alt="Clinical Pilates for scoliosis Mumbai – R3BOOT Dadar"
+          alt="Pilates for scoliosis Mumbai – R3BOOT Dadar"
           fill
           className="object-cover"
           priority
@@ -65,7 +65,7 @@ export default function ScoliosisPilatesMumbaiPage() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
             </div>
-            <span className="font-bold tracking-wider text-sm">CLINICAL PILATES MUMBAI</span>
+            <span className="font-bold tracking-wider text-sm">PILATES MUMBAI</span>
           </Link>
           <div className="max-w-4xl">
             <div className="flex items-center gap-3 text-white/70 mb-4">
@@ -74,7 +74,7 @@ export default function ScoliosisPilatesMumbaiPage() {
               <div className="w-1.5 h-1.5 rounded-full bg-white/50" />
             </div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white mb-2 tracking-tighter leading-[1.05]">
-              Clinical Pilates for Scoliosis in Mumbai
+              Pilates for Scoliosis in Mumbai
             </h1>
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl leading-relaxed font-medium mt-4">
               Curve-specific programs for adolescent and adult scoliosis, physiotherapist-led at R3BOOT, Dadar East.
@@ -89,12 +89,12 @@ export default function ScoliosisPilatesMumbaiPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-start">
             <div className="lg:col-span-7">
               <h2 className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white mb-8 tracking-tight">
-                What Clinical Pilates <span className="text-[#513394] dark:text-[#8B5CF6]">Actually Does for Scoliosis</span>
+                What Pilates <span className="text-[#513394] dark:text-[#8B5CF6]">Actually Does for Scoliosis</span>
               </h2>
               <div className="prose prose-xl text-gray-600 dark:text-gray-400 dark:prose-invert max-w-none leading-relaxed space-y-6">
                 <p>
                   Scoliosis is a lateral curvature of the spine, most commonly identified in adolescence, though adult
-                  scoliosis is increasingly recognised as a source of back pain and postural dysfunction. Clinical Pilates
+                  scoliosis is increasingly recognised as a source of back pain and postural dysfunction. Pilates
                   is a first-line physiotherapy approach for scoliosis management, recommended by physiotherapists,
                   orthopaedic surgeons, and the Scientific Exercise Approach to Scoliosis (SEAS) framework used globally.
                 </p>
@@ -225,7 +225,7 @@ export default function ScoliosisPilatesMumbaiPage() {
               Curve-Specific Pilates. <span className="text-white/50">Not a Class.</span>
             </h2>
             <p className="text-xl text-white/70 mb-12 leading-relaxed font-medium max-w-3xl mx-auto">
-              Clinical Pilates for scoliosis at R3BOOT, Dadar East. Physiotherapist-led. One-to-one. Designed for your curve.
+              Pilates for scoliosis at R3BOOT, Dadar East. Physiotherapist-led. One-to-one. Designed for your curve.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
               <a href="tel:+919702368612" className="w-full sm:w-auto bg-white text-[#513394] font-black px-10 py-5 rounded-full transition-all hover:scale-105 shadow-2xl text-lg tracking-wide">Call to Book</a>
@@ -237,14 +237,14 @@ export default function ScoliosisPilatesMumbaiPage() {
       </section>
 
       <ServiceSchema
-        serviceName="Clinical Pilates for Scoliosis in Mumbai"
-        description="Clinical Pilates for scoliosis in Mumbai at R3BOOT, Dadar East. Physiotherapist-designed, curve-specific programs for adolescent and adult scoliosis management."
+        serviceName="Pilates for Scoliosis in Mumbai"
+        description="Pilates for scoliosis in Mumbai at R3BOOT, Dadar East. Physiotherapist-designed, curve-specific programs for adolescent and adult scoliosis management."
         serviceUrl="https://www.r3boot.in/scoliosis-pilates-mumbai"
       />
       <FAQSchema faqs={scoliosisPilatesFaqs} />
       <BreadcrumbSchema items={[
         { name: 'Home', url: '/' },
-        { name: 'Clinical Pilates Mumbai', url: '/services/clinical-pilates' },
+        { name: 'Pilates Mumbai', url: '/services/clinical-pilates' },
         { name: 'Scoliosis', url: '/scoliosis-pilates-mumbai' },
       ]} />
     </main>

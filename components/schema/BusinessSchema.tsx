@@ -12,7 +12,7 @@ export default function BusinessSchema() {
     alternateName: DADAR_ALTERNATE_NAMES,
     url: SITE_URL,
     logo: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1773062628/R3boot_Logo_za7ymb.png',
-    description: "Dadar's integrated recovery centre. Clinical physiotherapy, contrast therapy (ice bath + infrared sauna), sports massage, clinical Pilates, and aquatic rehab in Dadar East, Mumbai.",
+    description: "Dadar's integrated recovery centre. Clinical physiotherapy, contrast therapy (ice bath + infrared sauna), sports massage, Pilates, and aquatic rehab in Dadar East, Mumbai.",
     telephone: '+919702368612',
     email: 'info.r3boot@gmail.com',
     address: {

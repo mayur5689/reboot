@@ -218,7 +218,7 @@ const clusterLinks = [
   { label: 'Physiotherapy Lower Parel', href: '/physiotherapy-lower-parel', eyebrow: 'Same studio' },
   { label: 'Sports Massage Lower Parel', href: '/sports-massage-lower-parel', eyebrow: 'Recovery' },
   { label: 'Contrast Therapy Lower Parel', href: '/contrast-therapy-lower-parel', eyebrow: 'Recovery' },
-  { label: 'Clinical Pilates Mumbai', href: '/services/clinical-pilates', eyebrow: 'Injury programs' },
+  { label: 'Pilates Mumbai', href: '/services/clinical-pilates', eyebrow: 'Injury programs' },
 ]
 
 function PhoneIcon({ className }: { className?: string }) {
@@ -613,7 +613,7 @@ export default function PilatesLowerParelPage() {
               {
                 label: 'Returning After Time Off',
                 tag: 'RETURN //',
-                description: 'Easing back onto reformer or mat after a break near work. Injury pathways hand off to our Clinical Pilates programs.',
+                description: 'Easing back onto reformer or mat after a break near work. Injury pathways hand off to our Pilates programs.',
                 image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1785802981/CONDITION-SPECIFIC-POST-SURGERY_ytzaon.webp',
                 points: ['Gradual loading', 'Clear next steps', 'Injury handoff'],
               },

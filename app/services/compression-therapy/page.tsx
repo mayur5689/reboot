@@ -63,6 +63,33 @@ const rebootReachPoints = [
   },
 ]
 
+const normatecBenefits = [
+  {
+    title: 'Supports circulation',
+    body: 'Sequential pulses move from the extremities toward the core, designed to increase blood and fluid movement through tired limbs.',
+  },
+  {
+    title: 'Reduces swelling',
+    body: 'Overlapping chambers (5 zones in legs and arms, 2 in hips) work fluid out of swollen or heavy tissue without leaving pressure gaps.',
+  },
+  {
+    title: 'Eases muscle fatigue and soreness',
+    body: 'Studies of pneumatic compression report reduced muscle fatigue and perceived soreness after hard exercise, helping you feel ready sooner.',
+  },
+  {
+    title: 'Improves range of motion',
+    body: 'Manufacturer-cited studies report increases in range of motion after use, so stiff legs feel looser before the next session.',
+  },
+  {
+    title: 'Targets stuck areas with ZoneBoost',
+    body: 'Add time and pressure to a single zone, such as calves, quads, or a hip pocket, without raising the whole session to maximum.',
+  },
+  {
+    title: 'Adjustable for the day',
+    body: '7 pressure levels with Bluetooth app control. Lighter for warm-up (15 to 20 minutes before training), firmer and longer after (20 to 60 minutes).',
+  },
+]
+
 const processSteps = [
   {
     number: '01',
@@ -438,6 +465,42 @@ export default function CompressionTherapyPage() {
               ))}
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* ─────────────────────────────────────────────
+          NORMATEC 3 BENEFITS
+      ───────────────────────────────────────────── */}
+      <section className="py-16 sm:py-20 lg:py-28 bg-[#F8F9FA] dark:bg-[#0D0D0D]">
+        <div className="container mx-auto px-5 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mb-10 lg:mb-14">
+            <span className="text-[11px] font-black tracking-[0.3em] text-[#513394] dark:text-[#A78BFA] uppercase mb-4 block">
+              NORMATEC COMPRESSION BENEFITS //
+            </span>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 dark:text-white tracking-tight leading-tight mb-4">
+              What Normatec Compression{' '}
+              <span className="text-[#513394] dark:text-[#8B5CF6]">does for your recovery.</span>
+            </h2>
+            <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed">
+              Normatec Compression is a dynamic air compression system. Its patented Pulse technology is designed to increase circulation, revive muscles, and reduce swelling.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {normatecBenefits.map((b) => (
+              <div
+                key={b.title}
+                className="p-6 rounded-2xl bg-white dark:bg-white/[0.04] border border-gray-100 dark:border-white/[0.06] hover:border-[#513394]/30 dark:hover:border-[#513394]/40 transition-all duration-300"
+              >
+                <h3 className="font-black text-gray-900 dark:text-white text-[15px] mb-2 leading-snug">{b.title}</h3>
+                <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">{b.body}</p>
+              </div>
+            ))}
+          </div>
+
+          <p className="mt-8 text-xs text-gray-500 dark:text-gray-400 leading-relaxed max-w-3xl">
+            Benefits are drawn from manufacturer specifications and published research on intermittent pneumatic compression, which shows small to moderate effects on soreness and perceived recovery. Results vary by person. Compression is a recovery tool, not a treatment for injury or medical conditions, and every first visit is screened for contraindications.
+          </p>
         </div>
       </section>
 

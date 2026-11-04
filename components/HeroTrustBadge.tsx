@@ -298,7 +298,7 @@ export const serviceTrustBadges: Record<string, TrustBadgeItem[]> = {
     {
       icon: 'user',
       value: 'Physio-Led',
-      label: 'Clinical Pilates',
+      label: 'Pilates',
       description: 'Prescribed, not generic classes.',
     },
     {

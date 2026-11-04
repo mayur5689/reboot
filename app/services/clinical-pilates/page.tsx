@@ -17,16 +17,16 @@ import { ComparisonSection } from './ComparisonSection'
 import { ClipboardCheck, Target, Dumbbell, Stethoscope, TrendingUp, Activity, Zap, Trophy, Clock, User } from 'lucide-react'
 
 export const metadata: Metadata = {
-    title: 'Clinical Pilates in Mumbai | Spine & Core Rehab at R3BOOT Dadar',
+    title: 'Pilates in Mumbai | Spine & Core Rehab at R3BOOT Dadar',
     description:
-        'Clinical Pilates by certified physiotherapists at R3BOOT Dadar, Mumbai. Reformer and mat-based programs for back pain, scoliosis, post-surgery rehab, and athletic performance.',
+        'Pilates by certified physiotherapists at R3BOOT Dadar, Mumbai. Reformer and mat-based programs for back pain, scoliosis, post-surgery rehab, and athletic performance.',
     keywords: [
-        'clinical pilates mumbai',
-        'clinical pilates dadar',
+        'pilates mumbai',
+        'pilates dadar',
         'physiotherapy pilates mumbai',
         'reformer pilates mumbai',
         'pilates for back pain mumbai',
-        'clinical pilates rehabilitation',
+        'pilates rehabilitation',
     ],
     alternates: { canonical: '/services/clinical-pilates' },
 }
@@ -40,11 +40,11 @@ const heroSlides = [
     },
     {
         src: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1777793759/Clinical_Pillates_Image_4_rluyr1.png',
-        alt: 'Reformer Clinical Pilates session at R3BOOT Mumbai',
+        alt: 'Reformer Pilates session at R3BOOT Mumbai',
     },
     {
         src: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1777793697/Clinical_Pillates_Image_3_pil8g7.jpg',
-        alt: 'Mat-based Clinical Pilates session at R3BOOT Mumbai',
+        alt: 'Mat-based Pilates session at R3BOOT Mumbai',
     },
 ]
 
@@ -139,7 +139,7 @@ export default function ClinicalPilatesPage() {
                     </p>
 
                     <h1 className="text-5xl lg:text-6xl xl:text-[4.25rem] font-black text-white tracking-tight leading-[1.04] mb-4">
-                        Clinical Pilates<br />
+                        Pilates<br />
                         in <span className="text-[#A78BFA]">Mumbai</span>
                     </h1>
 
@@ -192,7 +192,7 @@ export default function ClinicalPilatesPage() {
 
                     {/* H1 */}
                     <h2 className="text-[2rem] font-black text-gray-900 dark:text-white tracking-tight leading-[1.1] mb-3">
-                        Clinical Pilates in{' '}
+                        Pilates in{' '}
                         <span className="text-[#513394] dark:text-[#A78BFA]">Mumbai</span>
                     </h2>
 
@@ -274,7 +274,7 @@ export default function ClinicalPilatesPage() {
             </section>
 
 
-            {/* ─── SIGNS YOU NEED CLINICAL PILATES — accordion + image crossfade ─── */}
+            {/* ─── SIGNS YOU NEED PILATES — accordion + image crossfade ─── */}
             <PainPointsSection />
 
             {/* ─── METHODOLOGY (image left, techniques right) ─── */}
@@ -289,7 +289,7 @@ export default function ClinicalPilatesPage() {
                             <span className="w-8 h-px bg-[#513394]/40 dark:bg-[#A78BFA]/40" />
                         </div>
                         <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 dark:text-white tracking-tight mb-4 leading-tight">
-                            How We Deliver <span className="text-[#513394] dark:text-[#8B5CF6]">Clinical Pilates at R3BOOT</span>
+                            How We Deliver <span className="text-[#513394] dark:text-[#8B5CF6]">Pilates at R3BOOT</span>
                         </h2>
                         <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed">
                             Reformer and mat Pilates, chosen for your body, not a class template.
@@ -302,7 +302,7 @@ export default function ClinicalPilatesPage() {
                         <div className="relative rounded-[2rem] sm:rounded-[2.5rem] overflow-hidden aspect-[4/5] w-full shadow-2xl lg:sticky lg:top-28">
                             <Image
                                 src="https://res.cloudinary.com/dj7bot2uc/image/upload/v1777793759/Clinical_Pillates_Image_4_rluyr1.png"
-                                alt="Reformer Clinical Pilates – R3BOOT Mumbai physiotherapist-led"
+                                alt="Reformer Pilates – R3BOOT Mumbai physiotherapist-led"
                                 fill
                                 className="object-cover"
                             />
@@ -372,7 +372,7 @@ export default function ClinicalPilatesPage() {
                                 {[
                                     {
                                         icon: Dumbbell,
-                                        title: 'Reformer-Based Clinical Pilates',
+                                        title: 'Reformer-Based Pilates',
                                         body: 'Spring resistance on the reformer allows precise loading graduated to your clinical tolerance. Used widely in post-surgical rehab and for sports performance work requiring resistance-based core loading.',
                                         light: '#513394', dark: '#A78BFA',
                                         bgLight: 'rgba(81,51,148,0.08)', bgDark: 'rgba(167,139,250,0.14)',
@@ -380,7 +380,7 @@ export default function ClinicalPilatesPage() {
                                     },
                                     {
                                         icon: Activity,
-                                        title: 'Mat-Based Clinical Pilates',
+                                        title: 'Mat-Based Pilates',
                                         body: 'Bodyweight precision work targeting deep stabilisers of the spine and pelvis. Core to managing lower back pain, scoliosis, and posture correction. Exercises are taught for home practice too.',
                                         light: '#0D9488', dark: '#2DD4BF',
                                         bgLight: 'rgba(13,148,136,0.08)', bgDark: 'rgba(45,212,191,0.14)',
@@ -397,7 +397,7 @@ export default function ClinicalPilatesPage() {
                                     {
                                         icon: Trophy,
                                         title: 'Sport-Specific Movement Retraining',
-                                        body: 'For athletes, clinical Pilates trains movement patterns specific to your sport — batsmen with lower back asymmetry, runners with hip drop, swimmers with shoulder instability.',
+                                        body: 'For athletes, Pilates trains movement patterns specific to your sport — batsmen with lower back asymmetry, runners with hip drop, swimmers with shoulder instability.',
                                         light: '#0369A1', dark: '#38BDF8',
                                         bgLight: 'rgba(3,105,161,0.08)', bgDark: 'rgba(56,189,248,0.14)',
                                         borderLight: 'rgba(3,105,161,0.35)', borderDark: 'rgba(56,189,248,0.45)',
@@ -447,7 +447,7 @@ export default function ClinicalPilatesPage() {
                 </div>
             </section>
 
-            {/* ─── COMPARISON: Clinical Pilates vs Group Class ─── */}
+            {/* ─── COMPARISON: Pilates vs Group Class ─── */}
             <ComparisonSection />
 
             {/* ─── WHO IS IT FOR ─── */}
@@ -627,7 +627,7 @@ export default function ClinicalPilatesPage() {
                                 <span className="text-[#A78BFA]">Pain less.</span>
                             </h2>
                             <p className="text-white/55 text-[13px] leading-relaxed mb-5">
-                                Clinical Pilates at R3BOOT starts with an assessment, not a class signup. Your first session tells us what you need.
+                                Pilates at R3BOOT starts with an assessment, not a class signup. Your first session tells us what you need.
                             </p>
                             <div className="flex flex-col gap-3">
                                 <a
@@ -667,7 +667,7 @@ export default function ClinicalPilatesPage() {
                         <span className="text-white/45">Pain Less.</span>
                     </h2>
                     <p className="text-lg text-white/65 mb-10 max-w-xl mx-auto leading-relaxed">
-                        Clinical Pilates at R3BOOT starts with an assessment, not a class signup. Your first session tells us what you need. Everything after is built around that.
+                        Pilates at R3BOOT starts with an assessment, not a class signup. Your first session tells us what you need. Everything after is built around that.
                     </p>
                     <div className="flex flex-row gap-4 justify-center">
                         <a
@@ -747,7 +747,7 @@ export default function ClinicalPilatesPage() {
                     <Link href="/clinical-pilates-dadar" className="group flex items-center justify-between p-6 bg-gray-50 dark:bg-white/5 rounded-[2rem] border border-gray-100 dark:border-white/10 hover:border-[#513394]/40 transition-all">
                         <div>
                             <p className="text-xs font-black tracking-widest text-[#513394] uppercase mb-1">Dadar</p>
-                            <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-[#513394] transition-colors">Clinical Pilates in Dadar</h3>
+                            <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-[#513394] transition-colors">Pilates in Dadar</h3>
                             <span className="text-sm text-gray-500 dark:text-gray-400 mt-1 inline-block">Studio sessions at R3BOOT Dadar East →</span>
                         </div>
                         <svg className="w-6 h-6 text-[#513394] opacity-0 group-hover:opacity-100 transition-opacity shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
@@ -767,7 +767,7 @@ export default function ClinicalPilatesPage() {
                     <Link href="/clinical-pilates-bandra" className="group flex items-center justify-between p-6 bg-gray-50 dark:bg-white/5 rounded-[2rem] border border-gray-100 dark:border-white/10 hover:border-[#513394]/40 transition-all">
                         <div>
                             <p className="text-xs font-black tracking-widest text-[#513394] uppercase mb-1">Bandra</p>
-                            <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-[#513394] transition-colors">Clinical Pilates near Bandra</h3>
+                            <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-[#513394] transition-colors">Pilates near Bandra</h3>
                             <span className="text-sm text-gray-500 dark:text-gray-400 mt-1 inline-block">Assessment-first sessions for Bandra and Khar →</span>
                         </div>
                         <svg className="w-6 h-6 text-[#513394] opacity-0 group-hover:opacity-100 transition-opacity shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
@@ -782,8 +782,8 @@ export default function ClinicalPilatesPage() {
             ───────────────────────────────────────────── */}
 
             <ServiceSchema
-                serviceName="Clinical Pilates in Mumbai"
-                description="Physiotherapist-led clinical Pilates at R3BOOT Dadar, Mumbai. Reformer and mat-based programs for back pain, scoliosis, post-surgery rehab, and sports performance."
+                serviceName="Pilates in Mumbai"
+                description="Physiotherapist-led Pilates at R3BOOT Dadar, Mumbai. Reformer and mat-based programs for back pain, scoliosis, post-surgery rehab, and sports performance."
                 serviceUrl="https://r3boot.in/services/clinical-pilates"
             />
             <FAQSchema faqs={clinicalPilatesMumbaiFaqs} />

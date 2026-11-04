@@ -8,17 +8,17 @@ import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema'
 import { backPainClinicalPilatesFaqs } from '@/lib/faqs/back-pain-clinical-pilates-mumbai'
 
 export const metadata: Metadata = {
-  title: 'Clinical Pilates for Back Pain Mumbai | Physio-Led | R3BOOT',
+  title: 'Pilates for Back Pain Mumbai | Physio-Led | R3BOOT',
   description:
-    'Clinical Pilates for back pain at R3BOOT Mumbai. Physio-led programs for L4-L5 disc & lumbar instability, assessment-first, not a class. 5.0 ★ Google. Book via WhatsApp.',
+    'Pilates for back pain at R3BOOT Mumbai. Physio-led programs for L4-L5 disc & lumbar instability, assessment-first, not a class. 5.0 ★ Google. Book via WhatsApp.',
   alternates: { canonical: '/back-pain-clinical-pilates-mumbai' },
   keywords: [
-    'clinical pilates for back pain mumbai',
+    'pilates for back pain mumbai',
     'pilates for back pain mumbai',
     'pilates for L4 L5 disc mumbai',
     'pilates lower back pain dadar',
     'physiotherapy pilates back pain mumbai',
-    'clinical pilates lumbar pain mumbai',
+    'pilates lumbar pain mumbai',
   ],
 }
 
@@ -62,7 +62,7 @@ export default function BackPainClinicalPilatesMumbaiPage() {
       <section className="relative h-[70vh] flex items-end overflow-hidden">
         <Image
           src="https://res.cloudinary.com/dj7bot2uc/image/upload/v1777793706/Clinical_Pillates_Image_2_jc05pa.png"
-          alt="Clinical Pilates for back pain Mumbai – R3BOOT Dadar"
+          alt="Pilates for back pain Mumbai – R3BOOT Dadar"
           fill
           className="object-cover"
           priority
@@ -75,7 +75,7 @@ export default function BackPainClinicalPilatesMumbaiPage() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
             </div>
-            <span className="font-bold tracking-wider text-sm">CLINICAL PILATES MUMBAI</span>
+            <span className="font-bold tracking-wider text-sm">PILATES MUMBAI</span>
           </Link>
           <div className="max-w-4xl">
             <div className="flex items-center gap-3 text-white/70 mb-4">
@@ -84,7 +84,7 @@ export default function BackPainClinicalPilatesMumbaiPage() {
               <div className="w-1.5 h-1.5 rounded-full bg-white/50" />
             </div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white mb-2 tracking-tighter leading-[1.05]">
-              Clinical Pilates for Back Pain in Mumbai
+              Pilates for Back Pain in Mumbai
             </h1>
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl leading-relaxed font-medium mt-4">
               Physio-led programs for L4-L5 disc, lumbar instability, and chronic back pain. Dadar East.
@@ -99,14 +99,14 @@ export default function BackPainClinicalPilatesMumbaiPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-start">
             <div className="lg:col-span-7">
               <h2 className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white mb-8 tracking-tight">
-                Is Clinical Pilates Good for <span className="text-[#513394] dark:text-[#8B5CF6]">Back Pain?</span>
+                Is Pilates Good for <span className="text-[#513394] dark:text-[#8B5CF6]">Back Pain?</span>
               </h2>
               <div className="prose prose-xl text-gray-600 dark:text-gray-400 dark:prose-invert max-w-none leading-relaxed space-y-6">
                 <p>
-                  Yes. Research supports clinical Pilates for chronic lower back pain, especially after the first flare settles.
+                  Yes. Research supports Pilates for chronic lower back pain, especially after the first flare settles.
                 </p>
                 <p>
-                  Most lasting back pain is a control problem, not a stretch problem. Deep muscles (multifidus, transversus abdominis, pelvic floor) stop working well after injury. Stretching and rest do not rebuild them. Clinical Pilates does.
+                  Most lasting back pain is a control problem, not a stretch problem. Deep muscles (multifidus, transversus abdominis, pelvic floor) stop working well after injury. Stretching and rest do not rebuild them. Pilates does.
                 </p>
                 <p>
                   At R3BOOT Dadar East, Dr. Hiral Parikh (BPT, 15+ years) and Dr. Vaishali Vijay Rauniyar (BPT, 4+ years) write your plan from a physio assessment. Your spine problem decides the exercises.
@@ -119,14 +119,14 @@ export default function BackPainClinicalPilatesMumbaiPage() {
                   <li>Post-fusion rehab</li>
                 </ul>
                 <p>
-                  A group class uses one routine for every back. Clinical Pilates does not.
+                  A group class uses one routine for every back. Pilates does not.
                 </p>
               </div>
 
               <div className="mt-20">
                 <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-10 flex items-center gap-4">
                   <span className="w-12 h-[2px] bg-[#513394] dark:bg-[#8B5CF6]" />
-                  SPINE CONDITIONS WE TREAT WITH CLINICAL PILATES
+                  SPINE CONDITIONS WE TREAT WITH PILATES
                 </h3>
                 <div className="space-y-0 border border-gray-100 dark:border-white/5 rounded-[2rem] overflow-hidden">
                   {spineConditions.map((item, idx) => (
@@ -254,13 +254,13 @@ export default function BackPainClinicalPilatesMumbaiPage() {
             <div className="text-center mb-12">
               <span className="text-[11px] font-black tracking-[0.3em] text-[#513394] dark:text-[#A78BFA] uppercase mb-4 block">DADAR, MUMBAI //</span>
               <h2 className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white tracking-tight mb-6">
-                Clinical Pilates for Back Pain, <span className="text-[#513394] dark:text-[#8B5CF6]">Dadar East Clinic</span>
+                Pilates for Back Pain, <span className="text-[#513394] dark:text-[#8B5CF6]">Dadar East Clinic</span>
               </h2>
               <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed max-w-3xl mx-auto">
                 Palai Plaza, Dadar East. Five minutes from Dadar Central Line station.
               </p>
               <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed max-w-3xl mx-auto mt-4">
-                Clinical Pilates, physiotherapy, sports massage, ice bath, and contrast therapy sit in one clinic. People travel from Parel, Matunga, Sion, Worli, Lower Parel, and Bandra for that setup.
+                Pilates, physiotherapy, sports massage, ice bath, and contrast therapy sit in one clinic. People travel from Parel, Matunga, Sion, Worli, Lower Parel, and Bandra for that setup.
               </p>
             </div>
             <div className="bg-[#1A1A1A] rounded-[2rem] p-8 lg:p-10 text-white">
@@ -290,7 +290,7 @@ export default function BackPainClinicalPilatesMumbaiPage() {
           <p className="text-xs font-black tracking-[0.3em] text-[#513394] dark:text-[#A78BFA] uppercase mb-6">ALSO AT R3BOOT //</p>
           <div className="flex flex-wrap gap-4">
             {[
-              { label: 'Clinical Pilates Mumbai', href: '/services/clinical-pilates' },
+              { label: 'Pilates Mumbai', href: '/services/clinical-pilates' },
               { label: 'Physiotherapy Dadar', href: '/physiotherapy-dadar-mumbai' },
               { label: 'Sports Massage for Back Pain', href: '/back-pain-sports-massage-mumbai' },
               { label: 'Scoliosis Pilates Mumbai', href: '/scoliosis-pilates-mumbai' },
@@ -313,7 +313,7 @@ export default function BackPainClinicalPilatesMumbaiPage() {
               Stop Managing Back Pain. <span className="text-white/50">Rehabilitate It.</span>
             </h2>
             <p className="text-xl text-white/70 mb-12 leading-relaxed font-medium max-w-3xl mx-auto">
-              Clinical Pilates for back pain at R3BOOT, Dadar East. Assessment-first. Diagnosis-specific. Physiotherapist-led.
+              Pilates for back pain at R3BOOT, Dadar East. Assessment-first. Diagnosis-specific. Physiotherapist-led.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
               <a href="tel:+919702368612" className="w-full sm:w-auto bg-white text-[#513394] font-black px-10 py-5 rounded-full transition-all hover:scale-105 shadow-2xl text-lg tracking-wide">Call to Book</a>
@@ -325,14 +325,14 @@ export default function BackPainClinicalPilatesMumbaiPage() {
       </section>
 
       <ServiceSchema
-        serviceName="Clinical Pilates for Back Pain in Mumbai"
-        description="Clinical Pilates for back pain in Mumbai at R3BOOT, Dadar East. Physiotherapist-led programs for L4-L5 disc, lumbar instability, facet joint pain, and post-surgical spinal rehabilitation."
+        serviceName="Pilates for Back Pain in Mumbai"
+        description="Pilates for back pain in Mumbai at R3BOOT, Dadar East. Physiotherapist-led programs for L4-L5 disc, lumbar instability, facet joint pain, and post-surgical spinal rehabilitation."
         serviceUrl="https://www.r3boot.in/back-pain-clinical-pilates-mumbai"
       />
       <FAQSchema faqs={backPainClinicalPilatesFaqs} />
       <BreadcrumbSchema items={[
         { name: 'Home', url: '/' },
-        { name: 'Clinical Pilates Mumbai', url: '/services/clinical-pilates' },
+        { name: 'Pilates Mumbai', url: '/services/clinical-pilates' },
         { name: 'Back Pain', url: '/back-pain-clinical-pilates-mumbai' },
       ]} />
     </main>

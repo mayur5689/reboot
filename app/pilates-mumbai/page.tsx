@@ -216,7 +216,7 @@ const clusterLinks = [
   { label: 'Pilates Lower Parel', href: '/pilates-lower-parel', eyebrow: 'Lower Parel studio' },
   { label: 'Reformer Pilates Mumbai', href: '/services/clinical-pilates', eyebrow: 'Equipment' },
   { label: 'Reformer Pilates Lower Parel', href: '/reformer-pilates-lower-parel', eyebrow: 'Equipment · LP' },
-  { label: 'Clinical Pilates Mumbai', href: '/services/clinical-pilates', eyebrow: 'Injury programs' },
+  { label: 'Pilates Mumbai', href: '/services/clinical-pilates', eyebrow: 'Injury programs' },
   { label: 'Pilates for Back Pain', href: '/back-pain-clinical-pilates-mumbai', eyebrow: 'Condition' },
   { label: 'Physiotherapy Dadar', href: '/physiotherapy-dadar-mumbai', eyebrow: 'Related care' },
 ]
@@ -613,7 +613,7 @@ export default function PilatesMumbaiPage() {
               {
                 label: 'Returning After Time Off',
                 tag: 'RETURN //',
-                description: 'Easing back onto reformer or mat after a break. For dedicated injury or post-surgery pathways, we hand you to our Clinical Pilates programs.',
+                description: 'Easing back onto reformer or mat after a break. For dedicated injury or post-surgery pathways, we hand you to our Pilates programs.',
                 image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1790348112/SPORT___Gym_Sport_Recovery_sptc8j.webp',
                 points: ['Gradual loading', 'Clear next steps', 'Injury handoff'],
               },

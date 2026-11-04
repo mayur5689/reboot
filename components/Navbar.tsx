@@ -325,7 +325,7 @@ export default function Navbar() {
 function getServiceIcon(title: string) {
   switch (title) {
     case "Aqua Therapy": return <WaterIcon />;
-    case "Clinical Pilates": return <PilatesIcon />;
+    case "Pilates": return <PilatesIcon />;
     case "Contrast Therapy": return <ContrastIcon />;
     case "Compression Therapy": return <CompressionIcon />;
     case "Sports Massage": return <MassageIcon />;

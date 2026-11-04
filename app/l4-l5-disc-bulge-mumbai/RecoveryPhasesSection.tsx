@@ -34,7 +34,7 @@ const PHASES = [
   {
     num: '03',
     title: 'Rebuild strength (weeks 6–12+)',
-    body: 'Hip and core strengthening, return-to-desk and return-to-gym progressions, and a flare-up plan for when pain returns. Clinical Pilates often joins here for deep spinal control. Most people feel significantly better — many return to full activity.',
+    body: 'Hip and core strengthening, return-to-desk and return-to-gym progressions, and a flare-up plan for when pain returns. Pilates often joins here for deep spinal control. Most people feel significantly better — many return to full activity.',
     circleGradient: 'radial-gradient(circle at 38% 38%, #8B2510 0%, #5A1208 60%, #2E0804 100%)',
     glowRgba: '192, 39, 26',
     borderStop1: 'rgba(255,115,64,0.45)',

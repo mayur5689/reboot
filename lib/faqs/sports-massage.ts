@@ -52,7 +52,7 @@ export const sportsMassageFaqs = [
   {
     question: 'Can I combine sports massage with physiotherapy or contrast therapy at R3BOOT?',
     answer:
-      'Yes. R3BOOT integrates sports massage with physiotherapy, clinical Pilates, aqua therapy, and contrast therapy under one roof. Many clients book massage with ice bath or physio on the same visit. Mention this when booking so sessions can be sequenced correctly.',
+      'Yes. R3BOOT integrates sports massage with physiotherapy, Pilates, aqua therapy, and contrast therapy under one roof. Many clients book massage with ice bath or physio on the same visit. Mention this when booking so sessions can be sequenced correctly.',
   },
   {
     question: 'Is gym massage the same as sports massage at R3BOOT?',

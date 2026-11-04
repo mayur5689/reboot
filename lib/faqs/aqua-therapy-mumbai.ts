@@ -52,7 +52,7 @@ export const aquaTherapyMumbaiFaqs = [
   {
     question: 'Can I combine aqua therapy with other services at R3BOOT?',
     answer:
-      'Yes, and this is often how we see the best outcomes. Aqua therapy pairs well with land-based physiotherapy for progressive rehabilitation, sports massage for muscle recovery between sessions, and clinical pilates for core stability as you return to activity. Our physiotherapy team coordinates your program across services so there is no duplication or conflicting load.',
+      'Yes, and this is often how we see the best outcomes. Aqua therapy pairs well with land-based physiotherapy for progressive rehabilitation, sports massage for muscle recovery between sessions, and pilates for core stability as you return to activity. Our physiotherapy team coordinates your program across services so there is no duplication or conflicting load.',
   },
   {
     question: 'How much does aqua therapy cost at R3BOOT Mumbai?',

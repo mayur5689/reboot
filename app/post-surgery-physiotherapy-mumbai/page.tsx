@@ -507,7 +507,7 @@ export default function PostSurgeryPhysiotherapyMumbaiPage() {
                   href: '/services/contrast-therapy',
                 },
                 {
-                  title: 'Clinical Pilates',
+                  title: 'Pilates',
                   desc: 'Supervised reformer Pilates designed specifically for post-surgical patients, not a generic class. Core stability, proprioception, and movement retraining. Appropriate from Phase 2 for spinal, hip, and knee surgery.',
                   href: '/post-surgery-pilates-mumbai',
                 },
@@ -554,7 +554,7 @@ export default function PostSurgeryPhysiotherapyMumbaiPage() {
               { label: 'Physiotherapy for Knee Pain', href: '/services/physiotherapy/knee-pain' },
               { label: 'Physiotherapy for Shoulder Pain', href: '/services/physiotherapy/shoulder-pain' },
               { label: 'Sports Injury Physiotherapy Dadar', href: '/services/physiotherapy/sports-injuries' },
-              { label: 'Post-Surgery Clinical Pilates', href: '/post-surgery-pilates-mumbai' },
+              { label: 'Post-Surgery Pilates', href: '/post-surgery-pilates-mumbai' },
               { label: 'Contrast Therapy Mumbai', href: '/services/contrast-therapy' },
               { label: 'Physiotherapy for Back Pain', href: '/services/physiotherapy/back-pain' },
             ].map((link) => (

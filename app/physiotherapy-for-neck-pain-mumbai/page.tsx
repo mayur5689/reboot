@@ -551,7 +551,7 @@ export default function PhysiotherapyNeckPainMumbaiPage() {
               { label: 'Neck & Shoulder Sports Massage', href: '/neck-shoulder-pain-sports-massage-mumbai' },
               { label: 'Sports Injury Physiotherapy Dadar', href: '/services/physiotherapy/sports-injuries' },
               { label: 'Contrast Therapy Mumbai', href: '/services/contrast-therapy' },
-              { label: 'Clinical Pilates Mumbai', href: '/services/clinical-pilates' },
+              { label: 'Pilates Mumbai', href: '/services/clinical-pilates' },
             ].map((link) => (
               <Link
                 key={link.href}
