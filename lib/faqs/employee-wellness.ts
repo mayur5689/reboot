@@ -32,7 +32,7 @@ export const employeeWellnessFaqs = [
   {
     question: 'How is this different from a gym membership or a wellness app?',
     answer:
-      'This is a booked, supervised recovery session — physiotherapy, contrast therapy, clinical pilates, sports massage, aqua therapy, sports psychology, or athlete assessment. Not a swipe-in gym floor, and not an app with streaks. HR sees redemptions, not login counts.',
+      'This is a booked, supervised recovery session — physiotherapy, contrast therapy, pilates, sports massage, aqua therapy, sports psychology, or athlete assessment. Not a swipe-in gym floor, and not an app with streaks. HR sees redemptions, not login counts.',
   },
   {
     question: 'How do we set this up?',

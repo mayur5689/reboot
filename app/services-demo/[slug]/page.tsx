@@ -35,10 +35,10 @@ const FAQS: Record<string, { q: string; a: string }[]> = {
     { q: 'Is there parking nearby?', a: 'Yes. Paid parking is available within 2 minutes of the clinic. We are also a 5-minute walk from Dadar station.' },
   ],
   'clinical-pilates': [
-    { q: 'Is Clinical Pilates the same as a regular Pilates class?', a: 'No. Clinical Pilates is prescribed and supervised by a physiotherapist after a detailed assessment. Every exercise targets your specific condition - not a general group program.' },
+    { q: 'Is Pilates the same as a regular Pilates class?', a: 'No. Pilates is prescribed and supervised by a physiotherapist after a detailed assessment. Every exercise targets your specific condition - not a general group program.' },
     { q: 'I have never done Pilates. Can I start?', a: 'Yes. Your first session is an assessment. Exercises are designed to match exactly where your body is right now.' },
     { q: 'How many sessions before I see results?', a: 'Most clients notice improved stability and reduced pain within 4 - 6 sessions. Significant strength and postural changes typically develop over 10 - 16 sessions.' },
-    { q: 'Can I do this after surgery?', a: 'Yes, with medical clearance. Clinical Pilates is one of the safest forms of post-surgical rehabilitation because exercises are fully customised to your recovery stage.' },
+    { q: 'Can I do this after surgery?', a: 'Yes, with medical clearance. Pilates is one of the safest forms of post-surgical rehabilitation because exercises are fully customised to your recovery stage.' },
     { q: 'What equipment is used?', a: 'R3BOOT uses both mat-based exercises and the Reformer machine, depending on your program.' },
   ],
   'contrast-therapy': [

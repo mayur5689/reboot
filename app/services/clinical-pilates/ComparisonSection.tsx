@@ -81,7 +81,7 @@ export function ComparisonSection({
   title,
   subtitle,
   leftColumnLabel = 'Group Pilates Class',
-  rightColumnLabel = 'Clinical Pilates',
+  rightColumnLabel = 'Pilates',
   rightColumnMobileLabel,
   rows = DEFAULT_ROWS,
 }: ComparisonSectionProps = {}) {
@@ -95,12 +95,12 @@ export function ComparisonSection({
   const resolvedTitle =
     title ?? (
       <>
-        Clinical Pilates is more than <span className="text-[#7B5FCA]">a group class.</span>
+        Pilates is more than <span className="text-[#7B5FCA]">a group class.</span>
       </>
     )
   const resolvedSubtitle =
     subtitle ??
-    'A group class follows a fixed sequence for everyone in the room. Clinical Pilates starts with your diagnosis and progresses on objective clinical markers.'
+    'A group class follows a fixed sequence for everyone in the room. Pilates starts with your diagnosis and progresses on objective clinical markers.'
 
   return (
     <section className="py-10 md:py-16 lg:py-28 bg-[#F8F9FA] dark:bg-[#09090E]">

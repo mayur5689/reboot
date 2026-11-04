@@ -24,8 +24,8 @@ const metadataOverrides: Record<string, { title: string; description: string; ca
         canonical: '/services/aqua-therapy',
     },
     'clinical-pilates': {
-        title: 'Clinical Pilates in Mumbai | Spine & Core Rehab at R3BOOT Dadar',
-        description: 'Clinical pilates by certified physiotherapists in Dadar Mumbai. Ideal for back pain, posture correction, and post-injury rehabilitation. Book at R3BOOT.',
+        title: 'Pilates in Mumbai | Spine & Core Rehab at R3BOOT Dadar',
+        description: 'Pilates by certified physiotherapists in Dadar Mumbai. Ideal for back pain, posture correction, and post-injury rehabilitation. Book at R3BOOT.',
     },
 }
 

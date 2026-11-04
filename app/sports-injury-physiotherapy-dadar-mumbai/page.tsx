@@ -545,7 +545,7 @@ export default function SportsInjuryPhysiotherapyDadarPage() {
               { label: 'Sports Massage for Runners', href: '/sports-massage-runners-mumbai' },
               { label: 'Contrast Therapy Mumbai', href: '/services/contrast-therapy' },
               { label: 'Ice Bath Mumbai', href: '/ice-bath-mumbai' },
-              { label: 'Clinical Pilates Mumbai', href: '/services/clinical-pilates' },
+              { label: 'Pilates Mumbai', href: '/services/clinical-pilates' },
             ].map((link) => (
               <Link
                 key={link.href}

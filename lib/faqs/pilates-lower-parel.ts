@@ -17,7 +17,7 @@ export const pilatesLowerParelFaqs = [
   {
     question: 'Who is Pilates at R3BOOT Lower Parel best for?',
     answer:
-      'Beginners, desk professionals from Worli / BKC / Kamala Mills, gym and HYROX athletes, and anyone who wants private Pilates close to Lower Parel or Prabhadevi. For dedicated injury pathways, we can point you to our Clinical Pilates programs.',
+      'Beginners, desk professionals from Worli / BKC / Kamala Mills, gym and HYROX athletes, and anyone who wants private Pilates close to Lower Parel or Prabhadevi. For dedicated injury pathways, we can point you to our Pilates programs.',
   },
   {
     question: 'How much do Pilates sessions cost at Lower Parel?',

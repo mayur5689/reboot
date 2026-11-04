@@ -213,7 +213,7 @@ const reformerComparisonRows = [
 const clusterLinks = [
   { label: 'Pilates Mumbai', href: '/services/clinical-pilates', eyebrow: 'City head page' },
   { label: 'Reformer Pilates Lower Parel', href: '/reformer-pilates-lower-parel', eyebrow: 'Lower Parel studio' },
-  { label: 'Clinical Pilates Mumbai', href: '/services/clinical-pilates', eyebrow: 'Injury programs' },
+  { label: 'Pilates Mumbai', href: '/services/clinical-pilates', eyebrow: 'Injury programs' },
   { label: 'Pilates for Back Pain', href: '/back-pain-clinical-pilates-mumbai', eyebrow: 'Condition' },
   { label: 'Post-Surgery Pilates', href: '/post-surgery-pilates-mumbai', eyebrow: 'Rehab handoff' },
   { label: 'Physiotherapy Dadar', href: '/physiotherapy-dadar-mumbai', eyebrow: 'Related care' },
@@ -604,7 +604,7 @@ export default function ReformerPilatesMumbaiPage() {
               {
                 label: 'Easing Back After Time Off',
                 tag: 'RETURN //',
-                description: 'Springs that go up or down in small steps when you are returning to movement. Injury-specific pathways live on our Clinical Pilates pages.',
+                description: 'Springs that go up or down in small steps when you are returning to movement. Injury-specific pathways live on our Pilates pages.',
                 image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1785802981/CONDITION-SPECIFIC-POST-SURGERY_ytzaon.webp',
                 points: ['Gradual loading', 'Clear next steps', 'Injury handoff'],
               },

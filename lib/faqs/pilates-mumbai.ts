@@ -2,7 +2,7 @@ export const pilatesMumbaiFaqs = [
   {
     question: 'What is the best Pilates option in Mumbai for beginners and regular training?',
     answer:
-      'Choose a studio that starts with an assessment and offers one-to-one sessions if you want form and progression matched to your body. R3BOOT in Dadar East offers physiotherapist-led private Pilates on reformer and mat. If you specifically need injury or post-surgery pathways, see our Clinical Pilates Mumbai page.',
+      'Choose a studio that starts with an assessment and offers one-to-one sessions if you want form and progression matched to your body. R3BOOT in Dadar East offers physiotherapist-led private Pilates on reformer and mat. If you specifically need injury or post-surgery pathways, see our Pilates Mumbai page.',
   },
   {
     question: 'Where can I do Pilates in Mumbai at R3BOOT?',

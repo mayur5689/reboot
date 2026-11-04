@@ -12,7 +12,7 @@ export const aquaTherapyDadarFaqs = [
   {
     question: 'Can I combine aqua therapy with physiotherapy in the same visit at Dadar?',
     answer:
-      'Yes. Because R3BOOT offers physiotherapy, sports massage, clinical pilates, and aqua therapy under one roof, you can stack services in a single visit. Many patients in the Dadar area book aqua therapy followed by a physiotherapy assessment, or combine aqua therapy with sports massage. Mention this when booking so we can schedule accordingly.',
+      'Yes. Because R3BOOT offers physiotherapy, sports massage, pilates, and aqua therapy under one roof, you can stack services in a single visit. Many patients in the Dadar area book aqua therapy followed by a physiotherapy assessment, or combine aqua therapy with sports massage. Mention this when booking so we can schedule accordingly.',
   },
   {
     question: 'Is R3BOOT Dadar different from a regular hydrotherapy pool or spa?',

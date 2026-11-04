@@ -90,11 +90,11 @@ export const services: Service[] = [
         ]
     },
     {
-        title: "Clinical Pilates",
+        title: "Pilates",
         tagline: "From Pain to Performance",
         category: "FITNESS",
-        description: "Clinical Pilates is a scientifically guided movement approach designed to support complete and long-term recovery, not just temporary pain relief.",
-        fullDescription: "Unlike general fitness Pilates, Clinical Pilates combines the principles of traditional Pilates with physiotherapy expertise after a detailed assessment to create targeted exercise programs.",
+        description: "Pilates is a scientifically guided movement approach designed to support complete and long-term recovery, not just temporary pain relief.",
+        fullDescription: "Unlike general fitness Pilates, Pilates combines the principles of traditional Pilates with physiotherapy expertise after a detailed assessment to create targeted exercise programs.",
         benefits: [
             "Strengthens the core",
             "Improves stability and posture",

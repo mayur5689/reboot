@@ -54,7 +54,7 @@ const journey = [
 const services = [
   'Physiotherapy',
   'Contrast therapy',
-  'Clinical pilates',
+  'Pilates',
   'Sports massage',
   'Aqua therapy',
   'Sports psychology',

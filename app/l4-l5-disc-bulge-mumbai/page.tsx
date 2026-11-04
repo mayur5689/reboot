@@ -63,7 +63,7 @@ const rebootReachPoints = [
   },
   {
     step: '04',
-    title: 'Clinical Pilates and return-to-activity',
+    title: 'Pilates and return-to-activity',
     body: 'Once acute pain settles, deep core and spinal control work builds lasting support. Phased return to desk work, commute, gym, and sport — with a flare-up plan so you know what to do if pain returns.',
   },
 ]
@@ -82,7 +82,7 @@ const processSteps = [
   {
     number: '03',
     title: 'Progressive rehab',
-    body: 'Strengthening, aqua therapy if needed, clinical Pilates when ready. Sessions build on each other — not the same routine every visit.',
+    body: 'Strengthening, aqua therapy if needed, Pilates when ready. Sessions build on each other — not the same routine every visit.',
   },
   {
     number: '04',
@@ -365,7 +365,7 @@ export default function L4L5DiscBulgeMumbaiPage() {
                 </span>
               </h2>
               <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed mb-6">
-                We are a recovery clinic — not a hospital or surgery centre. Physiotherapy is the foundation. Aqua therapy, clinical Pilates, and sports massage support your plan when your physiotherapist says they are safe and useful.
+                We are a recovery clinic — not a hospital or surgery centre. Physiotherapy is the foundation. Aqua therapy, Pilates, and sports massage support your plan when your physiotherapist says they are safe and useful.
               </p>
               <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed border-l-2 border-[#513394]/40 pl-4">
                 We do not prescribe medication, give injections, or perform surgery. If you need those, we will tell you to see the right specialist.
@@ -526,7 +526,7 @@ export default function L4L5DiscBulgeMumbaiPage() {
 
       <ServiceSchema
         serviceName="L4 L5 Disc Bulge Rehabilitation in Mumbai"
-        description="Non-surgical physiotherapy-led rehabilitation for L4–L5 disc bulge, sciatica, and lower back pain at R3BOOT Dadar, Mumbai. Assessment, manual therapy, aqua therapy, and clinical Pilates under one team."
+        description="Non-surgical physiotherapy-led rehabilitation for L4–L5 disc bulge, sciatica, and lower back pain at R3BOOT Dadar, Mumbai. Assessment, manual therapy, aqua therapy, and Pilates under one team."
         serviceUrl="https://www.r3boot.in/l4-l5-disc-bulge-mumbai"
       />
       <FAQSchema faqs={l4L5DiscBulgeFaqs} />

@@ -49,7 +49,7 @@ const FAQS = [
   },
   {
     q: 'Can I combine multiple services in one visit?',
-    a: 'Yes. Many clients pair physiotherapy with sports massage, or contrast therapy after a clinical pilates session. Our team will suggest the best combination for your recovery stage.',
+    a: 'Yes. Many clients pair physiotherapy with sports massage, or contrast therapy after a pilates session. Our team will suggest the best combination for your recovery stage.',
   },
   {
     q: 'Is aqua therapy suitable if I cannot swim?',
@@ -358,7 +358,7 @@ export default function ServicesDemoPage() {
               <tbody>
                 {[
                   { name: 'Physiotherapy',      best: 'Pain, Injuries, Rehab',        dur: '45 - 60 min', intensity: 'Low - High' },
-                  { name: 'Clinical Pilates',    best: 'Core, Posture, Prevention',    dur: '45 - 60 min', intensity: 'Low - Medium' },
+                  { name: 'Pilates',    best: 'Core, Posture, Prevention',    dur: '45 - 60 min', intensity: 'Low - Medium' },
                   { name: 'Contrast Therapy',    best: 'Recovery, Circulation',        dur: '60 - 90 min', intensity: 'Medium' },
                   { name: 'Aqua Therapy',        best: 'Joint Pain, Post Surgery',     dur: '45 min',      intensity: 'Low' },
                   { name: 'Sports Massage',      best: 'Muscle Tension, Performance',  dur: '45 - 60 min', intensity: 'Medium - High' },

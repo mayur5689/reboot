@@ -86,7 +86,7 @@ const differentiators = [
   },
   {
     title: 'Integrated recovery environment',
-    body: 'Contrast therapy, sports massage, and clinical Pilates available on the same visit. Your physiotherapist coordinates the session, one roof, one visit, faster recovery.',
+    body: 'Contrast therapy, sports massage, and Pilates available on the same visit. Your physiotherapist coordinates the session, one roof, one visit, faster recovery.',
   },
 ]
 
@@ -453,7 +453,7 @@ export default function PhysiotherapyMumbaiPage() {
               </h2>
               <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed max-w-3xl">
                 R3BOOT is an integrated recovery centre, not a standalone physio clinic. Physiotherapy,
-                sports massage, contrast therapy, and clinical Pilates are available on the same visit,
+                sports massage, contrast therapy, and Pilates are available on the same visit,
                 coordinated by your clinical team.
               </p>
             </div>
@@ -471,7 +471,7 @@ export default function PhysiotherapyMumbaiPage() {
                   href: '/services/contrast-therapy',
                 },
                 {
-                  title: 'Clinical Pilates',
+                  title: 'Pilates',
                   desc: 'Supervised reformer Pilates built around your specific injury or condition, not a generic fitness class.',
                   href: '/services/clinical-pilates',
                 },

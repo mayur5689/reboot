@@ -499,7 +499,7 @@ export default function PhysiotherapyBackPainMumbaiPage() {
                   href: '/services/contrast-therapy',
                 },
                 {
-                  title: 'Clinical Pilates',
+                  title: 'Pilates',
                   desc: 'Supervised Pilates built around your specific lumbar presentation | not a generic class. Core stability, hip strengthening, and spinal movement retraining to prevent recurrence.',
                   href: '/back-pain-clinical-pilates-mumbai',
                 },
@@ -540,7 +540,7 @@ export default function PhysiotherapyBackPainMumbaiPage() {
               { label: 'Physiotherapy Dadar Mumbai', href: '/physiotherapy-dadar-mumbai' },
               { label: 'Back Pain Sports Massage', href: '/back-pain-sports-massage-mumbai' },
               { label: 'Physiotherapy for Shoulder Pain', href: '/services/physiotherapy/shoulder-pain' },
-              { label: 'Clinical Pilates Mumbai', href: '/services/clinical-pilates' },
+              { label: 'Pilates Mumbai', href: '/services/clinical-pilates' },
               { label: 'Scoliosis Pilates Mumbai', href: '/scoliosis-pilates-mumbai' },
               { label: 'Tight Hamstrings and Back Pain', href: '/blog/tight-hamstrings-lower-back-pain-mumbai' },
               { label: 'Cat Cow Stretch for Back Pain', href: '/blog/cat-cow-stretch-back-pain-relief' },

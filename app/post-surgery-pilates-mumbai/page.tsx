@@ -38,7 +38,7 @@ export default function PostSurgeryPilatesMumbaiPage() {
       <section className="relative h-[70vh] flex items-end overflow-hidden">
         <Image
           src="https://res.cloudinary.com/dj7bot2uc/image/upload/v1777793759/Clinical_Pillates_Image_4_rluyr1.png"
-          alt="Clinical Pilates after surgery Mumbai – R3BOOT Dadar"
+          alt="Pilates after surgery Mumbai – R3BOOT Dadar"
           fill
           className="object-cover"
           priority
@@ -51,7 +51,7 @@ export default function PostSurgeryPilatesMumbaiPage() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
             </div>
-            <span className="font-bold tracking-wider text-sm">CLINICAL PILATES MUMBAI</span>
+            <span className="font-bold tracking-wider text-sm">PILATES MUMBAI</span>
           </Link>
           <div className="max-w-4xl">
             <div className="flex items-center gap-3 text-white/70 mb-4">
@@ -60,7 +60,7 @@ export default function PostSurgeryPilatesMumbaiPage() {
               <div className="w-1.5 h-1.5 rounded-full bg-white/50" />
             </div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white mb-2 tracking-tighter leading-[1.05]">
-              Clinical Pilates After Surgery in Mumbai
+              Pilates After Surgery in Mumbai
             </h1>
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl leading-relaxed font-medium mt-4">
               ACL, spine, hip, knee, abdominal, physiotherapist-led Pilates rehab from week 6 at R3BOOT, Dadar East.
@@ -75,7 +75,7 @@ export default function PostSurgeryPilatesMumbaiPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-start">
             <div className="lg:col-span-7">
               <h2 className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white mb-8 tracking-tight">
-                Why Clinical Pilates Belongs in <span className="text-[#513394] dark:text-[#8B5CF6]">Post-Surgical Rehab</span>
+                Why Pilates Belongs in <span className="text-[#513394] dark:text-[#8B5CF6]">Post-Surgical Rehab</span>
               </h2>
               <div className="prose prose-xl text-gray-600 dark:text-gray-400 dark:prose-invert max-w-none leading-relaxed space-y-6">
                 <p>
@@ -87,7 +87,7 @@ export default function PostSurgeryPilatesMumbaiPage() {
                   glute medius weakness doesn't fix itself with walking alone.
                 </p>
                 <p>
-                  Clinical Pilates addresses the layer that standard physiotherapy leaves. At R3BOOT in Dadar East,
+                  Pilates addresses the layer that standard physiotherapy leaves. At R3BOOT in Dadar East,
                   Dr. Hiral Parikh (BPT, 15+ years sports and post-surgical rehabilitation) and Dr. Vaishali Vijay
                   Rauniyar (BPT, 4+ years) design your post-surgical Pilates program from your surgical procedure, post-op protocol,
                   and current functional assessment. The reformer allows graduated loading below bodyweight, critical
@@ -98,7 +98,7 @@ export default function PostSurgeryPilatesMumbaiPage() {
               <div className="mt-20">
                 <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-10 flex items-center gap-4">
                   <span className="w-12 h-[2px] bg-[#513394] dark:bg-[#8B5CF6]" />
-                  SURGERIES WE REHABILITATE WITH CLINICAL PILATES
+                  SURGERIES WE REHABILITATE WITH PILATES
                 </h3>
                 <div className="space-y-0 border border-gray-100 dark:border-white/5 rounded-[2rem] overflow-hidden">
                   {surgeries.map((item, idx) => (
@@ -219,7 +219,7 @@ export default function PostSurgeryPilatesMumbaiPage() {
               Surgery Done. <span className="text-white/50">Now Rebuild Properly.</span>
             </h2>
             <p className="text-xl text-white/70 mb-12 leading-relaxed font-medium max-w-3xl mx-auto">
-              Post-surgical clinical Pilates at R3BOOT, Dadar East. Physiotherapist-led. Graded loading. Reformer and mat.
+              Post-surgical Pilates at R3BOOT, Dadar East. Physiotherapist-led. Graded loading. Reformer and mat.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
               <a href="tel:+919702368612" className="w-full sm:w-auto bg-white text-[#513394] font-black px-10 py-5 rounded-full transition-all hover:scale-105 shadow-2xl text-lg tracking-wide">Call to Book</a>
@@ -231,14 +231,14 @@ export default function PostSurgeryPilatesMumbaiPage() {
       </section>
 
       <ServiceSchema
-        serviceName="Clinical Pilates After Surgery in Mumbai"
-        description="Clinical Pilates for post-surgical rehabilitation in Mumbai at R3BOOT, Dadar East. ACL, spinal surgery, hip and knee replacement, physiotherapist-led Pilates rehab on reformer and mat."
+        serviceName="Pilates After Surgery in Mumbai"
+        description="Pilates for post-surgical rehabilitation in Mumbai at R3BOOT, Dadar East. ACL, spinal surgery, hip and knee replacement, physiotherapist-led Pilates rehab on reformer and mat."
         serviceUrl="https://www.r3boot.in/post-surgery-pilates-mumbai"
       />
       <FAQSchema faqs={postSurgeryPilatesFaqs} />
       <BreadcrumbSchema items={[
         { name: 'Home', url: '/' },
-        { name: 'Clinical Pilates Mumbai', url: '/services/clinical-pilates' },
+        { name: 'Pilates Mumbai', url: '/services/clinical-pilates' },
         { name: 'Post-Surgery', url: '/post-surgery-pilates-mumbai' },
       ]} />
     </main>

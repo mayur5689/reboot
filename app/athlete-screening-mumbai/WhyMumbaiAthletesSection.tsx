@@ -91,7 +91,7 @@ export function WhyMumbaiAthletesSection() {
               <p className="text-white/50 text-[15px] leading-relaxed pt-1.5">
                 Findings from your screening feed straight into{' '}
                 <Link href="/services/physiotherapy" className="text-[#C4B5FD] font-bold hover:underline underline-offset-4">physiotherapy</Link>,{' '}
-                <Link href="/services/clinical-pilates" className="text-[#C4B5FD] font-bold hover:underline underline-offset-4">clinical pilates</Link> or{' '}
+                <Link href="/services/clinical-pilates" className="text-[#C4B5FD] font-bold hover:underline underline-offset-4">pilates</Link> or{' '}
                 <Link href="/services/sports-massage" className="text-[#C4B5FD] font-bold hover:underline underline-offset-4">sports massage</Link>, whichever your risk profile actually calls for.
               </p>
             </div>

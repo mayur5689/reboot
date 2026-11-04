@@ -97,6 +97,6 @@ export const l4L5DiscBulgeFaqs = [
   {
     question: 'Where can I get physiotherapy for L4–L5 disc bulge in Mumbai?',
     answer:
-      'R3BOOT in Dadar East offers clinical physiotherapy for disc-related back pain and sciatica, with optional aqua therapy, clinical Pilates, and recovery services under one physiotherapy team. Start with an assessment — bring your MRI report if you have one. We serve patients from Dadar, Bandra, Lower Parel, Worli, Andheri, and across Mumbai.',
+      'R3BOOT in Dadar East offers clinical physiotherapy for disc-related back pain and sciatica, with optional aqua therapy, Pilates, and recovery services under one physiotherapy team. Start with an assessment — bring your MRI report if you have one. We serve patients from Dadar, Bandra, Lower Parel, Worli, Andheri, and across Mumbai.',
   },
 ]

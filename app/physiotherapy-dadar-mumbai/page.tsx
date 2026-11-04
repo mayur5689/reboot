@@ -47,7 +47,7 @@ const whyItWorks = [
   {
     title: 'Integrated recovery environment',
     description:
-      'Contrast therapy, sports massage, and clinical Pilates available in the same building. Your physiotherapist can coordinate a session that combines modalities for faster results.',
+      'Contrast therapy, sports massage, and Pilates available in the same building. Your physiotherapist can coordinate a session that combines modalities for faster results.',
   },
 ]
 
@@ -495,7 +495,7 @@ export default function PhysioDadarLanding() {
                   href: '/services/sports-massage',
                 },
                 {
-                  title: 'Clinical Pilates',
+                  title: 'Pilates',
                   desc: 'Supervised Pilates designed around your injury and movement deficits, not a generic class. Ideal for spinal conditions, post-surgery, and chronic pain.',
                   href: '/services/clinical-pilates',
                 },

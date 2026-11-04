@@ -42,6 +42,6 @@ export const reformerPilatesLowerParelFaqs = [
   {
     question: 'Who is reformer Pilates at Lower Parel best for?',
     answer:
-      'Beginners, desk professionals from Worli / BKC / Kamala Mills, gym athletes, and anyone easing back after time off who wants private spring work. Injury-specific pathways can be handed to our Clinical Pilates programs.',
+      'Beginners, desk professionals from Worli / BKC / Kamala Mills, gym athletes, and anyone easing back after time off who wants private spring work. Injury-specific pathways can be handed to our Pilates programs.',
   },
 ]

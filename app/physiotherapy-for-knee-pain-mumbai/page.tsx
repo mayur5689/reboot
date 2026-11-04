@@ -545,7 +545,7 @@ export default function PhysiotherapyKneePainMumbaiPage() {
               { label: 'Knee Pain Sports Massage', href: '/knee-pain-sports-massage-mumbai' },
               { label: 'Aqua Therapy for Knee Pain', href: '/aqua-therapy-for-knee-pain-mumbai' },
               { label: 'Contrast Therapy Mumbai', href: '/services/contrast-therapy' },
-              { label: 'Clinical Pilates Mumbai', href: '/services/clinical-pilates' },
+              { label: 'Pilates Mumbai', href: '/services/clinical-pilates' },
             ].map((link) => (
               <Link
                 key={link.href}

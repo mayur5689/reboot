@@ -67,6 +67,6 @@ export const aquaTherapyFaqs = [
   {
     question: 'Can I combine aqua therapy with physiotherapy or sports massage at R3BOOT?',
     answer:
-      'Yes. R3BOOT integrates aqua therapy with land-based physiotherapy, sports massage, clinical Pilates, and contrast therapy under one roof. Many clients use aqua therapy for early loading and add land physio or massage in the same visit when it fits the plan.',
+      'Yes. R3BOOT integrates aqua therapy with land-based physiotherapy, sports massage, Pilates, and contrast therapy under one roof. Many clients use aqua therapy for early loading and add land physio or massage in the same visit when it fits the plan.',
   },
 ]

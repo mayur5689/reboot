@@ -22,6 +22,6 @@ export const aquaTherapyLowerParelFaqs = [
   {
     question: 'Can I combine aqua therapy with other services at R3BOOT from Lower Parel?',
     answer:
-      'Yes. R3BOOT integrates aqua therapy, land-based physiotherapy, sports massage, and clinical pilates under one roof. Lower Parel patients frequently combine aqua therapy with sports massage in a single visit - aqua treadmill rehabilitation followed by soft tissue work in the same session slot. Mention this when booking and we will schedule both back to back.',
+      'Yes. R3BOOT integrates aqua therapy, land-based physiotherapy, sports massage, and pilates under one roof. Lower Parel patients frequently combine aqua therapy with sports massage in a single visit - aqua treadmill rehabilitation followed by soft tissue work in the same session slot. Mention this when booking and we will schedule both back to back.',
   },
 ]

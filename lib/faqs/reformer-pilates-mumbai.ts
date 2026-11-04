@@ -17,7 +17,7 @@ export const reformerPilatesMumbaiFaqs = [
   {
     question: 'Can reformer Pilates help if I have back discomfort or am returning after time off?',
     answer:
-      'Often yes, when spring load is set carefully. Reformer resistance allows gradual progression that bodyweight-only work cannot calibrate as finely. If you need a dedicated injury or post-surgery pathway, ask us — we can point you to the right program on our Clinical Pilates pages.',
+      'Often yes, when spring load is set carefully. Reformer resistance allows gradual progression that bodyweight-only work cannot calibrate as finely. If you need a dedicated injury or post-surgery pathway, ask us — we can point you to the right program on our Pilates pages.',
   },
   {
     question: 'How much does reformer Pilates cost in Mumbai at R3BOOT?',

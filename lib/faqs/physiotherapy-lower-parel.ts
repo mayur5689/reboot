@@ -7,7 +7,7 @@ export const physiotherapyLowerParelFaqs = [
   {
     question: 'What are physiotherapy hours at Lower Parel?',
     answer:
-      'Physiotherapy at Lower Parel runs 7:15 am to 3:30 pm. Contrast therapy, sports massage, counselling, and clinical Pilates are available by appointment into the evening (typically to 9:00 pm Mon–Sat, except Wednesday early close). Sunday is 3:30 pm to 9:00 pm, appointment only. Confirm the slot when you book.',
+      'Physiotherapy at Lower Parel runs 7:15 am to 3:30 pm. Contrast therapy, sports massage, counselling, and Pilates are available by appointment into the evening (typically to 9:00 pm Mon–Sat, except Wednesday early close). Sunday is 3:30 pm to 9:00 pm, appointment only. Confirm the slot when you book.',
   },
   {
     question: 'Is this the same team as Dadar?',
