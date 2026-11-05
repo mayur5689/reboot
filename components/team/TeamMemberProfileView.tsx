@@ -110,21 +110,27 @@ export function TeamMemberProfileView({ member }: Props) {
       <section className="py-16 lg:py-24">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12">
-            <ProfileBlock
-              icon={<GraduationCap className="w-5 h-5" />}
-              title="Qualifications"
-              items={member.qualifications}
-            />
-            <ProfileBlock
-              icon={<Sparkles className="w-5 h-5" />}
-              title="Expertise"
-              items={member.expertise}
-            />
-            <ProfileBlock
-              icon={<Target className="w-5 h-5" />}
-              title="What they help with"
-              items={member.focusAreas}
-            />
+            {member.qualifications.length > 0 ? (
+              <ProfileBlock
+                icon={<GraduationCap className="w-5 h-5" />}
+                title="Qualifications"
+                items={member.qualifications}
+              />
+            ) : null}
+            {member.expertise.length > 0 ? (
+              <ProfileBlock
+                icon={<Sparkles className="w-5 h-5" />}
+                title="Expertise"
+                items={member.expertise}
+              />
+            ) : null}
+            {member.focusAreas.length > 0 ? (
+              <ProfileBlock
+                icon={<Target className="w-5 h-5" />}
+                title="What they help with"
+                items={member.focusAreas}
+              />
+            ) : null}
             {member.memberships?.length ? (
               <ProfileBlock
                 icon={<Award className="w-5 h-5" />}

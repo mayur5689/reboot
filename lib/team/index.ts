@@ -1,7 +1,8 @@
 import type { TeamDepartment, TeamMemberProfile } from './types'
 import { counsellingTeamMembers } from './members/counselling'
+import { clinicalTeamMembers } from './members/clinical'
 
-const allMembers: TeamMemberProfile[] = [...counsellingTeamMembers]
+const allMembers: TeamMemberProfile[] = [...counsellingTeamMembers, ...clinicalTeamMembers]
 
 const bySlug = new Map(allMembers.map((m) => [m.slug, m]))
 
