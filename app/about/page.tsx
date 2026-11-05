@@ -151,9 +151,9 @@ export default function AboutPage() {
                         {[
                             {
                                 name: "Alkesh Kubadia",
-                                role: "Co-Founder | Strategy, Psychology & Business Lead",
+                                role: "Co-Founder | Counsellor | Pilates Trainer",
                                 image: "/images/trainer2/Trainers/Alkesh Kubadia (Behavioral Therapist).webp",
-                                bio: "Alkesh Kubadia holds a Master's degree in Psychology and brings decades of entrepreneurial experience. At r3boot, he oversees strategy, operations, and client experience, ensuring systems-driven execution and ethical practices.",
+                                bio: "Counsellor with a Master's in Psychology and 7 years of practice. Uses Rational Emotive Behaviour Therapy (REBT) to help individuals and groups identify irrational beliefs, manage overwhelming emotions, and build practical resilience. Works on personal and professional relationships and the relationship with oneself.",
                                 profileSlug: "alkesh-kubadia",
                             },
                             {
@@ -165,53 +165,66 @@ export default function AboutPage() {
                             },
                             {
                                 name: "Anshita Shetty",
-                                role: "Sports Psychology Consultant",
-                                image: "/images/team/photo-placeholder.svg",
-                                bio: "MSc Sports and Exercise Psychology (University of Essex). Supports athlete-centred programmes at InnerPeak and brings research-backed mental performance education to training environments.",
+                                role: "Sports Psychologist | Former State-Level High Jumper",
+                                image: "https://res.cloudinary.com/dj7bot2uc/image/upload/v1793856169/anshita_cbemrg.webp",
+                                bio: "MSc Sports & Exercise Psychology. A former player, she understands the expectations, setbacks and self-doubt that come with sport. She creates a space where athletes feel heard and builds the confidence and mental strength to realise their potential.",
                                 profileSlug: "anshita-shetty",
                             },
                             {
                                 name: "Sakshi Kadam",
-                                role: "Sports Psychologist",
-                                image: "/images/team/photo-placeholder.svg",
-                                bio: "MSc Sports Psychology with team experience across cricket and hockey camps. Competitive athlete background in boxing and martial arts. Focused on anxiety, confidence, and team dynamics.",
+                                role: "Sports Psychologist | International Kickboxer & State Boxer",
+                                image: "https://res.cloudinary.com/dj7bot2uc/image/upload/v1793854986/Sakshi_n53zeq.webp",
+                                bio: "M.A. Sports Psychology. International kickboxing player and state boxer. Helps athletes build confidence, manage pressure, improve focus and develop mental resilience, with team experience across cricket and hockey camps.",
                                 profileSlug: "sakshi-kadam",
+                            },
+                            {
+                                name: "Dishita Chheda",
+                                role: "Sport Psychologist | Former National-Level Rhythmic Gymnast",
+                                image: "https://res.cloudinary.com/dj7bot2uc/image/upload/v1793854978/Dishita_Chheda_avf9pd.webp",
+                                bio: "MSc Psychology of Sport and Exercise (Leeds Beckett University, UK) and former national-level rhythmic gymnast with nearly 15 years of competition. Takes a holistic approach, supporting the person behind the athlete as much as performance.",
+                                profileSlug: "dishita-chheda",
                             },
                             {
                                 name: "Diyan Kubadia",
                                 role: "Co-Founder | Athlete | Performance Vision Lead",
                                 image: "/images/trainer2/Trainers/Diyan Kubadia.webp",
-                                bio: "Professional cricketer with over a decade of experience. Diyan leads the athlete and performance vision, ensuring every protocol aligns with real athletic needs for smarter recovery."
+                                bio: "Professional cricketer with over a decade of experience. Diyan leads the athlete and performance vision, ensuring every protocol aligns with real athletic needs for smarter recovery.",
+                                profileSlug: "diyan-kubadia"
                             },
                             {
                                 name: "Vaishali Vijay Rauniyar",
                                 role: "Physiotherapist | Sports & Orthopedic Rehabilitation",
                                 image: "/images/trainer2/Trainers/Dr. Vaishali Vijay Rauniyar.webp",
-                                bio: "Clinical experience of 4+ years in sports and orthopedic rehabilitation. Certified in Dry Needling and Aquatic Rehabilitation, she designs personalized plans for efficient recovery."
+                                bio: "Clinical experience of 4+ years in sports and orthopedic rehabilitation. Certified in Dry Needling and Aquatic Rehabilitation, she designs personalized plans for efficient recovery.",
+                                profileSlug: "vaishali-vijay-rauniyar"
                             },
                             {
                                 name: "Dr. Hiral Parikh",
                                 role: "Lead Physiotherapist",
                                 image: "/images/trainer2/Trainers/HIRAL.webp",
-                                bio: "Bachelor of Physiotherapy graduate from Pad. Dr. D.Y. Patil College of Physiotherapy, Navi Mumbai, with over 15 years of clinical experience. At R3BOOT, she leads physiotherapy services with focused expertise in sports rehabilitation and post-surgical recovery, helping athletes return to performance and patients rebuild function with structured, evidence-based protocols. Her approach is precise, patient-centred, and built on the belief that recovery done right the first time saves years of recurring injury."
+                                bio: "Bachelor of Physiotherapy graduate from Pad. Dr. D.Y. Patil College of Physiotherapy, Navi Mumbai, with over 15 years of clinical experience. At R3BOOT, she leads physiotherapy services with focused expertise in sports rehabilitation and post-surgical recovery, helping athletes return to performance and patients rebuild function with structured, evidence-based protocols. Her approach is precise, patient-centred, and built on the belief that recovery done right the first time saves years of recurring injury.",
+                                profileSlug: "hiral-parikh"
                             },
                             {
                                 name: "Ganesh S. Gadhave",
                                 role: "Pain Management & Sports Massage Therapist",
                                 image: "/images/trainer2/Trainers/Dr. Ganesh S. Gadhave.webp",
-                                bio: "Focuses on injury prevention and athlete recovery. His approach emphasizes long-term physical resilience rather than short-term relief, helping individuals train with confidence."
+                                bio: "Focuses on injury prevention and athlete recovery. His approach emphasizes long-term physical resilience rather than short-term relief, helping individuals train with confidence.",
+                                profileSlug: "ganesh-gadhave"
                             },
                             {
                                 name: "Akshay Anil Nalawde",
                                 role: "Sports Massage Therapist",
                                 image: "/images/trainer2/Trainers/Akshay Anil Nalawde.webp",
-                                bio: "Certified in Cupping Therapy and muscle recovery. He has worked with over 1,000 athletes to reduce muscle stiffness and support faster recovery from training loads."
+                                bio: "Certified in Cupping Therapy and muscle recovery. He has worked with over 1,000 athletes to reduce muscle stiffness and support faster recovery from training loads.",
+                                profileSlug: "akshay-nalawde"
                             },
                             {
                                 name: "Vaishali Sonar",
                                 role: "Sports Massage Therapist",
                                 image: "https://res.cloudinary.com/dj7bot2uc/image/upload/v1771404920/aanya-rao-womens-sports-massage-specialist-mumbai_agreyq.avif",
-                                bio: "Certified in Cupping Therapy (Level 1 & 2). Specialises in sports massage for female athletes and the general population. Her sessions are built around injury-free performance, combining clinical technique with an understanding of female physiology and training load."
+                                bio: "Certified in Cupping Therapy (Level 1 & 2). Specialises in sports massage for female athletes and the general population. Her sessions are built around injury-free performance, combining clinical technique with an understanding of female physiology and training load.",
+                                profileSlug: "vaishali-sonar"
                             }
                         ].map((member, index) => (
                             <motion.div
