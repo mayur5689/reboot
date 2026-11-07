@@ -13,6 +13,23 @@ type ContactBody = {
   callTime?: string;
 };
 
+/** Escape user input before it goes into the notification email HTML. */
+function esc(value: string | undefined): string {
+  return (value ?? '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+/** Trim and cap free-text fields so oversized payloads are not forwarded. */
+function clean(value: unknown, max = 2000): string | undefined {
+  if (typeof value !== 'string') return undefined;
+  const trimmed = value.trim().slice(0, max);
+  return trimmed || undefined;
+}
+
 async function appendInquiryToSheet(payload: {
   timestamp: string;
   name: string;
@@ -68,17 +85,15 @@ async function appendInquiryToSheet(payload: {
 export async function POST(req: Request) {
   try {
     const body = (await req.json()) as ContactBody;
-    const {
-      name,
-      email,
-      phone,
-      subject,
-      message,
-      source,
-      recovery,
-      startWhen,
-      callTime,
-    } = body;
+    const name = clean(body.name, 120);
+    const email = clean(body.email, 200);
+    const phone = clean(body.phone, 30);
+    const subject = clean(body.subject, 200);
+    const message = clean(body.message, 4000);
+    const source = clean(body.source, 120);
+    const recovery = clean(body.recovery, 200);
+    const startWhen = clean(body.startWhen, 120);
+    const callTime = clean(body.callTime, 120);
 
     if (!name || !message || (!email && !phone)) {
       return NextResponse.json({ message: 'Missing required fields' }, { status: 400 });
@@ -116,17 +131,17 @@ export async function POST(req: Request) {
                         <p style="margin-bottom: 20px; font-size: 16px;">You have received a new message from the R3boot website contact form.</p>
                         
                         <div style="background-color: #f9f9f9; padding: 20px; border-radius: 8px; margin-bottom: 25px;">
-                            <p style="margin: 5px 0;"><strong>Name:</strong> ${name}</p>
-                            <p style="margin: 5px 0;"><strong>Email:</strong> ${email || 'Not provided'}</p>
-                            <p style="margin: 5px 0;"><strong>Phone:</strong> ${phone || 'Not provided'}</p>
-                            <p style="margin: 5px 0;"><strong>Subject:</strong> ${subject || 'General Inquiry'}</p>
-                            ${recovery ? `<p style="margin: 5px 0;"><strong>Recovering from:</strong> ${recovery}</p>` : ''}
-                            ${startWhen ? `<p style="margin: 5px 0;"><strong>Want to start:</strong> ${startWhen}</p>` : ''}
-                            ${callTime ? `<p style="margin: 5px 0;"><strong>Best time to call:</strong> ${callTime}</p>` : ''}
+                            <p style="margin: 5px 0;"><strong>Name:</strong> ${esc(name)}</p>
+                            <p style="margin: 5px 0;"><strong>Email:</strong> ${esc(email) || 'Not provided'}</p>
+                            <p style="margin: 5px 0;"><strong>Phone:</strong> ${esc(phone) || 'Not provided'}</p>
+                            <p style="margin: 5px 0;"><strong>Subject:</strong> ${esc(subject) || 'General Inquiry'}</p>
+                            ${recovery ? `<p style="margin: 5px 0;"><strong>Recovering from:</strong> ${esc(recovery)}</p>` : ''}
+                            ${startWhen ? `<p style="margin: 5px 0;"><strong>Want to start:</strong> ${esc(startWhen)}</p>` : ''}
+                            ${callTime ? `<p style="margin: 5px 0;"><strong>Best time to call:</strong> ${esc(callTime)}</p>` : ''}
                         </div>
 
                         <p style="font-weight: bold; margin-bottom: 10px;">Message:</p>
-                        <p style="line-height: 1.6; white-space: pre-wrap; background-color: #f9f9f9; padding: 20px; border-radius: 8px;">${message}</p>
+                        <p style="line-height: 1.6; white-space: pre-wrap; background-color: #f9f9f9; padding: 20px; border-radius: 8px;">${esc(message)}</p>
                     </div>
                     <div style="background-color: #f4f4f4; padding: 15px; text-align: center; color: #777; font-size: 12px;">
                         This email was sent from the R3boot Website Contact Form.

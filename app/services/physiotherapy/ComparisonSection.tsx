@@ -1,7 +1,14 @@
-import { Fragment } from 'react'
+import { Fragment, type ComponentType } from 'react'
 import { Users, ClipboardList, Target, TrendingUp, Layers, Stethoscope, Building2, Check } from 'lucide-react'
 
-const ROWS = [
+export type ComparisonRow = {
+  icon: ComponentType<{ className?: string; strokeWidth?: number }>
+  label: string
+  standard: string
+  r3boot: string
+}
+
+const ROWS: ComparisonRow[] = [
   {
     icon: Target,
     label: 'Approach',
@@ -49,13 +56,23 @@ const HEADER_ROW = 1
 const HEADER_DIVIDER_ROW = 2
 const dataRow = (i: number) => HEADER_DIVIDER_ROW + 1 + i * 2
 const dividerRow = (i: number) => dataRow(i) + 1
-const LAST_ROW = dataRow(ROWS.length - 1)
 
 function Divider({ row }: { row: number }) {
   return <div className="h-px bg-gray-100 dark:bg-white/[0.07]" style={{ gridColumn: '1 / -1', gridRow: row }} />
 }
 
-export function ComparisonSection() {
+export function ComparisonSection({
+  rows = ROWS,
+  headingLead = 'R3BOOT physiotherapy is more than',
+  headingAccent = 'a standard clinic visit.',
+  intro = 'Most clinics treat the flare. We assess why it started, build a progressive plan, and integrate recovery tools you cannot get in a standalone physio room.',
+}: {
+  rows?: ComparisonRow[]
+  headingLead?: string
+  headingAccent?: string
+  intro?: string
+} = {}) {
+  const LAST_ROW = dataRow(rows.length - 1)
   return (
     <section className="py-10 md:py-16 lg:py-28 bg-[#F8F9FA] dark:bg-[#09090E]">
       <div className="container mx-auto px-5 sm:px-6 lg:px-8">
@@ -65,12 +82,12 @@ export function ComparisonSection() {
             COMPARISON //
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 dark:text-white tracking-tight leading-[1.1] mb-5">
-            R3BOOT physiotherapy is more than{' '}
-            <span className="text-[#7B5FCA]">a standard clinic visit.</span>
+            {headingLead}{' '}
+            <span className="text-[#7B5FCA]">{headingAccent}</span>
           </h2>
           <div className="w-10 h-[2px] bg-[#7B5FCA] mx-auto mb-5" />
           <p className="text-gray-500 dark:text-white/45 text-base leading-relaxed">
-            Most clinics treat the flare. We assess why it started, build a progressive plan, and integrate recovery tools you cannot get in a standalone physio room.
+            {intro}
           </p>
         </div>
         {/* MOBILE: compact comparison table */}
@@ -87,8 +104,8 @@ export function ComparisonSection() {
               </span>
             </div>
 
-            {ROWS.map((row, i) => {
-              const isLast = i === ROWS.length - 1
+            {rows.map((row, i) => {
+              const isLast = i === rows.length - 1
               return (
                 <Fragment key={i}>
                   <div className={`flex items-center justify-center px-2.5 py-3.5 text-center ${!isLast ? 'border-b border-gray-100 dark:border-white/[0.07]' : ''}`}>
@@ -149,7 +166,7 @@ export function ComparisonSection() {
 
             <Divider row={HEADER_DIVIDER_ROW} />
 
-            {ROWS.map((row, i) => {
+            {rows.map((row, i) => {
               const Icon = row.icon
               const r = dataRow(i)
               return (
@@ -178,7 +195,7 @@ export function ComparisonSection() {
                     </div>
                   </div>
 
-                  {i < ROWS.length - 1 && <Divider row={dividerRow(i)} />}
+                  {i < rows.length - 1 && <Divider row={dividerRow(i)} />}
                 </Fragment>
               )
             })}
