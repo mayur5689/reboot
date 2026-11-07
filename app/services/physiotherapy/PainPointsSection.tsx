@@ -3,7 +3,9 @@
 import { useState } from 'react'
 import Image from 'next/image'
 
-const POINTS = [
+export type PainPoint = { title: string; description: string; image: string }
+
+const POINTS: PainPoint[] = [
   {
     title: 'Pain that keeps coming back',
     description: 'Rest calms it. Training or desk work brings it straight back. The underlying pattern was never treated, only the flare.',
@@ -36,7 +38,17 @@ const POINTS = [
   },
 ]
 
-export function PainPointsSection() {
+export function PainPointsSection({
+  points = POINTS,
+  eyebrow = 'RECOGNITION //',
+  heading = 'Sound familiar',
+  intro = 'If any of these feel like your week, a clinical assessment, not another quick fix, is the missing step.',
+}: {
+  points?: PainPoint[]
+  eyebrow?: string
+  heading?: string
+  intro?: string
+} = {}) {
   const [active, setActive] = useState(0)
   const pad = (n: number) => String(n).padStart(2, '0')
 
@@ -45,13 +57,13 @@ export function PainPointsSection() {
 
       <div className="text-center mb-10 sm:mb-12 px-5">
         <span className="text-[11px] font-black tracking-[0.3em] text-[#513394] dark:text-[#A78BFA] uppercase mb-3 block">
-          RECOGNITION //
+          {eyebrow}
         </span>
         <h2 className="text-5xl sm:text-6xl lg:text-[4rem] font-black text-gray-900 dark:text-white tracking-tight leading-[1.06]">
-          Sound familiar<span className="text-[#7B5FCA]">?</span>
+          {heading}<span className="text-[#7B5FCA]">?</span>
         </h2>
         <p className="text-gray-500 dark:text-white/40 text-base sm:text-lg mt-4 max-w-2xl mx-auto leading-relaxed">
-          If any of these feel like your week, a clinical assessment, not another quick fix, is the missing step.
+          {intro}
         </p>
       </div>
 
@@ -61,7 +73,7 @@ export function PainPointsSection() {
           <div className="grid grid-cols-[42%_58%] gap-6 xl:gap-8">
 
             <div className="relative rounded-2xl overflow-hidden min-h-[560px] xl:min-h-[600px]">
-              {POINTS.map((pt, i) => (
+              {points.map((pt, i) => (
                 <div
                   key={i}
                   className="absolute inset-0 transition-opacity duration-500"
@@ -83,15 +95,15 @@ export function PainPointsSection() {
 
               <div className="absolute top-5 left-5 z-10 flex items-center gap-1.5 bg-black/50 backdrop-blur-sm border border-white/[0.12] rounded-full px-3.5 py-1.5">
                 <span className="text-[#A78BFA] font-black text-[14px] leading-none">{pad(active + 1)}</span>
-                <span className="text-white/35 text-[13px] font-medium leading-none">/ {pad(POINTS.length)}</span>
+                <span className="text-white/35 text-[13px] font-medium leading-none">/ {pad(points.length)}</span>
               </div>
 
               <div className="absolute bottom-0 left-0 right-0 z-10 p-8">
                 <h3 className="text-white font-black text-[1.75rem] xl:text-[2rem] leading-tight mb-2.5">
-                  {POINTS[active].title}
+                  {points[active].title}
                 </h3>
                 <p className="text-white/55 text-[15px] leading-relaxed mb-7">
-                  {POINTS[active].description}
+                  {points[active].description}
                 </p>
                 <div className="flex items-start gap-3">
                   <div className="w-6 h-6 shrink-0 text-[#A78BFA] mt-[1px]">
@@ -108,7 +120,7 @@ export function PainPointsSection() {
             </div>
 
             <div className="flex flex-col justify-center gap-3">
-              {POINTS.map((pt, i) => {
+              {points.map((pt, i) => {
                 const isActive = active === i
                 return (
                   <div
@@ -170,7 +182,7 @@ export function PainPointsSection() {
 
       {/* Mobile accordion */}
       <div className="lg:hidden px-5 flex flex-col gap-3">
-        {POINTS.map((pt, i) => {
+        {points.map((pt, i) => {
           const isActive = active === i
           return (
             <div

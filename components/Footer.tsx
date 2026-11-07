@@ -73,7 +73,12 @@ const Footer: React.FC = () => {
                 <li><Link href="/infrared-sauna-mumbai" className="hover:text-[#A78BFA] transition-colors">Infrared Sauna Mumbai</Link></li>
                 <li><Link href="/services/sports-massage" className="hover:text-[#A78BFA] transition-colors">Sports Massage Mumbai</Link></li>
                 <li><Link href="/sports-massage-dadar" className="hover:text-[#A78BFA] transition-colors">Sports Massage Dadar</Link></li>
-                <li><Link href="/physiotherapy-dadar-mumbai" className="hover:text-[#A78BFA] transition-colors">Physiotherapy Dadar Mumbai</Link></li>
+                <li><Link href="/services/physiotherapy/back-pain" className="hover:text-[#A78BFA] transition-colors">Back Pain Physiotherapy</Link></li>
+                <li><Link href="/services/physiotherapy/knee-pain" className="hover:text-[#A78BFA] transition-colors">Knee Pain Physiotherapy</Link></li>
+                <li><Link href="/services/physiotherapy/shoulder-pain" className="hover:text-[#A78BFA] transition-colors">Shoulder Pain Physiotherapy</Link></li>
+                <li><Link href="/services/physiotherapy/neck-pain" className="hover:text-[#A78BFA] transition-colors">Neck Pain Physiotherapy</Link></li>
+                <li><Link href="/services/physiotherapy/sports-injuries" className="hover:text-[#A78BFA] transition-colors">Sports Injury Physiotherapy</Link></li>
+                <li><Link href="/services/physiotherapy/post-surgery" className="hover:text-[#A78BFA] transition-colors">Post-Surgery Physiotherapy</Link></li>
                 <li><Link href="/contrast-therapy-dadar" className="hover:text-[#A78BFA] transition-colors">Contrast Therapy Dadar</Link></li>
                 <li><Link href="/contrast-therapy-bandra" className="hover:text-[#A78BFA] transition-colors">Contrast Therapy Bandra</Link></li>
                 <li><Link href="/contrast-therapy-lower-parel" className="hover:text-[#A78BFA] transition-colors">Contrast Therapy Lower Parel</Link></li>

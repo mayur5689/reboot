@@ -14,6 +14,8 @@ import { TestimonialsCarousel } from './TestimonialsCarousel'
 import { LocationSection } from './LocationSection'
 import { PainPointsSection } from './PainPointsSection'
 import { ComparisonSection } from './ComparisonSection'
+import { PhysioConditionGrid } from '@/components/physio/PhysioConditionGrid'
+import { physioTestimonials as testimonials } from '@/lib/physio/testimonials'
 import {
     ClipboardCheck,
     Target,
@@ -58,50 +60,6 @@ const heroSlides = [
     },
 ]
 
-const testimonials = [
-    {
-        name: 'Chandrakant Chande',
-        meta: 'Local Guide · 24 reviews',
-        ago: '2 months ago',
-        avatar: '/images/Customer_Review/Namrata Doshi.png',
-        quote: 'Dr. Hiral fixed my back pain after 2 years of trying other clinics. The assessment was thorough and the treatment actually addresses root causes, not just symptoms. Highly recommend.',
-    },
-    {
-        name: 'Dharmesh Thakkar',
-        meta: 'Google User · 8 reviews',
-        ago: '3 months ago',
-        avatar: '/images/Customer_Review/Sonal Malik.png',
-        quote: 'My knee pain from running disappeared within 6 sessions. They gave me a clear plan and explained exactly what was wrong. Professional and results-driven.',
-    },
-    {
-        name: 'Namrata Doshi',
-        meta: 'Local Guide · 12 reviews',
-        ago: '1 month ago',
-        avatar: '/images/Customer_Review/Namrata Doshi.png',
-        quote: 'After my ACL surgery, their rehab protocol was exactly what I needed. Structured, progressive, and they coordinated with my surgeon. Back to playing cricket in 4 months.',
-    },
-    {
-        name: 'Sonal Malik',
-        meta: 'Google User · 6 reviews',
-        ago: '4 months ago',
-        avatar: '/images/Customer_Review/Sonal Malik.png',
-        quote: 'Dry needling sessions combined with exercises changed my shoulder problem completely. Dr. Vaishali is incredibly knowledgeable and caring.',
-    },
-    {
-        name: 'JugalKishore Shah',
-        meta: 'Google User · 3 reviews',
-        ago: '5 months ago',
-        avatar: '/images/Customer_Review/JugalKishore Shah.png',
-        quote: 'Best physio clinic in Dadar. They treat the problem, not just the pain. Long-term results, not quick fixes.',
-    },
-    {
-        name: 'Arjun',
-        meta: 'Google User · 5 reviews',
-        ago: '1 month ago',
-        avatar: '/images/Customer_Review/Arjun.png',
-        quote: 'Fantastic experience. The team is professional, the facility is clean, and the results speak for themselves. Worth every rupee.',
-    },
-]
 
 function PhoneIcon({ className }: { className?: string }) {
     return (
@@ -210,6 +168,9 @@ export default function PhysiotherapyPage() {
                     <MobileHeroTrust items={serviceTrustBadges.physiotherapy} />
                 </div>
             </section>
+
+            {/* ─── CONDITIONS (entry points, kept high for users and crawl depth) ─── */}
+            <PhysioConditionGrid />
 
             {/* ─── WHAT TO EXPECT ─── */}
             <section id="session" className="py-16 sm:py-20 lg:py-28 bg-white dark:bg-[#0A0A0A]">
@@ -326,10 +287,10 @@ export default function PhysiotherapyPage() {
 
                             <div className="absolute bottom-6 left-6 right-6 sm:bottom-8 sm:left-8 sm:right-8">
                                 <p className="text-white text-lg sm:text-xl font-black tracking-tight leading-tight mb-3">
-                                    Vaishali Vijay Rauniyar · Lead Physiotherapist
+                                    Dr. Vaishali Vijay Rauniyar · Physiotherapist
                                 </p>
                                 <div className="flex flex-col gap-2">
-                                    {['4+ Years Clinical Experience', 'Root-Cause Assessment First'].map((point, i) => (
+                                    {['Dry Needling & Aquatic Rehab Certified', 'Root-Cause Assessment First'].map((point, i) => (
                                         <div key={i} className="flex items-center gap-2.5">
                                             <div className="w-5 h-5 rounded-full bg-[#513394]/30 border border-[#A78BFA]/50 flex items-center justify-center shrink-0">
                                                 <svg className="w-3 h-3 text-[#C4B5FD]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
@@ -705,39 +666,6 @@ export default function PhysiotherapyPage() {
                 </div>
             </section>
 
-            {/* ─── CONDITION PAGES ─── */}
-            <section className="py-16 bg-white dark:bg-[#0A0A0A]">
-                <div className="container mx-auto px-6 lg:px-8 max-w-4xl">
-                    <p className="text-[11px] font-black tracking-[0.3em] text-[#513394] dark:text-[#A78BFA] uppercase mb-4">
-                        Conditions
-                    </p>
-                    <h2 className="text-3xl md:text-4xl font-black text-gray-900 dark:text-white tracking-tight mb-8">
-                        Physiotherapy by condition
-                    </h2>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        {[
-                            { href: '/services/physiotherapy/back-pain', label: 'Back Pain' },
-                            { href: '/services/physiotherapy/knee-pain', label: 'Knee Pain' },
-                            { href: '/services/physiotherapy/neck-pain', label: 'Neck Pain' },
-                            { href: '/services/physiotherapy/shoulder-pain', label: 'Shoulder Pain' },
-                            { href: '/services/physiotherapy/sports-injuries', label: 'Sports Injuries' },
-                            { href: '/services/physiotherapy/post-surgery', label: 'Post-Surgery' },
-                        ].map((item) => (
-                            <Link
-                                key={item.href}
-                                href={item.href}
-                                className="group flex items-center justify-between p-5 bg-gray-50 dark:bg-white/5 rounded-[1.5rem] border border-gray-100 dark:border-white/10 hover:border-[#513394]/40 transition-all"
-                            >
-                                <span className="font-bold text-gray-900 dark:text-white group-hover:text-[#513394] transition-colors">
-                                    {item.label}
-                                </span>
-                                <span className="text-sm text-gray-500">→</span>
-                            </Link>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
             {/* ─── OTHER SERVICES ─── */}
             <section className="py-24 lg:py-32 bg-[#F8F9FA] dark:bg-[#0D0D0D]">
                 <div className="container mx-auto px-6 lg:px-8">
@@ -792,21 +720,36 @@ export default function PhysiotherapyPage() {
             {/* ─── LOCAL GUIDE + BLOG ─── */}
             <section className="py-16 bg-white dark:bg-[#0A0A0A]">
                 <div className="container mx-auto px-6 lg:px-8 max-w-4xl space-y-6">
-                    <Link
-                        href="/physiotherapy-dadar-mumbai"
-                        className="group flex items-center justify-between p-6 bg-gray-50 dark:bg-white/5 rounded-[2rem] border border-gray-100 dark:border-white/10 hover:border-[#513394]/40 transition-all"
-                    >
-                        <div>
-                            <p className="text-xs font-black tracking-widest text-[#513394] uppercase mb-1">Dadar Clinic</p>
-                            <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-[#513394] transition-colors">
-                                Physiotherapy in Dadar: Clinic Hours, Access and Booking
-                            </h3>
-                            <span className="text-sm text-gray-500 dark:text-gray-400 mt-1 inline-block">Dadar East location page →</span>
-                        </div>
-                        <svg className="w-6 h-6 text-[#513394] opacity-0 group-hover:opacity-100 transition-opacity shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                            <path d="M9 18l6-6-6-6" />
-                        </svg>
-                    </Link>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+                        {[
+                            {
+                                href: '/physiotherapy-dadar-mumbai',
+                                tag: 'Dadar East Clinic',
+                                title: 'Physiotherapy in Dadar',
+                                sub: 'Palai Plaza, 5 min from Dadar station',
+                            },
+                            {
+                                href: '/physiotherapy-lower-parel',
+                                tag: 'Lower Parel Clinic',
+                                title: 'Physiotherapy in Lower Parel',
+                                sub: 'Lodha Signet, Lower Parel / Prabhadevi',
+                            },
+                        ].map((loc) => (
+                            <Link
+                                key={loc.href}
+                                href={loc.href}
+                                className="group flex items-center justify-between p-6 bg-gray-50 dark:bg-white/5 rounded-[2rem] border border-gray-100 dark:border-white/10 hover:border-[#513394]/40 transition-all"
+                            >
+                                <div>
+                                    <p className="text-xs font-black tracking-widest text-[#513394] dark:text-[#A78BFA] uppercase mb-1">{loc.tag}</p>
+                                    <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-[#513394] dark:group-hover:text-[#A78BFA] transition-colors">
+                                        {loc.title}
+                                    </h3>
+                                    <span className="text-sm text-gray-500 dark:text-gray-400 mt-1 inline-block">{loc.sub} →</span>
+                                </div>
+                            </Link>
+                        ))}
+                    </div>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                         <Link

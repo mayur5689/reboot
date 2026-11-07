@@ -4,6 +4,8 @@ import type { StickyPriceTier } from '@/components/MobileStickyCta'
 export type StickyCtaConfig = {
   tiers: StickyPriceTier[]
   note?: string
+  /** Desktop: render Call / WhatsApp even when there are no price tiers. */
+  contactOnly?: boolean
 }
 
 export const STICKY_PRESETS = {
@@ -84,6 +86,11 @@ export function stickyConfigForPath(pathname: string): StickyCtaConfig | null {
   if (!pathname) return { tiers: [] }
   if (pathname.startsWith('/studio')) return null
   if (HIDE_EXACT.has(pathname)) return null
+
+  // Blog index and posts: never show session pricing, keep Call / WhatsApp.
+  if (pathname === '/blog' || pathname.startsWith('/blog/')) {
+    return { tiers: [], contactOnly: true }
+  }
 
   for (const rule of PATH_PRESETS) {
     if (rule.test(pathname)) return STICKY_PRESETS[rule.key]

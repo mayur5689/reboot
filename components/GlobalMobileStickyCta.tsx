@@ -12,9 +12,9 @@ export function GlobalMobileStickyCta() {
 
   return (
     <>
-      <div className="h-40 md:hidden" aria-hidden />
+      <div className="h-20 md:hidden" aria-hidden />
       <MobileStickyCta tiers={config.tiers} note={config.note} />
-      <DesktopStickyCta tiers={config.tiers} note={config.note} />
+      <DesktopStickyCta tiers={config.tiers} note={config.note} contactOnly={config.contactOnly} />
     </>
   )
 }

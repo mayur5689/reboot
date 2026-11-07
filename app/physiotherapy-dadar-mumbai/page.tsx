@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { PhysioConditionGrid } from '@/components/physio/PhysioConditionGrid'
 import { Metadata } from 'next'
 import { services } from '@/lib/services'
 import PhysiotherapyTeam from '@/components/PhysiotherapyTeam'
@@ -463,6 +464,13 @@ export default function PhysioDadarLanding() {
           </div>
         </div>
       </section>
+
+      {/* ─── CONDITIONS ─── */}
+      <PhysioConditionGrid
+        eyebrow="Treated at Dadar"
+        heading="Conditions we treat in Dadar"
+        subheading="Each page explains the assessment, treatment and typical recovery timeline."
+      />
 
       {/* ─── INTEGRATED RECOVERY ─── */}
       <section className="py-24 lg:py-32 bg-[#F8F9FA] dark:bg-[#0D0D0D]">
