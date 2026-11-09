@@ -3,6 +3,9 @@ import Link from "next/link";
 import Image from "next/image";
 import { getAllPosts, urlFor } from "@/sanity/lib/client";
 
+// Re-fetch from Sanity at most once a minute so newly published posts appear without a redeploy.
+export const revalidate = 60;
+
 export default async function BlogPage() {
     const blogs = await getAllPosts();
 

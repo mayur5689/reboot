@@ -3,6 +3,9 @@ import { getPostSlugs } from '@/sanity/lib/client'
 
 const BASE_URL = 'https://www.r3boot.in'
 
+// Rebuild hourly so newly published Sanity posts reach the sitemap without a redeploy.
+export const revalidate = 3600
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   let blogPages: MetadataRoute.Sitemap = []
   try {
