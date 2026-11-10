@@ -68,7 +68,7 @@ const painPoints: PainPoint[] = [
         description:
             'Landing on a foot in football, badminton or basketball. Swelling settles in days, but balance and strength do not come back on their own, which is why so many ankles sprain again.',
         // TODO image: athlete with a taped or swollen ankle, or ankle balance testing in clinic.
-        image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1785856299/imag_4_v2_hywdwp.webp',
+        image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1794349379/01-rolled-or-sprained-ankle_ba1tii.webp',
     },
     {
         title: 'Pulled hamstring or calf',
@@ -76,14 +76,14 @@ const painPoints: PainPoint[] = [
             'A sharp grab at the back of the thigh or calf while sprinting, running between wickets or chasing a ball. Early graded loading recovers it better than weeks of rest.',
         // TODO image: hamstring strength test or sprint drill with a physiotherapist.
         // CLINICAL REVIEW: early graded loading vs prolonged rest for hamstring and calf strains.
-        image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1794044591/Muscle_strain_and_spasm-_bdmcno.webp',
+        image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1794349416/02-pulled-hamstring-or-calf_y7njtz.webp',
     },
     {
         title: 'Groin and hip strains',
         description:
             'Pain in the groin or front of the hip from kicking, sudden turns, sliding or diving in the field. Common in football and cricket, and easy to aggravate by playing on it.',
         // TODO image: footballer or cricketer in a lunge or adductor strength test.
-        image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1790225467/Sport_gsxfwg.webp',
+        image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1794349417/03-groin-and-hip-strains_ba98wv.webp',
     },
     {
         title: 'Running overuse: shin, Achilles and heel',
@@ -91,14 +91,14 @@ const painPoints: PainPoint[] = [
             'Shin splints, Achilles pain or heel pain that builds over weeks, often after a jump in mileage or a race block. Load and running pattern matter more than rest here.',
         // TODO image: runner on the aqua treadmill or in a gait assessment.
         // CLINICAL REVIEW: training-load spikes as a driver of running overuse injuries.
-        image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1781294289/SPORTS_INJURIES_RETURN_TO_SPORT_wlvjqr.webp',
+        image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1794349418/04-running-overuse-shin-achilles_cxdkam.webp',
     },
     {
         title: 'Gym and lifting strains',
         description:
             'A tweak during a deadlift, squat or bench press, often after adding weight or volume too quickly. Usually a strain, and usually trainable around while it heals.',
         // TODO image: lifter in the gym performing a controlled loaded movement with a physiotherapist.
-        image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1790225459/Gym_cxocai.webp',
+        image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1794349419/05-gym-and-lifting-strains_tllryi.webp',
     },
     {
         title: 'Racquet and bowling overuse',
@@ -106,7 +106,7 @@ const painPoints: PainPoint[] = [
             'Elbow or wrist tendon pain from badminton, tennis or squash, and side or lower back pain in fast bowlers. These need load changes in training, not just a strap.',
         // TODO image: badminton player or fast bowler mid-action, or elbow tendon loading exercise.
         // CLINICAL REVIEW: side strain and lower back stress injuries in fast bowlers.
-        image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1785856300/image-6_z4cmvp.webp',
+        image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1794349421/06-racquet-and-bowling-overuse_mluqmw.webp',
     },
 ]
 

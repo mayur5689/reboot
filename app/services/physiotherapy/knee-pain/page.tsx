@@ -69,14 +69,14 @@ const painPoints: PainPoint[] = [
         description:
             'A dull ache at the front of the knee, worse going down stairs, squatting or after sitting with the knee bent. Usually a load problem, often linked to hip strength and a jump in running or training volume.',
         // TODO image: runner holding the front of the knee on a staircase or after a run.
-        image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1785856300/image-6_z4cmvp.webp',
+        image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1794349659/01-runners-knee_mex5cu.webp',
     },
     {
         title: 'Stiff, aching knees with age (osteoarthritis)',
         description:
             'Stiff first thing in the morning or after sitting, achy on long walks and stairs. Common from the late 40s onward. The X-ray does not change, but pain and function often improve with strength and pacing.',
         // TODO image: adult over 50 doing a supported sit-to-stand or step-up with a physiotherapist.
-        image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1785856300/image-7_bpblht.webp',
+        image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1794349664/02-knee-osteoarthritis_n9llr9.webp',
     },
     {
         title: 'Twisted knee or ligament sprain (MCL, ACL)',
@@ -84,7 +84,7 @@ const painPoints: PainPoint[] = [
         description:
             'A twist while landing, turning or tackling, followed by pain, swelling or a knee that feels loose. Stability tests show which ligament is involved and whether the knee can be rehabbed without surgery.',
         // TODO image: physiotherapist performing a ligament stability test on an athlete's knee.
-        image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1785856299/imag_4_v2_hywdwp.webp',
+        image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1794349666/03-knee-ligament-sprain-mcl-acl_o35knq.webp',
     },
     {
         title: 'Catching, clicking or swelling (meniscus)',
@@ -92,7 +92,7 @@ const painPoints: PainPoint[] = [
         description:
             'Pain on the inner or outer joint line, swelling after twisting or deep squats, sometimes a catch. Many meniscus problems, especially wear-related ones, settle with strength work and changes to deep bending.',
         // TODO image: close-up of a knee being assessed along the joint line.
-        image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1785856298/image_2_V2_idovyw.webp',
+        image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1794349667/04-meniscus-knee-pain_b70osz.webp',
     },
     {
         title: "Pain just below the kneecap (jumper's knee)",
@@ -100,14 +100,14 @@ const painPoints: PainPoint[] = [
         description:
             'Sharp pain at the tendon under the kneecap when jumping, sprinting or bowling, often stiff at the start of a session. Tendons respond to steady, heavier loading over weeks, not rest alone.',
         // TODO image: athlete doing a slow single-leg decline squat or leg press under supervision.
-        image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1785856299/image-4_q31xrd.webp',
+        image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1794349669/05-jumpers-knee-patellar-tendon_f4bmeh.webp',
     },
     {
         title: 'Outer knee pain on longer runs (ITB pain)',
         description:
             'Pain on the outside of the knee that starts at a predictable point in a run and builds until you stop. Usually managed with run load changes and hip strength, without stopping running completely.',
         // TODO image: runner on a treadmill with a physiotherapist watching their running pattern.
-        image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1785856298/image_3_v2_jx6jky.webp',
+        image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1794349671/06-itb-outer-knee-pain_zpwaub.webp',
     },
 ]
 

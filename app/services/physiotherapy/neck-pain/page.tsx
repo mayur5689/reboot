@@ -68,7 +68,7 @@ const painPoints: PainPoint[] = [
         description:
             'An ache at the base of the neck and across the tops of the shoulders that builds through the workday and eases at the weekend. Long laptop hours load the neck and upper back. Not dangerous, and very treatable.',
         // TODO image: person at a laptop in an office, head drifting forward, hand rubbing the base of the neck.
-        image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1790225458/Desk_ak3rgp.webp',
+        image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1794348880/01-screen-neck-from-desk-work_z3lfzt.webp',
     },
     {
         title: 'Stiff neck and cervical spondylosis',
@@ -76,7 +76,7 @@ const painPoints: PainPoint[] = [
             'Stiff on waking, grinding when you turn, harder to check over your shoulder while driving. Age-related change in the neck joints and discs is common after 40. It cannot be reversed, but pain and movement usually improve.',
         // CLINICAL REVIEW: "common after 40", "pain and movement usually improve" for spondylosis.
         // TODO image: patient over 40 turning the head slowly while a physiotherapist guides the movement.
-        image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1794044591/Facet_joint_and_age-related_stiffness_qshjdq.webp',
+        image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1794348880/02-stiff-neck-cervical-spondylosis_vhydc8.webp',
     },
     {
         title: 'Arm pain, tingling or numbness',
@@ -84,7 +84,7 @@ const painPoints: PainPoint[] = [
             'Sharp or burning pain from the neck into the shoulder blade, arm or fingers, sometimes with pins and needles or a weaker grip. Usually an irritated nerve root (cervical radiculopathy), often from a disc bulge. Most cases settle without surgery.',
         // CLINICAL REVIEW: radiculopathy cause and "most cases settle without surgery".
         // TODO image: physiotherapist testing arm strength or nerve tension with the patient's arm out to the side.
-        image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1794044596/Sciatica_and_nerve_irritation_vs41ux.webp',
+        image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1794348881/03-arm-pain-tingling-numbness_blnroq.webp',
     },
     {
         title: 'Headaches that start at the neck',
@@ -92,7 +92,7 @@ const painPoints: PainPoint[] = [
             'A headache that begins at the base of the skull and spreads over one side of the head or behind an eye, worse after long screen days. This cervicogenic headache comes from the upper neck joints and muscles, and behaves differently from a migraine.',
         // CLINICAL REVIEW: cervicogenic headache description.
         // TODO image: physiotherapist's hands working at the base of a patient's skull, patient lying face up.
-        image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1794044597/Upper_back_and_rib_stiffness_dlbevx.webp',
+        image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1794348882/04-headaches-starting-at-neck_xy405m.webp',
     },
     {
         title: 'A sudden crick or locked neck',
@@ -100,7 +100,7 @@ const painPoints: PainPoint[] = [
             'You woke up unable to turn your head, or it seized after a gym lift. Usually a muscle spasm or a stiff joint that settles quickly with gentle hands-on care and early movement, rather than days in a collar.',
         // CLINICAL REVIEW: acute wry neck usually settles quickly; early movement over collar.
         // TODO image: person holding the side of the neck, unable to turn the head fully.
-        image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1794044591/Muscle_strain_and_spasm-_bdmcno.webp',
+        image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1794348907/05-sudden-crick-locked-neck_epl3wn.webp',
     },
     {
         title: 'Whiplash after a car jolt',
@@ -108,7 +108,7 @@ const painPoints: PainPoint[] = [
             'Neck pain and stiffness after a sudden stop, a rear-end bump or a fall. We screen for injury first. Once that is clear, guided movement and graded strength usually recover better than long rest.',
         // CLINICAL REVIEW: whiplash (WAD I to II) early active management over rest.
         // TODO image: physiotherapist assessing neck movement of a patient after a road incident, calm clinic setting.
-        image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1794044590/Mechanical_and_posture-related_pain_tdffdc.webp',
+        image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1794348919/06-whiplash-after-car-jolt_wqwd6g.webp',
     },
 ]
 
