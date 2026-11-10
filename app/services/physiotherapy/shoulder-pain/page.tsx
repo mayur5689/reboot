@@ -78,14 +78,14 @@ const painPoints: PainPoint[] = [
         description:
             'The shoulder slowly gets painful, then stiff, until you cannot reach behind your back or turn the arm outwards. Most common between 40 and 60 and in people with diabetes. Stretching harder is not the answer early on.',
         // TODO image: patient in their 50s trying to reach behind their back, physiotherapist guiding the arm.
-        image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1785856300/image-7_bpblht.webp',
+        image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1794349050/01-frozen-shoulder_nrptja.webp',
     },
     {
         title: 'Rotator cuff tendon pain',
         description:
             'A deep ache on the outside of the upper arm, worse lifting, reaching or lying on that side. Often follows a jump in gym volume, swimming or bowling, or years of desk work with little upper-body strength.',
         // TODO image: physiotherapist testing rotator cuff strength with resistance at the forearm.
-        image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1785856299/image-4_q31xrd.webp',
+        image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1794349051/02-rotator-cuff-tendon-pain_odhthp.webp',
     },
     {
         // CLINICAL REVIEW: painful arc and shoulder blade control as the usual driver rather than bone shape.
@@ -93,7 +93,7 @@ const painPoints: PainPoint[] = [
         description:
             'A pinch or catch as the arm passes shoulder height, often easing once it is fully up. Usually a strength and shoulder blade control problem rather than a bone that needs removing.',
         // TODO image: athlete raising the arm overhead while the physiotherapist watches shoulder blade movement.
-        image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1785856300/image-6_z4cmvp.webp',
+        image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1794349053/03-shoulder-impingement_lwsnfb.webp',
     },
     {
         // CLINICAL REVIEW: degenerative vs traumatic tear presentation and when to refer.
@@ -101,21 +101,21 @@ const painPoints: PainPoint[] = [
         description:
             'Weakness lifting the arm, sometimes after a fall or a heavy pull, sometimes with no clear injury after 50. Many partial and wear-related tears do well with rehab. A sudden large tear needs a surgeon to see it early.',
         // TODO image: physiotherapist reviewing a shoulder MRI or ultrasound report with a patient.
-        image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1785856298/image_3_v2_jx6jky.webp',
+        image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1794349054/04-rotator-cuff-tear_cftuez.webp',
     },
     {
         title: 'AC joint pain',
         description:
             'Pinpoint pain on top of the shoulder, worse reaching across your body, doing push-ups or dips, or carrying a bag on that side. Common in lifters and after a fall onto the shoulder.',
         // TODO image: close-up of the top of the shoulder during a cross-body reach test.
-        image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1785856298/image_2_V2_idovyw.webp',
+        image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1794349056/05-ac-joint-pain_brhzpe.webp',
     },
     {
         title: 'Pain coming from the neck',
         description:
             'Shoulder blade or upper arm pain that changes when you move your neck, sometimes with tingling into the hand. The shoulder itself tests normal, so treating only the shoulder does not help.',
         // TODO image: physiotherapist assessing neck movement with a patient seated.
-        image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1785856299/imag_4_v2_hywdwp.webp',
+        image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1794349075/06-pain-coming-from-neck_ke8goo.webp',
     },
 ]
 

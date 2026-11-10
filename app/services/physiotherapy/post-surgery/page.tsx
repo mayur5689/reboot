@@ -69,14 +69,14 @@ const painPoints: PainPoint[] = [
         description:
             'Early on: a fully straight knee, less swelling and the thigh muscle switching back on. Later: single-leg strength, landing and change of direction, with strength checks before running and sport.',
         // TODO image: athlete doing a single-leg exercise with a physiotherapist, a few months after ACL reconstruction.
-        image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1785856299/imag_4_v2_hywdwp.webp',
+        image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1794349535/01-acl-reconstruction_iy8xd5.webp',
     },
     {
         title: 'Total knee replacement',
         description:
             'Getting the new knee straight and bending again, settling swelling, rebuilding thigh strength, and walking without a walker or stick. Then stairs, getting up from a chair and longer walks.',
         // TODO image: patient in their 60s doing an assisted knee bend on the treatment table after knee replacement.
-        image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1785802981/CONDITION-SPECIFIC-POST-SURGERY_ytzaon.webp',
+        image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1794349555/02-total-knee-replacement_jttiuo.webp',
     },
     {
         title: 'Hip replacement',
@@ -84,14 +84,14 @@ const painPoints: PainPoint[] = [
         description:
             'Walking pattern, hip and buttock strength and balance, all within the movement precautions your surgeon sets for your type of operation. Then stairs, getting in and out of a car, and confidence outdoors.',
         // TODO image: older patient practising walking or a step-up with a physiotherapist after hip replacement.
-        image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1781294269/POST-SURGICAL_REHABILITATION_bc9mdn.webp',
+        image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1794349557/03-hip-replacement_aztbfm.webp',
     },
     {
         title: 'Spine surgery (discectomy, decompression, fusion)',
         description:
             'Regular walking and protected movement while the spine heals, then gradually rebuilding back, hip and core strength for sitting, lifting and work. Load limits come from your surgeon.',
         // TODO image: physiotherapist coaching a patient through a gentle core exercise after lower back surgery.
-        image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1785802981/CONDITION-SPECIFIC-SPINE_pp2m5e.webp',
+        image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1794349558/04-spine-surgery_oudp37.webp',
     },
     {
         title: 'Rotator cuff repair and shoulder surgery',
@@ -99,14 +99,14 @@ const painPoints: PainPoint[] = [
         description:
             'Protecting the repair through the sling phase with gentle assisted movement, then active movement and strength once your surgeon allows, building toward reaching overhead, lifting and sport.',
         // TODO image: physiotherapist moving a patient's arm through an assisted shoulder exercise after rotator cuff repair.
-        image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1785856298/image_3_v2_jx6jky.webp',
+        image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1794349559/05-rotator-cuff-repair_bctva3.webp',
     },
     {
         title: 'Fracture fixation (plates, screws, nails)',
         description:
             'Stiff joints above and below the break, muscle lost in the cast or brace, and getting back to full weight on the limb at the pace the bone and your surgeon allow. Common after wrist, ankle and hip fractures.',
         // TODO image: patient working on wrist or ankle movement with a physiotherapist after a fracture operation.
-        image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1785856300/image-6_z4cmvp.webp',
+        image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1794349561/06-fracture-fixation-ankle_cbpzpk.webp',
     },
 ]
 

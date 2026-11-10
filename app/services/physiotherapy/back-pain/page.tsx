@@ -62,37 +62,37 @@ const painPoints: PainPoint[] = [
         title: 'Mechanical and posture-related pain',
         description:
             'The most common type. Long sitting and low activity overload the lower back muscles and joints. No structural damage, but very real pain that improves with load and habit changes.',
-        image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1794044590/Mechanical_and_posture-related_pain_tdffdc.webp',
+        image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1794348409/01_ache-after-desk-work_ectai2.webp',
     },
     {
         title: 'Disc bulge or herniation',
         description:
             'A disc irritates nearby tissue or a nerve root. Often worse sitting, bending or coughing. Directional exercises and graded loading settle most cases.',
-        image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1794044590/Disc_bulge_or_herniation_i8ml4x.webp',
+        image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1794348410/03_disc-pain-worse-sitting-or-bending_fenmhh.webp',
     },
     {
         title: 'Sciatica and nerve irritation',
         description:
             'Burning, tingling or numbness into the leg. The nerve can be irritated at the spine or along its path. Nerve mobilisation and offloading positions calm it down.',
-        image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1794044596/Sciatica_and_nerve_irritation_vs41ux.webp',
+        image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1794348410/04_sciatica-pain-down-the-leg_jzbwrg.webp',
     },
     {
         title: 'Facet joint and age-related stiffness',
         description:
             'Stiff, local pain, worse leaning back or after rest. Includes spondylosis. Scans cannot be reversed, but pain and movement improve a lot with mobilisation and strength work.',
-        image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1794044591/Facet_joint_and_age-related_stiffness_qshjdq.webp',
+        image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1794348413/05_morning-stiffness_u05v9s.webp',
     },
     {
         title: 'Upper back and rib stiffness',
         description:
             'Pain between the shoulder blades from screen posture, driving or rotation sports. Usually linked to the neck and shoulder blades, so we assess all three.',
-        image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1794044597/Upper_back_and_rib_stiffness_dlbevx.webp',
+        image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1794348414/06_knot-between-the-shoulder-blades_stefk1.webp',
     },
     {
         title: 'Muscle strain and spasm',
         description:
             'Sudden pain from lifting, twisting or a training jump in volume. Very painful early, usually recovers well with hands-on care and early graded movement.',
-        image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1794044591/Muscle_strain_and_spasm-_bdmcno.webp',
+        image: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1794348409/02_back-caught-when-bending_erhkya.webp',
     },
 ]
 
