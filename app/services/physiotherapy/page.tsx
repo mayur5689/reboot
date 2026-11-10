@@ -541,7 +541,13 @@ export default function PhysiotherapyPage() {
 
                             <div className="flex items-center gap-3 mb-3">
                                 <div className="relative w-11 h-11 rounded-full overflow-hidden flex-shrink-0">
-                                    <Image src={r.avatar} alt={r.name} fill className="object-cover" />
+                                    {r.avatar ? (
+                                        <Image src={r.avatar} alt={r.name} fill className="object-cover" />
+                                    ) : (
+                                        <span className="h-full w-full flex items-center justify-center bg-[#513394]/10 dark:bg-[#A78BFA]/15 text-[#513394] dark:text-[#A78BFA] font-black text-[16px]" aria-hidden>
+                                            {r.name.charAt(0)}
+                                        </span>
+                                    )}
                                 </div>
                                 <div>
                                     <p className="text-gray-900 dark:text-white font-bold text-[15px] leading-tight">{r.name}</p>

@@ -1,5 +1,21 @@
-import { NextResponse } from 'next/server';
+import { NextResponse, after } from 'next/server';
 import nodemailer from 'nodemailer';
+
+// One SMTP transport per server instance, reused across requests (skips re-auth on warm instances).
+let transporter: nodemailer.Transporter | null = null;
+function getTransporter() {
+  if (!transporter) {
+    transporter = nodemailer.createTransport({
+      service: 'gmail',
+      pool: true,
+      auth: {
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
+      },
+    });
+  }
+  return transporter;
+}
 
 type ContactBody = {
   name?: string;
@@ -99,14 +115,6 @@ export async function POST(req: Request) {
       return NextResponse.json({ message: 'Missing required fields' }, { status: 400 });
     }
 
-    const transporter = nodemailer.createTransport({
-      service: 'gmail',
-      auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
-      },
-    });
-
     const mailOptions = {
       from: process.env.EMAIL_USER,
       to: 'info.r3boot@gmail.com',
@@ -150,36 +158,38 @@ export async function POST(req: Request) {
             `,
     };
 
-    await transporter.sendMail(mailOptions);
-
-    let sheetSync: { status: 'ok' | 'skipped' | 'error'; detail?: string } = {
-      status: 'skipped',
+    const sheetPayload = {
+      timestamp: new Date().toISOString(),
+      name,
+      email: email || '',
+      phone: phone || '',
+      subject: subject || 'General Inquiry',
+      recovery: recovery || '',
+      startWhen: startWhen || '',
+      callTime: callTime || '',
+      message,
+      source: source || 'contact',
     };
 
-    try {
-      sheetSync = await appendInquiryToSheet({
-        timestamp: new Date().toISOString(),
-        name,
-        email: email || '',
-        phone: phone || '',
-        subject: subject || 'General Inquiry',
-        recovery: recovery || '',
-        startWhen: startWhen || '',
-        callTime: callTime || '',
-        message,
-        source: source || 'contact',
-      });
-    } catch (sheetError: unknown) {
-      const sheetMessage =
-        sheetError instanceof Error ? sheetError.message : 'Unknown sheet error';
-      console.error('Failed to append inquiry to Google Sheet:', sheetMessage);
-      sheetSync = { status: 'error', detail: sheetMessage };
-    }
+    // Respond immediately; email and Sheet run in parallel after the response is sent.
+    // Each is a separate copy of the lead, so one failing does not lose it. Failures are logged loudly.
+    after(async () => {
+      const [mail, sheet] = await Promise.allSettled([
+        getTransporter().sendMail(mailOptions),
+        appendInquiryToSheet(sheetPayload),
+      ]);
+      if (mail.status === 'rejected') {
+        console.error('[LEAD EMAIL FAILED]', mail.reason instanceof Error ? mail.reason.message : mail.reason, sheetPayload);
+      }
+      if (sheet.status === 'rejected') {
+        console.error('[LEAD SHEET FAILED]', sheet.reason instanceof Error ? sheet.reason.message : sheet.reason, sheetPayload);
+      }
+      if (mail.status === 'rejected' && sheet.status === 'rejected') {
+        console.error('[LEAD LOST] Both email and Sheet failed for this lead:', JSON.stringify(sheetPayload));
+      }
+    });
 
-    return NextResponse.json(
-      { message: 'Email sent successfully', sheetSync },
-      { status: 200 }
-    );
+    return NextResponse.json({ message: 'Received' }, { status: 200 });
   } catch (error: unknown) {
     const errorMessage = error instanceof Error ? error.message : 'Unknown error';
     console.error('Error sending email:', errorMessage);

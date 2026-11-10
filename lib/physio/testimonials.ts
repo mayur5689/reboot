@@ -5,14 +5,12 @@ export const physioTestimonials: Testimonial[] = [
         name: 'Chandrakant Chande',
         meta: 'Local Guide · 24 reviews',
         ago: '2 months ago',
-        avatar: '/images/Customer_Review/Namrata Doshi.png',
         quote: 'Dr. Hiral fixed my back pain after 2 years of trying other clinics. The assessment was thorough and the treatment actually addresses root causes, not just symptoms. Highly recommend.',
     },
     {
         name: 'Dharmesh Thakkar',
         meta: 'Google User · 8 reviews',
         ago: '3 months ago',
-        avatar: '/images/Customer_Review/Sonal Malik.png',
         quote: 'My knee pain from running disappeared within 6 sessions. They gave me a clear plan and explained exactly what was wrong. Professional and results-driven.',
     },
     {

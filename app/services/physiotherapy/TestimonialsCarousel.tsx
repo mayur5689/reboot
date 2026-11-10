@@ -6,7 +6,8 @@ export type Testimonial = {
   name: string
   meta: string
   ago: string
-  avatar: string
+  /** Only the reviewer's own photo. Leave out when you do not have it. */
+  avatar?: string
   quote: string
   rating?: number
 }
@@ -55,7 +56,12 @@ function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
 
       <div className="flex items-center gap-3 mb-3">
         <div className="relative w-11 h-11 rounded-full overflow-hidden flex-shrink-0">
-          {testimonial.avatar.endsWith('.svg') ? (
+          {!testimonial.avatar ? (
+            // No verified photo for this reviewer: show an initial, never someone else's face.
+            <span className="h-full w-full flex items-center justify-center bg-[#513394]/10 dark:bg-[#A78BFA]/15 text-[#513394] dark:text-[#A78BFA] font-black text-[16px]" aria-hidden>
+              {testimonial.name.charAt(0)}
+            </span>
+          ) : testimonial.avatar.endsWith('.svg') ? (
             // eslint-disable-next-line @next/next/no-img-element
             <img src={testimonial.avatar} alt={testimonial.name} className="h-full w-full object-cover" />
           ) : (
