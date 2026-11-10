@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next'
 import { getPostSlugs } from '@/sanity/lib/client'
+import { getAllTeamMemberSlugs, teamMemberProfilePath } from '@/lib/team'
 
 const BASE_URL = 'https://www.r3boot.in'
 
@@ -363,5 +364,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
     // Blog posts (dynamic from Sanity)
     ...blogPages,
+
+    // Clinician profiles (author / expertise pages for health content)
+    ...getAllTeamMemberSlugs().map((slug) => ({
+      url: `${BASE_URL}${teamMemberProfilePath(slug)}`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.5,
+    })),
   ]
 }

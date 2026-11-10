@@ -1,135 +1,192 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { FaInstagram, FaFacebook } from 'react-icons/fa';
 
+type FooterLink = { label: string; href: string };
+type FooterGroup = { title: string; links: FooterLink[] };
+
+/*
+ * Every link stays in the HTML on mobile (collapsed groups use CSS, not
+ * conditional rendering), so crawlers still see the full internal link set.
+ */
+const GROUPS: FooterGroup[] = [
+  {
+    title: 'Physiotherapy',
+    links: [
+      { label: 'Physiotherapy Mumbai', href: '/services/physiotherapy' },
+      { label: 'Physiotherapy Dadar', href: '/physiotherapy-dadar-mumbai' },
+      { label: 'Physiotherapy Lower Parel', href: '/physiotherapy-lower-parel' },
+      { label: 'Back Pain', href: '/services/physiotherapy/back-pain' },
+      { label: 'Neck Pain', href: '/services/physiotherapy/neck-pain' },
+      { label: 'Knee Pain', href: '/services/physiotherapy/knee-pain' },
+      { label: 'Shoulder Pain', href: '/services/physiotherapy/shoulder-pain' },
+      { label: 'Sports Injuries', href: '/services/physiotherapy/sports-injuries' },
+      { label: 'Post-Surgery Rehab', href: '/services/physiotherapy/post-surgery' },
+      { label: 'Athlete Screening', href: '/services/athlete-screening' },
+    ],
+  },
+  {
+    title: 'Recovery',
+    links: [
+      { label: 'Contrast Therapy Mumbai', href: '/services/contrast-therapy' },
+      { label: 'Contrast Therapy Dadar', href: '/contrast-therapy-dadar' },
+      { label: 'Contrast Therapy Bandra', href: '/contrast-therapy-bandra' },
+      { label: 'Contrast Therapy Lower Parel', href: '/contrast-therapy-lower-parel' },
+      { label: 'Contrast Therapy Andheri', href: '/contrast-therapy-andheri' },
+      { label: 'Contrast Therapy Worli', href: '/contrast-therapy-worli' },
+      { label: 'Ice Bath Mumbai', href: '/ice-bath-mumbai' },
+      { label: 'Cold Plunge Mumbai', href: '/cold-plunge-mumbai' },
+      { label: 'Infrared Sauna Mumbai', href: '/infrared-sauna-mumbai' },
+      { label: 'Compression Therapy', href: '/services/compression-therapy' },
+      { label: 'Aqua Therapy', href: '/services/aqua-therapy' },
+    ],
+  },
+  {
+    title: 'Pilates and Massage',
+    links: [
+      { label: 'Pilates', href: '/services/clinical-pilates' },
+      { label: 'Pilates Lower Parel', href: '/pilates-lower-parel' },
+      { label: 'Reformer Pilates Lower Parel', href: '/reformer-pilates-lower-parel' },
+      { label: 'Sports Massage Mumbai', href: '/services/sports-massage' },
+      { label: 'Sports Massage Dadar', href: '/sports-massage-dadar' },
+      { label: 'Mental Training', href: '/services/mental-training' },
+    ],
+  },
+  {
+    title: 'R3BOOT',
+    links: [
+      { label: 'About', href: '/about' },
+      { label: 'Blog', href: '/blog' },
+      { label: 'Contact', href: '/contact' },
+      { label: 'Affiliate Partnerships', href: '/partnerships' },
+      { label: 'Employee Wellness', href: '/employee-wellness' },
+    ],
+  },
+];
+
+const CLINICS = [
+  { name: 'Dadar East', address: 'Palai Plaza, 203, Swami Gyan Jivandas Marg, Mumbai 400014' },
+  { name: 'Lower Parel', address: 'Lodha Signet, A-303, Senapati Bapat Marg, Mumbai 400013' },
+];
+
+const SOCIAL = [
+  { name: 'Instagram', icon: FaInstagram, href: 'https://www.instagram.com/r3boot.in' },
+  { name: 'Facebook', icon: FaFacebook, href: 'https://www.facebook.com/profile.php?id=61583158809554' },
+];
+
+function Chevron({ open }: { open: boolean }) {
+  return (
+    <svg
+      className={`w-4 h-4 text-white/60 transition-transform duration-200 ${open ? 'rotate-180' : ''}`}
+      viewBox="0 0 20 20"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      aria-hidden
+    >
+      <path d="M5 7.5l5 5 5-5" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
 const Footer: React.FC = () => {
-  const socialLinks = [
-    { name: 'Instagram', icon: FaInstagram, href: 'https://www.instagram.com/r3boot.in' },
-    { name: 'Facebook', icon: FaFacebook, href: 'https://www.facebook.com/profile.php?id=61583158809554' },
-  ];
+  const [open, setOpen] = useState<string | null>(null);
 
   return (
-    <footer className="relative bg-gradient-to-br from-[#1A0B3B] via-[#2D1B5A] to-[#3B1F75] dark:bg-none dark:bg-[#0A0A0A] text-white pt-16 pb-12 overflow-visible border-t border-white/5 transition-colors duration-300">
-      {/* Background Pattern: Only visible in light mode (purple theme) */}
+    <footer className="relative bg-gradient-to-br from-[#1A0B3B] via-[#2D1B5A] to-[#3B1F75] dark:bg-none dark:bg-[#0A0A0A] text-white pt-12 md:pt-16 pb-24 md:pb-12 overflow-visible border-t border-white/5 transition-colors duration-300">
+      {/* Background pattern: light mode (purple theme) only */}
       <div className="absolute inset-0 opacity-20 pointer-events-none dark:hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,#513394,transparent_80%)]"></div>
-        <div className="absolute inset-0 bg-[linear-gradient(45deg,rgba(167,139,250,0.03)_25%,transparent_25%,transparent_50%,rgba(167,139,250,0.03)_50%,rgba(167,139,250,0.03)_75%,transparent_75%,transparent)] bg-[length:20px_20px]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,#513394,transparent_80%)]" />
       </div>
 
-
-      <div className="container mx-auto px-6 lg:px-8 relative z-10">
-        <div className="flex flex-col lg:flex-row gap-8 sm:gap-12 lg:gap-20 mb-12 sm:mb-16 lg:mb-20">
-          {/* Left Column: Brand & Contact */}
-          <div className="lg:w-1/4 space-y-8">
-            <Link href="/" className="inline-block group">
-              <Image
-                src="/images/REBOOT FINAL LOGO_1.png"
-                alt="R3BOOT Logo"
-                width={180}
-                height={60}
-                className="h-14 w-auto"
-              />
+      <div className="container mx-auto px-5 sm:px-6 lg:px-8 relative z-10">
+        <div className="grid lg:grid-cols-12 gap-10 lg:gap-12 mb-10 md:mb-16">
+          {/* Brand and contact */}
+          <div className="lg:col-span-3">
+            <Link href="/" className="inline-block" aria-label="R3BOOT home">
+              <Image src="/images/REBOOT FINAL LOGO_1.png" alt="R3BOOT" width={180} height={60} className="h-11 md:h-14 w-auto" />
             </Link>
 
-            <div className="space-y-4 pt-4">
-              <h3 className="text-sm font-bold uppercase tracking-widest text-[#A78BFA]">Contact Information</h3>
-              <div className="text-white/80 text-base space-y-2 font-medium">
-                <p>Palai Plaza, 203, Swami Gyan Jivandas Marg</p>
-                <p>Dadar East, Mumbai - 400 014</p>
-              </div>
-              <div className="text-white/80 text-base space-y-2 pt-2 font-medium">
-                <p>Phone: <a href="tel:+919702368612" className="hover:text-white transition-colors underline decoration-[#513394] underline-offset-4">+91 9702368612</a></p>
-                <p>Email: <a href="mailto:info.r3boot@gmail.com" className="hover:text-white transition-colors underline decoration-[#513394] underline-offset-4">info.r3boot@gmail.com</a></p>
-              </div>
+            <div className="mt-6 grid grid-cols-2 lg:grid-cols-1 gap-5">
+              {CLINICS.map((c) => (
+                <div key={c.name}>
+                  <p className="text-[12px] font-bold uppercase tracking-[0.14em] text-[#A78BFA] mb-1.5">{c.name}</p>
+                  <p className="text-[14px] leading-snug text-white/75">{c.address}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-6 flex flex-col gap-2 text-[15px] font-medium">
+              <a href="tel:+919702368612" className="text-white hover:text-[#A78BFA] transition-colors">
+                +91 97023 68612
+              </a>
+              <a href="mailto:info.r3boot@gmail.com" className="text-white/75 hover:text-white transition-colors">
+                info.r3boot@gmail.com
+              </a>
             </div>
           </div>
 
-          {/* Right Section: Multi-column links with vertical dividers */}
-          <div className="lg:w-3/4 grid grid-cols-2 md:grid-cols-3 gap-y-10 gap-x-4 md:gap-0">
-            {/* Column 1: Services 1 */}
-            <div className="space-y-4 md:border-l border-white/20 md:pl-8">
-              <ul className="space-y-3 text-[13px] md:text-base font-semibold text-white/90">
-                <li><Link href="/services/contrast-therapy" className="hover:text-[#A78BFA] transition-colors">Contrast Therapy Mumbai</Link></li>
-                <li><Link href="/ice-bath-mumbai" className="hover:text-[#A78BFA] transition-colors">Ice Bath Mumbai</Link></li>
-                <li><Link href="/cold-plunge-mumbai" className="hover:text-[#A78BFA] transition-colors">Cold Plunge Mumbai</Link></li>
-                <li><Link href="/services/compression-therapy" className="hover:text-[#A78BFA] transition-colors">Compression Therapy</Link></li>
-                <li><Link href="/services/aqua-therapy" className="hover:text-[#A78BFA] transition-colors">Aqua Therapy</Link></li>
-                <li><Link href="/services/sports-massage" className="hover:text-[#A78BFA] transition-colors">Percussive Therapy</Link></li>
-                <li><Link href="/services/clinical-pilates" className="hover:text-[#A78BFA] transition-colors">Pilates</Link></li>
-                <li><Link href="/pilates-lower-parel" className="hover:text-[#A78BFA] transition-colors">Pilates Lower Parel</Link></li>
-                <li><Link href="/reformer-pilates-lower-parel" className="hover:text-[#A78BFA] transition-colors">Reformer Pilates Lower Parel</Link></li>
-                <li><Link href="/services/physiotherapy" className="hover:text-[#A78BFA] transition-colors">Physiotherapy Mumbai</Link></li>
-                <li><Link href="/physiotherapy-dadar-mumbai" className="hover:text-[#A78BFA] transition-colors">Physiotherapy Dadar</Link></li>
-                <li><Link href="/physiotherapy-lower-parel" className="hover:text-[#A78BFA] transition-colors">Physiotherapy Lower Parel</Link></li>
-              </ul>
-            </div>
+          {/* Link groups: accordions on mobile, columns on desktop */}
+          <nav aria-label="Footer" className="lg:col-span-9 grid md:grid-cols-4 md:gap-8 border-t border-white/10 md:border-0">
+            {GROUPS.map((g) => {
+              const isOpen = open === g.title;
+              const id = `footer-${g.title.toLowerCase().replace(/[^a-z]+/g, '-')}`;
+              return (
+                <div key={g.title} className="border-b border-white/10 md:border-0">
+                  <button
+                    type="button"
+                    className="md:hidden w-full flex items-center justify-between py-4 text-left text-[15px] font-semibold"
+                    aria-expanded={isOpen}
+                    aria-controls={id}
+                    onClick={() => setOpen(isOpen ? null : g.title)}
+                  >
+                    {g.title}
+                    <Chevron open={isOpen} />
+                  </button>
+                  <p className="hidden md:block text-[12px] font-bold uppercase tracking-[0.14em] text-[#A78BFA] mb-4">{g.title}</p>
+                  <ul id={id} className={`${isOpen ? 'grid' : 'hidden'} md:grid grid-cols-1 gap-y-1 md:gap-y-2.5 pb-4 md:pb-0`}>
+                    {g.links.map((l) => (
+                      <li key={l.href}>
+                        <Link
+                          href={l.href}
+                          className="block py-1.5 md:py-0 text-[15px] md:text-[14px] text-white/80 hover:text-[#A78BFA] transition-colors"
+                        >
+                          {l.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              );
+            })}
+          </nav>
+        </div>
 
-            {/* Column 2: Services 2 */}
-            <div className="space-y-4 md:border-l border-white/20 md:pl-8">
-              <ul className="space-y-3 text-[13px] md:text-base font-semibold text-white/90">
-                <li><Link href="/infrared-sauna-mumbai" className="hover:text-[#A78BFA] transition-colors">Infrared Sauna Mumbai</Link></li>
-                <li><Link href="/services/sports-massage" className="hover:text-[#A78BFA] transition-colors">Sports Massage Mumbai</Link></li>
-                <li><Link href="/sports-massage-dadar" className="hover:text-[#A78BFA] transition-colors">Sports Massage Dadar</Link></li>
-                <li><Link href="/services/physiotherapy/back-pain" className="hover:text-[#A78BFA] transition-colors">Back Pain Physiotherapy</Link></li>
-                <li><Link href="/services/physiotherapy/knee-pain" className="hover:text-[#A78BFA] transition-colors">Knee Pain Physiotherapy</Link></li>
-                <li><Link href="/services/physiotherapy/shoulder-pain" className="hover:text-[#A78BFA] transition-colors">Shoulder Pain Physiotherapy</Link></li>
-                <li><Link href="/services/physiotherapy/neck-pain" className="hover:text-[#A78BFA] transition-colors">Neck Pain Physiotherapy</Link></li>
-                <li><Link href="/services/physiotherapy/sports-injuries" className="hover:text-[#A78BFA] transition-colors">Sports Injury Physiotherapy</Link></li>
-                <li><Link href="/services/physiotherapy/post-surgery" className="hover:text-[#A78BFA] transition-colors">Post-Surgery Physiotherapy</Link></li>
-                <li><Link href="/contrast-therapy-dadar" className="hover:text-[#A78BFA] transition-colors">Contrast Therapy Dadar</Link></li>
-                <li><Link href="/contrast-therapy-bandra" className="hover:text-[#A78BFA] transition-colors">Contrast Therapy Bandra</Link></li>
-                <li><Link href="/contrast-therapy-lower-parel" className="hover:text-[#A78BFA] transition-colors">Contrast Therapy Lower Parel</Link></li>
-                <li><Link href="/contrast-therapy-andheri" className="hover:text-[#A78BFA] transition-colors">Contrast Therapy Andheri</Link></li>
-                <li><Link href="/contrast-therapy-worli" className="hover:text-[#A78BFA] transition-colors">Contrast Therapy Worli</Link></li>
-                <li><Link href="/services/mental-training" className="hover:text-[#A78BFA] transition-colors">Mental Training</Link></li>
-                <li><Link href="/services/athlete-screening" className="hover:text-[#A78BFA] transition-colors">Athlete Screening Mumbai</Link></li>
-              </ul>
-            </div>
-
-            {/* Column 3: Navigation */}
-            <div className="col-span-2 md:col-span-1 space-y-4 md:border-l border-white/20 lg:border-r border-white/20 md:pl-8 pt-6 md:pt-0">
-              <ul className="grid grid-cols-2 md:block gap-4 md:space-y-4 text-[13px] md:text-base font-semibold text-white/90">
-                <li><Link href="/" className="hover:text-[#A78BFA] transition-colors">Home</Link></li>
-                <li><Link href="/about" className="hover:text-[#A78BFA] transition-colors">About</Link></li>
-                <li><Link href="/partnerships" className="hover:text-[#A78BFA] transition-colors">Affiliate Partnerships</Link></li>
-                <li><Link href="/employee-wellness" className="hover:text-[#A78BFA] transition-colors">Employee Wellness</Link></li>
-                <li><Link href="/contact" className="hover:text-[#A78BFA] transition-colors">Contact</Link></li>
-                <li><Link href="/blog" className="hover:text-[#A78BFA] transition-colors">Blog</Link></li>
-              </ul>
-            </div>
+        {/* Bottom bar */}
+        <div className="pt-6 border-t border-white/10 flex flex-col md:flex-row md:items-center justify-between gap-5 text-[13px] text-white/55">
+          <div className="flex items-center gap-3">
+            {SOCIAL.map((s) => (
+              <a
+                key={s.name}
+                href={s.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={s.name}
+                className="w-10 h-10 rounded-full border border-white/15 flex items-center justify-center text-white/70 hover:text-[#A78BFA] hover:border-[#A78BFA] transition-colors"
+              >
+                <s.icon size={18} />
+              </a>
+            ))}
           </div>
-        </div>
-
-        {/* Social Icons Section */}
-        <div className="flex justify-center gap-10 mb-12">
-          {socialLinks.map((social) => (
-            <a
-              key={social.name}
-              href={social.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white/60 hover:text-white transition-all duration-300 hover:scale-125 group relative"
-            >
-              <span className="sr-only">{social.name}</span>
-              <div className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center group-hover:border-[#A78BFA] transition-colors">
-                <social.icon size={20} className="group-hover:text-[#A78BFA] transition-colors" />
-              </div>
-            </a>
-          ))}
-        </div>
-
-        {/* Bottom Bar */}
-        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6 text-[12px] text-white/60 uppercase tracking-[0.25em] font-bold">
-          <p>© 2025 R3BOOT. All rights reserved.</p>
-          <div className="flex gap-12">
+          <div className="flex flex-wrap gap-x-6 gap-y-2">
             <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
             <Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
           </div>
-          <p className="flex items-center gap-2">
-            Designed and managed by Valmiki Media
+          <p>
+            © {new Date().getFullYear()} R3BOOT · Designed and managed by Valmiki Media
           </p>
         </div>
       </div>

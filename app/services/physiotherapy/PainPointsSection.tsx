@@ -59,10 +59,10 @@ export function PainPointsSection({
         <span className="text-[11px] font-black tracking-[0.3em] text-[#513394] dark:text-[#A78BFA] uppercase mb-3 block">
           {eyebrow}
         </span>
-        <h2 className="text-5xl sm:text-6xl lg:text-[4rem] font-black text-gray-900 dark:text-white tracking-tight leading-[1.06]">
+        <h2 className="text-[30px] sm:text-5xl lg:text-[4rem] font-black text-gray-900 dark:text-white tracking-tight leading-[1.06]">
           {heading}<span className="text-[#7B5FCA]">?</span>
         </h2>
-        <p className="text-gray-500 dark:text-white/40 text-base sm:text-lg mt-4 max-w-2xl mx-auto leading-relaxed">
+        <p className="text-gray-600 dark:text-white/60 text-base sm:text-lg mt-4 max-w-2xl mx-auto leading-relaxed">
           {intro}
         </p>
       </div>

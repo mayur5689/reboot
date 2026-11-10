@@ -21,6 +21,13 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://www.r3boot.in'),
   title: 'R3BOOT Dadar | Physiotherapy, Pilates & Recovery Mumbai',
   description: 'R3BOOT (pronounced Reboot): physiotherapy, Pilates, sports massage and contrast therapy in Dadar and Lower Parel, Mumbai. 5.0 stars. Open 7 days. Book via WhatsApp.',
+  // Let Google show large image previews and full snippets (Search, Discover, AI Overviews).
+  // Pages that set their own `robots` (e.g. noindex demos) override this.
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 },
+  },
   icons: {
     icon: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1773062628/R3boot_Logo_za7ymb.png',
     apple: 'https://res.cloudinary.com/dj7bot2uc/image/upload/v1773062628/R3boot_Logo_za7ymb.png',

@@ -18,14 +18,14 @@ import {
     MapPin,
 } from 'lucide-react'
 import { FAQSection } from '@/components/faq-section'
-import ServiceSchema from '@/components/schema/ServiceSchema'
+import ConditionPageSchema from '@/components/schema/ConditionPageSchema'
+import { PHYSIO_PRICE_LABEL } from '@/lib/physio/pricing'
 import FAQSchema from '@/components/schema/FAQSchema'
 import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema'
-import { HeroTrustBadge, serviceTrustBadges } from '@/components/HeroTrustBadge'
-import { MobileHeroTrust } from '@/components/MobileHeroTrust'
 import { TeamSectionDemo } from '@/app/services-demo/contrast-therapy/TeamSectionDemo'
-import { PhysioConditionGrid } from '@/components/physio/PhysioConditionGrid'
+import { PHYSIO_CONDITIONS } from '@/components/physio/PhysioConditionGrid'
 import { CallbackForm } from '@/components/physio/CallbackForm'
+import { HeroReviewProof } from '@/components/physio/HeroReviewProof'
 import { physioTestimonials } from '@/lib/physio/testimonials'
 import { backPainFaqs } from '@/lib/faqs/back-pain-physiotherapy'
 import { TestimonialsCarousel } from '../TestimonialsCarousel'
@@ -38,15 +38,19 @@ const PHONE = '+919702368612'
 const WA_HREF = `https://wa.me/919702368612?text=${encodeURIComponent(
     'Hi R3BOOT, I would like to book a physiotherapy assessment for back pain.',
 )}`
+// Title: primary keyword first ("physiotherapy for back pain", ~1,000/mo cluster), sciatica as the
+// second-biggest intent on this page, Mumbai for local. 56 characters, fits without truncation.
+const TITLE = 'Physiotherapy for Back Pain & Sciatica in Mumbai | R3BOOT'
+// Description: the three main presentations, who assesses, what happens, price, both clinics. ~155 chars.
 const DESCRIPTION =
-    'Lower back, upper back, sciatica or a disc bulge? One-to-one physiotherapy that finds the cause first. R3BOOT Dadar and Lower Parel. No referral needed.'
+    `Lower back pain, sciatica or a slipped disc? An experienced physiotherapist finds the cause and treats it the same session. ${PHYSIO_PRICE_LABEL}. Dadar & Lower Parel.`
 
 export const metadata: Metadata = {
-    title: 'Physiotherapy for Back Pain in Mumbai | R3BOOT Dadar',
+    title: TITLE,
     description: DESCRIPTION,
     alternates: { canonical: PAGE_PATH },
     openGraph: {
-        title: 'Physiotherapy for Back Pain in Mumbai | R3BOOT',
+        title: TITLE,
         description: DESCRIPTION,
         url: `https://www.r3boot.in${PAGE_PATH}`,
         images: ['/images/service/physiotherapy/back-pain-hero.webp'],
@@ -283,62 +287,59 @@ export default function BackPainPhysiotherapyPage() {
                         <p className="text-[#A78BFA] text-[11px] font-black tracking-[0.25em] uppercase mb-4">
                             Lower back&nbsp;&nbsp;•&nbsp;&nbsp;Upper back&nbsp;&nbsp;•&nbsp;&nbsp;Sciatica&nbsp;&nbsp;•&nbsp;&nbsp;Disc
                         </p>
-                        <h1 className="text-5xl lg:text-6xl xl:text-[4.25rem] font-black text-white tracking-tight leading-[1.04] mb-4">
+                        <h1 className="text-5xl lg:text-6xl xl:text-[4.25rem] font-black text-white tracking-tight leading-[1.04] mb-5">
                             Physiotherapy for <span className="text-[#A78BFA]">Back Pain</span> in Mumbai
                         </h1>
-                        <p className="text-[16px] text-white/60 max-w-md leading-relaxed mb-5">
-                            Find out what is actually driving your pain, then treat that. One-to-one sessions at R3BOOT Dadar and Lower
-                            Parel. No referral needed.
+                        <p className="text-[17px] text-white/65 max-w-md leading-relaxed mb-6">
+                            Lower back pain from the desk, sciatica down your leg, or a back that locks when you bend?
                         </p>
+                        <HeroReviewProof onDark className="mb-7" />
                         <CallbackForm
                             source="back-pain-hero"
                             concerns={['Lower back pain', 'Upper back pain', 'Sciatica or leg pain', 'Disc bulge', 'After spine surgery']}
                             whatsappHref={WA_HREF}
                         />
-                        <p className="mt-3 text-[13px] text-white/50">
-                            Prefer to talk now?{' '}
-                            <a href={`tel:${PHONE}`} className="font-bold text-white hover:text-[#A78BFA] transition-colors">
-                                Call +91 97023 68612
-                            </a>{' '}
-                            or{' '}
-                            <a href={WA_HREF} target="_blank" rel="nofollow noopener noreferrer" className="font-bold text-white hover:text-[#A78BFA] transition-colors">
-                                WhatsApp
-                            </a>
-                        </p>
                     </div>
-
-                    <HeroTrustBadge items={serviceTrustBadges.physiotherapy} />
                 </div>
             </section>
 
             {/* ─── MOBILE HERO ─── */}
             <section className="md:hidden pt-20 pb-0 bg-white dark:bg-[#0A0A0A]">
                 <div className="container mx-auto px-5">
-                    <div className="relative w-full aspect-square rounded-2xl overflow-hidden shadow-xl">
+                    <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-xl">
                         <Image
                             src="/images/service/physiotherapy/back-pain-hero.webp"
                             alt="Physiotherapist treating a patient's back pain at R3BOOT Dadar, Mumbai"
                             fill
                             className="object-cover"
-                            style={{ objectPosition: 'center 72%' }}
+                            style={{ objectPosition: 'center 66%' }}
                             sizes="(max-width: 768px) 100vw, 0px"
                             priority
                         />
                     </div>
-                    <nav aria-label="Breadcrumb" className="mt-5 mb-3 text-[12px] font-bold text-gray-400 dark:text-white/40">
+                    <nav aria-label="Breadcrumb" className="mt-6 mb-3 text-[12px] font-bold text-gray-400 dark:text-white/40">
                         <Link href="/services/physiotherapy" className="hover:text-[#513394] dark:hover:text-[#A78BFA]">
                             Physiotherapy
                         </Link>
                         <span className="mx-2">/</span>
                         <span className="text-gray-600 dark:text-white/70">Back Pain</span>
                     </nav>
-                    <h2 className="text-[2rem] font-black text-gray-900 dark:text-white tracking-tight leading-[1.1] mb-3">
+                    <h2 className="text-[2rem] font-black text-gray-900 dark:text-white tracking-tight leading-[1.1] mb-4">
                         Physiotherapy for <span className="text-[#513394] dark:text-[#A78BFA]">Back Pain</span> in Mumbai
                     </h2>
-                    <p className="text-base text-gray-500 dark:text-gray-400 leading-relaxed mb-6">
-                        Find out what is driving your pain, then treat that. One-to-one at R3BOOT Dadar and Lower Parel. No referral needed.
+                    <p className="text-base text-gray-600 dark:text-gray-400 leading-relaxed mb-7">
+                        Lower back pain from the desk, sciatica down your leg, or a back that locks when you bend?
                     </p>
-                    <MobileHeroTrust items={serviceTrustBadges.physiotherapy} />
+                    {/* Form sits on a dark card so its white-on-dark fields stay readable in light mode. */}
+                    <div className="rounded-2xl bg-[#120C22] [&>form]:max-w-none [&>form]:border-0 [&>div]:max-w-none">
+                        <CallbackForm
+                            source="back-pain-hero-mobile"
+                            concernLabel="Type of pain"
+                            concerns={['Lower back pain', 'Upper back pain', 'Sciatica or leg pain', 'Disc bulge', 'After spine surgery']}
+                            whatsappHref={WA_HREF}
+                        />
+                    </div>
+                    <HeroReviewProof className="mt-7 mb-2" />
                 </div>
             </section>
 
@@ -361,7 +362,7 @@ export default function BackPainPhysiotherapyPage() {
                                 <span className="block font-black text-gray-900 dark:text-white text-[15px] leading-snug">
                                     See a doctor first if you have warning signs
                                 </span>
-                                <span className="block text-[13px] text-gray-600 dark:text-white/60 leading-snug mt-1">
+                                <span className="block text-[14px] text-gray-600 dark:text-white/60 leading-snug mt-1">
                                     Loss of bladder or bowel control needs emergency care the same day.
                                 </span>
                             </span>
@@ -370,12 +371,12 @@ export default function BackPainPhysiotherapyPage() {
                         </summary>
                         <ul className="px-4 pb-4 pl-12 space-y-2">
                             {redFlags.map((f) => (
-                                <li key={f} className="flex gap-2.5 text-[13px] text-gray-700 dark:text-white/75 leading-relaxed">
+                                <li key={f} className="flex gap-2.5 text-[14px] text-gray-700 dark:text-white/75 leading-relaxed">
                                     <span className="mt-2 w-1.5 h-1.5 rounded-full bg-amber-500 shrink-0" aria-hidden />
                                     {f}
                                 </li>
                             ))}
-                            <li className="text-[13px] text-gray-500 dark:text-white/50 leading-relaxed pt-1">
+                            <li className="text-[14px] text-gray-500 dark:text-white/50 leading-relaxed pt-1">
                                 We screen for all of these in your first assessment and refer you when needed.
                             </li>
                         </ul>
@@ -441,32 +442,13 @@ export default function BackPainPhysiotherapyPage() {
                                             </span>
                                             {step.title}
                                         </h3>
-                                        <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">{step.body}</p>
+                                        <p className="text-gray-600 dark:text-gray-400 text-[15px] sm:text-sm leading-relaxed">{step.body}</p>
                                     </div>
                                 </div>
                             )
                         })}
                     </div>
 
-                    {/* What the session includes */}
-                    <div className="max-w-7xl mx-auto mt-5 sm:mt-8 grid grid-cols-2 md:grid-cols-4 rounded-2xl overflow-hidden border border-gray-200 dark:border-white/[0.08] bg-white dark:bg-white/[0.03]">
-                        {[
-                            { value: '45 min', label: 'Per session' },
-                            { value: '1 : 1', label: 'With a physiotherapist' },
-                            { value: '₹2,000', label: 'Per session' },
-                            { value: 'None', label: 'Referral needed' },
-                        ].map((item, i) => (
-                            <div
-                                key={item.label + i}
-                                className={`px-3 py-3.5 sm:px-4 sm:py-5 text-center ${i % 2 === 1 ? 'border-l' : ''} ${i > 1 ? 'border-t md:border-t-0' : ''} ${
-                                    i === 2 ? 'md:border-l' : ''
-                                } border-gray-200 dark:border-white/[0.08]`}
-                            >
-                                <p className="text-xl sm:text-2xl font-black text-gray-900 dark:text-white tabular-nums leading-none mb-1.5">{item.value}</p>
-                                <p className="text-[12px] text-gray-500 dark:text-white/45 font-medium">{item.label}</p>
-                            </div>
-                        ))}
-                    </div>
                 </div>
             </section>
 
@@ -476,15 +458,16 @@ export default function BackPainPhysiotherapyPage() {
                     <div className="text-center max-w-2xl mx-auto mb-7 sm:mb-16">
                         <SectionEyebrow>TREATMENT //</SectionEyebrow>
                         <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 dark:text-white tracking-tight mb-4 leading-tight">
-                            How we treat <span className="text-[#513394] dark:text-[#8B5CF6]">back pain</span>
+                            How does physiotherapy <span className="text-[#513394] dark:text-[#8B5CF6]">treat back pain?</span>
                         </h2>
                         <p className="text-gray-500 dark:text-gray-400 text-base leading-relaxed">
-                            Chosen from your assessment. Not every patient gets every method, and no one gets a default protocol.
+                            By combining hands-on treatment with exercise that is progressed as you improve, plus changes to how you sit and
+                            move. The methods are chosen from your assessment, so not every patient gets every one.
                         </p>
                     </div>
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 md:gap-10 lg:gap-24 items-start max-w-7xl mx-auto">
-                        <div className="hidden md:block relative rounded-[2rem] sm:rounded-[2.5rem] overflow-hidden aspect-[4/5] w-full shadow-2xl lg:sticky lg:top-28">
+                        <div className="relative rounded-2xl sm:rounded-[2.5rem] overflow-hidden aspect-video md:aspect-[4/5] w-full shadow-xl md:shadow-2xl mb-6 md:mb-0 lg:sticky lg:top-28">
                             <Image
                                 src="https://res.cloudinary.com/dj7bot2uc/image/upload/v1785857717/Physio_Studio_V1_zw15cj.png"
                                 alt="Back pain physiotherapy treatment room at R3BOOT Dadar, Mumbai"
@@ -493,7 +476,7 @@ export default function BackPainPhysiotherapyPage() {
                                 sizes="(max-width: 1024px) 100vw, 50vw"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-black/25" />
-                            <div className="absolute bottom-6 left-6 right-6 sm:bottom-8 sm:left-8 sm:right-8">
+                            <div className="hidden md:block absolute bottom-6 left-6 right-6 sm:bottom-8 sm:left-8 sm:right-8">
                                 <p className="text-white text-lg sm:text-xl font-black tracking-tight leading-tight mb-3">
                                     Hands-on back pain care at R3BOOT
                                 </p>
@@ -536,7 +519,7 @@ export default function BackPainPhysiotherapyPage() {
                                         <div className={`flex-1 min-w-0 ${isLast ? 'pb-0' : 'pb-3 sm:pb-6'}`}>
                                             <div className="px-4 py-3 sm:p-6 rounded-2xl bg-[#F8F9FA] dark:bg-white/[0.04] border border-gray-100 dark:border-white/[0.06]">
                                                 <h3 className="text-[15px] sm:text-base font-bold text-gray-900 dark:text-white mb-0.5 sm:mb-2">{m.title}</h3>
-                                                <p className="sm:hidden text-gray-500 dark:text-gray-400 text-[13px] leading-snug">{m.short}</p>
+                                                <p className="sm:hidden text-gray-600 dark:text-gray-400 text-[14px] leading-snug">{m.short}</p>
                                                 <p className="hidden sm:block text-gray-500 dark:text-gray-400 text-sm leading-relaxed">{m.body}</p>
                                             </div>
                                         </div>
@@ -569,7 +552,7 @@ export default function BackPainPhysiotherapyPage() {
                                 <p className="text-[11px] font-black tracking-[0.2em] text-gray-400 dark:text-white/40 uppercase mb-2">{t.range}</p>
                                 <h3 className="text-xl font-black text-gray-900 dark:text-white mb-1">{t.label}</h3>
                                 <p className="text-[15px] font-bold text-[#513394] dark:text-[#A78BFA] mb-3">{t.sessions}</p>
-                                <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">{t.body}</p>
+                                <p className="text-[15px] sm:text-sm text-gray-600 dark:text-gray-400 leading-relaxed">{t.body}</p>
                             </div>
                         ))}
                     </div>
@@ -582,13 +565,15 @@ export default function BackPainPhysiotherapyPage() {
                 </div>
             </section>
 
-            {/* ─── COMPARISON ─── */}
-            <ComparisonSection
-                rows={comparisonRows}
-                headingLead="Back pain care that"
-                headingAccent="does not stop at the flare."
-                intro="Rest and painkillers can calm a flare. They do not change why it happened. This is the difference in how we work."
-            />
+            {/* ─── COMPARISON (desktop only: the 2-column table is too dense on a phone) ─── */}
+            <div className="hidden md:block">
+                <ComparisonSection
+                    rows={comparisonRows}
+                    headingLead="Back pain care that"
+                    headingAccent="does not stop at the flare."
+                    intro="Rest and painkillers can calm a flare. They do not change why it happened. This is the difference in how we work."
+                />
+            </div>
 
             {/* ─── TEAM ─── */}
             <TeamSectionDemo />
@@ -663,38 +648,67 @@ export default function BackPainPhysiotherapyPage() {
                 </div>
             </section>
 
-            {/* ─── RELATED ─── */}
-            <PhysioConditionGrid
-                eyebrow="Other conditions"
-                heading="Not quite back pain?"
-                subheading="Pain often travels. These pages cover the areas most linked to back problems."
-                exclude={[PAGE_PATH]}
-            />
-
-            <section className="pb-12 sm:pb-20 bg-white dark:bg-[#0A0A0A]">
-                <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
-                    <h2 className="text-lg sm:text-2xl font-black text-gray-900 dark:text-white tracking-tight mb-3 sm:mb-5">Read more about back pain</h2>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-4">
-                        {relatedReads.map((r) => (
-                            <Link
-                                key={r.href}
-                                href={r.href}
-                                className="group flex items-center justify-between gap-3 px-4 py-3 sm:block sm:p-5 rounded-xl sm:rounded-2xl bg-[#F8F9FA] dark:bg-white/[0.04] border border-gray-100 dark:border-white/[0.08] hover:border-[#513394]/40 transition-colors"
-                            >
-                                <p className="hidden sm:block text-[11px] font-black tracking-widest text-[#513394] dark:text-[#A78BFA] uppercase mb-1.5">{r.tag}</p>
-                                <h3 className="text-[14px] sm:text-base font-bold text-gray-900 dark:text-white group-hover:text-[#513394] dark:group-hover:text-[#A78BFA] transition-colors">
-                                    {r.title}
-                                </h3>
-                            </Link>
-                        ))}
+            {/* ─── RELATED: one block, two clear jobs. Guides go deeper on back pain; conditions cover pain elsewhere. ─── */}
+            <section aria-labelledby="related-heading" className="py-12 sm:py-20 bg-white dark:bg-[#0A0A0A] border-t border-gray-100 dark:border-white/[0.06]">
+                <div className="container mx-auto px-5 sm:px-6 lg:px-8 max-w-6xl">
+                    <h2 id="related-heading" className="text-[24px] sm:text-3xl font-black text-gray-900 dark:text-white tracking-tight mb-7 sm:mb-10">
+                        Keep reading
+                    </h2>
+                    <div className="grid lg:grid-cols-2 gap-10 lg:gap-16">
+                        <div>
+                            <p className="text-[12px] font-black tracking-[0.2em] uppercase text-[#513394] dark:text-[#A78BFA] mb-3">
+                                Back pain guides
+                            </p>
+                            <ul className="divide-y divide-gray-100 dark:divide-white/[0.08] border-y border-gray-100 dark:border-white/[0.08]">
+                                {relatedReads.map((r) => (
+                                    <li key={r.href}>
+                                        <Link href={r.href} className="group flex items-center justify-between gap-4 py-4">
+                                            <span className="text-[15px] sm:text-base font-bold text-gray-900 dark:text-white group-hover:text-[#513394] dark:group-hover:text-[#A78BFA] transition-colors">
+                                                {r.title}
+                                            </span>
+                                            <span className="text-[#513394] dark:text-[#A78BFA] shrink-0 transition-transform group-hover:translate-x-0.5" aria-hidden>
+                                                →
+                                            </span>
+                                        </Link>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                        <div>
+                            <p className="text-[12px] font-black tracking-[0.2em] uppercase text-[#513394] dark:text-[#A78BFA] mb-3">
+                                Pain somewhere else?
+                            </p>
+                            <ul className="flex flex-wrap gap-2 lg:grid lg:grid-cols-1 lg:gap-0 lg:divide-y lg:divide-gray-100 lg:dark:divide-white/[0.08] lg:border-y lg:border-gray-100 lg:dark:border-white/[0.08]">
+                                {PHYSIO_CONDITIONS.filter((c) => c.href !== PAGE_PATH).map((c) => (
+                                    <li key={c.href}>
+                                        <Link
+                                            href={c.href}
+                                            className="group inline-flex lg:flex items-center justify-between gap-4 h-11 px-4 lg:h-auto lg:px-0 lg:py-4 rounded-full lg:rounded-none border border-gray-200 dark:border-white/[0.12] lg:border-0 text-[14px] lg:text-base font-bold text-gray-900 dark:text-white hover:border-[#513394] lg:hover:text-[#513394] dark:lg:hover:text-[#A78BFA] transition-colors"
+                                        >
+                                            <span>
+                                                {c.label}
+                                                <span className="hidden lg:block text-[14px] font-normal text-gray-500 dark:text-white/50 mt-0.5">{c.detail}</span>
+                                            </span>
+                                            <span className="hidden lg:inline text-[#513394] dark:text-[#A78BFA] transition-transform group-hover:translate-x-0.5" aria-hidden>
+                                                →
+                                            </span>
+                                        </Link>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <ServiceSchema
-                serviceName="Physiotherapy for Back Pain in Mumbai"
+            <ConditionPageSchema
+                path={PAGE_PATH}
+                title={TITLE}
                 description={DESCRIPTION}
-                serviceUrl={`https://www.r3boot.in${PAGE_PATH}`}
+                condition="Back pain"
+                alternateNames={['Lower back pain', 'Upper back pain', 'Sciatica', 'Slipped disc', 'Disc bulge', 'Lumbar pain']}
+                anatomy="Spine"
+                image="/images/service/physiotherapy/back-pain-hero.webp"
             />
             <FAQSchema faqs={backPainFaqs} />
             <BreadcrumbSchema

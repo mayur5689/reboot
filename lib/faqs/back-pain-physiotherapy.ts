@@ -1,8 +1,11 @@
+import { PHYSIO_PRICE_LABEL, PHYSIO_SESSION_MINUTES } from '@/lib/physio/pricing'
+
 export const backPainFaqs = [
   {
     question: 'How much does physiotherapy for back pain cost at R3BOOT?',
     answer:
-      'A 45-minute one-to-one physiotherapy session at R3BOOT is ₹2,000. Your first session covers the full assessment and your first treatment. Call or WhatsApp +91 97023 68612 to book.',
+      `A ${PHYSIO_SESSION_MINUTES}-minute physiotherapy session at R3BOOT is ${PHYSIO_PRICE_LABEL}.` +
+      ' Your first session covers the full assessment and your first treatment. Call or WhatsApp +91 97023 68612 to book.',
   },
   {
     question: 'How many physiotherapy sessions will I need for back pain?',
