@@ -28,7 +28,7 @@ export function BlogAuthorCard({ author, reviewedLabel = 'Medically reviewed by'
           {author.image ? (
             <div className="relative w-full h-full rounded-full overflow-hidden">
               <Image
-                src={urlFor(author.image).width(160).quality(85).url()}
+                src={urlFor(author.image).width(160).quality(85).auto('format').url()} unoptimized
                 alt={author.name}
                 fill
                 sizes="80px"

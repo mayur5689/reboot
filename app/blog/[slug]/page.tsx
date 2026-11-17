@@ -32,7 +32,7 @@ export async function generateMetadata(props: { params: Promise<{ slug: string }
     const params = await props.params;
     const { slug } = params;
 
-    const query = `*[_type == "post" && slug.current == $slug][0]{
+    const query = `*[_type == "post" && slug.current == $slug && (!defined(publishedAt) || publishedAt <= now())][0]{
     title,
     metaDescription,
     "thumbnail": mainImage.asset->url,
@@ -106,7 +106,7 @@ export default async function BlogPostPage(props: { params: Promise<{ slug: stri
             <div className="relative h-[60vh] sm:h-[70vh] w-full">
                 {post.mainImage && (
                     <Image
-                        src={urlFor(post.mainImage).width(1920).quality(85).url()}
+                        src={urlFor(post.mainImage).width(1920).quality(85).auto('format').url()} unoptimized
                         alt={post.title}
                         fill
                         sizes="100vw"
@@ -144,7 +144,7 @@ export default async function BlogPostPage(props: { params: Promise<{ slug: stri
                             <div className="w-12 h-12 rounded-full border-2 border-[#A78BFA] p-0.5">
                                 {post.authorImage ? (
                                     <div className="relative w-full h-full rounded-full overflow-hidden">
-                                        <Image src={urlFor(post.authorImage).width(96).quality(85).url()} alt={post.author ?? 'Author'} fill sizes="48px" className="object-cover" />
+                                        <Image src={urlFor(post.authorImage).width(96).quality(85).auto('format').url()} unoptimized alt={post.author ?? 'Author'} fill sizes="48px" className="object-cover" />
                                     </div>
                                 ) : (
                                     <div className="w-full h-full rounded-full bg-[#A78BFA] flex items-center justify-center text-[#0A0A0A] font-black uppercase">
