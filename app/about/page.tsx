@@ -192,17 +192,17 @@ export default function AboutPage() {
                                 profileSlug: "diyan-kubadia"
                             },
                             {
-                                name: "Vaishali Vijay Rauniyar",
-                                role: "Physiotherapist | Sports & Orthopedic Rehabilitation",
+                                name: "Dr. Vaishali Vijay Rauniyar",
+                                role: "Senior Physiotherapist, Dadar",
                                 image: "/images/trainer2/Trainers/Dr. Vaishali Vijay Rauniyar.webp",
-                                bio: "Clinical experience of 4+ years in sports and orthopedic rehabilitation. Certified in Dry Needling and Aquatic Rehabilitation, she designs personalized plans for efficient recovery.",
+                                bio: "BPTh (MGM College of Physiotherapy, MUHS) with 4 years of practice in sports and musculoskeletal rehab. Certified manual therapist, also certified in dry needling, neural mobilisation, taping, aquatherapy and Pilates. Every plan starts with a detailed examination and a proper diagnosis. She has supported athletes at an international pickleball tournament and the Navi Mumbai Women's Marathon.",
                                 profileSlug: "vaishali-vijay-rauniyar"
                             },
                             {
                                 name: "Dr. Hiral Parikh",
-                                role: "Lead Physiotherapist",
+                                role: "Senior Physiotherapist, Lower Parel",
                                 image: "/images/trainer2/Trainers/HIRAL.webp",
-                                bio: "Bachelor of Physiotherapy graduate from Pad. Dr. D.Y. Patil College of Physiotherapy, Navi Mumbai, with over 15 years of clinical experience. At R3BOOT, she leads physiotherapy services with focused expertise in sports rehabilitation and post-surgical recovery, helping athletes return to performance and patients rebuild function with structured, evidence-based protocols. Her approach is precise, patient-centred, and built on the belief that recovery done right the first time saves years of recurring injury.",
+                                bio: "B.P.Th (D.Y. Patil College of Physiotherapy, Navi Mumbai) with 17 years of practice, including 11 years as a licensed, registered physiotherapist in Canada. Trained in postgraduate manual therapy and certified in dry needling, she treats sports and musculoskeletal injuries, post-surgical rehab, nerve pain and chronic pain, and is qualified in vertigo and concussion management. She finds the root cause through detailed assessment and teaches clients to manage their recovery outside the clinic.",
                                 profileSlug: "hiral-parikh"
                             },
                             {
@@ -358,7 +358,7 @@ export default function AboutPage() {
                             <div className="relative aspect-[4/5] max-w-lg rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white dark:border-white/5">
                                 <Image
                                     src="/images/trainer2/Trainers/HIRAL.webp"
-                                    alt="Dr. Hiral Parikh, Lead Physiotherapist"
+                                    alt="Dr. Hiral Parikh, Senior Physiotherapist"
                                     fill
                                     className="object-cover"
                                 />
