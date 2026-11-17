@@ -29,9 +29,9 @@ const members: TeamMember[] = [
   },
   {
     name: 'Dr. Hiral Parikh',
-    role: 'Lead Physiotherapist',
-    credentials: 'BPT — Padmashree Dr. D.Y. Patil College of Physiotherapy',
-    experience: '15+ Years Experience',
+    role: 'Senior Physiotherapist',
+    credentials: 'BPT - Padmashree Dr. D.Y. Patil College of Physiotherapy',
+    experience: '17 Years Experience',
     description:
       'Every protocol is supervised by a qualified physiotherapist. Your safety, comfort and recovery are in expert hands.',
     image: '/images/trainer2/Trainers/Hiral_parikh.webp',

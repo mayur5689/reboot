@@ -152,7 +152,7 @@ export default function ClinicalPilatesMumbaiPage() {
                   Pilates is physiotherapy through movement. A physiotherapist chooses each exercise from your diagnosis, watches you do it, and raises the load when you respond.
                 </p>
                 <p>
-                  At R3BOOT Dadar East, Dr. Hiral Parikh (BPT, 15+ years) and Dr. Vaishali Vijay Rauniyar (BPT, 4+ years) build programs from a physio assessment, not a class plan.
+                  At R3BOOT Dadar East, Dr. Hiral Parikh (BPT, 17 years) and Dr. Vaishali Vijay Rauniyar (BPT, 4+ years) build programs from a physio assessment, not a class plan.
                 </p>
                 <p>
                   Sessions use reformer, mat, or both. They last 45 to 60 minutes at Palai Plaza, Dadar East. Five minutes from Dadar Central Line station.
@@ -459,7 +459,7 @@ export default function ClinicalPilatesMumbaiPage() {
                 the therapist modifies within the session. This is the core difference between Pilates and
                 a fitness class: the physiotherapist responds to what your body does on the day, not what the class
                 plan says. Dr. Hiral Parikh and Dr. Vaishali Vijay Rauniyar have managed this spectrum of presentations
-                in Mumbai — Dr. Hiral Parikh with 15+ years and Dr. Vaishali Vijay Rauniyar with 4+ years of clinical experience. Sessions are 45–60 minutes, one-to-one, at Palai Plaza, Dadar East.
+                in Mumbai: Dr. Hiral Parikh with 17 years and Dr. Vaishali Vijay Rauniyar with 4+ years of clinical experience. Sessions are 45 to 60 minutes, one-to-one, at Palai Plaza, Dadar East.
               </p>
             </div>
           </div>
@@ -575,10 +575,10 @@ export default function ClinicalPilatesMumbaiPage() {
               CLINICAL LEAD //
             </span>
             <h3 className="text-2xl md:text-3xl font-black text-gray-900 dark:text-white mb-4 tracking-tight">
-              Dr. Hiral Parikh, Lead Physiotherapist
+              Dr. Hiral Parikh, Senior Physiotherapist
             </h3>
             <p className="text-gray-600 dark:text-gray-400 text-base leading-relaxed mb-6">
-              BPT graduate from Pad. Dr. D.Y. Patil College of Physiotherapy, Navi Mumbai, with over 15 years of clinical experience. At R3BOOT, Dr. Hiral leads physiotherapy services with focused expertise in sports rehabilitation and post-surgical recovery, helping athletes return to performance and patients rebuild function. Her Pilates programs are designed around each patient&apos;s assessment findings, not adapted from a class structure.
+              BPT graduate from Pad. Dr. D.Y. Patil College of Physiotherapy, Navi Mumbai, with 17 years of practice, including 11 in Canada. At R3BOOT, Dr. Hiral focuses on sports rehabilitation and post-surgical recovery, helping athletes return to performance and patients rebuild function. Her Pilates programs are designed around each patient&apos;s assessment findings, not adapted from a class structure.
             </p>
             <p className="text-gray-600 dark:text-gray-400 text-base leading-relaxed">
               Pilates programs at R3BOOT are also designed by <strong className="text-gray-900 dark:text-white">Dr. Vaishali Vijay Rauniyar</strong>, with 4+ years of clinical experience, certified in Dry Needling and Aquatic Rehabilitation with deep expertise in sports and orthopedic rehabilitation.

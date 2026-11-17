@@ -19,9 +19,9 @@ type TeamMember = {
 const members: TeamMember[] = [
   {
     name: 'Dr. Hiral Parikh',
-    role: 'Lead Physiotherapist',
-    credentials: 'BPT — Padmashree Dr. D.Y. Patil College of Physiotherapy',
-    experience: '15+ Years Experience',
+    role: 'Senior Physiotherapist',
+    credentials: 'BPT - Padmashree Dr. D.Y. Patil College of Physiotherapy',
+    experience: '17 Years Experience',
     description:
       'Every screening is run and read by a qualified physiotherapist. Your history, your exam, and your risk report are all in the same expert hands.',
     image: '/images/trainer2/Trainers/Hiral_parikh.webp',

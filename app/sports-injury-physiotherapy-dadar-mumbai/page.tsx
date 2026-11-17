@@ -601,7 +601,7 @@ export default function SportsInjuryPhysiotherapyDadarPage() {
 
       <ServiceSchema
         serviceName="Sports Injury Physiotherapy in Mumbai"
-        description="Sports injury physiotherapy in Dadar, Mumbai at R3BOOT. ACL rehabilitation, hamstring tears, rotator cuff injuries, ankle sprains, ITB syndrome, and return-to-sport programmes. Led by Dr. Hiral Parikh (BPT, 15+ years) and Dr. Vaishali Vijay Rauniyar (4+ years). Near Shivaji Park."
+        description="Sports injury physiotherapy in Dadar, Mumbai at R3BOOT. ACL rehabilitation, hamstring tears, rotator cuff injuries, ankle sprains, ITB syndrome, and return-to-sport programmes. Led by Dr. Hiral Parikh (BPT, 17 years) and Dr. Vaishali Vijay Rauniyar (4+ years). Near Shivaji Park."
         serviceUrl="https://www.r3boot.in/services/physiotherapy/sports-injuries"
       />
       <FAQSchema faqs={sportsInjuryPhysiotherapyFaqs} />

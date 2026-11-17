@@ -94,10 +94,10 @@ const TESTIMONIALS: Record<string, { name: string; quote: string; avatar: string
 const TEAM = [
   {
     name: 'Dr. Hiral Parikh',
-    role: 'Lead Physiotherapist',
-    credentials: ['15+ yrs experience', 'BPT - D.Y. Patil College', 'Sports Rehab Specialist'],
+    role: 'Senior Physiotherapist',
+    credentials: ['17 yrs experience', 'BPT - D.Y. Patil College', 'Sports Rehab Specialist'],
     image: '/images/trainer2/Trainers/HIRAL.webp',
-    bio: 'Leads physiotherapy services at R3BOOT with expertise in sports rehabilitation and post-surgical recovery.',
+    bio: 'Senior Physiotherapist at R3BOOT with expertise in sports rehabilitation and post-surgical recovery.',
   },
   {
     name: 'Dr. Vaishali Vijay Rauniyar',

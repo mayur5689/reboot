@@ -29,10 +29,10 @@ const coaches: Coach[] = [
   {
     id: "hiral",
     name: "Dr. Hiral Parikh",
-    role: "Lead Physiotherapist",
+    role: "Senior Physiotherapist",
     specialty: "Sports Rehabilitation",
     imageSrc: "https://res.cloudinary.com/dj7bot2uc/image/upload/v1785289083/Hiral_V2_sibigb.webp",
-    description: "BPT from D.Y. Patil College with 15+ years of clinical experience. Leads physiotherapy at R3BOOT with expertise in sports rehabilitation and post-surgical recovery."
+    description: "BPT from D.Y. Patil College with 17 years of practice, including 11 in Canada. Senior Physiotherapist at R3BOOT with expertise in sports rehabilitation and post-surgical recovery."
   },
   {
     id: "vaishali",

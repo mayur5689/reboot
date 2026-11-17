@@ -6,9 +6,9 @@ import { motion } from "framer-motion";
 const teamMembers = [
     {
         name: "Dr. Hiral Parikh",
-        role: "Lead Physiotherapist",
+        role: "Senior Physiotherapist",
         image: "/images/trainer2/Trainers/HIRAL.webp",
-        bio: "Bachelor of Physiotherapy graduate from Pad. Dr. D.Y. Patil College of Physiotherapy, Navi Mumbai, with over 15 years of clinical experience. At R3BOOT, she leads physiotherapy services with focused expertise in sports rehabilitation and post-surgical recovery, helping athletes return to performance and patients rebuild function with structured, evidence-based protocols. Her approach is precise, patient-centred, and built on the belief that recovery done right the first time saves years of recurring injury."
+        bio: "Bachelor of Physiotherapy graduate from Pad. Dr. D.Y. Patil College of Physiotherapy, Navi Mumbai, with 17 years of practice, including 11 in Canada. At R3BOOT, she focuses on sports rehabilitation and post-surgical recovery, helping athletes return to performance and patients rebuild function with structured, evidence-based protocols. Her approach is precise, patient-centred, and built on the belief that recovery done right the first time saves years of recurring injury."
     },
     {
         name: "Dr. Vaishali Vijay Rauniyar",
