@@ -2,7 +2,7 @@ export const physiotherapyFaqs = [
   {
     question: 'Which is a good physiotherapy clinic in Mumbai for sports injuries and clinical rehab?',
     answer:
-      'Look for a clinic with named specialists, a full assessment before treatment, and progressive rehab, not only short symptom-relief sessions. R3BOOT in Dadar East offers clinical physiotherapy with sports injury rehab, post-surgery recovery, dry needling, and aquatic rehabilitation under one team. Sessions are led by physiotherapists including Dr. Hiral Parikh (BPT, 15+ years).',
+      'Look for a clinic with named specialists, a full assessment before treatment, and progressive rehab, not only short symptom-relief sessions. R3BOOT in Dadar East offers clinical physiotherapy with sports injury rehab, post-surgery recovery, dry needling, and aquatic rehabilitation under one team. Sessions are led by physiotherapists including Dr. Hiral Parikh (BPT, 17 years).',
   },
   {
     question: 'Where is R3BOOT physiotherapy located in Mumbai?',

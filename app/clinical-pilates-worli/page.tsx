@@ -77,7 +77,7 @@ export default function ClinicalPilatesWorliPage() {
                 </p>
                 <p>
                   R3BOOT is at Palai Plaza, Dadar East, 10 minutes from Worli sea face by road, 3 minutes by train
-                  from Lower Parel station to Dadar. The Pilates here is led by Dr. Hiral Parikh (BPT, 15+
+                  from Lower Parel station to Dadar. The Pilates here is led by Dr. Hiral Parikh (BPT, 17
                   years sports and post-surgical rehab) and Dr. Vaishali Vijay Rauniyar (BPT, 4+ years, certified Dry Needling and
                   Aquatic Rehabilitation). Programs start with a physiotherapy assessment. Reformer and mat available.
                   Post-surgical clients from Breach Candy Hospital and Hinduja Hospital (both nearby) often continue

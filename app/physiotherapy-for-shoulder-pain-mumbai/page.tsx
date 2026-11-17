@@ -853,7 +853,7 @@ export default function PhysiotherapyShoulderPainMumbaiPage() {
 
       <ServiceSchema
         serviceName="Physiotherapy for Shoulder Pain in Mumbai"
-        description="Clinical physiotherapy for shoulder pain in Mumbai at R3BOOT, Dadar East. Assessment, manual therapy, dry needling, and progressive rehabilitation for frozen shoulder, rotator cuff overload, shoulder impingement, AC joint pain, desk posture, and gym or sport overload. Led by Dr. Hiral Parikh (15+ years, BPT) and Dr. Vaishali Vijay Rauniyar (4+ years)."
+        description="Clinical physiotherapy for shoulder pain in Mumbai at R3BOOT, Dadar East. Assessment, manual therapy, dry needling, and progressive rehabilitation for frozen shoulder, rotator cuff overload, shoulder impingement, AC joint pain, desk posture, and gym or sport overload. Led by Dr. Hiral Parikh (17 years, BPT) and Dr. Vaishali Vijay Rauniyar (4+ years)."
         serviceUrl="https://www.r3boot.in/services/physiotherapy/shoulder-pain"
       />
       <FAQSchema faqs={shoulderPainPhysiotherapyFaqs} />

@@ -180,7 +180,7 @@ export default function ScoliosisPilatesMumbaiPage() {
               Pilates instructor training.
             </p>
             <p>
-              At R3BOOT in Dadar East, Dr. Hiral Parikh (BPT, 15+ years) assesses each client's specific curve
+              At R3BOOT in Dadar East, Dr. Hiral Parikh (BPT, 17 years) assesses each client's specific curve
               pattern before designing the exercise program. For a right thoracic curve, the most common pattern
               in adolescent idiopathic scoliosis, the program activates the left thoracic extensors, lengthens
               the right lateral trunk, and uses mirror feedback to train postural self-correction. For a lumbar

@@ -112,9 +112,9 @@ const processSteps = [
 const teamMembers = [
   {
     name: 'Dr. Hiral Parikh',
-    role: 'Lead Physiotherapist',
+    role: 'Senior Physiotherapist',
     credentials: 'BPT - Padmashree Dr. D.Y. Patil College of Physiotherapy',
-    experience: '15 years experience',
+    experience: '17 years experience',
     specialties: ['Sports Rehabilitation', 'Post-surgical Recovery', 'Contrast Therapy'],
     image: '/images/trainer2/Trainers/HIRAL.webp',
   },

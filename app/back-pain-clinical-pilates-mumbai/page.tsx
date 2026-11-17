@@ -109,7 +109,7 @@ export default function BackPainClinicalPilatesMumbaiPage() {
                   Most lasting back pain is a control problem, not a stretch problem. Deep muscles (multifidus, transversus abdominis, pelvic floor) stop working well after injury. Stretching and rest do not rebuild them. Pilates does.
                 </p>
                 <p>
-                  At R3BOOT Dadar East, Dr. Hiral Parikh (BPT, 15+ years) and Dr. Vaishali Vijay Rauniyar (BPT, 4+ years) write your plan from a physio assessment. Your spine problem decides the exercises.
+                  At R3BOOT Dadar East, Dr. Hiral Parikh (BPT, 17 years) and Dr. Vaishali Vijay Rauniyar (BPT, 4+ years) write your plan from a physio assessment. Your spine problem decides the exercises.
                 </p>
                 <ul>
                   <li>L4-L5 disc</li>

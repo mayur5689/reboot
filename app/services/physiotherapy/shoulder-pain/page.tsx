@@ -510,7 +510,7 @@ export default function ShoulderPainPhysiotherapyPage() {
                                     Shoulder care matched to your phase
                                 </p>
                                 <div className="flex flex-col gap-2">
-                                    {['Team led by Dr. Hiral Parikh, 15+ years', 'Dry needling in-house with Dr. Vaishali Rauniyar'].map((point) => (
+                                    {['Senior physio Dr. Hiral Parikh, 17 years', 'Dry needling in-house with Dr. Vaishali Rauniyar'].map((point) => (
                                         <div key={point} className="flex items-center gap-2.5">
                                             <div className="w-5 h-5 rounded-full bg-[#513394]/30 border border-[#A78BFA]/50 flex items-center justify-center shrink-0">
                                                 <svg className="w-3 h-3 text-[#C4B5FD]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
