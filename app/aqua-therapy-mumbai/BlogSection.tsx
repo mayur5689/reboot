@@ -72,7 +72,7 @@ export function BlogSection() {
                 <div className="relative aspect-video overflow-hidden">
                   {post.mainImage?.asset ? (
                     <Image
-                      src={urlFor(post.mainImage).width(600).quality(80).url()}
+                      src={urlFor(post.mainImage).width(600).quality(80).auto('format').url()} unoptimized
                       alt={post.title}
                       fill
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"

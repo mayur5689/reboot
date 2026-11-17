@@ -35,7 +35,7 @@ export default async function BlogPage() {
                                 <div className="relative aspect-video overflow-hidden">
                                     {blog.mainImage?.asset ? (
                                         <Image
-                                            src={urlFor(blog.mainImage).width(800).quality(85).url()}
+                                            src={urlFor(blog.mainImage).width(800).quality(85).auto('format').url()} unoptimized
                                             alt={blog.title}
                                             fill
                                             sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"

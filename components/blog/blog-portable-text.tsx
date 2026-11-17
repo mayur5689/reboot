@@ -12,7 +12,7 @@ export const blogPortableTextComponents: PortableTextComponents = {
         <figure className="my-12">
           <div className="rounded-3xl overflow-hidden shadow-2xl">
             <Image
-              src={urlFor(value).width(1200).quality(85).url()}
+              src={urlFor(value).width(1200).quality(85).auto('format').url()} unoptimized
               alt={value.alt || 'Blog Image'}
               width={1200}
               height={900}
